@@ -6,7 +6,7 @@
 	{% if META_KEYWORDS %}<meta name="keywords" content="{{ META_KEYWORDS }}">{% endif %}
 	{% if META_DESCRIPTION %}<meta name="description" content="{{ META_DESCRIPTION }}">{% endif %}
 	{{ META }}
-	<title>{% block title %}{% if UNREAD_NOTIFICATIONS_COUNT %}({{ UNREAD_NOTIFICATIONS_COUNT }}) {% endif %}{% block title_inner %}{{ SITENAME }} - {% if S_IN_MCP %}{{ lang(L_MCP) }} - {% elseif S_IN_UCP %}{{ lang(UCP) }} - {% endif %}{{ PAGE_TITLE }}{% endblock %}{% endblock %}</title>
+	<title>{% block title %}{% if UNREAD_NOTIFICATIONS_COUNT %}({{ UNREAD_NOTIFICATIONS_COUNT }}) {% endif %}{% block title_inner %}{{ SITENAME }} - {{ PAGE_TITLE }}{% endblock %}{% endblock %}</title>
 
 	{% block head_feeds %}
 		{% if S_ENABLE_FEEDS %}
