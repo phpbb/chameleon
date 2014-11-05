@@ -1,5 +1,5 @@
 <!-- EVENT forumlist_body_forum_row_before -->
-<li class="row">
+<li class="row {{ macros.forumrow_class(forumrow.S_UNREAD_FORUM, forumrow.S_IS_LINK, forumrow.U_UNAPPROVED_TOPICS, forumrow.U_UNAPPROVED_POSTS) }}">
 	<!-- EVENT forumlist_body_forum_row_prepend -->
 	<dl class="icon {forumrow.FORUM_IMG_STYLE}">
 		<dt title="{forumrow.FORUM_FOLDER_IMG_ALT}">
