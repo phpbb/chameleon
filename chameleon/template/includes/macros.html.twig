@@ -1,0 +1,13 @@
+{# These macros will assign specific CSS classes (the values without the _prefix) to content rows, depending on row variables #}
+
+{% macro forumrow_class(_unread, _is_link, _unapproved_topics, _unapproved_posts) %}
+{% if _unread %}unread{% endif %}{% if _islink %} islink{% endif %}{% if _unapproved_topics %} unapproved{% endif %}{% if _unapproved_posts %} unapproved{% endif %}
+{% endmacro %}
+
+{% macro topicrow_class(_global_announce, _announce, _sticky, _reported) %}
+{% if _global-announce %}global-announce{% endif %}{% if _announce %} announce{% endif %}{% if _sticky %} sticky{% endif %}{% if _reported %} reported{% endif %}
+{% endmacro %}
+
+{% macro postrow_class(_unreadpost, _reported, _deleted, _warned, _online, _foe) %}
+{% if _unreadpost %}unreadpost{% endif %}{% if _reported %} reported{% endif %}{% if _deleted %} deleted{% endif %}{% if _warned %} warned{% endif %}{% if _online %} online{% endif %}{% if _foe %} foe{% endif %}
+{% endmacro %}
