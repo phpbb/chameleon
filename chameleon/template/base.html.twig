@@ -122,7 +122,7 @@
 
 				<main id="page-main" class="page-main">
 					{% block breadcrumbs_top %}{% include 'includes/breadcrumbs.html.twig' %}{% endblock %}
-					{% block page_content %}{# content goes here #}{% endblock %}
+					<div id="page-content" class="page-content">{% block page_content %}{# content goes here #}{% endblock %}</div>
 					{% block breadcrumbs_bottom %}{% include 'includes/breadcrumbs.html.twig' %}{% endblock %}
 				</main>
 			{% endblock %}
