@@ -55,6 +55,7 @@ __Proposed structure__
     - `pagination.html.twig`
     - `poll.html.twig`
     - `postrow.html.twig`
+    - `postprofile.html.twig`
     - `sidebar.html.twig`
     - `topiclist.html.twig`
     - `topicrow.html.tiwg`
