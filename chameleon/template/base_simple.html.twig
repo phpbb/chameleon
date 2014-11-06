@@ -1,0 +1,123 @@
+{% block doctype %}<!DOCTYPE html><html dir="{{ S_CONTENT_DIRECTION }}" lang="{{ S_USER_LANG }}">{% endblock %}
+{% import 'includes/macros.html.twig' as macros %}
+{# BEGIN HEAD #}
+<head prefix="og: http://ogp.me/ns#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	{{ META }}
+	<title>{% block title %}{% block title_inner %}{{ SITENAME }} - {{ PAGE_TITLE }}{% endblock %}{% endblock %}</title>
+
+	{# BEGIN ASSETS #}
+	{% block head_assets %}
+		{# TODO: we need to either be able to use asset(), or have an T_ASSET_PATH #}
+		{% block assets_core %}
+			{# <link rel="stylesheet" href="{{ ROOT_PATH }}styles/rhea/assets/normalize.css"> #}
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/core.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/bootstrap.css">
+		{% endblock %}
+
+		{% block assets_theme %}
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/theme.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/bootstrap-theme.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/test.css">
+		{% endblock %}
+
+		{% block assets_browsers %}
+			<!--[if lte IE 9]><link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/ie.css"><![endif]-->
+		{% endblock %}
+
+		{% block assets_fonts %}
+			<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,600,300,400,700,800&amp;subset=latin,cyrillic-ext,greek-ext,vietnamese,greek,latin-ext,cyrillic">
+		{% endblock %}
+
+		{% block assets_font_icons %}
+			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		{% endblock %}
+
+		{$STYLESHEETS}
+	{% endblock head_assets %}
+
+	{% block head_javascripts %}{% endblock %}
+	{# END ASSETS #}
+
+	{% block head_favicon %}<link rel="shortcut icon" href="({{ ROOT_PATH }}styles/chameleon/assets/theme/images/favicon.ico)" type="image/vnd.microsoft.icon">{% endblock %}
+</head>
+{# END HEAD #}
+
+{# BEGIN BODY #}
+{% block body %}
+	{% block body_tag %}<body id="phpbb" class="nojs notouch simple {{ S_CONTENT_DIRECTION }} {{ BODY_CLASS }}">{% endblock %}
+	<div id="container" class="container">
+		<div id="wrap" class="wrap">
+
+			{# BEGIN MAIN #}
+			{% block page_main %}
+				<a id="start_here" class="anchor"></a>
+
+				<main id="page-main" class="page-main">
+					<div id="page-content" class="page-content">{% block page_content %}{# content goes here #}{% endblock %}</div>
+				</main>
+			{% endblock page_main %}
+			{# END MAIN #}
+
+			{# BEGIN FOOTER #}
+			{% block page_footer %}
+				<footer id="page-footer" class="page-footer">
+				{% block copyright %}
+					<div id="copyright" class="copyright">
+						{{ CREDIT_LINE }}
+						{% if TRANSLATION_INFO %}<br />{{ TRANSLATION_INFO }}{% endif %}
+						{% block footer_debug %}
+							{% if DEBUG_OUTPUT %}<br />{{ DEBUG_OUTPUT }}{% endif %}
+							{% if app.debug %}
+								Request method: {{ app.request.method }}<br />
+								Application Environment: {{ app.environment }}
+							{% endif %}
+						{% endblock %}
+					</div>
+				{% endblock %}
+				</footer>
+
+				{% block footer_hidden %}
+					{# TODO: are these actually used in simple contexts? #}
+					<div id="darkenwrapper" data-ajax-error-title="{{ lang('AJAX_ERROR_TITLE') }}" data-ajax-error-text="{{ lang('AJAX_ERROR_TEXT') }}" data-ajax-error-text-abort="{{ lang('AJAX_ERROR_TEXT_ABORT') }}" data-ajax-error-text-timeout="{{ lang('AJAX_ERROR_TEXT_TIMEOUT') }}" data-ajax-error-text-parsererror="{{ lang('AJAX_ERROR_TEXT_PARSERERROR') }}">
+						<div id="darken">&nbsp;</div>
+					</div>
+					<div id="loading_indicator"></div>
+
+					<div id="phpbb_alert" class="phpbb_alert" data-l-err="{{ lang('ERROR') }}" data-l-timeout-processing-req="{{ lang('TIMEOUT_PROCESSING_REQ') }}">
+						<a href="#" class="alert_close"></a>
+						<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+					</div>
+					<div id="phpbb_confirm" class="phpbb_alert">
+						<a href="#" class="alert_close"></a>
+						<div class="alert_text"></div>
+					</div>
+				{% endblock %}
+			{% endblock page_footer %}
+			{# END FOOTER #}
+
+		</div>{# .wrap #}
+	</div>{# .container #}
+
+	{# BEGIN FOOTER JAVASCRIPTS #}
+	{% block footer_javascripts %}
+		{% block js_include_jquery %}
+			<script src="{{ T_JQUERY_LINK }}"></script>
+			{% if S_ALLOW_CDN %}<script>window.jQuery || document.write(unescape('%3Cscript src="{{ T_ASSETS_PATH }}/javascript/jquery.min.js?assets_version={{ T_ASSETS_VERSION }}" type="text/javascript"%3E%3C/script%3E'));</script>{% endif %}
+		{% endblock %}
+		{% block js_include_core %}
+			<script src="{{ T_ASSETS_PATH }}/javascript/core.js?assets_version={{ T_ASSETS_VERSION }}"></script>
+		{% endblock %}
+		{% block js_include_style %}
+			{% INCLUDEJS forum_fn.js %}
+			{% INCLUDEJS ajax.js %}
+		{% endblock %}
+
+		{# {$SCRIPTS} TODO #}
+	{% endblock footer_javascripts %}
+	{# END FOOTER JAVASCRIPTS #}
+</body>
+{% endblock body %}
+{# END BODY #}
+</html>
