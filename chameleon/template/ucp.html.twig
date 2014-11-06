@@ -6,6 +6,31 @@
 
 <h2 class="ucp-title">{L_UCP}</h2>
 
+{# New menu system to replace the tabs
+<div class="panel-group" id="accordion">
+	{% for group in loops.l_block1 %}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ group.ID }}"><i class="fa fa-{{ group.LANGNAME|lower }}"></i>{{ group.L_TITLE }}</a>
+				</h4>
+			</div>
+			<div id="collapse{{ group.ID }}" class="panel-collapse collapse{% if group.S_SELECTED %} in{% endif %}">
+				<div class="panel-body">
+					<ul>
+						{% for module in group.l_block2 %}
+							<li class="{% if module.S_SELECTED %}active{% endif %}">
+								<a href="{{ module.U_TITLE }}"><i class="fa fa-{{ module.LANGNAME|lower }}"></i>{{ module.L_TITLE }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+#}
+
 <div id="tabs">
 	<ul>
 		<!-- BEGIN t_block1 -->
