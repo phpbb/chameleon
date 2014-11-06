@@ -11,13 +11,13 @@
 
 	{% block head_feeds %}
 		{% if S_ENABLE_FEEDS %}
-			{% if S_ENABLE_FEEDS_OVERALL %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ SITENAME }}" href="{{ U_FEED }}">{% endif %}
-			{% if S_ENABLE_FEEDS_NEWS %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(FEED_NEWS) }}" href="{{ U_FEED }}?mode=news">{% endif %}
-			{% if S_ENABLE_FEEDS_FORUMS %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(ALL_FORUMS) }}" href="{{ U_FEED }}?mode=forums">{% endif %}
-			{% if S_ENABLE_FEEDS_TOPICS %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(FEED_TOPICS_NEW) }}" href="{{ U_FEED }}?mode=topics">{% endif %}
-			{% if S_ENABLE_FEEDS_TOPICS_ACTIVE %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(FEED_TOPICS_ACTIVE) }}" href="{{ U_FEED }}?mode=topics_active">{% endif %}
-			{% if S_ENABLE_FEEDS_FORUM and S_FORUM_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(FORUM) }} - {{ FORUM_NAME }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}">{% endif %}
-			{% if S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang(FEED) }} - {{ lang(TOPIC) }} - {{ TOPIC_TITLE }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}&amp;t={{ S_TOPIC_ID }}">{% endif %}
+			{% if S_ENABLE_FEEDS_OVERALL %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ SITENAME }}" href="{{ U_FEED }}">{% endif %}
+			{% if S_ENABLE_FEEDS_NEWS %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('FEED_NEWS') }}" href="{{ U_FEED }}?mode=news">{% endif %}
+			{% if S_ENABLE_FEEDS_FORUMS %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('ALL_FORUMS') }}" href="{{ U_FEED }}?mode=forums">{% endif %}
+			{% if S_ENABLE_FEEDS_TOPICS %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('FEED_TOPICS_NEW') }}" href="{{ U_FEED }}?mode=topics">{% endif %}
+			{% if S_ENABLE_FEEDS_TOPICS_ACTIVE %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('FEED_TOPICS_ACTIVE') }}" href="{{ U_FEED }}?mode=topics_active">{% endif %}
+			{% if S_ENABLE_FEEDS_FORUM and S_FORUM_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('FORUM') }} - {{ FORUM_NAME }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}">{% endif %}
+			{% if S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('TOPIC') }} - {{ TOPIC_TITLE }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}&amp;t={{ S_TOPIC_ID }}">{% endif %}
 		{% endif %}
 	{% endblock %}
 
@@ -70,22 +70,22 @@
 
 				<header id="page-header" class="page-header">
 					{% block site_branding %}
-					<div id="site-branding">
-						<a id="site-logo" class="site-logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang(SITE_HOME) }}{% else %}{{ lang(INDEX) }}{% endif %}">{{ SITE_LOGO_IMG }}</a>
+					<div id="site-branding" class="site-branding">
+						<a id="site-logo" class="site-logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">{{ SITE_LOGO_IMG }}</a>
 						<h1 class="site-title">{{ SITENAME }}</h1>
 						<p class="site-description">{{ SITE_DESCRIPTION }}</p>
-						<a class="anchor skiplink" href="#start_here">{{ lang(SKIP) }}</a>
+						<a class="anchor skiplink" href="#start_here">{{ lang('SKIP') }}</a>
 					</div>
 					{% endblock %}
 
 					{% block site_search %}
 						{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
-						<div id="site-search" class="search-box search-header">
+						<div id="site-search" class="site-search search-box">
 							<form action="{{ U_SEARCH }}" method="get" id="site-search-form">
 								<fieldset>
-									<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang(SEARCH_KEYWORDS) }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang(SEARCH_MINI) }}" />
-									<button class="button icon-button search-icon" type="submit" title="{{ lang(SEARCH) }}">{{ lang(SEARCH) }}</button>
-									<a href="{{ U_SEARCH }}" class="button icon-button search-adv-icon" title="{{ lang(SEARCH_ADV) }}">{{ lang(SEARCH_ADV) }}</a>
+									<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
+									<button class="button icon-button search-icon" type="submit" title="{{ lang('SEARCH') }}">{{ lang('SEARCH') }}</button>
+									<a href="{{ U_SEARCH }}" class="button icon-button search-adv-icon" title="{{ lang('SEARCH_ADV') }}">{{ lang('SEARCH_ADV') }}</a>
 									{{ S_SEARCH_HIDDEN_FIELDS }}
 								</fieldset>
 							</form>
@@ -114,7 +114,7 @@
 					{% block board_disabled %}
 						<div id="information" class="board-disabled rules">
 							<div class="inner">
-								<strong>{{ lang(INFORMATION) }}{{ lang(COLON) }}</strong> {{ lang(BOARD_DISABLED) }}
+								<strong>{{ lang('INFORMATION') }}{{ lang('COLON') }}</strong> {{ lang('BOARD_DISABLED') }}
 							</div>
 						</div>
 					{% endblock %}
@@ -147,7 +147,7 @@
 							{% endif %}
 						{% endblock %}
 						{% block footer_acp_link %}
-							{% if U_ACP %}<br /><strong><a href="{{ U_ACP }}">{{ lang(ACP) }}</a></strong>{% endif %}
+							{% if U_ACP %}<br /><strong><a href="{{ U_ACP }}">{{ lang('ACP') }}</a></strong>{% endif %}
 						{% endblock %}
 					</div>
 				{% endblock %}
@@ -161,12 +161,12 @@
 				{% endblock %}
 
 				{% block footer_hidden %}
-					<div id="darkenwrapper" data-ajax-error-title="{{ lang(AJAX_ERROR_TITLE) }}" data-ajax-error-text="{{ lang(AJAX_ERROR_TEXT) }}" data-ajax-error-text-abort="{{ lang(AJAX_ERROR_TEXT_ABORT) }}" data-ajax-error-text-timeout="{{ lang(AJAX_ERROR_TEXT_TIMEOUT) }}" data-ajax-error-text-parsererror="{{ lang(AJAX_ERROR_TEXT_PARSERERROR) }}">
+					<div id="darkenwrapper" data-ajax-error-title="{{ lang('AJAX_ERROR_TITLE') }}" data-ajax-error-text="{{ lang('AJAX_ERROR_TEXT') }}" data-ajax-error-text-abort="{{ lang('AJAX_ERROR_TEXT_ABORT') }}" data-ajax-error-text-timeout="{{ lang('AJAX_ERROR_TEXT_TIMEOUT') }}" data-ajax-error-text-parsererror="{{ lang('AJAX_ERROR_TEXT_PARSERERROR') }}">
 						<div id="darken">&nbsp;</div>
 					</div>
 					<div id="loading_indicator"></div>
 
-					<div id="phpbb_alert" class="phpbb_alert" data-l-err="{{ lang(ERROR) }}" data-l-timeout-processing-req="{{ lang(TIMEOUT_PROCESSING_REQ) }}">
+					<div id="phpbb_alert" class="phpbb_alert" data-l-err="{{ lang('ERROR') }}" data-l-timeout-processing-req="{{ lang('TIMEOUT_PROCESSING_REQ') }}">
 						<a href="#" class="alert_close"></a>
 						<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
 					</div>
