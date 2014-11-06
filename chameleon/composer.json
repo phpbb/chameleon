@@ -1,35 +1,25 @@
 {
 	"name": "phpbb/chameleon",
 	"type": "phpbb-style",
-	"description": "",
-	"homepage": "https://phpbb.com",
-	"version": "1.0.0",
-	"keywords": ["phpbb", "style"],
+	"description": "The phpBB default style as of phpBB 3.2",
+	"homepage": "https://www.phpbb.com",
+	"keywords": ["phpbb", "style", "default", "chameleon"],
 	"license": "GPL-2.0",
 	"authors": [
 		{
-			"name": "PayBas",
-			"email": "contact@paybas.com",
-			"homepage": "http://www.paybas.com",
-			"role": "Developer"
+			"name": "phpBB Limited",
+			"email": "operations@phpbb.com",
+			"homepage": "https://www.phpbb.com/about/team/"
 		}
 	],
 	"require": {
-		"php": ">=5.3.3",
-		"composer/installers": "~1.0"
-	},
-	"require-dev": {
-		"phpbb/epv": "dev-master"
+		"composer/installers": "~1.0",
+		"phpbb/phpbb": "self.version"
 	},
 	"extra": {
 		"display-name": "Chameleon",
-		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0,<3.2.*@dev"
-		},
-		"version-check": {
-			"host": "version.phpbb.com",
-			"directory": "/phpbb-styles",
-			"filename": "chameleon_versions.json"
+		"branch-alias": {
+			"dev-master": "3.2.x-dev"
 		}
 	}
 }
