@@ -96,6 +96,8 @@ ul.topiclist {
 	display: block;
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
+	clear: both;
 }
 
 ul.forums {
