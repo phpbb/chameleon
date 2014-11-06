@@ -33,6 +33,7 @@
 
 		{% block assets_theme %}
 			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/theme.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/test.css">
 		{% endblock %}
 
 		{% block assets_browsers %}
@@ -94,18 +95,14 @@
 				</header>
 
 				{% block nav_header %}
-				<nav id="nav-header" class="page-nav nav-header">
 					{% include 'includes/nav_header.html.twig' %}
-				</nav>
 				{% endblock %}
 			{% endblock %}
 			{# END HEADER #}
 
 			{# BEGIN SIDEBAR #}
 			{% block page_sidebar %}
-				<aside id="page-sidebar" class="page-sidebar">
-					{% block sidebar_content %}{# content goes here #}{% endblock %}
-				</aside>
+				{% include 'includes/sidebar.html.twig' %}
 			{% endblock %}
 			{# END CONTENT #}
 
@@ -124,7 +121,9 @@
 				{% endif %}
 
 				<main id="page-main" class="page-main">
+					{% block breadcrumbs_top %}{% include 'includes/breadcrumbs.html.twig' %}{% endblock %}
 					{% block page_content %}{# content goes here #}{% endblock %}
+					{% block breadcrumbs_bottom %}{% include 'includes/breadcrumbs.html.twig' %}{% endblock %}
 				</main>
 			{% endblock %}
 			{# END MAIN #}
@@ -132,9 +131,7 @@
 			{# BEGIN FOOTER #}
 			{% block page_footer %}
 				{% block nav_footer %}
-				<nav id="nav-footer" class="page-nav nav-footer">
 					{% include 'includes/nav_footer.html.twig' %}
-				</nav>
 				{% endblock %}
 
 				<footer id="page-footer" class="page-footer">
