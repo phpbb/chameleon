@@ -19,7 +19,7 @@
 			{% if S_ENABLE_FEEDS_FORUM and S_FORUM_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('FORUM') }} - {{ FORUM_NAME }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}">{% endif %}
 			{% if S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ lang('TOPIC') }} - {{ TOPIC_TITLE }}" href="{{ U_FEED }}?f={{ S_FORUM_ID }}&amp;t={{ S_TOPIC_ID }}">{% endif %}
 		{% endif %}
-	{% endblock %}
+	{% endblock head_feeds %}
 
 	{% if U_CANONICAL %}<link rel="canonical" href="{{ U_CANONICAL }}">{% endif %}
 
@@ -49,7 +49,7 @@
 		{% endblock %}
 
 		{$STYLESHEETS}
-	{% endblock %}
+	{% endblock head_assets %}
 
 	{% block head_javascripts %}{% endblock %}
 	{# END ASSETS #}
@@ -76,7 +76,7 @@
 						<p class="site-description">{{ SITE_DESCRIPTION }}</p>
 						<a class="anchor skiplink" href="#start_here">{{ lang('SKIP') }}</a>
 					</div>
-					{% endblock %}
+					{% endblock site_branding %}
 
 					{% block site_search %}
 						{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
@@ -91,13 +91,13 @@
 							</form>
 						</div>
 						{% endif %}
-					{% endblock %}
+					{% endblock site_search %}
 				</header>
 
 				{% block nav_header %}
 					{% include 'includes/nav_header.html.twig' %}
 				{% endblock %}
-			{% endblock %}
+			{% endblock page_header %}
 			{# END HEADER #}
 
 			{# BEGIN SIDEBAR #}
@@ -125,7 +125,7 @@
 					<div id="page-content" class="page-content">{% block page_content %}{# content goes here #}{% endblock %}</div>
 					{% block breadcrumbs_bottom %}{% include 'includes/breadcrumbs.html.twig' %}{% endblock %}
 				</main>
-			{% endblock %}
+			{% endblock page_main %}
 			{# END MAIN #}
 
 			{# BEGIN FOOTER #}
@@ -175,7 +175,7 @@
 						<div class="alert_text"></div>
 					</div>
 				{% endblock %}
-			{% endblock %}
+			{% endblock page_footer %}
 			{# END FOOTER #}
 
 		</div>{# .wrap #}
@@ -196,9 +196,9 @@
 		{% endblock %}
 
 		{# {$SCRIPTS} TODO #}
-	{% endblock %}
+	{% endblock footer_javascripts %}
 	{# END FOOTER JAVASCRIPTS #}
 </body>
-{% endblock %}
+{% endblock body %}
 {# END BODY #}
 </html>
