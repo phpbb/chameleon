@@ -5,17 +5,35 @@
 	background: #FFF;
 	padding: 24px;
 	padding: 1.5rem;
-	margin-right: 330px;
 }
 
 .page-sidebar {
-	float: right;
+	position: fixed;
+	top: 50px;
+	right: 0;
 	width: 300px;
 	background: #FFF;
+	padding: 20px;
 }
 
 .post {
 	clear: both;
+	margin: 20px 0;
+}
+
+.post:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+.postprofile {
+	float: left;
+}
+
+.post-buttons li {
+	list-style: none;
+	float: left;
 }
 
 /* Content Styles

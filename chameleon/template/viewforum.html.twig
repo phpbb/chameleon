@@ -35,7 +35,7 @@
 		<a href="{U_MARK_FORUMS}" class="mark-read rightside" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a>
 	</div>
 <!-- ENDIF -->
-	<!-- INCLUDE forumlist_body.html -->
+	{% include 'includes/forumlist.html.twig' with{'array':loops.forumrow} %}
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_POST_INFO or .pagination or TOTAL_POSTS or TOTAL_TOPICS -->
