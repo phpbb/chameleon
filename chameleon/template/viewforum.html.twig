@@ -171,26 +171,31 @@
 
 {% block page_sidebar %}
 	{% embed 'includes/sidebar.html.twig' %}
-		<!-- IF S_DISPLAY_ONLINE_LIST -->
-		{% block sidebar_secondary %}
-			{{ parent() }}
 
-			<div class="stat-block online-list">
-				<h3><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
-				<p>{LOGGED_IN_USER_LIST}</p>
-			</div>
-		{% endblock %}
-		<!-- ENDIF -->
+		{% if S_DISPLAY_ONLINE_LIST %}
+			{% block widgets_secondary %}
+				{{ parent() }}
 
-		<!-- IF S_DISPLAY_POST_INFO -->
-		{% block sidebar_tertiary %}
-			{{ parent() }}
+				{% block widget_online %}
+					<div id="widget-online" class="widget online">
+						<h3>{% if U_VIEWONLINE %}<a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a>{% else %}{{ lang('WHO_IS_ONLINE') }}{% endif %}</h3>
+						<p>{{ LOGGED_IN_USER_LIST }}</p>
+					</div>
+				{% endblock %}
+			{% endblock %}
+		{% endif %}
 
-			<div class="stat-block permissions">
-				<h3>{L_FORUM_PERMISSIONS}</h3>
-				<p><!-- BEGIN rules -->{rules.RULE}<br /><!-- END rules --></p>
-			</div>
-		{% endblock %}
-		<!-- ENDIF -->
+		{% if S_DISPLAY_POST_INFO %}
+			{% block widgets_tertiary %}
+				{{ parent() }}
+
+				{% block widget_permissions %}
+					<div id="widget-permissions" class="widget permissions">
+						<h3>{{ lang('FORUM_PERMISSIONS') }}</h3>
+						<p>{% for rule in loops.rules %}{{ rule.RULE }}<br />{% endfor %}</p>
+					</div>
+				{% endblock %}
+			{% endblock %}
+		{% endif %}
 	{% endembed %}
 {% endblock %}
