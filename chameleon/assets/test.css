@@ -1,10 +1,18 @@
-/* Temporary CSS for initial layout */
+/* Temporary CSS for initial layout testing. All this will be replaced */
 
 
 .page-main {
 	background: #FFF;
 	padding: 24px;
 	padding: 1.5rem;
+}
+
+.site-branding {
+	float: left;
+}
+
+.site-search {
+	float: right;
 }
 
 .page-sidebar {
@@ -16,15 +24,21 @@
 	padding: 20px;
 }
 
+.navbar {
+	background: #47A1EB;
+}
+.navbar ul {
+	margin: 10px;
+	padding: 5px;
+}
+.navbar li {
+	float: left;
+	list-style: none;
+}
+
 .post {
 	clear: both;
 	margin: 20px 0;
-}
-
-.post:after {
-	clear: both;
-	display: block;
-	content: '';
 }
 
 .postprofile {
@@ -37,7 +51,8 @@
 }
 
 .breadcrumbs {
-	margin: 0;
+	margin: 10px;
+	padding: 5px;
 }
 .breadcrumbs li {
 	float: left;
@@ -56,15 +71,23 @@
 	clear: both;
 }
 
-.board-nav:after {
-	clear: both;
-	display: block;
-	content: '';
-}
-
 .quick-nav {
 	float: right;
 }
+
+.page-header:after,
+.post:after,
+.board-nav:after,
+.navbar:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+
+.copyright {
+	text-align: center;
+}
+
 
 /* Content Styles
 ---------------------------------------- */

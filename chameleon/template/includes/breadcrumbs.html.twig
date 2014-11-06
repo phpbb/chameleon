@@ -8,7 +8,6 @@
 			{% for crumb in loops.navlinks %}
 				<li class="crumb"><a href="{crumb.U_VIEW_FORUM}"{$MICRODATA}<!-- IF crumb.MICRODATA --> {crumb.MICRODATA}<!-- ENDIF -->>{crumb.FORUM_NAME}</a></li>
 			{% endfor %}
-			</li>
 		</ul>
 
 		{% block jumpbox %}
