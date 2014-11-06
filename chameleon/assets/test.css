@@ -36,6 +36,36 @@
 	float: left;
 }
 
+.breadcrumbs {
+	margin: 0;
+}
+.breadcrumbs li {
+	float: left;
+	list-style: none;
+}
+
+.breadcrumbs > *:before {
+	color: #aaaaaa;
+	content: "/";
+	margin: 0 0.66667rem;
+	position: relative;
+	top: 1px;
+}
+
+.board-nav {
+	clear: both;
+}
+
+.board-nav:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+.quick-nav {
+	float: right;
+}
+
 /* Content Styles
 ---------------------------------------- */
 
