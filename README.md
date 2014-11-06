@@ -5,6 +5,8 @@ The new style for phpBB 3.2 (Rhea)
 
 The focus right now is on the templates. How exactly we're going to implement the build-system and preprocessors remains to be seen.
 
+The `*.html` (not .twig) templates currently in the repo are temporary. They will be removed once the template names are no longer hard-coded in the backend.
+
 ---------
 
 Style guide: http://hanakin.github.io/phpBB-StyleGuide/
@@ -65,4 +67,4 @@ __Proposed structure__
     - `includes/`
       - all ucp components
     - `ucp_*.html.twig`
-
+- `composer.json` (previously `style.cfg`)
