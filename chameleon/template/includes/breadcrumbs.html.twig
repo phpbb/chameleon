@@ -1,58 +1,43 @@
 {% block breadcrumbs %}
-	<ul id="nav-breadcrumbs" class="linklist navlinks" role="menubar">
-		<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
-		<!-- EVENT overall_header_breadcrumbs_before -->
-		<li class="small-icon icon-home breadcrumbs">
-			<!-- IF U_SITE_HOME --><span class="crumb"><a href="{U_SITE_HOME}"{$MICRODATA} data-navbar-reference="home">{L_SITE_HOME}</a></span><!-- ENDIF -->
-			<!-- EVENT overall_header_breadcrumb_prepend -->
-			<span class="crumb"><a href="{U_INDEX}" accesskey="h"{$MICRODATA} data-navbar-reference="index">{L_INDEX}</a></span>
-			<!-- BEGIN navlinks -->
-			<!-- EVENT overall_header_navlink_prepend -->
-			<span class="crumb"><a href="{navlinks.U_VIEW_FORUM}"{$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->>{navlinks.FORUM_NAME}</a></span>
-			<!-- EVENT overall_header_navlink_append -->
-			<!-- END navlinks -->
-			<!-- EVENT overall_header_breadcrumb_append -->
-		</li>
-		<!-- EVENT overall_header_breadcrumbs_after -->
+	<nav class="board-nav">
+		<ul class="breadcrumbs">
+			<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
 
-		<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-		<li class="rightside responsive-search" style="display: none;"><a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}" role="menuitem">{L_SEARCH}</a></li>
-		<!-- ENDIF -->
-	</ul>
+			<!-- IF U_SITE_HOME --><li class="crumb"><a href="{{ U_SITE_HOME }}"{$MICRODATA} data-navbar-reference="home">{L_SITE_HOME}</a></li><!-- ENDIF -->
+			<li class="crumb"><a href="{U_INDEX}" accesskey="h"{$MICRODATA} data-navbar-reference="index">{L_INDEX}</a></li>
+			{% for crumb in loops.navlinks %}
+				<li class="crumb"><a href="{crumb.U_VIEW_FORUM}"{$MICRODATA}<!-- IF crumb.MICRODATA --> {crumb.MICRODATA}<!-- ENDIF -->>{crumb.FORUM_NAME}</a></li>
+			{% endfor %}
+			</li>
+		</ul>
 
-	{% block jumpbox %}
-		<!-- IF S_VIEWTOPIC -->
-		<p class="jumpbox-return"><a href="{U_VIEW_FORUM}" class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" accesskey="r">{L_RETURN_TO_FORUM}</a></p>
-		<!-- ELSEIF S_VIEWFORUM -->
-		<p class="jumpbox-return"><a href="{U_INDEX}" class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" accesskey="r">{L_RETURN_TO_INDEX}</a></p>
-		<!-- ELSEIF SEARCH_TOPIC -->
-		<p class="jumpbox-return"><a class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH_TOPIC}" accesskey="r">{L_RETURN_TO_TOPIC}</a></p>
-		<!-- ELSEIF S_SEARCH_ACTION -->
-		<p class="jumpbox-return"><a class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r">{L_GO_TO_SEARCH_ADV}</a></p>
-		<!-- ENDIF -->
+		{% block jumpbox %}
+			<div class="quick-nav">
+				<!-- IF SEARCH_TOPIC -->
+				<p class="jumpbox-return"><a class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH_TOPIC}" accesskey="r">{L_RETURN_TO_TOPIC}</a></p>
+				<!-- ELSEIF S_SEARCH_ACTION -->
+				<p class="jumpbox-return"><a class="left-box arrow-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r">{L_GO_TO_SEARCH_ADV}</a></p>
+				<!-- ENDIF -->
 
-		<!-- IF S_DISPLAY_JUMPBOX -->
+				<!-- IF S_DISPLAY_JUMPBOX -->
 
-		<div class="dropdown-container dropdown-container-{S_CONTENT_FLOW_END}<!-- IF not S_IN_MCP --> dropdown-up<!-- ENDIF --> dropdown-{S_CONTENT_FLOW_BEGIN} dropdown-button-control" id="jumpbox">
-			<span title="<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->" class="dropdown-trigger button dropdown-select">
-				<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->
-			</span>
-			<div class="dropdown hidden">
-				<div class="pointer"><div class="pointer-inner"></div></div>
-				<ul class="dropdown-contents">
-					<!-- BEGIN jumpbox_forums -->
-					<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
-					<li><!-- BEGIN level -->&nbsp; &nbsp;<!-- END level --><a href="{jumpbox_forums.LINK}">{jumpbox_forums.FORUM_NAME}</a></li>
-					<!-- ENDIF -->
-					<!-- END jumpbox_forums -->
-				</ul>
+				<div class="dropdown-container dropdown-container-{S_CONTENT_FLOW_END}<!-- IF not S_IN_MCP --> dropdown-up<!-- ENDIF --> dropdown-{S_CONTENT_FLOW_BEGIN} dropdown-button-control" id="jumpbox">
+					<span title="<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->" class="dropdown-trigger button dropdown-select">
+						<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->
+					</span>
+					<div class="dropdown hidden">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<ul class="dropdown-contents">
+							<!-- BEGIN jumpbox_forums -->
+							<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
+							<li><!-- BEGIN level -->&nbsp; &nbsp;<!-- END level --><a href="{jumpbox_forums.LINK}">{jumpbox_forums.FORUM_NAME}</a></li>
+							<!-- ENDIF -->
+							<!-- END jumpbox_forums -->
+						</ul>
+					</div>
+				</div>
+				<!-- ENDIF -->
 			</div>
-		</div>
-
-		<!-- ELSE -->
-		<br /><br />
-		<!-- ENDIF -->
-
-	{% endblock %}
-
+		{% endblock %}
+	</nav>
 {% endblock %}
