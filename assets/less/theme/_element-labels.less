@@ -1,0 +1,65 @@
+//------------------------------------------------------------------------------
+//  $ELEMENT-LABEL
+//------------------------------------------------------------------------------
+//  Label Element
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// 1. Add hover effects, but only for links.
+// 2. Empty labels collapse automatically (not available in IE8).
+// 3. Quick fix for labels in buttons.
+//------------------------------------------------------------------------------
+
+.label {
+    // Text
+    font-size: 76%;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    // Decoration
+    background-color: @label-bg;
+    border-radius: @base-radius-sm;
+    color: @label-color;
+
+    // Layout
+    display: inline-block;
+    padding: @base-padding-vertical-sm @base-padding-horizontal-sm;
+
+    a& { // [1]
+        &:hover, &:focus {
+            // Text
+            text-decoration: none;
+
+            // Decoration
+            background-color: @label-hover-bg;
+            color: @label-hover-color;
+            cursor: pointer;
+        }
+    }
+
+    &[href] {
+        color: @label-color;
+
+        &:hover, &:focus {
+            background-color: @label-hover-bg;
+            color: @label-hover-color;
+        }
+    }
+
+    &:empty { display: none; } // [2]
+
+    .button & { // [3]
+        position: relative;
+        top: -1px;
+    }
+
+    .fa:before {
+        // Text
+        font-size: 16px;
+
+        // Layout
+        position: relative;;
+        top: 2px;
+    }
+}

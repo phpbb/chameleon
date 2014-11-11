@@ -1,0 +1,83 @@
+/*----------------------------------------------------------------------------*\
+    $COMMON-LISTS
+/*----------------------------------------------------------------------------*\
+    Setup the default lists and baseline grid
+/*----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Unordered and Ordered lists
+//------------------------------------------------------------------------------
+ul,
+ol {
+    margin-top: 0;
+    .rem-size(margin-bottom, (@base-line-height-computed / 2));
+
+    ul,
+    ol { margin-bottom: 0; }
+}
+
+//------------------------------------------------------------------------------
+// Description Lists
+//------------------------------------------------------------------------------
+// 1. Remove browser default.
+// 2. Undo browser default.
+//------------------------------------------------------------------------------
+dl {
+    margin-top: 0; // [1]
+    .rem-size(margin-bottom, @base-line-height-computed);
+}
+
+dt,
+dd { line-height: @base-line-height; }
+dt { font-weight: bold; }
+dd { margin-left: 0; } // [2]
+
+//------------------------------------------------------------------------------
+// List options
+//------------------------------------------------------------------------------
+// 1. Keeps list items block level, just removes default browser padding and
+//    list-style.
+// 2. Inline turns list items into inline-block.
+// 3. Clear the floated `dt` if empty `dd` is present.
+//------------------------------------------------------------------------------
+.list-unstyled { // [1]
+    // Decoration
+    list-style: none;
+
+    // Layout
+    padding-left: 0;
+
+    ul,
+    ol { list-style: none; }
+}
+
+.list-inline { // [2]
+    // Decoration
+    list-style: none;
+
+    // Layout
+    margin-left: -5px;
+    padding: 0;
+
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    dd { &:extend(.clearfix all); } // [3]
+    @media (min-width: @grid-float-breakpoint) { // [3]
+        dt {
+            // Text
+            text-align: right;
+            .text-overflow();
+
+            // Layout
+            clear: left;
+            float: left;
+            width: (@base-horizontal-offset - 20);
+        }
+
+        dd { margin-left: @base-horizontal-offset; }
+    }
+}

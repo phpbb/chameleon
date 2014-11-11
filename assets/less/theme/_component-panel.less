@@ -1,0 +1,150 @@
+//------------------------------------------------------------------------------
+//  $COMPONENT-PANEL
+//------------------------------------------------------------------------------
+//  panel component
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Panel
+//------------------------------------------------------------------------------
+.panel {
+    .box-shadow(0 1px 1px rgba(0,0,0,.05));
+
+    // Layout
+    margin-bottom: 20px;
+}
+
+//------------------------------------------------------------------------------
+// Panel Heading
+//------------------------------------------------------------------------------
+.panel-head {
+    // Decoration
+    background-color: @panel-head-bg;
+    .border-top-radius((@panel-border-radius));
+
+    // Layout
+    padding: 10px 15px;
+}
+
+//------------------------------------------------------------------------------
+// Panel Title
+//------------------------------------------------------------------------------
+// 1. Within heading, strip any `h*` tag of its default margins for spacing.
+// 2. Reset padding because ul and olR
+//------------------------------------------------------------------------------
+.panel-title {
+    // Text
+    font-weight: 300;
+    vertical-align: bottom;
+
+    // Decoration
+    color: @panel-title-color;
+
+    // Layout
+    margin-top: 0;    // [1]
+    margin-bottom: 0; // [1]
+}
+
+//------------------------------------------------------------------------------
+// Panel Label
+//------------------------------------------------------------------------------
+.panel-label {
+    background-color: @panel-label-bg;
+    color: @panel-label-color;
+
+    .panel-side > & {
+        background-color: @panel-label-color;
+        color: @panel-label-bg;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Panel Row
+//------------------------------------------------------------------------------
+.panel-row {
+    background-color: @panel-bg;
+    border-width: @panel-border-size;
+    border-style: solid;
+    border-color: @panel-border-color;
+    border-bottom: 0;
+
+    > div { padding: 20px; }
+    &:extend(.clearfix all);
+}
+
+//------------------------------------------------------------------------------
+// Panel Content
+//------------------------------------------------------------------------------
+.panel-content {
+    @media (min-width: @screen-sm-min) {
+        // Decroation
+        border-left-width: @panel-border-size;
+        border-left-style: solid;
+        border-left-color: @panel-border-color;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Panel Content
+//------------------------------------------------------------------------------
+.panel-description {
+    // Decroation
+    background-color: @panel-description-bg;
+    border-width: @panel-border-size;
+    border-style: solid;
+    border-color: @panel-border-color;
+    border-bottom: 0;
+
+    // Layout
+    padding: 20px;
+
+    p { margin: 0; }
+}
+
+//------------------------------------------------------------------------------
+// Panel Content
+//------------------------------------------------------------------------------
+// 1. Fix weird extra bottom spacing
+//------------------------------------------------------------------------------
+.panel-code {
+    // Decroation
+    background-color: @panel-code-bg;
+    border-width: @panel-border-size;
+    border-style: solid;
+    border-color: @panel-border-color;
+    border-bottom-width: @panel-border-size;
+    border-bottom: 0;
+
+    // Layout
+    padding: 20px 20px 0; // [1]
+
+    pre {
+        // Decoration
+        background-color: @panel-code-bg;
+        border: 0;
+        color: @panel-code-text-color;
+
+        // Layout
+        padding: 0;
+        margin: 0;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Panel Footer
+//------------------------------------------------------------------------------
+.panel-foot {
+    // Text
+    font-weight: 300;
+
+    // Decoration
+    background-color: @panel-foot-bg;
+    border-width: @panel-border-size;
+    border-style: solid;
+    border-color: @panel-border-color;
+    .border-bottom-radius((@panel-border-radius));
+    color: @panel-foot-color;
+
+    // Layout
+    padding: 10px 15px;
+}

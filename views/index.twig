@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>{% block title %}ProSilver - StyleGuide{% endblock %}</title>
+
+    <!-- STYLES -->{% block styles %}
+    <link rel="stylesheet" type="text/css" href="dist/assets/css/style.css" media="all" />
+    {% endblock %}
+    <!-- ICONS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+     <link href="https://fontastic.s3.amazonaws.com/RXbnET5YNarDEPRMCf8SS7/icons.css" rel="stylesheet">
+
+    <!-- FONTS -->{% block fonts %}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,600,300,400,700,800&subset=latin,cyrillic-ext,greek-ext,vietnamese,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    {% endblock %}
+    <!-- JS HEADER -->{% block header_js %}{% endblock %}
+</head>
+<body>
+    {% block header %}
+    <header class="header swatch-primary-alt">
+        <hgroup class="container lead-container">
+            <div class="lead">
+                <h2 class="lead-title text-center">
+                    <a class="logo" href="index.html" title="PHPBB"><span class="sr-only">PHPBB - Creating Comunities</span></a> StyleGuide
+                </h2>
+                <p class="lead-sub-title text-center">
+                    A tool to facilitate the development and design of the default theme for phpBB utilizing <a href="http://www.confreaks.com/videos/3972-cssconfus2014-style-guide-driven-development">Style Guide Driven Development</a>
+                </p>
+            </div>
+        </hgroup>
+    </header>
+    {% endblock %}
+    <div class="container">
+        <div class="wrap">
+            <div class="row">
+                <div class="main col-md-8 col-xs-12">
+                    {% block content %}
+                    <div id="core" class="core">
+                        {% include './partials/core/colors.twig' %}
+                        {% include './partials/core/fonts.twig' %}
+                        {% include './partials/core/type.twig' %}
+                        {% include './partials/core/lists.twig' %}
+                        {% include './partials/core/forms.twig' %}
+                        {% include './partials/core/tables.twig' %}
+                        {% include './partials/core/code.twig' %}
+                    </div>
+
+                    <div id="element" class="elements">
+                        {% include './partials/elements/icons.twig' %}
+                    </div>
+
+                    <div id="component" class="components">
+
+                    </div>
+                    {% endblock %}
+                </div>
+                <div class="sidebar col-md-offset-1 col-md-3 col-xs-12">
+                {% block sidebar %}
+                    <nav class="menu-container affix">
+                        <div id="menu" class="nav menu">
+                            {% for section, item in sections %}
+                            <a class="menu-item menu-heading" href="#{{ section }}">{{ loop.index }}. {{ section|title }}</a>
+                            {% for name, value in item %}
+                            <a class="menu-item" href="#{{ name }}">{{ loop.parent.loop.index }}.{{ loop.index }} {{ name|title }}</a>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </nav>
+                {% endblock %}
+                </div>
+            </div>
+            <footer>
+            {% block footer %} {% endblock %}
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS FOOTER -->
+    {% block footer_js %}
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/rainbow/rainbow.min.js"></script>
+    <script src="assets/js/rainbow/language/css.js"></script>
+    <script src="assets/js/rainbow/language/html.js"></script>
+    <script src="assets/js/rainbow/language/php.js"></script>
+    <script src="assets/js/rainbow/language/javascript.js"></script>
+    <script src="assets/js/application.js"></script>
+    <!--  // <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script> -->
+    {% endblock %}
+</body>
+</html>

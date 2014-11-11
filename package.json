@@ -1,0 +1,43 @@
+{
+  "name": "phpBB-StyleGuide",
+  "description": "A tool to facilitate the development and design of the default theme for phpBB utilizing Style Guide Driven Development: http://www.confreaks.com/videos/3972-cssconfus2014-style-guide-driven-development",
+  "version": "0.1.0",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "event-stream": "~3.1.7",
+    "gulp": "~3.8.1",
+    "gulp-cache": "~0.2.1",
+    "gulp-csscomb": "~0.2.0",
+    "gulp-csslint": "~0.1.5",
+    "gulp-data": "^1.0.2",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-imagemin": "~0.6.0",
+    "gulp-less": "~1.3.3",
+    "gulp-load-plugins": "~0.6.0",
+    "gulp-minify-css": "~0.3.5",
+    "gulp-notify": "~1.3.1",
+    "gulp-plumber": "~0.6.3",
+    "gulp-rename": "~1.2.0",
+    "gulp-sourcemaps": "~1.1.0",
+    "gulp-twig": "0.0.4",
+    "gulp-util": "~3.0.0",
+    "twig": "^0.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanakin/phpBB-StyleGuide.git"
+  },
+  "keywords": [
+    "phpbb"
+  ],
+  "author": "hanakin (michael miday) hanakin@me.com",
+  "license": "MiT",
+  "bugs": {
+    "url": "https://github.com/hanakin/phpBB-StyleGuide/issues"
+  },
+  "homepage": "http://hanakin.github.io/PHPBB-StyleGuide/"
+}

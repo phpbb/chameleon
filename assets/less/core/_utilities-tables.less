@@ -1,0 +1,145 @@
+/*----------------------------------------------------------------------------*\
+    $UTILITIES-TABLES
+/*----------------------------------------------------------------------------*\
+    Contains useful table related functions
+/*----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Condensed table w/ half padding
+//------------------------------------------------------------------------------
+.table-condensed {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th, > td { padding: @table-padding-sm; }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Bordered version
+//------------------------------------------------------------------------------
+// Add borders all around the table and between all the columns.
+//------------------------------------------------------------------------------
+.table-bordered {
+    border-width: @table-border-size;
+    border-style: solid;
+    border-color: @table-border-color;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th, > td {
+                border-width: @table-border-size;
+                border-style: solid;
+                border-color: @table-border-color;
+            }
+        }
+    }
+
+    > thead > tr {
+        > th, > td { border-bottom-width: (@table-border-size * 2); }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Zebra-striping
+//------------------------------------------------------------------------------
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+//------------------------------------------------------------------------------
+.table-striped {
+    > tbody > tr:nth-child(odd) {
+        > td, > th { background-color: @table-bg-alt; }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Hover effect
+//------------------------------------------------------------------------------
+// Placed here since it has to come after the potential zebra striping
+//------------------------------------------------------------------------------
+.table-hover {
+    > tbody > tr:hover {
+        > td, > th { background-color: @table-bg-hover; }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Table backgrounds
+//------------------------------------------------------------------------------
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+//------------------------------------------------------------------------------
+.table-row-variant(active; @table-bg-alt);
+.table-row-variant(success; @success);
+.table-row-variant(info; @info);
+.table-row-variant(warning; @warning);
+.table-row-variant(danger; @danger);
+
+//------------------------------------------------------------------------------
+// Responsive tables
+//------------------------------------------------------------------------------
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+//------------------------------------------------------------------------------
+// 1. Tighten up spacing.
+// 2. Ensure the content doesn't wrap.
+// 3. Special overrides for the bordered tables.
+// 4. Nuke the appropriate borders so that the parent can handle them.
+// 5. Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+//    chances are there will be only one `tr` in a `thead` and that would remove
+//    the border altogether.
+//------------------------------------------------------------------------------
+
+.table-responsive {
+    @media screen and (max-width: @screen-xs-max) {
+        // Decoration
+        border-width: @table-border-size;
+        border-style: solid;
+        border-color: @table-border-color;
+
+        // Layout
+        .rem-size(margin-bottom, @base-line-height-computed);
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+
+        // Other
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+
+        > .table { // [1]
+            margin-bottom: 0;
+
+            > thead,
+            > tbody,
+            > tfoot { // [2]
+                > tr {
+                    > th, > td { white-space: nowrap; }
+                }
+            }
+        }
+
+        > .table-bordered { // [3]
+            border: 0;
+
+            > thead,
+            > tbody,
+            > tfoot { // [4]
+                > tr {
+                    > th:first-child, > td:first-child { border-left: 0; }
+                    > th:last-child, > td:last-child { border-right: 0; }
+                }
+            }
+
+            > tbody, > tfoot { // [5]
+                > tr:last-child {
+                    > th, > td { border-bottom: 0; }
+                }
+            }
+        }
+    }
+}

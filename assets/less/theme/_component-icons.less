@@ -1,0 +1,52 @@
+//------------------------------------------------------------------------------
+//  $COMPONENT-ICONS
+//------------------------------------------------------------------------------
+//  icon component
+//------------------------------------------------------------------------------
+
+.icon-list {
+    // Decoration
+    cursor: pointer;
+
+    // Layout
+    padding: 0;
+
+    > li { padding: 0; }
+}
+
+.icon {
+    // Layout
+    margin: 6px;
+    padding: 0;
+}
+
+.icon-wrap {
+    // Text
+    .rem-size(font-size, @mega);
+    text-align: center;
+
+    // Decoration
+    border-radius: @base-radius-lg;
+    color: @white;
+
+    // Layout
+    display: block;
+    height: 100px;
+    padding: @base-padding-vertical;
+    width: 100px;
+}
+
+.icon-label {
+    // Text
+    .rem-size(font-size, @milli);
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    // Decoration
+    color: @ui-alt;
+
+    // Layout
+    margin: 7px 0 0;
+}

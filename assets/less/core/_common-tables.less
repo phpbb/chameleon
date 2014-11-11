@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*\
+    $COMMON-TABLES
+/*----------------------------------------------------------------------------*\
+    Setup the default tables - Based on Bootstrap
+/*----------------------------------------------------------------------------*/
+
+table { background-color: @table-bg; }
+th { text-align: left; }
+
+//------------------------------------------------------------------------------
+// Baseline styles
+//------------------------------------------------------------------------------
+// 1. Cells.
+// 2. Bottom align for column headings.
+// 3. Remove top border from thead by default.
+// 4. Account for multiple tbody instances.
+// 5. Nesting.
+//------------------------------------------------------------------------------
+.table {
+    .rem-size(margin-bottom, @base-line-height-computed);
+    max-width: 100%;
+    width: 100%;
+
+    > thead,
+    > tbody,
+    > tfoot { // [1]
+        > tr {
+            > th, > td {
+                // Text
+                line-height: @base-line-height;
+                vertical-align: top;
+
+                // Decoration
+                border-top-width: @table-border-size;
+                border-top-style: solid;
+                border-top-color: @table-border-color;
+                color: @table-color;
+
+                // Layout
+                padding: @table-padding;
+            }
+        }
+    }
+
+    > thead > tr > th { // [2]
+        // Text
+        text-align: center;
+        vertical-align: bottom;
+
+        // Decoration
+        background-color: @table-head-bg;
+        border-bottom-width: @table-border-size;
+        border-bottom-style: solid;
+        border-bottom-color: @table-border-color;
+        color: @table-head-color;
+    }
+
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child { // [3]
+        > tr:first-child {
+            > th, > td { border-top: 0; }
+        }
+    }
+
+    > tbody + tbody { // [4]
+        border-top-width: (@table-border-size * 2);
+        border-top-style: solid;
+        border-top-color: @table-border-color;
+    }
+
+    .table { background-color: @base-body-bg-color; } // [5]
+}
+
+
+
+//------------------------------------------------------------------------------
+// Table cell sizing
+//------------------------------------------------------------------------------
+// Reset default table behavior
+//------------------------------------------------------------------------------
+// 1. Prevent border hiding in Firefox and IE9/10
+//    (see https://github.com/twbs/bootstrap/issues/11623)
+//------------------------------------------------------------------------------
+table col[class*="col-"],
+table td[class*="col-"],
+table th[class*="col-"]{
+    display: table-column; // [1]
+    float: none;
+    position: static;
+}

@@ -1,0 +1,87 @@
+/*----------------------------------------------------------------------------*\
+    $COMMON-RADIOS & CHECKBOXES
+/*----------------------------------------------------------------------------*\
+    Setup the default radio and checkboxes - Based on Bootstrap
+/*----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Checkboxes and radios
+//------------------------------------------------------------------------------
+// Indent the labels to position radios/checkboxes as hanging controls.
+//------------------------------------------------------------------------------
+// 1. clear the floating input if there is no label text.
+// 2. Move up sibling radios or checkboxes for tighter spacing.
+// 3. Radios and checkboxes on same line.
+// 4. space out consecutive inline controls
+// 5. Apply same disabled cursor tweak as for inputs. Some special care is
+//    needed because <label>s don't inherit their parent's `cursor`.
+//    Note: Neither radios nor checkboxes can be readonly.
+// 6. These classes are used directly on <label>s.
+// 7. These classes are used on elements with <label> descendants.
+//------------------------------------------------------------------------------
+.radio, .checkbox {
+    // Layout
+    display: block;
+    min-height: @base-line-height-computed; // [1]
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+    label {
+        // Text
+        font-weight: normal;
+
+        // Decoration
+        cursor: pointer;
+
+        // Layout
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    margin-left: -20px;
+    margin-top: 4px \9;
+    position: absolute;
+}
+
+.radio + .radio, .checkbox + .checkbox { margin-top: -5px; } // [2]
+
+.radio-inline, .checkbox-inline { // [3]
+    // Text
+    font-weight: normal;
+    vertical-align: middle;
+
+    // Decoration
+    cursor: pointer;
+
+    // Layout
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-left: 10px; // [4]
+    margin-top: 0;
+}
+
+input[type="radio"], input[type="checkbox"] { // [5]
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & { cursor: not-allowed; }
+}
+
+.radio-inline, .checkbox-inline { // [6]
+    &.disabled, fieldset[disabled] & { cursor: not-allowed; }
+}
+
+.radio, .checkbox { // [7]
+    &.disabled, fieldset[disabled] & {
+        label { cursor: not-allowed; }
+    }
+}

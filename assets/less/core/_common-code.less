@@ -1,0 +1,95 @@
+/*----------------------------------------------------------------------------*\
+    $COMMON-CODE
+/*----------------------------------------------------------------------------*\
+    Setup the default code elements - Based on Bootstrap
+/*----------------------------------------------------------------------------*/
+
+// -----------------------------------------------------------------------------
+// Code (inline and block)
+// -----------------------------------------------------------------------------
+code,
+kbd,
+pre,
+samp { font-family: @code-font; }
+
+// Inline code
+code {
+    // Text
+    font-size: 90%;
+
+    // Decoration
+    background-color: @code-bg;
+    border-radius: @base-radius;
+    color: @code-color;
+
+    // Layout
+    padding: 2px 4px;
+}
+
+// -----------------------------------------------------------------------------
+// User input typically entered via keyboard
+// -----------------------------------------------------------------------------
+kbd {
+    // Text
+    font-size: 90%;
+
+    // Decoration
+    background-color: @kbd-bg;
+    border-radius: @base-radius-sm;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+    color: @kbd-color;
+
+    // Layout
+    padding: 2px 4px;
+
+    kbd {
+        // Text
+        font-size: 100%;
+
+        // Decoration
+        box-shadow: none;
+
+        // Layout
+        padding: 0;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Blocks of code
+// -----------------------------------------------------------------------------
+// 1. Account for some code outputs that place code tags in pre tags
+// -----------------------------------------------------------------------------
+pre {
+    // Text
+    .font-size(@zeta);
+    word-break: break-all;
+    word-wrap: break-word;
+
+    // Decoration
+    background-color: @pre-bg;
+    border-color: @pre-border-color;
+    border-radius: @base-radius;
+    border-style: solid;
+    border-width: @pre-border-size;
+    color: @pre-color;
+
+    // Layout
+    display: block;
+    margin: 0;
+    .rem-size(margin-bottom, (@base-line-height-computed / 2));
+    padding: unit((@base-line-height-computed / 2), px);
+
+    code { // [1]
+        // Text
+        font-size: inherit;
+        white-space: pre-wrap;
+
+        // Decoration
+        background-color: transparent;
+        border-radius: 0;
+        color: inherit;
+
+        // Layout
+        padding: 0;
+    }
+}
