@@ -1,7 +1,7 @@
 Chameleon
 =========
 
-The new style for phpBB 3.2 (Rhea)
+The phpBB default style
 
 The focus right now is on the templates. How exactly we're going to implement the build-system and preprocessors remains to be seen.
 
