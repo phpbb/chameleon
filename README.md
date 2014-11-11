@@ -10,6 +10,13 @@ __Commits__:
 PHPBB3-13327
 ````
 
+In order to automatically have this added to all commit messages (and to have all
+your commit messages checked upon committing) please run the following in your terminal:
+````
+cd git-tools/hooks
+./install
+````
+
 _Note_: The `*.html` (not .twig) templates currently in the repo are temporary. They will be removed once the template names are no longer hard-coded in the backend.
 
 ---------
