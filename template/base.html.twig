@@ -27,17 +27,16 @@
 	{% block head_assets %}
 		{# TODO: we need to either be able to use asset(), or have an T_ASSET_PATH #}
 		{% block assets_core %}
-			{# <link rel="stylesheet" href="{{ ROOT_PATH }}styles/rhea/assets/normalize.css"> #}
-			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/core.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/dist/core.css">
 		{% endblock %}
 
 		{% block assets_theme %}
-			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/theme.css">
-			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/test.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/dist/theme.css">
+			<link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/dist/test.css">
 		{% endblock %}
 
 		{% block assets_browsers %}
-			<!--[if lte IE 9]><link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/ie.css"><![endif]-->
+			<!--[if lte IE 9]><link rel="stylesheet" href="{{ ROOT_PATH }}styles/chameleon/assets/dist/ie.css"><![endif]-->
 		{% endblock %}
 
 		{% block assets_fonts %}
@@ -54,7 +53,7 @@
 	{% block head_javascripts %}{% endblock %}
 	{# END ASSETS #}
 
-	{% block head_favicon %}<link rel="shortcut icon" href="({{ ROOT_PATH }}styles/chameleon/assets/theme/images/favicon.ico)" type="image/vnd.microsoft.icon">{% endblock %}
+	{% block head_favicon %}<link rel="shortcut icon" href="({{ ROOT_PATH }}styles/chameleon/assets/images/favicon.ico)" type="image/vnd.microsoft.icon">{% endblock %}
 </head>
 {# END HEAD #}
 
@@ -191,8 +190,8 @@
 			<script src="{{ T_ASSETS_PATH }}/javascript/core.js?assets_version={{ T_ASSETS_VERSION }}"></script>
 		{% endblock %}
 		{% block js_include_style %}
-			{% INCLUDEJS forum_fn.js %}
-			{% INCLUDEJS ajax.js %}
+			{# {% INCLUDEJS forum_fn.js %}
+			{% INCLUDEJS ajax.js %} #}
 		{% endblock %}
 
 		{# {$SCRIPTS} TODO #}
