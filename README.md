@@ -3,9 +3,13 @@ Chameleon
 
 The phpBB default style
 
-The focus right now is on the templates. How exactly we're going to implement the build-system and preprocessors remains to be seen.
+__Commits__:
+````
+[chameleon] Commit Message
+PHPBB3-13327
+````
 
-The `*.html` (not .twig) templates currently in the repo are temporary. They will be removed once the template names are no longer hard-coded in the backend.
+_Note_: The `*.html` (not .twig) templates currently in the repo are temporary. They will be removed once the template names are no longer hard-coded in the backend.
 
 ---------
 
@@ -13,13 +17,17 @@ Style guide: http://hanakin.github.io/phpBB-StyleGuide/
 
 CSS coding guidelines: https://github.com/hanakin/phpBB-StyleGuide/tree/gh-pages/Coding%20Guidlines/CSS
 
+Trello: https://trello.com/b/gdHw0JBq
+
 ---------
 
 __Proposed structure__
 - `assets/`
-  - `css/`
+  - `dist/` (compiled CSS and JS)
   - `images/`
-  - `js/`
+  - `src/`
+	- `css/`
+	- `js/`
 - `template/` (or `templates/` or `views/`)
   - `base.html.twig`
   - `base_simple.html.twig`
@@ -68,4 +76,8 @@ __Proposed structure__
     - `includes/`
       - all ucp components
     - `ucp_*.html.twig`
-- `composer.json` (previously `style.cfg`)
+- `composer.json`
+- `gulpfile.js`
+- `package.json`
+- `README.md`
+- `style.cfg` (temporary, untill we switch to composer.json)
