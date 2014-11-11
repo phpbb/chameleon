@@ -1,0 +1,30 @@
+//------------------------------------------------------------------------------
+//  $COMPONENT-LEAD
+//------------------------------------------------------------------------------
+//  lead component
+//------------------------------------------------------------------------------
+
+.lead {
+    padding: 80px 0 60px;
+}
+
+.lead-title {
+    .rem-size(font-size, 60);
+    @media (min-width: @screen-xs-max) {
+        .rem-size(font-size, 72);
+    }
+    .rem-size(line-height, 36);
+    font-weight: 400;
+    color: @white;
+    margin: 0 0 36px;
+}
+
+.lead-sub-title {
+    .rem-size(font-size, 24);
+    .rem-size(line-height, 36);
+    color: #ffffff;
+    font-weight: 200;
+    padding: 0 25px;
+
+    a { display: block; }
+}

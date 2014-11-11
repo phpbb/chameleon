@@ -1,0 +1,33 @@
+{% extends '../index.twig' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="../../dist/assets/css/style.css" media="all" />
+{% endblock %}
+
+
+{% block title %}
+    {% block test_title %}{% endblock %}
+{% endblock %}
+
+{% block header %}
+    {% block test_header %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+    {% block test_content %}{% endblock %}
+{% endblock %}
+
+{% block sidebar %}
+<!-- nothing -->
+{% endblock %}
+
+{% block footer_js %}
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../assets/js/rainbow/rainbow.min.js"></script>
+<script src="../../assets/js/rainbow/language/css.js"></script>
+<script src="../../assets/js/rainbow/language/html.js"></script>
+<script src="../../assets/js/rainbow/language/php.js"></script>
+<script src="../../assets/js/rainbow/language/javascript.js"></script>
+<script src="../../assets/js/application.js"></script>
+<!--  // <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script> -->
+{% endblock %}

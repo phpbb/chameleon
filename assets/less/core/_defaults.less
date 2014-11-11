@@ -1,0 +1,412 @@
+//------------------------------------------------------------------------------
+//  $DEFAULTS
+//------------------------------------------------------------------------------
+//  Default variables used to establish the base framework
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+//  $COLORS
+//------------------------------------------------------------------------------
+// Black & White
+@black:                             #000;
+@white:                             #fff;
+
+// Gray scales Colors
+@gray-10:                           lighten(#000, 10%); // #1a1a1a
+@gray-20:                           lighten(#000, 20%); // #333333
+@gray-30:                           lighten(#000, 30%); // #4d4d4d
+@gray-40:                           lighten(#000, 40%); // #666666
+@gray-50:                           lighten(#000, 50%); // #808080
+@gray-60:                           lighten(#000, 60%); // #999999
+@gray-70:                           lighten(#000, 70%); // #b3b3b3
+@gray-80:                           lighten(#000, 80%); // #cccccc
+@gray-87:                           lighten(#000, 87%); // #dedede
+@gray-90:                           lighten(#000, 90%); // #e5e5e5
+@gray-95:                           lighten(#000, 95%); // #f2f2f2
+
+// Primary Colors
+@primary:                           hsl(207,80%,30%);;  // #0F538A
+@primary-alt:                       lighten(@primary, @lighten); // #47A1EB
+@primary-accent:                    darken(@primary, @darken); // #0D4573
+@primary-hover:                     darken(spin(@primary-alt, 138), @darken); // #E8305E
+
+// Secondary Colors
+@secondary:                         desaturate(@primary-alt, @saturation); // #709DC2
+@secondary-alt:                     lighten(@secondary, @lighten); // #DBE7F0
+@secondary-accent:                  darken(@secondary-alt, @darken); // #C9DAE8
+@secondary-hover:                   saturate(spin(@secondary-alt, -150), @saturation); // #FAF8D1
+
+// UI Colors
+@ui:                                @gray-87; // #dedede
+@ui-alt:                            @gray-70; // #b3b3b3
+
+// Color Tools
+@lighten:                           30%;
+@darken:                            5%;
+@saturation:                        40%;
+
+// Status Colors - Dark
+@success-dark:                      #3c763d;
+@info-dark:                         #31708f;
+@warning-dark:                      #8a6d3b;
+@danger-dark:                       #a94442;
+
+// Status Colors - Light
+@success:                           #dff0d8;
+@info:                              #d9edf7;
+@warning:                           #fcf8e3;
+@danger:                            #f2dede;
+
+
+
+//------------------------------------------------------------------------------
+//  $FONTS
+//------------------------------------------------------------------------------
+
+// Font Family
+@base-font:                         "Helvetica Neue", Helvetica, Arial, sans-serif;
+@button-font:                       "Open Sans", "Droid Sans", Verdana, Arial, Helvetica, sans-serif;
+@code-font:                         Monaco, "Andale Mono","Courier New", Courier, mono;
+
+// Modular Scale
+@giga:                              80;
+@mega:                              60;
+@kilo:                              48;
+@alpha:                             32;
+@beta:                              24;
+@gamma:                             20;
+@delta:                             18;
+@epsilon:                           16;
+@zeta:                              14;
+@milli:                             12;
+@micro:                             10;
+
+// Base Font Size
+@base-font-size:                    @epsilon;
+@base-line-height:                  1.5;
+@base-line-height-computed:         floor((@base-font-size * @base-line-height)); //24px
+
+
+
+//------------------------------------------------------------------------------
+//  $BASE SETTINGS
+//------------------------------------------------------------------------------
+
+// Colors
+@base-body-color:                   @gray-20;
+@base-body-bg-color:                desaturate(lighten(@secondary-alt, 5%), 20%);
+
+@base-heading-color:                @secondary;
+@base-heading-small-color:          @ui-alt;
+
+@base-hr-color:                     @gray-90;
+
+// Layout
+@base-radius-sm:                    3px;
+@base-radius:                       4px;
+@base-radius-lg:                    6px;
+
+@base-padding-vertical-xs:          1px;
+@base-padding-horizontal-xs:        5px;
+
+@base-padding-vertical-sm:          3px;
+@base-padding-horizontal-sm:        9px;
+
+@base-padding-vertical:             6px;
+@base-padding-horizontal:           12px;
+
+@base-padding-vertical-lg:          12px;
+@base-padding-horizontal-lg:        18px;
+
+@base-horizontal-offset:            180px;
+
+
+
+//------------------------------------------------------------------------------
+//  $FORM SETTINGS
+//------------------------------------------------------------------------------
+
+// Legend
+@legend-font-size:                  @beta;
+@legend-color:                      inherit;
+@legend-margin-bottom:              (@base-line-height-computed / 2);
+
+// Label
+@label-font-size:                   @base-font-size;
+@label-line-height:                 @alpha;
+
+// Output
+@output-font-size:                  @base-font-size;
+@output-color:                      @gray-50;
+@output-padding-top:                (@base-padding-vertical + 1);
+
+// Controls (inputs, textarea, selects)
+@control-font-family:               inherit;
+@control-font-size-sm:              @zeta;
+@control-font-size:                 @base-font-size;
+@control-font-size-lg:              @delta;
+
+@control-bg:                        #fafafa;
+@control-border-size:               1px;
+@control-border-color:              @gray-87;
+@control-radius:                    @base-radius;
+@control-box-shadow:                none;
+@control-color:                     @gray-40;
+@control-focus-color:               @primary-alt;
+
+@control-bg-disabled:               mix(@gray-60, white, 50%);
+@control-border-color-disabled:     mix(@gray-60, white, 30%);
+@control-color-disabled:            mix(@gray-60, white, 10%);;
+
+@control-height-sm:                 (@control-font-size-sm * 2);
+@control-height:                    (@control-font-size * 2);
+@control-height-lg:                 (@control-font-size-lg * 2);
+
+// Control Group
+@control-group-bg:                  @gray-80;
+
+// Temporal
+@temporal-height:                   @base-line-height;
+
+
+
+//------------------------------------------------------------------------------
+//  $TABLE SETTINGS
+//------------------------------------------------------------------------------
+
+// Table
+@table-bg:                          #fafafa;
+@table-bg-alt:                      @secondary-alt;
+@table-bg-hover:                    @warning;
+@table-border-color:                @white;
+@table-color:                       @gray-20;
+
+@table-border-size:                 1px;
+@table-padding:                     @base-padding-vertical;
+@table-padding-sm:                  @base-padding-vertical-sm;
+
+// Table Header
+@table-head-bg:                     @secondary;
+@table-head-color:                  @white;
+
+
+
+//------------------------------------------------------------------------------
+//  $CODE SETTINGS
+//------------------------------------------------------------------------------
+
+@code-color:                        @danger-dark;
+@code-bg:                           @danger;
+
+@kbd-color:                         @white;
+@kbd-bg:                            @gray-20;
+
+@pre-bg:                            @gray-95;
+@pre-color:                         @gray-20;
+@pre-border-size:                   1px;
+@pre-border-color:                  @gray-80;
+
+
+
+//------------------------------------------------------------------------------
+//  $GRID SETTINGS
+//------------------------------------------------------------------------------
+//  All grid values are based on the smallest column size being evenly divisible
+//  into thirds. Each column size is then increased by a factor of 6 to ensure
+//  rule of division by thirds. Container sizes are then generated by
+//  multiplying the base column sizes by 3 to get the actual column sizes and
+//  then by the number of columns
+//------------------------------------------------------------------------------
+// 1. Smallest fixed container size before switching to fluid.
+// 2. Divide the Smallest fixed container by the number of columns.
+// 3. Divide the base column size by 3 in-order to establish the base grid unit
+//    for all fixed grids.
+// 4. Padding between columns. Gets divided in half for the left and right, and
+//    subtracted from each side of the column.
+// 5. Create grid units for all fixed grids by exponentially incrementing by a
+//    factor of 6px. (6px was chosen to correspond with the baseline scale)
+// 6. Multiply the grid units by 3 to get the column sizes for each grid.
+// 7. Multiply column sizes by the number of columns to establish the sizes of
+//    the containers.
+// 8. Give the containers a consistent a bleed, by adding the gutter to each.
+// 9. Create the breakpoints by adding the base line height to the screen sizes.
+// 10. Set the min screen sizes equal to the breakpoints.
+// 11. Subtract one from each min size to set the max screen sizes.
+// 12. At what point things collapse to menus.
+// 13. At what point things un-collapse from menus.
+//------------------------------------------------------------------------------
+
+@base-container:                    720px; // [1]
+@grid-columns:                      12;
+@base-column-size:                  (@base-container / @grid-columns); // [2] 60px
+@base-grid-unit:                    (@base-column-size / 3);           // [3] 20px
+
+@grid-gutter-size:                  30px; // [4]
+
+// Grid Units [5]
+@grid-unit-sm:                      @base-grid-unit;                  // 20px   tablet
+@grid-unit-md:                      (@grid-unit-sm + 6);              // 26px   desktop small
+@grid-unit-lg:                      (@grid-unit-md + 6);              // 32px   desktop large
+@grid-unit-xl:                      (@grid-unit-lg + 6);              // 38px   desktop x-large
+
+// Column Sizes [6]
+@column-sm:                         (@grid-unit-sm * 3);              // 60px   tablet
+@column-md:                         (@grid-unit-md * 3);              // 78px   desktop small
+@column-lg:                         (@grid-unit-lg * 3);              // 96px   desktop large
+@column-xl:                         (@grid-unit-xl * 3);              // 114px  desktop x-large
+
+// Container sizes [7]
+@x-small:                           100%;
+@small:                             @base-container;                  // 720px  tablet
+@medium:                            (@column-md * @grid-columns);     // 936px  desktop small
+@large:                             (@column-lg * @grid-columns);     // 1152px desktop large
+@x-large:                           (@column-xl * @grid-columns);     // 1368px desktop x-large
+
+// Screen sizes [8]
+@container-sm:                      ((@small + @grid-gutter-size));   // 750px  tablet
+@container-md:                      ((@medium + @grid-gutter-size));  // 966px  desktop small
+@container-lg:                      ((@large + @grid-gutter-size));   // 1182px desktop large
+@container-xl:                      ((@x-large + @grid-gutter-size)); // 1398px desktop x-large
+
+// Breakpoints [9]
+@screen-xs:                         640px;  // phone
+@screen-sm:                         768px;  // tablet
+@screen-md:                         990px;  // desktop small
+@screen-lg:                         1200px; // desktop large
+@screen-xl:                         1420px; // desktop x-large
+
+// Min Values [10]
+@screen-xs-min:                     @screen-xs; // phone
+@screen-sm-min:                     @screen-sm; // tablet
+@screen-md-min:                     @screen-md; // desktop small
+@screen-lg-min:                     @screen-lg; // desktop large
+@screen-xl-min:                     @screen-xl; // desktop x-large
+
+// Max Values [11]
+@screen-xs-max:                     (@screen-xs-min - 1);
+@screen-sm-max:                     (@screen-md-min - 1);
+@screen-md-max:                     (@screen-lg-min - 1);
+@screen-lg-max:                     (@screen-xl-min - 1);
+
+// Responsive Menus
+@grid-float-breakpoint:             @screen-sm; // [12]
+@grid-float-breakpoint-max:         (@grid-float-breakpoint - 1); // [13]
+
+
+
+//------------------------------------------------------------------------------
+//  $COMPONENT SETTINGS
+//------------------------------------------------------------------------------
+
+@component-size:                    15px;
+@component-offset-horizontal:       180px;
+
+// #Menu
+//------------------------------------------------------------------------------
+
+// Decoration
+@menu-bg:                           @white;
+@menu-border-size:                  1px;
+@menu-border-color:                 @gray-87;
+@menu-border-radius:                @base-radius;
+
+// Links
+@menu-link-color:                   @primary-alt;
+@menu-link-hover-color:             @menu-bg;
+@menu-hover-bg:                     @menu-link-color;
+
+// Active
+@menu-active-color:                 @menu-link-hover-color;
+@menu-active-bg:                    @menu-hover-bg;
+@menu-active-border:                @menu-border-color;
+
+// Heading
+@menu-heading-bg:                   @primary;
+@menu-heading-color:                @white;
+
+// Links - Heading
+@menu-link-heading-color:           @menu-heading-bg;
+@menu-link-heading-bg:              @menu-heading-color;
+@menu-link-heading-hover-color:     @menu-link-heading-bg;
+@menu-link-heading-hover-bg:        @menu-link-heading-color;
+
+// Active - Heading
+@menu-active-heading-color:         @menu-heading-color;
+@menu-active-heading-bg:            @menu-heading-bg;
+
+
+// #Panel
+//------------------------------------------------------------------------------
+
+// Decoration
+@panel-bg:                          @white;
+@panel-border-size:                 1px;
+@panel-border-color:                @gray-87;
+@panel-border-radius:               @base-radius;
+
+// Heading
+@panel-head-bg:                     @secondary;
+@panel-title-color:                 @white;
+
+// Footer
+@panel-foot-bg:                     @gray-95;
+@panel-foot-color:                  @gray-70;
+
+// Label
+@panel-label-bg:                    @panel-title-color;
+@panel-label-color:                 @panel-head-bg;
+
+// Description
+@panel-description-bg:              @gray-95;
+
+// Code
+@panel-code-bg:                     @gray-30;
+@panel-code-text-color:             @white;
+
+
+
+//------------------------------------------------------------------------------
+//  $ELEMENT SETTINGS
+//------------------------------------------------------------------------------
+
+
+// #Buttons
+//------------------------------------------------------------------------------
+
+// Text
+@button-font-size:                  @base-font-size;
+@button-font-weight:                500;
+
+// Decoration
+@button-bg:                         @gray-95;
+@button-bg-image:                   none;
+@button-border-size:                1px;
+@button-border-color:               @gray-87;
+@button-radius:                     @base-radius;
+@button-box-shadow:                 none;
+@button-color:                      @gray-20;
+@button-gradient:                   true;
+@button-gradient-start:             @gray-95;
+@button-gradient-end:               @gray-90;
+
+// Decoration Hover
+@button-bg-hover:                   @button-border-color;
+@button-bg-image-hover:             @button-bg-image;
+@button-border-color-hover:         @gray-80;
+@button-box-shadow-active:          none;
+@button-color-hover:                @button-color;
+@button-gradient-start-hover:       @button-gradient-end;
+@button-gradient-end-hover:         @button-border-color;
+
+
+// #Labels
+//------------------------------------------------------------------------------
+
+// Decoration
+@label-bg:                          @gray-30;
+@label-color:                       @white;
+
+// Hover
+@label-hover-bg:                    darken(@label-bg, @darken);
+@label-hover-color:                 @label-color;
+

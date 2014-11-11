@@ -1,0 +1,26 @@
+//------------------------------------------------------------------------------
+// Contextual backgrounds
+//------------------------------------------------------------------------------
+// 1. Exact selectors below required to override `.table-striped` and prevent
+//    inheritance to nested tables.
+// 2. Hover states for `.table-hover`
+//    Note: this is not available for cells or rows within `thead` or `tfoot`.
+//------------------------------------------------------------------------------
+.table-row-variant(@state; @background) {
+    .table > thead > tr,
+    .table > tbody > tr,
+    .table > tfoot > tr { // [1]
+        > td.@{state},
+        > th.@{state},
+        &.@{state} > td,
+        &.@{state} > th { background-color: @background; }
+    }
+
+    .table-hover > tbody > tr { // [2]
+        > td.@{state}:hover,
+        > th.@{state}:hover,
+        &.@{state}:hover > td,
+        &:hover > .@{state},
+        &.@{state}:hover > th { background-color: darken(@background, 5%); }
+    }
+}

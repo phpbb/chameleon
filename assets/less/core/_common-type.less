@@ -1,0 +1,135 @@
+/*----------------------------------------------------------------------------*\
+    $COMMON-TYPE
+/*----------------------------------------------------------------------------*\
+    Setup the default typefaces and baseline grid
+/*----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Common vertical rhythm.
+//------------------------------------------------------------------------------
+h1,h2,h3,h4,h5,h6,
+p,
+table,
+pre,
+hr { .rem-size(margin-bottom, @base-line-height-computed); }
+
+//------------------------------------------------------------------------------
+// Headings
+//------------------------------------------------------------------------------
+// 1. These handle massive type, for less frequently occurring bits of text.
+// 2. Define headings and their associated classes here.
+// 3. Smaller-than-body-copy sizes here.
+//------------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+    // Text
+    font-family: @base-font;
+    font-weight: 700;
+
+    // Decoration
+    color: @base-heading-color;
+
+    small{
+        // Text
+        font-weight: normal;
+        font-size: 65%;
+        line-height: 1;
+
+        // Decoration
+        color: @base-heading-small-color;
+
+        // Layout
+        display: block;
+    }
+}
+
+.giga{ .font-size(@giga); }            // [1]
+.mega{ .font-size(@mega); }            // [1]
+.kilo{ .font-size(@kilo); }            // [1]
+
+h1, .alpha { .font-size(@alpha); }     // [2]
+h2, .beta { .font-size(@beta); }       // [2]
+h3, .gamma { .font-size(@gamma); }     // [2]
+h4, .delta { .font-size(@delta); }     // [2]
+h5, .epsilon { .font-size(@epsilon); } // [2]
+h6, .zeta { .font-size(@zeta); }       // [2]
+
+small, .milli { .font-size(@milli); }  // [3]
+.micro { .font-size(@micro); }         // [3]
+
+//------------------------------------------------------------------------------
+// Emphasis & misc
+//------------------------------------------------------------------------------
+cite { font-style: normal; } // Undo browser default styling
+mark, .mark {
+    // Decoration
+    background-color: @warning;
+
+    // Layout
+    .rem-size(padding, 5);
+    .rem-size(margin-right, 5);
+}
+
+//------------------------------------------------------------------------------
+// Abbreviations and acronyms
+//------------------------------------------------------------------------------
+// 1. Add data-* attribute to help out our tooltip plugin.
+//    (see: https://github.com/twbs/bootstrap/issues/5257)
+//------------------------------------------------------------------------------
+abbr[title],
+abbr[data-original-title] { // [1]
+    border-bottom: 1px dotted @ui;
+    cursor: help;
+}
+
+//------------------------------------------------------------------------------
+// Blockquotes
+//------------------------------------------------------------------------------
+blockquote {
+    // Text
+    .font-size(@gamma);
+
+    // Decoration
+    border-left: 5px solid @ui;
+
+    // Layout
+    margin: 0;
+    .rem-size(margin-bottom, @base-line-height-computed);
+    padding: unit((@base-line-height-computed / 2), px) unit(@base-line-height-computed, px);
+
+    p,
+    ul,
+    ol { &:last-of-type { margin-bottom: 0; } }
+
+    footer,
+    small,
+    .small {
+        // Text
+        .font-size(@base-font-size);
+
+        // Decoration
+        color: @ui-alt;
+
+        // Layout
+        display: block;
+
+        &:before { content: '\2014 \00A0'; }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Quotes
+//------------------------------------------------------------------------------
+blockquote:before,
+blockquote:after { content: ""; }
+
+//------------------------------------------------------------------------------
+// Addresses
+//------------------------------------------------------------------------------
+address {
+    // Text
+    font-style: normal;
+    line-height: @base-line-height;
+
+    // Layout
+    .rem-size(margin-bottom, @base-line-height-computed);
+}

@@ -1,0 +1,35 @@
+//------------------------------------------------------------------------------
+//  $COMPONENT-NAVBAR
+//------------------------------------------------------------------------------
+//  Styles for the navbar
+//------------------------------------------------------------------------------
+
+.navbar-heading {
+    // Text
+    line-height: 0;
+
+    // Decoration
+    color: @gray-40;
+
+    // Layout
+    margin-bottom: 0;
+}
+
+.navbar-nav, .navbar-nav-mobile { text-align: right; }
+.navbar-nav-link {
+    // Text
+    .line-height(50);
+
+    // Decoration
+    color: mix(white, @primary-alt, 45%);
+
+    // Layout
+    display: inline-block;
+    .rem-size(padding-left, 16);
+    .rem-size(padding-right, 16);
+
+    &:hover {
+        color: @white;
+        text-decoration: none;
+    }
+}

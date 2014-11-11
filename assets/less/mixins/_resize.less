@@ -1,0 +1,10 @@
+//------------------------------------------------------------------------------
+// Resize anything
+//------------------------------------------------------------------------------
+// 1. Options: horizontal, vertical, both
+// 2. Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+//------------------------------------------------------------------------------
+.resizable(@direction) {
+    resize: @direction; // [1]
+    overflow: auto; // [2]
+}
