@@ -6,6 +6,7 @@ The phpBB default style
 __Commits__:
 ````
 [chameleon] Commit Message
+
 PHPBB3-13327
 ````
 
