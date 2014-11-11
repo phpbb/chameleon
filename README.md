@@ -23,12 +23,21 @@ Trello: https://trello.com/b/gdHw0JBq
 
 __Proposed structure__
 - `assets/`
-  - `dist/` (compiled CSS and JS)
+  - `dist/` (compiled CSS and JS (with minified versions))
+    - `core.css`
+    - `core.min.css`
+    - `core.css.map`
+    - `theme.css`
+    - `theme.min.css`
+    - `theme.css.map`
+    - `scripts.js`
+    - `scripts.min.js`
+    - `scripts.js.map`
   - `images/`
   - `src/`
-	- `css/`
+	- `css/` (or `less/`)
 	- `js/`
-- `template/` (or `templates/` or `views/`)
+- `template/`
   - `base.html.twig`
   - `base_simple.html.twig`
   - `faq.html.twig`
@@ -44,6 +53,13 @@ __Proposed structure__
   - `viewprofile.html.twig` (previously `memberlist_view.html`)
   - `viewtopic.html.twig`
   - `includes/` (or `components/`)
+    - `components/`
+      - `forum_row.html.twig`
+      - `poll.html.twig`
+      - `post_row.html.twig`
+      - `post_profile.html.twig`
+      - `topic_row.html.twig`
+      - etc
     - `dialogs/`
       - `captcha_*`
       - `confirm.html.twig`
@@ -55,29 +71,33 @@ __Proposed structure__
     - `profile_fields/`
       - all profile field components
     - `breadcrumbs.html.twig`
-    - `forumlist.html.twig`
-    - `forumrow.html.twig`
+    - `display_sorting.html.twig`
+    - `forum_list.html.twig`
     - `macros.html.twig`
     - `nav_footer.html.twig`
     - `nav_header.html.twig`
     - `pagination.html.twig`
-    - `poll.html.twig`
-    - `postrow.html.twig`
-    - `postprofile.html.twig`
     - `sidebar.html.twig`
-    - `topiclist.html.twig`
-    - `topicrow.html.tiwg`
+    - `topic_list.html.twig`
     - etc.
   - `mcp/`
-    - `includes/`
-      - all mcp components
+    - `components/`
+      - `ban_row.html.twig`
+      - `log_row.html.twig`
+      - `report_row.html.twig`
+    - `mcp_ban.html.twig`
     - `mcp_*.html.twig`
   - `ucp/`
-    - `includes/`
-      - all ucp components
+    - `components/`
+      - `attachment_row.html.twig`
+      - `notification_row.html.twig`
+      - `pm_row.html.twig`
+      - etc.
+    - `ucp_attachments.html.twig`
     - `ucp_*.html.twig`
 - `composer.json`
 - `gulpfile.js`
 - `package.json`
+- `templates.json` (for the new template abstraction layer)
 - `README.md`
-- `style.cfg` (temporary, untill we switch to composer.json)
+- `style.cfg` (temporary, until we switch to composer.json)
