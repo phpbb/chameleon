@@ -1,0 +1,55 @@
+
+<div class="panel-container">
+    <div class="panel row">
+        <div class="panel-head">
+            <h3 class="panel-title"><span class="label panel-label">{{ sections.component.menu.order }}</span> {{ sections.component.menu.title|title }}</h3>
+        </div>
+        <div class="panel-description">
+            <p>
+                A Sidebar menu most commonly used for documentation pages
+            </p>
+        </div>
+        <div class="panel-row">
+            <div class="panel-side col-sm-2">
+                <span class="label panel-label">Option?</span></div>
+            <div class="panel-content col-sm-10">
+                <nav class="menu-container">
+                    <div class="nav menu">
+                        {% for section, item in sections %}
+                        <a class="menu-item menu-heading" href="#{{ section }}">{{ loop.index }}. {{ section|title }}</a>
+                        {% for name, value in item %}
+                        <a class="menu-item" href="#{{ name }}">{{ loop.parent.loop.index }}.{{ loop.index }} {{ name|title }}</a>
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="panel-code">
+            <pre class="code-color lang-html" data-language="html">
+&lt;nav class="menu-container affix"&gt;
+    &lt;div class="nav menu"&gt;
+        &lt;a class="menu-item menu-heading" href="#core"&gt;1. Core&lt;/a&gt;
+        &lt;a class="menu-item" href="#colors"&gt;1.1 Colors&lt;/a&gt;
+        &lt;a class="menu-item" href="#fonts"&gt;1.2 Fonts&lt;/a&gt;
+        &lt;a class="menu-item" href="#type"&gt;1.3 Type&lt;/a&gt;
+        &lt;a class="menu-item" href="#lists"&gt;1.4 Lists&lt;/a&gt;
+        &lt;a class="menu-item" href="#forms"&gt;1.5 Forms&lt;/a&gt;
+        &lt;a class="menu-item" href="#tables"&gt;1.6 Tables&lt;/a&gt;
+        &lt;a class="menu-item" href="#code"&gt;1.7 Code&lt;/a&gt;
+        &lt;a class="menu-item menu-heading" href="#element"&gt;2. Element&lt;/a&gt;
+        &lt;a class="menu-item" href="#icons"&gt;2.1 Icons&lt;/a&gt;
+        &lt;a class="menu-item menu-heading" href="#component"&gt;3. Component&lt;/a&gt;
+        &lt;a class="menu-item" href="#menu"&gt;3.1 Menu&lt;/a&gt;
+        &lt;a class="menu-item" href="#masthead"&gt;3.2 Masthead&lt;/a&gt;
+        &lt;a class="menu-item" href="#panel"&gt;3.3 Panel&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </pre>
+        </div>
+        <div class="panel-foot">
+            Version: {{ sections.component.menu.version }}
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,503 @@
+/*----------------------------------------------------------------------------*\
+    $UTILITIES-FORMS
+/*----------------------------------------------------------------------------*\
+    Contains useful form related functions
+/*----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Form groups
+//------------------------------------------------------------------------------
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+//------------------------------------------------------------------------------
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+
+//------------------------------------------------------------------------------
+// Static form control text
+//------------------------------------------------------------------------------
+// Apply class to a `p` element to make any string of text align with labels in
+// a horizontal form layout.
+//------------------------------------------------------------------------------
+// 1. Remove default margin from `p`.
+// 2. Size it appropriately next to real form controls.
+//------------------------------------------------------------------------------
+.form-control-static {
+    margin-bottom: 0; // [1]
+    padding-top: (@base-padding-vertical + 1);    // [2]
+    padding-bottom: (@base-padding-vertical + 1); // [2]
+
+    &.input-lg, &.input-sm {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// Form note
+//------------------------------------------------------------------------------
+// Apply to any element you wish to create light text for placement immediately
+// below a form control. Use for general help, formatting,
+// or instructional text.
+//------------------------------------------------------------------------------
+// 1. lighten the text some for contrast.
+// 2. account for any element using help-block.
+//-----------------------------------------------------------------------------
+.form-note {
+    // Text
+    .rem-size(font-size, @control-font-size-sm);
+    .line-height(22);
+
+    // Decoration
+    color: @gray-60; // [1]
+
+    // Layout
+    display: block; // [2]
+    margin-bottom: 5px;
+    margin-top: -5px;
+
+    p& { margin-top: 5px; }
+}
+
+
+
+//------------------------------------------------------------------------------
+// Form highlight
+//------------------------------------------------------------------------------
+// Apply to .checkbox or .radio along with wrapping label in em to provided
+// further emphasis on a specific option.
+//------------------------------------------------------------------------------
+.form-highlight em {
+    // Text
+    font-style: normal;
+
+    // Decoration
+    border-radius: 3px;
+    background-color: @warning;
+
+    // Layout
+    padding: 1px 6px;
+}
+
+
+
+//------------------------------------------------------------------------------
+// Inline forms
+//------------------------------------------------------------------------------
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+//
+// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
+//------------------------------------------------------------------------------
+// 1. Kick in the inline.
+// 2. Inline-block all the things for "inline".
+// 3. In navbar-form, allow folks to *not* use `.form-group`.
+// 4. Input groups need that 100% width though.
+// 5. Remove default margin on radios/checkboxes that were used for stacking,
+//    and then undo the floating of radios and checkboxes to match (which also
+//    avoids a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+// 6. Validation states: Reposition the icon because it's now within a grid
+//    column and columns have `position: relative;` on them. Also accounts for
+//    the grid gutter padding.
+//------------------------------------------------------------------------------
+.form-inline {
+    @media (min-width: @screen-sm-min) { // [1]
+
+        .form-group { // [2]
+            // Text
+            vertical-align: middle;
+
+            // Layout
+            display: inline-block;
+            margin: @base-padding-vertical @base-padding-vertical-sm;
+            width: 30%;
+        }
+
+
+        .form-control { // [3]
+            // Text
+            vertical-align: middle;
+
+            // Layout
+            display: inline-block;
+        }
+
+        .form-control-group {
+            // Text
+            vertical-align: middle;
+
+            // Layout
+            display: inline-table;
+
+            .form-control-group-addon,
+            .form-control-group-button,
+            .form-control { width: auto; }
+        }
+
+
+        .form-control-group > .form-control { width: 100%; } // [4]
+
+        .control-label {
+            // Text
+            vertical-align: middle;
+
+            // Layout
+            margin-bottom: 0;
+        }
+
+        .radio, .checkbox { // [5]
+            // Text
+            vertical-align: middle;
+
+            // Layout
+            display: inline-block;
+            margin: 0 @base-padding-vertical;
+        }
+
+        .has-feedback .form-control-feedback { top: 0; } // [6]
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// Horizontal forms
+//------------------------------------------------------------------------------
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+//------------------------------------------------------------------------------
+// 1. Consistent vertical alignment of radios and checkboxes. Labels also get
+//    some reset styles, but that is scoped to a media query below.
+// 2. Default padding plus a border.
+// 3. Account for padding we're adding to ensure the alignment and of help text
+//    and other content below items.
+// 4. Make form groups behave like rows.
+// 5. Reset spacing and right align labels, but scope to media queries so that
+//    labels on narrow viewports stack the same as a default form example.
+// 6. Validation states: Reposition the icon because it's now within a grid
+//    column and columns have `position: relative;` on them. Also accounts for
+//    the grid gutter padding.
+// 7. Form group sizes: Quick utility class for applying `.input-lg` and
+//    `.input-sm` styles to the inputs and labels within a `.form-group`.
+//------------------------------------------------------------------------------
+.form-horizontal {
+    .control-label,
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline { // [1]
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .radio, .checkbox { min-height: (@base-line-height-computed + (@base-padding-vertical + 1)); } // [3]
+
+    .form-group { .make-row(); } // [4]
+    .form-control-static { padding-top: 6px; }
+
+    @media (min-width: @screen-sm-min) { // [5]
+        .control-label {
+            // Text
+            text-align: right;
+
+            // Layout
+            margin-bottom: 0;
+            padding-top: (@base-padding-vertical + 1); // [2]
+        }
+    }
+
+    .has-feedback .form-control-feedback { // [6]
+        right: (@grid-gutter-size / 2);
+        top: 0;
+    }
+
+    .form-group-lg { // [7]
+        @media (min-width: @screen-sm-min) {
+            .control-label { padding-top: ((@base-padding-vertical-lg * @base-line-height) + 1); }
+        }
+
+        .form-control { &:extend(.input-lg); }
+    }
+
+    .form-group-sm {
+        @media (min-width: @screen-sm-min) {
+            .control-label { padding-top: (@base-padding-vertical-sm + 1); }
+        }
+
+        .form-control { &:extend(.input-sm); }
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// Horizontal forms
+//------------------------------------------------------------------------------
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+//------------------------------------------------------------------------------
+.form,
+.form-inline,
+.form-horizontal { .rem-size(margin-bottom, @base-line-height-computed); }
+
+
+
+//------------------------------------------------------------------------------
+// Form control group
+//------------------------------------------------------------------------------
+// Used to prepend or append content to the end of a form-control
+//------------------------------------------------------------------------------
+// 1. prevent input groups from inheriting border styles from table cells
+//    when placed within a table.
+// 2. For dropdowns.
+// 3. Undo padding and float of grid classes
+// 4. IE9 fubars the placeholder attribute in text inputs and the arrows on
+//    select elements in input groups. To fix it, we float the input.
+//    (see:https://github.com/twbs/bootstrap/issues/11561#issuecomment-28936855)
+// 5. Ensure that the input is always above the *appended* addon button for
+//    proper border colors.
+//------------------------------------------------------------------------------
+.form-control-group {
+    border-collapse: separate; // [1]
+    display: table;            // [1]
+    position: relative;        // [1][2]
+
+    .form-control { // [4]
+        float: left;
+        margin-bottom: 0;
+        //
+        //
+        position: relative; // [5]
+        width: 100%;        // [5]
+        z-index: 1;         // [5]
+    }
+}
+
+//------------------------------------------------------------------------------
+// Sizing options
+//------------------------------------------------------------------------------
+// Remix the default form control sizing classes into new ones for easier
+// manipulation.
+//------------------------------------------------------------------------------
+.form-control-group-lg > .form-control,
+.form-control-group-lg > .form-control-group-addon,
+.form-control-group-lg > .form-control-group-button > .button {
+    .form-control-lg();
+}
+
+.form-control-group-sm > .form-control,
+.form-control-group-sm > .form-control-group-addon,
+.form-control-group-sm > .form-control-group-button > .button {
+    .form-control-sm();
+}
+
+//------------------------------------------------------------------------------
+// Display as table-cell
+//------------------------------------------------------------------------------
+.form-control-group-addon,
+.form-control-group-button,
+.form-control-group .form-control {
+    display: table-cell;
+
+    &:not(:first-child):not(:last-child) { border-radius: 0; }
+}
+
+//------------------------------------------------------------------------------
+// Addon and addon wrapper for buttons
+//------------------------------------------------------------------------------
+// 1. Match the inputs
+//------------------------------------------------------------------------------
+.form-control-group-addon, .form-control-group-button {
+    // Text
+    vertical-align: middle; // [1]
+    white-space: nowrap;
+
+    // Layout
+    width: 1%;
+}
+
+//------------------------------------------------------------------------------
+// Text input groups
+//------------------------------------------------------------------------------
+// 1. Nuke default margins from checkboxes and radios to
+//    vertically center within.
+//------------------------------------------------------------------------------
+.form-control-group-addon {
+    // Text
+    .rem-size(font-size, @control-font-size);
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+
+    // Decoration
+    background-color: @control-border-color;
+    border-width: @control-border-size;
+    border-style: solid;
+    border-color: @control-border-color;
+    border-radius: @control-radius;
+    .box-shadow(@control-box-shadow);
+    color: @control-color;
+
+    // Layout
+    padding: @base-padding-vertical @base-padding-horizontal;
+
+    // Other
+    .transition(~"border .25s linear, color .25s linear, background-color .25s linear");
+
+    .focus & {
+        background-color: @control-focus-color;
+        border-color: @primary-alt;
+        color: @white;
+    }
+
+    // Sizing
+    &.form-control-sm {
+        // Text
+        .rem-size(font-size, @control-font-size-sm);
+
+        // Decoration
+        border-radius: @base-radius-sm;
+
+        // Layout
+        padding: @base-padding-vertical-sm @base-padding-horizontal-sm;
+    }
+
+    &.form-control-lg {
+        // Text
+        .rem-size(font-size, @control-font-size-lg);
+
+        // Decoration
+        border-radius: @base-radius-lg;
+
+        // Layout
+        padding: @base-padding-vertical-lg @base-padding-horizontal-lg;
+    }
+
+    input[type="radio"], input[type="checkbox"] { margin-top: 0; } // [1]
+}
+
+//------------------------------------------------------------------------------
+// Reset rounded corners
+//------------------------------------------------------------------------------
+.form-control-group .form-control:first-child,
+.form-control-group-addon:first-child,
+.form-control-group-button:first-child > .button,
+.form-control-group-button:first-child > .button-group > .button,
+.form-control-group-button:first-child > .dropdown-toggle,
+.form-control-group-button:last-child > .button:not(:last-child):not(.dropdown-toggle),
+.form-control-group-button:last-child > .button-group:not(:last-child) > .button {
+    .border-right-radius(0);
+    border-right-width: 0;
+}
+
+.form-control-group-addon:first-child { border-right: 0; }
+
+.form-control-group .form-control:last-child,
+.form-control-group-addon:last-child,
+.form-control-group-button:last-child > .button,
+.form-control-group-button:last-child > .button-group > .button,
+.form-control-group-button:last-child > .button:hover,
+.form-control-group-button:last-child > .button-group > .button:hover,
+.form-control-group-button:last-child > .button:active,
+.form-control-group-button:last-child > .button-group > .button:active,
+.form-control-group-button:last-child > .dropdown-toggle,
+.form-control-group-button:first-child > .button:not(:first-child):hover,
+.form-control-group-button:first-child > .button-group:not(:first-child) > .button:hover,
+.form-control-group-button:first-child > .button:not(:first-child):active,
+.form-control-group-button:first-child > .button-group:not(:first-child) > .button:active,
+.form-control-group-button:first-child > .button:not(:first-child),
+.form-control-group-button:first-child > .button-group:not(:first-child) > .button {
+    .border-left-radius(0);
+    border-left-width: 0;
+}
+
+.form-control-group-addon:last-child { border-left: 0; }
+
+//------------------------------------------------------------------------------
+// Move focus to input-group
+//------------------------------------------------------------------------------
+.form-control-group:focus {
+    .form-control:first-child,
+    .form-control-group-addon:first-child,
+    .form-control-group-button:first-child > .button { .placeholder(desaturate(lighten(@control-color, 35%), 15%)); }
+}
+
+//------------------------------------------------------------------------------
+// Button input groups
+//------------------------------------------------------------------------------
+// 1. Jankily prevent input button groups from wrapping with `white-space` and
+//    `font-size` in combination with `inline-block` on buttons.
+// 2. Negative margin for spacing, position for bringing hovered/focused/actived
+//    element above the siblings.
+// 3. Bring the "active" button to the front.
+// 4. Negative margin to only have a 1px border between the two.
+//------------------------------------------------------------------------------
+.form-control-group-button,
+.form-control-group-button-sm,
+.form-control-group-button-lg {
+    // Text
+    font-size: 0;        // [1]
+    white-space: nowrap; // [1]
+
+    // Layout
+    position: relative;
+
+    > .button { // [2]
+        // Text
+        line-height: 1.15;
+
+        // Decoration
+        background-color: @control-bg;
+        background-image: none;
+
+        // Layout
+        position: relative;
+        z-index: 2;
+
+        // Other
+        .transition(~"border .25s linear, color .25s linear, background-color .25s linear");
+
+        + .button { margin-left: -1px; }
+
+        &:hover,
+        &:focus,
+        &:active { // [3]
+            // Decoration
+            background-color: @control-bg;
+            background-image: none;
+            border-color: @button-border-color;
+            color: @control-focus-color;
+        }
+
+        .focus & {
+            border-color: @control-focus-color;
+            outline: 0;
+            .box-shadow(none);
+
+            &:hover,
+            &:focus,
+            &:active { border-color: @control-focus-color; }
+        }
+    }
+
+    &:first-child { // [4]
+        > .button, > .button-group { margin-right: -1px; }
+    }
+
+    &:last-child { // [4]
+        > .button, > .button-group { margin-left: -1px; }
+    }
+}
+
+.form-control-group-button-sm > .button { .line-height((@control-font-size-sm * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2)); }
+.form-control-group-button-lg > .button { .line-height((@control-font-size-lg * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2)); }

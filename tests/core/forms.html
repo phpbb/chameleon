@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Test - Forms
+    </title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../../dist/assets/css/style.css" media="all" />
+    <!-- ICONS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fontastic.s3.amazonaws.com/RXbnET5YNarDEPRMCf8SS7/icons.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,600,300,400,700,800&subset=latin,cyrillic-ext,greek-ext,vietnamese,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- JS HEADER -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="row">
+                <div class="main col-md-8 col-xs-12">
+                    <div class="container wrap">
+
+                        <section id="forms" class="forms panel-container">
+                            <div class="panel row">
+                                <div class="panel-head">
+                                    <h3 class="panel-title"><span class="label panel-label">1.5</span> Forms</h3>
+                                </div>
+                                <div class="panel-description">
+                                    <p>
+                                        Common styles for form elements
+                                    </p>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Normal</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form" role="form">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputFile">File input</label>
+                                                <input type="file" id="exampleInputFile">
+                                                <p class="form-note">Example block-level help text here.</p>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox">Check me out
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="button">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-code">
+                                    <pre class="code-color lang-html" data-language="html">
+&lt;form class="form" role="form"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+        &lt;input type="file" id="exampleInputFile"&gt;
+        &lt;p class="form-note"&gt;Example block-level help text here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="checkbox"&gt;
+        &lt;label&gt;
+            &lt;input type="checkbox"&gt; Check me out
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="button"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </pre>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Inline</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form-inline" role="form">
+                                            <div class="form-group">
+                                                <div class="form-control-group">
+                                                    <div class="form-control-group-addon"><i class="fa fa-at"></i>
+                                                    </div>
+                                                    <input class="form-control" type="email" placeholder="Enter email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox">Remember me
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="button">Sign in</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-code">
+                                    <pre class="code-color lang-html" data-language="html">
+&lt;form class="form-inline" role="form"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;div class="form-control-group"&gt;
+            &lt;div class="form-control-group-addon"&gt;&lt;i class="fa fa-at"&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;input class="form-control" type="email" placeholder="Enter email"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label class="sr-only" for="exampleInputPassword2"&gt;Password&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"&gt;
+        &lt;/div&gt;
+        &lt;div class="checkbox"&gt;
+            &lt;label&gt;
+                &lt;input type="checkbox"&gt; Remember me
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;button type="submit" class="button"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+            </pre>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Horizontal</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox">Remember me
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="button">Sign in</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Supported Controls</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Text</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Date Time</label>
+                                                <input type="datetime" class="form-control" id="exampleInputEmail2" placeholder="Date Time">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Date Time - Local</label>
+                                                <input type="datetime-local" class="form-control" id="exampleInputEmail2" placeholder="Date Time - Local">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Date</label>
+                                                <input type="date" class="form-control" id="exampleInputEmail2" placeholder="Date">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Month</label>
+                                                <input type="month" class="form-control" id="exampleInputEmail2" placeholder="Month">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Time</label>
+                                                <input type="time" class="form-control" id="exampleInputEmail2" placeholder="Time">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Week</label>
+                                                <input type="week" class="form-control" id="exampleInputEmail2" placeholder="Week">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Url</label>
+                                                <input type="url" class="form-control" id="exampleInputEmail2" placeholder="Url">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Search</label>
+                                                <input type="search" class="form-control" id="exampleInputEmail2" placeholder="Search">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Telephone Number</label>
+                                                <input type="tel" class="form-control" id="exampleInputEmail2" placeholder="Telephone Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Color</label>
+                                                <input type="color" class="form-control" id="exampleInputEmail2" placeholder="Color">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Textarea</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form" action="" role="form">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Select</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form" action="" role="form">
+                                            <p>
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </p>
+                                            <p>
+                                                <select multiple class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Checkbox & Radio</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form" action="">
+                                            <div class="checkbox form-highlight">
+                                                <label>
+                                                    <input type="checkbox"> <em>A far more important option</em>
+                                                    <span class="form-note">It will surely do something magical.</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio">Available for hire
+                                                    <span class="form-note">This will do insanely <strong>awesome</strong> and <strong>amazing</strong> things!</span>
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-code">
+                                    <pre class="code-color lang-html" data-language="html">
+&lt;form class="form" action=""&gt;
+    &lt;div class="checkbox form-highlight"&gt;
+        &lt;label&gt;
+            &lt;input type="checkbox"&gt; &lt;em&gt;A far more important option&lt;/em&gt;
+            &lt;span class="form-note"&gt;It will surely do something magical.&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;label&gt;
+            &lt;input type="radio"&gt; Available for hire
+            &lt;span class="form-note"&gt;This will do insanely &lt;strong&gt;awesome&lt;/strong&gt; and &lt;strong&gt;amazing&lt;/strong&gt; things!&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+            </pre>
+                                </div>
+                                <div class="panel-row">
+                                    <div class="panel-side col-sm-3">
+                                        <span class="label panel-label">Input Group</span>
+                                    </div>
+                                    <div class="panel-content col-sm-9">
+                                        <form class="form" action="">
+                                            <div class="form-control-group">
+                                                <input class="form-control" type="text" placeholder="Username">
+                                                <span class="form-control-group-button">
+                            <button class="button">
+                                <i class="fa fa-search"></i> <span class="sr-only">GO</span>
+                                                </button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-code">
+                                    <pre class="code-color lang-html" data-language="html">
+&lt;form class="form" action=""&gt;
+    &lt;div class="form-control-group"&gt;
+        &lt;input class="form-control" type="text" placeholder="Username"&gt;
+        &lt;span class="form-control-group-button"&gt;
+            &lt;button class="button"&gt;
+                &lt;i class="fa fa-search"&gt;&lt;/i&gt; &lt;span class="sr-only"&gt;GO&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+            </pre>
+                                </div>
+                                <div class="panel-foot">
+                                    Version: 1.0.0
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="sidebar col-md-offset-1 col-md-3 col-xs-12">
+                    <!-- nothing -->
+                </div>
+            </div>
+            <footer>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS FOOTER -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../../assets/js/rainbow/rainbow.min.js"></script>
+    <script src="../../assets/js/rainbow/language/css.js"></script>
+    <script src="../../assets/js/rainbow/language/html.js"></script>
+    <script src="../../assets/js/rainbow/language/php.js"></script>
+    <script src="../../assets/js/rainbow/language/javascript.js"></script>
+    <script src="../../assets/js/application.js"></script>
+    <!--  // <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script> -->
+</body>
+
+</html>
