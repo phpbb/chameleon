@@ -21,9 +21,9 @@ _Note_: The `*.html` (not .twig) templates currently in the repo are temporary. 
 
 ---------
 
-Style guide: http://hanakin.github.io/phpBB-StyleGuide/
+Style guide: http://phpbb.github.io/chameleon/
 
-CSS coding guidelines: https://github.com/hanakin/phpBB-StyleGuide/tree/gh-pages/Coding%20Guidlines/CSS
+CSS coding guidelines: https://github.com/phpbb/chameleon/tree/gh-pages/Coding%20Guidlines/CSS
 
 Trello: https://trello.com/b/gdHw0JBq
 
