@@ -1,5 +1,4 @@
 {% for topicrow in array %}
-
 	<!-- IF not topicrow.S_TOPIC_TYPE_SWITCH and not topicrow.S_FIRST_ROW -->
 	</ul>
 	</div>
@@ -22,7 +21,7 @@
 			<ul class="topiclist topics">
 				<!-- ENDIF -->
 
-				{% include 'includes/topicrow.html.twig' with{'topicrow':topicrow} %}
+				{% include 'includes/components/topic_row.html.twig' with{'topicrow':topicrow} %}
 
 				<!-- IF topicrow.S_LAST_ROW -->
 			</ul>

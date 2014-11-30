@@ -1,0 +1,50 @@
+{
+	"faq_body.html" : "faq.html.twig",
+	"index_body.html" : "index.html.twig",
+	"report_body.html" : "report.html.twig",
+	"search_body.html" : "search_form.html.twig",
+	"search_results.html" : "search_results.html.twig",
+	"viewforum_body.html": "viewforum.html.twig",
+	"viewonline_body.html" : "viewonline.html.twig",
+	"viewonline_whois.html" : "___.html.twig",
+	"viewtopic_body.html" : "viewtopic.html.twig",
+	"viewtopic_print.html" : "___.html.twig",
+
+	"memberlist_body.html" : "members.html.twig",
+	"memberlist_im.html" : "___.html.twig",
+	"memberlist_team.html" : "team.html.twig",
+	"memberlist_view.html" : "viewprofile.html.twig",
+	"memberlist_email.html" : "___.html.twig",
+
+	"mcp_front.html" : "mcp/mcp_index.html.twig",
+	"mcp_move.html" : "___.html.twig",
+	"mcp_approve.html" : "___.html.twig",
+
+	"ucp_main_front.html" : "ucp/ucp_index.html.twig",
+	"ucp_agreement.html" : "___.html.twig",
+	"ucp_avatar_options_gravatar.html" : "___.html.twig",
+	"ucp_avatar_options_local.html" : "___.html.twig",
+	"ucp_avatar_options_remote.html" : "___.html.twig",
+	"ucp_avatar_options_upload.html" : "___.html.twig",
+
+	"confirm_body.html" : "___.html.twig",
+	"confirm_delete_body.html" : "___.html.twig",
+	"login_body.html" : "___.html.twig",
+	"login_forum.html" : "___.html.twig",
+	"message_body.html" : "___.html.twig",
+
+	"posting_body.html" : "posting.html.twig",
+	"bbcode.html" : "includes/bbcode.html.twig",
+	"attachment.html" : "___.html.twig",
+	"posting_smilies.html" : "___.html.twig",
+	"posting_progress_bar.html" : "___.html.twig",
+
+	"captcha_default.html" : "___.html.twig",
+	"captcha_qa.html" : "___.html.twig",
+	"captcha_recaptcha.html" : "___.html.twig",
+
+	"auth_provider_ldap.html" : "___.html.twig",
+	"auth_provider_oauth.html" : "___.html.twig",
+	"login_body_oauth.html" : "___.html.twig",
+	"ucp_auth_link_oauth.html" : "___.html.twig"
+}
