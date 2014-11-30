@@ -62,7 +62,7 @@
 		<div class="pagination">
 			<!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --><a href="{U_VIEW_UNREAD_POST}" class="mark">{L_VIEW_UNREAD_POST}</a> &bull; <!-- ENDIF -->{TOTAL_POSTS}
 			<!-- IF .pagination -->
-				{% include 'includes/components/pagination.html.twig' %}
+				{% include 'includes/pagination.html.twig' %}
 			<!-- ELSE -->
 				&bull; {PAGE_NUMBER}
 			<!-- ENDIF -->
@@ -72,11 +72,11 @@
 </div>
 
 {% if S_HAS_POLL %}
-	{% include 'includes/components/poll.html.twig' %}
+	{% include 'includes/poll.html.twig' %}
 {% endif %}
 
 {% for postrow in loops.postrow %}
-	{% include 'includes/components/post_row.html.twig' with{'postrow':postrow} %}
+	{% include 'includes/postrow.html.twig' with{'postrow':postrow} %}
 {% endfor %}
 
 {% if S_QUICK_REPLY %}
@@ -131,7 +131,7 @@
 		<div class="pagination">
 			{TOTAL_POSTS}
 			<!-- IF .pagination -->
-				{% include 'includes/components/pagination.html.twig' %}
+				{% include 'includes/pagination.html.twig' %}
 			<!-- ELSE -->
 				&bull; {PAGE_NUMBER}
 			<!-- ENDIF -->
