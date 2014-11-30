@@ -35,7 +35,7 @@
 		<a href="{U_MARK_FORUMS}" class="mark-read rightside" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a>
 	</div>
 <!-- ENDIF -->
-	{% include 'includes/forum_list.html.twig' with{'array':loops.forumrow} %}
+	{% include 'includes/forumlist.html.twig' with{'array':loops.forumrow} %}
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_POST_INFO or .pagination or TOTAL_POSTS or TOTAL_TOPICS -->
@@ -70,7 +70,7 @@
 		<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" class="mark" accesskey="m" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->
 		{TOTAL_TOPICS}
 		<!-- IF .pagination -->
-			{% include 'includes/components/pagination.html.twig' %}
+			{% include 'includes/pagination.html.twig' %}
 		<!-- ELSE -->
 			&bull; {PAGE_NUMBER}
 		<!-- ENDIF -->
@@ -125,7 +125,7 @@
 
 <!-- ENDIF -->
 
-{% include 'includes/topic_list.html.twig' with{'array':loops.topicrow} %}
+{% include 'includes/topiclist.html.twig' with{'array':loops.topicrow} %}
 
 <!-- IF S_SELECT_SORT_DAYS and not S_DISPLAY_ACTIVE -->
 	<form method="post" action="{S_FORUM_ACTION}">
@@ -159,7 +159,7 @@
 			<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->
 			{TOTAL_TOPICS}
 			<!-- IF .pagination -->
-				{% include 'includes/components/pagination.html.twig' %}
+				{% include 'includes/pagination.html.twig' %}
 			<!-- ELSE -->
 				 &bull; {PAGE_NUMBER}
 			<!-- ENDIF -->

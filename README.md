@@ -56,7 +56,6 @@ __Proposed structure__
   - `search_form.html.twig`
   - `search_results.html.twig`
   - `ucp.html.twig`
-  - `team.html.twig` (previously memberlist_team.html`)
   - `viewforum.html.twig`
   - `viewonline.html.twig`
   - `viewprofile.html.twig` (previously `memberlist_view.html`)
@@ -64,16 +63,13 @@ __Proposed structure__
   - `includes/` (or `components/`)
     - `components/`
       - `forum_row.html.twig`
-      - `pagination.html.twig`
       - `poll.html.twig`
       - `post_row.html.twig`
       - `post_profile.html.twig`
       - `topic_row.html.twig`
       - etc
-    - `captcha/`
-      - `captcha_*`
-      - etc.
     - `dialogs/`
+      - `captcha_*`
       - `confirm.html.twig`
       - `login.html.twig`
       - `report.html.twig`
@@ -88,6 +84,7 @@ __Proposed structure__
     - `macros.html.twig`
     - `nav_footer.html.twig`
     - `nav_header.html.twig`
+    - `pagination.html.twig`
     - `sidebar.html.twig`
     - `topic_list.html.twig`
     - etc.
