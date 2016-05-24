@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------
+// #Tables
+//------------------------------------------------------------------------------
+
+//
+// 1. Reset for nesting within parents with `background-color`.
+// 2. No longer part of Normalize since v4
+//
+table {
+
+    background-color: transparent; // [1]
+    border-spacing: 0;
+    border-collapse: collapse; // [2]
+}
+
+caption {
+    text-align: left;
+    color: $text-muted;
+    caption-side: bottom;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+//
+// Centered by default, but left-align-ed to match the `td`s below.
+//
+th {
+    text-align: left;
+}

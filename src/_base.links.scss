@@ -1,0 +1,48 @@
+//------------------------------------------------------------------------------
+// #Links
+//------------------------------------------------------------------------------
+
+//
+// Establish the default link look
+//
+// And undo it for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+//
+// It would be more straightforward to just use a[href] in previous block, but
+// that causes specificity issues in many other styles that are too complex to
+// fix.
+//
+// See https://github.com/twbs/bootstrap/issues/19402
+//
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+        color: $link-hover-color;
+    }
+
+    &:focus {
+        // Default
+        outline: thin dotted;
+        // WebKit
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    &:not([href]):not([tabindex]) {
+        color: inherit;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
