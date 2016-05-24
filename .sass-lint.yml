@@ -81,7 +81,7 @@ rules:
     no-css-comments: 0
     no-debug: 1
     no-duplicate-properties:
-        - 1
+        - 0
         -
             exclude:
                 - mixins/_tab-focus.scss
@@ -113,53 +113,11 @@ rules:
         -
             ignore-custom-properties: false
             order:
-                - position
-                - top
-                - right
-                - bottom
-                - left
-                - z-index
-                - -webkit-box-sizing
-                - -moz-box-sizing
-                - box-sizing
-                - display
-                - float
-                - width
-                - min-width
-                - max-width
-                - height
-                - min-height
-                - max-height
-                - flex
-                - flex-direction
-                - flex-flow
-                - flex-order
-                - flex-pack
-                - flex-align
-                - padding
-                - padding-top
-                - padding-right
-                - padding-bottom
-                - padding-left
-                - margin
-                - margin-top
-                - margin-right
-                - margin-bottom
-                - margin-left
-                - overflow
-                - overflow-x
-                - overflow-y
-                - -webkit-overflow-scrolling
-                - -ms-overflow-x
-                - -ms-overflow-y
-                - -ms-overflow-style
-                - clip
-                - clear
                 - font
                 - font-family
                 - font-size
-                - font-style
                 - font-weight
+                - font-style
                 - font-variant
                 - font-size-adjust
                 - font-stretch
@@ -168,118 +126,96 @@ rules:
                 - font-emphasize-position
                 - font-emphasize-style
                 - font-smooth
-                - -webkit-hyphens
-                - -moz-hyphens
-                - hyphens
+                - letter-spacing
                 - line-height
-                - color
                 - text-align
                 - -webkit-text-align-last
                 - -moz-text-align-last
                 - -ms-text-align-last
                 - text-align-last
+                - text-decoration
                 - text-emphasis
                 - text-emphasis-color
                 - text-emphasis-style
                 - text-emphasis-position
-                - text-decoration
                 - text-indent
                 - text-justify
+                - -ms-text-justify
+                - -ms-writing-mode
                 - text-outline
-                - -ms-text-overflow
                 - text-overflow
+                - -ms-text-overflow
                 - text-overflow-ellipsis
                 - text-overflow-mode
                 - text-shadow
                 - text-transform
-                - text-wrap
-                - -webkit-text-size-adjust
-                - -ms-text-size-adjust
-                - letter-spacing
-                - -ms-word-break
-                - word-break
+                - vertical-align
+                - white-space
                 - word-spacing
-                - -ms-word-wrap
+                - word-break
                 - word-wrap
+                - -ms-word-wrap
+                - -ms-word-break
                 - -moz-tab-size
                 - -o-tab-size
                 - tab-size
-                - white-space
-                - vertical-align
-                - list-style
-                - list-style-position
-                - list-style-type
-                - list-style-image
-                - pointer-events
-                - -ms-touch-action
-                - touch-action
-                - cursor
-                - visibility
-                - zoom
-                - table-layout
-                - empty-cells
-                - caption-side
-                - border-spacing
-                - border-collapse
-                - content
-                - quotes
-                - counter-reset
-                - counter-increment
-                - resize
-                - -webkit-user-select
-                - -moz-user-select
-                - -ms-user-select
-                - -o-user-select
-                - user-select
-                - nav-index
-                - nav-up
-                - nav-right
-                - nav-down
-                - nav-left
+                - -webkit-hyphens
+                - -moz-hyphens
+                - hyphens
+
                 - background
                 - background-color
                 - background-image
-                - -ms-filter:\\'progid:DXImageTransform.Microsoft.gradient
                 - filter:progid:DXImageTransform.Microsoft.gradient
-                - filter:progid:DXImageTransform.Microsoft.AlphaImageLoader
-                - filter
+                - filter:progid:DXImageTransform.Microsoft.gradient
+                - -ms-filter:\\'progid:DXImageTransform.Microsoft.gradient
                 - background-repeat
                 - background-attachment
                 - background-position
                 - background-position-x
                 - background-position-y
-                - -webkit-background-clip
-                - -moz-background-clip
-                - background-clip
-                - background-origin
+                - -ms-background-position-x
+                - -ms-background-position-y
+                - background-size
                 - -webkit-background-size
                 - -moz-background-size
                 - -o-background-size
-                - background-size
+                - -webkit-background-clip
+                - -moz-background-clip
                 - border
-                - border-color
-                - border-style
                 - border-width
+                - border-style
+                - border-color
                 - border-top
-                - border-top-color
-                - border-top-style
                 - border-top-width
+                - border-top-style
+                - border-top-color
                 - border-right
-                - border-right-color
-                - border-right-style
                 - border-right-width
+                - border-right-style
+                - border-right-color
                 - border-bottom
-                - border-bottom-color
-                - border-bottom-style
                 - border-bottom-width
+                - border-bottom-style
+                - border-bottom-color
                 - border-left
-                - border-left-color
-                - border-left-style
                 - border-left-width
+                - border-left-style
+                - border-left-color
+                - -webkit-border-radius
+                - -moz-border-radius
                 - border-radius
+                - -webkit-border-top-left-radius
+                - -moz-border-radius-topleft
                 - border-top-left-radius
+                - -webkit-border-top-right-radius
+                - -moz-border-radius-topright
                 - border-top-right-radius
+                - -webkit-border-bottom-right-radius
+                - -moz-border-radius-bottomright
                 - border-bottom-right-radius
+                - -webkit-border-bottom-left-radius
+                - -moz-border-radius-bottomleft
                 - border-bottom-left-radius
                 - -webkit-border-image
                 - -moz-border-image
@@ -305,18 +241,87 @@ rules:
                 - -moz-border-image-repeat
                 - -o-border-image-repeat
                 - border-image-repeat
+                - box-decoration-break
+                - -webkit-box-shadow
+                - -moz-box-shadow
+                - box-shadow
+                - color
+                - opacity
+                - filter:progid:DXImageTransform.Microsoft.Alpha(Opacity
+                - -ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha
+                - filter:progid:DXImageTransform.Microsoft.AlphaImageLoader
+                - -ms-interpolation-mode
                 - outline
                 - outline-width
                 - outline-style
                 - outline-color
                 - outline-offset
-                - -webkit-box-shadow
-                - -moz-box-shadow
-                - box-shadow
-                - filter:progid:DXImageTransform.Microsoft.Alpha(Opacity
-                - -ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha
-                - opacity
-                - -ms-interpolation-mode
+                - content
+                - quotes
+                - counter-reset
+                - counter-increment
+                - resize
+                - cursor
+                - -webkit-user-select
+                - -moz-user-select
+                - -ms-user-select
+                - user-select
+                - nav-index
+                - nav-up
+                - nav-right
+                - nav-down
+                - nav-left
+
+                - border-spacing
+                - border-collapse
+                - -webkit-box-sizing
+                - -moz-box-sizing
+                - box-sizing
+                - caption-side
+                - clear
+                - clip
+                - display
+                - empty-cells
+                - float
+                - flex-direction
+                - flex-order
+                - flex-pack
+                - flex-align
+                - height
+                - min-height
+                - max-height
+                - list-style
+                - list-style-position
+                - list-style-type
+                - list-style-image
+                - margin
+                - margin-top
+                - margin-right
+                - margin-bottom
+                - margin-left
+                - padding
+                - padding-top
+                - padding-right
+                - padding-bottom
+                - padding-left
+                - position
+                - overflow
+                - overflow-x
+                - overflow-y
+                - -ms-overflow-x
+                - -ms-overflow-y
+                - table-layout
+                - top
+                - right
+                - bottom
+                - left
+                - visibility
+                - width
+                - min-width
+                - max-width
+                - zoom
+                - z-index
+
                 - -webkit-transition
                 - -moz-transition
                 - -ms-transition
@@ -392,6 +397,7 @@ rules:
                 - -ms-animation-direction
                 - -o-animation-direction
                 - animation-direction
+                - pointer-events
     quotes:
         - 1
         -
