@@ -90,12 +90,19 @@
 // 3. Generic
 //-------------------------
 @import generic.normalize;
+@import generic.box-sizing;
 @import generic.reset;
-@import generic.reboot;
+// @import generic.universal;
 
 
 // 4. Base
 //-------------------------
+@import base.global;
+@import base.links;
+@import base.type;
+@import base.code;
+@import base.tables;
+@import base.forms;
 
 
 // 5. Ojbjects
