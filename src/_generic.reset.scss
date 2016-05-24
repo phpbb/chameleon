@@ -1,0 +1,245 @@
+//------------------------------------------------------------------------------
+// #RESET
+//------------------------------------------------------------------------------
+
+//
+// A thin layer on top of normalize.css that provides a starting point more
+// suitable for web applications.
+//
+
+//
+// 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+//    navigating between pages that do/do not have enough content to produce
+//    scrollbars naturally.
+// 2. Ensure the page always fills at least the entire height of the viewport.
+// 3. Fonts on OSX will look more consistent with other systems that do not
+//    render text using sub-pixel anti-aliasing.
+// 4. Changes the default tap highlight to be completely transparent in iOS.
+//
+html {
+    min-height: 100%; // [2]
+    overflow-y: scroll; // [1]
+    -ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
+    -moz-osx-font-smoothing: grayscale; // [3]
+     -webkit-font-smoothing: antialiased; // [3]
+    -webkit-tap-highlight-color: rgba(0,0,0,0); // [4]
+}
+
+//
+// Removes the default spacing and border for appropriate elements.
+//
+body,
+ol,
+ul,
+form,
+fieldset,
+legend,
+button,
+table,
+th,
+td,
+caption,
+hr
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+button,
+fieldset,
+iframe {
+    border: 0;
+}
+
+//
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+//
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+//
+// Avoid 300ms click delay on touch devices that support the `touch-action`
+// CSS property.
+//
+// In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch
+// devices and IE Mobile 10-11 DON'T remove the click delay when
+// `<meta name='viewport' content='width=device-width'>` is present.
+//
+// However, they DO support removing the click delay via
+// `touch-action: manipulation`.
+//
+// See:
+// * http://caniuse.com/#feat=css-touch-action
+// * http://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+//
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea
+[tabindex] {
+    touch-action: manipulation;
+}
+
+//
+// iOS 'clickable elements' fix for role='button'
+//
+// Fixes 'clickability' issue (and more generally, the firing of events such as
+// focus as well) for traditionally non-focusable elements with role='button'
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+//
+[role='button'] {
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+}
+
+//
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+ol,
+ul,
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+//
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+//
+[tabindex='-1']:focus {
+    outline: none !important;
+}
+
+// Give a help cursor to elements that give extra info on `:hover`.
+abbr[title],
+dfn[title] {
+    cursor: help;
+}
+
+// Remove underlines from potentially troublesome elements.
+u,
+ins {
+    text-decoration: none;
+}
+
+// Apply faux underlines to inserted text via `border-bottom`.
+ins {
+    border-bottom: 1px solid;
+}
+
+//
+// Allow only vertical resizing of textareas.
+//
+textarea {
+    resize: vertical;
+}
+
+//
+// specify the standard appearance of selects
+//
+select {
+    -moz-appearance: none;    /* Firefox 40+ */
+    -webkit-appearance: none; /* Chrome 45+ */
+
+    &::-ms-expand {
+        display: none;        /* Edge 12+, Internet Explorer 11- */
+    }
+
+    &::-ms-value {
+        color: currentColor;  /* Edge 12+, Internet Explorer 11- */
+    }
+}
+
+//
+// Remove text-shadow in selection highlight:
+// https://twitter.com/miketaylr/status/12228805301
+//
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+//
+::-moz-selection {
+    text-shadow: none;
+    background: #B3D4FC;
+}
+
+::selection {
+    text-shadow: none;
+    background: #B3D4FC;
+    color: #FFFFFF;
+}
+
+//
+// use current current as the default fill of svg elements
+//
+svg {
+    fill: currentColor;
+}
+
+//
+// specify the progress cursor of updating elements
+//
+[aria-busy='true'] {
+    cursor: progress;
+}
+
+//
+// specify the pointer cursor of trigger elements
+//
+[aria-controls] {
+    cursor: pointer;
+}
+
+//
+// specify the unstyled cursor of disabled, not-editable, or otherwise
+// inoperable elements
+//
+[aria-disabled] {
+    cursor: default;
+}
+
+//
+// specify the style of visually hidden yet accessible elements
+//
+[hidden][aria-hidden='false'] {
+    clip: rect(0 0 0 0);
+    display: inherit;
+    position: absolute;
+
+    &:focus {
+        clip: auto;
+	}
+}
