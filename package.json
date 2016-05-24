@@ -1,0 +1,19 @@
+{
+  "name": "base-l",
+  "version": "1.0.0",
+  "description": "A well structured top down base css framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanakin/base-l.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanakin/base-l/issues"
+  },
+  "homepage": "https://github.com/hanakin/base-l#readme"
+}
