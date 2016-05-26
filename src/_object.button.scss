@@ -1,0 +1,111 @@
+//------------------------------------------------------------------------------
+// BUTTON
+//------------------------------------------------------------------------------
+
+//
+// Layout Variables
+$btn-font-size: 14px !default;
+$btn-border-size: 0 !default;
+$btn-padding: 16px !default;
+$btn-border-radius: $default-border-radius !default;
+$btn-min-width: 64px !default;
+$btn-height: 36px !default;
+
+//
+// Default Theme Variables
+$btn-background-color: $gray-50 !default;
+$btn-hover-color: $btn-background-color !default;
+$btn-active-color: $btn-background-color !default;
+$btn-color: $gray-600 !default;
+$btn-border-style: none !default;
+$btn-border-color: none !default;
+
+//
+// 1. Allow us to style box model properties.
+// 2. Line different sized buttons up a little nicer.
+// 3. Make buttons inherit font styles (often necessary when styling `input`s as
+//    buttons).
+// 4. Reset/normalize some styles.
+// 5. Force all button-styled elements to appear clickable.
+// 6. Fixes odd inner spacing in IE7.
+// 7. Subtract the border size from the padding value so that buttons do not
+//    grow larger as we add borders.
+// 8. Prevent button text from being selectable.
+//
+.o-btn {
+    font-size: $btn-font-size; // google material design
+    font-weight: 500; // google material design
+    letter-spacing: 0; // google material design
+    line-height: $btn-height; // google material design
+    text-align: center; // [4]
+    text-decoration: none; // [4]
+    text-transform: uppercase; // google material design
+    vertical-align: middle; // [2]
+    white-space: nowrap; // bs only
+    background-color: $btn-background-color;
+    border-width: $btn-border-size;
+    border-style: $btn-border-style;
+    border-color: $btn-border-color;
+    border-radius: $btn-border-radius;
+    @include shadow-2dp();
+    color: $btn-color;
+    outline: none; // google material design
+    cursor: pointer;
+    user-select: none; // [8]
+    display: inline-block; // [1]
+    margin:  0; // [4]
+    padding: 0 $btn-padding; // [7]
+    // position: relative; // suit only
+    overflow: visible; // [6]
+    min-width: $btn-min-width; // google material design
+    transition: box-shadow 0.2s $animation-curve-fast-out-linear-in, // google material design
+                background-color 0.2s $animation-curve-default, // google material design
+                color 0.2s $animation-curve-default; // google material design
+}
+
+.o-btn {
+    // UI states
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;  // [4]
+        color: $btn-color;
+    }
+
+    &:hover {
+        background-color: $btn-hover-color;
+    }
+
+    &:focus:not(:active) {
+        background-color: $btn-active-color;
+        @include focus-shadow();
+    }
+
+    &:active {
+        background-color: $btn-active-color;
+        background-image: none;
+        @include shadow-4dp();
+    }
+
+    &:disabled {
+        background-color: transparent;
+        box-shadow: none;
+        cursor: default;
+    }
+
+    // Remove excess padding and border in Firefox 4+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+// EXP THEME CLASS
+// .t-btn {
+//     background-color: $btn-background-color;
+//     border-width: $btn-border-size;
+//     border-style: $btn-border-style;
+//     border-color: $btn-border-color;
+//     border-radius: $btn-border-radius;
+//     color: $btn-color;
+// }
