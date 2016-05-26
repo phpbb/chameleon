@@ -75,34 +75,36 @@
 
 // 1. Global Settings
 //-------------------------
-@import settings.color;
-@import settings.units;
-@import settings.type;
-@import settings.default;
+@import 'settings.color';
+// @import 'settings.units';
+// @import 'settings.type';
+@import 'settings.default';
 
 
 // 2. Tools
 //-------------------------
-@import tools.mixins;
-@import tools.functions;
+// @import 'tools.mixins';
+// @import 'tools.functions';
 
 
 // 3. Generic
 //-------------------------
-@import generic.normalize;
-@import generic.box-sizing;
-@import generic.reset;
-// @import generic.universal;
+@import 'generic.normalize';
+@import 'generic.box-sizing';
+@import 'generic.reset.global';
+@import 'generic.reset.code';
+@import 'generic.reset.tables';
+@import 'generic.reset.forms';
+// @import 'generic.universal';
 
 
 // 4. Base
 //-------------------------
-@import base.global;
-@import base.links;
-@import base.type;
-@import base.code;
-@import base.tables;
-@import base.forms;
+@import 'base.global';
+@import 'base.links';
+@import 'base.type';
+
+
 
 
 // 5. Ojbjects
