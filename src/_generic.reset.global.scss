@@ -105,27 +105,12 @@ textarea
 }
 
 //
-// iOS 'clickable elements' fix for role='button'
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
 //
-// Fixes 'clickability' issue (and more generally, the firing of events such as
-// focus as well) for traditionally non-focusable elements with role='button'
-// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-//
-[role='button'] {
-    cursor: pointer;
-}
-
-button {
-    background: transparent;
-}
-
-//
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+[tabindex='-1']:focus {
+    outline: none !important;
 }
 
 ol,
@@ -133,15 +118,6 @@ ul,
 nav ol,
 nav ul {
     list-style: none;
-}
-
-//
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-[tabindex='-1']:focus {
-    outline: none !important;
 }
 
 // Give a help cursor to elements that give extra info on `:hover`.
@@ -159,29 +135,6 @@ ins {
 // Apply faux underlines to inserted text via `border-bottom`.
 ins {
     border-bottom: 1px solid;
-}
-
-//
-// Allow only vertical resizing of textareas.
-//
-textarea {
-    resize: vertical;
-}
-
-//
-// specify the standard appearance of selects
-//
-select {
-    -moz-appearance: none;    /* Firefox 40+ */
-    -webkit-appearance: none; /* Chrome 45+ */
-
-    &::-ms-expand {
-        display: none;        /* Edge 12+, Internet Explorer 11- */
-    }
-
-    &::-ms-value {
-        color: currentColor;  /* Edge 12+, Internet Explorer 11- */
-    }
 }
 
 //
