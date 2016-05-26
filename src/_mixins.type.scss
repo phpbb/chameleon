@@ -1,0 +1,185 @@
+//------------------------------------------------------------------------------
+// TYPE
+//------------------------------------------------------------------------------
+
+@mixin typo-display-4($color-contrast: false) {
+    font-size: 112px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-display-3($color-contrast: false) {
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-display-2($color-contrast: false) {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 48px;
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-display-1($color-contrast: false) {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-headline($color-contrast: false) {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-title($color-contrast: false) {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-subhead($color-contrast: false) {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 24px;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-subhead-2($color-contrast: false) {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 28px;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-body-2($color-contrast: false, $use-preferred: false) {
+    font-size: 14px;
+    @if $use-preferred {
+        font-weight: 500;
+    } @else {
+        font-weight: bold;
+    }
+    letter-spacing: 0;
+    line-height: 24px;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-body-1($color-contrast: false, $use-preferred: false) {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-caption($color-contrast: false, $use-preferred: false) {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-blockquote($color-contrast: false) {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    position: relative;
+
+    &:before {
+        content: '“';
+        position: absolute;
+        left: -0.5em;
+    }
+
+    &:after {
+        content: '”';
+        margin-left: -0.05em;
+    }
+
+    @if $color-contrast {
+        opacity: 0.54;
+    }
+}
+
+@mixin typo-menu($color-contrast: false) {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-button($color-contrast: false) {
+    font-size: 14px;
+    font-weight: 500;
+
+    @if $color-contrast {
+        opacity: 0.87;
+    }
+}
+
+@mixin typo-icon() {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    word-wrap: normal;
+    display: inline-block;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
