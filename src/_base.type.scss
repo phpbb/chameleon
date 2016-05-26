@@ -20,6 +20,15 @@ p {
     margin-bottom: 1rem;
 }
 
+//
+// Abbreviations and acronyms
+//
+abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px dotted $base-gray;
+    cursor: help;
+}
+
 address {
     font-style: normal;
     line-height: inherit;
