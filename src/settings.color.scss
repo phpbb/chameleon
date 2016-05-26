@@ -80,14 +80,14 @@ $success-900:                darken($success, 32%) !default;
 //
 // Settings for the `<body>` element.
 
-$base-body-bg:                $white !default;
-$base-body-color:             $gray-800 !default;
-$base-gray:                   $gray-400 !default;
+$default-body-bg:            $white !default;
+$default-body-color:         $gray-800 !default;
+$default-gray:               $gray-400 !default;
 
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                 $primary-500 !default;
-$link-hover-color:           $primary-700 !default;
+$default-link-color:        $primary-500 !default;
+$default-link-hover-color:  $primary-700 !default;

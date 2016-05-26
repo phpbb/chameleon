@@ -1,4 +1,11 @@
-$base-font-size:          16px !default;
-$base-line-height:        24px !default;
-$inuit-base-text-color:         #333333 !default;
-$inuit-base-background-color:   #FFFFFF !default;
+$default-font-size: 16px !default;
+$default-line-height: 1.5 !default;
+
+$default-spacing-unit: 1rem !default;
+
+$default-border-size: 1px !default;
+
+$default-border-radius: 0.125rem !default;
+
+$default-text-color: $gray-900 !default;
+$default-background-color: $white !default;
