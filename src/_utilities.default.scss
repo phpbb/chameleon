@@ -1,8 +1,8 @@
 
 
 .browserupgrade {
-    background: #CCCCCC;
-    color: #000000;
+    background: $default-gray;
+    color: $black;
     margin: 0.2em 0;
     padding: 0.2em 0;
 }
@@ -115,7 +115,7 @@
         text-shadow: none !important;
         background: transparent !important;
         box-shadow: none !important;
-        color: #000000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+        color: $black !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     }
 
     a,
@@ -143,7 +143,7 @@
 
     pre,
     blockquote {
-        border: 1px solid #999999;
+        border: 1px solid $gray-500;
         page-break-inside: avoid;
     }
 
