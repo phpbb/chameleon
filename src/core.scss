@@ -76,9 +76,10 @@
 // 1. Global Settings
 //-------------------------
 @import 'settings.color';
-// @import 'settings.units';
-// @import 'settings.type';
 @import 'settings.default';
+@import 'settings.spacing';
+@import 'settings.animation';
+@import 'settings.shadows';
 
 
 // 2. Tools
