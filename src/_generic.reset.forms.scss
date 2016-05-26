@@ -3,11 +3,27 @@
 //------------------------------------------------------------------------------
 
 //
-// 1. Allow labels to use `margin` for spacing.
+// iOS 'clickable elements' fix for role='button'
 //
-label {
-    display: inline-block;
-    margin-bottom: .5rem; // [1]
+// Fixes 'clickability' issue (and more generally, the firing of events such as
+// focus as well) for traditionally non-focusable elements with role='button'
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+//
+[role='button'] {
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+}
+
+//
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 //
@@ -29,6 +45,14 @@ textarea {
     border-radius: 0; // [2]
     color: inherit;
     margin: 0; // [3]
+}
+
+//
+// 1. Allow labels to use `margin` for spacing.
+//
+label {
+    display: inline-block;
+    margin-bottom: .5rem; // [1]
 }
 
 //
@@ -110,4 +134,27 @@ button,
 select,
 textarea {
     min-height: 1.5em;
+}
+
+//
+// Allow only vertical resizing of textareas.
+//
+textarea {
+    resize: vertical;
+}
+
+//
+// specify the standard appearance of selects
+//
+select {
+    -moz-appearance: none;    /* Firefox 40+ */
+    -webkit-appearance: none; /* Chrome 45+ */
+
+    &::-ms-expand {
+        display: none;        /* Edge 12+, Internet Explorer 11- */
+    }
+
+    &::-ms-value {
+        color: currentColor;  /* Edge 12+, Internet Explorer 11- */
+    }
 }
