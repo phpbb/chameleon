@@ -1,0 +1,93 @@
+// Colors
+//
+// Grayscale and default colors.
+
+$black:                      #000000 !default;    // 0
+$white:                      #FFFFFF !default;    // 100
+
+$gray-50:                    #FAFAFA !default;    // 98 gray-lightest
+$gray-100:                   #F5F5F5 !default;    // 96
+$gray-200:                   #EEEEEE !default;    // 93 gray-lighter
+$gray-300:                   #E0E0E0 !default;    // 87
+$gray-400:                   #BDBDBD !default;    // 74
+$gray-500:                   #9E9E9E !default;    // 61
+$gray-600:                   #757575 !default;    // 56 gray-light
+$gray-700:                   #616161 !default;    // 45 gray
+$gray-800:                   #424242 !default;    // 38 gray-dark
+$gray-900:                   #212121 !default;    // 12
+
+$primary:                    #2BADEE !default; // hsl(200, 85%, 55%)
+$primary-50:                 lighten($primary, 40%) !default;
+$primary-100:                lighten($primary, 32%) !default;
+$primary-200:                lighten($primary, 24%) !default;
+$primary-300:                lighten($primary, 16%) !default;
+$primary-400:                lighten($primary, 8%) !default;
+$primary-500:                $primary !default;
+$primary-600:                darken($primary, 8%) !default;
+$primary-700:                darken($primary, 16%) !default;
+$primary-800:                darken($primary, 24%) !default;
+$primary-900:                darken($primary, 32%) !default;
+
+$info:                       desaturate($primary, 40%) !default; // hsl(200, 45%, 55%)
+$info-50:                    lighten($info, 40%) !default;
+$info-100:                   lighten($info, 32%) !default;
+$info-200:                   lighten($info, 24%) !default;
+$info-300:                   lighten($info, 16%) !default;
+$info-400:                   lighten($info, 8%) !default;
+$info-500:                   $info !default;
+$info-600:                   darken($info, 8%) !default;
+$info-700:                   darken($info, 16%) !default;
+$info-800:                   darken($info, 24%) !default;
+$info-900:                   darken($info, 32%) !default;
+
+$important:                  adjust-hue($primary, 145) !default; // hsl(345, 85%, 55%)
+$important-50:               lighten($important, 40%) !default;
+$important-100:              lighten($important, 32%) !default;
+$important-200:              lighten($important, 24%) !default;
+$important-300:              lighten($important, 16%) !default;
+$important-400:              lighten($important, 8%) !default;
+$important-500:              $important !default;
+$important-600:              darken($important, 8%) !default;
+$important-700:              darken($important, 16%) !default;
+$important-800:              darken($important, 24%) !default;
+$important-900:              darken($important, 32%) !default;
+
+$warning:                    adjust-hue($primary, -160) !default; // hsl(40, 85%, 55%)
+$warning-50:                 lighten($warning, 40%) !default;
+$warning-100:                lighten($warning, 32%) !default;
+$warning-200:                lighten($warning, 24%) !default;
+$warning-300:                lighten($warning, 16%) !default;
+$warning-400:                lighten($warning, 8%) !default;
+$warning-500:                $warning !default;
+$warning-600:                darken($warning, 8%) !default;
+$warning-700:                darken($warning, 16%) !default;
+$warning-800:                darken($warning, 24%) !default;
+$warning-900:                darken($warning, 32%) !default;
+
+$success:                    desaturate(adjust-hue($primary, -80), 40%) !default; // hsl(120, 45%, 55%)
+$success-50:                 lighten($success, 40%) !default;
+$success-100:                lighten($success, 32%) !default;
+$success-200:                lighten($success, 24%) !default;
+$success-300:                lighten($success, 16%) !default;
+$success-400:                lighten($success, 8%) !default;
+$success-500:                $success !default;
+$success-600:                darken($success, 8%) !default;
+$success-700:                darken($success, 16%) !default;
+$success-800:                darken($success, 24%) !default;
+$success-900:                darken($success, 32%) !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$base-body-bg:                $white !default;
+$base-body-color:             $gray-800 !default;
+$base-gray:                   $gray-400 !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                 $primary-500 !default;
+$link-hover-color:           $primary-700 !default;
