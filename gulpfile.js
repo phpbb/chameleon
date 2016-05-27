@@ -30,7 +30,7 @@ var AUTOPREFIXER_BROWSERS = [
 gulp.task('css', function () {
     'use strict';
     var css = gulp
-        .src('./src/core.scss')
+        .src('./src/scss/core.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             precision: 10,

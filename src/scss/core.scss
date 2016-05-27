@@ -84,7 +84,9 @@
 
 // 2. Tools
 //-------------------------
-// @import 'tools.mixins';
+@import 'tools.mixins.type';
+@import 'tools.mixins.animations';
+@import 'tools.mixins.shadows';
 // @import 'tools.functions';
 
 
@@ -110,3 +112,4 @@
 
 // 5. Ojbjects
 //-------------------------
+@import 'object.button';
