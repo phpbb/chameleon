@@ -6,13 +6,16 @@ var sourcemaps = require('gulp-sourcemaps');
 // var csswring = require('csswring');
 var csso = require('gulp-csso');
 var del = require('del');
+var matter = require('gulp-swig');
+var mustache = require('gulp-data');
+
 
 // Config
 var dist = {
-    css: './dist/css',
-    fonts: './dist/fonts',
-    imgs: './dist/imgs',
-    js: './dist/js'
+    css: './dist/assets/css',
+    fonts: './dist/assets/fonts',
+    imgs: './dist/assets/imgs',
+    js: './dist/assets/js'
 };
 
 var minify = 'true';
