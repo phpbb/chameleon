@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #Code
+// #Groupings
 //------------------------------------------------------------------------------
 
 //
@@ -8,22 +8,12 @@
 //    of wrapping code snippets
 //
 pre {
-    margin-bottom: 1rem; // [1]
+    padding: 0;
+    margin: 0 0 1.5rem; // [1]
     overflow: auto; // [2]
 }
 
 figure {
-    margin-bottom: 1rem;
-}
-
-//
-// A better looking default horizontal rule
-//
-hr {
-    border: 0;
-    border-top: 1px solid $default-gray;
-    display: block;
-    height: 1px;
-    margin: 1rem 0;
     padding: 0;
+    margin-bottom: 0 0 1.5rem;
 }

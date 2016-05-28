@@ -2,6 +2,11 @@
 // #Forms
 //------------------------------------------------------------------------------
 
+form {
+    padding: 0;
+    margin: 0;
+}
+
 //
 // iOS 'clickable elements' fix for role='button'
 //
@@ -13,17 +18,20 @@
     cursor: pointer;
 }
 
+//
+// 1. Work around a Firefox/IE bug where the transparent `button` background
+//    results in a loss of the default `button` focus styles.
+//
 button {
     background: transparent;
-}
+    border: 1px solid $default-gray;
+    cursor: pointer;
+    padding: .125rem .25rem;
 
-//
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+    &:focus {
+        outline: 1px dotted; // [1]
+        outline: 5px auto -webkit-focus-ring-color; // [1]
+    }
 }
 
 //
@@ -38,7 +46,6 @@ input,
 button,
 select,
 textarea {
-
     line-height: inherit; // [1]
     background-color: transparent;
     -webkit-border-radius: 0; // [2] iOS 8+
@@ -52,7 +59,7 @@ textarea {
 //
 label {
     display: inline-block;
-    margin-bottom: .5rem; // [1]
+    margin-bottom: 1rem; // [1]
 }
 
 //
@@ -85,14 +92,17 @@ input[type='month'] {
 // See https://github.com/twbs/bootstrap/issues/12359.
 //
 fieldset {
+    border: 0;
     min-width: 0;
+    padding: 0;
+    margin: 0 0 1.5rem;
 }
 
 legend {
     font-size: 1.5rem;
     line-height: inherit;
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 0 0 1rem;
     width: 100%;
 }
 

@@ -10,36 +10,58 @@
 // collapsing.
 //
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: .5rem;
+    padding: 0;
+    margin-top: 0;
+    margin: 0 0 1.5rem;
 }
 
 //
 // Reestablish margins on paragraphs
 //
 p {
-    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0 0 1rem;
 }
 
-//
-// Abbreviations and acronyms
-//
+// Remove underlines from potentially troublesome elements.
+u,
+ins,
 abbr[title] {
     text-decoration: none;
+}
+
+abbr[title] {
     border-bottom: 1px dotted $default-gray;
+}
+
+// Apply faux underlines to inserted text via `border-bottom`.
+ins {
+    border-bottom: 1px solid;
+}
+
+// Give a help cursor to elements that give extra info on `:hover`.
+abbr[title],
+dfn[title] {
     cursor: help;
 }
 
 address {
     font-style: normal;
     line-height: inherit;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
 }
 
 ol,
 ul,
 dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+ol,
+ul,
+dd {
+    margin-left: 3rem;
 }
 
 ol ol,
@@ -49,14 +71,21 @@ ul ol {
     margin-bottom: 0;
 }
 
+nav ol,
+nav ul {
+    list-style: none;
+}
+
 dt {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 dd {
-    margin-bottom: .5rem;
+    padding: 0;
+    margin: 0 0 .5rem;
 }
 
 blockquote {
-    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0 0 1.5rem;
 }

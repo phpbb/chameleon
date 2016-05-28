@@ -29,37 +29,10 @@ html {
 // Removes the default spacing and border for appropriate elements.
 //
 body,
-ol,
-ul,
-form,
-fieldset,
-legend,
-button,
-table,
-th,
-td,
-caption,
-hr
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-figure,
-p,
-pre {
-    margin: 0;
-    padding: 0;
-}
-
-button,
-fieldset,
 iframe {
     border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 //
@@ -102,30 +75,6 @@ summary,
 textarea
 [tabindex] {
     touch-action: manipulation;
-}
-
-ol,
-ul,
-nav ol,
-nav ul {
-    list-style: none;
-}
-
-// Give a help cursor to elements that give extra info on `:hover`.
-abbr[title],
-dfn[title] {
-    cursor: help;
-}
-
-// Remove underlines from potentially troublesome elements.
-u,
-ins {
-    text-decoration: none;
-}
-
-// Apply faux underlines to inserted text via `border-bottom`.
-ins {
-    border-bottom: 1px solid;
 }
 
 //
