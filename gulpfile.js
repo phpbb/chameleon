@@ -6,8 +6,8 @@ var sourcemaps = require('gulp-sourcemaps');
 // var csswring = require('csswring');
 var csso = require('gulp-csso');
 var del = require('del');
-var matter = require('gulp-swig');
-var mustache = require('gulp-data');
+var swig = require('gulp-swig');
+var data = require('gulp-data');
 
 
 // Config
@@ -18,16 +18,16 @@ var dist = {
     js: './dist/assets/js'
 };
 
-var minify = 'true';
+var minify = false;
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 11',
-  'edge >= 20',
-  'ff >= 40',
-  'chrome >= 35',
-  'safari >= 8',
-  'opera >= 35',
-  'ios >= 8'
+    'ie >= 11',
+    'edge >= 20',
+    'ff >= 40',
+    'chrome >= 35',
+    'safari >= 8',
+    'opera >= 35',
+    'ios >= 8'
 ];
 
 gulp.task('css', function () {
