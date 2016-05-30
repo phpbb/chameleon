@@ -12,7 +12,7 @@
 # Linter SpaceBeforeBrace, option "allow_single_line_padding"
 
 files:
-    include: 'src/*.scss'
+    include: 'src/scss/*.scss'
 options:
     formatter: stylish
     merge-default-rules: false
@@ -180,6 +180,7 @@ rules:
                 - -webkit-background-size
                 - -moz-background-size
                 - -o-background-size
+                - background-clip
                 - -webkit-background-clip
                 - -moz-background-clip
                 - border
