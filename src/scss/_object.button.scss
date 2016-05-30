@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// BUTTON
+// OBJECT: Button
 //------------------------------------------------------------------------------
 
 //
@@ -61,19 +61,19 @@ $btn-border-color: none !default;
     transition: box-shadow 0.2s $animation-curve-fast-out-linear-in, // google material design
                 background-color 0.2s $default-animation-curve, // google material design
                 color 0.2s $default-animation-curve; // google material design
-}
 
-.o-btn {
     // UI states
     &:hover,
     &:focus,
     &:active {
         text-decoration: none;  // [4]
         color: $btn-color;
+        outline: none;
     }
 
     &:hover {
         background-color: $btn-hover-color;
+        @include shadow-4dp();
     }
 
     &:focus:not(:active) {
