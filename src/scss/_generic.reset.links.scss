@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #Links
+// GENERIC: Links
 //------------------------------------------------------------------------------
 
 $link-color: $default-link-color !default;
@@ -36,8 +36,6 @@ a {
     }
 
     &:not([href]):not([tabindex]) {
-        color: inherit;
-
         &:focus,
         &:hover {
             text-decoration: none;

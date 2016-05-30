@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #RESET
+// GENERIC: Global
 //------------------------------------------------------------------------------
 
 //
@@ -15,24 +15,32 @@
 // 3. Fonts on OSX will look more consistent with other systems that do not
 //    render text using sub-pixel anti-aliasing.
 // 4. Changes the default tap highlight to be completely transparent in iOS.
+// 5. Set touch-action to avoid touch delay on mobile IE
+// 6. Make html take up the entire screen
 //
 html {
+    height: 100%; // [6]
     min-height: 100%; // [2]
     overflow-y: scroll; // [1]
+    width: 100%; // [6]
     -ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
     -moz-osx-font-smoothing: grayscale; // [3]
      -webkit-font-smoothing: antialiased; // [3]
+    -ms-touch-action: manipulation; // [5]
+        touch-action: manipulation; // [5]
     -webkit-tap-highlight-color: rgba(0,0,0,0); // [4]
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
 }
 
 //
 // Removes the default spacing and border for appropriate elements.
 //
-body,
 iframe {
     border: 0;
-    margin: 0;
-    padding: 0;
 }
 
 //

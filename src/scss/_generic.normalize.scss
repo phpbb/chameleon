@@ -288,7 +288,7 @@ input { // [1]
 
 button,
 select { // [1]
-  text-transform: none;
+    text-transform: none;
 }
 
 //
@@ -332,7 +332,7 @@ button:-moz-focusring,
 //
 
 fieldset {
-    border: 1px solid #C0C0C0;
+    border: 1px solid $default-gray;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
@@ -417,4 +417,9 @@ textarea {
 ::-webkit-file-upload-button {
     font: inherit; // [2]
     -webkit-appearance: button; // [1]
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: not-allowed;
 }

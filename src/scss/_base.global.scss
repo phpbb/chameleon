@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #PAGE
+// BASE: Global
 //------------------------------------------------------------------------------
 
 //
@@ -10,7 +10,9 @@
 //    in rems, the `line-height` is calculated to exist unitlessly.
 //
 html {
+    font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: $default-font-size; // [1]
+    font-weight: 400;
     line-height: $default-line-height; // [1]
     background-color: $default-body-bg;
     color: $default-body-color;
