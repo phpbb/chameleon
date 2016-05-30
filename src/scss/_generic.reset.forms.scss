@@ -40,18 +40,19 @@ button {
 //    Using this ensures we don't need to unnecessarily redeclare the global
 //    font stack.
 // 2. iOS adds rounded borders by default
-// 3. Remove all `margin`s so our classes don't have to do it themselves.
 //
 input,
 button,
 select,
+optgroup,
 textarea {
     line-height: inherit; // [1]
     background-color: transparent;
+    background-image: none; // [2]
+    background-clip: padding-box;
     -webkit-border-radius: 0; // [2] iOS 8+
     border-radius: 0; // [2]
     color: inherit;
-    margin: 0; // [3]
 }
 
 //
@@ -59,17 +60,44 @@ textarea {
 //
 label {
     display: inline-block;
-    margin-bottom: 1rem; // [1]
+    margin: 0 0.5rem 1rem; // [1]
 }
 
 //
-// Apply a disabled cursor for radios and checkboxes.
+// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+// so we reset that to ensure it behaves more like a standard block element.
+// See https://github.com/twbs/bootstrap/issues/12359.
+//
+fieldset {
+    border: 0;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    min-width: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    line-height: inherit;
+    display: block;
+    margin: 0 0 1rem;
+    width: 100%;
+}
+
+//
+// 1. radios nor checkboxes require slight spacing on the right to account for
+// labels.
+// 2. Apply a disabled cursor for radios and checkboxes.
 //
 // Note: Neither radios nor checkboxes can be readonly.
 //
-input[type='radio']:disabled,
-input[type='checkbox']:disabled {
-    cursor: not-allowed;
+//
+input[type='radio'],
+input[type='checkbox'] {
+    margin-right: 0.5rem; // [1]
+
+    &:disabled {
+        cursor: not-allowed; // [2]
+    }
 }
 
 //
@@ -84,26 +112,6 @@ input[type='time'],
 input[type='datetime-local'],
 input[type='month'] {
     -webkit-appearance: listbox;
-}
-
-//
-// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-// so we reset that to ensure it behaves more like a standard block element.
-// See https://github.com/twbs/bootstrap/issues/12359.
-//
-fieldset {
-    border: 0;
-    min-width: 0;
-    padding: 0;
-    margin: 0 0 1.5rem;
-}
-
-legend {
-    font-size: 1.5rem;
-    line-height: inherit;
-    display: block;
-    margin-bottom: 0 0 1rem;
-    width: 100%;
 }
 
 //
@@ -141,30 +149,61 @@ button,
 [type='time'],
 [type='url'],
 [type='week'],
+[type='color'],
 select,
 textarea {
-    min-height: 1.5em;
+    min-height: 1.5rem;
+}
+
+input[type='color'] {
+    vertical-align: middle; // [1]
+    padding: 0.25rem;
+
+}
+
+select[multiple='multiple'] {
+    height: auto;
 }
 
 //
-// Allow only vertical resizing of textareas.
+// 1. Align when inline to top for better conssistant alignments.
+//
+select[multiple='multiple'],
+textarea {
+    vertical-align: top; // [1]
+}
+
+//
+// 1. Allow only vertical resizing of textareas.
 //
 textarea {
-    resize: vertical;
+    resize: vertical; // [1]
 }
 
 //
 // specify the standard appearance of selects
 //
 select {
-    -moz-appearance: none;    /* Firefox 40+ */
-    -webkit-appearance: none; /* Chrome 45+ */
+    -moz-appearance: none; // Firefox 40+
+    -webkit-appearance: none; // Chrome 45+
 
     &::-ms-expand {
-        display: none;        /* Edge 12+, Internet Explorer 11- */
+        background-color: transparent; // IE10+
+        border: 0; // IE10+
+        display: none; // Edge 12+, Internet Explorer 11-
     }
 
     &::-ms-value {
-        color: currentColor;  /* Edge 12+, Internet Explorer 11- */
+        color: currentColor; // Edge 12+, Internet Explorer 11-
     }
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type='date']::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
 }
