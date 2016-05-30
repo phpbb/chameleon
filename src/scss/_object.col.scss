@@ -1,0 +1,70 @@
+//------------------------------------------------------------------------------
+// OBJECT: Col
+//------------------------------------------------------------------------------
+
+//
+// This grid system uses table layout to simplify the use of a grid. Define the
+// wrapper with o-grid class and all wrappers within in it use o-col object
+// combined with o-col-x-x modifier to set the width which enables
+// table-layout: fixed on all layouts large enough to not be fluid. The system
+// disables this once you reach small devices where fluid layouts are better.
+// The grid col & sizes can both be applied either in your html (recomended) or
+// as a mixin.
+
+@if $use-html-layout {
+    //
+    // Setup all grid columns to use table cell layout and use the default gutter
+    @media (min-width: $bp-medium) {
+        .o-col {
+            @include o-col();
+        }
+    }
+
+    //
+    // Tablet widths
+    @media (min-width: $bp-medium) {
+        .o-col-1-m { width: 8.333333%; }
+        .o-col-2-m { width: 16.666667%; }
+        .o-col-3-m { width: 25%; }
+        .o-col-4-m { width: 33.333333%; }
+        .o-col-5-m { width: 41.666667%; }
+        .o-col-6-m { width: 50%; }
+        .o-col-7-m { width: 58.333333%; }
+        .o-col-8-m { width: 66.666667%; }
+        .o-col-9-m { width: 75%; }
+        .o-col-10-m { width: 83.333333%; }
+        .o-col-11-m { width: 91.666667%; }
+    }
+
+    //
+    // Desktop widths
+    @media (min-width: $bp-large) {
+        .o-col-1-l { width: 8.333333%; }
+        .o-col-2-l { width: 16.666667%; }
+        .o-col-3-l { width: 25%; }
+        .o-col-4-l { width: 33.333333%; }
+        .o-col-5-l { width: 41.666667%; }
+        .o-col-6-l { width: 50%; }
+        .o-col-7-l { width: 58.333333%; }
+        .o-col-8-l { width: 66.666667%; }
+        .o-col-9-l { width: 75%; }
+        .o-col-10-l { width: 83.333333%; }
+        .o-col-11-l { width: 91.666667%; }
+    }
+
+    //
+    // Widescreen widths
+    @media (min-width: $bp-wide) {
+        .o-col-1-w { width: 8.333333%; }
+        .o-col-2-w { width: 16.666667%; }
+        .o-col-3-w { width: 25%; }
+        .o-col-4-w { width: 33.333333%; }
+        .o-col-5-w { width: 41.666667%; }
+        .o-col-6-w { width: 50%; }
+        .o-col-7-w { width: 58.333333%; }
+        .o-col-8-w { width: 66.666667%; }
+        .o-col-9-w { width: 75%; }
+        .o-col-10-w { width: 83.333333%; }
+        .o-col-11-w { width: 91.666667%; }
+    }
+}

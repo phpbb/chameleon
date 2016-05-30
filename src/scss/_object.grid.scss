@@ -1,0 +1,50 @@
+//------------------------------------------------------------------------------
+// OBJECT: Grid
+//------------------------------------------------------------------------------
+
+//
+// This grid system uses table layout to simplify the use of a grid. Define the
+// wrapper with o-grid class and all wrappers within in it use o-col object
+// combined with o-col-x-x modifier to set the width which enables
+// table-layout: fixed on all layouts large enough to not be fluid. The system
+// disables this once you reach small devices where fluid layouts are better.
+// The grid col & sizes can both be applied either in your html (recomended) or
+// as a mixin.
+
+//
+// Set up the default container and grid class for mobile browsers
+.container {
+    margin: $grid-gutter auto;
+    max-width: $small;
+}
+
+.o-grid {
+    width: 100%;
+}
+
+//
+// Establist container sizes for all devices larger than mobile
+
+// Tablet
+@media (min-width: $bp-medium) {
+    .container { max-width: $medium; }
+}
+
+// Desktop
+@media (min-width: $bp-large) {
+    .container { max-width: $large; }
+}
+
+// Widescreen
+@media (min-width: $bp-wide) {
+    .container { max-width: $wide; }
+}
+
+//
+// Set up the grid to work on larger devices
+@media (min-width: $bp-medium) {
+    .o-grid {
+        display: table;
+        table-layout: fixed;
+    }
+}
