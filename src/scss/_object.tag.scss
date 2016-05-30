@@ -1,0 +1,46 @@
+//------------------------------------------------------------------------------
+// OBJECT: Tag
+//------------------------------------------------------------------------------
+
+//
+// Default Theme Variables
+$tag-border-radius: $default-border-radius !default;
+$tag-background-color: $default-gray !default;
+$tag-color: $gray-700 !default;
+
+.o-tag {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: $tag-background-color;
+    border-radius: $tag-border-radius;
+    color: $tag-color;
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+
+    // Empty tags collapse automatically
+    &:empty {
+        display: none;
+    }
+}
+
+// EXP COMPONENT MODIFIER CLASS
+//
+// should never modify anything other than layout, if themeing specifcs are
+// required then custom theme class should be created.
+//
+// .c-navbar_btn {
+//     margin: 0 0.25rem;
+// }
+
+// EXP THEME CLASS
+// .t-navbar_btn,
+// .t-btn {
+//     background-color: $btn-background-color;
+//     border-width: $btn-border-size;
+//     border-style: $btn-border-style;
+//     border-color: $btn-border-color;
+//     border-radius: $btn-border-radius;
+//     color: $btn-color;
+// }
