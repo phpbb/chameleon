@@ -73,13 +73,16 @@
 //                                 highest specificity.
 //
 
+// 0. Config Flags
+//-------------------------
+$use-material: true !default;
+$use-html-layout: true !default;
+
 // 1. Global Settings
 //-------------------------
 @import 'settings.color';
 @import 'settings.default';
 @import 'settings.spacing';
-@import 'settings.animation';
-@import 'settings.shadows';
 
 
 // 2. Tools
@@ -87,6 +90,7 @@
 @import 'tools.mixins.type';
 @import 'tools.mixins.animations';
 @import 'tools.mixins.shadows';
+@import 'tools.mixins.grid';
 // @import 'tools.functions';
 
 
@@ -107,6 +111,8 @@
 // 4. Base
 //-------------------------
 @import 'base.global';
+@import 'base.type';
+@import 'base.forms';
 
 
 
@@ -114,3 +120,19 @@
 // 5. Ojbjects
 //-------------------------
 @import 'object.button';
+@import 'object.grid';
+@import 'object.col';
+@import 'object.tag';
+
+
+// 6. Components
+//-------------------------
+
+
+// 7. Theme
+//-------------------------
+@import 'theme.default';
+
+
+// 8. Utilities
+//-------------------------
