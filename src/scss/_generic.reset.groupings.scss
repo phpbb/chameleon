@@ -1,19 +1,17 @@
 //------------------------------------------------------------------------------
-// #Groupings
+// GENERIC: Groupings
 //------------------------------------------------------------------------------
 
 //
-// 1. Reset browser default of `1em` to use `rem`s
+// 1. Reset browser default `rem`s
 // 2. Normalize v4 removed this property, causing `<pre>` content to break out
 //    of wrapping code snippets
 //
 pre {
-    padding: 0;
-    margin: 0 0 1.5rem; // [1]
+    @include typecsset-vertical-rhythm; // [1]
     overflow: auto; // [2]
 }
 
 figure {
-    padding: 0;
-    margin-bottom: 0 0 1.5rem;
+    @include typecsset-vertical-rhythm;
 }

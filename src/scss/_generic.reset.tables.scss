@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #Tables
+// GENERIC: Tables
 //------------------------------------------------------------------------------
 
 //
@@ -7,19 +7,20 @@
 // 2. No longer part of Normalize since v4
 //
 table {
+    @include typecsset-vertical-rhythm;
     background-color: transparent; // [1]
     border-spacing: 0; // from inuit
     border-collapse: collapse; // [2]
-    margin: 0 0 1.5rem;
+    width: 100%;
 }
 
 caption {
     text-align: left;
     color: $default-gray;
     caption-side: bottom;
+    margin: 0;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    margin: 0;
 }
 
 //
@@ -31,6 +32,6 @@ th {
 
 th,
 td {
-    padding: 0;
     margin: 0;
+    padding: $typecsset-base-line-height / 2;
 }

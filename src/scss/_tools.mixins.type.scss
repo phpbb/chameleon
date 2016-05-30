@@ -1,171 +1,149 @@
 //------------------------------------------------------------------------------
-// TYPE
+// TOOLS: TYPE
 //------------------------------------------------------------------------------
 
-@mixin typo-display-4($color-contrast: false) {
-    font-size: 112px;
-    font-weight: 300;
-    letter-spacing: -0.04em;
-    line-height: 1;
+//
+// Settings
+$typo: (
+    display4:   112px,
+    display3:   56px,
+    display2:   45px,
+    display1:   34px,
+    headline:   24px,
+    title:      20px,
+    subhead1:   16px,
+    subhead2:   16px,
+    body1:      16px,
+    body2:      16px,
+    caption:    12px,
+    blockquote: 24px
+) !default;
 
-    @if $color-contrast {
-        opacity: 0.54;
-    }
+// What would you like your base font-size to be? Define in pixels; the library
+// will convert measurements to the most appropriate units (rems or unitless).
+$typecsset-base-font-size:   $default-font-size !default;
+$typecsset-base-line-height: $default-line-height !default;
+
+// some small, internally-used functions to remove the units from a given value.
+@function typecsset-strip-units($number) {
+    @return $number / ($number * 0 + 1);
 }
 
-@mixin typo-display-3($color-contrast: false) {
-    font-size: 56px;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.35;
-
-    @if $color-contrast {
-        opacity: 0.54;
-    }
+@function px-to-unitless($number) {
+    @return typecsset-strip-units($number) / typecsset-strip-units($typecsset-base-font-size);
 }
 
-@mixin typo-display-2($color-contrast: false) {
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 48px;
+// Do not modify these variables; they are internal settings upon which the
+// library depends.
+$typecsset-magic-number:     $typecsset-base-line-height;
+$typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
 
-    @if $color-contrast {
-        opacity: 0.54;
+//
+// Typecsset Mixins
+
+// Quickly generate a font-size in rems, with a pixel fallback, based on the
+// value we pass into the mixin, e.g.:
+//
+// h1 {
+//     @include typecsset-font-size(24px);
+// }
+//
+@mixin typecsset-font-size($font-size, $line-height: true) {
+    font-size: ($font-size / $typecsset-base-font-size) * 1rem;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $typecsset-base-line-height) * ($typecsset-base-line-height / $font-size);
     }
+
 }
 
-@mixin typo-display-1($color-contrast: false) {
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 40px;
-
-    @if $color-contrast {
-        opacity: 0.54;
-    }
+// Space elements by an amount based on your magic number. Pass in the property
+// to be indented as a paramater, e.g.:
+//
+// pre {
+//     @include typecsset-space(padding-left);
+// }
+//
+@mixin typecsset-space($property) {
+    #{$property}: 2 * $typecsset-magic-ratio + rem;
 }
 
-@mixin typo-headline($color-contrast: false) {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    -moz-osx-font-smoothing: grayscale;
-
-    @if $color-contrast {
-        opacity: 0.87;
-    }
+//
+// SHARED
+//
+//
+// A lot of elements in Typecsset need to share some declarations (mainly for
+// vertical rhythm), so we `@extend` some silent classes.
+//
+@mixin typecsset-vertical-rhythm {
+    margin: 0 0 $typecsset-magic-ratio + rem;
 }
 
-@mixin typo-title($color-contrast: false) {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1;
-
-    @if $color-contrast {
-        opacity: 0.87;
+//
+// Google MDL Mixins
+@mixin typo($type: 16px, $color-contrast: false, $use-preferred: true) {
+    //
+    // Set 'font-size' & default 'line-height'
+    @if $type {
+      @include typecsset-font-size(map-get($typo, $type));
     }
-}
-
-@mixin typo-subhead($color-contrast: false) {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    line-height: 24px;
-
-    @if $color-contrast {
-        opacity: 0.87;
+    //
+    // Set Custom 'line-height'
+    @if $type == 'display1' {
+        line-height: px-to-unitless(40);
     }
-}
 
-@mixin typo-subhead-2($color-contrast: false) {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    line-height: 28px;
-
-    @if $color-contrast {
-        opacity: 0.87;
-    }
-}
-
-@mixin typo-body-2($color-contrast: false, $use-preferred: false) {
-    font-size: 14px;
-    @if $use-preferred {
+    //
+    // Set 'font-weight'
+    @if $type == 'display4' or 'display2' or 'blockquote' {
+        font-weight: 300;
+    } @else if $type == 'title' or 'menu' or 'button' {
         font-weight: 500;
+    } @else if $type == 'body2' {
+        @if $use-preferred {
+            font-weight: 500;
+        } @else {
+            font-weight: 700;
+        }
     } @else {
-        font-weight: bold;
+        font-weight: 400;
     }
-    letter-spacing: 0;
-    line-height: 24px;
 
+    //
+    // Set 'letter-spacing'
+    @if $type == 'blockquote' {
+        letter-spacing: 0.08em;
+    } @else if $type == 'subhead1' or 'subhead2' {
+        letter-spacing: 0.04em;
+    } @else if $type == 'title' {
+        letter-spacing: 0.02em;
+    } @else if $type == 'display3' {
+        letter-spacing: -0.02em;
+    } @else if $type == 'display4' {
+        letter-spacing: -0.04em;
+    } @else {
+        letter-spacing: 0;
+    }
+
+    //
+    // Set type specific properties
+    @if $type == 'headline' {
+        -moz-osx-font-smoothing: grayscale;
+    } @else if $type == 'blockquote' {
+        font-style: italic;
+        position: relative;
+    } @else if $type == 'button' {
+        text-transform: uppercase;
+    }
+
+    //
+    // Set 'opacity'
     @if $color-contrast {
-        opacity: 0.87;
-    }
-}
-
-@mixin typo-body-1($color-contrast: false, $use-preferred: false) {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 24px;
-
-    @if $color-contrast {
-        opacity: 0.87;
-    }
-}
-
-@mixin typo-caption($color-contrast: false, $use-preferred: false) {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1;
-
-    @if $color-contrast {
-        opacity: 0.54;
-    }
-}
-
-@mixin typo-blockquote($color-contrast: false) {
-    font-size: 24px;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 0.08em;
-    line-height: 1.35;
-    position: relative;
-
-    &:before {
-        content: '“';
-        position: absolute;
-        left: -0.5em;
-    }
-
-    &:after {
-        content: '”';
-        margin-left: -0.05em;
-    }
-
-    @if $color-contrast {
-        opacity: 0.54;
-    }
-}
-
-@mixin typo-menu($color-contrast: false) {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1;
-
-    @if $color-contrast {
-        opacity: 0.87;
-    }
-}
-
-@mixin typo-button($color-contrast: false) {
-    font-size: 14px;
-    font-weight: 500;
-
-    @if $color-contrast {
-        opacity: 0.87;
+        @if $type == 'display4' or 'display3' or 'display2' or 'display1' or 'blockquote' {
+            opacity: 0.54;
+        } @else {
+            opacity: 0.87;
+        }
     }
 }
 

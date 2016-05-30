@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// #Typography
+// GENERIC: Typography
 //------------------------------------------------------------------------------
 
 //
@@ -10,17 +10,14 @@
 // collapsing.
 //
 h1, h2, h3, h4, h5, h6 {
-    padding: 0;
-    margin-top: 0;
-    margin: 0 0 1.5rem;
+    @include typecsset-vertical-rhythm;
 }
 
 //
 // Reestablish margins on paragraphs
 //
 p {
-    padding: 0;
-    margin: 0 0 1rem;
+    @include typecsset-vertical-rhythm;
 }
 
 // Remove underlines from potentially troublesome elements.
@@ -46,28 +43,24 @@ dfn[title] {
 }
 
 address {
+    @include typecsset-vertical-rhythm;
     font-style: normal;
     line-height: inherit;
-    margin: 0 0 1rem;
-}
-
-ol,
-ul,
-dl {
-    padding: 0;
-    margin: 0 0 1rem;
 }
 
 ol,
 ul,
 dd {
-    margin-left: 3rem;
+    @include typecsset-vertical-rhythm;
+    @include typecsset-space(margin-left);
 }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
+dl {
+    @include typecsset-vertical-rhythm;
+}
+
+li > ul,
+li > ol {
     margin-bottom: 0;
 }
 
@@ -80,12 +73,43 @@ dt {
     font-weight: 700;
 }
 
-dd {
-    padding: 0;
-    margin: 0 0 .5rem;
+//
+// 1. Hang the opening quote of the blockquote.
+//
+blockquote {
+    @include typecsset-vertical-rhythm;
+    text-indent: -0.41em; // [1]
 }
 
-blockquote {
-    padding: 0;
-    margin: 0 0 1.5rem;
+q   {
+    quotes: '‘' '’' '“' '”';
+
+    &:before {
+        content: '‘';
+        content: open-quote;
+    }
+
+    &:after {
+        content: '’';
+        content: close-quote;
+    }
+
+    q:before {
+        content: '“';
+        content: open-quote;
+    }
+
+    q:after {
+        content: '”';
+        content: close-quote;
+    }
+
+    //
+    // If an element opens with an inline quote, let’s hang that.
+    //
+    &:first-child {
+        text-indent: -0.22em;
+        display: inline-block;
+    }
+
 }

@@ -1,0 +1,70 @@
+//------------------------------------------------------------------------------
+// BAASE: TYPE
+//------------------------------------------------------------------------------
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    @include typo($type: display3, $color-contrast: true);
+    font-size: 60%;
+}
+
+h1 {
+    @include typo($type: display3);
+}
+
+h2 {
+    @include typo($type: display2);
+}
+
+h3 {
+    @include typo($type: display1);
+}
+
+h4 {
+    @include typo($type: headline);
+}
+
+h5 {
+    @include typo($type: title);
+}
+
+h6 {
+    @include typo($type: subhead1);
+}
+
+p {
+    @include typo($type: body1);
+}
+
+blockquote {
+    @include typo($type: blockquote);
+    @include typecsset-space(margin-left);
+
+    p {
+        &:before {
+            content: '“';
+            content: open-quote;
+        }
+
+        &:after {
+            content: '';
+            content: no-close-quote;
+        }
+
+        &:last-of-type:after {
+            content: '”';
+            content: close-quote;
+        }
+    }
+}
+
+mark {
+    background-color: #F4FF81;
+}
+
+address {
+    @include typo($type: caption);
+}
+
+ul, ol {
+    @include typo($type: body1);
+}
