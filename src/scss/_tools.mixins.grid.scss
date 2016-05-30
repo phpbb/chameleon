@@ -1,0 +1,28 @@
+//------------------------------------------------------------------------------
+// TOOLS: Grid
+//------------------------------------------------------------------------------
+
+@mixin o-col() {
+    display: table-cell;
+    padding: 0 $grid-gutter;
+}
+
+@mixin o-col-width($m: 0, $l: 0, $w: 0) {
+    @if $m != 0 {
+        @media (min-width: $bp-medium) {
+            width: percentage($m / 12);
+        }
+    }
+
+    @if $l != 0 {
+        @media (min-width: $bp-large) {
+            width: percentage($l / 12);
+        }
+    }
+
+    @if $w != 0 {
+        @media (min-width: $bp-wide) {
+            width: percentage($w / 12);
+        }
+    }
+}
