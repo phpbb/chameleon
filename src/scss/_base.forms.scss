@@ -110,6 +110,14 @@ textarea {
     }
 }
 
+fieldset {
+    display: block;
+
+    label {
+        display: block;
+    }
+
+}
 
 textarea {
     height: auto;
