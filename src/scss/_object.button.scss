@@ -5,7 +5,7 @@
 //
 // Layout Variables
 $btn-font-size: 14px !default;
-$btn-border-size: 0 !default;
+$btn-border-size: 1px !default;
 $btn-padding: 16px !default;
 $btn-border-radius: $default-border-radius !default;
 $btn-min-width: 64px !default;
@@ -13,12 +13,12 @@ $btn-height: 36px !default;
 
 //
 // Default Theme Variables
-$btn-background-color: $gray-50 !default;
-$btn-hover-color: $btn-background-color !default;
-$btn-active-color: $btn-background-color !default;
+$btn-background-color: $white !default;
+$btn-hover-color: $link-hover-color !default;
+$btn-active-color: $btn-hover-color !default;
 $btn-color: $gray-600 !default;
-$btn-border-style: none !default;
-$btn-border-color: none !default;
+$btn-border-style: solid !default;
+$btn-border-color: $default-gray !default;
 
 //
 // 1. Allow us to style box model properties.
@@ -47,7 +47,7 @@ $btn-border-color: none !default;
     border-style: $btn-border-style;
     border-color: $btn-border-color;
     border-radius: $btn-border-radius;
-    @include shadow-2dp();
+    // @include shadow-2dp();
     color: $btn-color;
     outline: none; // google material design
     cursor: pointer;
@@ -73,18 +73,24 @@ $btn-border-color: none !default;
 
     &:hover {
         background-color: $btn-hover-color;
-        @include shadow-4dp();
+        border-color: $btn-hover-color;
+        color: $btn-background-color;
+        // @include shadow-4dp();
     }
 
     &:focus:not(:active) {
         background-color: $btn-active-color;
-        @include focus-shadow();
+        border-color: $btn-hover-color;
+        color: $btn-background-color;
+        // @include focus-shadow();
     }
 
     &:active {
         background-color: $btn-active-color;
         background-image: none;
-        @include shadow-4dp();
+        border-color: $btn-hover-color;
+        color: $btn-background-color;
+        // @include shadow-4dp();
     }
 
     &:disabled {
