@@ -4,12 +4,11 @@
 
 //
 // Layout Variables
-$btn-font-size: 14px !default;
-$btn-border-size: 1px !default;
-$btn-padding: 16px !default;
+$btn-border-size: $default-border-size !default;
+$btn-padding: 1rem !default;
 $btn-border-radius: $default-border-radius !default;
-$btn-min-width: 64px !default;
-$btn-height: 36px !default;
+$btn-min-width: 4rem !default;
+$btn-height: 2.375rem !default;
 
 //
 // Default Theme Variables
