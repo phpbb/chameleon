@@ -1,0 +1,92 @@
+//------------------------------------------------------------------------------
+// BASE: Forms
+//------------------------------------------------------------------------------
+
+//
+// Settings
+$table-header-color: rgba($black, 0.54);
+$table-divider-color: rgba($black, 0.12);
+
+$table-hover-color: $gray-200;
+$table-selection-color: $gray-300;
+
+$table-dividers: 1px solid $table-divider-color;
+
+$table-row-height: 3rem;
+$table-last-row-height: 3.5rem;
+$table-header-height: 3.5rem;
+
+$table-column-spacing: 2.25rem;
+$table-column-padding: $table-column-spacing / 2;
+
+$table-card-header-height: 4rem;
+$table-card-title-top: 1.25rem;
+$table-card-padding: 1.5rem;
+$table-button-padding-right: 1rem;
+$table-cell-top: $table-card-padding / 2;
+
+table {
+    @include typecsset-font-size(13);
+    white-space: nowrap;
+    background-color: $white;
+    border: $table-dividers;
+    border-collapse: collapse;
+    // position: relative;
+    width: auto;
+
+    thead {
+        padding-bottom: 3px;
+    }
+
+    tbody {
+        tr {
+            height: $table-row-height;
+            position: relative;
+            transition: background-color 0.28s $default-animation-curve;
+
+            &.is-selected {
+                background-color: $table-selection-color;
+            }
+
+            &:hover {
+                background-color: $table-hover-color;
+            }
+        }
+    }
+
+    td,
+    th {
+        text-align: right;
+        padding: 0 $table-column-padding;
+
+        &:first-of-type {
+            padding-left: $table-card-padding;
+        }
+
+        &:last-of-type {
+            padding-right: $table-card-padding;
+        }
+    }
+
+    td {
+        vertical-align: top;
+        border-top: $table-dividers;
+        border-bottom: $table-dividers;
+        box-sizing: border-box;
+        height: $table-row-height;
+        padding-top: $table-cell-top;
+        position: relative;
+    }
+
+    th {
+        @include typo($type: 'body2');
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+        color: $table-header-color;
+        box-sizing: border-box;
+        height: $table-row-height;
+        padding-bottom: 0.5rem;
+        position: relative;
+
+    }
+}
