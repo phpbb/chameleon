@@ -33,13 +33,10 @@ $btn-border-color: $default-gray !default;
 // 8. Prevent button text from being selectable.
 //
 .o-btn {
-    font-size: $btn-font-size; // google material design
-    font-weight: 500; // google material design
-    letter-spacing: 0; // google material design
+    @include typo($type: 'button');
     line-height: $btn-height; // google material design
     text-align: center; // [4]
     text-decoration: none; // [4]
-    text-transform: uppercase; // google material design
     vertical-align: middle; // [2]
     white-space: nowrap; // bs only
     background-color: $btn-background-color;

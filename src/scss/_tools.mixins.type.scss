@@ -4,7 +4,7 @@
 
 //
 // Settings
-$typo: (
+$typo-size: (
     display4:   112px,
     display3:   56px,
     display2:   45px,
@@ -15,6 +15,8 @@ $typo: (
     subhead2:   16px,
     body1:      16px,
     body2:      16px,
+    menu:       14px,
+    button:     14px,
     caption:    12px,
     blockquote: 24px
 ) !default;
@@ -49,7 +51,7 @@ $typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
 // }
 //
 @mixin typecsset-font-size($font-size, $line-height: true) {
-    font-size: ($font-size / $typecsset-base-font-size) * 1rem;
+    font-size: (typecsset-strip-units($font-size) / typecsset-strip-units($typecsset-base-font-size)) * 1rem;
 
     @if $line-height == true {
         line-height: ceil($font-size / $typecsset-base-line-height) * ($typecsset-base-line-height / $font-size);
@@ -81,11 +83,12 @@ $typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
 
 //
 // Google MDL Mixins
-@mixin typo($type: 16px, $color-contrast: false, $use-preferred: true) {
+@mixin typo($type: 'title', $color-contrast: false, $use-preferred: false) {
+    content: $type;
     //
     // Set 'font-size' & default 'line-height'
     @if $type {
-      @include typecsset-font-size(map-get($typo, $type));
+      @include typecsset-font-size(map-get($typo-size, $type));
     }
     //
     // Set Custom 'line-height'
@@ -95,11 +98,21 @@ $typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
 
     //
     // Set 'font-weight'
-    @if $type == 'display4' or 'display2' or 'blockquote' {
+    $weight: (
+        display4:   1,
+        display2:   1,
+        blockquote: 1,
+        title:      2,
+        menu:       2,
+        button:     2,
+        body2:      3
+    );
+    $fw: map-get($weight, $type);
+    @if $fw == 1 {
         font-weight: 300;
-    } @else if $type == 'title' or 'menu' or 'button' {
+    } @elseif $fw == 2 {
         font-weight: 500;
-    } @else if $type == 'body2' {
+    } @elseif $fw == 3 {
         @if $use-preferred {
             font-weight: 500;
         } @else {
@@ -111,15 +124,24 @@ $typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
 
     //
     // Set 'letter-spacing'
-    @if $type == 'blockquote' {
+    $letter: (
+        blockquote:   1,
+        subhead1:     2,
+        subhead2:     2,
+        title:        3,
+        display3:     4,
+        display4:     5
+    );
+    $ls: map-get($letter, $type);
+    @if $ls == 1 {
         letter-spacing: 0.08em;
-    } @else if $type == 'subhead1' or 'subhead2' {
+    } @elseif $ls == 2 {
         letter-spacing: 0.04em;
-    } @else if $type == 'title' {
+    } @elseif $ls == 3 {
         letter-spacing: 0.02em;
-    } @else if $type == 'display3' {
+    } @elseif $ls == 4 {
         letter-spacing: -0.02em;
-    } @else if $type == 'display4' {
+    } @elseif $ls == 5 {
         letter-spacing: -0.04em;
     } @else {
         letter-spacing: 0;
@@ -129,17 +151,25 @@ $typecsset-magic-ratio:      px-to-unitless($typecsset-base-line-height);
     // Set type specific properties
     @if $type == 'headline' {
         -moz-osx-font-smoothing: grayscale;
-    } @else if $type == 'blockquote' {
+    } @elseif $type == 'blockquote' {
         font-style: italic;
         position: relative;
-    } @else if $type == 'button' {
+    } @elseif $type == 'button' {
         text-transform: uppercase;
     }
 
     //
     // Set 'opacity'
+    $opacity: (
+        blockquote:   1,
+        display1:     1,
+        display2:     1,
+        display3:     1,
+        display4:     1
+    );
+    $o: map-get($opacity, $type);
     @if $color-contrast {
-        @if $type == 'display4' or 'display3' or 'display2' or 'display1' or 'blockquote' {
+        @if $type == 1 {
             opacity: 0.54;
         } @else {
             opacity: 0.87;
