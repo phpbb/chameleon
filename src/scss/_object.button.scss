@@ -55,7 +55,6 @@ $btn-border-color: $default-gray !default;
     display: inline-block; // [1]
     margin:  0; // [4]
     padding: 0 $btn-padding; // [7]
-    // position: relative; // suit only
     overflow: visible; // [6]
     min-width: $btn-min-width; // google material design
     transition: box-shadow 0.2s $animation-curve-fast-out-linear-in, // google material design
