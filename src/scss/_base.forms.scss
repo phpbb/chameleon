@@ -130,9 +130,17 @@ textarea {
 //    match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
+    padding: .5rem 2.25rem .5rem 1rem;
+    min-width: 5rem;
+
     &:focus::-ms-value {
         background-color: $base-input-background-color; // [1]
         color: $base-input-color; // [1]
+    }
+
+    &:focus:-moz-focusring {
+        text-shadow: 0 0 0 #000000;
+        color: transparent;
     }
 }
 
