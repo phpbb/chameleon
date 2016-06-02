@@ -2,10 +2,55 @@
 // THEME: Default
 //------------------------------------------------------------------------------
 
+// .t-input-small
+// .t-input-medium
+// .t-input-large
+
+// .form-group {
+//     display: block;
+//
+//     label {
+//         display: block;
+//     }
+//
+//     // input,
+//     // select,
+//     // textarea {
+//     //     width: 75%;
+//     // }
+// }
+
+.form-inline {
+    @media (min-width: $bp-medium) {
+        fieldset,
+        .form-group {
+            vertical-align: middle;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+}
+
 .t-form-info {
     background-color: $base-form-info-color;
 }
 
 .t-form-warning {
     background-color: $base-form-warning-color;
+}
+
+/* Make it red for easy views */
+.grid-example {
+    margin-bottom: 1rem;
+}
+
+.grid-example .o-col {
+    line-height: 3;
+    text-align: center;
+    background-color: rgba(255,0,0,.15);
+    color: #333333;
+}
+
+.grid-example .o-col:nth-child(odd) {
+    background-color: rgba(255,0,0,.3);
 }
