@@ -22,35 +22,42 @@
 
         <h2>Input normalization</h2>
 
-        <form>
-            <fieldset>
-                <legend>An inline form. Check for alignment and input/select sizing.</legend>
-
+        <form class="form-inline">
+            <legend>An inline form. Check for alignment and input/select sizing.</legend>
+            <fieldset class="form-group">
                 <input type="text" placeholder="text input">
+            </fieldset>
+            <fieldset class="form-group">
                 <input type="search" placeholder="search input">
-                <label class="select">
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="c-select">
                     <select name="fooselect">
                         <option value="CA">CA</option>
                         <option value="NY">NY</option>
                     </select>
-                </label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
                 <button type="submit" class="o-btn">Sign in</button>
             </fieldset>
         </form>
 
         <h2>Default Form</h2>
 
-        <form>
-            <fieldset>
-                <legend>A default inline form.</legend>
-
+        <form class="form-inline">
+            <legend>A default inline form.</legend>
+            <fieldset class="form-group">
                 <input type="text" placeholder="Email">
+            </fieldset>
+            <fieldset class="form-group">
                 <input type="password" placeholder="Password">
-
-                <label>
-                    <input type="checkbox"> Remember me
-                </label>
-
+            </fieldset>
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Remember me</label>
+            </fieldset>
+            <fieldset class="form-group">
                 <button type="submit" class="o-btn">Sign in</button>
             </fieldset>
         </form>
@@ -59,40 +66,44 @@
         <h2>Multi-Column Form with Grids</h2>
 
         <form>
+            <legend>Legend</legend>
             <fieldset class="o-grid">
-                <legend>Legend</legend>
-                <div class="o-col o-col-4-m">
+                <div class="o-col o-col-3-m">
                     <label>First Name</label>
                     <input type="text">
                 </div>
-                <div class="o-col o-col-4-m">
+                <div class="o-col o-col-3-m">
                     <label>Password</label>
                     <input type="password">
                 </div>
-                <div class="o-col o-col-4-m">
+                <div class="o-col o-col-3-m">
                     <label>E-Mail</label>
                     <input type="email" required>
                 </div>
-                <div class="o-col o-col-4-m">
+                <div class="o-col o-col-2-m">
                     <label>City</label>
                     <input type="text">
                 </div>
-                <div class="o-col o-col-4-m">
+                <div class="o-col o-col-1-m">
                     <label>State</label>
-                    <select>
-                        <option>AL</option>
-                        <option>CA</option>
-                        <option>IL</option>
-                        <option>MD</option>
-                        <option>NY</option>
-                    </select>
+                    <div class="c-select">
+                        <select>
+                            <option>AL</option>
+                            <option>CA</option>
+                            <option>IL</option>
+                            <option>MD</option>
+                            <option>NY</option>
+                        </select>
+                    </div>
                 </div>
             </fieldset>
-            <fieldset class="o-grid">
-                <label class="checkbox">
-                    <input type="checkbox"> I've read the terms and conditions
-                </label>
 
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">I've read the terms and conditions</label>
+            </fieldset>
+
+            <fieldset class="o-grid">
                 <button type="submit" class="o-btn">Submit</button>
                 <button type="reset" class="o-btn">Reset</button>
             </fieldset>
@@ -104,31 +115,37 @@
         <form>
             <fieldset>
                 <legend>Legend</legend>
+            </fieldset>
 
-                <label>
-                    First Name
-                    <input type="text">
-                </label>
+            <fieldset class="form-group">
+                <label>First Name</label>
+                <input type="text">
+            </fieldset>
 
-                <label>
-                    Password
-                    <input type="password">
-                </label>
+            <fieldset class="form-group">
+                <label>Password</label>
+                <input type="password">
+            </fieldset>
 
+            <fieldset class="form-group">
                 <label>
                     E-Mail
-                    <input type="email" required>
                     <span class="o-tag t-form-info">This is a required field.</span>
                 </label>
+                <input type="email" required>
+            </fieldset>
 
-
+            <fieldset class="form-group">
                 <label>
                     City
-                    <input type="text">
                     <span class="o-tag t-form-warning">This is another required field.</span>
                 </label>
-                <label class="select">
-                    State
+                <input type="text">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>State</label>
+                <div class="c-select">
                     <select>
                         <option>AL</option>
                         <option>CA</option>
@@ -136,59 +153,22 @@
                         <option>MD</option>
                         <option>NY</option>
                     </select>
-                </label>
+                </div>
+            </fieldset>
 
-                <label>
-                    Color
-                    <input type="color">
-                </label>
+            <fieldset class="form-group">
+                <label>Color</label>
+                <input type="color">
+            </fieldset>
 
-                <label class="checkbox">
-                    <input type="checkbox"> I've read the terms and conditions
-                </label>
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox3" />
+                <label for="checkbox3">I've read the terms and conditions</label>
+            </fieldset>
 
+            <fieldset class="form-group">
                 <button type="submit" class="o-btn">Submit</button>
                 <button type="reset" class="o-btn">Reset</button>
-            </fieldset>
-        </form>
-
-
-        <h2>Aligned Form</h2>
-
-        <form>
-            <fieldset>
-                <label>Username</label>
-                <input type="text" placeholder="Username">
-                <span class="o-tag t-form-info">This is a <code>form-info-inline</code> field.</span>
-            </fieldset>
-
-            <fieldset>
-                <label>Password</label>
-                <input type="password" placeholder="Password">
-                <span class="o-tag t-form-warning">This is a <code>form-warning-inline</code> field.</span>
-            </fieldset>
-
-            <fieldset>
-                <label>Email Address</label>
-                <input type="text" placeholder="Email Address">
-            </fieldset>
-
-            <fieldset>
-                <label>Here's a button</label>
-                <input type="button" value="Button" class="o-btn">
-            </fieldset>
-
-            <fieldset>
-                <label>Supercalifragilistic Label</label>
-                <input type="text" placeholder="Enter something here...">
-            </fieldset>
-
-            <fieldset>
-                <label class="checkbox">
-                    <input type="checkbox"> Remember Me
-                </label>
-
-                <button type="submit" class="o-btn">Submit</button>
             </fieldset>
         </form>
 
@@ -257,17 +237,115 @@
 
 
         <form>
-            <div class="o-grid">
+            <fieldset class="o-grid grid-example">
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+
+                <div class="o-col o-col-1-m">
+                    <input type="text" placeholder=".col-1">
+                </div>
+            </fieldset>
+
+            <fieldset class="o-grid grid-example">
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+
+                <div class="o-col o-col-2-m">
+                    <input type="text" placeholder=".col-2">
+                </div>
+            </fieldset>
+
+            <fieldset class="o-grid grid-example">
                 <div class="o-col o-col-3-m">
                     <input type="text" placeholder=".col-3">
                 </div>
 
-                <div class="o-col o-col-9-m">
-                    <input type="text" placeholder=".col-9">
+                <div class="o-col o-col-3-m">
+                    <input type="text" placeholder=".col-3">
                 </div>
-            </div>
 
-            <div class="o-grid">
+                <div class="o-col o-col-3-m">
+                    <input type="text" placeholder=".col-3">
+                </div>
+
+                <div class="o-col o-col-3-m">
+                    <input type="text" placeholder=".col-3">
+                </div>
+            </fieldset>
+
+            <fieldset class="o-grid grid-example">
+                <div class="o-col o-col-4-m">
+                    <input type="text" placeholder=".col-4">
+                </div>
+
+                <div class="o-col o-col-4-m">
+                    <input type="text" placeholder=".col-4">
+                </div>
+
+                <div class="o-col o-col-4-m">
+                    <input type="text" placeholder=".col-4">
+                </div>
+            </fieldset>
+
+            <fieldset class="o-grid grid-example">
                 <div class="o-col o-col-6-m">
                     <input type="text" placeholder=".col-6">
                 </div>
@@ -275,25 +353,7 @@
                 <div class="o-col o-col-6-m">
                     <input type="text" placeholder=".col-6">
                 </div>
-            </div>
-
-            <div class="o-grid">
-                <div class="o-col o-col-2-m">
-                    <input type="text" placeholder=".col-2">
-                </div>
-
-                <div class="o-col o-col-2-m">
-                    <input type="text" placeholder=".col-2">
-                </div>
-
-                <div class="o-col o-col-2-m">
-                    <input type="text" placeholder=".col-2">
-                </div>
-
-                <div class="o-col o-col-6-m">
-                    <input type="text" placeholder=".col-6">
-                </div>
-            </div>
+            </fieldset>
         </form>
 
 
@@ -321,11 +381,15 @@
         <h2>Rounded Form</h2>
 
         <form>
-            <label>Subject</label>
-            <input type="text" placeholder="Subject" />
+            <fieldset>
+                <label>Subject</label>
+                <input type="text" placeholder="Subject" />
+            </fieldset>
 
-            <label>Message</label>
-            <textarea rows="5" cols="40" placeholder="Message..."></textarea>
+            <fieldset>
+                <label>Message</label>
+                <textarea rows="5" cols="40" placeholder="Message..."></textarea>
+            </fieldset>
 
             <button type="submit" class="o-btn">Search</button>
             <input type="reset" class="o-btn" value="Reset" />
@@ -335,41 +399,47 @@
         <h2>Selects</h2>
 
         <form>
-            <select>
-                <option>Brazil</option>
-                <option>Canada</option>
-                <option>United States</option>
-                <option>United Kingdom</option>
-                <option>Venezuela</option>
-            </select>
+            <fieldset>
+                <div class="c-select">
+                    <select>
+                        <option>Brazil</option>
+                        <option>Canada</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Venezuela</option>
+                    </select>
+                </div>
+            </fieldset>
 
-            <select multiple="multiple">
-                <option>Brazil</option>
-                <option>Canada</option>
-                <option>United States</option>
-                <option>United Kingdom</option>
-                <option>Venezuela</option>
-            </select>
+            <fieldset>
+                <select multiple="multiple">
+                    <option>Brazil</option>
+                    <option>Canada</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Venezuela</option>
+                </select>
+            </fieldset>
         </form>
 
 
         <h2>Checkboxes and Radios</h2>
 
         <form>
-            <label class="checkbox">
-                <input type="checkbox" value="">
-                Here's option one.
-            </label>
+            <span>
+                <input type="checkbox" id="checkbox4" />
+                <label for="checkbox4">Here's option one.</label>
+            </span>
 
-            <label class="radio">
+            <span>
                 <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                Here's a radio button. You can choose this one...
-            </label>
+                <label for="optionsRadios1">Here's a radio button. You can choose this one...</label>
+            </span>
 
-            <label class="radio">
+            <span>
                 <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                ...Or this one!
-            </label>
+                <label for="optionsRadios2">...Or this one!</label>
+            </span>
         </form>
 
 
@@ -377,9 +447,11 @@
 
         <form>
             <fieldset>
-                <label>Last Name</label>
+                <label>
+                    Last Name
+                    <span class="o-tag t-form-info">Block help text</span>
+                </label>
                 <input type="text" />
-                <span class="form-message">Block help text</span>
             </fieldset>
         </form>
 
