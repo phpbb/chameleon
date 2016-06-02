@@ -62,12 +62,9 @@ textarea {
     @media (min-width: $bp-medium) {
         display: inline-block;
     }
+    height: $base-input-height; // [1]
     padding: $base-input-padding-y $base-input-padding-x;
-    // height: $input-height; [1]
     width: 100%;
-    @media (min-width: $bp-medium) {
-        width: auto;
-    }
     // @include box-shadow($input-box-shadow);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
@@ -105,6 +102,11 @@ textarea {
         border-color: $base-input-invalid-border-color;
         color: $base-input-invalid-color;
     }
+}
+
+
+textarea {
+    height: auto;
 }
 
 //
