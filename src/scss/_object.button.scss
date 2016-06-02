@@ -13,8 +13,9 @@ $btn-height: 2.375rem !default;
 //
 // Default Theme Variables
 $btn-background-color: $white !default;
-$btn-hover-color: $link-hover-color !default;
-$btn-active-color: $btn-hover-color !default;
+$btn-hover-color: $default-link-hover-color !default;
+$btn-active-color: $default-link-hover-color !default;
+$btn-focus-color: $default-accent !default;
 $btn-color: $gray-600 !default;
 $btn-border-style: solid !default;
 $btn-border-color: $default-gray !default;
@@ -67,16 +68,12 @@ $btn-border-color: $default-gray !default;
     }
 
     &:hover {
-        background-color: $btn-hover-color;
         border-color: $btn-hover-color;
-        color: $btn-background-color;
         // @include shadow-4dp();
     }
 
-    &:focus:not(:active) {
-        background-color: $btn-active-color;
+    &:focus {
         border-color: $btn-hover-color;
-        color: $btn-background-color;
         // @include focus-shadow();
     }
 
