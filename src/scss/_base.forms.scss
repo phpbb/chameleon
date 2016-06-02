@@ -203,6 +203,10 @@ input[type='checkbox'] {
         transition: .2s;
     }
 
+    &:hover + label:before {
+        border-color: $base-input-border-hover-color;
+    }
+
     &:not(:checked):disabled + label:before {
         background-color: $base-input-disabled-color;
         border: none;
@@ -278,6 +282,10 @@ input[type='checkbox'] {
             z-index: -1;
             transform: scale(0);
         }
+    }
+
+    &:hover + label:before {
+        border-color: $base-input-border-hover-color;
     }
 
     // Checked
