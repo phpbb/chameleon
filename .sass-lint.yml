@@ -17,13 +17,13 @@ options:
     formatter: stylish
     merge-default-rules: false
 rules:
-    border-zero: 1
+    border-zero: 0
     brace-style:
         - 1
         -
             allow-single-line: true
     class-name-format:
-        - 1
+        - 0
         -
             convention: hyphenatedlowercase
     clean-import-paths:
