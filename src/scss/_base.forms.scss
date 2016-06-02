@@ -38,7 +38,20 @@ $base-form-warning-color: $important-100;
 // 5. iOS fix for unreadable disabled content;
 //    see https://github.com/twbs/bootstrap/issues/11655.
 //
-input,
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+[type='color'],
 select,
 textarea {
     background-color: $base-input-background-color;
