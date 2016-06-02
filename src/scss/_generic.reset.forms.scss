@@ -40,6 +40,7 @@ button {
 //    Using this ensures we don't need to unnecessarily redeclare the global
 //    font stack.
 // 2. iOS adds rounded borders by default
+// 3. Ensure all elements have same inital alignment
 //
 input,
 button,
@@ -47,6 +48,7 @@ select,
 optgroup,
 textarea {
     line-height: inherit; // [1]
+    vertical-align: middle; // [3]
     background-color: transparent;
     background-image: none; // [2]
     background-clip: padding-box;
