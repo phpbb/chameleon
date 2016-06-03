@@ -67,6 +67,8 @@ li > ol {
 nav ol,
 nav ul {
     list-style: none;
+    @include typecsset-vertical-rhythm;
+    padding: 0;
 }
 
 dt {
