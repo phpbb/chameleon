@@ -4,12 +4,14 @@
 
 //
 // 1. Reset browser default `rem`s
-// 2. Normalize v4 removed this property, causing `<pre>` content to break out
+// 2. code should wrap not cause horizontal scrolling
+// 3. Normalize v4 removed this property, causing `<pre>` content to break out
 //    of wrapping code snippets
 //
 pre {
     @include typecsset-vertical-rhythm; // [1]
-    overflow: auto; // [2]
+    white-space: pre-wrap; // [2]
+    overflow: auto; // [3]
 }
 
 figure {
