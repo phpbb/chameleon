@@ -17,7 +17,7 @@ $tag-color: $gray-700 !default;
     color: $tag-color;
     display: inline-block;
     margin-left: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.125rem 0.25rem;
 
     // Empty tags collapse automatically
     &:empty {
