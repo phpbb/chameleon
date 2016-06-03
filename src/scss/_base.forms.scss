@@ -17,7 +17,7 @@ $base-input-border-color: $default-gray;
 $base-input-border-hover-color: $default-link-hover-color;
 
 $base-input-background-focus-color: $base-input-background-color;
-$base-input-border-focus-color: $default-accent;
+$base-input-border-focus-color: $base-input-border-hover-color;
 
 $base-input-placeholder-color: $default-gray;
 
@@ -29,6 +29,16 @@ $base-input-invalid-color: $pink-300;
 $base-form-info-color: $warning-100;
 $base-form-warning-color: $important-100;
 
+
+form {
+    @media (min-width: $bp-medium) {
+        span {
+            vertical-align: middle;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+}
 
 
 // 1. Make inputs at least the height of their button counterpart
@@ -110,14 +120,14 @@ textarea {
     }
 }
 
-fieldset {
-    display: block;
-
-    label {
-        display: block;
-    }
-
-}
+// fieldset {
+//     display: block;
+//
+//     label {
+//         display: block;
+//     }
+//
+// }
 
 textarea {
     height: auto;
@@ -130,8 +140,11 @@ textarea {
 //    match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
+    background: #FFFFFF url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==') no-repeat right .75rem center;
+    display: inline-block;
     padding: .5rem 2.25rem .5rem 1rem;
     min-width: 5rem;
+    max-width: 100%;
 
     &:focus::-ms-value {
         background-color: $base-input-background-color; // [1]
@@ -141,6 +154,10 @@ select {
     &:focus:-moz-focusring {
         text-shadow: 0 0 0 #000000;
         color: transparent;
+    }
+
+    &[multiple='multiple'] {
+        background-image: none;
     }
 }
 
@@ -182,7 +199,7 @@ input[type='checkbox'] {
         user-select: none;
         display: inline-block;
         margin: 0 0.5rem;
-        padding-left: 1.75rem;
+        padding-left: 2rem;
         position: relative;
         transition: .28s ease;
     }
@@ -190,7 +207,7 @@ input[type='checkbox'] {
 
 [type='checkbox'] {
     + label:before {
-        border: 2px solid $base-input-border-color;
+        border: 1px solid $base-input-border-color;
         border-radius: 1px;
         content: '';
         height: 1rem;
@@ -215,10 +232,10 @@ input[type='checkbox'] {
 
 [type='checkbox']:checked {
     + label:before {
-        border-top: 2px solid transparent;
-        border-right: 2px solid $base-input-border-hover-color;
-        border-bottom: 2px solid $base-input-border-hover-color;
-        border-left: 2px solid transparent;
+        border-top: 1px solid transparent;
+        border-right: 1px solid $base-input-border-hover-color;
+        border-bottom: 1px solid $base-input-border-hover-color;
+        border-left: 1px solid transparent;
         height: 1.125rem;
         top: -4px;
         left: -5px;
@@ -229,8 +246,8 @@ input[type='checkbox'] {
     }
 
     &:disabled + label:before {
-        border-right: 2px solid $base-input-disabled-color;
-        border-bottom: 2px solid $base-input-disabled-color;
+        border-right: 1px solid $base-input-disabled-color;
+        border-bottom: 1px solid $base-input-disabled-color;
     }
 }
 
@@ -238,7 +255,7 @@ input[type='checkbox'] {
 [type='checkbox']:indeterminate {
     + label:before {
         border-top: none;
-        border-right: 2px solid $base-input-invalid-border-color;
+        border-right: 1px solid $base-input-invalid-border-color;
         border-bottom: none;
         border-left: none;
         height: 1.125rem;
@@ -253,7 +270,7 @@ input[type='checkbox'] {
     // Disabled indeterminate
     &:disabled + label:before {
         background-color: transparent;
-        border-right: 2px solid $base-input-disabled-color;
+        border-right: 1px solid $base-input-disabled-color;
     }
 }
 
@@ -263,7 +280,7 @@ input[type='checkbox'] {
         border-radius: 50%;
         content: '';
         height: 1rem;
-        margin: 0.25rem;
+        margin: 0.25rem 0.25rem 0.25rem 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -275,7 +292,7 @@ input[type='checkbox'] {
     &:not(:checked) + label {
         &:before,
         &:after {
-            border: 2px solid $base-input-border-color;
+            border: 1px solid $base-input-border-color;
         }
 
         &:after {
@@ -291,7 +308,7 @@ input[type='checkbox'] {
     // Checked
     &:checked + label {
         &:before {
-            border: 2px solid $base-input-border-hover-color;
+            border: 1px solid $base-input-border-hover-color;
         }
 
         &:after {
@@ -310,7 +327,7 @@ input[type='checkbox'] {
 
         &:checked + label:before,
         &:not(:checked) + label:before {
-            border: 2px solid $base-input-disabled-color;
+            border: 1px solid $base-input-disabled-color;
         }
 
         :checked + label:after {
