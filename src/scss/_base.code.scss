@@ -1,0 +1,82 @@
+//------------------------------------------------------------------------------
+// BASE: Code
+//------------------------------------------------------------------------------
+
+//
+// Setting
+$base-code-font-family: Monaco, 'Andale Mono','Courier New', Courier, mono !default;
+
+$base-code-bg: $red-100 !default;
+$base-code-color: $red-300 !default;
+$base-code-border-radius: $default-border-radius !default;
+
+$base-kbd-nested-font-weight: 700 !default;
+
+$base-kbd-bg: $gray-900 !default;
+$base-kbd-color: $white !default;
+
+$base-pre-bg: $gray-800 !default;
+$base-pre-border-width: 0 !default;
+$base-pre-border-style: solid !default;
+$base-pre-border-color: $default-gray !default;
+$base-pre-border-radius: $default-border-radius !default;
+$base-pre-color: $white !default;
+
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+    font-family: $base-code-font-family;
+}
+
+// Inline code
+code,
+kbd {
+    font-size: 90%;
+    background-color: $base-code-bg;
+    border-radius: $base-code-border-radius;
+    color: $base-code-color;
+    padding: 0.125rem 0.25rem;
+}
+
+// User input typically entered via keyboard
+kbd {
+    background-color: $base-kbd-bg;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+    color: $base-kbd-color;
+
+    kbd {
+        font-size: 100%;
+        font-weight: $base-kbd-nested-font-weight;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+// Blocks of code
+pre {
+    font-size: 90%;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: $base-pre-bg;
+    border-width: $base-pre-border-width;
+    border-style: $base-pre-border-style;
+    border-color: $base-pre-border-color;
+    border-radius: $base-pre-border-radius;
+    color: $base-pre-color;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.5rem;
+
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        font-size: inherit;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border-radius: 0;
+        color: inherit;
+        padding: 0;
+    }
+}
