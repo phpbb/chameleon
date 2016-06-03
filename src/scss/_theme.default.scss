@@ -54,3 +54,66 @@
 .grid-example .o-col:nth-child(odd) {
     background-color: rgba(255,0,0,.3);
 }
+
+.display4 {
+    @include typo($type: 'display4');
+}
+
+.display3 {
+    @include typo($type: 'display3');
+}
+
+.display2 {
+    @include typo($type: 'display2');
+}
+
+.display1 {
+    @include typo($type: 'display1');
+}
+
+// headline:   24px,
+// title:      20px,
+// subhead1:   16px,
+// subhead2:   16px,
+// body1:      16px,
+// body2:      16px,
+// menu:       14px,
+// button:     14px,
+// caption:    12px,
+// blockquote: 24px
+
+.headline {
+    @include typo($type: 'headline');
+}
+
+.title {
+    @include typo($type: 'title');
+}
+
+.subhead1 {
+    @include typo($type: 'subhead1');
+}
+
+.body1 {
+    @include typo($type: 'body1');
+}
+
+.body2 {
+    @include typo($type: 'body2');
+}
+
+.menu {
+    @include typo($type: 'menu');
+}
+
+.button {
+    @include typo($type: 'button');
+}
+
+.caption {
+    @include typo($type: 'caption');
+}
+
+.blockquote {
+    @include typo($type: 'blockquote');
+}
