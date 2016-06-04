@@ -2,43 +2,23 @@
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
 // This prevents an unwanted focus outline from appearing around elements that
 // might still respond to pointer events.
-//
+
 [tabindex='-1']:focus {
     outline: none !important;
 }
 
-.browserupgrade {
-    background: $default-gray;
-    color: $black;
-    margin: 0.2em 0;
-    padding: 0.2em 0;
+// Helper classes
+//------------------------------------------------------------------------------
+
+//
+// Hide visually and from screen readers
+.hidden {
+    display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-Helper classes
-========================================================================== */
 
 // Only display content to screen readers
 //
-// See: http://a11yproject.com/posts/how-to-hide-content/
-
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 .sr-only {
     border: 0;
     clip: rect(0,0,0,0);
@@ -50,38 +30,12 @@ Helper classes
     width: 1px;
 }
 
-/*
-* Hide visually and from screen readers
-*/
-
-.hidden {
-    display: none !important;
-}
-
-/*
-* Hide only visually, but have it available for screen readers:
-* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    position: absolute;
-    overflow: hidden;
-    width: 1px;
-}
-
-/*
-* Extends the .visuallyhidden class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+//
+// Extends the .sr-only class to allow the element
+// to be focusable when navigated to via the keyboard:
+// https://www.drupal.org/node/897638
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -90,37 +44,31 @@ Helper classes
     width: auto;
 }
 
-/*
-* Hide visually and from screen readers, but maintain layout
-*/
-
+//
+// Hide visually and from screen readers, but maintain layout
 .invisible {
     visibility: hidden;
 }
 
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
-
-.clearfix:before,
-.clearfix:after {
-    content: ' '; /* 1 */
-    display: table; /* 2 */
-}
+//
+// Clearfix: contain floats
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    `contenteditable` attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that receive the `clearfix` class.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
 
 .clearfix:after {
+    content: ' '; // [1]
     clear: both;
+    display: table; // [2]
 }
 
-//------------------------------------------------------------------------------
+
 // Color Coding
 //------------------------------------------------------------------------------
 .code-color {
@@ -164,12 +112,13 @@ Helper classes
     }
 }
 
-/* ==========================================================================
-Print styles.
-Inlined to avoid the additional HTTP request:
-http://www.phpied.com/delay-loading-your-print-css/
-========================================================================== */
 
+// Print styles.
+// Inlined to avoid the additional HTTP request:
+// http://www.phpied.com/delay-loading-your-print-css/
+//
+// 1. Black prints faster: http://www.sanbeiji.com/archives/953
+//------------------------------------------------------------------------------
 @media print {
     *,
     *:before,
@@ -179,7 +128,7 @@ http://www.phpied.com/delay-loading-your-print-css/
         text-shadow: none !important;
         background: transparent !important;
         box-shadow: none !important;
-        color: $black !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+        color: $black !important; // [1]
     }
 
     a,
@@ -195,11 +144,9 @@ http://www.phpied.com/delay-loading-your-print-css/
         content: ' (' attr(title) ')';
     }
 
-    /*
-    * Don't show links that are fragment identifiers,
-    * or use the `javascript:` pseudo protocol
-    */
-
+    //
+    // Don't show links that are fragment identifiers, or use the `javascript:`
+    // pseudo protocol
     a[href^='#']:after,
     a[href^='javascript:']:after {
         content: '';
@@ -211,11 +158,9 @@ http://www.phpied.com/delay-loading-your-print-css/
         page-break-inside: avoid;
     }
 
-    /*
-    * Printing Tables:
-    * http://css-discuss.incutio.com/wiki/Printing_Tables
-    */
-
+    //
+    // Printing Tables:
+    // http://css-discuss.incutio.com/wiki/Printing_Tables
     thead {
         display: table-header-group;
     }
