@@ -1298,164 +1298,12 @@ pre {
   .o-tag:empty {
     display: none; }
 
-.c-select {
-  display: inline-block;
-  margin: 0;
-  position: relative;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
-  .c-select:after {
-    border-top: 0.35rem solid #BDBDBD;
-    border-right: .35rem solid transparent;
-    border-bottom: .35rem solid transparent;
-    border-left: .35rem solid transparent;
-    content: '';
-    display: inline-block;
-    height: 0;
-    margin-top: -.15rem;
-    position: absolute;
-    top: 50%;
-    right: 1.25rem;
-    width: 0;
-    pointer-events: none; }
-  .c-select:hover:after {
-    border-top-color: #0a63be; }
-  .c-select:focus:after {
-    border-top-color: #0a63be; }
-
-@media (min-width: 545px) {
-  .form-inline fieldset,
-  .form-inline .form-group {
-    vertical-align: middle;
-    display: inline-block;
-    margin-bottom: 0; } }
-
-.t-form-info {
-  background-color: #ffefbd; }
-
-.t-form-warning {
-  background-color: #f7c5c5; }
-
-/* Make it red for easy views */
-.grid-example {
-  margin-bottom: 1rem; }
-
-.grid-example .o-col {
-  line-height: 3;
-  text-align: center;
-  background-color: rgba(255, 0, 0, 0.15);
-  color: #333333; }
-
-.grid-example .o-col:nth-child(odd) {
-  background-color: rgba(255, 0, 0, 0.3); }
-
-.display4 {
-  content: "display4";
-  font-size: 7rem;
-  line-height: 1.0714285714;
-  font-weight: 300;
-  letter-spacing: -0.04em; }
-
-.display3 {
-  content: "display3";
-  font-size: 3.5rem;
-  line-height: 1.2857142857;
-  font-weight: 400;
-  letter-spacing: -0.02em; }
-
-.display2 {
-  content: "display2";
-  font-size: 2.8125rem;
-  line-height: 1.0666666667;
-  font-weight: 300;
-  letter-spacing: 0; }
-
-.display1 {
-  content: "display1";
-  font-size: 2.125rem;
-  line-height: 1.4117647059;
-  line-height: 2.5;
-  font-weight: 400;
-  letter-spacing: 0; }
-
-.headline {
-  content: "headline";
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 0;
-  -moz-osx-font-smoothing: grayscale; }
-
-.title {
-  content: "title";
-  font-size: 1.25rem;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: 0.02em; }
-
-.subhead1 {
-  content: "subhead1";
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 0.04em; }
-
-.body1 {
-  content: "body1";
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 0; }
-
-.body2 {
-  content: "body2";
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 700;
-  letter-spacing: 0; }
-
-.menu {
-  content: "menu";
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-  font-weight: 500;
-  letter-spacing: 0; }
-
-.button {
-  content: "button";
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-  font-weight: 500;
-  letter-spacing: 0;
-  text-transform: uppercase; }
-
-.caption {
-  content: "caption";
-  font-size: 0.75rem;
-  line-height: 2;
-  font-weight: 400;
-  letter-spacing: 0; }
-
-.blockquote {
-  content: "blockquote";
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  font-style: italic;
-  position: relative; }
-
 [tabindex='-1']:focus {
   outline: none !important; }
 
-.browserupgrade {
-  background: #BDBDBD;
-  color: #000000;
-  margin: 0.2em 0;
-  padding: 0.2em 0; }
+.hidden {
+  display: none !important; }
 
-/* ==========================================================================
-Helper classes
-========================================================================== */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -1466,33 +1314,8 @@ Helper classes
   overflow: hidden;
   width: 1px; }
 
-/*
-* Hide visually and from screen readers
-*/
-.hidden {
-  display: none !important; }
-
-/*
-* Hide only visually, but have it available for screen readers:
-* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  position: absolute;
-  overflow: hidden;
-  width: 1px; }
-
-/*
-* Extends the .visuallyhidden class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1500,32 +1323,13 @@ Helper classes
   overflow: visible;
   width: auto; }
 
-/*
-* Hide visually and from screen readers, but maintain layout
-*/
 .invisible {
   visibility: hidden; }
 
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
-.clearfix:before,
 .clearfix:after {
   content: ' ';
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after {
-  clear: both; }
+  clear: both;
+  display: table; }
 
 .code-color .comment {
   color: #7B929D; }
@@ -1556,11 +1360,6 @@ Helper classes
 .code-color .constant.numeric {
   color: #42c0ff; }
 
-/* ==========================================================================
-Print styles.
-Inlined to avoid the additional HTTP request:
-http://www.phpied.com/delay-loading-your-print-css/
-========================================================================== */
 @media print {
   *,
   *:before,
@@ -1570,8 +1369,7 @@ http://www.phpied.com/delay-loading-your-print-css/
     text-shadow: none !important;
     background: transparent !important;
     box-shadow: none !important;
-    color: #000000 !important;
-    /* Black prints faster: http://www.sanbeiji.com/archives/953 */ }
+    color: #000000 !important; }
   a,
   a:visited {
     text-decoration: underline; }
@@ -1579,10 +1377,6 @@ http://www.phpied.com/delay-loading-your-print-css/
     content: " (" attr(href) ")"; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-  /*
-    * Don't show links that are fragment identifiers,
-    * or use the `javascript:` pseudo protocol
-    */
   a[href^='#']:after,
   a[href^='javascript:']:after {
     content: ''; }
@@ -1590,10 +1384,6 @@ http://www.phpied.com/delay-loading-your-print-css/
   blockquote {
     border: 1px solid #9E9E9E;
     page-break-inside: avoid; }
-  /*
-    * Printing Tables:
-    * http://css-discuss.incutio.com/wiki/Printing_Tables
-    */
   thead {
     display: table-header-group; }
   tr,
