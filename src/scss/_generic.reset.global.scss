@@ -94,12 +94,12 @@ textarea
 //
 ::-moz-selection {
     text-shadow: none;
-    background: #B3D4FC;
+    background: $blue-200;
 }
 
 ::selection {
     text-shadow: none;
-    background: #B3D4FC;
+    background: $blue-200;
     color: #FFFFFF;
 }
 

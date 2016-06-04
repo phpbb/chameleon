@@ -37,7 +37,7 @@ kbd {
     background-color: $base-code-bg;
     border-radius: $base-code-border-radius;
     color: $base-code-color;
-    padding: 0.125rem 0.25rem;
+    padding: rem(2) rem(4);
 }
 
 // User input typically entered via keyboard
@@ -68,7 +68,7 @@ pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding: 0.25rem 0.5rem;
+    padding: rem(4) rem(8);
 
     // Account for some code outputs that place code tags in pre tags
     code {

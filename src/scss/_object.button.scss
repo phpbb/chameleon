@@ -7,8 +7,8 @@
 $btn-border-size: $default-border-size !default;
 $btn-padding: 1rem !default;
 $btn-border-radius: $default-border-radius !default;
-$btn-min-width: 4rem !default;
-$btn-height: 2.375rem !default;
+$btn-min-width: rem(64) !default;
+$btn-height: rem(38) !default;
 
 //
 // Default Theme Variables
@@ -33,7 +33,7 @@ $btn-border-color: $default-gray !default;
 // 8. Prevent button text from being selectable.
 //
 .o-btn {
-    @include typo($type: 'button');
+    @include type($type: 'button');
     line-height: $btn-height; // google material design
     text-align: center; // [4]
     text-decoration: none; // [4]

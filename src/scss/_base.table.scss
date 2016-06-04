@@ -12,21 +12,21 @@ $table-selection-color: $gray-300;
 
 $table-dividers: 1px solid $table-divider-color;
 
-$table-row-height: 3rem;
-$table-last-row-height: 3.5rem;
-$table-header-height: 3.5rem;
+$table-row-height: rem(48);
+$table-last-row-height: rem(56);
+$table-header-height: rem(56);
 
-$table-column-spacing: 2.25rem;
+$table-column-spacing: rem(36);
 $table-column-padding: $table-column-spacing / 2;
 
-$table-card-header-height: 4rem;
-$table-card-title-top: 1.25rem;
-$table-card-padding: 1.5rem;
+$table-card-header-height: rem(64);
+$table-card-title-top: rem(20);
+$table-card-padding: rem(24);
 $table-button-padding-right: 1rem;
 $table-cell-top: $table-card-padding / 2;
 
 table {
-    @include typecsset-font-size(13);
+    @include font-size(13);
     white-space: nowrap;
     background-color: $white;
     border: $table-dividers;
@@ -35,7 +35,7 @@ table {
     width: auto;
 
     thead {
-        padding-bottom: 3px;
+        padding-bottom: rem(4);
     }
 
     tbody {
@@ -79,13 +79,13 @@ table {
     }
 
     th {
-        @include typo($type: 'body2');
+        @include type($type: 'body2');
         text-overflow: ellipsis;
         vertical-align: bottom;
         color: $table-header-color;
         box-sizing: border-box;
         height: $table-row-height;
-        padding-bottom: 0.5rem;
+        padding-bottom: rem(8);
         position: relative;
 
     }

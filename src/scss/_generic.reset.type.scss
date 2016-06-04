@@ -10,14 +10,14 @@
 // collapsing.
 //
 h1, h2, h3, h4, h5, h6 {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
 }
 
 //
 // Reestablish margins on paragraphs
 //
 p {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
 }
 
 // Remove underlines from potentially troublesome elements.
@@ -43,7 +43,7 @@ dfn[title] {
 }
 
 address {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
     font-style: normal;
     line-height: inherit;
 }
@@ -51,12 +51,12 @@ address {
 ol,
 ul,
 dd {
-    @include typecsset-vertical-rhythm;
-    @include typecsset-space(margin-left);
+    @include vertical-rhythm();
+    @include space(margin-left);
 }
 
 dl {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
 }
 
 li > ul,
@@ -67,7 +67,7 @@ li > ol {
 nav ol,
 nav ul {
     list-style: none;
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
     padding: 0;
 }
 
@@ -79,7 +79,7 @@ dt {
 // 1. Hang the opening quote of the blockquote.
 //
 blockquote {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
     text-indent: -0.41em; // [1]
 }
 

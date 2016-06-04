@@ -87,11 +87,20 @@ $use-html-layout: true !default;
 
 // 2. Tools
 //-------------------------
-@import 'tools.mixins.type';
-@import 'tools.mixins.animations';
-@import 'tools.mixins.shadows';
-@import 'tools.mixins.grid';
-// @import 'tools.functions';
+
+// Functions
+@import 'tools.function.strip-unit';
+@import 'tools.function.unitless';
+@import 'tools.function.rem';
+
+// Mixins
+@import 'tools.mixin.font-size';
+@import 'tools.mixin.space';
+@import 'tools.mixin.vertical-rhythm';
+@import 'tools.mixin.type';
+@import 'tools.mixin.animations';
+@import 'tools.mixin.shadows';
+@import 'tools.mixin.grid';
 
 
 // 3. Generic
@@ -131,7 +140,7 @@ $use-html-layout: true !default;
 
 // 7. Theme
 //-------------------------
-// @import 'theme.default';
+@import 'theme.default';
 
 
 // 8. Utilities

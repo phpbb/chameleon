@@ -4,11 +4,11 @@
 
 //
 // Settings
-$base-input-height: 2.5rem;
+$base-input-height: rem(40);
 $base-input-border-width: $default-border-size;
 $base-input-border-radius: $default-border-radius;
-$base-input-padding-y: 0.5rem;
-$base-input-padding-x: 0.5rem;
+$base-input-padding-y: rem(8);
+$base-input-padding-x: rem(8);
 
 $base-input-color: $default-body-color;
 $base-input-background-color: $white;
@@ -140,10 +140,10 @@ textarea {
 //    match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
-    background: #FFFFFF url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==') no-repeat right .75rem center;
+    background: #FFFFFF url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==') no-repeat right rem(12) center;
     display: inline-block;
-    padding: .5rem 2.25rem .5rem 1rem;
-    min-width: 5rem;
+    padding: rem(8) rem(36) rem(8) 1rem;
+    min-width: rem(80);
     max-width: 100%;
 
     &:focus::-ms-value {
@@ -163,7 +163,7 @@ select {
 
 input[type='color'] {
     height: $base-input-height;
-    width: 2.5rem;
+    width: $base-input-height;
 }
 
 //
@@ -198,8 +198,8 @@ input[type='checkbox'] {
         cursor: pointer;
         user-select: none;
         display: inline-block;
-        margin: 0 0.5rem;
-        padding-left: 2rem;
+        margin: 0 rem(8);
+        padding-left: rem(32);
         position: relative;
         transition: .28s ease;
     }
@@ -211,7 +211,7 @@ input[type='checkbox'] {
         border-radius: 1px;
         content: '';
         height: 1rem;
-        margin-top: 2px;
+        margin-top: rem(2);
         position: absolute;
         top: 0;
         left: 0;
@@ -236,10 +236,10 @@ input[type='checkbox'] {
         border-right: 1px solid $base-input-border-hover-color;
         border-bottom: 1px solid $base-input-border-hover-color;
         border-left: 1px solid transparent;
-        height: 1.125rem;
+        height: rem(18);
         top: -4px;
         left: -5px;
-        width: 0.75rem;
+        width: rem(12);
         transform: rotate(40deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
@@ -258,10 +258,10 @@ input[type='checkbox'] {
         border-right: 1px solid $base-input-invalid-border-color;
         border-bottom: none;
         border-left: none;
-        height: 1.125rem;
+        height: rem(18);
         top: -11px;
         left: -12px;
-        width: 0.75rem;
+        width: rem(12);
         transform: rotate(90deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
@@ -280,7 +280,7 @@ input[type='checkbox'] {
         border-radius: 50%;
         content: '';
         height: 1rem;
-        margin: 0.25rem 0.25rem 0.25rem 0;
+        margin: rem(4) rem(4) rem(4) 0;
         position: absolute;
         top: 0;
         left: 0;

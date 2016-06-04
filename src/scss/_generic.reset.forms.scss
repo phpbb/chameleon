@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 form {
-    @include typecsset-vertical-rhythm;
+    @include vertical-rhythm();
     padding: 0;
 }
 
@@ -26,11 +26,11 @@ button {
     background: transparent;
     border: 1px solid $default-gray;
     cursor: pointer;
-    padding: .125rem .25rem;
+    padding: rem(2) rem(4);
 
     &:focus {
         outline: 1px dotted; // [1]
-        outline: 5px auto -webkit-focus-ring-color; // [1]
+        outline: 4px auto -webkit-focus-ring-color; // [1]
     }
 }
 
@@ -62,7 +62,7 @@ textarea {
 //
 label {
     display: inline-block;
-    margin: 0 0.5rem 1rem; // [1]
+    margin: 0 rem(8) 1rem; // [1]
 }
 
 //
@@ -72,14 +72,13 @@ label {
 //
 fieldset {
     border: 0;
-    margin: 0 0 1.5rem;
+    @include vertical-rhythm();
     padding: 0;
     min-width: 0;
 }
 
 legend {
-    font-size: 1.5rem;
-    line-height: inherit;
+    @include type($type: 'headline');
     display: block;
     margin: 0 0 1rem;
     width: 100%;
@@ -95,7 +94,7 @@ legend {
 //
 input[type='radio'],
 input[type='checkbox'] {
-    margin-right: 0.5rem; // [1]
+    margin-right: rem(8); // [1]
 
     &:disabled {
         cursor: not-allowed; // [2]
@@ -154,12 +153,12 @@ button,
 [type='color'],
 select,
 textarea {
-    min-height: 1.5rem;
+    min-height: rem(24);
 }
 
 input[type='color'] {
     vertical-align: middle; // [1]
-    padding: 0.25rem;
+    padding: rem(4);
 
 }
 
