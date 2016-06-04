@@ -19,8 +19,8 @@ var dist = {
     js: './dist/assets/js'
 };
 
-var minify = true;
-var gzip = true;
+var minify = false;
+var gzip = false;
 
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 11',
