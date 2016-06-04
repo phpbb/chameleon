@@ -24,6 +24,7 @@
     "gulp-csso": "^2.0.0",
     "gulp-data": "^1.2.1",
     "gulp-gray-matter": "^3.0.1",
+    "gulp-gzip": "^1.4.0",
     "gulp-mustache": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",

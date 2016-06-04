@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 // var csswring = require('csswring');
 var csso = require('gulp-csso');
 var del = require('del');
+var gzip = require('gulp-gzip');
 var swig = require('gulp-swig');
 var data = require('gulp-data');
 
@@ -19,6 +20,7 @@ var dist = {
 };
 
 var minify = true;
+var gzip = true;
 
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 11',
@@ -45,6 +47,12 @@ gulp.task('css', function () {
        css = css
        .pipe(csso())
        .pipe(rename('core.min.css'));
+    }
+
+    if (gzip) {
+       css = css
+       .pipe(gzip())
+       .pipe(rename('core.min.css.gz'));
     }
 
     css = css
