@@ -4,7 +4,7 @@
 
 //
 // Setting
-$base-code-font-family: Monaco, 'Andale Mono','Courier New', Courier, mono !default;
+$base-code-font-family: $default-code-font;
 
 $base-code-bg: $red-100 !default;
 $base-code-color: $red-300 !default;

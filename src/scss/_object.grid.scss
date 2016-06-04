@@ -11,10 +11,11 @@
 // The grid col & sizes can both be applied either in your html (recomended) or
 // as a mixin.
 
+
 //
 // Set up the default container and grid class for mobile browsers
 .container {
-    margin: $grid-gutter auto;
+    margin: rem($default-grid-gutter) auto;
     max-width: $small;
 }
 

@@ -10,10 +10,10 @@
 //    in rems, the `line-height` is calculated to exist unitlessly.
 //
 html {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: $default-font;
     font-size: $default-font-size; // [1]
     font-weight: 400;
-    line-height: $default-line-height; // [1]
+    line-height: unitless($default-line-height); // [1]
     background-color: $default-body-bg;
     color: $default-body-color;
 }

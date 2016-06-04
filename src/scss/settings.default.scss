@@ -7,19 +7,17 @@ $default-line-height: 24px !default;
 
 $default-unit: 1rem !default;
 
-// Settings
-$grid-gutter: $default-unit;
-$grid-gutter-px: 16px;
+$default-grid-gutter: 16px;
 
 $small: 528px;
 $medium: 768px;
 $large: 960px;
 $wide: 1152px;
 
-$bp-small: ($small + $grid-gutter-px - 1);
-$bp-medium: ($small + $grid-gutter-px + 1);
-$bp-large: ($medium + $grid-gutter-px + 1);
-$bp-wide: ($large + $grid-gutter-px + 1);
+$bp-small: ($small + $default-grid-gutter - 1px);
+$bp-medium: ($small + $default-grid-gutter + 1px);
+$bp-large: ($medium + $default-grid-gutter + 1px);
+$bp-wide: ($large + $default-grid-gutter + 1px);
 
 $default-border-size: 1px !default;
 
@@ -27,3 +25,7 @@ $default-border-radius: 0.125rem !default;
 
 $default-text-color: $gray-900 !default;
 $default-background-color: $white !default;
+
+// Fonts
+$default-font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$default-code-font: Monaco, 'Andale Mono','Courier New', Courier, mono !default;
