@@ -1,0 +1,14 @@
+//------------------------------------------------------------------------------
+// TOOLS: Space
+//------------------------------------------------------------------------------
+
+// Space elements by an amount based on your magic number. Pass in the property
+// to be indented as a paramater, e.g.:
+//
+// pre {
+//     @include space(padding-left);
+// }
+//
+@mixin space($property) {
+    #{$property}: rem(2 * $default-line-height);
+}

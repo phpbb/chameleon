@@ -1,0 +1,21 @@
+//------------------------------------------------------------------------------
+// TOOLS: Font Size
+//------------------------------------------------------------------------------
+
+//
+// Typecsset Mixins
+
+// Quickly generate a font-size in rems, with a pixel fallback, based on the
+// value we pass into the mixin, e.g.:
+//
+// h1 {
+//     @include typecsset-font-size(24px);
+// }
+//
+@mixin font-size($font-size, $line-height: true) {
+    font-size: rem($font-size);
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $default-line-height) * ($default-line-height / $font-size);
+    }
+}
