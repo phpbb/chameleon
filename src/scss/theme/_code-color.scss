@@ -1,0 +1,46 @@
+//------------------------------------------------------------------------------
+// UTILITY: Code Color
+//------------------------------------------------------------------------------
+
+// Color Coding
+//------------------------------------------------------------------------------
+.code-color {
+    // ALL
+    .comment {
+        color: $blue-gray-500;
+    }
+
+    // HTML
+    .support {
+        color: $red-400;
+    }
+
+    .attribute,
+    .operator {
+        color: $indigo-300;
+    }
+
+    .string {
+        color: $light-blue-400;
+    }
+
+    // CSS
+    .hex-color,
+    .unit,
+    .entity.name.tag,
+    .direct-descendant {
+        color: $red-400;
+    }
+
+    .css-property,
+    .css-value,
+    .entity.name.pseudo,
+    .vendor-prefix {
+        color: $indigo-300;
+    }
+
+    .entity.name.class,
+    .constant.numeric {
+        color: $light-blue-400;
+    }
+}

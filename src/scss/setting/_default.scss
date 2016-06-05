@@ -5,26 +5,22 @@
 $default-font-size: 16px !default;
 $default-line-height: 24px !default;
 
+$default-border-size: 1px !default;
+$default-border-radius: 0.125rem !default;
+
 $default-unit: 1rem !default;
 
 $default-grid-gutter: 16px;
 
-$small: 528px;
+// Grid
+$small: 600px;
 $medium: 768px;
 $large: 960px;
 $wide: 1152px;
 
-$bp-small: ($small + $default-grid-gutter - 1px);
-$bp-medium: ($small + $default-grid-gutter + 1px);
+$bp-medium: $small;
 $bp-large: ($medium + $default-grid-gutter + 1px);
 $bp-wide: ($large + $default-grid-gutter + 1px);
-
-$default-border-size: 1px !default;
-
-$default-border-radius: 0.125rem !default;
-
-$default-text-color: $gray-900 !default;
-$default-background-color: $white !default;
 
 // Fonts
 $default-font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;

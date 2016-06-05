@@ -1,0 +1,56 @@
+//------------------------------------------------------------------------------
+// COMPONENT: Hero
+//------------------------------------------------------------------------------
+
+//
+// Settings
+$hero-bg: $default-secondary-color !default;
+$hero-text-color: $white !default;
+
+$hero-link-color: $white !default;
+$hero-link-bg: $default-link-color !default;
+
+$hero-link-hover-color: $gray-900 !default;
+$hero-link-hover-bg: $white !default;
+
+.hero {
+    background-color: $hero-bg;
+    width: 100%;
+
+    nav {
+        padding-top: rem(40);
+
+        a {
+            @include type($type: 'button');
+            background-color: $hero-link-bg;
+            color: $hero-link-color;
+            display: inline-block;
+            padding: rem(8);
+            @media (min-width: $bp-medium) {
+                padding: rem(16) rem(32);
+            }
+
+            &:hover,
+            &:focus,
+            &.active {
+                text-decoration: none;
+                background-color: $hero-link-hover-bg;
+                color: $hero-link-hover-color;
+            }
+        }
+    }
+}
+
+.hero-header {
+    padding: rem(40) 0;
+}
+
+.hero-body {
+    // text-align: center;
+    color: $hero-text-color;
+    padding-top: rem(64);
+}
+
+.hero-copy {
+    @include type($type: 'title');
+}

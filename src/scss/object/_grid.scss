@@ -15,7 +15,8 @@
 //
 // Set up the default container and grid class for mobile browsers
 .container {
-    margin: rem($default-grid-gutter) auto;
+    margin: 0 auto;
+    padding: 0 rem($default-grid-gutter);
     max-width: $small;
 }
 
@@ -28,7 +29,9 @@
 
 // Tablet
 @media (min-width: $bp-medium) {
-    .container { max-width: $medium; }
+    .container {
+        max-width: $medium;
+    }
 }
 
 // Desktop

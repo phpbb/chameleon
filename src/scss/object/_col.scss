@@ -16,7 +16,8 @@
     // Setup all grid columns to use table cell layout and use the default gutter
     @media (min-width: $bp-medium) {
         .o-col {
-            @include o-col();
+            display: table-cell;
+            padding: 0 rem($default-grid-gutter);
         }
     }
 

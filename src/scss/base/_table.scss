@@ -30,9 +30,17 @@ table {
     white-space: nowrap;
     background-color: $white;
     border: $table-dividers;
-    border-collapse: collapse;
-    // position: relative;
-    width: auto;
+    // border-collapse: collapse;
+    display: block;
+    @media (min-width: $bp-medium) {
+        display: table;
+    }
+    overflow-x: auto;
+    width: 100%;
+    @media (min-width: $bp-medium) {
+        width: auto;
+    }
+
 
     thead {
         padding-bottom: rem(4);
@@ -57,7 +65,10 @@ table {
     td,
     th {
         text-align: right;
+        box-sizing: border-box;
+        height: $table-row-height;
         padding: 0 $table-column-padding;
+        // position: relative;
 
         &:first-of-type {
             padding-left: $table-card-padding;
@@ -72,10 +83,7 @@ table {
         vertical-align: top;
         border-top: $table-dividers;
         border-bottom: $table-dividers;
-        box-sizing: border-box;
-        height: $table-row-height;
         padding-top: $table-cell-top;
-        position: relative;
     }
 
     th {
@@ -83,10 +91,6 @@ table {
         text-overflow: ellipsis;
         vertical-align: bottom;
         color: $table-header-color;
-        box-sizing: border-box;
-        height: $table-row-height;
         padding-bottom: rem(8);
-        position: relative;
-
     }
 }

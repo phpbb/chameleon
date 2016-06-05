@@ -80,69 +80,78 @@ $use-html-layout: true !default;
 
 // 1. Global Settings
 //-------------------------
-@import 'settings.color';
-@import 'settings.default';
-@import 'settings.spacing';
+@import 'setting/color';
+@import 'setting/default';
 
 
 // 2. Tools
 //-------------------------
 
 // Functions
-@import 'tools.function.strip-unit';
-@import 'tools.function.unitless';
-@import 'tools.function.rem';
+@import 'tool/function/strip-unit';
+@import 'tool/function/unitless';
+@import 'tool/function/rem';
 
 // Mixins
-@import 'tools.mixin.font-size';
-@import 'tools.mixin.space';
-@import 'tools.mixin.vertical-rhythm';
-@import 'tools.mixin.type';
-@import 'tools.mixin.animations';
-@import 'tools.mixin.shadows';
-@import 'tools.mixin.grid';
+@import 'tool/mixin/font-size';
+@import 'tool/mixin/space';
+@import 'tool/mixin/vertical-rhythm';
+@import 'tool/mixin/type';
+@import 'tool/mixin/animations';
+@import 'tool/mixin/shadows';
+@import 'tool/mixin/grid';
 
 
 // 3. Generic
 //-------------------------
-@import 'generic.normalize';
-@import 'generic.box-sizing';
-@import 'generic.reset.global';
-@import 'generic.reset.links';
-@import 'generic.reset.type';
-@import 'generic.reset.groupings';
-@import 'generic.reset.other';
-@import 'generic.reset.tables';
-@import 'generic.reset.forms';
+@import 'generic/normalize';
+@import 'generic/box-sizing';
+
+// Resets
+@import 'generic/reset/global';
+@import 'generic/reset/type';
+@import 'generic/reset/groupings';
+@import 'generic/reset/other';
+@import 'generic/reset/tables';
+@import 'generic/reset/forms';
 // @import 'generic.universal';
 
 
 // 4. Base
 //-------------------------
-@import 'base.global';
-@import 'base.type';
-@import 'base.forms';
-@import 'base.table';
-@import 'base.code';
+@import 'base/global';
+@import 'base/links';
+@import 'base/type';
+@import 'base/forms';
+@import 'base/table';
+@import 'base/code';
 
 
 // 5. Ojbjects
 //-------------------------
-@import 'object.button';
-@import 'object.grid';
-@import 'object.col';
-@import 'object.tag';
+@import 'object/button';
+@import 'object/grid';
+@import 'object/col';
+@import 'object/tag';
 
 
 // 6. Components
 //-------------------------
-
+@import 'component/hero';
 
 // 7. Theme
 //-------------------------
-@import 'theme.default';
+@import 'theme/type';
+@import 'theme/grid';
+@import 'theme/tags';
+@import 'theme/logo';
+@import 'theme/code-color';
+@import 'theme/default';
 
 
 // 8. Utilities
 //-------------------------
-@import 'utilities.default';
+@import 'utility/resets';
+@import 'utility/clearfix';
+@import 'utility/hidden';
+@import 'utility/print';

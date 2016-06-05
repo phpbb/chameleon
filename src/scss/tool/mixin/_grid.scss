@@ -2,11 +2,6 @@
 // TOOLS: Grid
 //------------------------------------------------------------------------------
 
-@mixin o-col() {
-    display: table-cell;
-    padding: 0 rem($default-grid-gutter);
-}
-
 @mixin o-col-width($m: 0, $l: 0, $w: 0) {
     @if $m != 0 {
         @media (min-width: $bp-medium) {
