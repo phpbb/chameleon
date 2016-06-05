@@ -35,7 +35,7 @@ form {
         display: block;
         @include vertical-rhythm();
     }
-    
+
     @media (min-width: $bp-medium) {
         span {
             vertical-align: middle;
@@ -139,20 +139,31 @@ textarea {
 }
 
 //
-// 1. Suppress the nested default white text on blue background highlight given to
-//    the selected option text when the (still closed) <select> receives focus
-//    in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
-//    match the appearance of the native widget.
+// 1. Suppress the nested default white text on blue background highlight given
+//    to the selected option text when the (still closed) <select> receives
+//    focusin IE and (under certain conditions) Edge, as it looks bad and cannot
+//    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
-    background: #FFFFFF url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==') no-repeat right rem(12) center;
+    background-color: $base-input-background-color;
+    @include background-triangle($base-input-border-color);
+    background-size: 9px 6px;
+    background-position: right -1rem center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
     display: inline-block;
     padding: rem(8) rem(36) rem(8) 1rem;
     min-width: rem(80);
     max-width: 100%;
 
+    &:hover,
+    &:focus {
+        @include background-triangle($base-input-border-hover-color);
+    }
+
     &:focus::-ms-value {
         background-color: $base-input-background-color; // [1]
+        @include background-triangle($base-input-border-hover-color);
         color: $base-input-color; // [1]
     }
 
