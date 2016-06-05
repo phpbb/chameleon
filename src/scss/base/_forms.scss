@@ -313,7 +313,8 @@ input[type='checkbox'] {
 
         &:after {
             z-index: -1;
-            transform: scale(0);
+            transform: scale(2);
+            opacity: 0;
         }
     }
 
@@ -331,6 +332,7 @@ input[type='checkbox'] {
             background-color: $base-input-border-hover-color;
             z-index: 0;
             transform: scale(.5);
+            transform: opacity(1);
         }
     }
 
