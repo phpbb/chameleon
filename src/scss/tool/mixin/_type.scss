@@ -21,99 +21,137 @@ $typo-size: (
     blockquote: 24px
 ) !default;
 
-
-//
-// Google MDL Mixins
-@mixin type($type: 'title', $color-contrast: false, $use-preferred: false) {
-    content: $type;
-    //
-    // Set 'font-size' & default 'line-height'
-    @if $type {
-      @include font-size(map-get($typo-size, $type));
-    }
-    //
-    // Set Custom 'line-height'
-    @if $type == 'display1' {
-        line-height: px-to-unitless(40);
-    }
-
-    //
-    // Set 'font-weight'
-    $weight: (
-        display4:   1,
-        display2:   1,
-        blockquote: 1,
-        title:      2,
-        menu:       2,
-        button:     2,
-        body2:      3
-    );
-    $fw: map-get($weight, $type);
-    @if $fw == 1 {
-        font-weight: 300;
-    } @elseif $fw == 2 {
-        font-weight: 500;
-    } @elseif $fw == 3 {
-        @if $use-preferred {
-            font-weight: 500;
-        } @else {
-            font-weight: 700;
-        }
-    } @else {
+@mixin type($type, $color-contrast: false) {
+    @if $type == 'caption' {
+        @include font-size(12px, false);
         font-weight: 400;
-    }
-
-    //
-    // Set 'letter-spacing'
-    $letter: (
-        blockquote:   1,
-        subhead1:     2,
-        subhead2:     2,
-        title:        3,
-        display3:     4,
-        display4:     5
-    );
-    $ls: map-get($letter, $type);
-    @if $ls == 1 {
-        letter-spacing: 0.08em;
-    } @elseif $ls == 2 {
-        letter-spacing: 0.04em;
-    } @elseif $ls == 3 {
-        letter-spacing: 0.02em;
-    } @elseif $ls == 4 {
-        letter-spacing: -0.02em;
-    } @elseif $ls == 5 {
-        letter-spacing: -0.04em;
-    } @else {
-        letter-spacing: 0;
-    }
-
-    //
-    // Set type specific properties
-    @if $type == 'headline' {
-        -moz-osx-font-smoothing: grayscale;
-    } @elseif $type == 'blockquote' {
-        font-style: italic;
-        position: relative;
-    } @elseif $type == 'button' {
-        text-transform: uppercase;
-    }
-
-    //
-    // Set 'opacity'
-    $opacity: (
-        blockquote:   1,
-        display1:     1,
-        display2:     1,
-        display3:     1,
-        display4:     1
-    );
-    $o: map-get($opacity, $type);
-    @if $color-contrast {
-        @if $type == 1 {
-            opacity: 0.54;
-        } @else {
+        line-height: unitless(20px);
+        @if $color-contrast {
             opacity: 0.87;
+        }
+    }
+
+    @if $type == 'body1' {
+        @include font-size(13px);
+        @media (min-width: $bp-medium) {
+            @include font-size(14px);
+        }
+
+        font-weight: 400;
+        @if $color-contrast {
+            opacity: 0.87;
+        }
+    }
+
+    @if $type == 'body2' {
+        @include font-size(14px);
+        @media (min-width: $bp-medium) {
+            @include font-size(16px);
+        }
+
+        font-weight: 500;
+        @if $color-contrast {
+            opacity: 0.87;
+        }
+    }
+
+    @if $type == 'button' {
+        @include font-size(14px);
+        font-weight: 500;
+        text-transform: uppercase;
+        @if $color-contrast {
+            opacity: 0.54;
+        }
+    }
+
+    @if $type == 'menu' {
+        @include font-size(13px);
+        @media (min-width: $bp-medium) {
+            @include font-size(14px);
+        }
+        font-weight: 500;
+        @if $color-contrast {
+            opacity: 0.54;
+        }
+    }
+
+    @if $type == 'subhead' {
+        @include font-size(15px, false);
+        @media (min-width: $bp-medium) {
+            @include font-size(16px, false);
+        }
+        font-weight: 400;
+        line-height: unitless(24px);
+        @if $color-contrast {
+            opacity: 0.87;
+        }
+    }
+
+    @if $type == 'title' {
+        @include font-size(20px, false);
+        font-weight: 500;
+        line-height: unitless(28px);
+        letter-spacing: 2px;
+        @if $color-contrast {
+            opacity: 0.87;
+        }
+    }
+
+    @if $type == 'headline' {
+        @include font-size(24px, false);
+        font-weight: 400;
+        line-height: unitless(32px);
+        letter-spacing: 1px;
+        -moz-osx-font-smoothing: grayscale;
+        @if $color-contrast {
+            opacity: 0.87;
+        }
+    }
+
+    @if $type == 'blockquote' {
+        @include font-size(24px);
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 1px;
+        position: relative;
+        @if $color-contrast {
+            opacity: 0.54;
+        }
+    }
+
+    @if $type == 'display1' {
+        @include font-size(34px, false);
+        font-weight: 400;
+        line-height: unitless(40px);
+        @if $color-contrast {
+        }
+    }
+
+    @if $type == 'display2' {
+        @include font-size(45px, false);
+        font-weight: 400;
+        line-height: unitless(48px);
+        @if $color-contrast {
+            opacity: 0.54;
+        }
+    }
+
+    @if $type == 'display3' {
+        @include font-size(56px, false);
+        font-weight: 400;
+        line-height: unitless(64px);
+        letter-spacing: -2px;
+        @if $color-contrast {
+            opacity: 0.54;
+        }
+    }
+
+    @if $type == 'display4' {
+        @include font-size(112px);
+        font-weight: 300;
+        letter-spacing: -5px;
+        @if $color-contrast {
+            opacity: 0.54;
         }
     }
 }

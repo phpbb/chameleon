@@ -29,7 +29,7 @@ h5 {
 }
 
 h6 {
-    @include type($type: 'subhead1');
+    @include type($type: 'subhead');
 }
 
 p {
@@ -41,6 +41,10 @@ blockquote {
     @include space(margin-left);
 
     p {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+
         &:before {
             content: '“';
             content: open-quote;
@@ -59,11 +63,15 @@ blockquote {
 }
 
 mark {
-    background-color: #F4FF81;
+    background-color: $yellow-200;
+}
+
+cite {
+    @include type($type: 'caption');
 }
 
 address {
-    @include type($type: 'caption');
+    @include type($type: 'body1');
 }
 
 ul, ol {

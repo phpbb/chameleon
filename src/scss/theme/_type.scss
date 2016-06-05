@@ -26,12 +26,8 @@
     @include type($type: 'title');
 }
 
-.subhead1 {
-    @include type($type: 'subhead1');
-}
-
-.subhead2 {
-    @include type($type: 'subhead2');
+.subhead {
+    @include type($type: 'subhead');
 }
 
 .body1 {
