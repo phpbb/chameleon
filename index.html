@@ -22,26 +22,55 @@
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <!-- JS HEADER -->
-    <script src="dist/assets/js/svg4everybody.min.js"></script>
-    <script>svg4everybody(); // run it now or whenever you are ready</script>
+    <!-- <script src="dist/assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script> -->
 </head>
 
 <body>
-    <header class="header swatch-primary-alt">
-        <hgroup class="container lead-container">
-            <div class="lead">
-                <h2 class="lead-title text-center">
-                    <a class="logo" href="index.html" title="PHPBB"><span class="sr-only">PHPBB - Creating Comunities</span></a> StyleGuide
-                </h2>
-                <p class="lead-sub-title text-center">
-                    A tool to facilitate the development and design of the default theme for phpBB utilizing <a href="http://www.confreaks.com/videos/3972-cssconfus2014-style-guide-driven-development">Style Guide Driven Development</a>
-                </p>
+    <header class="hero">
+        <hgroup class="hero-container container">
+            <div class="hero-header">
+                <img src="dist/assets/imgs/bas-el_logo.svg" height="48px" alt="Bas-El" />
             </div>
+            <div class="hero-body o-grid">
+                <!-- <div class="o-col o-col-5-m"> -->
+                    <h1 class="hero-heading">
+                        A modular, layered true CSS Framework
+                        <p class="hero-copy">
+                            Built as a base layer for large, scalable yet customizable web applications such as PHPBB.
+                        </p>
+                    </h1>
+            </div>
+            <nav>
+                <a href="#">About</a>
+                <a class="active" href="#">Docs</a>
+                <a href="#"><i class="fa fa-github"></i> Github</a>
+                <a href="#"><i class="fa fa-cloud-download"></i> Download</a>
+            </nav>
         </hgroup>
     </header>
     <div class="wrap">
         <div class="container">
             <div class="o-grid">
+                <div class="sidebar o-col o-col-2-l">
+                    <nav class="menu-container affix">
+                        <ul id="menu" class="nav menu">
+                            <li><a class="menu-item menu-heading" href="#core">1. Base</a></li>
+                            <li><a class="menu-item" href="#colors">1.1 Colors</a></li>
+                            <li><a class="menu-item" href="#fonts">1.2 Fonts</a></li>
+                            <li><a class="menu-item" href="#type">1.3 Type</a></li>
+                            <li><a class="menu-item" href="#lists">1.4 Lists</a></li>
+                            <li><a class="menu-item" href="#forms">1.5 Forms</a></li>
+                            <li><a class="menu-item" href="#tables">1.6 Tables</a></li>
+                            <li><a class="menu-item" href="#code">1.7 Code</a></li>
+                            <li><a class="menu-item menu-heading" href="#element">2. Object</a></li>
+                            <li><a class="menu-item" href="#grid">2.1 Grid</a></li>
+                            <li><a class="menu-item" href="#icons">2.2 Icons</a></li>
+                            <li><a class="menu-item menu-heading" href="#component">3. Component</a></li>
+                            <li><a class="menu-item" href="#panel">3.1 Panel</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="main o-col o-col-10-l">
                     <div id="core" class="core">
                         <section id="colors" class="colors panel-container">
@@ -1783,25 +1812,6 @@
                     <div id="component" class="components">
 
                     </div>
-                </div>
-                <div class="sidebar o-col o-col-2-l">
-                    <nav class="menu-container affix">
-                        <ul id="menu" class="nav menu">
-                            <li><a class="menu-item menu-heading" href="#core">1. Base</a></li>
-                            <li><a class="menu-item" href="#colors">1.1 Colors</a></li>
-                            <li><a class="menu-item" href="#fonts">1.2 Fonts</a></li>
-                            <li><a class="menu-item" href="#type">1.3 Type</a></li>
-                            <li><a class="menu-item" href="#lists">1.4 Lists</a></li>
-                            <li><a class="menu-item" href="#forms">1.5 Forms</a></li>
-                            <li><a class="menu-item" href="#tables">1.6 Tables</a></li>
-                            <li><a class="menu-item" href="#code">1.7 Code</a></li>
-                            <li><a class="menu-item menu-heading" href="#element">2. Object</a></li>
-                            <li><a class="menu-item" href="#icons">2.1 Grid</a></li>
-                            <li><a class="menu-item" href="#icons">2.2 Icons</a></li>
-                            <li><a class="menu-item menu-heading" href="#component">3. Component</a></li>
-                            <li><a class="menu-item" href="#panel">3.1 Panel</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
             <footer>
