@@ -14,8 +14,8 @@
     border-style: solid; // [1]
 }
 
-::before,
-::after {
+:before,
+:after {
     text-decoration: inherit;
     vertical-align: inherit;
     border-width: 0; // [1]

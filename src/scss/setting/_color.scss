@@ -1,26 +1,26 @@
 //------------------------------------------------------------------------------
-// SETTINGS: Colors
+// settings: colors
 //------------------------------------------------------------------------------
 
 //
-// Grayscale
-$black:                      #000000 !default;     // 0
-$white:                      #FFFFFF !default;   // 100
+// grayscale
+$black:                      #000000 !default;    // 0
+$white:                      #ffffff !default;    // 100
 
-$gray-50:                    #FAFAFA !default;    // 98 gray-lightest
-$gray-100:                   #F5F5F5 !default;    // 96
-$gray-200:                   #EEEEEE !default;    // 93 gray-lighter
-$gray-300:                   #E0E0E0 !default;    // 88
-$gray-400:                   #BDBDBD !default;    // 74
-$gray-500:                   #9E9E9E !default;    // 62
+$gray-50:                    #fafafa !default;    // 98 gray-lightest
+$gray-100:                   #f5f5f5 !default;    // 96
+$gray-200:                   #eeeeee !default;    // 93 gray-lighter
+$gray-300:                   #e0e0e0 !default;    // 88
+$gray-400:                   #bdbdbd !default;    // 74
+$gray-500:                   #9e9e9e !default;    // 62
 $gray-600:                   #757575 !default;    // 46 gray-light
 $gray-700:                   #616161 !default;    // 38 gray
 $gray-800:                   #424242 !default;    // 26 gray-dark
 $gray-900:                   #212121 !default;    // 12
 
 //
-// MDL
-$red:                        #E23936 !default; // hsl(1, 75%, 55%)
+// mdl
+$red:                        #e23936 !default; // hsl(1, 75%, 55%)
 $red-50:                     lighten($red, 40%) !default;
 $red-100:                    lighten($red, 32%) !default;
 $red-200:                    lighten($red, 24%) !default;
@@ -32,7 +32,7 @@ $red-700:                    darken($red, 16%) !default;
 $red-800:                    darken($red, 24%) !default;
 $red-900:                    darken($red, 32%) !default;
 
-$pink:                       #E8306E !default; // hsl(340, 80%, 55%)
+$pink:                       #e8306e !default; // hsl(340, 80%, 55%)
 $pink-50:                    lighten($pink, 40%) !default;
 $pink-100:                   lighten($pink, 32%) !default;
 $pink-200:                   lighten($pink, 24%) !default;
@@ -44,7 +44,7 @@ $pink-700:                   darken($pink, 16%) !default;
 $pink-800:                   darken($pink, 24%) !default;
 $pink-900:                   darken($pink, 32%) !default;
 
-$purple:                     #B353C6 !default; // hsl(290, 50%, 55%)
+$purple:                     #b353c6 !default; // hsl(290, 50%, 55%)
 $purple-50:                  lighten($purple, 40%) !default;
 $purple-100:                 lighten($purple, 32%) !default;
 $purple-200:                 lighten($purple, 24%) !default;
@@ -56,7 +56,7 @@ $purple-700:                 darken($purple, 16%) !default;
 $purple-800:                 darken($purple, 24%) !default;
 $purple-900:                 darken($purple, 32%) !default;
 
-$deep-purple:                #7953C6 !default; // hsl(260, 50%, 55%)
+$deep-purple:                #7953c6 !default; // hsl(260, 50%, 55%)
 $deep-purple-50:             lighten($deep-purple, 40%) !default;
 $deep-purple-100:            lighten($deep-purple, 32%) !default;
 $deep-purple-200:            lighten($deep-purple, 24%) !default;
@@ -68,7 +68,7 @@ $deep-purple-700:            darken($deep-purple, 16%) !default;
 $deep-purple-800:            darken($deep-purple, 24%) !default;
 $deep-purple-900:            darken($deep-purple, 32%) !default;
 
-$indigo:                     #5A6BC1 !default; // hsl(230, 45%, 55%)
+$indigo:                     #5a6bc1 !default; // hsl(230, 45%, 55%)
 $indigo-50:                  lighten($indigo, 40%) !default;
 $indigo-100:                 lighten($indigo, 32%) !default;
 $indigo-200:                 lighten($indigo, 24%) !default;
@@ -80,7 +80,7 @@ $indigo-700:                 darken($indigo, 16%) !default;
 $indigo-800:                 darken($indigo, 24%) !default;
 $indigo-900:                 darken($indigo, 32%) !default;
 
-$blue:                       #258CF4 !default; // hsl(210, 90%, 55%)
+$blue:                       #258cf4 !default; // hsl(210, 90%, 55%)
 $blue-50:                    lighten($blue, 40%) !default;
 $blue-100:                   lighten($blue, 32%) !default;
 $blue-200:                   lighten($blue, 24%) !default;
@@ -92,7 +92,7 @@ $blue-700:                   darken($blue, 16%) !default;
 $blue-800:                   darken($blue, 24%) !default;
 $blue-900:                   darken($blue, 32%) !default;
 
-$light-blue:                 #19B3FF !default; // hsl(200, 100%, 55%)
+$light-blue:                 #19b3ff !default; // hsl(200, 100%, 55%)
 $light-blue-50:              lighten($light-blue, 40%) !default;
 $light-blue-100:             lighten($light-blue, 32%) !default;
 $light-blue-200:             lighten($light-blue, 24%) !default;
@@ -104,7 +104,7 @@ $light-blue-700:             darken($light-blue, 16%) !default;
 $light-blue-800:             darken($light-blue, 24%) !default;
 $light-blue-900:             darken($light-blue, 32%) !default;
 
-$cyan:                       #3CCFDD !default; // hsl(185, 70%, 55%)
+$cyan:                       #3ccfdd !default; // hsl(185, 70%, 55%)
 $cyan-50:                    lighten($cyan, 40%) !default;
 $cyan-100:                   lighten($cyan, 32%) !default;
 $cyan-200:                   lighten($cyan, 24%) !default;
@@ -116,7 +116,7 @@ $cyan-700:                   darken($cyan, 16%) !default;
 $cyan-800:                   darken($cyan, 24%) !default;
 $cyan-900:                   darken($cyan, 32%) !default;
 
-$teal:                       #00998C !default; // hsl(175, 100%, 30%)
+$teal:                       #00998c !default; // hsl(175, 100%, 30%)
 $teal-50:                    lighten($teal, 40%) !default;
 $teal-100:                   lighten($teal, 32%) !default;
 $teal-200:                   lighten($teal, 24%) !default;
@@ -128,7 +128,7 @@ $teal-700:                   darken($teal, 16%) !default;
 $teal-800:                   darken($teal, 24%) !default;
 $teal-900:                   darken($teal, 32%) !default;
 
-$green:                       #5EBA66 !default; // hsl(125, 40%, 55%)
+$green:                       #5eba66 !default; // hsl(125, 40%, 55%)
 $green-50:                    lighten($green, 40%) !default;
 $green-100:                   lighten($green, 32%) !default;
 $green-200:                   lighten($green, 24%) !default;
@@ -140,7 +140,7 @@ $green-700:                   darken($green, 16%) !default;
 $green-800:                   darken($green, 24%) !default;
 $green-900:                   darken($green, 32%) !default;
 
-$light-green:                 #8CC653 !default; // hsl(90, 50%, 55%)
+$light-green:                 #8cc653 !default; // hsl(90, 50%, 55%)
 $light-green-50:              lighten($light-green, 40%) !default;
 $light-green-100:             lighten($light-green, 32%) !default;
 $light-green-200:             lighten($light-green, 24%) !default;
@@ -152,7 +152,7 @@ $light-green-700:             darken($light-green, 16%) !default;
 $light-green-800:             darken($light-green, 24%) !default;
 $light-green-900:             darken($light-green, 32%) !default;
 
-$lime:                        #CFDD3C !default; // hsl(65, 70%, 55%)
+$lime:                        #cfdd3c !default; // hsl(65, 70%, 55%)
 $lime-50:                     lighten($lime, 40%) !default;
 $lime-100:                    lighten($lime, 32%) !default;
 $lime-200:                    lighten($lime, 24%) !default;
@@ -164,7 +164,7 @@ $lime-700:                    darken($lime, 16%) !default;
 $lime-800:                    darken($lime, 24%) !default;
 $lime-900:                    darken($lime, 32%) !default;
 
-$yellow:                      #FFEC1A !default; // hsl(55, 100%, 55%)
+$yellow:                      #ffec1a !default; // hsl(55, 100%, 55%)
 $yellow-50:                   lighten($yellow, 40%) !default;
 $yellow-100:                  lighten($yellow, 32%) !default;
 $yellow-200:                  lighten($yellow, 24%) !default;
@@ -176,7 +176,7 @@ $yellow-700:                  darken($yellow, 16%) !default;
 $yellow-800:                  darken($yellow, 24%) !default;
 $yellow-900:                  darken($yellow, 32%) !default;
 
-$amber:                       #FFC61A !default; // hsl(45, 100%, 55%)
+$amber:                       #ffc61a !default; // hsl(45, 100%, 55%)
 $amber-50:                    lighten($amber, 40%) !default;
 $amber-100:                   lighten($amber, 32%) !default;
 $amber-200:                   lighten($amber, 24%) !default;
@@ -188,7 +188,7 @@ $amber-700:                   darken($amber, 16%) !default;
 $amber-800:                   darken($amber, 24%) !default;
 $amber-900:                   darken($amber, 32%) !default;
 
-$orange:                      #FF9F1A !default; // hsl(35, 100%, 55%)
+$orange:                      #ff9f1a !default; // hsl(35, 100%, 55%)
 $orange-50:                   lighten($orange, 40%) !default;
 $orange-100:                  lighten($orange, 32%) !default;
 $orange-200:                  lighten($orange, 24%) !default;
@@ -200,7 +200,7 @@ $orange-700:                  darken($orange, 16%) !default;
 $orange-800:                  darken($orange, 24%) !default;
 $orange-900:                  darken($orange, 32%) !default;
 
-$deep-orange:                 #FF531A !default; // hsl(15, 100%, 55%)
+$deep-orange:                 #ff531a !default; // hsl(15, 100%, 55%)
 $deep-orange-50:              lighten($deep-orange, 40%) !default;
 $deep-orange-100:             lighten($deep-orange, 32%) !default;
 $deep-orange-200:             lighten($deep-orange, 24%) !default;
@@ -212,7 +212,7 @@ $deep-orange-700:             darken($deep-orange, 16%) !default;
 $deep-orange-800:             darken($deep-orange, 24%) !default;
 $deep-orange-900:             darken($deep-orange, 32%) !default;
 
-$brown:                       #9D847B !default; // hsl(15, 15%, 55%)
+$brown:                       #9d847b !default; // hsl(15, 15%, 55%)
 $brown-50:                    lighten($brown, 40%) !default;
 $brown-100:                   lighten($brown, 32%) !default;
 $brown-200:                   lighten($brown, 24%) !default;
@@ -224,7 +224,7 @@ $brown-700:                   darken($brown, 16%) !default;
 $brown-800:                   darken($brown, 24%) !default;
 $brown-900:                   darken($brown, 32%) !default;
 
-$blue-gray:                   #7B929D !default; // hsl(200, 15%, 55%)
+$blue-gray:                   #7b929d !default; // hsl(200, 15%, 55%)
 $blue-gray-50:                lighten($blue-gray, 40%) !default;
 $blue-gray-100:               lighten($blue-gray, 32%) !default;
 $blue-gray-200:               lighten($blue-gray, 24%) !default;
@@ -237,7 +237,7 @@ $blue-gray-800:               darken($blue-gray, 24%) !default;
 $blue-gray-900:               darken($blue-gray, 32%) !default;
 
 //
-// Bootstrap color scheme naming
+// bootstrap color scheme naming
 $primary:                    $blue !default;
 $primary-50:                 lighten($primary, 40%) !default;
 $primary-100:                lighten($primary, 32%) !default;
@@ -298,17 +298,17 @@ $success-700:                darken($success, 16%) !default;
 $success-800:                darken($success, 24%) !default;
 $success-900:                darken($success, 32%) !default;
 
-// Body
+// body
 $default-body-bg:            $white !default;
 $default-body-color:         $gray-800 !default;
 $default-text-color:         $gray-900 !default;
 $default-gray:               $gray-400 !default;
 
-// Scheme
+// scheme
 $default-primary-color:      $blue-500 !default;
 $default-secondary-color:    $red-500 !default;
 $default-accent-color:       $yellow-500 !default;
 
-// Links
+// links
 $default-link-color:        $blue-500 !default;
 $default-link-hover-color:  $blue-700 !default;

@@ -2,6 +2,7 @@
 // TOOLS: Grid
 //------------------------------------------------------------------------------
 
+/* stylelint-disable at-rule-empty-line-before */
 @mixin o-col-width($m: 0, $l: 0, $w: 0) {
     @if $m != 0 {
         @media (min-width: $bp-medium) {
@@ -21,3 +22,4 @@
         }
     }
 }
+/* stylelint-enable */

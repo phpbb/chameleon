@@ -2,7 +2,12 @@
 // BAASE: TYPE
 //------------------------------------------------------------------------------
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
     @include type($type: 'display3', $color-contrast: true);
     font-size: 60%;
     display: block;
@@ -74,6 +79,7 @@ address {
     @include type($type: 'body1');
 }
 
-ul, ol {
+ul,
+ol {
     @include type($type: 'body1');
 }

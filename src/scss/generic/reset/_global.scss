@@ -25,10 +25,10 @@ html {
     width: 100%; // [6]
     -ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
     -moz-osx-font-smoothing: grayscale; // [3]
-     -webkit-font-smoothing: antialiased; // [3]
+     -webkit-font-smoothing: antialiased; /* stylelint-disable-line indentation */
     -ms-touch-action: manipulation; // [5]
-        touch-action: manipulation; // [5]
-    -webkit-tap-highlight-color: rgba(0,0,0,0); // [4]
+        touch-action: manipulation; /* stylelint-disable-line indentation */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
 }
 
 body {
@@ -100,7 +100,7 @@ textarea
 ::selection {
     text-shadow: none;
     background: $blue-200;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 //
@@ -142,5 +142,5 @@ svg {
 
     &:focus {
         clip: auto;
-	}
+    }
 }

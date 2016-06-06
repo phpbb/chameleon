@@ -25,3 +25,8 @@ $bp-wide: ($large + $default-grid-gutter + 1px);
 // Fonts
 $default-font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 $default-code-font: Monaco, 'Andale Mono','Courier New', Courier, mono !default;
+
+// icons
+$default-icon-sm: $default-font-size;
+$default-icon-md: $default-line-height;
+$default-icon-lg: 2 * $default-font-size;

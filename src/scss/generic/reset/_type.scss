@@ -9,7 +9,12 @@
 // top margin for easier control within type scales as it avoids margin
 // collapsing.
 //
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @include vertical-rhythm();
 }
 
@@ -83,7 +88,7 @@ blockquote {
     text-indent: -0.41em; // [1]
 }
 
-q   {
+q {
     quotes: '‘' '’' '“' '”';
 
     &:before {

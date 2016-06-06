@@ -16,27 +16,30 @@ $hero-link-hover-bg: $white !default;
 .hero {
     background-color: $hero-bg;
     width: 100%;
+}
 
-    nav {
-        padding-top: rem(40);
+.hero-nav {
+    padding-top: rem(40);
 
-        a {
-            @include type($type: 'button');
-            background-color: $hero-link-bg;
-            color: $hero-link-color;
-            display: inline-block;
-            padding: rem(8);
-            @media (min-width: $bp-medium) {
-                padding: rem(16) rem(32);
-            }
+    // Overwrite o-btn properties
+    a {
+        @include type($type: 'button');
+        background-color: $hero-link-bg;
+        border: none;
+        border-radius: 0;
+        color: $hero-link-color;
+        display: inline-block;
+        padding: rem(8);
+        @media (min-width: $bp-medium) {
+            padding: rem(16) rem(32);
+        }
 
-            &:hover,
-            &:focus,
-            &.active {
-                text-decoration: none;
-                background-color: $hero-link-hover-bg;
-                color: $hero-link-hover-color;
-            }
+        &:hover,
+        &:focus,
+        &.active {
+            text-decoration: none;
+            background-color: $hero-link-hover-bg;
+            color: $hero-link-hover-color;
         }
     }
 }
@@ -51,6 +54,11 @@ $hero-link-hover-bg: $white !default;
     padding-top: rem(64);
 }
 
+.hero-heading {
+    line-height: unitless($default-line-height);
+}
+
 .hero-copy {
     @include type($type: 'title');
+    font-weight: 300;
 }

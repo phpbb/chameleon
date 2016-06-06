@@ -35,7 +35,6 @@ form {
         display: block;
         @include vertical-rhythm();
     }
-
     @media (min-width: $bp-medium) {
         span {
             vertical-align: middle;
@@ -82,8 +81,7 @@ textarea {
     height: $base-input-height; // [1]
     padding: $base-input-padding-y $base-input-padding-x;
     width: 100%;
-    // @include box-shadow($input-box-shadow);
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
     &:hover {
         border-color: $base-input-border-hover-color;
@@ -94,7 +92,6 @@ textarea {
         border-color: $base-input-border-focus-color;
         color: $base-input-border-focus-color;
         outline: none;
-        // @include box-shadow($shadow);
     }
 
     &::placeholder {
@@ -114,7 +111,7 @@ textarea {
     }
 
     &:disabled {
-        cursor: not-allowed;;
+        cursor: not-allowed;
     }
 
     &:focus:invalid,
@@ -124,15 +121,6 @@ textarea {
         color: $base-input-invalid-color;
     }
 }
-
-// fieldset {
-//     display: block;
-//
-//     label {
-//         display: block;
-//     }
-//
-// }
 
 textarea {
     height: auto;
@@ -217,7 +205,7 @@ input[type='checkbox'] {
         margin: 0 rem(8);
         padding-left: rem(32);
         position: relative;
-        transition: .28s ease;
+        transition: 0.28s ease;
     }
 }
 
@@ -233,7 +221,7 @@ input[type='checkbox'] {
         left: 0;
         width: 1rem;
         z-index: 0;
-        transition: .2s;
+        transition: 0.2s;
     }
 
     &:hover + label:before {
@@ -302,7 +290,7 @@ input[type='checkbox'] {
         left: 0;
         width: 1rem;
         z-index: 0;
-        transition: .28s ease;
+        transition: 0.28s ease;
     }
 
     &:not(:checked) + label {
@@ -331,7 +319,7 @@ input[type='checkbox'] {
         &:after {
             background-color: $base-input-border-hover-color;
             z-index: 0;
-            transform: scale(.5);
+            transform: scale(0.5);
             transform: opacity(1);
         }
     }

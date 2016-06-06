@@ -29,6 +29,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-swig": "^0.8.0"
+    "gulp-swig": "^0.8.0",
+    "stylelint-config-standard": "^8.0.0"
   }
 }
