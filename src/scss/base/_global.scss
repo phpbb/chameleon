@@ -1,14 +1,19 @@
 //------------------------------------------------------------------------------
-// BASE: Global
+// @base: Global
 //------------------------------------------------------------------------------
-
+// @description:
 //
-// High-, page-level styling.
+// High-level, page-level styling.
 //
 // 1. Set the default `font-size` and `line-height` for the entire project,
 //    sourced from our default variables. The `font-size` is calculated to exist
 //    in rems, the `line-height` is calculated to exist unitlessly.
 //
+//------------------------------------------------------------------------------
+
+
+//
+// @scss
 html {
     font-family: $default-font;
     font-size: $default-font-size; // [1]

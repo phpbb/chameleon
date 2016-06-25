@@ -1,10 +1,7 @@
 //------------------------------------------------------------------------------
-// GENERIC: Links
+// @base: Links
 //------------------------------------------------------------------------------
-
-$link-color: $default-link-color !default;
-$link-hover-color: $default-link-hover-color !default;
-
+// @description:
 //
 // Establish the default link look
 //
@@ -18,6 +15,15 @@ $link-hover-color: $default-link-hover-color !default;
 //
 // See https://github.com/twbs/bootstrap/issues/19402
 //
+//------------------------------------------------------------------------------
+
+//
+// @settings
+$link-color: $default-primary-color !default;
+$link-hover-color: $default-primary-dark-color !default;
+
+//
+// @scss
 a {
     text-decoration: none;
     color: $link-color;

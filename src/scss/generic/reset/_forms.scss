@@ -1,7 +1,12 @@
 //------------------------------------------------------------------------------
-// GENERIC: Forms
+// @generic: Forms
+//------------------------------------------------------------------------------
+// @description:
+//
 //------------------------------------------------------------------------------
 
+//
+// @scss
 form {
     @include vertical-rhythm();
     padding: 0;
@@ -49,9 +54,9 @@ optgroup,
 textarea {
     line-height: inherit; // [1]
     vertical-align: middle; // [3]
+    background-clip: padding-box;
     background-color: transparent;
     background-image: none; // [2]
-    background-clip: padding-box;
     -webkit-border-radius: 0; // [2] iOS 8+
     border-radius: 0; // [2]
     color: inherit;

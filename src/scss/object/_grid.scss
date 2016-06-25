@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// OBJECT: Grid
+// @object: Grid
 //------------------------------------------------------------------------------
-
+// @description
 //
 // This grid system uses table layout to simplify the use of a grid. Define the
 // wrapper with o-grid class and all wrappers within in it use o-col object
@@ -10,8 +10,11 @@
 // disables this once you reach small devices where fluid layouts are better.
 // The grid col & sizes can both be applied either in your html (recomended) or
 // as a mixin.
+//
+//------------------------------------------------------------------------------
 
-
+//
+// @scss
 //
 // Set up the default container and grid class for mobile browsers
 .container {

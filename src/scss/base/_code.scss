@@ -1,13 +1,16 @@
 //------------------------------------------------------------------------------
-// BASE: Code
+// @base: Code
+//------------------------------------------------------------------------------
+// @description:
+//
 //------------------------------------------------------------------------------
 
 //
-// Setting
+// @settings
 $base-code-font-family: $default-code-font;
 
 $base-code-bg: $gray-200 !default;
-$base-code-color: $blue-300 !default;
+$base-code-color: $default-primary-light-color !default;
 $base-code-border-radius: $default-border-radius !default;
 
 $base-kbd-nested-font-weight: 700 !default;
@@ -22,6 +25,9 @@ $base-pre-border-color: $default-gray !default;
 $base-pre-border-radius: $default-border-radius !default;
 $base-pre-color: $white !default;
 
+
+//
+// @scss
 // Inline and block code styles
 code,
 kbd,
@@ -68,7 +74,7 @@ pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding: rem(4) rem(8);
+    padding: 1rem;
 
     // Account for some code outputs that place code tags in pre tags
     code {

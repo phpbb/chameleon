@@ -1,46 +1,98 @@
 //------------------------------------------------------------------------------
-// UTILITY: Code Color
+// @theme: Code Color
+//------------------------------------------------------------------------------
+// @description
+//
 //------------------------------------------------------------------------------
 
-// Color Coding
-//------------------------------------------------------------------------------
-.code-color {
-    // ALL
-    .comment {
-        color: $blue-gray-500;
-    }
+//
+// @scss
+code[class*="language-"],
+pre[class*="language-"] {
+    line-height: 1.5;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    tab-size: 4;
+    hyphens: none;
+}
 
-    // HTML
-    .support {
-        color: $red-400;
-    }
+/* Code blocks */
+pre[class*="language-"] {
+    margin: 0.5rem 0;
+}
 
-    .attribute,
-    .operator {
-        color: $indigo-300;
-    }
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #999999;
+}
 
-    .string {
-        color: $light-blue-400;
-    }
+.token.punctuation {
+    color: #cccccc;
+}
 
-    // CSS
-    .hex-color,
-    .unit,
-    .entity.name.tag,
-    .direct-descendant {
-        color: $red-400;
-    }
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+    color: #e2777a;
+}
 
-    .css-property,
-    .css-value,
-    .entity.name.pseudo,
-    .vendor-prefix {
-        color: $indigo-300;
-    }
+.token.function-name {
+    color: #6196cc;
+}
 
-    .entity.name.class,
-    .constant.numeric {
-        color: $light-blue-400;
-    }
+.token.boolean,
+.token.number,
+.token.function {
+    color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+    color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+    color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+    color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.inserted {
+    color: green;
 }

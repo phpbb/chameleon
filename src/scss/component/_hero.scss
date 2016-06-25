@@ -1,18 +1,24 @@
 //------------------------------------------------------------------------------
-// COMPONENT: Hero
+// @component: Hero
+//------------------------------------------------------------------------------
+// @description:
+//
 //------------------------------------------------------------------------------
 
 //
-// Settings
+// @settings
 $hero-bg: $default-secondary-color !default;
 $hero-text-color: $white !default;
 
 $hero-link-color: $white !default;
-$hero-link-bg: $default-link-color !default;
+$hero-link-bg: $default-primary-color !default;
 
-$hero-link-hover-color: $gray-900 !default;
+$hero-link-hover-color: $default-text-color !default;
 $hero-link-hover-bg: $white !default;
 
+
+//
+// @scss
 .hero {
     background-color: $hero-bg;
     width: 100%;

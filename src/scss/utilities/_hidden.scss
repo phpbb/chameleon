@@ -1,7 +1,13 @@
 //------------------------------------------------------------------------------
-// UTILITY: Hidden
+// @utilities: Hidden
+//------------------------------------------------------------------------------
+// @description
+//
 //------------------------------------------------------------------------------
 
+
+//
+// @scss
 //
 // Hide visually and from screen readers
 .hidden {
@@ -13,7 +19,7 @@
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 .sr-only {
     border: 0;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     padding: 0;

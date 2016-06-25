@@ -1,13 +1,18 @@
 //------------------------------------------------------------------------------
-// OBJECT: Tag
+// @object: Tag
+//------------------------------------------------------------------------------
+// @description
+//
 //------------------------------------------------------------------------------
 
 //
-// Settings
+// @settings
 $tag-border-radius: $default-border-radius !default;
 $tag-background-color: $default-gray !default;
-$tag-color: $gray-700 !default;
+$tag-color: $default-gray-dark !default;
 
+//
+// @scss
 .o-tag {
     text-align: center;
     vertical-align: middle;

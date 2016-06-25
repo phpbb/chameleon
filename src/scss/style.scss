@@ -75,49 +75,26 @@
 
 /* stylelint-disable at-rule-empty-line-before */
 
-// 0. Config Flags
+// Config Flags
 //-------------------------
 $use-material: true !default;
 $use-html-layout: true !default;
 
-// 1. Global Settings
+// Core
 //-------------------------
-@import 'settings';
+@import 'core.scss';
 
 
-// 2. Tools
+// Components
 //-------------------------
-@import 'functions';
-@import 'mixins';
+@import 'components.scss';
 
 
-// 3. Generic
+// Theme
 //-------------------------
-@import 'generic/normalize';
-@import 'generic/box-sizing';
-
-// Resets
-@import 'generic/reset/global';
-@import 'generic/reset/type';
-@import 'generic/reset/groupings';
-@import 'generic/reset/other';
-@import 'generic/reset/tables';
-@import 'generic/reset/forms';
+@import 'theme.scss';
 
 
-// 4. Base
+// Utilities
 //-------------------------
-@import 'base/global';
-@import 'base/links';
-@import 'base/type';
-@import 'base/forms';
-@import 'base/table';
-@import 'base/code';
-
-
-// 5. Ojbjects
-//-------------------------
-@import 'object/button';
-@import 'object/grid';
-@import 'object/col';
-@import 'object/tag';
+@import 'utilities.scss';

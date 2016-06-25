@@ -80,6 +80,7 @@
 $use-material: true !default;
 $use-html-layout: true !default;
 
+
 // 1. Global Settings
 //-------------------------
 @import 'settings';
@@ -91,33 +92,9 @@ $use-html-layout: true !default;
 @import 'mixins';
 
 
-// 3. Generic
+// 8. Utilities
 //-------------------------
-@import 'generic/normalize';
-@import 'generic/box-sizing';
-
-// Resets
-@import 'generic/reset/global';
-@import 'generic/reset/type';
-@import 'generic/reset/groupings';
-@import 'generic/reset/other';
-@import 'generic/reset/tables';
-@import 'generic/reset/forms';
-
-
-// 4. Base
-//-------------------------
-@import 'base/global';
-@import 'base/links';
-@import 'base/type';
-@import 'base/forms';
-@import 'base/table';
-@import 'base/code';
-
-
-// 5. Ojbjects
-//-------------------------
-@import 'object/button';
-@import 'object/grid';
-@import 'object/col';
-@import 'object/tag';
+@import 'utilities/resets';
+@import 'utilities/clearfix';
+@import 'utilities/hidden';
+@import 'utilities/print';

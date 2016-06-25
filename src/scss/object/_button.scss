@@ -1,8 +1,13 @@
 //------------------------------------------------------------------------------
-// OBJECT: Button
+// @object: Button
+//------------------------------------------------------------------------------
+// @description
+//
 //------------------------------------------------------------------------------
 
 //
+// @settings
+
 // Layout Variables
 $btn-border-size: $default-border-size !default;
 $btn-padding: 1rem !default;
@@ -10,15 +15,18 @@ $btn-border-radius: $default-border-radius !default;
 $btn-min-width: rem(64) !default;
 $btn-height: rem(38) !default;
 
-//
 // Default Theme Variables
 $btn-background-color: $white !default;
-$btn-hover-color: $default-link-hover-color !default;
-$btn-active-color: $default-link-hover-color !default;
-$btn-focus-color: $default-link-hover-color !default;
-$btn-color: $gray-600 !default;
+$btn-hover-color: $default-primary-dark-color !default;
+$btn-active-color: $btn-hover-color !default;
+$btn-focus-color: $btn-hover-color !default;
+$btn-color: $default-gray-dark !default;
 $btn-border-style: solid !default;
 $btn-border-color: $default-gray !default;
+
+
+//
+// @scss
 
 //
 // 1. Allow us to style box model properties.
@@ -62,14 +70,18 @@ $btn-border-color: $default-gray !default;
         color 0.2s $default-animation-curve; // google material design
 
     // Icons [9]
-    svg,
     i,
-    .fa,
-    .icon,
-    .material-icons {
+    svg {
         @include font-size(24px, false);
+        margin-right: 0.5rem;
+    }
+
+    i {
         vertical-align: bottom;
-        padding-right: 1rem;
+    }
+
+    svg {
+        vertical-align: middle;
     }
 
     // UI states
@@ -111,23 +123,3 @@ $btn-border-color: $default-gray !default;
         padding: 0;
     }
 }
-
-// EXP COMPONENT MODIFIER CLASS
-//
-// should never modify anything other than layout, if themeing specifcs are
-// required then custom theme class should be created.
-//
-// .c-navbar_btn {
-//     margin: 0 0.25rem;
-// }
-
-// EXP THEME CLASS
-// .t-navbar_btn,
-// .t-btn {
-//     background-color: $btn-background-color;
-//     border-width: $btn-border-size;
-//     border-style: $btn-border-style;
-//     border-color: $btn-border-color;
-//     border-radius: $btn-border-radius;
-//     color: $btn-color;
-// }

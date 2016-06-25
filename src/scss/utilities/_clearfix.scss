@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// UTILITY: Clearfix
+// @utilities: Clearfix
 //------------------------------------------------------------------------------
-
+// @description:
 //
 // Clearfix: contain floats
 //
@@ -13,7 +13,10 @@
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
 //
+//------------------------------------------------------------------------------
 
+//
+// @scss
 .clearfix:after {
     content: ' '; // [1]
     clear: both;

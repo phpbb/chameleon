@@ -1,14 +1,17 @@
 //------------------------------------------------------------------------------
-// BASE: Forms
+// @base: Tables
+//------------------------------------------------------------------------------
+// @description:
+//
 //------------------------------------------------------------------------------
 
 //
-// Settings
+// @settings
 $table-header-color: rgba($black, 0.54);
 $table-divider-color: rgba($black, 0.12);
 
 $table-hover-color: $gray-200;
-$table-selection-color: $gray-300;
+$table-selection-color: $default-gray-light;
 
 $table-dividers: 1px solid $table-divider-color;
 
@@ -25,6 +28,9 @@ $table-card-padding: rem(24);
 $table-button-padding-right: 1rem;
 $table-cell-top: $table-card-padding / 2;
 
+
+//
+// @scss
 table {
     @include font-size(13);
     white-space: nowrap;

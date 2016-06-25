@@ -1,6 +1,15 @@
 //------------------------------------------------------------------------------
-// settings: colors
+// @setting: Colors
 //------------------------------------------------------------------------------
+// @description
+//
+// A lbrary of colors built upon the Google Material Design base using a more
+// consistent and programtical approach.
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
 
 //
 // grayscale
@@ -235,80 +244,3 @@ $blue-gray-600:               darken($blue-gray, 8%) !default;
 $blue-gray-700:               darken($blue-gray, 16%) !default;
 $blue-gray-800:               darken($blue-gray, 24%) !default;
 $blue-gray-900:               darken($blue-gray, 32%) !default;
-
-//
-// bootstrap color scheme naming
-$primary:                    $blue !default;
-$primary-50:                 lighten($primary, 40%) !default;
-$primary-100:                lighten($primary, 32%) !default;
-$primary-200:                lighten($primary, 24%) !default;
-$primary-300:                lighten($primary, 16%) !default;
-$primary-400:                lighten($primary, 8%) !default;
-$primary-500:                $primary !default;
-$primary-600:                darken($primary, 8%) !default;
-$primary-700:                darken($primary, 16%) !default;
-$primary-800:                darken($primary, 24%) !default;
-$primary-900:                darken($primary, 32%) !default;
-
-$info:                       $blue-gray !default;
-$info-50:                    lighten($info, 40%) !default;
-$info-100:                   lighten($info, 32%) !default;
-$info-200:                   lighten($info, 24%) !default;
-$info-300:                   lighten($info, 16%) !default;
-$info-400:                   lighten($info, 8%) !default;
-$info-500:                   $info !default;
-$info-600:                   darken($info, 8%) !default;
-$info-700:                   darken($info, 16%) !default;
-$info-800:                   darken($info, 24%) !default;
-$info-900:                   darken($info, 32%) !default;
-
-$important:                  $red !default;
-$important-50:               lighten($important, 40%) !default;
-$important-100:              lighten($important, 32%) !default;
-$important-200:              lighten($important, 24%) !default;
-$important-300:              lighten($important, 16%) !default;
-$important-400:              lighten($important, 8%) !default;
-$important-500:              $important !default;
-$important-600:              darken($important, 8%) !default;
-$important-700:              darken($important, 16%) !default;
-$important-800:              darken($important, 24%) !default;
-$important-900:              darken($important, 32%) !default;
-
-$warning:                    $amber !default;
-$warning-50:                 lighten($warning, 40%) !default;
-$warning-100:                lighten($warning, 32%) !default;
-$warning-200:                lighten($warning, 24%) !default;
-$warning-300:                lighten($warning, 16%) !default;
-$warning-400:                lighten($warning, 8%) !default;
-$warning-500:                $warning !default;
-$warning-600:                darken($warning, 8%) !default;
-$warning-700:                darken($warning, 16%) !default;
-$warning-800:                darken($warning, 24%) !default;
-$warning-900:                darken($warning, 32%) !default;
-
-$success:                    $green !default;
-$success-50:                 lighten($success, 40%) !default;
-$success-100:                lighten($success, 32%) !default;
-$success-200:                lighten($success, 24%) !default;
-$success-300:                lighten($success, 16%) !default;
-$success-400:                lighten($success, 8%) !default;
-$success-500:                $success !default;
-$success-600:                darken($success, 8%) !default;
-$success-700:                darken($success, 16%) !default;
-$success-800:                darken($success, 24%) !default;
-$success-900:                darken($success, 32%) !default;
-
-// body
-$default-body-bg:            $white !default;
-$default-body-color:         $gray-800 !default;
-$default-text-color:         $gray-900 !default;
-$default-gray:               $gray-400 !default;
-
-// scheme
-$default-primary-color:      $blue-500 !default;
-$default-secondary-color:    $red-500 !default;
-$default-accent-color:       $yellow-500 !default;
-
-// links
-$default-link-color:        $blue-500 !default;
-$default-link-hover-color:  $blue-700 !default;

@@ -77,8 +77,8 @@
     @if $type == 'title' {
         @include font-size(20px, false);
         font-weight: 500;
-        line-height: unitless(28px);
         letter-spacing: 2px;
+        line-height: unitless(28px);
 
         @if $color-contrast {
             opacity: 0.87;
@@ -86,11 +86,11 @@
     }
 
     @if $type == 'headline' {
+        -moz-osx-font-smoothing: grayscale;
         @include font-size(24px, false);
         font-weight: 400;
-        line-height: unitless(32px);
         letter-spacing: 1px;
-        -moz-osx-font-smoothing: grayscale;
+        line-height: unitless(32px);
 
         @if $color-contrast {
             opacity: 0.87;
@@ -132,8 +132,8 @@
     @if $type == 'display3' {
         @include font-size(56px, false);
         font-weight: 400;
-        line-height: unitless(64px);
         letter-spacing: -2px;
+        line-height: unitless(64px);
 
         @if $color-contrast {
             opacity: 0.54;
@@ -152,6 +152,9 @@
 }
 
 @mixin typo-icon() {
+    -webkit-font-feature-settings: 'liga';
+            font-feature-settings: 'liga'; /* stylelint-disable-line indentation */
+    -webkit-font-smoothing: antialiased;
     font-family: 'Material Icons';
     font-size: rem(24);
     font-weight: normal;
@@ -161,7 +164,4 @@
     text-transform: none;
     word-wrap: normal;
     display: inline-block;
-    font-feature-settings: 'liga';
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
 }

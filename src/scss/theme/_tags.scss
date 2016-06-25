@@ -1,7 +1,17 @@
 //------------------------------------------------------------------------------
-// THEME: Tags
+// @theme: Tags
+//------------------------------------------------------------------------------
+// @description
+// Some simple colored tags for use with forms.
 //------------------------------------------------------------------------------
 
+//
+// @settings
+$base-form-info-color: $amber-100;
+$base-form-warning-color: $red-100;
+
+//
+// @scss
 .t-form-info {
     background-color: $base-form-info-color;
 }

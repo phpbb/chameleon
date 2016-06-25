@@ -1,7 +1,12 @@
 //------------------------------------------------------------------------------
-// GENERIC: Typography
+// @generic: Typography
+//------------------------------------------------------------------------------
+// @description:
+//
 //------------------------------------------------------------------------------
 
+//
+// @scss
 //
 // Remove top margins from headings
 //
@@ -72,6 +77,10 @@ li > ol {
 nav ol,
 nav ul {
     list-style: none;
+}
+
+nav > ol,
+nav > ul {
     @include vertical-rhythm();
     padding: 0;
 }

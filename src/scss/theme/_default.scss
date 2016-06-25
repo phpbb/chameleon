@@ -1,3 +1,181 @@
 //------------------------------------------------------------------------------
-// THEME: Default
+// @theme: Default
 //------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+$table-divider-color: rgba($black, 0.12);
+$table-hover-color: $gray-200;
+
+//
+// @scss
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+.icon-green {
+    color: $default-success-color;
+
+    &:focus,
+    &:hover {
+        color: $default-success-dark-color;
+    }
+}
+
+.icon-red {
+    color: $default-important-color;
+
+    &:focus,
+    &:hover {
+        color: $default-important-dark-color;
+    }
+}
+
+.navbar {
+    text-align: center;
+    background-color: #258cf4;
+    border-bottom: 2px solid $table-divider-color;
+    // @include shadow(8);
+    color: #ffffff;
+}
+
+.navbar h1 {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.wrap {
+    display: table;
+    width: 100%;
+}
+
+.guide {
+    vertical-align: top;
+    display: table-cell;
+}
+
+.guide-section {
+    background: $gray-100;
+    border-bottom: 1px solid $table-divider-color;
+    padding-left: rem(48);
+
+    a {
+        display: block;
+        width: 100%;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+    svg {
+        float: right;
+        margin-top: 32px;
+        margin-right: 48px;
+        transition: 0.2s $default-animation-curve;
+
+        &.closed {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.guide-partial {
+    padding: 0 rem(48);
+}
+
+.sidenav {
+    border-right: 1px solid $table-divider-color;
+    // @include shadow(4);
+    display: table-cell;
+    width: 300px;
+}
+
+.menu-item,
+.menu-submenu-item {
+    border-bottom: 1px solid $table-divider-color;
+
+    a {
+        display: inline-block;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            background-color: $table-hover-color;
+        }
+    }
+}
+
+.menu-link {
+    padding: 0.5rem 2rem;
+    min-width: 255px;
+
+    .icon {
+        margin-right: 1rem;
+    }
+}
+
+.menu-submenu-item .menu-link {
+    padding-left: 3.5rem;
+}
+
+.menu-action {
+    padding: 0.5rem;
+    min-width: 24px;
+}
+
+.menu-submenu,
+.menu-item-group {
+    margin: 0;
+    padding: 0;
+}
+
+
+.tabs {
+    margin: 1.5rem 0;
+}
+
+.tabs-nav {
+    border-bottom: 1px solid $default-gray;
+    margin: 0 1rem -1px;
+}
+
+.tabs-nav-item {
+    border: 1px solid transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: inline-block;
+    margin-bottom: -1px;
+    padding: 0.5rem 1rem;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background-color: $white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $table-divider-color $table-divider-color $default-gray;
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+        background-color: $white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $default-gray $default-gray $white;
+    }
+}
+
+.tabs-container {
+    border: 1px solid $default-gray;
+    border-radius: 4px;
+    padding: 1rem;
+}
