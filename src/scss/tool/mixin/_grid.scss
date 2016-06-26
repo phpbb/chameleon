@@ -1,8 +1,15 @@
 //------------------------------------------------------------------------------
-// TOOLS: Grid
+// @tool: Grid
+//------------------------------------------------------------------------------
+// @description
+//
+// Mixin for generating the grid col widths
+//
 //------------------------------------------------------------------------------
 
 /* stylelint-disable at-rule-empty-line-before */
+//
+// @scss
 @mixin o-col-width($m: 0, $l: 0, $w: 0) {
     @if $m != 0 {
         @media (min-width: $bp-medium) {

@@ -1,6 +1,14 @@
 //------------------------------------------------------------------------------
-// TOOLS: Unitless
+// @tool: Unitless
 //------------------------------------------------------------------------------
+// @description
+//
+// A function for returning unitless numer based on root font-size
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
 @function unitless($number) {
     @return strip-units($number) / strip-units($default-font-size);
 }

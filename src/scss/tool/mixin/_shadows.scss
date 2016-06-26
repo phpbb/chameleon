@@ -1,14 +1,21 @@
 //------------------------------------------------------------------------------
-// TOOLS: Shadows
+// @tool: Shadows
+//------------------------------------------------------------------------------
+// @description
+//
+// Mixin for generating Google Material Design shadows
+//
 //------------------------------------------------------------------------------
 
 //
-// Settings
+// @settings
 $shadow-key-umbra-opacity: 0.2 !default;
 $shadow-key-penumbra-opacity: 0.14 !default;
 $shadow-ambient-shadow-opacity: 0.12 !default;
 
 /* stylelint-disable block-closing-brace-newline-after */
+//
+// @scss
 @mixin shadow($d: 'focus') {
     @if $d == 0 {
         box-shadow: none;

@@ -1,9 +1,15 @@
 //------------------------------------------------------------------------------
-// TOOLS: Typo
+// @tool: Type
+//------------------------------------------------------------------------------
+// @description
+//
+// A mixin for generating type settings based on Google Material Design types
+//
 //------------------------------------------------------------------------------
 
 /* stylelint-disable at-rule-empty-line-before */
-
+//
+// @scss
 @mixin type($type, $color-contrast: false) {
     @if $type == 'caption' {
         @include font-size(12px, false);

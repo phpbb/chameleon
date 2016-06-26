@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// @utilities: Clearfix
+// @tool: Clearfix
 //------------------------------------------------------------------------------
 // @description:
 //
@@ -17,6 +17,10 @@
 
 //
 // @scss
-.clearfix {
-    @include clearfix;
+@mixin clearfix {
+    &:after {
+        content: ' '; // [1]
+        clear: both;
+        display: table; // [2]
+    }
 }
