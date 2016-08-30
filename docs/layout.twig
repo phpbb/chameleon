@@ -17,9 +17,6 @@
     <link rel="stylesheet" type="text/css" href="dist/assets/css/core.css" media="all" />
     {% block styles %}{% endblock %}
 
-    <!-- ICONS -->
-    {% block icons %}{% endblock %}
-
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     {% block fonts %}{% endblock %}
@@ -29,6 +26,8 @@
 
 </head>
 <body>
+    <!-- ICONS -->
+    {% block icons %}{% endblock %}
     {% block header %}
     <header class="hero">
         <hgroup class="hero-container container">
@@ -90,13 +89,8 @@
     <!-- JS FOOTER -->
     {% block footer_js %}
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="dist/assets/js/rainbow/rainbow.min.js"></script>
-    <script src="dist/assets/js/rainbow/language/css.js"></script>
-    <script src="dist/assets/js/rainbow/language/html.js"></script>
-    <script src="dist/assets/js/rainbow/language/php.js"></script>
-    <script src="dist/assets/js/rainbow/language/javascript.js"></script>
+    <script src="dist/assets/js/vendor/prism.js"></script>
     <script src="dist/assets/js/application.js"></script>
-    <!--  // <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script> -->
     {% endblock %}
 </body>
 </html>
