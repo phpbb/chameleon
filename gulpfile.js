@@ -1,33 +1,21 @@
-var fs = require('fs'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
     csso = require('gulp-csso'),
-    del = require('del'),
-    gzip = require('gulp-gzip');
+    del = require('del');
 
 
 // Config
-var dist = {
+var theme = {
     css: './dist/assets/css',
     fonts: './dist/assets/fonts',
     imgs: './dist/assets/imgs',
     js: './dist/assets/js'
 };
 
-var src = {
-    objs: './src/scss/object',
-    comps: './src/scss/component'
-};
-
-var objects = fs.readdirSync(src.objs);
-var components = fs.readdirSync(src.comps);
-
-
 var minify = true;
-var gzip = false;
 
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 11',
@@ -39,10 +27,11 @@ var AUTOPREFIXER_BROWSERS = [
     'ios >= 8'
 ];
 
-gulp.task('css', function () {
+var render = function(layer){
     'use strict';
+
     var css = gulp
-        .src('src/scss/style.scss')
+        .src('./guide/assets/scss/' + layer + '.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             precision: 10,
@@ -51,157 +40,39 @@ gulp.task('css', function () {
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
 
     if (minify) {
-       css = css
-       .pipe(csso())
-       .pipe(rename({
-           suffix: '.min',
-           extname: '.css'
-       }));
-    }
-
-    if (gzip) {
-       css = css
-       .pipe(gzip())
-       .pipe(rename('core.min.css.gz'));
+        css = css
+            .pipe(csso())
+            .pipe(rename({
+                suffix: '.min',
+                extname: '.css'
+            }));
     }
 
     css = css
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(dist.css));
+        .pipe(gulp.dest(theme.css));
 
     return css;
+};
+
+gulp.task('css', function(){
+    render('style');
 });
 
-gulp.task('theme', function () {
-    'use strict';
-    var css = gulp
-        .src('src/scss/theme.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            precision: 10,
-            onError: console.error.bind(console, 'Sass error:')
-        }))
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
-
-    if (minify) {
-       css = css
-       .pipe(csso())
-       .pipe(rename({
-           suffix: '.min',
-           extname: '.css'
-       }));
-    }
-
-    if (gzip) {
-       css = css
-       .pipe(gzip())
-       .pipe(rename('core.min.css.gz'));
-    }
-
-    css = css
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(dist.css));
-
-    return css;
+gulp.task('theme', function(){
+    render('theme');
 });
 
-gulp.task('core', function () {
-    'use strict';
-    var css = gulp
-        .src('src/scss/core.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            precision: 10,
-            onError: console.error.bind(console, 'Sass error:')
-        }))
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
-
-    if (minify) {
-       css = css
-       .pipe(csso())
-       .pipe(rename({
-           suffix: '.min',
-           extname: '.css'
-       }));
-    }
-
-    if (gzip) {
-       css = css
-       .pipe(gzip())
-       .pipe(rename('core.min.css.gz'));
-    }
-
-    css = css
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(dist.css));
-
-    return css;
+gulp.task('core', function(){
+    render('core');
 });
 
-gulp.task('utilities', function () {
-    'use strict';
-    var css = gulp
-        .src('src/scss/utilities.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            precision: 10,
-            onError: console.error.bind(console, 'Sass error:')
-        }))
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
-
-    if (minify) {
-       css = css
-       .pipe(csso())
-       .pipe(rename({
-           suffix: '.min',
-           extname: '.css'
-       }));
-    }
-
-    if (gzip) {
-       css = css
-       .pipe(gzip())
-       .pipe(rename('core.min.css.gz'));
-    }
-
-    css = css
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(dist.css));
-
-    return css;
+gulp.task('utilities', function(){
+    render('utilities');
 });
 
-gulp.task('components', function () {
-    'use strict';
-    var css = gulp
-        .src('src/scss/components.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            precision: 10,
-            onError: console.error.bind(console, 'Sass error:')
-        }))
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
-
-    if (minify) {
-       css = css
-       .pipe(csso())
-       .pipe(rename({
-           suffix: '.min',
-           extname: '.css'
-       }));
-    }
-
-    if (gzip) {
-       css = css
-       .pipe(gzip())
-       .pipe(rename('core.min.css.gz'));
-    }
-
-    css = css
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(dist.css));
-
-    return css;
+gulp.task('components', function(){
+    render('components');
 });
 
 gulp.task('clean', function() {
