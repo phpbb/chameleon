@@ -37,14 +37,14 @@ $navbar-input-border-color: $white !default;
 
 //
 // @scss
-.navbar {
+.c-navbar {
     background-color: $navbar-bg;
     color: $navbar-text-color;
     width: 100%;
     @include clearfix();
 }
 
-.navbar-brand {
+.c-navbar-brand {
     font-size: $navbar-brand-font-size;
     line-height: 1;
     white-space: nowrap;
@@ -62,7 +62,7 @@ $navbar-input-border-color: $white !default;
     }
 }
 
-.navbar-nav {
+.c-navbar-nav {
     display: inline-block;
 
     a {
@@ -89,7 +89,7 @@ $navbar-input-border-color: $white !default;
     }
 }
 
-.navbar-input {
+.c-navbar-input {
     font-size: $navbar-input-font-size;
     line-height: 1;
     display: inline-block;
@@ -113,10 +113,10 @@ $navbar-input-border-color: $white !default;
     }
 }
 
-.navbar-left {
+.c-navbar-left {
     float: left;
 }
 
-.navbar-right {
+.c-navbar-right {
     float: right;
 }

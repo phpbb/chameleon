@@ -19,12 +19,12 @@ $hero-link-hover-bg: $white !default;
 
 //
 // @scss
-.hero {
+.c-hero {
     background-color: $hero-bg;
     width: 100%;
 }
 
-.hero-nav {
+.c-hero-nav {
     padding-top: rem(40);
 
     // Overwrite o-btn properties
@@ -50,21 +50,21 @@ $hero-link-hover-bg: $white !default;
     }
 }
 
-.hero-header {
+.c-hero-header {
     padding: rem(40) 0;
 }
 
-.hero-body {
+.c-hero-body {
     // text-align: center;
     color: $hero-text-color;
     padding-top: rem(64);
 }
 
-.hero-heading {
+.c-hero-heading {
     line-height: unitless($default-line-height);
 }
 
-.hero-copy {
+.c-hero-copy {
     @include type($type: 'title');
     font-weight: 300;
 }
