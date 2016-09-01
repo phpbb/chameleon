@@ -92,6 +92,11 @@ $use-html-layout: true !default;
 @import 'mixins';
 
 
+// 6. Components
+//-------------------------
+@import 'components';
+
+
 // 7. Theme
 //-------------------------
 @import 'theme/type';
