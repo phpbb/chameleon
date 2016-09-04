@@ -4,15 +4,18 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
     csso = require('gulp-csso'),
-    del = require('del');
+    twig = require('gulp-twig'),
+    data = require('gulp-data'),
+    del = require('del'),
+    path = require('path');
 
 
 // Config
-var theme = {
+var build = {
     css: './dist/assets/css',
-    fonts: './dist/assets/fonts',
-    imgs: './dist/assets/imgs',
-    js: './dist/assets/js'
+    docs: './docs',
+    views: './docs/views/',
+    scss: './src/scss/'
 };
 
 var minify = true;
@@ -27,11 +30,15 @@ var AUTOPREFIXER_BROWSERS = [
     'ios >= 8'
 ];
 
+var getJsonData = function(file) {
+    return require('./template/json/' + path.basename(file.path) + '.json');
+};
+
 var render = function(layer){
     'use strict';
 
     var css = gulp
-        .src('./guide/assets/scss/' + layer + '.scss')
+        .src(build.scss + layer + '.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             precision: 10,
@@ -50,12 +57,12 @@ var render = function(layer){
 
     css = css
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(theme.css));
+        .pipe(gulp.dest(build.css));
 
     return css;
 };
 
-gulp.task('css', function(){
+gulp.task('css', ['core', 'theme', 'utilities'], function(){
     render('style');
 });
 
@@ -71,8 +78,11 @@ gulp.task('utilities', function(){
     render('utilities');
 });
 
-gulp.task('components', function(){
-    render('components');
+gulp.task('docs', function() {
+    return gulp.src(build.views + '**/*.twig')
+        .pipe(data(getJsonData))
+        .pipe(twig())
+        .pipe(gulp.dest(build.docs));
 });
 
 gulp.task('clean', function() {
@@ -82,7 +92,7 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function () {
     'use strict';
-    gulp.watch('src/**/*.scss', ['css']);
+    gulp.watch('src/scss/*.scss', ['css']);
 });
 
 gulp.task('serve', ['watch']);
