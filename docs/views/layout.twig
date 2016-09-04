@@ -1,0 +1,97 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="author" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Bas-El - CSS Framework{% endblock %}</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="../dist/assets/css/style.min.css" media="all" />
+    {% block styles %}{% endblock %}
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    {% block fonts %}{% endblock %}
+
+    <!-- JS HEADER -->
+    {% block header_js %}{% endblock %}
+
+</head>
+<body>
+    <!-- ICONS -->
+    {% block icons %}
+        {% include 'icons/brandicons.html' %}
+        {% include 'icons/mdi.html' %}
+        {% include 'icons/primary-nav.html' %}
+    {% endblock %}
+    {% block header %}
+    <header class="c-hero">
+        <hgroup class="container c-hero-container ">
+            <div class="c-hero-header">
+                <img src="assets/imgs/bas-el_logo.svg" height="48px" alt="Bas-El" />
+            </div>
+            <div class="c-hero-body o-grid">
+                    <h1 class="c-hero-heading">
+                        A modular, layered true CSS Framework
+                        <p class="c-hero-copy">
+                            Built as a base layer for large, scalable yet customizable web applications such as PHPBB.
+                        </p>
+                    </h1>
+            </div>
+            <nav class="c-hero-nav">
+                <a class="o-btn" href="#">
+                    <svg class="o-icon">
+                        <use xlink:href="#cloud-download"></use>
+                    </svg>
+                    <span class="o-icon-label">Download</span>
+                </a>
+                <a class="o-btn active" href="#">
+                    <svg class="o-icon">
+                        <use xlink:href="#chrome-reader-mode"></use>
+                    </svg>
+                    <span class="o-icon-label">Docunmentation</span>
+                </a>
+                <a class="o-btn" href="#">
+                    <svg class="o-icon">
+                        <use xlink:href="#github"></use>
+                    </svg>
+                    <span class="o-icon-label">Github</span>
+                </a>
+            </nav>
+        </hgroup>
+    </header>
+    {% endblock %}
+    <div class="container">
+        {% block contents %} {% endblock %}
+    </div>
+    <footer>
+        {% block footer %}
+        <nav>
+            <a href="#">Download</a>
+            <a href="#">Docunmentation</a>
+            <a href="#">Github</a>
+        </nav>
+        <p>
+            Designed and built by @hanakin to meet the needs of the <a href="http://www.phpbb.com">phpbb</a> project. Maintained by the core <a href="#">team</a> with the help of our <a href="#">contributors</a>.
+    Currently v0.1.0. Code licensed <a href="http://choosealicense.com/licenses/mit/">MIT</a>.
+        </p>
+        {% endblock %}
+    </footer>
+
+    <!-- JS FOOTER -->
+    {% block footer_js %}
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/vendor/prism.js"></script>
+    <script src="assets/js/application.js"></script>
+    {% endblock %}
+</body>
+</html>
