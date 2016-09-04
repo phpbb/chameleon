@@ -23,11 +23,10 @@
     "gulp-csso": "^2.0.0",
     "gulp-data": "^1.2.1",
     "gulp-gray-matter": "^3.0.1",
-    "gulp-mustache": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-swig": "^0.8.0",
-    "stylelint-config-standard": "^8.0.0"
+    "gulp-twig": "^0.5.0",
+    "stylelint": "^7.2.0"
   }
 }
