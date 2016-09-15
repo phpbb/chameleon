@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="53px" viewBox="0 0 52 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>32 - Raindrops (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="32---Raindrops-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <path d="M25.753,30.759 L25.753,30.759 C20.091,36.422 10.91,36.422 5.247,30.759 C-0.416,25.096 -0.416,15.916 5.247,10.253 L15.5,0 L25.753,10.253 C31.416,15.916 31.416,25.096 25.753,30.759" id="Fill-258" fill="#0096E6" sketch:type="MSShapeGroup"></path>
+            <path d="M50.657,35.657 L50.657,35.657 C47.533,38.781 42.467,38.781 39.343,35.657 C36.219,32.533 36.219,27.467 39.343,24.343 L45,18.686 L50.657,24.343 C53.781,27.467 53.781,32.533 50.657,35.657" id="Fill-259" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M31.828,51.485 L31.828,51.485 C30.266,53.047 27.734,53.047 26.172,51.485 C24.609,49.923 24.609,47.39 26.172,45.828 L29,43 L31.828,45.828 C33.391,47.39 33.391,49.923 31.828,51.485" id="Fill-260" fill="#E4ECF4" sketch:type="MSShapeGroup"></path>
+            <path d="M16,27.006 C16,30.32 13.314,33.006 10,33.006 C6.686,33.006 4,30.32 4,27.006 C4,23.692 6.686,21.006 10,21.006 C13.314,21.006 16,23.692 16,27.006" id="Fill-261" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="58px" viewBox="0 0 32 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>52 - Economic Bulb (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="52---Economic-Bulb-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, -1.000000)">
+            <path d="M19,59 L13,59 L10,55 L22,55 L19,59" id="Fill-3058" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M28.217,23.485 L5.035,29.696 C2.91,30.265 0.705,28.993 0.136,26.868 C-0.433,24.742 0.839,22.538 2.964,21.969 L26.147,15.757 C28.272,15.188 30.476,16.46 31.046,18.585 C31.615,20.71 30.342,22.915 28.217,23.485" id="Fill-3063" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M21,8.863 L10.035,11.727 C7.91,12.297 5.705,11.024 5.136,8.899 C4.567,6.774 5.839,4.569 7.964,4 L18.929,1.136 C21.054,0.566 23.259,1.839 23.828,3.964 C24.398,6.089 23.125,8.294 21,8.863" id="Fill-3064" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M29.036,14.999 L5.853,21.211 C3.728,21.78 1.524,20.508 0.954,18.382 C0.385,16.257 1.658,14.053 3.783,13.484 L26.965,7.272 C29.09,6.702 31.295,7.975 31.864,10.1 C32.433,12.225 31.161,14.43 29.036,14.999" id="Fill-3065" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M31.864,26.691 C31.295,24.566 29.09,23.293 26.965,23.862 L15.964,26.863 C15.957,26.865 15.949,26.867 15.941,26.869 C13.614,27.497 12,29.619 12,32.029 L12,36 L19,36 L19,36.19 C19,35.09 19.736,34.127 20.796,33.838 L29.036,31.59 C31.161,31.02 32.433,28.816 31.864,26.691" id="Fill-3066" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M28.534,36 L3.466,36 C2.656,36 2,36.656 2,37.466 L2,42.89 C2,45.885 4.156,48.372 7,48.894 L7,56 L25,56 L25,48.894 C27.844,48.372 30,45.885 30,42.89 L30,37.466 C30,36.656 29.344,36 28.534,36" id="Fill-3837" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M7,48 L25,48 M7,51 L25,51 M7,54 L25,54" id="Stroke-3838" stroke="#C7CBC7" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
