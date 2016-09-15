@@ -54,8 +54,8 @@ table {
 
     tbody {
         tr {
-            height: $table-row-height;
             position: relative;
+            height: $table-row-height;
             transition: background-color 0.28s $default-animation-curve;
 
             &.is-selected {

@@ -19,8 +19,8 @@
 // @scss
 @mixin clearfix {
     &:after {
-        content: ' '; // [1]
-        clear: both;
         display: table; // [2]
+        clear: both;
+        content: ' '; // [1]
     }
 }

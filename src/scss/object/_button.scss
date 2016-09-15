@@ -50,20 +50,20 @@ $btn-border-color: $default-gray !default;
     vertical-align: middle; // [2]
     white-space: nowrap; // bs only
     background-color: $btn-background-color;
-    border-width: $btn-border-size;
-    border-style: $btn-border-style;
     border-color: $btn-border-color;
     border-radius: $btn-border-radius;
+    border-style: $btn-border-style;
+    border-width: $btn-border-size;
     // @include shadow-2dp();
     color: $btn-color;
     outline: none; // google material design
-    cursor: pointer;
-    user-select: none; // [8]
     display: inline-block; // [1]
-    margin: 0; // [4]
-    padding: 0 $btn-padding; // [7]
     overflow: visible; // [6]
     min-width: $btn-min-width; // google material design
+    margin: 0; // [4]
+    padding: 0 $btn-padding; // [7]
+    cursor: pointer;
+    user-select: none; // [8]
     transition:
         box-shadow 0.2s $animation-curve-fast-out-linear-in,
         background-color 0.2s $default-animation-curve,

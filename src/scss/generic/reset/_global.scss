@@ -24,19 +24,19 @@
 html {
     -moz-osx-font-smoothing: grayscale; // [3]
      -webkit-font-smoothing: antialiased; /* stylelint-disable-line indentation */
-    height: 100%; // [6]
-    min-height: 100%; // [2]
     -ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
     overflow-y: scroll; // [1]
     width: 100%; // [6]
+    height: 100%; // [6]
+    min-height: 100%; // [2]
     -ms-touch-action: manipulation; // [5]
         touch-action: manipulation; /* stylelint-disable-line indentation */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
 }
 
 body {
-    min-height: 100%;
     width: 100%;
+    min-height: 100%;
 }
 
 //
@@ -96,14 +96,14 @@ textarea
 // Customize the background color to match your design.
 //
 ::-moz-selection {
-    text-shadow: none;
     background: $blue-200;
+    text-shadow: none;
 }
 
 ::selection {
-    text-shadow: none;
     background: $blue-200;
     color: #ffffff;
+    text-shadow: none;
 }
 
 //
@@ -139,9 +139,9 @@ svg {
 // specify the style of visually hidden yet accessible elements
 //
 [hidden][aria-hidden='false'] {
-    clip: rect(0 0 0 0);
-    display: inherit;
     position: absolute;
+    display: inherit;
+    clip: rect(0 0 0 0);
 
     &:focus {
         clip: auto;

@@ -18,9 +18,9 @@
 //
 // Set up the default container and grid class for mobile browsers
 .container {
+    max-width: $small;
     margin: 0 auto;
     padding: 0 rem($default-grid-gutter);
-    max-width: $small;
 }
 
 .o-grid {

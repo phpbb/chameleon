@@ -30,8 +30,8 @@ form {
 button {
     background: transparent;
     border: 1px solid $default-gray;
-    cursor: pointer;
     padding: rem(2) rem(4);
+    cursor: pointer;
 
     &:focus {
         outline: 1px dotted; // [1]
@@ -78,15 +78,15 @@ label {
 fieldset {
     border: 0;
     @include vertical-rhythm();
-    padding: 0;
     min-width: 0;
+    padding: 0;
 }
 
 legend {
     @include type($type: 'headline');
     display: block;
-    margin: 0 0 1rem;
     width: 100%;
+    margin: 0 0 1rem;
 }
 
 //

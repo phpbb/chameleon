@@ -80,9 +80,9 @@ textarea {
     @media (min-width: $bp-medium) {
         display: inline-block;
     }
+    width: 100%;
     height: $base-input-height; // [1]
     padding: $base-input-padding-y $base-input-padding-x;
-    width: 100%;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
     &:hover {
@@ -135,16 +135,16 @@ textarea {
 //    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
-    background-origin: content-box;
     background-color: $base-input-background-color;
+    background-origin: content-box;
     @include background-triangle($base-input-border-color);
-    background-repeat: no-repeat;
     background-position: right -1rem center;
+    background-repeat: no-repeat;
     background-size: 9px 6px;
     display: inline-block;
-    padding: rem(8) rem(36) rem(8) 1rem;
     min-width: rem(80);
     max-width: 100%;
+    padding: rem(8) rem(36) rem(8) 1rem;
 
     &:hover,
     &:focus {
@@ -158,8 +158,8 @@ select {
     }
 
     &:focus:-moz-focusring {
-        text-shadow: 0 0 0 #000000;
         color: transparent;
+        text-shadow: 0 0 0 $black;
     }
 
     &[multiple='multiple'] {
@@ -168,8 +168,8 @@ select {
 }
 
 input[type='color'] {
-    height: $base-input-height;
     width: $base-input-height;
+    height: $base-input-height;
 }
 
 //
@@ -201,12 +201,12 @@ input[type='checkbox'] {
 [type='checkbox'],
 [type='radio'] {
     & + label {
-        cursor: pointer;
-        user-select: none;
+        position: relative;
         display: inline-block;
         margin: 0 rem(8);
         padding-left: rem(32);
-        position: relative;
+        cursor: pointer;
+        user-select: none;
         transition: 0.28s ease;
     }
 }
@@ -215,14 +215,14 @@ input[type='checkbox'] {
     + label:before {
         border: 1px solid $base-input-border-color;
         border-radius: 1px;
-        content: '';
-        height: 1rem;
-        margin-top: rem(2);
         position: absolute;
         top: 0;
         left: 0;
-        width: 1rem;
         z-index: 0;
+        width: 1rem;
+        height: 1rem;
+        margin-top: rem(2);
+        content: '';
         transition: 0.2s;
     }
 
@@ -242,10 +242,10 @@ input[type='checkbox'] {
         border-right: 1px solid $base-input-border-hover-color;
         border-bottom: 1px solid $base-input-border-hover-color;
         border-left: 1px solid transparent;
-        height: rem(18);
         top: -4px;
         left: -5px;
         width: rem(12);
+        height: rem(18);
         transform: rotate(40deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
@@ -264,10 +264,10 @@ input[type='checkbox'] {
         border-right: 1px solid $base-input-invalid-border-color;
         border-bottom: none;
         border-left: none;
-        height: rem(18);
         top: -11px;
         left: -12px;
         width: rem(12);
+        height: rem(18);
         transform: rotate(90deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
@@ -284,14 +284,14 @@ input[type='checkbox'] {
     & + label:before,
     & + label:after {
         border-radius: 50%;
-        content: '';
-        height: 1rem;
-        margin: rem(4) rem(4) rem(4) 0;
         position: absolute;
         top: 0;
         left: 0;
-        width: 1rem;
         z-index: 0;
+        width: 1rem;
+        height: 1rem;
+        margin: rem(4) rem(4) rem(4) 0;
+        content: '';
         transition: 0.28s ease;
     }
 
@@ -328,7 +328,6 @@ input[type='checkbox'] {
 
     // Disabled style
     &:disabled {
-
         + label {
             color: $base-input-disabled-color;
         }

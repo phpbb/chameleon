@@ -50,9 +50,9 @@ $navbar-input-border-color: $white !default;
     white-space: nowrap;
     background-color: $navbar-brand-bg;
     color: $navbar-brand-color;
-    cursor: pointer;
     display: inline-block;
     padding: $navbar-brand-padding-y $navbar-brand-padding-x;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -70,9 +70,9 @@ $navbar-input-border-color: $white !default;
         line-height: 1;
         background-color: $navbar-link-bg;
         color: $navbar-link-color;
-        cursor: pointer;
         display: inline-block;
         padding: $navbar-link-padding-y $navbar-link-padding-x;
+        cursor: pointer;
 
         &:hover,
         &:focus {
@@ -83,9 +83,9 @@ $navbar-input-border-color: $white !default;
     }
 
     .icon {
+        width: $navbar-link-icon-size;
         height: $navbar-link-icon-size;
         margin-right: 0.5rem;
-        width: $navbar-link-icon-size;
     }
 }
 
@@ -102,9 +102,9 @@ $navbar-input-border-color: $white !default;
     input,
     select {
         border-color: $navbar-input-border-color;
-        cursor: pointer;
-        height: $navbar-input-height;
         width: auto;
+        height: $navbar-input-height;
+        cursor: pointer;
 
         &:hover,
         &:focus {

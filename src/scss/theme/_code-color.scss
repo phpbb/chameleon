@@ -10,22 +10,22 @@
 code[class*="language-"],
 pre[class*="language-"] {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    line-height: 1.5;
-    text-align: left;
     direction: ltr;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    tab-size: 4;
     hyphens: none;
+    line-height: 1.5;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
     color: #cdd3de;
 }
 
 /* code blocks */
 pre[class*="language-"] {
+    overflow: auto;
     margin: 0.5rem 0;
     padding: 1rem;
-    overflow: auto;
 }
 
 #namespace {

@@ -13,8 +13,8 @@ $table-hover-color: $gray-200;
 //
 // @scss
 .icon {
-    height: 24px;
     width: 24px;
+    height: 24px;
 }
 
 .icon-green {
@@ -114,8 +114,8 @@ $table-hover-color: $gray-200;
 }
 
 .menu-link {
-    padding: 0.5rem 2rem;
     min-width: 255px;
+    padding: 0.5rem 2rem;
 
     .icon {
         margin-right: 1rem;
@@ -127,8 +127,8 @@ $table-hover-color: $gray-200;
 }
 
 .menu-action {
-    padding: 0.5rem;
     min-width: 24px;
+    padding: 0.5rem;
 }
 
 .menu-submenu,
@@ -159,18 +159,18 @@ $table-hover-color: $gray-200;
     &:focus {
         text-decoration: none;
         background-color: $white;
-        border-width: 1px;
-        border-style: solid;
         border-color: $table-divider-color $table-divider-color $default-gray;
+        border-style: solid;
+        border-width: 1px;
     }
 
     &.active,
     &.active:hover,
     &.active:focus {
         background-color: $white;
-        border-width: 1px;
-        border-style: solid;
         border-color: $default-gray $default-gray $white;
+        border-style: solid;
+        border-width: 1px;
     }
 }
 
