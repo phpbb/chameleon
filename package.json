@@ -20,6 +20,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-csscomb": "^3.0.8",
     "gulp-csso": "^2.0.0",
     "gulp-data": "^1.2.1",
     "gulp-gray-matter": "^3.0.1",

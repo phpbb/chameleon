@@ -1,14 +1,14 @@
-var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    sourcemaps = require('gulp-sourcemaps'),
-    csso = require('gulp-csso'),
-    twig = require('gulp-twig'),
-    data = require('gulp-data'),
-    del = require('del'),
-    path = require('path');
-
+var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
+var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
+var csso = require('gulp-csso');
+var csscomb = require('gulp-csscomb');
+var twig = require('gulp-twig');
+var data = require('gulp-data');
+var del = require('del');
+var path = require('path');
 
 // Config
 var build = {
@@ -30,11 +30,11 @@ var AUTOPREFIXER_BROWSERS = [
     'ios >= 8'
 ];
 
-var getJsonData = function(file) {
+var getJsonData = function (file) {
     return require('./template/json/' + path.basename(file.path) + '.json');
 };
 
-var render = function(layer){
+var render = function (layer) {
     'use strict';
 
     var css = gulp
@@ -53,6 +53,9 @@ var render = function(layer){
                 suffix: '.min',
                 extname: '.css'
             }));
+    } else {
+        css = css
+            .pipe(csscomb());
     }
 
     css = css
@@ -62,30 +65,30 @@ var render = function(layer){
     return css;
 };
 
-gulp.task('css', ['core', 'theme', 'utilities'], function(){
+gulp.task('css', ['core', 'theme', 'utilities'], function () {
     render('style');
 });
 
-gulp.task('theme', function(){
+gulp.task('theme', function () {
     render('theme');
 });
 
-gulp.task('core', function(){
+gulp.task('core', function () {
     render('core');
 });
 
-gulp.task('utilities', function(){
+gulp.task('utilities', function () {
     render('utilities');
 });
 
-gulp.task('docs', function() {
+gulp.task('docs', function () {
     return gulp.src(build.views + '**/*.twig')
         .pipe(data(getJsonData))
         .pipe(twig())
         .pipe(gulp.dest(build.docs));
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
     'use strict';
     del(['dist']);
 });
