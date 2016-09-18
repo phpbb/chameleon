@@ -5,16 +5,11 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var csscomb = require('gulp-csscomb');
-var twig = require('gulp-twig');
-var data = require('gulp-data');
 var del = require('del');
-var path = require('path');
 
 // Config
 var build = {
     css: './dist/assets/css',
-    docs: './docs',
-    views: './docs/views/',
     scss: './src/scss/'
 };
 
@@ -29,10 +24,6 @@ var AUTOPREFIXER_BROWSERS = [
     'opera >= 35',
     'ios >= 8'
 ];
-
-var getJsonData = function (file) {
-    return require('./template/json/' + path.basename(file.path) + '.json');
-};
 
 var render = function (layer) {
     'use strict';
@@ -65,27 +56,12 @@ var render = function (layer) {
     return css;
 };
 
-gulp.task('css', ['core', 'theme', 'utilities'], function () {
-    render('style');
-});
-
-gulp.task('theme', function () {
-    render('theme');
-});
-
 gulp.task('core', function () {
     render('core');
 });
 
 gulp.task('utilities', function () {
     render('utilities');
-});
-
-gulp.task('docs', function () {
-    return gulp.src(build.views + '**/*.twig')
-        .pipe(data(getJsonData))
-        .pipe(twig())
-        .pipe(gulp.dest(build.docs));
 });
 
 gulp.task('clean', function () {
