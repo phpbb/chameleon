@@ -3,11 +3,11 @@ Is meant as a core layer to your workflow. Its a true CSS framework following
 the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
 this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 
-### Usage
+## Usage
 You can include the core.css file in your project as a starting place or use the
 framework as a boilerplate for your overall design.
 
-### Scope
+## Scope
 Base-L is only part of the equation... It takes what Harry talks about being the
 main layers and groups them into three sections.
 
@@ -31,7 +31,7 @@ as any **theme** specific stuff
 This si your catch all things that are overly specific, the rest of the layers
 he speaks of.
 
-### Why
+## Why
 Base-L was designed with applications in mind. Developed in conjunction with the
 popular forum application [phpBB](http://www.phpbb.org). It lends it self
 beautifully to the project improving its code base and simplifying the process
