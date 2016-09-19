@@ -21,13 +21,13 @@ project and work off. We also provide a common **Utilities** layer to start from
 
 The **Theme** however is left up to you!
 
-#### The Core
+#### Core
 This is essentially your **generic** and **base** layers he is reffering too as
 well as some global **objects**.
 
 #### Theme
-This is all of your none global **objects* and individual **components** as well
-as any **theme** specific stuff
+This is all of your none global **objects** and individual **components** as
+well as any **theme** specific stuff
 
 #### Utilities
 This si your catch all things that are overly specific, the rest of the layers
