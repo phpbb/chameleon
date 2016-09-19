@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var csscomb = require('gulp-csscomb');
 var del = require('del');
+var basel = require('./package.json');
 
 // Config
 var build = {
@@ -41,7 +42,7 @@ var render = function (layer) {
         css = css
             .pipe(csso())
             .pipe(rename({
-                suffix: '.min',
+                suffix: '.' + basel.version + '.min',
                 extname: '.css'
             }));
     } else {
