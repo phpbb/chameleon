@@ -39,8 +39,6 @@ $btn-border-color: $default-gray !default;
 // 7. Subtract the border size from the padding value so that buttons do not
 //    grow larger as we add borders.
 // 8. Prevent button text from being selectable.
-// 9. Most commonly we want specific sizing and alignment for icons in links
-// as such we target tthe most common approaches to including icons
 //
 .o-btn {
     @include type($type: 'button');
@@ -68,21 +66,6 @@ $btn-border-color: $default-gray !default;
         box-shadow 0.2s $animation-curve-fast-out-linear-in,
         background-color 0.2s $default-animation-curve,
         color 0.2s $default-animation-curve; // google material design
-
-    // Icons [9]
-    i,
-    svg {
-        @include font-size(24px, false);
-        margin-right: 0.5rem;
-    }
-
-    i {
-        vertical-align: bottom;
-    }
-
-    svg {
-        vertical-align: middle;
-    }
 
     // UI states
     &:hover,
