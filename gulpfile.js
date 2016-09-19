@@ -71,8 +71,8 @@ gulp.task('clean', function () {
 
 gulp.task('watch', function () {
     'use strict';
-    gulp.watch('src/scss/*.scss', ['css']);
+    gulp.watch('src/scss/*.scss', ['css', 'utilities']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'watch']);
+gulp.task('default', ['core', 'utilities', 'watch']);
