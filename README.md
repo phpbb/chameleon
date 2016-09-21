@@ -30,7 +30,7 @@ This is all of your none global **objects** and individual **components** as
 well as any **theme** specific stuff
 
 #### Utilities
-This si your catch all things that are overly specific, the rest of the layers
+This is your catch all things that are overly specific, the rest of the layers
 he speaks of.
 
 ## Why
