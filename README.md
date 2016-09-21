@@ -16,22 +16,22 @@ main layers and groups them into three sections.
 3. Other/utilities
 
 By doing this we can break out the framework from the design. This is the main
-focus of Base-L. It provides you with the **Core** layer to easily include in your
-project and work off. We also provide a common **Utilities** layer to start from.
+focus of Base-L. It provides you with a solid starting point for your projects.
+To much, you can also just include the **Core** layer to easily build your work
+off of. We also provide a common **Utilities** layer to start from.
 
 The **Theme** however is left up to you!
 
 #### Core
-This is essentially your **generic** and **base** layers he is reffering too as
-well as some global **objects**.
+This is essentially your **generic** and **base** layers as well as some global
+**objects**.
 
 #### Theme
 This is all of your none global **objects** and individual **components** as
 well as any **theme** specific stuff
 
 #### Utilities
-This is your catch all things that are overly specific, the rest of the layers
-he speaks of.
+This is your catch all things that are overly specific, the rest of the layers.
 
 ## Why
 Base-L was designed with applications in mind. Developed in conjunction with the
