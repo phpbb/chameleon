@@ -51,7 +51,6 @@
 // Set up the grid to work on larger devices
 @media (min-width: $bp-medium) {
     .o-grid {
-        display: table;
-        table-layout: fixed;
+        @include o-grid();
     }
 }

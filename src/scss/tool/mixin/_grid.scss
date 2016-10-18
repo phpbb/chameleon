@@ -10,23 +10,50 @@
 /* stylelint-disable at-rule-empty-line-before */
 //
 // @scss
+@mixin o-grid {
+    margin-top: -8px;
+    margin-right: -8px;
+    margin-left: -8px;
+
+    &:last-child {
+        margin-bottom: -8px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+@mixin o-col() {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
 @mixin o-col-width($m: 0, $l: 0, $w: 0) {
     @if $m != 0 {
         @media (min-width: $bp-medium) {
+            flex: none;
             width: percentage($m / 12);
         }
     }
 
     @if $l != 0 {
         @media (min-width: $bp-large) {
+            flex: none;
             width: percentage($l / 12);
         }
     }
 
     @if $w != 0 {
         @media (min-width: $bp-wide) {
+            flex: none;
             width: percentage($w / 12);
         }
     }
 }
+
 /* stylelint-enable */
