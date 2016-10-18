@@ -24,9 +24,9 @@ $medium: 768px;
 $large: 960px;
 $wide: 1152px;
 
-$bp-medium: $small;
-$bp-large: ($medium + $default-grid-gutter + 1px);
-$bp-wide: ($large + $default-grid-gutter + 1px);
+$bp-medium: 769px;
+$bp-large: 980px;
+$bp-wide: 1180px;
 
 // Fonts
 $default-font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
