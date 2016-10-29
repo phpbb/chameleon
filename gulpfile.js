@@ -7,6 +7,8 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var csscomb = require('gulp-csscomb');
+var postcss = require('gulp-postcss');
+var stripComments = require('postcss-discard-comments');
 var del = require('del');
 var pkg = require('./package.json');
 
