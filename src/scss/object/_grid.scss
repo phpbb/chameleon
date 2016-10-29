@@ -14,43 +14,50 @@
 //------------------------------------------------------------------------------
 
 //
+// @settings
+
+// Layout Variables
+$small: 600px;
+$medium: 768px;
+$large: 972px;
+$wide: 1152px;
+
+//
 // @scss
 //
 // Set up the default container and grid class for mobile browsers
 .container {
     max-width: $small;
-    margin: 0 auto;
-    padding: 0 rem($default-grid-gutter);
+    margin: $grid-gutter auto;
+
+    //
+    // Establist container sizes for all devices larger than mobile
+
+    //
+    // Tablet
+    @media (min-width: $bp-medium) {
+        max-width: $medium;
+    }
+
+    //
+    // Desktop
+    @media (min-width: $bp-large) {
+        max-width: $large;
+    }
+
+    //
+    // Widescreen
+    @media (min-width: $bp-wide) {
+        max-width: $wide;
+    }
 }
 
 .o-grid {
     width: 100%;
-}
 
-//
-// Establist container sizes for all devices larger than mobile
-
-// Tablet
-@media (min-width: $bp-medium) {
-    .container {
-        max-width: $medium;
-    }
-}
-
-// Desktop
-@media (min-width: $bp-large) {
-    .container { max-width: $large; }
-}
-
-// Widescreen
-@media (min-width: $bp-wide) {
-    .container { max-width: $wide; }
-}
-
-//
-// Set up the grid to work on larger devices
-@media (min-width: $bp-medium) {
-    .o-grid {
+    //
+    // Set up the grid to work on larger devices
+    @media (min-width: $bp-medium) {
         @include o-grid();
     }
 }

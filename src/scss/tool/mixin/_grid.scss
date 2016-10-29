@@ -7,20 +7,30 @@
 //
 //------------------------------------------------------------------------------
 
-/* stylelint-disable at-rule-empty-line-before */
+//
+// @settings
+
+// Layout Variables
+$grid-gutter: unit(2) !default;
+
+// Breakpoints
+$bp-medium: 769px;
+$bp-large: 992px;
+$bp-wide: 1200px;
+
 //
 // @scss
 @mixin o-grid {
-    margin-top: -8px;
-    margin-right: -8px;
-    margin-left: -8px;
+    margin-top: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
+    margin-left: -($grid-gutter / 2);
 
     &:last-child {
-        margin-bottom: -8px;
+        margin-bottom: -($grid-gutter / 2);
     }
 
     &:not(:last-child) {
-        margin-bottom: 8px;
+        margin-bottom: ($grid-gutter / 2);
     }
 }
 
@@ -30,30 +40,10 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: ($grid-gutter / 2);
 }
 
-@mixin o-col-width($m: 0, $l: 0, $w: 0) {
-    @if $m != 0 {
-        @media (min-width: $bp-medium) {
-            flex: none;
-            width: percentage($m / 12);
-        }
-    }
-
-    @if $l != 0 {
-        @media (min-width: $bp-large) {
-            flex: none;
-            width: percentage($l / 12);
-        }
-    }
-
-    @if $w != 0 {
-        @media (min-width: $bp-wide) {
-            flex: none;
-            width: percentage($w / 12);
-        }
-    }
+@mixin o-col-width($w: 0) {
+    flex: none;
+    width: percentage($w / 12);
 }
-
-/* stylelint-enable */

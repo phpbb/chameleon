@@ -18,186 +18,39 @@
 @if $use-html-layout {
     //
     // Setup all grid columns to use table cell layout and use the default gutter
-    @media (min-width: $bp-medium) {
-        .o-col {
-            @include o-col();
+    @for $i from 1 through 12 {
+        .o-col-#{$i}-m {
+            @include o-col-width(1);
         }
     }
 
     //
     // Tablet widths
     @media (min-width: $bp-medium) {
-        .o-col-1-m {
-            flex: none;
-            width: 8.333333%;
-        }
-
-        .o-col-2-m {
-            flex: none;
-            width: 16.666667%;
-        }
-
-        .o-col-3-m {
-            flex: none;
-            width: 25%;
-        }
-
-        .o-col-4-m {
-            flex: none;
-            width: 33.333333%;
-        }
-
-        .o-col-5-m {
-            flex: none;
-            width: 41.666667%;
-        }
-
-        .o-col-6-m {
-            flex: none;
-            width: 50%;
-        }
-
-        .o-col-7-m {
-            flex: none;
-            width: 58.333333%;
-        }
-
-        .o-col-8-m {
-            flex: none;
-            width: 66.666667%;
-        }
-
-        .o-col-9-m {
-            flex: none;
-            width: 75%;
-        }
-
-        .o-col-10-m {
-            flex: none;
-            width: 83.333333%;
-        }
-
-        .o-col-11-m {
-            flex: none;
-            width: 91.666667%;
+        @for $i from 1 through 12 {
+            .o-col-#{$i}-m {
+                @include o-col-width(1);
+            }
         }
     }
 
     //
     // Desktop widths
     @media (min-width: $bp-large) {
-        .o-col-1-l {
-            flex: none;
-            width: 8.333333%;
-        }
-
-        .o-col-2-l {
-            flex: none;
-            width: 16.666667%;
-        }
-
-        .o-col-3-l {
-            flex: none;
-            width: 25%;
-        }
-
-        .o-col-4-l {
-            flex: none;
-            width: 33.333333%;
-        }
-
-        .o-col-5-l {
-            flex: none;
-            width: 41.666667%;
-        }
-
-        .o-col-6-l {
-            flex: none;
-            width: 50%;
-        }
-
-        .o-col-7-l {
-            flex: none;
-            width: 58.333333%;
-        }
-
-        .o-col-8-l {
-            flex: none;
-            width: 66.666667%;
-        }
-
-        .o-col-9-l {
-            flex: none;
-            width: 75%;
-        }
-
-        .o-col-10-l {
-            flex: none;
-            width: 83.333333%;
-        }
-
-        .o-col-11-l {
-            flex: none;
-            width: 91.666667%;
+        @for $i from 1 through 12 {
+            .o-col-#{$i}-l {
+                @include o-col-width(1);
+            }
         }
     }
 
     //
     // Widescreen widths
     @media (min-width: $bp-wide) {
-        .o-col-1-w {
-            flex: none;
-            width: 8.333333%;
-        }
-
-        .o-col-2-w {
-            flex: none;
-            width: 16.666667%;
-        }
-
-        .o-col-3-w {
-            flex: none;
-            width: 25%;
-        }
-
-        .o-col-4-w {
-            flex: none;
-            width: 33.333333%;
-        }
-
-        .o-col-5-w {
-            flex: none;
-            width: 41.666667%;
-        }
-
-        .o-col-6-w {
-            flex: none;
-            width: 50%;
-        }
-
-        .o-col-7-w {
-            flex: none;
-            width: 58.333333%;
-        }
-
-        .o-col-8-w {
-            flex: none;
-            width: 66.666667%;
-        }
-
-        .o-col-9-w {
-            flex: none;
-            width: 75%;
-        }
-
-        .o-col-10-w {
-            flex: none;
-            width: 83.333333%;
-        }
-
-        .o-col-11-w {
-            flex: none;
-            width: 91.666667%;
+        @for $i from 1 through 12 {
+            .o-col-#{$i}-w {
+                @include o-col-width(1);
+            }
         }
     }
 }
