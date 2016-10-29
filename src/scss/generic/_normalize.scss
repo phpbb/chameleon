@@ -90,8 +90,8 @@ template, // [1]
 //
 
 a {
-    background-color: transparent; // [1]
     -webkit-text-decoration-skip: objects; // [2]
+    background-color: transparent; // [1]
 }
 
 //
@@ -241,9 +241,9 @@ figure {
 //
 
 hr {
+    overflow: visible; // [2]
     box-sizing: content-box; // [1]
     height: 0; // [1]
-    overflow: visible; // [2]
 }
 
 // Forms
@@ -347,10 +347,10 @@ fieldset {
 legend {
     white-space: normal; // [1]
     color: inherit; // [2]
-    box-sizing: border-box; // [1]
     display: table; // [3]
-    padding: 0; // [3]
+    box-sizing: border-box; // [1]
     max-width: 100%; // [1]
+    padding: 0; // [3]
 }
 
 //
