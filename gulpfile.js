@@ -6,8 +6,8 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
-var csscomb = require('gulp-csscomb');
 var postcss = require('gulp-postcss');
+var sorting = require('postcss-sorting');
 var stripComments = require('postcss-discard-comments');
 var del = require('del');
 var pkg = require('./package.json');
@@ -39,6 +39,18 @@ var render = function (layer) {
 		onError: console.error.bind(console, 'Sass error:')
 	}))
 	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+	.pipe(
+		postcss([
+			stripComments(),
+			sorting({
+				'empty-lines-between-children-rules': 1,
+				'empty-lines-between-media-rules': 1,
+				'preserve-empty-lines-between-children-rules': true,
+				'empty-lines-before-comment': true,
+				'sort-order': 'sort-order'
+			})
+		])
+	)
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'

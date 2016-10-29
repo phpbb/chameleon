@@ -1,34 +1,7 @@
 {
-    "exclude": [
-        ".git/**",
-        "node_modules/**",
-        "bower_components/**"
-    ],
-    "remove-empty-rulesets": true,
-    "always-semicolon": true,
-    "color-case": "lower",
-    "block-indent": "    ",
-    "color-shorthand": false,
-    "element-case": "lower",
-    "eof-newline": true,
-    "leading-zero": true,
-    "quotes": "single",
-    "space-before-colon": "",
-    "space-after-colon": " ",
-    "space-before-combinator": " ",
-    "space-after-combinator": " ",
-    "space-between-declarations": "\n",
-    "space-before-opening-brace": " ",
-    "space-after-opening-brace": "\n",
-    "space-after-selector-delimiter": " ",
-    "space-before-selector-delimiter": "",
-    "space-before-closing-brace": "\n",
-    "strip-spaces": true,
-    "tab-size": true,
-    "unitless-zero": false,
-    "vendor-prefix-align": true,
-    "lines-between-rulesets": 1,
     "sort-order": [
+        [ "$variable" ],
+        [ "@atrule" ],
         [
             "-moz-osx-font-smoothing",
             "-webkit-font-smoothing",
@@ -85,8 +58,9 @@
             "word-spacing",
             "-ms-word-wrap",
             "-ms-writing-mode",
-            "word-wrap",
-
+            "word-wrap"
+        ],
+        [
             "background",
             "background-attachment",
             "-moz-background-clip",
@@ -183,15 +157,17 @@
             "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",
             "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",
             "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",
-            "filter:progid:DXImageTransform.Microsoft.gradient",
-
+            "filter:progid:DXImageTransform.Microsoft.gradient"
+        ],
+        [
             "position",
             "top",
             "right",
             "bottom",
             "left",
-            "z-index",
-
+            "z-index"
+        ],
+        [
             "display",
             "visibility",
             "float",
@@ -209,8 +185,9 @@
             "flex-order",
             "flex-pack",
             "flex-align",
-            "flex",
-
+            "flex"
+        ],
+        [
             "-webkit-box-sizing",
             "-moz-box-sizing",
             "box-sizing",
@@ -229,16 +206,18 @@
             "padding-top",
             "padding-right",
             "padding-bottom",
-            "padding-left",
-
+            "padding-left"
+        ],
+        [
             "table-layout",
             "empty-cells",
             "caption-side",
             "list-style",
             "list-style-position",
             "list-style-type",
-            "list-style-image",
-
+            "list-style-image"
+        ],
+        [
             "content",
             "quotes",
             "counter-reset",
@@ -332,6 +311,9 @@
             "pointer-events",
             "-moz-appearance",
             "-webkit-appearance"
-        ]
+        ],
+        [ "..." ],
+        [ "@media" ],
+        [ ">child" ]
     ]
 }
