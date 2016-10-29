@@ -8,15 +8,13 @@ var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var csscomb = require('gulp-csscomb');
 var del = require('del');
-var basel = require('./package.json');
+var pkg = require('./package.json');
 
 // Config
 var build = {
 	css: './dist/assets/css',
 	scss: './src/scss/'
 };
-
-var minify = true;
 
 var AUTOPREFIXER_BROWSERS = [
 	'ie >= 11',
@@ -38,21 +36,11 @@ var render = function (layer) {
 		precision: 10,
 		onError: console.error.bind(console, 'Sass error:')
 	}))
-	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS));
-
-	if (minify) {
-		css = css
-		.pipe(csso())
-		.pipe(rename({
-			suffix: '.' + basel.version + '.min',
-			extname: '.css'
-		}));
-	} else {
-		css = css
-		.pipe(csscomb());
-	}
-
-	css = css
+	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+	.pipe(rename({
+		suffix: '.' + pkg.version,
+		extname: '.css'
+	}))
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(build.css));
 
@@ -71,9 +59,24 @@ gulp.task('clean', function () {
 	del(['dist']);
 });
 
+gulp.task('minify', ['core', 'utilities'], function () {
+	var css = gulp
+	.src(build.css + '/*.' + pkg.version + '.css')
+	.pipe(sourcemaps.init())
+	.pipe(csso())
+	.pipe(rename({
+		suffix: '.min',
+		extname: '.css'
+	}))
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest(build.css));
+
+	return css;
+});
+
 gulp.task('watch', function () {
-	gulp.watch('src/scss/*.scss', ['core', 'utilities']);
+	gulp.watch('src/scss/**/*.scss', ['core', 'utilities', 'minify']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['core', 'utilities', 'watch']);
+gulp.task('default', ['core', 'utilities', 'minify', 'watch']);
