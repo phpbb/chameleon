@@ -157,12 +157,12 @@
     }
 }
 
-@mixin typo-icon() {
+@mixin typo-icon($size: $default-icon-md) {
     -webkit-font-feature-settings: 'liga';
             font-feature-settings: 'liga'; /* stylelint-disable-line indentation */
     -webkit-font-smoothing: antialiased;
     font-family: 'Material Icons';
-    font-size: rem(24);
+    font-size: $size;
     font-style: normal;
     font-weight: normal;
     letter-spacing: normal;

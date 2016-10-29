@@ -7,12 +7,13 @@
 
 //
 // @settings
-$base-input-height: rem(40);
+
+// Layout Variables
+$base-input-height: unit(5);
 $base-input-border-width: $default-border-size;
 $base-input-border-radius: $default-border-radius;
-$base-input-padding-y: rem(8);
-$base-input-padding-x: rem(8);
 
+// Theme Variables
 $base-input-color: $default-body-color;
 $base-input-background-color: $white;
 $base-input-border-color: $default-gray;
@@ -82,7 +83,7 @@ textarea {
     }
     width: 100%;
     height: $base-input-height; // [1]
-    padding: $base-input-padding-y $base-input-padding-x;
+    padding: unit(1);
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
     &:hover {
@@ -138,13 +139,13 @@ select {
     background-color: $base-input-background-color;
     background-origin: content-box;
     @include background-triangle($base-input-border-color);
-    background-position: right -1rem center;
+    background-position: right -unit(2) center;
     background-repeat: no-repeat;
     background-size: 9px 6px;
     display: inline-block;
-    min-width: rem(80);
+    min-width: unit(10);
     max-width: 100%;
-    padding: rem(8) rem(36) rem(8) 1rem;
+    padding: unit(1) unit(4.5) unit(1) unit(2);
 
     &:hover,
     &:focus {
@@ -203,8 +204,8 @@ input[type='checkbox'] {
     & + label {
         position: relative;
         display: inline-block;
-        margin: 0 rem(8);
-        padding-left: rem(32);
+        margin: 0 unit(1);
+        padding-left: unit(4);
         cursor: pointer;
         user-select: none;
         transition: 0.28s ease;
@@ -213,15 +214,15 @@ input[type='checkbox'] {
 
 [type='checkbox'] {
     + label:before {
-        border: 1px solid $base-input-border-color;
-        border-radius: 1px;
+        border: $base-input-border-width solid $base-input-border-color;
+        border-radius: unit(0.125);
         position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
-        width: 1rem;
-        height: 1rem;
-        margin-top: rem(2);
+        width: unit(2);
+        height: unit(2);
+        margin-top: unit(0.25);
         content: '';
         transition: 0.2s;
     }
@@ -238,22 +239,22 @@ input[type='checkbox'] {
 
 [type='checkbox']:checked {
     + label:before {
-        border-top: 1px solid transparent;
-        border-right: 1px solid $base-input-border-hover-color;
-        border-bottom: 1px solid $base-input-border-hover-color;
-        border-left: 1px solid transparent;
-        top: -4px;
+        border-top: $base-input-border-width solid transparent;
+        border-right: $base-input-border-width solid $base-input-border-hover-color;
+        border-bottom: $base-input-border-width solid $base-input-border-hover-color;
+        border-left: $base-input-border-width solid transparent;
+        top: -unit(0.5);
         left: -5px;
-        width: rem(12);
-        height: rem(18);
+        width: unit(1.5);
+        height: unit(2.25);
         transform: rotate(40deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
     }
 
     &:disabled + label:before {
-        border-right: 1px solid $base-input-disabled-color;
-        border-bottom: 1px solid $base-input-disabled-color;
+        border-right: $base-input-border-width solid $base-input-disabled-color;
+        border-bottom: $base-input-border-width solid $base-input-disabled-color;
     }
 }
 
@@ -261,13 +262,12 @@ input[type='checkbox'] {
 [type='checkbox']:indeterminate {
     + label:before {
         border-top: none;
-        border-right: 1px solid $base-input-invalid-border-color;
+        border-right: $base-input-border-width solid $base-input-invalid-border-color;
         border-bottom: none;
         border-left: none;
         top: -11px;
-        left: -12px;
-        width: rem(12);
-        height: rem(18);
+        left: -unit(1.5);
+        height: unit(2.25);
         transform: rotate(90deg);
         transform-origin: 100% 100%;
         backface-visibility: hidden;
@@ -276,7 +276,7 @@ input[type='checkbox'] {
     // Disabled indeterminate
     &:disabled + label:before {
         background-color: transparent;
-        border-right: 1px solid $base-input-disabled-color;
+        border-right: $base-input-border-width solid $base-input-disabled-color;
     }
 }
 
@@ -288,9 +288,9 @@ input[type='checkbox'] {
         top: 0;
         left: 0;
         z-index: 0;
-        width: 1rem;
-        height: 1rem;
-        margin: rem(4) rem(4) rem(4) 0;
+        width: unit(2);
+        height: unit(2);
+        margin: unit(0.5) unit(0.5) unit(0.5) 0;
         content: '';
         transition: 0.28s ease;
     }
@@ -298,7 +298,7 @@ input[type='checkbox'] {
     &:not(:checked) + label {
         &:before,
         &:after {
-            border: 1px solid $base-input-border-color;
+            border: $base-input-border-width solid $base-input-border-color;
         }
 
         &:after {
@@ -315,7 +315,7 @@ input[type='checkbox'] {
     // Checked
     &:checked + label {
         &:before {
-            border: 1px solid $base-input-border-hover-color;
+            border: $base-input-border-width solid $base-input-border-hover-color;
         }
 
         &:after {
@@ -334,7 +334,7 @@ input[type='checkbox'] {
 
         &:checked + label:before,
         &:not(:checked) + label:before {
-            border: 1px solid $base-input-disabled-color;
+            border: $base-input-border-width solid $base-input-disabled-color;
         }
 
         :checked + label:after {

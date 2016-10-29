@@ -29,8 +29,8 @@ form {
 //
 button {
     background: transparent;
-    padding: rem(2) rem(4);
     border: $default-border-size solid $default-gray;
+    padding: unit(0.25) unit(0.5);
     cursor: pointer;
 
     &:focus {
@@ -67,7 +67,7 @@ textarea {
 //
 label {
     display: inline-block;
-    margin: 0 rem(8) 1rem; // [1]
+    margin: 0 unit(1) unit(2); // [1]
 }
 
 //
@@ -86,7 +86,7 @@ legend {
     @include type($type: 'headline');
     display: block;
     width: 100%;
-    margin: 0 0 1rem;
+    margin: 0 0 unit(2);
 }
 
 //
@@ -99,7 +99,7 @@ legend {
 //
 input[type='radio'],
 input[type='checkbox'] {
-    margin-right: rem(8); // [1]
+    margin-right: unit(1); // [1]
 
     &:disabled {
         cursor: not-allowed; // [2]
@@ -158,12 +158,12 @@ button,
 [type='color'],
 select,
 textarea {
-    min-height: rem(24);
+    min-height: unit(3);
 }
 
 input[type='color'] {
     vertical-align: middle; // [1]
-    padding: rem(4);
+    padding: unit(0.5);
 
 }
 

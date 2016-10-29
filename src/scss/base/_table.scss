@@ -7,6 +7,22 @@
 
 //
 // @settings
+
+// Layout Variables
+$table-row-height: unit(6);
+$table-last-row-height: unit(7);
+$table-header-height: $table-last-row-height;
+
+$table-column-spacing: unit(4.5);
+$table-column-padding: $table-column-spacing / 2;
+
+$table-card-header-height: unit(8);
+$table-card-title-top: unit(2.5);
+$table-card-padding: unit(3);
+$table-button-padding-right: unit(2);
+$table-cell-top: $table-card-padding / 2;
+
+//Theme Variables
 $table-header-color: rgba($black, 0.54);
 $table-divider-color: rgba($black, 0.12);
 
@@ -14,19 +30,6 @@ $table-hover-color: $gray-200;
 $table-selection-color: $default-gray-light;
 
 $table-dividers: 1px solid $table-divider-color;
-
-$table-row-height: rem(48);
-$table-last-row-height: rem(56);
-$table-header-height: rem(56);
-
-$table-column-spacing: rem(36);
-$table-column-padding: $table-column-spacing / 2;
-
-$table-card-header-height: rem(64);
-$table-card-title-top: rem(20);
-$table-card-padding: rem(24);
-$table-button-padding-right: 1rem;
-$table-cell-top: $table-card-padding / 2;
 
 
 //
@@ -49,7 +52,7 @@ table {
 
 
     thead {
-        padding-bottom: rem(4);
+        padding-bottom: unit(0.5);
     }
 
     tbody {
@@ -97,6 +100,6 @@ table {
         text-overflow: ellipsis;
         vertical-align: bottom;
         color: $table-header-color;
-        padding-bottom: rem(8);
+        padding-bottom: unit(1);
     }
 }

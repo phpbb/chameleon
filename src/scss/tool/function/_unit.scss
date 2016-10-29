@@ -11,5 +11,5 @@
 // @scss
 @function unit($number) {
     $unit: ($default_unit / 2);
-    @return ($number * Unit);
+    @return ($number * $unit);
 }

@@ -23,7 +23,7 @@ caption {
     text-align: left;
     color: $default-gray;
     margin: 0;
-    padding: rem(8) 0;
+    padding: unit(1) 0;
     caption-side: bottom;
 }
 
@@ -37,5 +37,5 @@ th {
 th,
 td {
     margin: 0;
-    padding: $default-line-height / 2;
+    padding: rem($default-line-height / 2);
 }

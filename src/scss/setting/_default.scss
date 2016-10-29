@@ -16,7 +16,7 @@ $default-border-radius: 0.125rem !default;
 
 $default-unit: 1rem !default;
 
-$default-grid-gutter: 16px;
+$default-grid-gutter: $default-unit;
 
 // Grid
 $small: 600px;

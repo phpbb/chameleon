@@ -19,6 +19,8 @@
 
 //
 // @settings
+
+// Theme Variables
 $link-color: $default-primary-color !default;
 $link-hover-color: $default-primary-dark-color !default;
 
@@ -38,7 +40,7 @@ a {
         // Default
         outline: thin dotted;
         // WebKit
-        outline: 4px auto -webkit-focus-ring-color;
-        outline-offset: -2px;
+        outline: unit(0.5) auto -webkit-focus-ring-color;
+        outline-offset: -unit(0.125);
     }
 }

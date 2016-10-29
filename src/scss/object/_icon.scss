@@ -7,7 +7,8 @@
 
 //
 // @settings
-$icon-size: 24px !default;
+$icon-size: rem(24px) !default;
+$icon-spacing: unit(1) !default;
 
 //
 // @scss
@@ -20,12 +21,12 @@ $icon-size: 24px !default;
 
 .icon {
     vertical-align: middle;
-    width: rem($icon-size);
-    height: rem($icon-size);
-    margin-right: 0.5rem;
+    width: $icon-size;
+    height: $icon-size;
+    margin-right: $icon-spacing;
 }
 
 .icon-font {
-    @include font-size($icon-size, false);
+    @include typo-icon($icon-size);
     vertical-align: baseline;
 }

@@ -7,6 +7,11 @@
 
 //
 // @settings
+
+// Layout Variables
+$base-unit: $default-unit !default;
+
+// Theme Variables
 $base-code-font-family: $default-code-font;
 
 $base-code-bg: $gray-200 !default;
@@ -43,7 +48,7 @@ kbd {
     background-color: $base-code-bg;
     border-radius: $base-code-border-radius;
     color: $base-code-color;
-    padding: rem(2) rem(4);
+    padding: unit(0.25) unit(0.5);
 }
 
 // User input typically entered via keyboard
@@ -73,8 +78,8 @@ pre {
     color: $base-pre-color;
     display: block;
     margin-top: 0;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: $base-unit;
+    padding: $base-unit;
 
     // Account for some code outputs that place code tags in pre tags
     code {
