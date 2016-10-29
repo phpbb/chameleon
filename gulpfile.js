@@ -9,6 +9,7 @@ var csso = require('gulp-csso');
 var postcss = require('gulp-postcss');
 var sorting = require('postcss-sorting');
 var stripComments = require('postcss-discard-comments');
+var stylefmt = require('gulp-stylefmt');
 var del = require('del');
 var pkg = require('./package.json');
 
@@ -29,8 +30,6 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 var render = function (layer) {
-	'use strict';
-
 	var css = gulp
 	.src(build.scss + layer + '.scss')
 	.pipe(sourcemaps.init())
@@ -51,6 +50,7 @@ var render = function (layer) {
 			})
 		])
 	)
+	.pipe(stylefmt())
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'
