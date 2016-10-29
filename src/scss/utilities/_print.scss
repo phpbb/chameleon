@@ -47,7 +47,7 @@
 
     pre,
     blockquote {
-        border: 1px solid $default-gray;
+        border: $default-border-size solid $default-gray;
         page-break-inside: avoid;
     }
 

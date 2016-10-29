@@ -38,12 +38,12 @@ abbr[title] {
 }
 
 abbr[title] {
-    border-bottom: 1px dotted $default-gray;
+    border-bottom: $default-border-size dotted $default-gray;
 }
 
 // Apply faux underlines to inserted text via `border-bottom`.
 ins {
-    border-bottom: 1px solid;
+    border-bottom: $default-border-size solid;
 }
 
 // Give a help cursor to elements that give extra info on `:hover`.

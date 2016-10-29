@@ -29,8 +29,8 @@ form {
 //
 button {
     background: transparent;
-    border: 1px solid $default-gray;
     padding: rem(2) rem(4);
+    border: $default-border-size solid $default-gray;
     cursor: pointer;
 
     &:focus {
