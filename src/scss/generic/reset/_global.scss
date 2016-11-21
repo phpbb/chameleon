@@ -22,28 +22,28 @@
 // 6. Make html take up the entire screen
 //
 html {
-    -moz-osx-font-smoothing: grayscale; // [3]
-     -webkit-font-smoothing: antialiased; /* stylelint-disable-line indentation */
-    -ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
-    overflow-y: scroll; // [1]
-    width: 100%; // [6]
-    height: 100%; // [6]
-    min-height: 100%; // [2]
-    -ms-touch-action: manipulation; // [5]
-        touch-action: manipulation; /* stylelint-disable-line indentation */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
+	-moz-osx-font-smoothing: grayscale; // [3]
+	-webkit-font-smoothing: antialiased; /* stylelint-disable-line indentation */
+	-ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
+	overflow-y: scroll; // [1]
+	width: 100%; // [6]
+	height: 100%; // [6]
+	min-height: 100%; // [2]
+	-ms-touch-action: manipulation; // [5]
+	touch-action: manipulation; /* stylelint-disable-line indentation */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
 }
 
 body {
-    width: 100%;
-    min-height: 100%;
+	width: 100%;
+	min-height: 100%;
 }
 
 //
 // Removes the default spacing and border for appropriate elements.
 //
 iframe {
-    border: 0;
+	border: 0;
 }
 
 //
@@ -57,7 +57,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 //
@@ -83,9 +83,9 @@ input,
 label,
 select,
 summary,
-textarea
+textarea,
 [tabindex] {
-    touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 //
@@ -96,35 +96,35 @@ textarea
 // Customize the background color to match your design.
 //
 ::-moz-selection {
-    background: $blue-200;
-    text-shadow: none;
+	background: $blue-200;
+	text-shadow: none;
 }
 
 ::selection {
-    background: $blue-200;
-    color: #ffffff;
-    text-shadow: none;
+	background: $blue-200;
+	color: #ffffff;
+	text-shadow: none;
 }
 
 //
 // use current current as the default fill of svg elements
 //
 svg {
-    fill: currentColor;
+	fill: currentColor;
 }
 
 //
 // specify the progress cursor of updating elements
 //
 [aria-busy='true'] {
-    cursor: progress;
+	cursor: progress;
 }
 
 //
 // specify the pointer cursor of trigger elements
 //
 [aria-controls] {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 //
@@ -132,18 +132,18 @@ svg {
 // inoperable elements
 //
 [aria-disabled] {
-    cursor: default;
+	cursor: default;
 }
 
 //
 // specify the style of visually hidden yet accessible elements
 //
 [hidden][aria-hidden='false'] {
-    position: absolute;
-    display: inherit;
-    clip: rect(0 0 0 0);
+	position: absolute;
+	display: inherit;
+	clip: rect(0 0 0 0);
 
-    &:focus {
-        clip: auto;
-    }
+	&:focus {
+		clip: auto;
+	}
 }

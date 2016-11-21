@@ -12,30 +12,30 @@
 // 2. No longer part of Normalize since v4
 //
 table {
-    @include vertical-rhythm();
-    background-color: transparent; // [1]
-    border-spacing: 0; // from inuit
-    border-collapse: collapse; // [2]
-    width: 100%;
+	@include vertical-rhythm();
+	background-color: transparent; // [1]
+	border-collapse: collapse; // [2]
+	border-spacing: 0; // from inuit
+	width: 100%;
 }
 
 caption {
-    text-align: left;
-    color: $default-gray;
-    margin: 0;
-    padding: unit(1) 0;
-    caption-side: bottom;
+	text-align: left;
+	color: $default-gray;
+	margin: 0;
+	padding: unit(1) 0;
+	caption-side: bottom;
 }
 
 //
 // Centered by default, but left-aligned to match the `td`s below.
 //
 th {
-    text-align: left;
+	text-align: left;
 }
 
 th,
 td {
-    margin: 0;
-    padding: rem($default-line-height / 2);
+	margin: 0;
+	padding: rem($default-line-height / 2);
 }

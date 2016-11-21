@@ -34,17 +34,17 @@ $base-input-invalid-color: $default-important-light-color;
 //
 // @scss
 form {
-    span {
-        display: block;
-        @include vertical-rhythm();
-    }
-    @media (min-width: $bp-medium) {
-        span {
-            vertical-align: middle;
-            display: inline-block;
-            margin-bottom: 0;
-        }
-    }
+	span {
+		display: block;
+		@include vertical-rhythm();
+	}
+	@media (min-width: $bp-medium) {
+		span {
+			vertical-align: middle;
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
 }
 
 
@@ -73,60 +73,60 @@ form {
 [type='color'],
 select,
 textarea {
-    background-color: $base-input-background-color;
-    border: $base-input-border-width solid $base-input-border-color;
-    border-radius: $base-input-border-radius;
-    color: $base-input-color;
-    display: block;
-    @media (min-width: $bp-medium) {
-        display: inline-block;
-    }
-    width: 100%;
-    height: $base-input-height; // [1]
-    padding: unit(1);
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	background-color: $base-input-background-color;
+	border: $base-input-border-width solid $base-input-border-color;
+	border-radius: $base-input-border-radius;
+	color: $base-input-color;
+	display: block;
+	@media (min-width: $bp-medium) {
+		display: inline-block;
+	}
+	width: 100%;
+	height: $base-input-height; // [1]
+	padding: unit(1);
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
-    &:hover {
-        border-color: $base-input-border-hover-color;
-    }
+	&:hover {
+		border-color: $base-input-border-hover-color;
+	}
 
-    &:focus {
-        background-color: $base-input-background-focus-color;
-        border-color: $base-input-border-focus-color;
-        color: $base-input-border-focus-color;
-        outline: none;
-    }
+	&:focus {
+		background-color: $base-input-background-focus-color;
+		border-color: $base-input-border-focus-color;
+		color: $base-input-border-focus-color;
+		outline: none;
+	}
 
-    &::placeholder {
-        color: $base-input-placeholder-color;
-        opacity: 1; // [4]
-    }
+	&::placeholder {
+		color: $base-input-placeholder-color;
+		opacity: 1; // [4]
+	}
 
-    // Disabled and read-only inputs
-    //
-    // HTML5 says that controls under a fieldset > legend:first-child won't be
-    // disabled if the fieldset is disabled. Due to implementation difficulty, we
-    // don't honor that edge case; we style them as disabled anyway.
-    &:disabled,
-    &[readonly] {
-        background-color: $base-input-disabled-color;
-        opacity: 1; // [5]
-    }
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&:disabled,
+	&[readonly] {
+		background-color: $base-input-disabled-color;
+		opacity: 1; // [5]
+	}
 
-    &:disabled {
-        cursor: not-allowed;
-    }
+	&:disabled {
+		cursor: not-allowed;
+	}
 
-    &:focus:invalid,
-    &:focus:invalid,
-    &:focus:invalid {
-        border-color: $base-input-invalid-border-color;
-        color: $base-input-invalid-color;
-    }
+	&:focus:invalid,
+	&:focus:invalid,
+	&:focus:invalid {
+		border-color: $base-input-invalid-border-color;
+		color: $base-input-invalid-color;
+	}
 }
 
 textarea {
-    height: auto;
+	height: auto;
 }
 
 //
@@ -136,56 +136,56 @@ textarea {
 //    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
 select {
-    background-color: $base-input-background-color;
-    background-origin: content-box;
-    @include background-triangle($base-input-border-color);
-    background-position: right -unit(2) center;
-    background-repeat: no-repeat;
-    background-size: 9px 6px;
-    display: inline-block;
-    min-width: unit(10);
-    max-width: 100%;
-    padding: unit(1) unit(4.5) unit(1) unit(2);
+	background-color: $base-input-background-color;
+	background-origin: content-box;
+	@include background-triangle($base-input-border-color);
+	background-position: right -unit(2) center;
+	background-repeat: no-repeat;
+	background-size: 9px 6px;
+	display: inline-block;
+	min-width: unit(10);
+	max-width: 100%;
+	padding: unit(1) unit(4.5) unit(1) unit(2);
 
-    &:hover,
-    &:focus {
-        @include background-triangle($base-input-border-hover-color);
-    }
+	&:hover,
+	&:focus {
+		@include background-triangle($base-input-border-hover-color);
+	}
 
-    &:focus::-ms-value {
-        background-color: $base-input-background-color; // [1]
-        @include background-triangle($base-input-border-hover-color);
-        color: $base-input-color; // [1]
-    }
+	&:focus::-ms-value {
+		background-color: $base-input-background-color; // [1]
+		@include background-triangle($base-input-border-hover-color);
+		color: $base-input-color; // [1]
+	}
 
-    &:focus:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 $black;
-    }
+	&:focus:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $black;
+	}
 
-    &[multiple='multiple'] {
-        background-image: none;
-    }
+	&[multiple='multiple'] {
+		background-image: none;
+	}
 }
 
 input[type='color'] {
-    width: $base-input-height;
-    height: $base-input-height;
+	width: $base-input-height;
+	height: $base-input-height;
 }
 
 //
 // Make file inputs better match text inputs by forcing them to new lines.
 input[type='file'],
 input[type='range'] {
-    display: block;
+	display: block;
 }
 
 input[type='file'],
 input[type='radio'],
 input[type='checkbox'] {
-    &:focus:invalid:focus {
-        outline-color: $base-input-invalid-border-color;
-    }
+	&:focus:invalid:focus {
+		outline-color: $base-input-invalid-border-color;
+	}
 }
 
 // Remove default checkbox
@@ -193,160 +193,170 @@ input[type='checkbox'] {
 [type='checkbox']:checked,
 [type='radio']:not(:checked),
 [type='radio']:checked {
-    opacity: 0;
-    position: absolute;
-    left: -9999px;
+	opacity: 0;
+	position: absolute;
+	left: -9999px;
 }
 
 // Default Styles
 [type='checkbox'],
 [type='radio'] {
-    & + label {
-        position: relative;
-        display: inline-block;
-        margin: 0 unit(1);
-        padding-left: unit(4);
-        cursor: pointer;
-        user-select: none;
-        transition: 0.28s ease;
-    }
+	& + label {
+		position: relative;
+		display: inline-block;
+		margin: 0 unit(1);
+		padding-left: unit(4);
+		cursor: pointer;
+		user-select: none;
+		transition: 0.28s ease;
+	}
 }
 
 [type='checkbox'] {
-    + label:before {
-        border: $base-input-border-width solid $base-input-border-color;
-        border-radius: unit(0.125);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: unit(2);
-        height: unit(2);
-        margin-top: unit(0.25);
-        content: '';
-        transition: 0.2s;
-    }
+	+ label:before {
+		border: $base-input-border-width solid $base-input-border-color;
+		border-radius: unit(0.125);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: unit(2);
+		height: unit(2);
+		margin-top: unit(0.25);
+		content: '';
+		transition: 0.2s;
+	}
 
-    &:hover + label:before {
-        border-color: $base-input-border-hover-color;
-    }
+	&:hover + label:before {
+		border-color: $base-input-border-hover-color;
+	}
 
-    &:not(:checked):disabled + label:before {
-        background-color: $base-input-disabled-color;
-        border: none;
-    }
+	&:not(:checked):disabled + label:before {
+		background-color: $base-input-disabled-color;
+		border: none;
+	}
 }
 
 [type='checkbox']:checked {
-    + label:before {
-        border-top: $base-input-border-width solid transparent;
-        border-right: $base-input-border-width solid $base-input-border-hover-color;
-        border-bottom: $base-input-border-width solid $base-input-border-hover-color;
-        border-left: $base-input-border-width solid transparent;
-        top: -unit(0.5);
-        left: -5px;
-        width: unit(1.5);
-        height: unit(2.25);
-        transform: rotate(40deg);
-        transform-origin: 100% 100%;
-        backface-visibility: hidden;
-    }
+	+ label:before {
+		border-top: $base-input-border-width solid transparent;
+		border-right: $base-input-border-width solid $base-input-border-hover-color;
+		border-bottom: $base-input-border-width solid $base-input-border-hover-color;
+		border-left: $base-input-border-width solid transparent;
+		top: -unit(0.5);
+		left: -5px;
+		width: unit(1.5);
+		height: unit(2.25);
+		transform: rotate(40deg);
+		transform-origin: 100% 100%;
+		backface-visibility: hidden;
+	}
 
-    &:disabled + label:before {
-        border-right: $base-input-border-width solid $base-input-disabled-color;
-        border-bottom: $base-input-border-width solid $base-input-disabled-color;
-    }
+	&:disabled + label:before {
+		border-right: $base-input-border-width solid $base-input-disabled-color;
+		border-bottom: $base-input-border-width solid $base-input-disabled-color;
+	}
 }
 
 // Indeterminate checkbox
 [type='checkbox']:indeterminate {
-    + label:before {
-        border-top: none;
-        border-right: $base-input-border-width solid $base-input-invalid-border-color;
-        border-bottom: none;
-        border-left: none;
-        top: -11px;
-        left: -unit(1.5);
-        height: unit(2.25);
-        transform: rotate(90deg);
-        transform-origin: 100% 100%;
-        backface-visibility: hidden;
-    }
+	+ label:before {
+		border-top: none;
+		border-right: $base-input-border-width solid $base-input-invalid-border-color;
+		border-bottom: none;
+		border-left: none;
+		top: -11px;
+		left: -unit(1.5);
+		height: unit(2.25);
+		transform: rotate(90deg);
+		transform-origin: 100% 100%;
+		backface-visibility: hidden;
+	}
 
-    // Disabled indeterminate
-    &:disabled + label:before {
-        background-color: transparent;
-        border-right: $base-input-border-width solid $base-input-disabled-color;
-    }
+	// Disabled indeterminate
+	&:disabled + label:before {
+		background-color: transparent;
+		border-right: $base-input-border-width solid $base-input-disabled-color;
+	}
 }
 
 [type='radio'] {
-    & + label:before,
-    & + label:after {
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: unit(2);
-        height: unit(2);
-        margin: unit(0.5) unit(0.5) unit(0.5) 0;
-        content: '';
-        transition: 0.28s ease;
-    }
+	& + label:before,
+	& + label:after {
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: unit(2);
+		height: unit(2);
+		margin: unit(0.5) unit(0.5) unit(0.5) 0;
+		content: '';
+		transition: 0.28s ease;
+	}
 
-    &:not(:checked) + label {
-        &:before,
-        &:after {
-            border: $base-input-border-width solid $base-input-border-color;
-        }
+	&:not(:checked) + label {
+		&:before,
+		&:after {
+			border: $base-input-border-width solid $base-input-border-color;
+		}
 
-        &:after {
-            opacity: 0;
-            z-index: -1;
-            transform: scale(2);
-        }
-    }
+		&:after {
+			opacity: 0;
+			z-index: -1;
+			transform: scale(2);
+		}
+	}
 
-    &:hover + label:before {
-        border-color: $base-input-border-hover-color;
-    }
+	&:hover + label:before {
+		border-color: $base-input-border-hover-color;
+	}
 
-    // Checked
-    &:checked + label {
-        &:before {
-            border: $base-input-border-width solid $base-input-border-hover-color;
-        }
+	// Checked
+	&:checked + label {
+		&:before {
+			border: $base-input-border-width solid $base-input-border-hover-color;
+		}
 
-        &:after {
-            background-color: $base-input-border-hover-color;
-            z-index: 0;
-            transform: scale(0.5);
-            transform: opacity(1);
-        }
-    }
+		&:after {
+			background-color: $base-input-border-hover-color;
+			z-index: 0;
+			transform: scale(0.5), opacity(1);
+		}
+	}
 
-    // Disabled style
-    &:disabled {
-        + label {
-            color: $base-input-disabled-color;
-        }
+	// Disabled style
+	&:disabled {
+		+ label {
+			color: $base-input-disabled-color;
+		}
 
-        &:checked + label:before,
-        &:not(:checked) + label:before {
-            border: $base-input-border-width solid $base-input-disabled-color;
-        }
+		&:checked + label:before,
+		&:not(:checked) + label:before {
+			border: $base-input-border-width solid $base-input-disabled-color;
+		}
 
-        :checked + label:after {
-            background-color: $base-input-disabled-color;
-            border: none;
-        }
-    }
+		:checked + label:after {
+			background-color: $base-input-disabled-color;
+			border: none;
+		}
+	}
 }
 
 //
 // Placeholder Colour
-::-webkit-input-placeholder { color: $base-input-placeholder-color; }
-:-moz-placeholder { color: $base-input-placeholder-color; }
-::-moz-placeholder { color: $base-input-placeholder-color; }
-:-ms-input-placeholder { color: $base-input-placeholder-color; }
+::-webkit-input-placeholder {
+	color: $base-input-placeholder-color;
+}
+
+:-moz-placeholder {
+	color: $base-input-placeholder-color;
+}
+
+::-moz-placeholder {
+	color: $base-input-placeholder-color;
+}
+
+:-ms-input-placeholder {
+	color: $base-input-placeholder-color;
+}

@@ -27,37 +27,37 @@ $wide: 1152px;
 //
 // Set up the default container and grid class for mobile browsers
 .container {
-    max-width: $small;
-    margin: $grid-gutter auto;
+	max-width: $small;
+	margin: $grid-gutter auto;
 
-    //
-    // Establist container sizes for all devices larger than mobile
+	//
+	// Establist container sizes for all devices larger than mobile
 
-    //
-    // Tablet
-    @media (min-width: $bp-medium) {
-        max-width: $medium;
-    }
+	//
+	// Tablet
+	@media (min-width: $bp-medium) {
+		max-width: $medium;
+	}
 
-    //
-    // Desktop
-    @media (min-width: $bp-large) {
-        max-width: $large;
-    }
+	//
+	// Desktop
+	@media (min-width: $bp-large) {
+		max-width: $large;
+	}
 
-    //
-    // Widescreen
-    @media (min-width: $bp-wide) {
-        max-width: $wide;
-    }
+	//
+	// Widescreen
+	@media (min-width: $bp-wide) {
+		max-width: $wide;
+	}
 }
 
 .o-grid {
-    width: 100%;
+	width: 100%;
 
-    //
-    // Set up the grid to work on larger devices
-    @media (min-width: $bp-medium) {
-        @include o-grid();
-    }
+	//
+	// Set up the grid to work on larger devices
+	@media (min-width: $bp-medium) {
+		@include o-grid();
+	}
 }

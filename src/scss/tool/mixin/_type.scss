@@ -11,163 +11,163 @@
 //
 // @scss
 @mixin type($type, $color-contrast: false) {
-    @if $type == 'caption' {
-        @include font-size(12px, false);
-        font-weight: 400;
-        line-height: unitless(20px);
+	@if $type == 'caption' {
+		@include font-size(12px, false);
+		font-weight: 400;
+		line-height: unitless(20px);
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'body1' {
-        @include font-size(13px);
-        @media (min-width: $bp-medium) {
-            @include font-size(14px);
-        }
-        font-weight: 400;
+	@if $type == 'body1' {
+		@include font-size(13px);
+		@media (min-width: $bp-medium) {
+			@include font-size(14px);
+		}
+		font-weight: 400;
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'body2' {
-        @include font-size(14px);
-        @media (min-width: $bp-medium) {
-            @include font-size(16px);
-        }
-        font-weight: 500;
+	@if $type == 'body2' {
+		@include font-size(14px);
+		@media (min-width: $bp-medium) {
+			@include font-size(16px);
+		}
+		font-weight: 500;
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'button' {
-        @include font-size(14px);
-        font-weight: 500;
-        text-transform: uppercase;
+	@if $type == 'button' {
+		@include font-size(14px);
+		font-weight: 500;
+		text-transform: uppercase;
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 
-    @if $type == 'menu' {
-        @include font-size(13px);
-        @media (min-width: $bp-medium) {
-            @include font-size(14px);
-        }
-        font-weight: 500;
+	@if $type == 'menu' {
+		@include font-size(13px);
+		@media (min-width: $bp-medium) {
+			@include font-size(14px);
+		}
+		font-weight: 500;
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 
-    @if $type == 'subhead' {
-        @include font-size(15px, false);
-        @media (min-width: $bp-medium) {
-            @include font-size(16px, false);
-        }
-        font-weight: 400;
-        line-height: unitless(24px);
+	@if $type == 'subhead' {
+		@include font-size(15px, false);
+		@media (min-width: $bp-medium) {
+			@include font-size(16px, false);
+		}
+		font-weight: 400;
+		line-height: unitless(24px);
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'title' {
-        @include font-size(20px, false);
-        font-weight: 500;
-        letter-spacing: 2px;
-        line-height: unitless(28px);
+	@if $type == 'title' {
+		@include font-size(20px, false);
+		font-weight: 500;
+		letter-spacing: 2px;
+		line-height: unitless(28px);
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'headline' {
-        -moz-osx-font-smoothing: grayscale;
-        @include font-size(24px, false);
-        font-weight: 400;
-        letter-spacing: 1px;
-        line-height: unitless(32px);
+	@if $type == 'headline' {
+		-moz-osx-font-smoothing: grayscale;
+		@include font-size(24px, false);
+		font-weight: 400;
+		letter-spacing: 1px;
+		line-height: unitless(32px);
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'blockquote' {
-        @include font-size(24px);
-        font-style: italic;
-        font-weight: 300;
-        letter-spacing: 1px;
-        position: relative;
+	@if $type == 'blockquote' {
+		@include font-size(24px);
+		font-style: italic;
+		font-weight: 300;
+		letter-spacing: 1px;
+		position: relative;
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 
-    @if $type == 'display1' {
-        @include font-size(34px, false);
-        font-weight: 400;
-        line-height: unitless(40px);
+	@if $type == 'display1' {
+		@include font-size(34px, false);
+		font-weight: 400;
+		line-height: unitless(40px);
 
-        @if $color-contrast {
-            opacity: 0.87;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.87;
+		}
+	}
 
-    @if $type == 'display2' {
-        @include font-size(45px, false);
-        font-weight: 400;
-        line-height: unitless(48px);
+	@if $type == 'display2' {
+		@include font-size(45px, false);
+		font-weight: 400;
+		line-height: unitless(48px);
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 
-    @if $type == 'display3' {
-        @include font-size(56px, false);
-        font-weight: 400;
-        letter-spacing: -2px;
-        line-height: unitless(64px);
+	@if $type == 'display3' {
+		@include font-size(56px, false);
+		font-weight: 400;
+		letter-spacing: -2px;
+		line-height: unitless(64px);
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 
-    @if $type == 'display4' {
-        @include font-size(112px);
-        font-weight: 300;
-        letter-spacing: -5px;
+	@if $type == 'display4' {
+		@include font-size(112px);
+		font-weight: 300;
+		letter-spacing: -5px;
 
-        @if $color-contrast {
-            opacity: 0.54;
-        }
-    }
+		@if $color-contrast {
+			opacity: 0.54;
+		}
+	}
 }
 
 @mixin typo-icon($size: $default-icon-md) {
-    -webkit-font-feature-settings: 'liga';
-            font-feature-settings: 'liga'; /* stylelint-disable-line indentation */
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Material Icons';
-    font-size: $size;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: normal;
-    line-height: 1;
-    text-transform: none;
-    word-wrap: normal;
-    display: inline-block;
+	-webkit-font-feature-settings: 'liga';
+	font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Material Icons';
+	font-size: $size;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 1;
+	text-transform: none;
+	word-wrap: normal;
+	display: inline-block;
 }

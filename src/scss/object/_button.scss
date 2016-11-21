@@ -41,68 +41,68 @@ $btn-border-color: $default-gray !default;
 // 8. Prevent button text from being selectable.
 //
 .o-btn {
-    @include type($type: 'button');
-    line-height: $btn-height; // google material design
-    text-align: center; // [4]
-    text-decoration: none; // [4]
-    vertical-align: middle; // [2]
-    white-space: nowrap; // bs only
-    background-color: $btn-background-color;
-    border-color: $btn-border-color;
-    border-radius: $btn-border-radius;
-    border-style: $btn-border-style;
-    border-width: $btn-border-size;
-    // @include shadow-2dp();
-    color: $btn-color;
-    outline: none; // google material design
-    display: inline-block; // [1]
-    overflow: visible; // [6]
-    min-width: $btn-min-width; // google material design
-    margin: 0; // [4]
-    padding: 0 $btn-padding; // [7]
-    cursor: pointer;
-    user-select: none; // [8]
-    transition:
-        box-shadow 0.2s $animation-curve-fast-out-linear-in,
-        background-color 0.2s $default-animation-curve,
-        color 0.2s $default-animation-curve; // google material design
+	@include type($type: 'button');
+	line-height: $btn-height; // google material design
+	text-align: center; // [4]
+	text-decoration: none; // [4]
+	vertical-align: middle; // [2]
+	white-space: nowrap; // bs only
+	background-color: $btn-background-color;
+	border-color: $btn-border-color;
+	border-radius: $btn-border-radius;
+	border-style: $btn-border-style;
+	border-width: $btn-border-size;
+	// @include shadow-2dp();
+	color: $btn-color;
+	outline: none; // google material design
+	display: inline-block; // [1]
+	overflow: visible; // [6]
+	min-width: $btn-min-width; // google material design
+	margin: 0; // [4]
+	padding: 0 $btn-padding; // [7]
+	cursor: pointer;
+	user-select: none; // [8]
+	transition:
+		box-shadow 0.2s $animation-curve-fast-out-linear-in,
+		background-color 0.2s $default-animation-curve,
+		color 0.2s $default-animation-curve; // google material design
 
-    // UI states
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration: none;  // [4]
-        color: $btn-color;
-        outline: none;
-    }
+	// UI states
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;  // [4]
+		color: $btn-color;
+		outline: none;
+	}
 
-    &:hover {
-        border-color: $btn-hover-color;
-        // @include shadow-4dp();
-    }
+	&:hover {
+		border-color: $btn-hover-color;
+		// @include shadow-4dp();
+	}
 
-    &:focus {
-        border-color: $btn-hover-color;
-        // @include focus-shadow();
-    }
+	&:focus {
+		border-color: $btn-hover-color;
+		// @include focus-shadow();
+	}
 
-    &:active {
-        background-color: $btn-active-color;
-        background-image: none;
-        border-color: $btn-hover-color;
-        color: $btn-background-color;
-        // @include shadow-4dp();
-    }
+	&:active {
+		background-color: $btn-active-color;
+		background-image: none;
+		border-color: $btn-hover-color;
+		color: $btn-background-color;
+		// @include shadow-4dp();
+	}
 
-    &:disabled {
-        background-color: transparent;
-        box-shadow: none;
-        cursor: default;
-    }
+	&:disabled {
+		background-color: transparent;
+		box-shadow: none;
+		cursor: default;
+	}
 
-    // Remove excess padding and border in Firefox 4+
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+	// Remove excess padding and border in Firefox 4+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
 }

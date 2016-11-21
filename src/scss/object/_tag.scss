@@ -18,20 +18,20 @@ $tag-color: $default-gray-dark !default;
 //
 // @scss
 .o-tag {
-    text-align: center;
-    vertical-align: middle;
-    @media (min-width: $bp-medium) {
-        white-space: nowrap;
-    }
-    background-color: $tag-background-color;
-    border-radius: $tag-border-radius;
-    color: $tag-color;
-    display: inline-block;
-    margin-left: unit(1);
-    padding: unit(0.25) unit(0.5);
+	text-align: center;
+	vertical-align: middle;
+	@media (min-width: $bp-medium) {
+		white-space: nowrap;
+	}
+	background-color: $tag-background-color;
+	border-radius: $tag-border-radius;
+	color: $tag-color;
+	display: inline-block;
+	margin-left: unit(1);
+	padding: unit(0.25) unit(0.5);
 
-    // Empty tags collapse automatically
-    &:empty {
-        display: none;
-    }
+	// Empty tags collapse automatically
+	&:empty {
+		display: none;
+	}
 }

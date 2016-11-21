@@ -27,20 +27,20 @@ $link-hover-color: $default-primary-dark-color !default;
 //
 // @scss
 a {
-    text-decoration: none;
-    color: $link-color;
+	text-decoration: none;
+	color: $link-color;
 
-    &:focus,
-    &:hover {
-        text-decoration: underline;
-        color: $link-hover-color;
-    }
-
-    &:focus {
-        // Default
-        outline: thin dotted;
-        // WebKit
-        outline: unit(0.5) auto -webkit-focus-ring-color;
-        outline-offset: -unit(0.125);
-    }
+	&:focus,
+	&:hover {
+		text-decoration: underline;
+		color: $link-hover-color;
+	}
+	/* stylelint-disable declaration-block-no-duplicate-properties */
+	&:focus {
+		// Default
+		outline: thin dotted;
+		// WebKit
+		outline: unit(0.5) auto -webkit-focus-ring-color;
+		outline-offset: -unit(0.125);
+	}
 }

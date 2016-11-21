@@ -14,8 +14,8 @@
 //
 // @scss
 @mixin font-size($font-size, $line-height: true) {
-    font-size: rem($font-size);
-    @if $line-height == true {
-        line-height: ceil($font-size / $default-line-height) * ($default-line-height / $font-size);
-    }
+	font-size: rem($font-size);
+	@if $line-height == true {
+		line-height: ceil($font-size / $default-line-height) * ($default-line-height / $font-size);
+	}
 }

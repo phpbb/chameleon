@@ -10,6 +10,6 @@
 //
 // @scss
 @function unit($number) {
-    $unit: ($default_unit / 2);
-    @return ($number * $unit);
+	$unit: ($default_unit / 2);
+	@return ($number * $unit);
 }

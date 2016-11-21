@@ -21,29 +21,29 @@ $bp-wide: 1200px;
 //
 // @scss
 @mixin o-grid {
-    margin-top: -($grid-gutter / 2);
-    margin-right: -($grid-gutter / 2);
-    margin-left: -($grid-gutter / 2);
+	margin-top: -($grid-gutter / 2);
+	margin-right: -($grid-gutter / 2);
+	margin-left: -($grid-gutter / 2);
 
-    &:last-child {
-        margin-bottom: -($grid-gutter / 2);
-    }
+	&:last-child {
+		margin-bottom: -($grid-gutter / 2);
+	}
 
-    &:not(:last-child) {
-        margin-bottom: ($grid-gutter / 2);
-    }
+	&:not(:last-child) {
+		margin-bottom: ($grid-gutter / 2);
+	}
 }
 
 @mixin o-col() {
-    display: flex;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    padding: ($grid-gutter / 2);
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: wrap;
+	padding: ($grid-gutter / 2);
 }
 
 @mixin o-col-width($w: 0) {
-    flex: none;
-    width: percentage($w / 12);
+	flex: none;
+	width: percentage($w / 12);
 }

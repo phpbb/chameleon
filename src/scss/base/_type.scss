@@ -14,78 +14,78 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-    @include type($type: 'display3', $color-contrast: true);
-    font-size: 60%;
-    display: block;
+	@include type($type: 'display3', $color-contrast: true);
+	font-size: 60%;
+	display: block;
 }
 
 h1 {
-    @include type($type: 'display3');
+	@include type($type: 'display3');
 }
 
 h2 {
-    @include type($type: 'display2');
+	@include type($type: 'display2');
 }
 
 h3 {
-    @include type($type: 'display1');
+	@include type($type: 'display1');
 }
 
 h4 {
-    @include type($type: 'headline');
+	@include type($type: 'headline');
 }
 
 h5 {
-    @include type($type: 'title');
+	@include type($type: 'title');
 }
 
 h6 {
-    @include type($type: 'subhead');
+	@include type($type: 'subhead');
 }
 
 p {
-    @include type($type: 'body1');
+	@include type($type: 'body1');
 }
 
 blockquote {
-    @include type($type: 'blockquote');
-    @include space(margin-left);
+	@include type($type: 'blockquote');
+	@include space(margin-left);
 
-    p {
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
+	p {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
 
-        &:before {
-            content: '“';
-            content: open-quote;
-        }
+		&:before {
+			content: '“';
+			// content: open-quote;
+		}
 
-        &:after {
-            content: '';
-            content: no-close-quote;
-        }
+		&:after {
+			content: '';
+			// content: no-close-quote;
+		}
 
-        &:last-of-type:after {
-            content: '”';
-            content: close-quote;
-        }
-    }
+		&:last-of-type:after {
+			content: '”';
+			// content: close-quote;
+		}
+	}
 }
 
 mark {
-    background-color: $yellow-200;
+	background-color: $yellow-200;
 }
 
 cite {
-    @include type($type: 'caption');
+	@include type($type: 'caption');
 }
 
 address {
-    @include type($type: 'body1');
+	@include type($type: 'body1');
 }
 
 ul,
 ol {
-    @include type($type: 'body1');
+	@include type($type: 'body1');
 }

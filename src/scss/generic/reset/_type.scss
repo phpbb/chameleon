@@ -20,112 +20,111 @@ h3,
 h4,
 h5,
 h6 {
-    @include vertical-rhythm();
+	@include vertical-rhythm();
 }
 
 //
 // Reestablish margins on paragraphs
 //
 p {
-    @include vertical-rhythm();
+	@include vertical-rhythm();
 }
 
 // Remove underlines from potentially troublesome elements.
 u,
 ins,
 abbr[title] {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 abbr[title] {
-    border-bottom: $default-border-size dotted $default-gray;
+	border-bottom: $default-border-size dotted $default-gray;
 }
 
 // Apply faux underlines to inserted text via `border-bottom`.
 ins {
-    border-bottom: $default-border-size solid;
+	border-bottom: $default-border-size solid;
 }
 
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title],
 dfn[title] {
-    cursor: help;
+	cursor: help;
 }
 
 address {
-    @include vertical-rhythm();
-    font-style: normal;
-    line-height: inherit;
+	@include vertical-rhythm();
+	font-style: normal;
+	line-height: inherit;
 }
 
 ol,
 ul,
 dd {
-    @include vertical-rhythm();
-    @include space(margin-left);
+	@include vertical-rhythm();
+	@include space(margin-left);
 }
 
 dl {
-    @include vertical-rhythm();
+	@include vertical-rhythm();
 }
 
 li > ul,
 li > ol {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 nav ol,
 nav ul {
-    list-style: none;
+	list-style: none;
 }
 
 nav > ol,
 nav > ul {
-    @include vertical-rhythm();
-    padding: 0;
+	@include vertical-rhythm();
+	padding: 0;
 }
 
 dt {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 //
 // 1. Hang the opening quote of the blockquote.
 //
 blockquote {
-    @include vertical-rhythm();
-    text-indent: -0.41em; // [1]
+	@include vertical-rhythm();
+	text-indent: -0.41em; // [1]
 }
 
 q {
-    quotes: '‘' '’' '“' '”';
+	quotes: '‘' '’' '“' '”';
 
-    &:before {
-        content: '‘';
-        content: open-quote;
-    }
+	&:before {
+		content: '‘';
+		// content: open-quote;
+	}
 
-    &:after {
-        content: '’';
-        content: close-quote;
-    }
+	&:after {
+		content: '’';
+		// content: close-quote;
+	}
 
-    q:before {
-        content: '“';
-        content: open-quote;
-    }
+	q:before {
+		content: '“';
+		// content: open-quote;
+	}
 
-    q:after {
-        content: '”';
-        content: close-quote;
-    }
+	q:after {
+		content: '”';
+		// content: close-quote;
+	}
 
-    //
-    // If an element opens with an inline quote, let’s hang that.
-    //
-    &:first-child {
-        text-indent: -0.22em;
-        display: inline-block;
-    }
-
+	//
+	// If an element opens with an inline quote, let’s hang that.
+	//
+	&:first-child {
+		text-indent: -0.22em;
+		display: inline-block;
+	}
 }

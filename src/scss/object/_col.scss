@@ -16,41 +16,41 @@
 //
 // @scss
 @if $use-html-layout {
-    //
-    // Setup all grid columns to use table cell layout and use the default gutter
-    @for $i from 1 through 12 {
-        .o-col-#{$i}-m {
-            @include o-col-width(1);
-        }
-    }
+	//
+	// Setup all grid columns to use table cell layout and use the default gutter
+	@for $i from 1 through 12 {
+		.o-col-#{$i}-m {
+			@include o-col-width(1);
+		}
+	}
 
-    //
-    // Tablet widths
-    @media (min-width: $bp-medium) {
-        @for $i from 1 through 12 {
-            .o-col-#{$i}-m {
-                @include o-col-width(1);
-            }
-        }
-    }
+	//
+	// Tablet widths
+	@media (min-width: $bp-medium) {
+		@for $i from 1 through 12 {
+			.o-col-#{$i}-m {
+				@include o-col-width(1);
+			}
+		}
+	}
 
-    //
-    // Desktop widths
-    @media (min-width: $bp-large) {
-        @for $i from 1 through 12 {
-            .o-col-#{$i}-l {
-                @include o-col-width(1);
-            }
-        }
-    }
+	//
+	// Desktop widths
+	@media (min-width: $bp-large) {
+		@for $i from 1 through 12 {
+			.o-col-#{$i}-l {
+				@include o-col-width(1);
+			}
+		}
+	}
 
-    //
-    // Widescreen widths
-    @media (min-width: $bp-wide) {
-        @for $i from 1 through 12 {
-            .o-col-#{$i}-w {
-                @include o-col-width(1);
-            }
-        }
-    }
+	//
+	// Widescreen widths
+	@media (min-width: $bp-wide) {
+		@for $i from 1 through 12 {
+			.o-col-#{$i}-w {
+				@include o-col-width(1);
+			}
+		}
+	}
 }

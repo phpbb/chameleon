@@ -10,5 +10,5 @@
 //
 // @scss
 @function rem($number) {
-    @return unitless($number) * 1rem;
+	@return unitless($number) * 1rem;
 }
