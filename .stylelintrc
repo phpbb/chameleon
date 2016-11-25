@@ -5,7 +5,7 @@
         "color-named": "never",
         "color-no-invalid-hex": true,
 
-        "font-family-name-quotes": "always-where-recommended",
+        "font-family-name-quotes": "always-unless-keyword",
 
         "function-calc-no-unspaced-operator": true,
         "function-comma-newline-after": "always-multi-line",
@@ -21,11 +21,11 @@
         "function-whitespace-after": "always",
 
         "number-leading-zero": "always",
-        "number-max-precision": 3,
+        "number-max-precision": 10,
         "number-no-trailing-zeros": true,
 
         "string-no-newline": true,
-        "string-quotes": single,
+        "string-quotes": double,
 
         "length-zero-no-unit": true,
 
@@ -168,8 +168,8 @@
                 "font-emphasize-position",
                 "font-emphasize-style",
                 "font-family",
-                "font-feature-settings",
                 "-webkit-font-feature-settings",
+                "font-feature-settings",
                 "font-size",
                 "font-size-adjust",
                 "font-smooth",
