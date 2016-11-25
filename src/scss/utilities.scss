@@ -73,28 +73,27 @@
 //                                 highest specificity.
 //
 
-/* stylelint-disable at-rule-empty-line-before */
 
 // 0. Config Flags
 //-------------------------
-$use-material: true !default;
+$use-material: false !default;
 $use-html-layout: true !default;
 
 
 // 1. Global Settings
 //-------------------------
-@import 'settings';
+@import "settings";
 
 
 // 2. Tools
 //-------------------------
-@import 'functions';
-@import 'mixins';
+@import "functions";
+@import "mixins";
 
 
 // 8. Utilities
 //-------------------------
-@import 'utilities/resets';
-@import 'utilities/clearfix';
-@import 'utilities/hidden';
-@import 'utilities/print';
+@import "utilities/resets";
+@import "utilities/clearfix";
+@import "utilities/hidden";
+@import "utilities/print";

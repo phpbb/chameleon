@@ -13,13 +13,13 @@ form {
 }
 
 //
-// iOS 'clickable elements' fix for role='button'
+// iOS 'clickable elements' fix for role="button"
 //
 // Fixes 'clickability' issue (and more generally, the firing of events such as
-// focus as well) for traditionally non-focusable elements with role='button'
+// focus as well) for traditionally non-focusable elements with role="button"
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 //
-[role='button'] {
+[role="button"] {
 	cursor: pointer;
 }
 
@@ -27,17 +27,19 @@ form {
 // 1. Work around a Firefox/IE bug where the transparent `button` background
 //    results in a loss of the default `button` focus styles.
 //
+/* stylelint-disable declaration-block-no-duplicate-properties */
 button {
 	background: transparent;
 	border: $default-border-size solid $default-gray;
 	padding: unit(0.25) unit(0.5);
 	cursor: pointer;
-	/* stylelint-disable declaration-block-no-duplicate-properties */
+
 	&:focus {
 		outline: 1px dotted; // [1]
 		outline: 4px auto -webkit-focus-ring-color; // [1]
 	}
 }
+/* stylelint-enable declaration-block-no-duplicate-properties */
 
 //
 // 1. Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc
@@ -83,7 +85,7 @@ fieldset {
 }
 
 legend {
-	@include type($type: 'headline');
+	@include type($type: "headline");
 	display: block;
 	width: 100%;
 	margin: 0 0 unit(2);
@@ -97,8 +99,8 @@ legend {
 // Note: Neither radios nor checkboxes can be readonly.
 //
 //
-input[type='radio'],
-input[type='checkbox'] {
+input[type="radio"],
+input[type="checkbox"] {
 	margin-right: unit(1); // [1]
 
 	&:disabled {
@@ -113,10 +115,10 @@ input[type='checkbox'] {
 //
 // Bug report: https://github.com/twbs/bootstrap/issues/11266
 //
-input[type='date'],
-input[type='time'],
-input[type='datetime-local'],
-input[type='month'] {
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
 	-webkit-appearance: listbox;
 }
 
@@ -126,7 +128,7 @@ input[type='month'] {
 // be added to `.form-control` as it's not specific enough. For details, see
 // https://github.com/twbs/bootstrap/issues/11586.
 //
-input[type='search'] {
+input[type="search"] {
 	-webkit-appearance: none;
 }
 
@@ -139,41 +141,41 @@ output {
 // specify the minimum height of form elements
 //
 button,
-[type='button'],
-[type='date'],
-[type='datetime'],
-[type='datetime-local'],
-[type='email'],
-[type='month'],
-[type='number'],
-[type='password'],
-[type='reset'],
-[type='search'],
-[type='submit'],
-[type='tel'],
-[type='text'],
-[type='time'],
-[type='url'],
-[type='week'],
-[type='color'],
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+[type="color"],
 select,
 textarea {
 	min-height: unit(3);
 }
 
-input[type='color'] {
+input[type="color"] {
 	vertical-align: middle; // [1]
 	padding: unit(0.5);
 }
 
-select[multiple='multiple'] {
+select[multiple="multiple"] {
 	height: auto;
 }
 
 //
 // 1. Align when inline to top for better conssistant alignments.
 //
-select[multiple='multiple'],
+select[multiple="multiple"],
 textarea {
 	vertical-align: top; // [1]
 }
@@ -203,12 +205,12 @@ select {
 	}
 }
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
-[type='date']::-webkit-inner-spin-button {
+[type="date"]::-webkit-inner-spin-button {
 	display: none;
 	-webkit-appearance: none;
 }

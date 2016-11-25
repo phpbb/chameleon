@@ -52,25 +52,25 @@ form {
 //    (base line-height + padding + border)
 // 3. This has no effect on <select>s in some browsers, due to the limited
 //    stylability of `<select>`s in CSS.
-// 4. Override Firefox's unusual default opacity; see
+// 4. Override Firefox"s unusual default opacity; see
 //    https://github.com/twbs/bootstrap/pull/11526.
 // 5. iOS fix for unreadable disabled content;
 //    see https://github.com/twbs/bootstrap/issues/11655.
 //
-[type='date'],
-[type='datetime'],
-[type='datetime-local'],
-[type='email'],
-[type='month'],
-[type='number'],
-[type='password'],
-[type='search'],
-[type='tel'],
-[type='text'],
-[type='time'],
-[type='url'],
-[type='week'],
-[type='color'],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+[type="color"],
 select,
 textarea {
 	background-color: $base-input-background-color;
@@ -104,9 +104,9 @@ textarea {
 
 	// Disabled and read-only inputs
 	//
-	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// HTML5 says that controls under a fieldset > legend:first-child won"t be
 	// disabled if the fieldset is disabled. Due to implementation difficulty, we
-	// don't honor that edge case; we style them as disabled anyway.
+	// don"t honor that edge case; we style them as disabled anyway.
 	&:disabled,
 	&[readonly] {
 		background-color: $base-input-disabled-color;
@@ -163,44 +163,44 @@ select {
 		text-shadow: 0 0 0 $black;
 	}
 
-	&[multiple='multiple'] {
+	&[multiple="multiple"] {
 		background-image: none;
 	}
 }
 
-input[type='color'] {
+input[type="color"] {
 	width: $base-input-height;
 	height: $base-input-height;
 }
 
 //
 // Make file inputs better match text inputs by forcing them to new lines.
-input[type='file'],
-input[type='range'] {
+input[type="file"],
+input[type="range"] {
 	display: block;
 }
 
-input[type='file'],
-input[type='radio'],
-input[type='checkbox'] {
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
 	&:focus:invalid:focus {
 		outline-color: $base-input-invalid-border-color;
 	}
 }
 
 // Remove default checkbox
-[type='checkbox']:not(:checked),
-[type='checkbox']:checked,
-[type='radio']:not(:checked),
-[type='radio']:checked {
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
 	opacity: 0;
 	position: absolute;
 	left: -9999px;
 }
 
 // Default Styles
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
 	& + label {
 		position: relative;
 		display: inline-block;
@@ -212,7 +212,7 @@ input[type='checkbox'] {
 	}
 }
 
-[type='checkbox'] {
+[type="checkbox"] {
 	+ label:before {
 		border: $base-input-border-width solid $base-input-border-color;
 		border-radius: unit(0.125);
@@ -223,7 +223,7 @@ input[type='checkbox'] {
 		width: unit(2);
 		height: unit(2);
 		margin-top: unit(0.25);
-		content: '';
+		content: "";
 		transition: 0.2s;
 	}
 
@@ -237,7 +237,7 @@ input[type='checkbox'] {
 	}
 }
 
-[type='checkbox']:checked {
+[type="checkbox"]:checked {
 	+ label:before {
 		border-top: $base-input-border-width solid transparent;
 		border-right: $base-input-border-width solid $base-input-border-hover-color;
@@ -259,7 +259,7 @@ input[type='checkbox'] {
 }
 
 // Indeterminate checkbox
-[type='checkbox']:indeterminate {
+[type="checkbox"]:indeterminate {
 	+ label:before {
 		border-top: none;
 		border-right: $base-input-border-width solid $base-input-invalid-border-color;
@@ -280,7 +280,7 @@ input[type='checkbox'] {
 	}
 }
 
-[type='radio'] {
+[type="radio"] {
 	& + label:before,
 	& + label:after {
 		border-radius: 50%;
@@ -291,7 +291,7 @@ input[type='checkbox'] {
 		width: unit(2);
 		height: unit(2);
 		margin: unit(0.5) unit(0.5) unit(0.5) 0;
-		content: '';
+		content: "";
 		transition: 0.28s ease;
 	}
 

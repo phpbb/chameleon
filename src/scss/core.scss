@@ -73,52 +73,52 @@
 //                                 highest specificity.
 //
 
-/* stylelint-disable at-rule-empty-line-before */
 
 // 0. Config Flags
 //-------------------------
-$use-material: true !default;
+$use-material: false !default;
 $use-html-layout: true !default;
 
 // 1. Global Settings
 //-------------------------
-@import 'settings';
+@import "settings";
 
 
 // 2. Tools
 //-------------------------
-@import 'functions';
-@import 'mixins';
+@import "functions";
+@import "mixins";
 
 
 // 3. Generic
 //-------------------------
-@import 'generic/normalize';
-@import 'generic/box-sizing';
+/* stylelint-disable no-duplicate-selectors */
+@import "generic/normalize";
+@import "generic/box-sizing";
 
 // Resets
-@import 'generic/reset/global';
-@import 'generic/reset/type';
-@import 'generic/reset/groupings';
-@import 'generic/reset/other';
-@import 'generic/reset/tables';
-@import 'generic/reset/forms';
+@import "generic/reset/global";
+@import "generic/reset/type";
+@import "generic/reset/groupings";
+@import "generic/reset/other";
+@import "generic/reset/tables";
+@import "generic/reset/forms";
 
 
 // 4. Base
 //-------------------------
-@import 'base/global';
-@import 'base/links';
-@import 'base/type';
-@import 'base/forms';
-@import 'base/table';
-@import 'base/code';
-
+@import "base/global";
+@import "base/links";
+@import "base/type";
+@import "base/forms";
+@import "base/table";
+@import "base/code";
+/* stylelint-enable no-duplicate-selectors */
 
 // 5. Ojbjects
 //-------------------------
-@import 'object/button';
-@import 'object/icon';
-@import 'object/grid';
-@import 'object/col';
-@import 'object/tag';
+@import "object/button";
+@import "object/icon";
+@import "object/grid";
+@import "object/col";
+@import "object/tag";

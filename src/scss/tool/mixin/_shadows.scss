@@ -16,7 +16,7 @@ $shadow-ambient-shadow-opacity: 0.12 !default;
 /* stylelint-disable block-closing-brace-newline-after */
 //
 // @scss
-@mixin shadow($d: 'focus') {
+@mixin shadow($d: "focus") {
 	@if $d == 0 {
 		box-shadow: none;
 	} @elseif $d == 1 {
@@ -143,7 +143,8 @@ $shadow-ambient-shadow-opacity: 0.12 !default;
 		// Focus shadow mixin.
 		/* stylelint-disable no-indistinguishable-colors */
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+		/* stylelint-enable no-indistinguishable-colors */
 	}
 }
 
-/* stylelint-enable */
+/* stylelint-enable block-closing-brace-newline-after */

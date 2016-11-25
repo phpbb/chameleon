@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// @generic: Typography
+// @generic: Type
 //------------------------------------------------------------------------------
 // @description:
 //
@@ -98,25 +98,25 @@ blockquote {
 }
 
 q {
-	quotes: '‘' '’' '“' '”';
+	quotes: "‘" "’" "“" "”";
 
 	&:before {
-		content: '‘';
+		content: "‘";
 		// content: open-quote;
 	}
 
 	&:after {
-		content: '’';
+		content: "’";
 		// content: close-quote;
 	}
 
 	q:before {
-		content: '“';
+		content: "“";
 		// content: open-quote;
 	}
 
 	q:after {
-		content: '”';
+		content: "”";
 		// content: close-quote;
 	}
 

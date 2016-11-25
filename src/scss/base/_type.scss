@@ -8,47 +8,49 @@
 
 //
 // @scss
+/* stylelint-disable declaration-block-no-duplicate-properties */
 h1 small,
 h2 small,
 h3 small,
 h4 small,
 h5 small,
 h6 small {
-	@include type($type: 'display3', $color-contrast: true);
+	@include type($type: "display3", $color-contrast: true);
 	font-size: 60%;
 	display: block;
 }
+/* stylelint-enable declaration-block-no-duplicate-properties */
 
 h1 {
-	@include type($type: 'display3');
+	@include type($type: "display3");
 }
 
 h2 {
-	@include type($type: 'display2');
+	@include type($type: "display2");
 }
 
 h3 {
-	@include type($type: 'display1');
+	@include type($type: "display1");
 }
 
 h4 {
-	@include type($type: 'headline');
+	@include type($type: "headline");
 }
 
 h5 {
-	@include type($type: 'title');
+	@include type($type: "title");
 }
 
 h6 {
-	@include type($type: 'subhead');
+	@include type($type: "subhead");
 }
 
 p {
-	@include type($type: 'body1');
+	@include type($type: "body1");
 }
 
 blockquote {
-	@include type($type: 'blockquote');
+	@include type($type: "blockquote");
 	@include space(margin-left);
 
 	p {
@@ -57,17 +59,17 @@ blockquote {
 		line-height: inherit;
 
 		&:before {
-			content: '“';
+			content: "“";
 			// content: open-quote;
 		}
 
 		&:after {
-			content: '';
+			content: "";
 			// content: no-close-quote;
 		}
 
 		&:last-of-type:after {
-			content: '”';
+			content: "”";
 			// content: close-quote;
 		}
 	}
@@ -78,14 +80,14 @@ mark {
 }
 
 cite {
-	@include type($type: 'caption');
+	@include type($type: "caption");
 }
 
 address {
-	@include type($type: 'body1');
+	@include type($type: "body1");
 }
 
 ul,
 ol {
-	@include type($type: 'body1');
+	@include type($type: "body1");
 }

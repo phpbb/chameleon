@@ -26,6 +26,7 @@ $link-hover-color: $default-primary-dark-color !default;
 
 //
 // @scss
+/* stylelint-disable declaration-block-no-duplicate-properties */
 a {
 	text-decoration: none;
 	color: $link-color;
@@ -35,7 +36,7 @@ a {
 		text-decoration: underline;
 		color: $link-hover-color;
 	}
-	/* stylelint-disable declaration-block-no-duplicate-properties */
+
 	&:focus {
 		// Default
 		outline: thin dotted;
@@ -44,3 +45,4 @@ a {
 		outline-offset: -unit(0.125);
 	}
 }
+/* stylelint-enable declaration-block-no-duplicate-properties */

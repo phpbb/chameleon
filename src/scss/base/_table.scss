@@ -34,6 +34,7 @@ $table-dividers: 1px solid $table-divider-color;
 
 //
 // @scss
+/* stylelint-disable no-indistinguishable-colors */
 table {
 	@include font-size(13);
 	white-space: nowrap;
@@ -91,10 +92,11 @@ table {
 	}
 
 	th {
-		@include type($type: 'body2');
+		@include type($type: "body2");
 		text-overflow: ellipsis;
 		vertical-align: bottom;
 		color: $table-header-color;
 		padding-bottom: unit(1);
 	}
 }
+/* stylelint-enable no-indistinguishable-colors */

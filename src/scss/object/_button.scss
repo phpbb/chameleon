@@ -41,8 +41,8 @@ $btn-border-color: $default-gray !default;
 // 8. Prevent button text from being selectable.
 //
 .o-btn {
-	@include type($type: 'button');
-	line-height: $btn-height; // google material design
+	@include type($type: "button");
+	// line-height: $btn-height; // google material design
 	text-align: center; // [4]
 	text-decoration: none; // [4]
 	vertical-align: middle; // [2]
@@ -52,7 +52,9 @@ $btn-border-color: $default-gray !default;
 	border-radius: $btn-border-radius;
 	border-style: $btn-border-style;
 	border-width: $btn-border-size;
-	// @include shadow-2dp();
+	@if $use-material == true {
+		@include shadow-2dp();
+	}
 	color: $btn-color;
 	outline: none; // google material design
 	display: inline-block; // [1]
@@ -78,7 +80,9 @@ $btn-border-color: $default-gray !default;
 
 	&:hover {
 		border-color: $btn-hover-color;
-		// @include shadow-4dp();
+		@if $use-material == true {
+			@include shadow-4dp();
+		}
 	}
 
 	&:focus {
@@ -91,7 +95,9 @@ $btn-border-color: $default-gray !default;
 		background-image: none;
 		border-color: $btn-hover-color;
 		color: $btn-background-color;
-		// @include shadow-4dp();
+		@if $use-material == true {
+			@include shadow-4dp();
+		}
 	}
 
 	&:disabled {

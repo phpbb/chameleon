@@ -73,16 +73,15 @@
 //                                 highest specificity.
 //
 
-/* stylelint-disable at-rule-empty-line-before */
 
 // Mixins
-@import 'tool/mixin/animations';
-@import 'tool/mixin/background-triangle';
-@import 'tool/mixin/clearfix';
-@import 'tool/mixin/font-size';
-@import 'tool/mixin/grid';
-@import 'tool/mixin/shadows';
-@import 'tool/mixin/space';
-@import 'tool/mixin/type';
-@import 'tool/mixin/vertical-rhythm';
-@import 'tool/mixin/border_radius';
+@import "tool/mixin/animations";
+@import "tool/mixin/background-triangle";
+@import "tool/mixin/clearfix";
+@import "tool/mixin/font-size";
+@import "tool/mixin/grid";
+@import "tool/mixin/shadows";
+@import "tool/mixin/space";
+@import "tool/mixin/type";
+@import "tool/mixin/vertical-rhythm";
+@import "tool/mixin/border_radius";
