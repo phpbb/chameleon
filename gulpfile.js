@@ -8,8 +8,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var postcss = require('gulp-postcss');
 var sorting = require('postcss-sorting');
-var stripComments = require('postcss-discard-comments');
-var stylefmt = require('gulp-stylefmt');
+// var stripComments = require('postcss-discard-comments');
+// var stylefmt = require('gulp-stylefmt');
 var del = require('del');
 var pkg = require('./package.json');
 
@@ -40,7 +40,7 @@ var render = function (layer) {
 	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 	.pipe(
 		postcss([
-			stripComments(),
+			// stripComments(),
 			sorting({
 				'empty-lines-between-children-rules': 1,
 				'empty-lines-between-media-rules': 1,
@@ -50,7 +50,7 @@ var render = function (layer) {
 			})
 		])
 	)
-	.pipe(stylefmt())
+	// .pipe(stylefmt())
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'
