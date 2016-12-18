@@ -9,7 +9,7 @@ var csso = require('gulp-csso');
 var postcss = require('gulp-postcss');
 var sorting = require('postcss-sorting');
 // var stripComments = require('postcss-discard-comments');
-// var stylefmt = require('gulp-stylefmt');
+var stylefmt = require('gulp-stylefmt');
 var del = require('del');
 var pkg = require('./package.json');
 
@@ -50,7 +50,7 @@ var render = function (layer) {
 			})
 		])
 	)
-	// .pipe(stylefmt())
+	.pipe(stylefmt())
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'
