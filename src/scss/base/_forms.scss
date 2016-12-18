@@ -135,6 +135,7 @@ textarea {
 //    focusin IE and (under certain conditions) Edge, as it looks bad and cannot
 //    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
+/* stylelint-disable string-quotes */
 select {
 	background-color: $base-input-background-color;
 	background-origin: content-box;
@@ -167,6 +168,7 @@ select {
 		background-image: none;
 	}
 }
+/* stylelint-enable string-quotes */
 
 input[type="color"] {
 	width: $base-input-height;
