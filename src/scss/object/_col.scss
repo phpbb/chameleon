@@ -20,7 +20,7 @@
 	// Setup all grid columns to use table cell layout and use the default gutter
 	@for $i from 1 through 12 {
 		.o-col-#{$i}-m {
-			@include o-col-width(1);
+			@include o-col-width($i);
 		}
 	}
 
@@ -29,7 +29,7 @@
 	@media (min-width: $bp-medium) {
 		@for $i from 1 through 12 {
 			.o-col-#{$i}-m {
-				@include o-col-width(1);
+				@include o-col-width($i);
 			}
 		}
 	}
@@ -39,7 +39,7 @@
 	@media (min-width: $bp-large) {
 		@for $i from 1 through 12 {
 			.o-col-#{$i}-l {
-				@include o-col-width(1);
+				@include o-col-width($i);
 			}
 		}
 	}
@@ -49,7 +49,7 @@
 	@media (min-width: $bp-wide) {
 		@for $i from 1 through 12 {
 			.o-col-#{$i}-w {
-				@include o-col-width(1);
+				@include o-col-width($i);
 			}
 		}
 	}
