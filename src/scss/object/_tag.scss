@@ -10,6 +10,7 @@
 
 // Layout Variables
 $tag-border-radius: $default-border-radius !default;
+$tag-padding: 4px !default;
 
 // Theme Variables
 $tag-background-color: $default-gray !default;
@@ -27,8 +28,8 @@ $tag-color: $default-gray-dark !default;
 	border-radius: $tag-border-radius;
 	color: $tag-color;
 	display: inline-block;
-	margin-left: 8px;
-	padding: 2px 4px;
+	margin-left: ($tag-padding * 2);
+	padding: ($tag-padding / 2) $tag-padding;
 
 	// Empty tags collapse automatically
 	&:empty {

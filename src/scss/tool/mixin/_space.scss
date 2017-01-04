@@ -13,5 +13,5 @@
 //
 // @scss
 @mixin space($property) {
-	#{$property}: rem(2 * $default-line-height);
+	#{$property}: 2 * $default-line-height;
 }
