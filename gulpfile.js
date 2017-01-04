@@ -5,9 +5,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
-var csso = require('gulp-csso');
+var cssnano = require('gulp-cssnano');
 var postcss = require('gulp-postcss');
 var sorting = require('postcss-sorting');
+var torem = require('postcss-pxtorem');
+// var rtl = require('postcss-rtl');
 // var stripComments = require('postcss-discard-comments');
 var stylefmt = require('gulp-stylefmt');
 var del = require('del');
@@ -47,8 +49,29 @@ var render = function (layer) {
 				'preserve-empty-lines-between-children-rules': true,
 				'empty-lines-before-comment': true,
 				'sort-order': 'sort-order'
+			}),
+			torem({
+				rootValue: 16,
+				unitPrecision: 5,
+				propWhiteList: [
+					'font',
+					'font-size',
+					'margin',
+					'margin-left',
+					'margin-right',
+					'margin-top',
+					'margin-bottom',
+					'padding',
+					'padding-left',
+					'padding-right',
+					'padding-top',
+					'padding-bottom'],
+				selectorBlackList: [],
+				replace: true,
+				mediaQuery: false,
+				minPixelValue: 0
 			})
-			// add rem conversion???
+			// rtl()
 		])
 	)
 	.pipe(stylefmt())
@@ -78,7 +101,7 @@ gulp.task('minify', ['core', 'utilities'], function () {
 	var css = gulp
 	.src(build.css + '/*.' + pkg.version + '.css')
 	.pipe(sourcemaps.init())
-	.pipe(csso())
+	.pipe(cssnano())
 	.pipe(rename({
 		suffix: '.min',
 		extname: '.css'
