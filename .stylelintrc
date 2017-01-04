@@ -25,7 +25,6 @@
         "number-no-trailing-zeros": true,
 
         "string-no-newline": true,
-        "string-quotes": double,
 
         "length-zero-no-unit": true,
 
