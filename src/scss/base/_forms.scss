@@ -9,7 +9,8 @@
 // @settings
 
 // Layout Variables
-$base-input-height: unit(5);
+$base-input-padding: 8px;
+$base-input-height: ($base-input-padding * 5);
 $base-input-border-width: $default-border-size;
 $base-input-border-radius: $default-border-radius;
 
@@ -83,7 +84,7 @@ textarea {
 	}
 	width: 100%;
 	height: $base-input-height; // [1]
-	padding: unit(1);
+	padding: $base-input-padding;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
 	&:hover {
@@ -135,18 +136,17 @@ textarea {
 //    focusin IE and (under certain conditions) Edge, as it looks bad and cannot
 //    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
-/* stylelint-disable string-quotes */
 select {
 	background-color: $base-input-background-color;
 	background-origin: content-box;
 	@include background-triangle($base-input-border-color);
-	background-position: right -unit(2) center;
+	background-position: right unit(-2) center;
 	background-repeat: no-repeat;
 	background-size: 9px 6px;
 	display: inline-block;
-	min-width: unit(10);
+	min-width: ($base-input-padding * 10);
 	max-width: 100%;
-	padding: unit(1) unit(4.5) unit(1) unit(2);
+	padding: $base-input-padding ($base-input-padding * 4.5) $base-input-padding ($base-input-padding * 2);
 
 	&:hover,
 	&:focus {
@@ -168,7 +168,6 @@ select {
 		background-image: none;
 	}
 }
-/* stylelint-enable string-quotes */
 
 input[type="color"] {
 	width: $base-input-height;
@@ -206,8 +205,8 @@ input[type="checkbox"] {
 	& + label {
 		position: relative;
 		display: inline-block;
-		margin: 0 unit(1);
-		padding-left: unit(4);
+		margin: 0 $base-input-padding;
+		padding-left: ($base-input-padding * 4);
 		cursor: pointer;
 		user-select: none;
 		transition: 0.28s ease;
@@ -217,14 +216,14 @@ input[type="checkbox"] {
 [type="checkbox"] {
 	+ label:before {
 		border: $base-input-border-width solid $base-input-border-color;
-		border-radius: unit(0.125);
+		border-radius: ($base-input-padding * 0.125);
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 0;
-		width: unit(2);
-		height: unit(2);
-		margin-top: unit(0.25);
+		width: ($base-input-padding * 2);
+		height: ($base-input-padding * 2);
+		margin-top: ($base-input-padding * 0.25);
 		content: "";
 		transition: 0.2s;
 	}
@@ -245,10 +244,10 @@ input[type="checkbox"] {
 		border-right: $base-input-border-width solid $base-input-border-hover-color;
 		border-bottom: $base-input-border-width solid $base-input-border-hover-color;
 		border-left: $base-input-border-width solid transparent;
-		top: -unit(0.5);
+		top: ($base-input-padding * -0.5);
 		left: -5px;
-		width: unit(1.5);
-		height: unit(2.25);
+		width: ($base-input-padding * 1.5);
+		height: ($base-input-padding * 2.25);
 		transform: rotate(40deg);
 		transform-origin: 100% 100%;
 		backface-visibility: hidden;
@@ -268,8 +267,8 @@ input[type="checkbox"] {
 		border-bottom: none;
 		border-left: none;
 		top: -11px;
-		left: -unit(1.5);
-		height: unit(2.25);
+		left: ($base-input-padding * -1.5);
+		height: ($base-input-padding * 2.25);
 		transform: rotate(90deg);
 		transform-origin: 100% 100%;
 		backface-visibility: hidden;
@@ -290,9 +289,9 @@ input[type="checkbox"] {
 		top: 0;
 		left: 0;
 		z-index: 0;
-		width: unit(2);
-		height: unit(2);
-		margin: unit(0.5) unit(0.5) unit(0.5) 0;
+		width: ($base-input-padding * 2);
+		height: ($base-input-padding * 2);
+		margin: ($base-input-padding * 0.5) ($base-input-padding *0.5) ( $base-input-padding * 0.5) 0;
 		content: "";
 		transition: 0.28s ease;
 	}
@@ -323,7 +322,7 @@ input[type="checkbox"] {
 		&:after {
 			background-color: $base-input-border-hover-color;
 			z-index: 0;
-			transform: scale(0.5), opacity(1);
+			transform: scale(0.5) opacity(1);
 		}
 	}
 

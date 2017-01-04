@@ -9,17 +9,18 @@
 // @settings
 
 // Layout Variables
-$table-row-height: unit(6);
-$table-last-row-height: unit(7);
+$table-row-height: 48px;
+$table-last-row-height: 56px;
 $table-header-height: $table-last-row-height;
+$table-header-padding-bottom: 8px;
 
-$table-column-spacing: unit(4.5);
+$table-column-spacing: 36px;
 $table-column-padding: $table-column-spacing / 2;
 
-$table-card-header-height: unit(8);
-$table-card-title-top: unit(2.5);
-$table-card-padding: unit(3);
-$table-button-padding-right: unit(2);
+$table-card-header-height: 64px;
+$table-card-title-top: 20px;
+$table-card-padding: 24px;
+$table-button-padding-right: 16px;
 $table-cell-top: $table-card-padding / 2;
 
 //Theme Variables
@@ -52,7 +53,7 @@ table {
 	}
 
 	thead {
-		padding-bottom: unit(0.5);
+		padding-bottom: ($table-header-padding-bottom / 2);
 	}
 
 	tbody {
@@ -96,7 +97,7 @@ table {
 		text-overflow: ellipsis;
 		vertical-align: bottom;
 		color: $table-header-color;
-		padding-bottom: unit(1);
+		padding-bottom: $table-header-padding-bottom;
 	}
 }
 /* stylelint-enable no-indistinguishable-colors */

@@ -11,7 +11,7 @@
 // @settings
 
 // Layout Variables
-$grid-gutter: unit(2) !default;
+$grid-gutter: $default-grid-gutter !default;
 
 // Breakpoints
 $bp-medium: 769px;

@@ -19,14 +19,14 @@ $icon-spacing: unit(1) !default;
 // However a modifier is available if you are usinf icon fonts
 //
 
-.icon {
+.o-icon {
 	vertical-align: middle;
 	width: $icon-size;
 	height: $icon-size;
 	margin-right: $icon-spacing;
-}
 
-.icon-font {
-	@include typo-icon($icon-size);
-	vertical-align: baseline;
+	&-font {
+		@include typo-icon($icon-size);
+		vertical-align: baseline;
+	}
 }

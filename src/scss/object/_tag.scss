@@ -27,8 +27,8 @@ $tag-color: $default-gray-dark !default;
 	border-radius: $tag-border-radius;
 	color: $tag-color;
 	display: inline-block;
-	margin-left: unit(1);
-	padding: unit(0.25) unit(0.5);
+	margin-left: 8px;
+	padding: 2px 4px;
 
 	// Empty tags collapse automatically
 	&:empty {

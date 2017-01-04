@@ -10,10 +10,10 @@
 
 // Layout Variables
 $btn-border-size: $default-border-size !default;
-$btn-padding: unit(2) !default;
+$btn-padding: 16px !default;
 $btn-border-radius: $default-border-radius !default;
-$btn-min-width: unit(8) !default;
-$btn-height: unit(4.75) !default;
+$btn-min-width: ($btn-padding * 4) !default;
+$btn-height: ($btn-padding * 2.375) !default;
 
 // Theme Variables
 $btn-background-color: $white !default;
@@ -61,7 +61,7 @@ $btn-border-color: $default-gray !default;
 	overflow: visible; // [6]
 	min-width: $btn-min-width; // google material design
 	margin: 0; // [4]
-	padding: 0 $btn-padding; // [7]
+	padding: ($btn-padding / 4) $btn-padding; // [7]
 	cursor: pointer;
 	user-select: none; // [8]
 	transition:

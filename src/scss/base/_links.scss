@@ -41,8 +41,8 @@ a {
 		// Default
 		outline: thin dotted;
 		// WebKit
-		outline: unit(0.5) auto -webkit-focus-ring-color;
-		outline-offset: -unit(0.125);
+		outline: 4px auto -webkit-focus-ring-color;
+		outline-offset: -1px;
 	}
 }
 /* stylelint-enable declaration-block-no-duplicate-properties */

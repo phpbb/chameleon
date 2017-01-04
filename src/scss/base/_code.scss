@@ -9,17 +9,17 @@
 // @settings
 
 // Layout Variables
-$base-unit: $default-unit !default;
+$base-kbd-padding: 4px !default;
+
+$base-pre-padding: 16px !default;
 
 // Theme Variables
 $base-code-font-family: $default-code-font;
-
 $base-code-bg: $gray-200 !default;
 $base-code-color: $default-primary-light-color !default;
 $base-code-border-radius: $default-border-radius !default;
 
 $base-kbd-nested-font-weight: 700 !default;
-
 $base-kbd-bg: $gray-900 !default;
 $base-kbd-color: $white !default;
 
@@ -48,7 +48,7 @@ kbd {
 	background-color: $base-code-bg;
 	border-radius: $base-code-border-radius;
 	color: $base-code-color;
-	padding: unit(0.25) unit(0.5);
+	padding: ($base-kbd-padding / 2) $base-kbd-padding;
 }
 
 // User input typically entered via keyboard
@@ -80,8 +80,8 @@ pre {
 	color: $base-pre-color;
 	display: block;
 	margin-top: 0;
-	margin-bottom: $base-unit;
-	padding: $base-unit;
+	margin-bottom: $base-pre-padding;
+	padding: $base-pre-padding;
 
 	// Account for some code outputs that place code tags in pre tags
 	code {
