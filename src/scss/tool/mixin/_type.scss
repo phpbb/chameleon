@@ -12,7 +12,7 @@
 // @scss
 @mixin type($type, $color-contrast: false) {
 	@if $type == "caption" {
-		@include font-size(12px, false);
+		font-size: 12px;
 		font-weight: 400;
 		line-height: unitless(20px);
 		@if $color-contrast {
@@ -20,9 +20,9 @@
 		}
 	}
 	@if $type == "body1" {
-		@include font-size(13px);
+		font-size: 13px;
 		@media (min-width: $bp-medium) {
-			@include font-size(14px);
+			font-size: 14px;
 		}
 		font-weight: 400;
 		@if $color-contrast {
@@ -30,9 +30,9 @@
 		}
 	}
 	@if $type == "body2" {
-		@include font-size(14px);
+		font-size: 14px;
 		@media (min-width: $bp-medium) {
-			@include font-size(16px);
+			font-size: 16px;
 		}
 		font-weight: 500;
 		@if $color-contrast {
@@ -40,7 +40,7 @@
 		}
 	}
 	@if $type == "button" {
-		@include font-size(14px);
+		font-size: 14px;
 		font-weight: 500;
 		text-transform: uppercase;
 		@if $color-contrast {
@@ -48,9 +48,9 @@
 		}
 	}
 	@if $type == "menu" {
-		@include font-size(13px);
+		font-size: 13px;
 		@media (min-width: $bp-medium) {
-			@include font-size(14px);
+			font-size: 14px;
 		}
 		font-weight: 500;
 		@if $color-contrast {
@@ -58,9 +58,9 @@
 		}
 	}
 	@if $type == "subhead" {
-		@include font-size(15px, false);
+		font-size: 15px;
 		@media (min-width: $bp-medium) {
-			@include font-size(16px, false);
+			font-size: 16px;
 		}
 		font-weight: 400;
 		line-height: unitless(24px);
@@ -69,7 +69,7 @@
 		}
 	}
 	@if $type == "title" {
-		@include font-size(20px, false);
+		font-size: 20px;
 		font-weight: 500;
 		letter-spacing: 2px;
 		line-height: unitless(28px);
@@ -79,7 +79,7 @@
 	}
 	@if $type == "headline" {
 		-moz-osx-font-smoothing: grayscale;
-		@include font-size(24px, false);
+		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: 1px;
 		line-height: unitless(32px);
@@ -88,7 +88,7 @@
 		}
 	}
 	@if $type == "blockquote" {
-		@include font-size(24px);
+		font-size: 24px;
 		font-style: italic;
 		font-weight: 300;
 		letter-spacing: 1px;
@@ -98,7 +98,7 @@
 		}
 	}
 	@if $type == "display1" {
-		@include font-size(34px, false);
+		font-size: 34px;
 		font-weight: 400;
 		line-height: unitless(40px);
 		@if $color-contrast {
@@ -106,7 +106,7 @@
 		}
 	}
 	@if $type == "display2" {
-		@include font-size(45px, false);
+		font-size: 45px;
 		font-weight: 400;
 		line-height: unitless(48px);
 		@if $color-contrast {
@@ -114,7 +114,7 @@
 		}
 	}
 	@if $type == "display3" {
-		@include font-size(56px, false);
+		font-size: 56px;
 		font-weight: 400;
 		letter-spacing: -2px;
 		line-height: unitless(64px);
@@ -123,7 +123,7 @@
 		}
 	}
 	@if $type == "display4" {
-		@include font-size(112px);
+		font-size: 112px;
 		font-weight: 300;
 		letter-spacing: -5px;
 		@if $color-contrast {

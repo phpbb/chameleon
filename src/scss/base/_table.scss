@@ -37,7 +37,7 @@ $table-dividers: 1px solid $table-divider-color;
 // @scss
 /* stylelint-disable no-indistinguishable-colors */
 table {
-	@include font-size(13);
+	font-size: 13px;
 	white-space: nowrap;
 	background-color: $white;
 	border: $table-dividers;
