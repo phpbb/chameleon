@@ -1,7 +1,3 @@
-/* stylelint-disable string-quotes */
-/* stylelint-enable string-quotes */
-/* stylelint-disable block-closing-brace-newline-after */
-/* stylelint-enable block-closing-brace-newline-after */
 [tabindex="-1"]:focus {
 	outline: none !important;
 }
@@ -103,4 +99,4 @@
 	}
 }
 
-/*# sourceMappingURL=utilities.0.8.0.css.map */
+/*# sourceMappingURL=utilities.0.9.0.css.map */
