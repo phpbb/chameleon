@@ -10,6 +10,7 @@
 
 //
 // @scss
+/* stylelint-disable declaration-property-unit-blacklist */
 @mixin type($type, $color-contrast: false) {
 	@if $type == "caption" {
 		font-size: 12px;
@@ -131,6 +132,7 @@
 		}
 	}
 }
+/* stylelint-enable declaration-property-unit-blacklist */
 
 @mixin typo-icon($size: $default-icon-md) {
 	-webkit-font-smoothing: antialiased;

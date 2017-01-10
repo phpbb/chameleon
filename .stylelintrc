@@ -28,8 +28,9 @@
 
         "length-zero-no-unit": true,
 
-        "unit-case": "lower",
+		"unit-case": "lower",
         "unit-no-unknown": true,
+        "unit-blacklist": [ "em" ],
 
         "value-keyword-case": lower,
 
@@ -62,6 +63,23 @@
         "declaration-block-semicolon-space-before": "never",
         "declaration-block-single-line-max-declarations": 1,
         "declaration-block-trailing-semicolon": "always",
+
+        "declaration-property-unit-blacklist": {
+            "line-height": ["rem", "px", "em", "%"]
+        },
+        "declaration-property-unit-whitelist": {
+            "height": ["px", "%"],
+            "width": ["px", "%"],
+            "font-size": ["px", "rem", "%"],
+            "margin-left": ["px", "rem"],
+            "margin-right": ["px", "rem"],
+            "margin-top": ["px", "rem"],
+            "margin-bottom": ["px", "rem"],
+            "padding-left": ["px", "rem"],
+            "padding-right": ["px", "rem"],
+            "padding-top": ["px", "rem"],
+            "padding-bottom": ["px", "rem"]
+        },
 
         "block-closing-brace-empty-line-before": "never",
         "block-closing-brace-newline-after": "always",
