@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-property-unit-blacklist */
+/* stylelint-enable declaration-property-unit-blacklist */
 [tabindex="-1"]:focus {
 	outline: none !important;
 }

@@ -1,4 +1,6 @@
 @charset "utf-8";
+/* stylelint-disable declaration-property-unit-blacklist */
+/* stylelint-enable declaration-property-unit-blacklist */
 /* stylelint-disable no-duplicate-selectors */
 html {
 	font-family: sans-serif;
@@ -1510,8 +1512,8 @@ pre code {
 
 .o-icon {
 	vertical-align: middle;
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 24px;
+	height: 24px;
 	margin-right: 0.5rem;
 }
 
