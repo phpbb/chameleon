@@ -17,47 +17,62 @@
 // @settings
 
 // Layout Variables
-$small: 600px;
-$medium: 768px;
-$large: 972px;
-$wide: 1152px;
+
 
 //
 // @scss
 //
 // Set up the default container and grid class for mobile browsers
 .container {
-	max-width: $small;
-	margin: $grid-gutter auto;
+	position: relative;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $default-grid-gutter;
+	padding-left: $default-grid-gutter;
 
 	//
 	// Establist container sizes for all devices larger than mobile
 
 	//
-	// Tablet
-	@media (min-width: $bp-medium) {
-		max-width: $medium;
+	// small
+	@media (min-width: $bp-sm) {
+		width: $sm;
 	}
 
 	//
-	// Desktop
-	@media (min-width: $bp-large) {
-		max-width: $large;
+	// medium
+	@media (min-width: $bp-md) {
+		width: $md;
 	}
 
 	//
-	// Widescreen
-	@media (min-width: $bp-wide) {
-		max-width: $wide;
+	// large
+	@media (min-width: $bp-lg) {
+		width: $lg;
+	}
+
+	//
+	// extre-large
+	@media (min-width: $bp-xl) {
+		width: $xl;
 	}
 }
 
-.o-grid {
-	width: 100%;
+.o-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -$grid-gutter;
+	margin-left: -$grid-gutter;
+}
 
-	//
-	// Set up the grid to work on larger devices
-	@media (min-width: $bp-medium) {
-		@include o-grid();
-	}
+.o-col {
+	position: relative;
+	flex-basis: 0;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 100%;
+	min-height: 1px;
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
 }

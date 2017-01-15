@@ -19,37 +19,147 @@
 	//
 	// Setup all grid columns to use table cell layout and use the default gutter
 	@for $i from 1 through 12 {
-		.o-col-#{$i}-m {
-			@include o-col-width($i);
+		.o-col-#{$i} {
+			@include col-width($i);
+		}
+
+		.o-pull-0 {
+			right: auto;
+		}
+
+		.o-pull-#{$i} {
+			@include pull($i);
+		}
+
+		.o-push-0 {
+			left: auto;
+		}
+
+		.o-push-#{$i} {
+			@include push($i);
+		}
+
+		.o-offset-#{$i} {
+			@include offset($i);
 		}
 	}
 
 	//
-	// Tablet widths
-	@media (min-width: $bp-medium) {
+	// small widths
+	@media (min-width: $bp-sm) {
 		@for $i from 1 through 12 {
-			.o-col-#{$i}-m {
-				@include o-col-width($i);
+			.o-col-sm-#{$i} {
+				@include col-width($i);
+			}
+
+			.o-pull-sm-0 {
+				right: auto;
+			}
+
+			.o-pull-sm-#{$i} {
+				@include pull($i);
+			}
+
+			.o-push-sm-0 {
+				left: auto;
+			}
+
+			.o-push-sm-#{$i} {
+				@include push($i);
+			}
+
+			.o-offset-sm-#{$i} {
+				@include offset($i);
 			}
 		}
 	}
 
 	//
-	// Desktop widths
-	@media (min-width: $bp-large) {
+	// medium widths
+	@media (min-width: $bp-md) {
 		@for $i from 1 through 12 {
-			.o-col-#{$i}-l {
-				@include o-col-width($i);
+			.o-col-md-#{$i} {
+				@include col-width($i);
+			}
+
+			.o-pull-md-0 {
+				right: auto;
+			}
+
+			.o-pull-md-#{$i} {
+				@include pull($i);
+			}
+
+			.o-push-md-0 {
+				left: auto;
+			}
+
+			.o-push-md-#{$i} {
+				@include push($i);
+			}
+
+			.o-offset-md-#{$i} {
+				@include offset($i);
 			}
 		}
 	}
 
 	//
-	// Widescreen widths
-	@media (min-width: $bp-wide) {
+	// large widths
+	@media (min-width: $bp-lg) {
 		@for $i from 1 through 12 {
-			.o-col-#{$i}-w {
-				@include o-col-width($i);
+			.o-col-lg-#{$i} {
+				@include col-width($i);
+			}
+
+			.o-pull-lg-0 {
+				right: auto;
+			}
+
+			.o-pull-#{$i} {
+				@include pull($i);
+			}
+
+			.o-push-lg-0 {
+				left: auto;
+			}
+
+			.o-push-lg-#{$i} {
+				@include push($i);
+			}
+
+			.o-offset-lg-#{$i} {
+				@include offset($i);
+			}
+		}
+	}
+
+	//
+	// extra-large widths
+	@media (min-width: $bp-xl) {
+		@for $i from 1 through 12 {
+			.o-col-xl-#{$i} {
+				@include col-width($i);
+			}
+
+			.o-pull-xl-0 {
+				right: auto;
+			}
+
+			.o-pull-xl-#{$i} {
+				@include pull($i);
+			}
+
+			.o-push-xl-0 {
+				left: auto;
+			}
+
+			.o-push-xl-#{$i} {
+				@include push($i);
+			}
+
+			.o-offset-xl-#{$i} {
+				@include offset($i);
 			}
 		}
 	}

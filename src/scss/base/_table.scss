@@ -43,12 +43,12 @@ table {
 	border: $table-dividers;
 	// border-collapse: collapse;
 	display: block;
-	@media (min-width: $bp-medium) {
+	@media (min-width: $bp-md) {
 		display: table;
 	}
 	overflow-x: auto;
 	width: 100%;
-	@media (min-width: $bp-medium) {
+	@media (min-width: $bp-md) {
 		width: auto;
 	}
 

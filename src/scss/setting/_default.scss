@@ -19,14 +19,15 @@ $default-unit: 1rem !default;
 $default-grid-gutter: $default-unit;
 
 // Grid
-$small: 600px;
-$medium: 768px;
-$large: 960px;
-$wide: 1152px;
+$sm: 540px;
+$md: 720px;
+$lg: 960px;
+$xl: 1140px;
 
-$bp-medium: 769px;
-$bp-large: 980px;
-$bp-wide: 1180px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
 
 // Fonts
 $default-font: "Roboto", "Helvetica", "Arial", sans-serif !default;

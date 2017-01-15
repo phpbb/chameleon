@@ -21,7 +21,7 @@ $tag-color: $default-gray-dark !default;
 .o-tag {
 	text-align: center;
 	vertical-align: middle;
-	@media (min-width: $bp-medium) {
+	@media (min-width: $bp-md) {
 		white-space: nowrap;
 	}
 	background-color: $tag-background-color;

@@ -39,7 +39,7 @@ form {
 		display: block;
 		@include vertical-rhythm();
 	}
-	@media (min-width: $bp-medium) {
+	@media (min-width: $bp-md) {
 		span {
 			vertical-align: middle;
 			display: inline-block;
@@ -79,7 +79,7 @@ textarea {
 	border-radius: $base-input-border-radius;
 	color: $base-input-color;
 	display: block;
-	@media (min-width: $bp-medium) {
+	@media (min-width: $bp-md) {
 		display: inline-block;
 	}
 	width: 100%;
