@@ -535,10 +535,8 @@ legend {
 	font-weight: 400;
 	letter-spacing: normal;
 	line-height: 1.3333333333;
-	/* -8sp 0 16sp -.06em */
 	display: block;
 	width: 100%;
-	margin: -0.5rem 0 1rem -0.06em;
 	margin: 0 0 1rem;
 }
 
@@ -675,7 +673,6 @@ h6 small {
 	line-height: 1;
 	opacity: 0.54;
 	display: block;
-	margin: -0.5rem 0 4rem -0.07em;
 }
 
 /* stylelint-enable declaration-block-no-duplicate-properties */
@@ -684,7 +681,6 @@ h1 {
 	font-weight: 400;
 	letter-spacing: -0.02em;
 	line-height: 1;
-	margin: -0.5rem 0 4rem -0.07em;
 }
 
 h2 {
@@ -692,9 +688,6 @@ h2 {
 	font-weight: 400;
 	letter-spacing: normal;
 	line-height: 1.0666666667;
-	margin: -0.5rem 0 4rem -0.07em;
-
-	/* -8sp 0 64sp -.07em */
 }
 
 h3 {
@@ -702,9 +695,6 @@ h3 {
 	font-weight: 400;
 	letter-spacing: normal;
 	line-height: 1.176475882;
-	margin: -0.5rem 0 4rem -0.07em;
-
-	/* -8sp 0 64sp -.07em */
 }
 
 h4 {
@@ -712,19 +702,13 @@ h4 {
 	font-weight: 400;
 	letter-spacing: normal;
 	line-height: 1.3333333333;
-	margin: -0.5rem 0 1rem -0.06em;
-
-	/* -8sp 0 16sp -.06em */
 }
 
 h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
 	letter-spacing: 0.02em;
-	line-height: 1.6;
-	margin: -0.5rem 0 1rem -0.05em;
-
-	/* -8sp 0 16sp -.05em */
+	line-height: 32px 20px / 16px;
 }
 
 h6 {
@@ -732,9 +716,6 @@ h6 {
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	line-height: 1.75;
-	margin: -0.5rem 0 1rem -0.06em;
-
-	/* -8sp 0 16sp -.06em */
 }
 
 p {
@@ -742,16 +723,14 @@ p {
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	line-height: 1.4285714286;
-	margin: -0.25rem 0 0.75rem 0;
-
-	/* -4sp 0 12sp 0 */
 }
 
 blockquote {
 	font-size: 1.5rem;
 	font-style: italic;
-	font-weight: 300;
-	letter-spacing: 1px;
+	font-weight: 100;
+	letter-spacing: 0.02em;
+	line-height: normal;
 	position: relative;
 	margin-left: 3rem;
 }
@@ -783,9 +762,6 @@ cite {
 	font-weight: 400;
 	letter-spacing: 0.08em;
 	line-height: 1.6666666667;
-	margin: -0.5rem 0 1rem -0.04em;
-
-	/* -8sp 0 16sp -.04em */
 }
 
 address {
@@ -793,9 +769,6 @@ address {
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	line-height: 1.4285714286;
-	margin: -0.25rem 0 0.75rem 0;
-
-	/* -4sp 0 12sp 0 */
 }
 
 ul,
@@ -804,9 +777,6 @@ ol {
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	line-height: 1.4285714286;
-	margin: -0.25rem 0 0.75rem 0;
-
-	/* -4sp 0 12sp 0 */
 }
 
 form span {
@@ -1397,11 +1367,9 @@ table th {
 	font-weight: 500;
 	letter-spacing: 0.04em;
 	line-height: 1.7142857143;
-	/* -4sp 0 12sp 0 */
 	text-overflow: ellipsis;
 	vertical-align: bottom;
 	color: rgba(0, 0, 0, 0.54);
-	margin: -0.25rem 0 0.75rem 0;
 	padding-bottom: 0.5rem;
 }
 
@@ -1467,6 +1435,8 @@ pre code {
 .o-btn {
 	font-size: 0.875rem;
 	font-weight: 500;
+	letter-spacing: normal;
+	line-height: normal;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -1533,20 +1503,9 @@ pre code {
 	margin-right: 0.5rem;
 }
 
-.o-icon-font {
-	-webkit-font-smoothing: antialiased;
-	font-family: "Material Icons";
-	-webkit-font-feature-settings: "liga";
-	font-feature-settings: "liga";
+.o-icon.fa {
 	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: normal;
-	letter-spacing: normal;
-	line-height: 1;
-	text-transform: none;
 	vertical-align: baseline;
-	word-wrap: normal;
-	display: inline-block;
 }
 
 .container {

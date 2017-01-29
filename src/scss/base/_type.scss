@@ -15,42 +15,42 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-	@include type($type: "display3", $color-contrast: true);
+	@include type(display3, true);
 	font-size: 60%;
 	display: block;
 }
 /* stylelint-enable declaration-block-no-duplicate-properties */
 
 h1 {
-	@include type($type: "display3");
+	@include type(display3);
 }
 
 h2 {
-	@include type($type: "display2");
+	@include type(display2);
 }
 
 h3 {
-	@include type($type: "display1");
+	@include type(display1);
 }
 
 h4 {
-	@include type($type: "headline");
+	@include type(headline);
 }
 
 h5 {
-	@include type($type: "title");
+	@include type(title);
 }
 
 h6 {
-	@include type($type: "subhead2");
+	@include type(subhead2);
 }
 
 p {
-	@include type($type: "body1");
+	@include type(body1);
 }
 
 blockquote {
-	@include type($type: "blockquote");
+	@include type(blockquote);
 	@include space(margin-left);
 
 	p {
@@ -80,14 +80,14 @@ mark {
 }
 
 cite {
-	@include type($type: "caption");
+	@include type(caption);
 }
 
 address {
-	@include type($type: "body1");
+	@include type(body1);
 }
 
 ul,
 ol {
-	@include type($type: "body1");
+	@include type(body1);
 }

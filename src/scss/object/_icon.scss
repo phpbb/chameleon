@@ -25,8 +25,8 @@ $icon-spacing: 8px !default;
 	height: $icon-size;
 	margin-right: $icon-spacing;
 
-	&-font {
-		@include typo-icon($icon-size);
+	&.fa {
+		font-size: $icon-size;
 		vertical-align: baseline;
 	}
 }

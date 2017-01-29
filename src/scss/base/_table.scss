@@ -93,7 +93,7 @@ table {
 	}
 
 	th {
-		@include type($type: "body2");
+		@include type(body2);
 		text-overflow: ellipsis;
 		vertical-align: bottom;
 		color: $table-header-color;

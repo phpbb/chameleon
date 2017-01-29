@@ -7,159 +7,142 @@
 //
 //------------------------------------------------------------------------------
 
+/* stylelint-disable declaration-property-unit-blacklist, unit-blacklist */
+
+//@settings
+$type-font-weight: (
+	thin: 100,
+	light: 300,
+	regular: 400,
+	medium: 500,
+	bold: 700,
+	black: 900
+);
+
+$type-styles: (
+	display4: (
+		font-size: 112px,
+		letter-spacing: -0.04em,
+		font-weight: map-get($type-font-weight, light),
+		line-height: unitless(112px, 112px),
+		opacity: 0.54
+	),
+	display3: (
+		font-size: 56px,
+		letter-spacing: -0.02em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(56px, 56px),
+		opacity: 0.54
+	),
+	display2: (
+		font-size: 45px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(48px, 45px),
+		opacity: 0.54
+	),
+	display1: (
+		font-size: 34px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(40px, 34px),
+		opacity: 0.87
+	),
+	headline: (
+		font-size: 24px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(32px, 24px),
+		opacity: 0.87
+	),
+	blockquote: (
+		font-size: 24px,
+		letter-spacing: 0.02em,
+		font-weight: map-get($type-font-weight, thin),
+		line-height: normal,
+		opacity: 0.54
+	),
+	title: (
+		font-size: 20px,
+		letter-spacing: 0.02em,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: unitless(32px 20px),
+		opacity: 0.87
+	),
+	subhead2: (
+		font-size: 16px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(28px, 16px),
+		opacity: 0.87
+	),
+	subhead1: (
+		font-size: 15px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(24px, 15px),
+		opacity: 0.87
+	),
+	body2: (
+		font-size: 14px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: unitless(24px, 14px),
+		opacity: 0.87
+	),
+	body1: (
+		font-size: 14px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(20px, 14px),
+		opacity: 0.87
+	),
+	button: (
+		font-size: 14px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: normal,
+		opacity: 0.54
+	),
+	menu: (
+		font-size: 14px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: normal,
+		opacity: 0.54
+	),
+	caption: (
+		font-size: 12px,
+		letter-spacing: 0.08em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(20px, 12px),
+		opacity: 0.87
+	)
+);
+
 //
 // @scss
-/* stylelint-disable declaration-property-unit-blacklist, unit-blacklist */
 @mixin type($type, $color-contrast: false) {
-	@if $type == "caption" {
-		font-size: 12px;
-		font-weight: 400;
-		letter-spacing: 0.08em;
-		line-height: unitless(20px, 12px);
-		margin: -8px 0 (16px -0.04em); /* -8sp 0 16sp -.04em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
+	$type-props: map-get($type-styles, $type);
+	@if not map-has-key($type-styles, $type) {
+		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
 	}
-	@if $type == "body1" {
-		font-size: 14px;
-		font-weight: 400;
-		letter-spacing: 0.04em;
-		line-height: unitless(20px, 14px);
-		margin: -4px 0 12px 0; /* -4sp 0 12sp 0 */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "body2" {
-		font-size: 14px;
-		font-weight: 500;
-		letter-spacing: 0.04em;
-		line-height: unitless(24px, 14px);
-		margin: -4px 0 12px 0; /* -4sp 0 12sp 0 */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "subhead1" {
-		font-size: 15px;
-		font-weight: 400;
-		letter-spacing: 0.04em;
-		line-height: unitless(24px, 15px);
-		margin: -5px 0 (13px -0.06em); /* -5sp 0 13sp -.06em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "subhead2" {
-		font-size: 16px;
-		font-weight: 400;
-		letter-spacing: 0.04em;
-		line-height: unitless(28px);
-		margin: -8px 0 (16px -0.06em); /* -8sp 0 16sp -.06em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "title" {
-		font-size: 20px;
-		font-weight: 500;
-		letter-spacing: 0.02em;
-		line-height: unitless(32px, 20px);
-		margin: -8px 0 (16px -0.05em); /* -8sp 0 16sp -.05em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "headline" {
-		font-size: 24px;
-		font-weight: 400;
-		letter-spacing: normal;
-		line-height: unitless(32px, 24px);
-		margin: -8px 0 (16px -0.06em); /* -8sp 0 16sp -.06em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "display1" {
-		font-size: 34px;
-		font-weight: 400;
-		letter-spacing: normal;
-		line-height: unitless(40px, 34px);
-		margin: -8px 0 (64px -0.07em); /* -8sp 0 64sp -.07em */
-		@if $color-contrast {
-			opacity: 0.87;
-		}
-	}
-	@if $type == "display2" {
-		font-size: 45px;
-		font-weight: 400;
-		letter-spacing: normal;
-		line-height: unitless(48px, 45px);
-		margin: -8px 0 (64px -0.07em); /* -8sp 0 64sp -.07em */
-		@if $color-contrast {
-			opacity: 0.54;
-		}
-	}
-	@if $type == "display3" {
-		font-size: 56px;
-		font-weight: 400;
-		letter-spacing: -0.02em;
-		line-height: unitless(56px, 56px);
-		margin: -8px 0 (64px -0.07em);
-		@if $color-contrast {
-			opacity: 0.54;
-		}
-	}
-	@if $type == "display4" {
-		font-size: 112px;
-		font-weight: 300;
-		letter-spacing: -0.04em;
-		line-height: unitless(112px, 112px);
-		margin: -16px 0 (56px -0.085em); /* -16sp 0 56sp -.085em */
-		@if $color-contrast {
-			opacity: 0.54;
-		}
-	}
-	@if $type == "button" {
-		font-size: 14px;
-		font-weight: 500;
-		text-transform: uppercase;
-		@if $color-contrast {
-			opacity: 0.54;
-		}
-	}
-	@if $type == "menu" {
-		font-size: 14px;
-		font-weight: 500;
-		@if $color-contrast {
-			opacity: 0.54;
-		}
-	}
-	@if $type == "blockquote" {
-		font-size: 24px;
+	font-size: map-get($type-props, font-size);
+	@if $type == blockquote {
 		font-style: italic;
-		font-weight: 300;
-		letter-spacing: 1px;
+	}
+	font-weight: #{map-get($type-props, font-weight)};
+	@if $type == button {
+		text-transform: uppercase;
+	}
+	letter-spacing: map-get($type-props, letter-spacing);
+	line-height: map-get($type-props, line-height);
+	@if $type == blockquote {
 		position: relative;
-		@if $color-contrast {
-			opacity: 0.54;
-		}
+	}
+	@if $color-contrast {
+		opacity: map-get($type-props, opacity);
 	}
 }
-/* stylelint-enable declaration-property-unit-blacklist, unit-blacklist */
 
-@mixin typo-icon($size: $default-icon-md) {
-	-webkit-font-smoothing: antialiased;
-	font-family: "Material Icons";
-	-webkit-font-feature-settings: "liga";
-	font-feature-settings: "liga";
-	font-size: $size;
-	font-style: normal;
-	font-weight: normal;
-	letter-spacing: normal;
-	line-height: 1;
-	text-transform: none;
-	word-wrap: normal;
-	display: inline-block;
-}
+/* stylelint-enable declaration-property-unit-blacklist, unit-blacklist */
