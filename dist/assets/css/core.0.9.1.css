@@ -1,6 +1,6 @@
 @charset "utf-8";
-/* stylelint-disable declaration-property-unit-blacklist */
-/* stylelint-enable declaration-property-unit-blacklist */
+/* stylelint-disable declaration-property-unit-blacklist, unit-blacklist */
+/* stylelint-enable declaration-property-unit-blacklist, unit-blacklist */
 /* stylelint-disable no-duplicate-selectors */
 html {
 	font-family: sans-serif;
@@ -531,13 +531,14 @@ fieldset {
 }
 
 legend {
-	-moz-osx-font-smoothing: grayscale;
 	font-size: 1.5rem;
 	font-weight: 400;
-	letter-spacing: 1px;
+	letter-spacing: normal;
 	line-height: 2;
+	/* -8sp 0 16sp -.06em */
 	display: block;
 	width: 100%;
+	margin: -0.5rem 0 1rem -0.06em;
 	margin: 0 0 1rem;
 }
 
@@ -670,68 +671,80 @@ h6 small {
 	font-size: 3.5rem;
 	font-size: 60%;
 	font-weight: 400;
-	letter-spacing: -2px;
-	line-height: 4;
+	letter-spacing: -0.02em;
+	line-height: 3.5;
 	opacity: 0.54;
 	display: block;
+	margin: -0.5rem 0 4rem -0.07em;
 }
 
 /* stylelint-enable declaration-block-no-duplicate-properties */
 h1 {
 	font-size: 3.5rem;
 	font-weight: 400;
-	letter-spacing: -2px;
-	line-height: 4;
+	letter-spacing: -0.02em;
+	line-height: 3.5;
+	margin: -0.5rem 0 4rem -0.07em;
 }
 
 h2 {
 	font-size: 2.8125rem;
 	font-weight: 400;
+	letter-spacing: normal;
 	line-height: 3;
+	margin: -0.5rem 0 4rem -0.07em;
+
+	/* -8sp 0 64sp -.07em */
 }
 
 h3 {
 	font-size: 2.125rem;
 	font-weight: 400;
+	letter-spacing: normal;
 	line-height: 2.5;
+	margin: -0.5rem 0 4rem -0.07em;
+
+	/* -8sp 0 64sp -.07em */
 }
 
 h4 {
-	-moz-osx-font-smoothing: grayscale;
 	font-size: 1.5rem;
 	font-weight: 400;
-	letter-spacing: 1px;
+	letter-spacing: normal;
 	line-height: 2;
+	margin: -0.5rem 0 1rem -0.06em;
+
+	/* -8sp 0 16sp -.06em */
 }
 
 h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
-	letter-spacing: 2px;
-	line-height: 1.75;
+	letter-spacing: 0.02em;
+	line-height: 2;
+	margin: -0.5rem 0 1rem -0.05em;
+
+	/* -8sp 0 16sp -.05em */
 }
 
 h6 {
-	font-size: 0.9375rem;
+	font-size: 1rem;
 	font-weight: 400;
-	line-height: 1.5;
-}
+	letter-spacing: 0.04em;
+	line-height: 1.75;
+	margin: -0.5rem 0 1rem -0.06em;
 
-@media (min-width: 768px) {
-	h6 {
-		font-size: 1rem;
-	}
+	/* -8sp 0 16sp -.06em */
 }
 
 p {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-weight: 400;
-}
+	letter-spacing: 0.04em;
+	line-height: 1.25;
+	margin: -0.25rem 0 0.75rem 0;
 
-@media (min-width: 768px) {
-	p {
-		font-size: 0.875rem;
-	}
+	/* -4sp 0 12sp 0 */
 }
 
 blockquote {
@@ -768,31 +781,32 @@ mark {
 cite {
 	font-size: 0.75rem;
 	font-weight: 400;
+	letter-spacing: 0.08em;
 	line-height: 1.25;
+	margin: -0.5rem 0 1rem -0.04em;
+
+	/* -8sp 0 16sp -.04em */
 }
 
 address {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-weight: 400;
-}
+	letter-spacing: 0.04em;
+	line-height: 1.25;
+	margin: -0.25rem 0 0.75rem 0;
 
-@media (min-width: 768px) {
-	address {
-		font-size: 0.875rem;
-	}
+	/* -4sp 0 12sp 0 */
 }
 
 ul,
 ol {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-weight: 400;
-}
+	letter-spacing: 0.04em;
+	line-height: 1.25;
+	margin: -0.25rem 0 0.75rem 0;
 
-@media (min-width: 768px) {
-	ul,
-	ol {
-		font-size: 0.875rem;
-	}
+	/* -4sp 0 12sp 0 */
 }
 
 form span {
@@ -1092,7 +1106,7 @@ select {
 	background-color: #ffffff;
 	background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0, 0 32, 0 16, 24" style="fill: #9e9e9e"></polygon></svg>');
 	background-origin: content-box;
-	background-position: right -1rem center;
+	background-position: right "" center;
 	background-repeat: no-repeat;
 	background-size: 9px 6px;
 	display: inline-block;
@@ -1381,16 +1395,14 @@ table td {
 table th {
 	font-size: 0.875rem;
 	font-weight: 500;
+	letter-spacing: 0.04em;
+	line-height: 1.5;
+	/* -4sp 0 12sp 0 */
 	text-overflow: ellipsis;
 	vertical-align: bottom;
 	color: rgba(0, 0, 0, 0.54);
+	margin: -0.25rem 0 0.75rem 0;
 	padding-bottom: 0.5rem;
-}
-
-@media (min-width: 768px) {
-	table th {
-		font-size: 1rem;
-	}
 }
 
 /* stylelint-enable no-indistinguishable-colors */
@@ -3181,4 +3193,4 @@ pre code {
 	display: none;
 }
 
-/*# sourceMappingURL=core.0.9.0.css.map */
+/*# sourceMappingURL=core.0.9.1.css.map */
