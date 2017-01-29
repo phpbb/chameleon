@@ -15,7 +15,7 @@
 		font-size: 12px;
 		font-weight: 400;
 		letter-spacing: 0.08em;
-		line-height: unitless(20px);
+		line-height: unitless(20px, 12px);
 		margin: -8px 0 (16px -0.04em); /* -8sp 0 16sp -.04em */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -25,7 +25,7 @@
 		font-size: 14px;
 		font-weight: 400;
 		letter-spacing: 0.04em;
-		line-height: unitless(20px);
+		line-height: unitless(20px, 14px);
 		margin: -4px 0 12px 0; /* -4sp 0 12sp 0 */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -35,7 +35,7 @@
 		font-size: 14px;
 		font-weight: 500;
 		letter-spacing: 0.04em;
-		line-height: unitless(24px);
+		line-height: unitless(24px, 14px);
 		margin: -4px 0 12px 0; /* -4sp 0 12sp 0 */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -45,7 +45,7 @@
 		font-size: 15px;
 		font-weight: 400;
 		letter-spacing: 0.04em;
-		line-height: unitless(24px);
+		line-height: unitless(24px, 15px);
 		margin: -5px 0 (13px -0.06em); /* -5sp 0 13sp -.06em */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -65,7 +65,7 @@
 		font-size: 20px;
 		font-weight: 500;
 		letter-spacing: 0.02em;
-		line-height: unitless(32px);
+		line-height: unitless(32px, 20px);
 		margin: -8px 0 (16px -0.05em); /* -8sp 0 16sp -.05em */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -75,7 +75,7 @@
 		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: normal;
-		line-height: unitless(32px);
+		line-height: unitless(32px, 24px);
 		margin: -8px 0 (16px -0.06em); /* -8sp 0 16sp -.06em */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -85,7 +85,7 @@
 		font-size: 34px;
 		font-weight: 400;
 		letter-spacing: normal;
-		line-height: unitless(40px);
+		line-height: unitless(40px, 34px);
 		margin: -8px 0 (64px -0.07em); /* -8sp 0 64sp -.07em */
 		@if $color-contrast {
 			opacity: 0.87;
@@ -95,7 +95,7 @@
 		font-size: 45px;
 		font-weight: 400;
 		letter-spacing: normal;
-		line-height: unitless(48px);
+		line-height: unitless(48px, 45px);
 		margin: -8px 0 (64px -0.07em); /* -8sp 0 64sp -.07em */
 		@if $color-contrast {
 			opacity: 0.54;
@@ -105,7 +105,7 @@
 		font-size: 56px;
 		font-weight: 400;
 		letter-spacing: -0.02em;
-		line-height: unitless(56px);
+		line-height: unitless(56px, 56px);
 		margin: -8px 0 (64px -0.07em);
 		@if $color-contrast {
 			opacity: 0.54;
@@ -115,7 +115,7 @@
 		font-size: 112px;
 		font-weight: 300;
 		letter-spacing: -0.04em;
-		line-height: unitless(112px);
+		line-height: unitless(112px, 112px);
 		margin: -16px 0 (56px -0.085em); /* -16sp 0 56sp -.085em */
 		@if $color-contrast {
 			opacity: 0.54;

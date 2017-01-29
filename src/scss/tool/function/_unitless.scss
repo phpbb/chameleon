@@ -9,6 +9,6 @@
 
 //
 // @scss
-@function unitless($number) {
-	@return strip-units($number) / strip-units($default-font-size);
+@function unitless($line-height, $font-size: $default-font-size) {
+	@return $line-height / $font-size;
 }

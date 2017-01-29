@@ -534,7 +534,7 @@ legend {
 	font-size: 1.5rem;
 	font-weight: 400;
 	letter-spacing: normal;
-	line-height: 2;
+	line-height: 1.3333333333;
 	/* -8sp 0 16sp -.06em */
 	display: block;
 	width: 100%;
@@ -672,7 +672,7 @@ h6 small {
 	font-size: 60%;
 	font-weight: 400;
 	letter-spacing: -0.02em;
-	line-height: 3.5;
+	line-height: 1;
 	opacity: 0.54;
 	display: block;
 	margin: -0.5rem 0 4rem -0.07em;
@@ -683,7 +683,7 @@ h1 {
 	font-size: 3.5rem;
 	font-weight: 400;
 	letter-spacing: -0.02em;
-	line-height: 3.5;
+	line-height: 1;
 	margin: -0.5rem 0 4rem -0.07em;
 }
 
@@ -691,7 +691,7 @@ h2 {
 	font-size: 2.8125rem;
 	font-weight: 400;
 	letter-spacing: normal;
-	line-height: 3;
+	line-height: 1.0666666667;
 	margin: -0.5rem 0 4rem -0.07em;
 
 	/* -8sp 0 64sp -.07em */
@@ -701,7 +701,7 @@ h3 {
 	font-size: 2.125rem;
 	font-weight: 400;
 	letter-spacing: normal;
-	line-height: 2.5;
+	line-height: 1.176475882;
 	margin: -0.5rem 0 4rem -0.07em;
 
 	/* -8sp 0 64sp -.07em */
@@ -711,7 +711,7 @@ h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
 	letter-spacing: normal;
-	line-height: 2;
+	line-height: 1.3333333333;
 	margin: -0.5rem 0 1rem -0.06em;
 
 	/* -8sp 0 16sp -.06em */
@@ -721,7 +721,7 @@ h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
 	letter-spacing: 0.02em;
-	line-height: 2;
+	line-height: 1.6;
 	margin: -0.5rem 0 1rem -0.05em;
 
 	/* -8sp 0 16sp -.05em */
@@ -741,7 +741,7 @@ p {
 	font-size: 0.875rem;
 	font-weight: 400;
 	letter-spacing: 0.04em;
-	line-height: 1.25;
+	line-height: 1.4285714286;
 	margin: -0.25rem 0 0.75rem 0;
 
 	/* -4sp 0 12sp 0 */
@@ -782,7 +782,7 @@ cite {
 	font-size: 0.75rem;
 	font-weight: 400;
 	letter-spacing: 0.08em;
-	line-height: 1.25;
+	line-height: 1.6666666667;
 	margin: -0.5rem 0 1rem -0.04em;
 
 	/* -8sp 0 16sp -.04em */
@@ -792,7 +792,7 @@ address {
 	font-size: 0.875rem;
 	font-weight: 400;
 	letter-spacing: 0.04em;
-	line-height: 1.25;
+	line-height: 1.4285714286;
 	margin: -0.25rem 0 0.75rem 0;
 
 	/* -4sp 0 12sp 0 */
@@ -803,7 +803,7 @@ ol {
 	font-size: 0.875rem;
 	font-weight: 400;
 	letter-spacing: 0.04em;
-	line-height: 1.25;
+	line-height: 1.4285714286;
 	margin: -0.25rem 0 0.75rem 0;
 
 	/* -4sp 0 12sp 0 */
@@ -1396,7 +1396,7 @@ table th {
 	font-size: 0.875rem;
 	font-weight: 500;
 	letter-spacing: 0.04em;
-	line-height: 1.5;
+	line-height: 1.7142857143;
 	/* -4sp 0 12sp 0 */
 	text-overflow: ellipsis;
 	vertical-align: bottom;
