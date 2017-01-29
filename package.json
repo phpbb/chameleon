@@ -1,5 +1,5 @@
 {
-  "name": "Base-l",
+  "name": "base-l",
   "version": "0.9.0",
   "description": "A well structured top down base css framework",
   "main": "gulpfile.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/hanakin/base-l.git"
   },
-  "author": "",
+  "author": "Michael Miday (Hanakin)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hanakin/base-l/issues"
