@@ -66,14 +66,14 @@ $type-styles: (
 		font-size: 20px,
 		letter-spacing: 0.02em,
 		font-weight: map-get($type-font-weight, medium),
-		line-height: unitless(32px 20px),
+		line-height: unitless(32px, 20px),
 		opacity: 0.87
 	),
 	subhead2: (
 		font-size: 16px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(28px, 16px),
+		line-height: unitless(28px),
 		opacity: 0.87
 	),
 	subhead1: (
