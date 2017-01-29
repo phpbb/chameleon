@@ -8,7 +8,7 @@
 
 //
 // @scss
-/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable declaration-block-no-duplicate-properties, unit-blacklist, declaration-property-unit-whitelist */
 h1 small,
 h2 small,
 h3 small,
@@ -91,3 +91,4 @@ ul,
 ol {
 	@include type(body1);
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */

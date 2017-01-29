@@ -142,11 +142,12 @@ dfn {
 // Correct the font size and margin on `h1` elements within `section` and
 // `article` contexts in Chrome, Firefox, and Safari.
 //
-
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 
 //
 // Add the correct background and color in IE 9-.
@@ -177,7 +178,7 @@ sup {
 	vertical-align: baseline;
 	position: relative;
 }
-
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 sub {
 	bottom: -0.25em;
 }
@@ -185,7 +186,7 @@ sub {
 sup {
 	top: -0.5em;
 }
-
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 // Embedded content
 //==============================================================================
 
@@ -212,7 +213,7 @@ svg:not(:root) {
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
 //
-
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 code,
 kbd,
 pre,
@@ -220,14 +221,16 @@ samp {
 	font-family: monospace, monospace; // [1]
 	font-size: 1em; // [2]
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 
 //
 // Add the correct margin in IE 8.
 //
-
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 figure {
 	margin: 1em 40px;
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 
 //
 // 1. Add the correct box sizing in Firefox.
@@ -324,12 +327,13 @@ button:-moz-focusring,
 //
 // Change the border, margin, and padding in all browsers (opinionated).
 //
-
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 fieldset {
 	border: 1px solid $default-gray;
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 
 //
 // 1. Correct the text wrapping in Edge and IE.

@@ -35,7 +35,7 @@ $table-dividers: 1px solid $table-divider-color;
 
 //
 // @scss
-/* stylelint-disable no-indistinguishable-colors */
+/* stylelint-disable no-indistinguishable-colors, unit-blacklist, declaration-property-unit-whitelist */
 table {
 	font-size: 13px;
 	white-space: nowrap;
@@ -100,4 +100,4 @@ table {
 		padding-bottom: $table-header-padding-bottom;
 	}
 }
-/* stylelint-enable no-indistinguishable-colors */
+/* stylelint-enable no-indistinguishable-colors, unit-blacklist, declaration-property-unit-whitelist */

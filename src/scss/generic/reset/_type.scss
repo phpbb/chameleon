@@ -92,6 +92,7 @@ dt {
 //
 // 1. Hang the opening quote of the blockquote.
 //
+/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 blockquote {
 	@include vertical-rhythm();
 	text-indent: -0.41em; // [1]
@@ -128,3 +129,4 @@ q {
 		display: inline-block;
 	}
 }
+/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
