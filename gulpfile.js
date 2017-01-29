@@ -31,9 +31,9 @@ var AUTOPREFIXER_BROWSERS = [
 	'ios >= 8'
 ];
 
-var render = function (layer) {
+gulp.task('css', function () {
 	var css = gulp
-	.src(build.scss + layer + '.scss')
+	.src(build.scss + 'core.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		precision: 10,
@@ -83,21 +83,13 @@ var render = function (layer) {
 	.pipe(gulp.dest(build.css));
 
 	return css;
-};
-
-gulp.task('core', function () {
-	render('core');
-});
-
-gulp.task('utilities', function () {
-	render('utilities');
 });
 
 gulp.task('clean', function () {
 	del(['dist']);
 });
 
-gulp.task('minify', ['core', 'utilities'], function () {
+gulp.task('minify', ['core'], function () {
 	var css = gulp
 	.src(build.css + '/*.' + pkg.version + '.css')
 	.pipe(sourcemaps.init())
@@ -113,8 +105,8 @@ gulp.task('minify', ['core', 'utilities'], function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('src/scss/**/*.scss', ['core', 'utilities', 'minify']);
+	gulp.watch('src/scss/**/*.scss', ['core', 'minify']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['core', 'utilities', 'minify', 'watch']);
+gulp.task('default', ['core', 'minify', 'watch']);
