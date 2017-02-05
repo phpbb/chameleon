@@ -14,9 +14,7 @@ $default-line-height: 24px !default;
 $default-border-size: 1px !default;
 $default-border-radius: 2px !default;
 
-$default-unit: 1rem !default;
-
-$default-grid-gutter: $default-unit;
+$default-grid-gutter: 16px;
 
 // Grid
 $sm: 540px;
