@@ -10,7 +10,6 @@
 	"rules": {
 		"scss/at-extend-no-missing-placeholder": true,
 		"scss/dollar-variable-colon-space-before": "never",
-		"scss/partial-no-import": true,
 		"scss/selector-no-redundant-nesting-selector": true,
 
 		"at-rule-name-case": "lower",
@@ -195,7 +194,6 @@
 		"value-list-comma-newline-before": "never-multi-line",
 		"value-list-comma-space-after": "always-single-line",
 		"value-list-comma-space-before": "never",
-		"value-no-vendor-prefix": true,
 
 		"declaration-block-properties-order": [
 			[
@@ -374,6 +372,8 @@
 				"clip",
 				"zoom",
 				"-webkit-flex",
+				"flex",
+				"-webkit-flex-direction",
 				"flex-direction",
 				"flex-order",
 				"flex-pack",
@@ -386,7 +386,6 @@
 				"flex-shrink",
 				"-webkit-flex-wrap",
 				"flex-wrap",
-				"flex",
 
 				"-webkit-box-sizing",
 				"-moz-box-sizing",

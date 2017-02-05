@@ -1,6 +1,7 @@
 {
     "sort-order": [
         [ "$variable" ],
+        [ "@atrule" ],
         [
             "-moz-osx-font-smoothing",
             "-webkit-font-smoothing",
@@ -167,25 +168,34 @@
             "z-index"
         ],
         [
-            "display",
-            "visibility",
-            "float",
-            "clear",
-            "-ms-overflow-x",
-            "-ms-overflow-y",
-            "-ms-overflow-style",
-            "overflow",
-            "overflow-x",
-            "overflow-y",
-            "clip",
-            "zoom",
-            "-webkit-flex",
-            "flex-direction",
-            "flex-order",
-            "flex-pack",
-            "flex-align",
-            "flex"
-        ],
+			"display",
+			"visibility",
+			"float",
+			"clear",
+			"-ms-overflow-x",
+			"-ms-overflow-y",
+			"-ms-overflow-style",
+			"overflow",
+			"overflow-x",
+			"overflow-y",
+			"clip",
+			"zoom",
+			"-webkit-flex",
+			"flex",
+			"-webkit-flex-direction",
+			"flex-direction",
+			"flex-order",
+			"flex-pack",
+			"flex-align",
+			"-webkit-flex-basis",
+			"flex-basis",
+			"-webkit-flex-grow",
+			"flex-grow",
+			"-webkit-flex-shrink",
+			"flex-shrink",
+			"-webkit-flex-wrap",
+			"flex-wrap"
+		],
         [
             "-webkit-box-sizing",
             "-moz-box-sizing",
@@ -312,7 +322,6 @@
             "-webkit-appearance"
         ],
         [ "..." ],
-		[ "@atrule" ],
         [ "@media" ],
         [ ">child" ]
     ]
