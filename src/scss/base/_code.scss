@@ -52,7 +52,9 @@ kbd {
 // User input typically entered via keyboard
 kbd {
 	background-color: $base-kbd-bg;
+	/* stylelint-disable no-indistinguishable-colors */
 	box-shadow: inset 0 -1px 0 $base-kbd-border-color;
+	/* stylelint-enable no-indistinguishable-colors */
 	color: $base-kbd-color;
 	display: inline-block;
 

@@ -26,7 +26,6 @@ $table-header-color: rgba($black, 0.54);
 $table-divider-color: rgba($black, 0.12);
 $table-hover-color: $gray-200;
 $table-selection-color: $default-gray-light;
-$table-dividers: 1px solid $table-divider-color;
 
 
 //
@@ -43,7 +42,9 @@ table {
 	font-size: 13px;
 	white-space: nowrap;
 	background-color: $white;
-	border: $table-dividers;
+	/* stylelint-disable no-indistinguishable-colors */
+	border: 1px solid $table-divider-color;
+	/* stylelint-enable no-indistinguishable-colors */
 	// border-collapse: collapse;
 	display: block;
 	overflow-x: auto;
@@ -84,8 +85,10 @@ table {
 
 	td {
 		vertical-align: top;
-		border-top: $table-dividers;
-		border-bottom: $table-dividers;
+		/* stylelint-disable no-indistinguishable-colors */
+		border-top: 1px solid $table-divider-color;
+		border-bottom: 1px solid $table-divider-color;
+		/* stylelint-enable no-indistinguishable-colors */
 		padding-top: $table-cell-top;
 	}
 
@@ -93,7 +96,9 @@ table {
 		@include type(body2);
 		text-overflow: ellipsis;
 		vertical-align: bottom;
+		/* stylelint-disable no-indistinguishable-colors */
 		color: $table-header-color;
+		/* stylelint-enable no-indistinguishable-colors */
 		padding-bottom: $table-header-padding-bottom;
 	}
 }

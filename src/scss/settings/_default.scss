@@ -8,33 +8,33 @@
 //
 // @settings
 
-$default-font-size: 16px !default;
-$default-line-height: 24px !default;
+$default-font-size:             16px !default;
+$default-line-height:           24px !default;
 
-$default-border-size: 1px !default;
-$default-border-radius: 2px !default;
+$default-border-size:           1px !default;
+$default-border-radius:         2px !default;
 
-$default-grid-gutter: 16px;
+$default-grid-gutter:           16px !default;
 
 // Grid
-$sm: 540px;
-$md: 720px;
-$lg: 960px;
-$xl: 1140px;
+$sm: 540px !default;
+$md: 720px !default;
+$lg: 960px !default;
+$xl: 1140px !default;
 
-$bp-sm: 576px;
-$bp-md: 768px;
-$bp-lg: 992px;
-$bp-xl: 1200px;
+$bp-sm: 576px !default;
+$bp-md: 768px !default;
+$bp-lg: 992px !default;
+$bp-xl: 1200px !default;
 
 // Fonts
-$default-font: "Roboto", "Helvetica", "Arial", sans-serif !default;
-$default-code-font: "Monaco", "Andale Mono","Courier New", "Courier", "Mono" !default;
+$default-font: Roboto, Helvetica, Arial, sans-serif !default;
+$default-code-font: Monaco, Andale Mono, Courier New, Courier, Mono !default;
 
 // icons
-$default-icon-sm: $default-font-size;
-$default-icon-md: $default-line-height;
-$default-icon-lg: 2 * $default-font-size;
+$default-icon-sm: $default-font-size !default;
+$default-icon-md: $default-line-height !default;
+$default-icon-lg: 2 * $default-font-size !default;
 
 //
 // color scheme

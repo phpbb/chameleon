@@ -4,7 +4,8 @@
 	],
 	"ignoreFiles": [
 		"./src/scss/generic/_normalize.scss",
-		"./src/scss/settings/*.scss"
+		"./src/scss/settings/*.scss",
+		"./src/scss/tools/**/*.scss"
 	],
 	"rules": {
 		"scss/at-extend-no-missing-placeholder": true,

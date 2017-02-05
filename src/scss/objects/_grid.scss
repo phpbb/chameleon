@@ -59,12 +59,14 @@
 	padding-left: $default-grid-gutter;
 }
 
+/* stylelint-disable value-no-vendor-prefix */
 .o-row {
 	display: flex;
 	flex-wrap: wrap;
 	margin-right: -$grid-gutter;
 	margin-left: -$grid-gutter;
 }
+/* stylelint-enable value-no-vendor-prefix */
 
 .o-col {
 	position: relative;

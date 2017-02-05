@@ -1,7 +1,6 @@
 {
     "sort-order": [
         [ "$variable" ],
-        [ "@atrule" ],
         [
             "-moz-osx-font-smoothing",
             "-webkit-font-smoothing",
@@ -313,6 +312,7 @@
             "-webkit-appearance"
         ],
         [ "..." ],
+		[ "@atrule" ],
         [ "@media" ],
         [ ">child" ]
     ]

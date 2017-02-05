@@ -1,7 +1,6 @@
 @charset "utf-8";
-/* stylelint-disable declaration-property-unit-blacklist, unit-blacklist */
-/* stylelint-enable declaration-property-unit-blacklist, unit-blacklist */
 /* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-property-unit-whitelist,unit-blacklist, selector-root-no-composition */
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -230,6 +229,7 @@ html input[disabled] {
 	cursor: not-allowed;
 }
 
+/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist, selector-root-no-composition */
 html {
 	box-sizing: border-box;
 }
@@ -536,7 +536,9 @@ fieldset {
 legend {
 	font-size: 1.5rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.3333333333;
 	display: block;
 	width: 100%;
@@ -635,7 +637,7 @@ select::-ms-value {
 }
 
 html {
-	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -669,7 +671,9 @@ h6 small {
 	font-size: 3.5rem;
 	font-size: 60%;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: -0.02em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1;
 	opacity: 0.54;
 	display: block;
@@ -678,49 +682,63 @@ h6 small {
 h1 {
 	font-size: 3.5rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: -0.02em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1;
 }
 
 h2 {
 	font-size: 2.8125rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.0666666667;
 }
 
 h3 {
 	font-size: 2.125rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.176475882;
 }
 
 h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.3333333333;
 }
 
 h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.02em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.6;
 }
 
 h6 {
 	font-size: 1rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.75;
 }
 
 p {
 	font-size: 0.875rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
 
@@ -728,7 +746,9 @@ blockquote {
 	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 100;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.02em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: normal;
 	position: relative;
 	margin-left: 3rem;
@@ -759,14 +779,18 @@ mark {
 cite {
 	font-size: 0.75rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.08em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.6666666667;
 }
 
 address {
 	font-size: 0.875rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
 
@@ -774,7 +798,9 @@ ul,
 ol {
 	font-size: 0.875rem;
 	font-weight: 400;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
 
@@ -1303,7 +1329,9 @@ table {
 	font-size: 0.8125rem;
 	white-space: nowrap;
 	background-color: #ffffff;
+	/* stylelint-disable no-indistinguishable-colors */
 	border: 1px solid rgba(0, 0, 0, 0.12);
+	/* stylelint-enable no-indistinguishable-colors */
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -1355,19 +1383,25 @@ table th:last-of-type {
 
 table td {
 	vertical-align: top;
+	/* stylelint-disable no-indistinguishable-colors */
 	border-top: 1px solid rgba(0, 0, 0, 0.12);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	/* stylelint-enable no-indistinguishable-colors */
 	padding-top: 0.75rem;
 }
 
 table th {
 	font-size: 0.875rem;
 	font-weight: 500;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.7142857143;
 	text-overflow: ellipsis;
 	vertical-align: bottom;
+	/* stylelint-disable no-indistinguishable-colors */
 	color: rgba(0, 0, 0, 0.54);
+	/* stylelint-enable no-indistinguishable-colors */
 	padding-bottom: 0.5rem;
 }
 
@@ -1375,7 +1409,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: "Monaco", "Andale Mono", "Courier New", "Courier", "Mono";
+	font-family: Monaco, Andale Mono, Courier New, Courier, Mono;
 }
 
 code,
@@ -1389,7 +1423,9 @@ kbd {
 
 kbd {
 	background-color: #212121;
+	/* stylelint-disable no-indistinguishable-colors */
 	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+	/* stylelint-enable no-indistinguishable-colors */
 	color: #ffffff;
 	display: inline-block;
 }
@@ -1430,7 +1466,9 @@ pre code {
 .o-btn {
 	font-size: 0.875rem;
 	font-weight: 500;
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: normal;
 	text-align: center;
 	text-decoration: none;
@@ -1536,6 +1574,7 @@ pre code {
 	}
 }
 
+/* stylelint-disable value-no-vendor-prefix */
 .o-row {
 	display: -webkit-flex;
 	display: flex;
@@ -1545,6 +1584,7 @@ pre code {
 	margin-left: -1rem;
 }
 
+/* stylelint-enable value-no-vendor-prefix */
 .o-col {
 	position: relative;
 	-webkit-flex-basis: 0;

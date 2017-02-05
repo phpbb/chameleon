@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------
 
-/* stylelint-disable declaration-property-unit-blacklist, unit-blacklist */
-
 //@settings
 $type-font-weight: (
 	thin: 100,
@@ -135,7 +133,9 @@ $type-styles: (
 	@if $type == button {
 		text-transform: uppercase;
 	}
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: map-get($type-props, letter-spacing);
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: map-get($type-props, line-height);
 	@if $type == blockquote {
 		position: relative;
@@ -143,6 +143,5 @@ $type-styles: (
 	@if $color-contrast {
 		opacity: map-get($type-props, opacity);
 	}
-}
 
-/* stylelint-enable declaration-property-unit-blacklist, unit-blacklist */
+}
