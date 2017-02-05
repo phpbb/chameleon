@@ -26,7 +26,7 @@ $link-hover-color: $default-primary-dark-color !default;
 
 //
 // @scss
-/* stylelint-disable declaration-block-no-duplicate-properties */
+
 a {
 	text-decoration: none;
 	color: $link-color;
@@ -45,4 +45,3 @@ a {
 		outline-offset: -1px;
 	}
 }
-/* stylelint-enable declaration-block-no-duplicate-properties */

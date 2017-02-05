@@ -13,10 +13,8 @@ $table-row-height: 48px;
 $table-last-row-height: 56px;
 $table-header-height: $table-last-row-height;
 $table-header-padding-bottom: 8px;
-
 $table-column-spacing: 36px;
 $table-column-padding: $table-column-spacing / 2;
-
 $table-card-header-height: 64px;
 $table-card-title-top: 20px;
 $table-card-padding: 24px;
@@ -26,31 +24,30 @@ $table-cell-top: $table-card-padding / 2;
 //Theme Variables
 $table-header-color: rgba($black, 0.54);
 $table-divider-color: rgba($black, 0.12);
-
 $table-hover-color: $gray-200;
 $table-selection-color: $default-gray-light;
-
 $table-dividers: 1px solid $table-divider-color;
 
 
 //
 // @scss
-/* stylelint-disable no-indistinguishable-colors, unit-blacklist, declaration-property-unit-whitelist */
+
 table {
+	@media (min-width: $bp-md) {
+		display: table;
+	}
+
+	@media (min-width: $bp-md) {
+		width: auto;
+	}
 	font-size: 13px;
 	white-space: nowrap;
 	background-color: $white;
 	border: $table-dividers;
 	// border-collapse: collapse;
 	display: block;
-	@media (min-width: $bp-md) {
-		display: table;
-	}
 	overflow-x: auto;
 	width: 100%;
-	@media (min-width: $bp-md) {
-		width: auto;
-	}
 
 	thead {
 		padding-bottom: ($table-header-padding-bottom / 2);
@@ -100,4 +97,3 @@ table {
 		padding-bottom: $table-header-padding-bottom;
 	}
 }
-/* stylelint-enable no-indistinguishable-colors, unit-blacklist, declaration-property-unit-whitelist */

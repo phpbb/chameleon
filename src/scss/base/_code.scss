@@ -10,7 +10,6 @@
 
 // Layout Variables
 $base-kbd-padding: 4px !default;
-
 $base-pre-padding: 16px !default;
 
 // Theme Variables
@@ -18,11 +17,10 @@ $base-code-font-family: $default-code-font;
 $base-code-bg: $gray-200 !default;
 $base-code-color: $default-primary-light-color !default;
 $base-code-border-radius: $default-border-radius !default;
-
 $base-kbd-nested-font-weight: 700 !default;
 $base-kbd-bg: $gray-900 !default;
 $base-kbd-color: $white !default;
-
+$base-kbd-border-color: rgba(0, 0, 0, 0.25) !default;
 $base-pre-bg: $gray-800 !default;
 $base-pre-border-width: 0 !default;
 $base-pre-border-style: solid !default;
@@ -52,10 +50,9 @@ kbd {
 }
 
 // User input typically entered via keyboard
-/* stylelint-disable no-indistinguishable-colors */
 kbd {
 	background-color: $base-kbd-bg;
-	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0 -1px 0 $base-kbd-border-color;
 	color: $base-kbd-color;
 	display: inline-block;
 
@@ -66,7 +63,6 @@ kbd {
 		padding: 0;
 	}
 }
-/* stylelint-enable no-indistinguishable-colors */
 
 // Blocks of code
 pre {

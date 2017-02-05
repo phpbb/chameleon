@@ -8,7 +8,6 @@
 
 //
 // @scss
-/* stylelint-disable declaration-block-no-duplicate-properties, unit-blacklist, declaration-property-unit-whitelist */
 h1 small,
 h2 small,
 h3 small,
@@ -19,7 +18,6 @@ h6 small {
 	font-size: 60%;
 	display: block;
 }
-/* stylelint-enable declaration-block-no-duplicate-properties */
 
 h1 {
 	@include type(display3);
@@ -91,4 +89,3 @@ ul,
 ol {
 	@include type(body1);
 }
-/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
