@@ -1,0 +1,38 @@
+//------------------------------------------------------------------------------
+// @object: Tag
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$tag-border-radius: $default-border-radius !default;
+$tag-padding: 4px !default;
+
+// Theme Variables
+$tag-background-color: $default-gray !default;
+$tag-color: $default-gray-dark !default;
+
+//
+// @scss
+.o-tag {
+	text-align: center;
+	vertical-align: middle;
+	@media (min-width: $bp-medium) {
+		white-space: nowrap;
+	}
+	background-color: $tag-background-color;
+	border-radius: $tag-border-radius;
+	color: $tag-color;
+	display: inline-block;
+	margin-left: ($tag-padding * 2);
+	padding: ($tag-padding / 2) $tag-padding;
+
+	// Empty tags collapse automatically
+	&:empty {
+		display: none;
+	}
+}

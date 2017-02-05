@@ -1,0 +1,17 @@
+//------------------------------------------------------------------------------
+// @tool: Vertical Rhythm
+//------------------------------------------------------------------------------
+// @description
+//
+// A lot of elements need to share some declarations (mainly for
+// vertical rhythm), so we `extend` some silent classes.
+//
+// based on Typeset
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@mixin vertical-rhythm {
+	margin: 0 0 $default-line-height;
+}

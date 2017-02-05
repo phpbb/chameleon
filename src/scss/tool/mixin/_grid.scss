@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------------
+// @tool: Grid
+//------------------------------------------------------------------------------
+// @description
+//
+// Mixin for generating the grid col widths
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$grid-gutter: $default-grid-gutter !default;
+
+// Breakpoints
+$bp-medium: 769px;
+$bp-large: 992px;
+$bp-wide: 1200px;
+
+//
+// @scss
+@mixin o-grid {
+	margin-top: -($grid-gutter / 2);
+	margin-right: -($grid-gutter / 2);
+	margin-left: -($grid-gutter / 2);
+
+	&:last-child {
+		margin-bottom: -($grid-gutter / 2);
+	}
+
+	&:not(:last-child) {
+		margin-bottom: ($grid-gutter / 2);
+	}
+}
+
+@mixin o-col() {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: wrap;
+	padding: ($grid-gutter / 2);
+}
+
+@mixin o-col-width($w: 0) {
+	flex: none;
+	width: percentage($w / 12);
+}

@@ -1,0 +1,16 @@
+//------------------------------------------------------------------------------
+// @tool: Border Radius
+//------------------------------------------------------------------------------
+// @description
+//
+//
+// Helper to make only top, bottom radius
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@mixin border-radius($type, $radius) {
+	border-#{$type}-left-radius: $radius;
+	border-#{$type}-right-radius: $radius;
+}
