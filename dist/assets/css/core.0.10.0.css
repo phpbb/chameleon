@@ -1329,9 +1329,7 @@ table {
 	font-size: 0.8125rem;
 	white-space: nowrap;
 	background-color: #ffffff;
-	/* stylelint-disable no-indistinguishable-colors */
 	border: 1px solid rgba(0, 0, 0, 0.12);
-	/* stylelint-enable no-indistinguishable-colors */
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -1383,10 +1381,8 @@ table th:last-of-type {
 
 table td {
 	vertical-align: top;
-	/* stylelint-disable no-indistinguishable-colors */
 	border-top: 1px solid rgba(0, 0, 0, 0.12);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-	/* stylelint-enable no-indistinguishable-colors */
 	padding-top: 0.75rem;
 }
 
@@ -1399,9 +1395,7 @@ table th {
 	line-height: 1.7142857143;
 	text-overflow: ellipsis;
 	vertical-align: bottom;
-	/* stylelint-disable no-indistinguishable-colors */
 	color: rgba(0, 0, 0, 0.54);
-	/* stylelint-enable no-indistinguishable-colors */
 	padding-bottom: 0.5rem;
 }
 
@@ -1423,9 +1417,7 @@ kbd {
 
 kbd {
 	background-color: #212121;
-	/* stylelint-disable no-indistinguishable-colors */
 	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-	/* stylelint-enable no-indistinguishable-colors */
 	color: #ffffff;
 	display: inline-block;
 }

@@ -42,9 +42,7 @@ table {
 	font-size: 13px;
 	white-space: nowrap;
 	background-color: $white;
-	/* stylelint-disable no-indistinguishable-colors */
 	border: 1px solid $table-divider-color;
-	/* stylelint-enable no-indistinguishable-colors */
 	// border-collapse: collapse;
 	display: block;
 	overflow-x: auto;
@@ -85,10 +83,8 @@ table {
 
 	td {
 		vertical-align: top;
-		/* stylelint-disable no-indistinguishable-colors */
 		border-top: 1px solid $table-divider-color;
 		border-bottom: 1px solid $table-divider-color;
-		/* stylelint-enable no-indistinguishable-colors */
 		padding-top: $table-cell-top;
 	}
 
@@ -96,9 +92,7 @@ table {
 		@include type(body2);
 		text-overflow: ellipsis;
 		vertical-align: bottom;
-		/* stylelint-disable no-indistinguishable-colors */
 		color: $table-header-color;
-		/* stylelint-enable no-indistinguishable-colors */
 		padding-bottom: $table-header-padding-bottom;
 	}
 }
