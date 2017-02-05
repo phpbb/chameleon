@@ -7,11 +7,11 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var cssnano = require('gulp-cssnano');
 var postcss = require('gulp-postcss');
+var stylefmt = require('gulp-stylefmt');
 var sorting = require('postcss-sorting');
 var torem = require('postcss-pxtorem');
 // var rtl = require('postcss-rtl');
 // var stripComments = require('postcss-discard-comments');
-var stylefmt = require('gulp-stylefmt');
 var del = require('del');
 var pkg = require('./package.json');
 
@@ -33,7 +33,7 @@ var AUTOPREFIXER_BROWSERS = [
 
 gulp.task('css', function () {
 	var css = gulp
-	.src(build.scss + 'core.scss')
+	.src(build.scss + '*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		precision: 10,
@@ -52,7 +52,7 @@ gulp.task('css', function () {
 			}),
 			torem({
 				rootValue: 16,
-				unitPrecision: 5,
+				unitPrecision: 7,
 				propWhiteList: [
 					'font',
 					'font-size',
