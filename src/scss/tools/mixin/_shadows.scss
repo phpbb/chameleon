@@ -142,18 +142,15 @@ $shadows: (
 
 //
 // @scss
-@mixin shadow($d) {
+@mixin shadow($depth) {
+	$shadow: map-get($shadows, $depth);
 	// Focus Shadow
-	@if not map-has-key($shadows, $d) {
-		/* stylelint-disable no-indistinguishable-colors */
+	@if not map-has-key($shadows, $depth) {
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
-		/* stylelint-enable no-indistinguishable-colors */
 	} @else {
-		/* stylelint-disable no-indistinguishable-colors */
 		box-shadow:
-			map-get($shadows, umbra),
-			map-get($shadows, penumbra),
-			map-get($shadows, ambient);
-		/* stylelint-enable no-indistinguishable-colors */
+			map-get($shadow, umbra),
+			map-get($shadow, penumbra),
+			map-get($shadow, ambient);
 	}
 }
