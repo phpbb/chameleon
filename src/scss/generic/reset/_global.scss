@@ -22,13 +22,13 @@
 // 6. Make html take up the entire screen
 //
 html {
-	-moz-osx-font-smoothing: grayscale; // [3]
-	-webkit-font-smoothing: antialiased;
-	-ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
 	overflow-y: scroll; // [1]
 	width: 100%; // [6]
 	height: 100%; // [6]
 	min-height: 100%; // [2]
+	-moz-osx-font-smoothing: grayscale; // [3]
+	-webkit-font-smoothing: antialiased;
+	-ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
 	-ms-touch-action: manipulation; // [5]
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
@@ -149,8 +149,10 @@ svg {
 }
 
 //
-// from bootstrap grid...
+// from bootstrap grid...not sure if we need this
 //
+/* stylelint-disable at-rule-no-vendor-prefix */
 @-ms-viewport {
 	width: device-width;
 }
+/* stylelint-enable at-rule-no-vendor-prefix */

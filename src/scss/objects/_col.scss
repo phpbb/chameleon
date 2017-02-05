@@ -13,7 +13,6 @@
 //
 //------------------------------------------------------------------------------
 
-/* stylelint-disable at-rule-empty-line-before */
 
 //
 // @scss
@@ -26,19 +25,12 @@
 		}
 	}
 
-	.o-pull-0 {
-		right: auto;
-	}
-
 	@for $i from 1 through 12 {
 		.o-pull-#{$i} {
 			@include pull($i);
 		}
 	}
 
-	.o-push-0 {
-		left: auto;
-	}
 	@for $i from 1 through 12 {
 		.o-push-#{$i} {
 			@include push($i);
@@ -60,18 +52,12 @@
 			}
 		}
 
-		.o-pull-sm-0 {
-			right: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-pull-sm-#{$i} {
 				@include pull($i);
 			}
 		}
 
-		.o-push-sm-0 {
-			left: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-push-sm-#{$i} {
 				@include push($i);
@@ -82,6 +68,14 @@
 			.o-offset-sm-#{$i} {
 				@include offset($i);
 			}
+		}
+
+		.o-pull-sm-0 {
+			right: auto;
+		}
+
+		.o-push-sm-0 {
+			left: auto;
 		}
 	}
 
@@ -94,18 +88,12 @@
 			}
 		}
 
-		.o-pull-md-0 {
-			right: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-pull-md-#{$i} {
 				@include pull($i);
 			}
 		}
 
-		.o-push-md-0 {
-			left: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-push-md-#{$i} {
 				@include push($i);
@@ -116,6 +104,14 @@
 			.o-offset-md-#{$i} {
 				@include offset($i);
 			}
+		}
+
+		.o-pull-md-0 {
+			right: auto;
+		}
+
+		.o-push-md-0 {
+			left: auto;
 		}
 	}
 
@@ -128,18 +124,12 @@
 			}
 		}
 
-		.o-pull-lg-0 {
-			right: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-pull-lg-#{$i} {
 				@include pull($i);
 			}
 		}
 
-		.o-push-lg-0 {
-			left: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-push-lg-#{$i} {
 				@include push($i);
@@ -150,6 +140,14 @@
 			.o-offset-lg-#{$i} {
 				@include offset($i);
 			}
+		}
+
+		.o-pull-lg-0 {
+			right: auto;
+		}
+
+		.o-push-lg-0 {
+			left: auto;
 		}
 	}
 
@@ -162,18 +160,12 @@
 			}
 		}
 
-		.o-pull-xl-0 {
-			right: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-pull-xl-#{$i} {
 				@include pull($i);
 			}
 		}
 
-		.o-push-xl-0 {
-			left: auto;
-		}
 		@for $i from 1 through 12 {
 			.o-push-xl-#{$i} {
 				@include push($i);
@@ -185,6 +177,21 @@
 				@include offset($i);
 			}
 		}
+
+		.o-pull-xl-0 {
+			right: auto;
+		}
+
+		.o-push-xl-0 {
+			left: auto;
+		}
+	}
+
+	.o-pull-0 {
+		right: auto;
+	}
+
+	.o-push-0 {
+		left: auto;
 	}
 }
-/* stylelint-enable at-rule-empty-line-before */

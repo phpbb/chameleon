@@ -42,6 +42,9 @@ $btn-border-color: $default-gray !default;
 //
 .o-btn {
 	@include type(button);
+	@if $use-material == true {
+		@include shadow-2dp();
+	}
 	// line-height: $btn-height; // google material design
 	text-align: center; // [4]
 	text-decoration: none; // [4]
@@ -52,9 +55,6 @@ $btn-border-color: $default-gray !default;
 	border-radius: $btn-border-radius;
 	border-style: $btn-border-style;
 	border-width: $btn-border-size;
-	@if $use-material == true {
-		@include shadow-2dp();
-	}
 	color: $btn-color;
 	outline: none; // google material design
 	display: inline-block; // [1]
@@ -64,10 +64,7 @@ $btn-border-color: $default-gray !default;
 	padding: ($btn-padding / 4) $btn-padding; // [7]
 	cursor: pointer;
 	user-select: none; // [8]
-	transition:
-		box-shadow 0.2s $animation-curve-fast-out-linear-in,
-		background-color 0.2s $default-animation-curve,
-		color 0.2s $default-animation-curve; // google material design
+	transition: box-shadow 0.2s $animation-curve-fast-out-linear-in, background-color 0.2s $default-animation-curve, color 0.2s $default-animation-curve; // google material design
 
 	// UI states
 	&:hover,
@@ -79,10 +76,10 @@ $btn-border-color: $default-gray !default;
 	}
 
 	&:hover {
-		border-color: $btn-hover-color;
 		@if $use-material == true {
 			@include shadow-4dp();
 		}
+		border-color: $btn-hover-color;
 	}
 
 	&:focus {
@@ -91,13 +88,13 @@ $btn-border-color: $default-gray !default;
 	}
 
 	&:active {
+		@if $use-material == true {
+			@include shadow-4dp();
+		}
 		background-color: $btn-active-color;
 		background-image: none;
 		border-color: $btn-hover-color;
 		color: $btn-background-color;
-		@if $use-material == true {
-			@include shadow-4dp();
-		}
 	}
 
 	&:disabled {

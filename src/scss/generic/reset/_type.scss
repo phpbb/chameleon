@@ -92,10 +92,11 @@ dt {
 //
 // 1. Hang the opening quote of the blockquote.
 //
-/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 blockquote {
 	@include vertical-rhythm();
+	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 	text-indent: -0.41em; // [1]
+	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 }
 
 q {
@@ -125,8 +126,9 @@ q {
 	// If an element opens with an inline quote, let’s hang that.
 	//
 	&:first-child {
+		/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 		text-indent: -0.22em;
+		/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 		display: inline-block;
 	}
 }
-/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
