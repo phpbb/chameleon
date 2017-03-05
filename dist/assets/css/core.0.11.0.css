@@ -241,13 +241,13 @@ html {
 }
 
 html {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	-ms-overflow-style: -ms-autohiding-scrollbar;
 	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -359,9 +359,9 @@ dfn[title] {
 }
 
 address {
+	margin: 0 0 1.5rem;
 	font-style: normal;
 	line-height: inherit;
-	margin: 0 0 1.5rem;
 }
 
 ol,
@@ -396,9 +396,10 @@ dt {
 }
 
 blockquote {
+	margin: 0 0 1.5rem;
+
 	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 	text-indent: -0.41em;
-	margin: 0 0 1.5rem;
 
 	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 }
@@ -426,14 +427,15 @@ q q:after {
 q:first-child {
 	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 	text-indent: -0.22em;
+
 	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 	display: inline-block;
 }
 
 pre {
+	margin: 0 0 1.5rem;
 	white-space: pre-wrap;
 	overflow: auto;
-	margin: 0 0 1.5rem;
 }
 
 figure {
@@ -461,11 +463,11 @@ hr {
 }
 
 table {
+	margin: 0 0 1.5rem;
 	background-color: transparent;
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
-	margin: 0 0 1.5rem;
 }
 
 caption {
@@ -527,17 +529,19 @@ label {
 }
 
 fieldset {
+	margin: 0 0 1.5rem;
 	border: 0;
 	min-width: 0;
-	margin: 0 0 1.5rem;
 	padding: 0;
 }
 
 legend {
 	font-size: 1.5rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.3333333333;
 	display: block;
@@ -652,7 +656,7 @@ a {
 
 a:focus,
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #0a63be;
 }
 
@@ -669,21 +673,25 @@ h4 small,
 h5 small,
 h6 small {
 	font-size: 3.5rem;
-	font-size: 60%;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: -0.02em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1;
 	opacity: 0.54;
+	font-size: 60%;
 	display: block;
 }
 
 h1 {
 	font-size: 3.5rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: -0.02em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1;
 }
@@ -691,8 +699,10 @@ h1 {
 h2 {
 	font-size: 2.8125rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.0666666667;
 }
@@ -700,17 +710,21 @@ h2 {
 h3 {
 	font-size: 2.125rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
-	line-height: 1.176475882;
+	line-height: 1.1764705882;
 }
 
 h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.3333333333;
 }
@@ -718,8 +732,10 @@ h4 {
 h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.02em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.6;
 }
@@ -727,8 +743,10 @@ h5 {
 h6 {
 	font-size: 1rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.75;
 }
@@ -736,8 +754,10 @@ h6 {
 p {
 	font-size: 0.875rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
@@ -746,8 +766,10 @@ blockquote {
 	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 100;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.02em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: normal;
 	position: relative;
@@ -779,8 +801,10 @@ mark {
 cite {
 	font-size: 0.75rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.08em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.6666666667;
 }
@@ -788,8 +812,10 @@ cite {
 address {
 	font-size: 0.875rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
@@ -798,8 +824,10 @@ ul,
 ol {
 	font-size: 0.875rem;
 	font-weight: 400;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.4285714286;
 }
@@ -813,8 +841,8 @@ ol {
 }
 
 form span {
-	display: block;
 	margin: 0 0 1.5rem;
+	display: block;
 }
 
 [type="date"],
@@ -1098,8 +1126,8 @@ textarea {
 }
 
 select {
-	background-color: #ffffff;
 	background-image: url("data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0, 0 32, 0 16, 24" style="fill: #9e9e9e"></polygon></svg>");
+	background-color: #ffffff;
 	background-origin: content-box;
 	background-position: right "" center;
 	background-repeat: no-repeat;
@@ -1129,8 +1157,8 @@ select:focus {
 }
 
 select:focus::-ms-value {
-	background-color: #ffffff;
 	background-image: url("data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0, 0 32, 0 16, 24" style="fill: #0a63be"></polygon></svg>");
+	background-color: #ffffff;
 	color: #424242;
 }
 
@@ -1181,9 +1209,9 @@ input[type="checkbox"]:focus:invalid:focus {
 	margin: 0 0.5rem;
 	padding-left: 2rem;
 	cursor: pointer;
+	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	-webkit-user-select: none;
 	user-select: none;
 	transition: 0.28s ease;
 }
@@ -1389,8 +1417,10 @@ table td {
 table th {
 	font-size: 0.875rem;
 	font-weight: 500;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: 0.04em;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.7142857143;
 	text-overflow: ellipsis;
@@ -1458,13 +1488,15 @@ pre code {
 .o-btn {
 	font-size: 0.875rem;
 	font-weight: 500;
+	text-transform: uppercase;
+
 	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: normal;
+
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: normal;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
 	vertical-align: middle;
 	white-space: nowrap;
 	background-color: #ffffff;
@@ -1480,9 +1512,9 @@ pre code {
 	margin: 0;
 	padding: 0.25rem 1rem;
 	cursor: pointer;
+	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	-webkit-user-select: none;
 	user-select: none;
 	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
