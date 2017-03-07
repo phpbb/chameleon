@@ -1,3 +1,6 @@
+[![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
+
+
 # Base-L
 Is meant as a core layer to your workflow. Its a true CSS framework following
 the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
