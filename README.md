@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
 
-[![Base-L](https://raw.githubusercontent.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
+[![Base-L](https://rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
 
 # Base-L
 Is meant as a core layer to your workflow. Its a true CSS framework following
