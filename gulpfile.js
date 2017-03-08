@@ -23,8 +23,8 @@ var build = {
 
 var AUTOPREFIXER_BROWSERS = [
 	'ie >= 11',
-	'edge >= 20',
-	'ff >= 40',
+	'edge >= 12',
+	'ff >= 38',
 	'chrome >= 35',
 	'safari >= 8',
 	'opera >= 35',
