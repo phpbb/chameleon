@@ -48,7 +48,7 @@ gulp.task('css', function () {
 				'empty-lines-between-media-rules': 1,
 				'preserve-empty-lines-between-children-rules': true,
 				'empty-lines-before-comment': true,
-				'sort-order': 'sort-order'
+				'sort-order': '.postcss-sorting'
 			}),
 			torem({
 				rootValue: 16,
