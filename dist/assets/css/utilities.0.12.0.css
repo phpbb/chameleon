@@ -97,8 +97,8 @@
 	*:first-line {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #000000 !important;
 		text-shadow: none !important;
+		color: #000000 !important;
 	}
 
 	a,

@@ -33,10 +33,10 @@ img {
 // A better looking default horizontal rule
 //
 hr {
+	@include vertical-rhythm();
 	border: 0;
 	border-top: $default-border-size solid $default-gray;
 	display: block;
 	height: 1px;
-	@include vertical-rhythm();
 	padding: 0;
 }

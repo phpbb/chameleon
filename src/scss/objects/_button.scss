@@ -47,16 +47,16 @@ $btn-border-color: $default-gray !default;
 	}
 	// line-height: $btn-height; // google material design
 	text-align: center; // [4]
-	text-decoration: none; // [4]
 	vertical-align: middle; // [2]
 	white-space: nowrap; // bs only
+	text-decoration: none; // [4]
 	background-color: $btn-background-color;
+	border-width: $btn-border-size;
+	border-style: $btn-border-style;
 	border-color: $btn-border-color;
 	border-radius: $btn-border-radius;
-	border-style: $btn-border-style;
-	border-width: $btn-border-size;
-	color: $btn-color;
 	outline: none; // google material design
+	color: $btn-color;
 	display: inline-block; // [1]
 	overflow: visible; // [6]
 	min-width: $btn-min-width; // google material design
@@ -71,8 +71,8 @@ $btn-border-color: $default-gray !default;
 	&:focus,
 	&:active {
 		text-decoration: none;  // [4]
-		color: $btn-color;
 		outline: none;
+		color: $btn-color;
 	}
 
 	&:hover {

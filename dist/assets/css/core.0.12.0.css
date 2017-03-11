@@ -241,15 +241,15 @@ html {
 }
 
 html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	-ms-overflow-style: -ms-autohiding-scrollbar;
-	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
 }
 
 body {
@@ -290,8 +290,8 @@ textarea,
 
 ::selection {
 	background: #9ac9fa;
-	color: #ffffff;
 	text-shadow: none;
+	color: #ffffff;
 }
 
 svg {
@@ -454,20 +454,20 @@ img[height] {
 }
 
 hr {
+	margin: 0 0 1.5rem;
 	border: 0;
 	border-top: 1px solid #9e9e9e;
 	display: block;
 	height: 1px;
-	margin: 0 0 1.5rem;
 	padding: 0;
 }
 
 table {
 	margin: 0 0 1.5rem;
 	background-color: transparent;
-	border-collapse: collapse;
-	border-spacing: 0;
 	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 }
 
 caption {
@@ -516,9 +516,9 @@ optgroup,
 textarea {
 	line-height: inherit;
 	vertical-align: middle;
-	background-clip: padding-box;
 	background-color: transparent;
 	background-image: none;
+	background-clip: padding-box;
 	border-radius: 0;
 	color: inherit;
 }
@@ -930,8 +930,8 @@ select:focus,
 textarea:focus {
 	background-color: #ffffff;
 	border-color: #0a63be;
-	color: #0a63be;
 	outline: none;
+	color: #0a63be;
 }
 
 [type="date"]::-webkit-input-placeholder,
@@ -1128,9 +1128,9 @@ textarea {
 select {
 	background-image: url("data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0, 0 32, 0 16, 24" style="fill: #9e9e9e"></polygon></svg>");
 	background-color: #ffffff;
-	background-origin: content-box;
-	background-position: right "" center;
 	background-repeat: no-repeat;
+	background-position: right "" center;
+	background-origin: content-box;
 	background-size: 9px 6px;
 	display: inline-block;
 	min-width: 80px;
@@ -1169,8 +1169,8 @@ select:focus::-ms-value {
 }
 
 select:focus:-moz-focusring {
-	color: transparent;
 	text-shadow: 0 0 0 #000000;
+	color: transparent;
 }
 
 select[multiple="multiple"] {
@@ -1220,9 +1220,9 @@ input[type="checkbox"]:focus:invalid:focus {
 	border: 1px solid #9e9e9e;
 	border-radius: 1px;
 	position: absolute;
+	z-index: 0;
 	top: 0;
 	left: 0;
-	z-index: 0;
 	width: 16px;
 	height: 16px;
 	margin-top: 0.125rem;
@@ -1286,9 +1286,9 @@ input[type="checkbox"]:focus:invalid:focus {
 [type="radio"] + label:after {
 	border-radius: 50%;
 	position: absolute;
+	z-index: 0;
 	top: 0;
 	left: 0;
-	z-index: 0;
 	width: 16px;
 	height: 16px;
 	margin: 0.25rem 0.25rem 0.25rem 0;
@@ -1423,8 +1423,8 @@ table th {
 
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: 1.7142857143;
-	text-overflow: ellipsis;
 	vertical-align: bottom;
+	text-overflow: ellipsis;
 	color: rgba(0, 0, 0, 0.54);
 	padding-bottom: 0.5rem;
 }
@@ -1461,13 +1461,13 @@ kbd kbd {
 
 pre {
 	font-size: 90%;
-	word-break: break-all;
 	word-wrap: break-word;
+	word-break: break-all;
 	background-color: #424242;
+	border-width: 0;
+	border-style: solid;
 	border-color: #9e9e9e;
 	border-radius: 2px;
-	border-style: solid;
-	border-width: 0;
 	color: #ffffff;
 	display: block;
 	margin-top: 0;
@@ -1496,16 +1496,16 @@ pre code {
 	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: normal;
 	text-align: center;
-	text-decoration: none;
 	vertical-align: middle;
 	white-space: nowrap;
+	text-decoration: none;
 	background-color: #ffffff;
+	border-width: 1px;
+	border-style: solid;
 	border-color: #9e9e9e;
 	border-radius: 2px;
-	border-style: solid;
-	border-width: 1px;
-	color: #757575;
 	outline: none;
+	color: #757575;
 	display: inline-block;
 	overflow: visible;
 	min-width: 64px;
@@ -1523,8 +1523,8 @@ pre code {
 .o-btn:focus,
 .o-btn:active {
 	text-decoration: none;
-	color: #757575;
 	outline: none;
+	color: #757575;
 }
 
 .o-btn:hover {

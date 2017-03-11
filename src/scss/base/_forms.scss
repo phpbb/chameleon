@@ -70,9 +70,6 @@ form {
 [type="color"],
 select,
 textarea {
-	@media (min-width: $bp-md) {
-		display: inline-block;
-	}
 	background-color: $base-input-background-color;
 	border: $base-input-border-width solid $base-input-border-color;
 	border-radius: $base-input-border-radius;
@@ -82,6 +79,9 @@ textarea {
 	height: $base-input-height; // [1]
 	padding: $base-input-padding;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	@media (min-width: $bp-md) {
+		display: inline-block;
+	}
 
 	&:hover {
 		border-color: $base-input-border-hover-color;
@@ -90,8 +90,8 @@ textarea {
 	&:focus {
 		background-color: $base-input-background-focus-color;
 		border-color: $base-input-border-focus-color;
-		color: $base-input-border-focus-color;
 		outline: none;
+		color: $base-input-border-focus-color;
 	}
 
 	&::placeholder {
@@ -135,9 +135,9 @@ textarea {
 select {
 	@include background-triangle($base-input-border-color);
 	background-color: $base-input-background-color;
-	background-origin: content-box;
-	background-position: right unit(-2) center;
 	background-repeat: no-repeat;
+	background-position: right unit(-2) center;
+	background-origin: content-box;
 	background-size: 9px 6px;
 	display: inline-block;
 	min-width: ($base-input-padding * 10);
@@ -156,8 +156,8 @@ select {
 	}
 
 	&:focus:-moz-focusring {
-		color: transparent;
 		text-shadow: 0 0 0 $black;
+		color: transparent;
 	}
 
 	&[multiple="multiple"] {
@@ -211,9 +211,9 @@ input[type="checkbox"] {
 	border: $base-input-border-width solid $base-input-border-color;
 	border-radius: ($base-input-padding * 0.125);
 	position: absolute;
+	z-index: 0;
 	top: 0;
 	left: 0;
-	z-index: 0;
 	width: ($base-input-padding * 2);
 	height: ($base-input-padding * 2);
 	margin-top: ($base-input-padding * 0.25);
@@ -274,9 +274,9 @@ input[type="checkbox"] {
 [type="radio"] + label:after {
 	border-radius: 50%;
 	position: absolute;
+	z-index: 0;
 	top: 0;
 	left: 0;
-	z-index: 0;
 	width: ($base-input-padding * 2);
 	height: ($base-input-padding * 2);
 	margin: ($base-input-padding * 0.5) ($base-input-padding *0.5) ($base-input-padding * 0.5) 0;

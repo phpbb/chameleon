@@ -14,9 +14,9 @@
 table {
 	@include vertical-rhythm();
 	background-color: transparent; // [1]
-	border-collapse: collapse; // [2]
-	border-spacing: 0; // from inuit
 	width: 100%;
+	border-spacing: 0; // from inuit
+	border-collapse: collapse; // [2]
 }
 
 caption {

@@ -32,13 +32,6 @@ $table-selection-color: $default-gray-light;
 // @scss
 
 table {
-	@media (min-width: $bp-md) {
-		display: table;
-	}
-
-	@media (min-width: $bp-md) {
-		width: auto;
-	}
 	font-size: 13px;
 	white-space: nowrap;
 	background-color: $white;
@@ -47,6 +40,13 @@ table {
 	display: block;
 	overflow-x: auto;
 	width: 100%;
+	@media (min-width: $bp-md) {
+		display: table;
+	}
+
+	@media (min-width: $bp-md) {
+		width: auto;
+	}
 
 	thead {
 		padding-bottom: ($table-header-padding-bottom / 2);
@@ -90,8 +90,8 @@ table {
 
 	th {
 		@include type(body2);
-		text-overflow: ellipsis;
 		vertical-align: bottom;
+		text-overflow: ellipsis;
 		color: $table-header-color;
 		padding-bottom: $table-header-padding-bottom;
 	}

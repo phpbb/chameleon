@@ -24,6 +24,12 @@
 //
 // Set up the default container and grid class for mobile browsers
 .o-container {
+	position: relative;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $default-grid-gutter;
+	padding-left: $default-grid-gutter;
 
 	//
 	// Establist container sizes for all devices larger than mobile
@@ -51,12 +57,6 @@
 	@media (min-width: $bp-xl) {
 		width: $xl;
 	}
-	position: relative;
-	max-width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: $default-grid-gutter;
-	padding-left: $default-grid-gutter;
 }
 
 /* stylelint-disable value-no-vendor-prefix */
