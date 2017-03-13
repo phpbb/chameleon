@@ -1,0 +1,48 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<title></title>
+		<link href="https://rawgit.com/hanakin/base-l/master/dist/assets/css/core.{{ version }}.css" rel="stylesheet">
+		<link href="../assets/css/components.0.12.0.css" rel="stylesheet">
+		<link href="https://rawgit.com/hanakin/base-l/master/dist/assets/css/utilities.{{ version }}.css" rel="stylesheet">
+		<style media="screen">
+			.wrap {
+				margin: 16px 0;
+			}
+
+			section {
+				margin: 2rem 1rem;
+			}
+
+			.icon-display {
+				list-style: none;
+			}
+
+			.icon-display li a {
+				display: block;
+				width: 300px;
+				margin-bottom: 0.5rem;
+			}
+
+			.icon-display-wip {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		{% include '../includes/imageset.twig' %}
+
+		<div class="wrap">
+			<div class="o-container">
+				{% block component %}{% endblock %}
+
+				{% include '../includes/icons.twig' %}
+			</div>
+		</div>
+	</body>
+</html>

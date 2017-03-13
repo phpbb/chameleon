@@ -1,5 +1,8 @@
 'use strict';
 
+var fs = require('fs');
+var path = require('path');
+var del = require('del');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
@@ -8,17 +11,32 @@ var sourcemaps = require('gulp-sourcemaps');
 var cssnano = require('gulp-cssnano');
 var postcss = require('gulp-postcss');
 var stylefmt = require('gulp-stylefmt');
+var nunjucks = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 var sorting = require('postcss-sorting');
 var torem = require('postcss-pxtorem');
-// var rtl = require('postcss-rtl');
-// var stripComments = require('postcss-discard-comments');
-var del = require('del');
+var moment = require('moment');
 var sortOrder = require('./.postcss-sorting.json');
 var pkg = require('./package.json');
+
+var manageEnvironment = function (environment) {
+	environment.addFilter('moment', function (date, format, fromNow) {
+		if (fromNow) {
+			date = moment(date, format).fromNow();
+		} else {
+			date = moment(date, format);
+		}
+
+		return date;
+	});
+};
 
 // Config
 var build = {
 	css: './dist/assets/css',
+	html: './dist/views/',
+	twig: './src/views/',
+	data: './src/mock/',
 	scss: './src/scss/'
 };
 
@@ -100,9 +118,31 @@ gulp.task('minify', ['css'], function () {
 	return css;
 });
 
+gulp.task('twig', function () {
+	var css = gulp
+	.src(build.twig + '*.twig')
+	.pipe(data(function (file) {
+		var data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
+		data.version = pkg.version;
+		return data;
+	}))
+	.pipe(nunjucks({
+		path: [build.twig],
+		manageEnv: manageEnvironment
+	}))
+	.pipe(rename({
+		extname: '.html'
+	}))
+	.pipe(gulp.dest(build.html));
+
+	return css;
+});
+
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
+	gulp.watch('src/views/**/*.twig', ['twig']);
+	gulp.watch('src/mock/**/*.json', ['twig']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'minify', 'watch']);
+gulp.task('default', ['css', 'minify', 'twig', 'watch']);
