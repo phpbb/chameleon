@@ -99,7 +99,7 @@ $type-styles: (
 		font-size: 14px,
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, medium),
-		line-height: normal,
+		line-height: 1,
 		opacity: 0.54
 	),
 	menu: (
@@ -125,23 +125,23 @@ $type-styles: (
 	@if not map-has-key($type-styles, $type) {
 		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
 	}
-	font-size: map-get($type-props, font-size);
 	@if $type == blockquote {
 		font-style: italic;
 	}
-	font-weight: #{map-get($type-props, font-weight)};
 	@if $type == button {
 		text-transform: uppercase;
 	}
-	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
-	letter-spacing: map-get($type-props, letter-spacing);
-	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
-	line-height: map-get($type-props, line-height);
 	@if $type == blockquote {
 		position: relative;
 	}
 	@if $color-contrast {
 		opacity: map-get($type-props, opacity);
 	}
+	font-size: map-get($type-props, font-size);
+	font-weight: #{map-get($type-props, font-weight)};
+	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
+	line-height: map-get($type-props, line-height);
+	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
+	letter-spacing: map-get($type-props, letter-spacing);
 
 }
