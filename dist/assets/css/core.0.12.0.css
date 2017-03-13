@@ -1505,7 +1505,7 @@ pre code {
 	border: none;
 	border-radius: 2px;
 	outline: none;
-	color: #757575;
+	color: #616161;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
@@ -1525,13 +1525,17 @@ pre code {
 .o-btn:active {
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	text-decoration: none;
-	background-color: #0a63be;
-	color: #757575;
+	background-color: #bdbdbd;
+	color: #0a63be;
+}
+
+.o-btn:focus {
+	color: #616161;
 }
 
 .o-btn:active {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.36);
-	background-color: #616161;
+	background-color: #9e9e9e;
 }
 
 .o-btn:disabled {

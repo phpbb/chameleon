@@ -17,9 +17,10 @@ $btn-height: ($btn-spacing * 2.375) !default;
 
 // Theme Variables
 $btn-background-color: $default-gray-light !default;
-$btn-hover-color: $default-primary-dark-color !default;
-$btn-active-color: $gray-700 !default;
-$btn-color: $default-gray-dark !default;
+$btn-hover-color: $gray-400 !default;
+$btn-active-color: $gray-500 !default;
+$btn-text-color: $gray-700 !default;
+$btn-text-hover-color: $default-primary-dark-color !default;
 
 
 //
@@ -50,7 +51,7 @@ $btn-color: $default-gray-dark !default;
 	border: none;
 	border-radius: $btn-border-radius;
 	outline: none; // [9]
-	color: $btn-color;
+	color: $btn-text-color;
 	position: relative;
 	display: inline-block; // [1]
 	overflow: hidden; // [6]
@@ -71,7 +72,11 @@ $btn-color: $default-gray-dark !default;
 		@include shadow(4);
 		text-decoration: none;  // [4]
 		background-color: $btn-hover-color;
-		color: $btn-color;
+		color: $btn-text-hover-color;
+	}
+
+	&:focus {
+		color: $btn-text-color;
 	}
 
 	&:active {
