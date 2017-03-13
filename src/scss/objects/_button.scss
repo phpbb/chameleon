@@ -68,16 +68,14 @@ $btn-color: $gray-900 !default;
 
 	// UI states
 	&:hover,
-	&:focus,
-	&:active {
+	&:focus {
 		@include shadow(4);
 		text-decoration: none;  // [4]
 		background-color: $btn-background-color;
 		color: $btn-color;
 	}
 
-	&:focus,
-	&:active {
+	&:focus {
 		@include shadow(focus);
 		background-color: $btn-hover-color;
 	}
