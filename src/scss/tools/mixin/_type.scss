@@ -139,9 +139,6 @@ $type-styles: (
 	}
 	font-size: map-get($type-props, font-size);
 	font-weight: #{map-get($type-props, font-weight)};
-	/* stylelint-enable declaration-property-unit-whitelist, unit-blacklist */
 	line-height: map-get($type-props, line-height);
-	/* stylelint-disable declaration-property-unit-whitelist, unit-blacklist */
 	letter-spacing: map-get($type-props, letter-spacing);
-
 }

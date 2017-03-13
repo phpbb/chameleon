@@ -9,14 +9,14 @@
 }
 
 .u-sr-only {
-	border: 0;
 	position: absolute;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
-	width: 1px;
-	height: 1px;
 	margin: -0.0625rem;
 	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
 }
 
 .u-sr-only.focusable:active,
@@ -24,9 +24,9 @@
 	position: static;
 	overflow: visible;
 	clip: auto;
+	margin: 0;
 	width: auto;
 	height: auto;
-	margin: 0;
 }
 
 .u-hidden {
@@ -97,8 +97,8 @@
 	*:first-line {
 		background: transparent !important;
 		box-shadow: none !important;
-		text-shadow: none !important;
 		color: #000000 !important;
+		text-shadow: none !important;
 	}
 
 	a,

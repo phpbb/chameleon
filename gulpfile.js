@@ -13,6 +13,7 @@ var torem = require('postcss-pxtorem');
 // var rtl = require('postcss-rtl');
 // var stripComments = require('postcss-discard-comments');
 var del = require('del');
+var sort = require('./.postcss-sorting.json');
 var pkg = require('./package.json');
 
 // Config
@@ -43,13 +44,7 @@ gulp.task('css', function () {
 	.pipe(
 		postcss([
 			// stripComments(),
-			sorting({
-				'empty-lines-between-children-rules': 1,
-				'empty-lines-between-media-rules': 1,
-				'preserve-empty-lines-between-children-rules': true,
-				'empty-lines-before-comment': true,
-				'sort-order': '.postcss-sorting'
-			}),
+			sorting({sort}),
 			torem({
 				rootValue: 16,
 				unitPrecision: 7,

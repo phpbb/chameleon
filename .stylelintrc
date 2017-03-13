@@ -79,7 +79,8 @@
 			"padding-left": ["px", "rem"],
 			"padding-right": ["px", "rem"],
 			"padding-top": ["px", "rem"],
-			"padding-bottom": ["px", "rem"]
+			"padding-bottom": ["px", "rem"],
+			"letter-spacing": ["em"]
 		},
 
 		"font-family-name-quotes": "always-where-recommended",
