@@ -1522,20 +1522,11 @@ pre code {
 }
 
 .o-btn:hover,
-.o-btn:active {
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+.o-btn:focus {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.36);
 	text-decoration: none;
 	background-color: #eeeeee;
 	color: #0a63be;
-}
-
-.o-btn:focus:not(:active) {
-	color: #757575;
-}
-
-.o-btn:active {
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.36);
-	background-color: #e0e0e0;
 }
 
 .o-btn:disabled {
