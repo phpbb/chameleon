@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content=" ">
+	<meta name="author" content=" ">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Test - Forms</title>
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<!-- STYLES -->
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/hanakin/base-l/master/dist/assets/css/core.0.9.0.min.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../dist/assets/css/theme.0.9.0.min.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://github.com/hanakin/base-l/blob/master/dist/assets/css/utilities.0.9.0.min.css" media="all" />
+</head>
+<body>
+	<div class="container">
+		<h1>Form Tests</h1>
+
+		<h2>Input normalization</h2>
+
+		<form class="form-inline">
+			<legend>An inline form. Check for alignment and input/select sizing.</legend>
+			<fieldset class="form-group">
+				<input type="text" placeholder="text input">
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="search" placeholder="search input">
+			</fieldset>
+			<fieldset class="form-group">
+				<select name="fooselect">
+					<option value="CA">CA</option>
+					<option value="NY">NY</option>
+				</select>
+			</fieldset>
+			<fieldset class="form-group">
+				<button type="submit" class="o-btn">Sign in</button>
+			</fieldset>
+		</form>
+
+		<h2>Default Form</h2>
+
+		<form class="form-inline">
+			<legend>A default inline form.</legend>
+			<fieldset class="form-group">
+				<input type="text" placeholder="Email">
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="password" placeholder="Password">
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="checkbox" id="checkbox1" />
+				<label for="checkbox1">Remember me</label>
+			</fieldset>
+			<fieldset class="form-group">
+				<button type="submit" class="o-btn">Sign in</button>
+			</fieldset>
+		</form>
+
+
+		<h2>Multi-Column Form with Grids</h2>
+
+		<form>
+			<legend>Legend</legend>
+			<fieldset class="o-grid">
+				<div class="o-col o-col-3-m">
+					<label>First Name</label>
+					<input type="text">
+				</div>
+				<div class="o-col o-col-3-m">
+					<label>Password</label>
+					<input type="password">
+				</div>
+				<div class="o-col o-col-3-m">
+					<label>E-Mail</label>
+					<input type="email" required>
+				</div>
+				<div class="o-col o-col-2-m">
+					<label>City</label>
+					<input type="text">
+				</div>
+				<div class="o-col o-col-1-m">
+					<label>State</label>
+					<select>
+						<option>AL</option>
+						<option>CA</option>
+						<option>IL</option>
+						<option>MD</option>
+						<option>NY</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<input type="checkbox" id="checkbox2" />
+				<label for="checkbox2">I've read the terms and conditions</label>
+			</fieldset>
+
+			<fieldset class="o-grid">
+				<button type="submit" class="o-btn">Submit</button>
+				<button type="reset" class="o-btn">Reset</button>
+			</fieldset>
+		</form>
+
+
+		<h2>Stacked Form</h2>
+
+		<form>
+			<fieldset>
+				<legend>Legend</legend>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>First Name</label>
+				<input type="text">
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>Password</label>
+				<input type="password">
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>
+					E-Mail
+					<span class="o-tag t-form-info">This is a required field.</span>
+				</label>
+				<input type="email" required>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>
+					City
+					<span class="o-tag t-form-warning">This is another required field.</span>
+				</label>
+				<input type="text">
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>State</label>
+				<select>
+					<option>AL</option>
+					<option>CA</option>
+					<option>IL</option>
+					<option>MD</option>
+					<option>NY</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<label>Color</label>
+				<input type="color">
+			</fieldset>
+
+			<fieldset class="form-group">
+				<input type="checkbox" id="checkbox3" />
+				<label for="checkbox3">I've read the terms and conditions</label>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<button type="submit" class="o-btn">Submit</button>
+				<button type="reset" class="o-btn">Reset</button>
+			</fieldset>
+		</form>
+
+
+		<h2>Grouped Inputs</h2>
+
+		<form>
+			<fieldset>
+				<input type="text" placeholder="Username">
+				<input type="text" placeholder="Password">
+				<input type="text" placeholder="Email">
+			</fieldset>
+
+			<fieldset>
+				<input type="text" placeholder="Another Group">
+				<textarea placeholder="Textareas can work here too"></textarea>
+				<input type="text" placeholder="Even More Stuff">
+				<input type="text" placeholder="Last Item">
+			</fieldset>
+
+			<button type="submit" class="o-btn">Sign in</button>
+		</form>
+
+
+		<h2>Dynamic Grouped Inputs</h2>
+
+		<form onsubmit="return false">
+			<script type="text/javascript">
+			function testDynamicGroupAdd() {
+				var g = document.getElementById('test-dynamic-group'),
+				newNode = g.getElementsByTagName('input')[0].cloneNode();
+
+				g.appendChild(newNode);
+			}
+			function testDynamicGroupRemove() {
+				var g = document.getElementById('test-dynamic-group'),
+				nodeCount = g.getElementsByTagName('input').length;
+
+				if (nodeCount > 1) {
+					g.removeChild(g.lastChild);
+				}
+			}
+			</script>
+
+			<fieldset>
+				<button type="submit" class="o-btn" onclick="testDynamicGroupAdd()">Add field</button>
+				<button type="submit" class="o-btn" onclick="testDynamicGroupRemove()">Remove field</button>
+			</fieldset>
+
+			<fieldset id="test-dynamic-group">
+				<input type="text" placeholder="Add or remove fields to test">
+			</fieldset>
+		</form>
+
+
+		<h2>Input Sizing</h2>
+
+		<form>
+			<input type="text" placeholder=".input-1"><br/>
+			<input type="text" placeholder=".input-3-4"><br/>
+			<input type="text" placeholder=".input-2-3"><br/>
+			<input type="text" placeholder=".input-1-2"><br/>
+			<input type="text" placeholder=".input-1-3"><br/>
+			<input type="text" placeholder=".input-1-4"><br/>
+		</form>
+
+
+		<form>
+			<fieldset class="o-grid grid-example">
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+
+				<div class="o-col o-col-1-m">
+					<input type="text" placeholder=".col-1">
+				</div>
+			</fieldset>
+
+			<fieldset class="o-grid grid-example">
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+
+				<div class="o-col o-col-2-m">
+					<input type="text" placeholder=".col-2">
+				</div>
+			</fieldset>
+
+			<fieldset class="o-grid grid-example">
+				<div class="o-col o-col-3-m">
+					<input type="text" placeholder=".col-3">
+				</div>
+
+				<div class="o-col o-col-3-m">
+					<input type="text" placeholder=".col-3">
+				</div>
+
+				<div class="o-col o-col-3-m">
+					<input type="text" placeholder=".col-3">
+				</div>
+
+				<div class="o-col o-col-3-m">
+					<input type="text" placeholder=".col-3">
+				</div>
+			</fieldset>
+
+			<fieldset class="o-grid grid-example">
+				<div class="o-col o-col-4-m">
+					<input type="text" placeholder=".col-4">
+				</div>
+
+				<div class="o-col o-col-4-m">
+					<input type="text" placeholder=".col-4">
+				</div>
+
+				<div class="o-col o-col-4-m">
+					<input type="text" placeholder=".col-4">
+				</div>
+			</fieldset>
+
+			<fieldset class="o-grid grid-example">
+				<div class="o-col o-col-6-m">
+					<input type="text" placeholder=".col-6">
+				</div>
+
+				<div class="o-col o-col-6-m">
+					<input type="text" placeholder=".col-6">
+				</div>
+			</fieldset>
+		</form>
+
+
+		<h2>Invalid Inputs</h2>
+
+		<form>
+			<input type="email" placeholder="Requires an email" required>
+		</form>
+
+
+		<h2>Disabled Inputs</h2>
+
+		<form>
+			<input type="text" placeholder="Disabled input here..." value="Foo bar baz" disabled>
+		</form>
+
+
+		<h2>Readonly Inputs</h2>
+
+		<form>
+			<input type="text" placeholder="Readonly input here..." value="Foo bar baz" readonly>
+		</form>
+
+
+		<h2>Rounded Form</h2>
+
+		<form>
+			<fieldset>
+				<label>Subject</label>
+				<input type="text" placeholder="Subject" />
+			</fieldset>
+
+			<fieldset>
+				<label>Message</label>
+				<textarea rows="5" cols="40" placeholder="Message..."></textarea>
+			</fieldset>
+
+			<button type="submit" class="o-btn">Search</button>
+			<input type="reset" class="o-btn" value="Reset" />
+		</form>
+
+
+		<h2>Selects</h2>
+
+		<form>
+			<fieldset>
+				<select>
+					<option>Brazil</option>
+					<option>Canada</option>
+					<option>United States</option>
+					<option>United Kingdom</option>
+					<option>Venezuela</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<select multiple="multiple">
+					<option>Brazil</option>
+					<option>Canada</option>
+					<option>United States</option>
+					<option>United Kingdom</option>
+					<option>Venezuela</option>
+				</select>
+			</fieldset>
+		</form>
+
+
+		<h2>Checkboxes and Radios</h2>
+
+		<form>
+			<fieldset>
+				<input type="checkbox" id="checkbox4" />
+				<label for="checkbox4">Here's option one.</label>
+			</fieldset>
+
+			<fieldset>
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				<label for="optionsRadios1">Here's a radio button. You can choose this one...</label>
+			</fieldset>
+
+			<fieldset>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				<label for="optionsRadios2">...Or this one!</label>
+			</fieldset>
+		</form>
+
+
+		<h2>Help text</h2>
+
+		<form>
+			<fieldset>
+				<label>
+					Last Name
+					<span class="o-tag t-form-info">Block help text</span>
+				</label>
+				<input type="text" />
+			</fieldset>
+		</form>
+
+
+		<h2>Buttons</h2>
+
+		<form>
+			<a class="o-btn">Anchor</a>
+			<button class="o-btn">Button</button>
+			<input type="submit" class="o-btn" value="Submit" />
+			<input type="button" class="o-btn" value="Input Button" />
+			<input type="reset" class="o-btn" value="Reset" />
+		</form>
+	</div>
+</body>
+</html>
