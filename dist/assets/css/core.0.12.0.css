@@ -1529,7 +1529,7 @@ pre code {
 	color: #0a63be;
 }
 
-.o-btn:focus {
+.o-btn:focus:not(:active) {
 	color: #616161;
 }
 

@@ -75,7 +75,7 @@ $btn-text-hover-color: $default-primary-dark-color !default;
 		color: $btn-text-hover-color;
 	}
 
-	&:focus {
+	&:focus:not(:active) {
 		color: $btn-text-color;
 	}
 
