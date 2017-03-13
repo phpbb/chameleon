@@ -9,20 +9,18 @@
 // @settings
 
 // Layout Variables
-$btn-border-size: $default-border-size !default;
-$btn-padding: 16px !default;
+$btn-spacing: 16px !default;
+$btn-padding: $btn-spacing !default;
 $btn-border-radius: $default-border-radius !default;
-$btn-min-width: ($btn-padding * 4) !default;
-$btn-height: ($btn-padding * 2.375) !default;
+$btn-min-width: ($btn-spacing * 4) !default;
+$btn-height: ($btn-spacing * 2.375) !default;
 
 // Theme Variables
-$btn-background-color: $white !default;
-$btn-hover-color: $default-primary-dark-color !default;
+$btn-background-color: $gray-500 !default;
+$btn-hover-color: $gray-700 !default;
 $btn-active-color: $btn-hover-color !default;
 $btn-focus-color: $btn-hover-color !default;
-$btn-color: $default-gray-dark !default;
-$btn-border-style: solid !default;
-$btn-border-color: $default-gray !default;
+$btn-color: $gray-900 !default;
 
 
 //
@@ -39,62 +37,50 @@ $btn-border-color: $default-gray !default;
 // 7. Subtract the border size from the padding value so that buttons do not
 //    grow larger as we add borders.
 // 8. Prevent button text from being selectable.
+// 9. Prevent deafult browser outline halo
 //
 .o-btn {
 	@include type(button);
-	@if $use-material == true {
-		@include shadow-2dp();
-	}
-	// line-height: $btn-height; // google material design
+	@include shadow(2);
+	line-height: $btn-height;
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
 	white-space: nowrap; // bs only
 	text-decoration: none; // [4]
 	background-color: $btn-background-color;
-	border-width: $btn-border-size;
-	border-style: $btn-border-style;
-	border-color: $btn-border-color;
+	border: none;
 	border-radius: $btn-border-radius;
-	outline: none; // google material design
+	outline: none; // [9]
 	color: $btn-color;
+	position: relative;
 	display: inline-block; // [1]
-	overflow: visible; // [6]
+	overflow: hidden; // [6]
 	min-width: $btn-min-width; // google material design
 	margin: 0; // [4]
-	padding: ($btn-padding / 4) $btn-padding; // [7]
+	padding: 0 $btn-padding; // [7]
 	cursor: pointer;
 	user-select: none; // [8]
-	transition: box-shadow 0.2s $animation-curve-fast-out-linear-in, background-color 0.2s $default-animation-curve, color 0.2s $default-animation-curve; // google material design
+	transition:
+		box-shadow 0.2s $animation-curve-fast-out-linear-in,
+		background-color 0.2s $default-animation-curve,
+		color 0.2s $default-animation-curve;
+	will-change: box-shadow; // google material design
 
 	// UI states
 	&:hover,
-	&:focus,
+	&:focus:not(:active),
 	&:active {
+		@include shadow(4);
 		text-decoration: none;  // [4]
+		background-color: $btn-background-color;
 		outline: none;
 		color: $btn-color;
 	}
 
-	&:hover {
-		@if $use-material == true {
-			@include shadow-4dp();
-		}
-		border-color: $btn-hover-color;
-	}
-
-	&:focus {
-		border-color: $btn-hover-color;
-		// @include focus-shadow();
-	}
-
-	&:active {
-		@if $use-material == true {
-			@include shadow-4dp();
-		}
-		background-color: $btn-active-color;
-		background-image: none;
-		border-color: $btn-hover-color;
-		color: $btn-background-color;
+	&:focus:not(:active) {
+		@include shadow(0);
+		background-color: $btn-hover-color;
+		color: $btn-color;
 	}
 
 	&:disabled {
