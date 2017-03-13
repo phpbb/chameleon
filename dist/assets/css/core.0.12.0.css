@@ -1501,11 +1501,11 @@ pre code {
 	vertical-align: middle;
 	white-space: nowrap;
 	text-decoration: none;
-	background-color: #9e9e9e;
+	background-color: #e0e0e0;
 	border: none;
 	border-radius: 2px;
 	outline: none;
-	color: #212121;
+	color: #757575;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
@@ -1525,8 +1525,8 @@ pre code {
 .o-btn:active {
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	text-decoration: none;
-	background-color: #9e9e9e;
-	color: #212121;
+	background-color: #0a63be;
+	color: #757575;
 }
 
 .o-btn:active {

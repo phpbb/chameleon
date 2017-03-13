@@ -16,11 +16,10 @@ $btn-min-width: ($btn-spacing * 4) !default;
 $btn-height: ($btn-spacing * 2.375) !default;
 
 // Theme Variables
-$btn-background-color: $gray-500 !default;
-$btn-hover-color: $gray-700 !default;
-$btn-active-color: $btn-hover-color !default;
-$btn-focus-color: $btn-hover-color !default;
-$btn-color: $gray-900 !default;
+$btn-background-color: $default-gray-light !default;
+$btn-hover-color: $default-primary-dark-color !default;
+$btn-active-color: $gray-700 !default;
+$btn-color: $default-gray-dark !default;
 
 
 //
@@ -71,13 +70,13 @@ $btn-color: $gray-900 !default;
 	&:active {
 		@include shadow(4);
 		text-decoration: none;  // [4]
-		background-color: $btn-background-color;
+		background-color: $btn-hover-color;
 		color: $btn-color;
 	}
 
 	&:active {
 		@include shadow(focus);
-		background-color: $btn-hover-color;
+		background-color: $btn-active-color;
 	}
 
 	&:disabled {
