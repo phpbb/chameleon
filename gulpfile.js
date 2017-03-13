@@ -13,7 +13,7 @@ var torem = require('postcss-pxtorem');
 // var rtl = require('postcss-rtl');
 // var stripComments = require('postcss-discard-comments');
 var del = require('del');
-var sort = require('./.postcss-sorting.json');
+var sortOrder = require('./.postcss-sorting.json');
 var pkg = require('./package.json');
 
 // Config
@@ -37,14 +37,16 @@ gulp.task('css', function () {
 	.src(build.scss + '*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
+		indentType: 'tab',
+		indentWidth: 1,
+		outputStyle: 'expanded',
 		precision: 10,
 		onError: console.error.bind(console, 'Sass error:')
 	}))
 	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 	.pipe(
 		postcss([
-			// stripComments(),
-			sorting({sort}),
+			sorting(sortOrder),
 			torem({
 				rootValue: 16,
 				unitPrecision: 7,
@@ -66,7 +68,6 @@ gulp.task('css', function () {
 				mediaQuery: false,
 				minPixelValue: 0
 			})
-			// rtl()
 		])
 	)
 	.pipe(stylefmt())
