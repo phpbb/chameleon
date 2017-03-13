@@ -34,7 +34,7 @@ var manageEnvironment = function (environment) {
 // Config
 var build = {
 	css: './dist/assets/css',
-	html: './dist/views/',
+	html: './docs/',
 	twig: './src/views/',
 	data: './src/mock/',
 	scss: './src/scss/'
