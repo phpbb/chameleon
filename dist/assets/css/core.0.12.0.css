@@ -1531,7 +1531,7 @@ pre code {
 }
 
 .o-btn:focus,
-.o-btn :active {
+.o-btn:active {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.36);
 	background-color: #616161;
 }
