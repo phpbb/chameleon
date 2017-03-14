@@ -1,7 +1,5 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
 var del = require('del');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
@@ -18,6 +16,7 @@ var torem = require('postcss-pxtorem');
 var moment = require('moment');
 var sortOrder = require('./.postcss-sorting.json');
 var pkg = require('./package.json');
+var mock = require('./src/mock/index.json');
 
 var manageEnvironment = function (environment) {
 	environment.addFilter('moment', function (date, format, fromNow) {
@@ -121,10 +120,9 @@ gulp.task('minify', ['css'], function () {
 gulp.task('twig', function () {
 	var css = gulp
 	.src(build.twig + '*.twig')
-	.pipe(data(function (file) {
-		var data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
-		data.version = pkg.version;
-		return data;
+	.pipe(data(function () {
+		mock.version = pkg.version;
+		return mock;
 	}))
 	.pipe(nunjucks({
 		path: [build.twig],

@@ -1,4 +1,4 @@
-{# forum.twig #}
+{# index.twig #}
 {% extends "./layout/layout.twig" %}
 
 {% block header %}
@@ -25,8 +25,8 @@
 </header>
 {% endblock %}
 {% block main %}
-<div class="o-grid">
-	<div class="sidebar o-col o-col-2-l">
+<div class="o-row">
+	<div class="sidebar o-col o-col-lg-2">
 		<nav class="menu-container affix">
 			<ul id="menu" class="nav menu">
 				<li><a class="menu-item menu-heading" href="#core">1. Base</a></li>
@@ -44,10 +44,10 @@
 			</ul>
 		</nav>
 	</div>
-	<div class="main o-col o-col-10-l">
+	<div class="main o-col o-col-lg-10">
 		<div id="core" class="core">
 			<section id="fonts" class="fonts panel-container">
-				<div class="panel o-grid">
+				<div class="panel row">
 					<div class="panel-head">
 						<h3 class="panel-title"><span class="label panel-label">1.2</span> Fonts</h3>
 					</div>
@@ -56,11 +56,11 @@
 							Font Reference
 						</p>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col-3o">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col-md-3">
 							<span class="label panel-label">Primary</span>  <span class="label">Roboto</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<h2 class="beta"><small>Fonts</small></h2>
 							<ul class="color-list list-inline font-primary">
 								<li class="swatch swatch-white" title="'Helvetica Neue', Helvetica, Arial, sans-serif">
@@ -82,11 +82,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Code</span>  <span class="label">Monaco</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<ul class="color-list list-inline font-code">
 								<li class="swatch swatch-white" title="Monaco, 'Andale Mono','Courier New', Courier, mono">
 									<span class="swatch-inner-label font-normal">Aa</span>
@@ -124,120 +124,120 @@
 						</p>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Display 4</span>  <span class="label ">112px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<h2 class="beta"><small>Typography</small></h2>
 							<p class="display4">Light 112sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Display 3</span>  <span class="label ">56px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="display3">Regular 56sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Display 2</span>  <span class="label ">45px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="display2">Regular 45sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Display 1</span>  <span class="label ">34px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="display1">Regular 34sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Headline</span>  <span class="label ">24px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="headline">Headline 24sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Title</span>  <span class="label ">20px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="title">Medium 112sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Subhead</span>  <span class="label ">16px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="subhead">Regular 16sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Body 1</span>  <span class="label ">14px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="body1">Regular 14sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Body 2</span>  <span class="label ">14px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="body2">Medium 14sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Button</span>  <span class="label ">14px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="button">Regular 14sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Menu</span>  <span class="label ">14px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="menu">Regular 14sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Caption</span>  <span class="label ">12px</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="caption">Regular 12sp</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Headings</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<h2>Heading level 1</h2>
 							<h2>Heading level 2</h2>
 							<h3>Heading level 3</h3>
@@ -247,11 +247,11 @@
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Blockquote</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<blockquote>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
@@ -266,11 +266,11 @@
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Address</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<address>
 								<strong>Company, Inc.</strong><br>
 								789 Main Ave, Suite 707<br>
@@ -284,119 +284,119 @@
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Abbreviation</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the standard markup language used to create web pages.
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Mark</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								You can use the mark tag to <mark>highlight</mark> text.
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Delete</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<del>This line of text is meant to be treated as deleted text.</del>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Strike</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<s>This line of text is meant to be treated as no longer accurate.</s>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Insert</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<ins>This line of text is meant to be treated as an addition to the document.</ins>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Underline</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<u>This line of text will render as underlined</u>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Small</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<small>This line of text is meant to be treated as fine print.</small>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Strong</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<strong>rendered as bold text</strong>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Emphasized</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>
 								<em>rendered as italicized text</em>
 							</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Normal copy</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p>Pellentesque habitant <code>morbi tristique senectus et netus et malesuada</code> fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
 						</div>
 					</div>
 
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Lead Copy</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<p class="body2">Pellentesque habitant <code>morbi tristique senectus et netus et malesuada</code> fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
 						</div>
 					</div>
@@ -416,11 +416,11 @@
 							Common styles for list elements
 						</p>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">UL</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<ul>
 								<li>Lorem ipsum dolor sit amet</li>
 								<li>Consectetur adipiscing elit</li>
@@ -440,11 +440,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">UL Unstyled</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<ul class="list-unstyled">
 								<li>Lorem ipsum dolor sit amet</li>
 								<li>Consectetur adipiscing elit</li>
@@ -464,11 +464,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">UL Inline</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<ul class="list-inline">
 								<li>Lorem ipsum</li>
 								<li>Phasellus iaculis</li>
@@ -476,11 +476,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">OL</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<ol>
 								<li>Lorem ipsum dolor sit amet</li>
 								<li>Consectetur adipiscing elit</li>
@@ -493,11 +493,11 @@
 							</ol>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">DL</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<dl>
 								<dt>Lorem ipsum dolor sit amet.</dt>
 								<dd>Dicta optio cumque dolore hic ea facilis</dd>
@@ -506,11 +506,11 @@
 							</dl>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">DL Inline</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<dl class="list-inline">
 								<dt>Description lists</dt>
 								<dd>A description list is perfect for defining terms.</dd>
@@ -539,11 +539,11 @@
 							Common styles for form elements
 						</p>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Normal</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<h2 class="beta"><small>Forms</small></h2>
 							<form role="form">
 								<fieldset>
@@ -618,15 +618,13 @@
 								&lt;button type="submit" class="o-btn"&gt;Submit&lt;/button&gt;
 								&lt;/p&gt;
 								&lt;/fieldset&gt;
-								&lt;/form&gt;
-							</code>
-						</pre>
+								&lt;/form&gt;</code></pre>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Inline</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form role="form">
 								<fieldset>
 									<span>
@@ -665,15 +663,13 @@
 								&lt;/span&gt;
 								&lt;button type="submit" class="o-btn"&gt;Submit&lt;/button&gt;
 								&lt;/fieldset&gt;
-								&lt;/form&gt;
-							</code>
-						</pre>
+								&lt;/form&gt;</code></pre>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Horizontal</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form class="form-horizontal" role="form">
 								<fieldset>
 									<p>
@@ -695,11 +691,11 @@
 							</form>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Supported Controls</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form>
 								<fieldset>
 									<p>
@@ -754,11 +750,11 @@
 							</form>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Textarea</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form action="" role="form">
 								<fieldset>
 									<textarea rows="3"></textarea>
@@ -766,11 +762,11 @@
 							</form>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Select</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form action="" role="form">
 								<p>
 									<select>
@@ -793,11 +789,11 @@
 							</form>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Checkbox & Radio</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<form class="form" action="">
 								<p>
 									<input type="checkbox" id="checkbox4">
@@ -848,9 +844,7 @@
 								&lt;/span&gt;
 								&lt;/label&gt;
 								&lt;/p&gt;
-								&lt;/form&gt;
-							</code>
-						</pre>
+								&lt;/form&gt;</code></pre>
 					</div>
 				</div>
 			</section>
@@ -864,11 +858,11 @@
 							Common styles for table elements
 						</p>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Normal</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<div class="row">
 								<div class="col-lg-6 col-xs-12">
 									<h2 class="beta"><small>Table</small></h2>
@@ -918,28 +912,28 @@
 							Common styles for code elements
 						</p>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Inline Code</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<h2 class="beta"><small>Code</small></h2>
 							For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">User Input</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							To switch directories, type <kbd>cd</kbd> followed by the name of the directory. To edit settings, press <kbd>ctrl + <kbd>shift</kbd> + E</kbd>
 						</div>
 					</div>
-					<div class="panel-row o-grid">
-						<div class="panel-side o-col o-col-3-m">
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
 							<span class="label panel-label">Code Block</span>
 						</div>
-						<div class="panel-content o-col o-col-9-m">
+						<div class="panel-content o-col o-col-md-9">
 							<pre class="language-html">
 								<code>
 									&lt;p&gt;Sample text here...&lt;/p&gt;</code></pre>
@@ -951,555 +945,549 @@
 						</div>
 					</section>
 				</div>
-				<div id="element" class="elements">
-					<section id="grid" class="grid-blocks panel-container">
-						<div class="panel row">
-							<div class="panel-head">
-								<h3 class="panel-title"><span class="label panel-label">2.1</span> Grid</h3>
-							</div>
-							<div class="panel-description">
-								<p>
-									Table Grid System
-								</p>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Defined Classes</span>
-								</div>
-								<div class="container panel-content o-col o-col-9-m">
-									<h2 class="beta"><small>Grid</small></h2>
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-										<div class="o-col o-col-1-m">1</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-2-m">2</div>
-										<div class="o-col o-col-2-m">2</div>
-										<div class="o-col o-col-2-m">2</div>
-										<div class="o-col o-col-2-m">2</div>
-										<div class="o-col o-col-2-m">2</div>
-										<div class="o-col o-col-2-m">2</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col -ocol-3-m">3</div>
-										<div class="o-col -ocol-3-m">3</div>
-										<div class="o-col -ocol-3-m">3</div>
-										<div class="o-col -ocol-3-m">3</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-4-m">4</div>
-										<div class="o-col o-col-4-m">4</div>
-										<div class="o-col o-col-4-m">4</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-5-m">5</div>
-										<div class="o-col o-col-7-m">7</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-6-m">6</div>
-										<div class="o-col o-col-6-m">6</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-8-m">8</div>
-										<div class="o-col o-col-4-m">4</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col o-col-12-m">12</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Defined Classes</span>
-								</div>
-								<div class="container panel-content o-col o-col-9-m">
-									<div class="o-grid grid-example">
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-										<div class="o-col">Col</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col">Column</div>
-										<div class="o-col">Column</div>
-									</div>
-
-									<div class="o-grid grid-example">
-										<div class="o-col">Column</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel-foot">
-								Version: 1.0.0
-							</div>
+			<section id="grid" class="grid-blocks panel-container">
+				<div class="panel row">
+					<div class="panel-head">
+						<h3 class="panel-title"><span class="label panel-label">2.1</span> Grid</h3>
+					</div>
+					<div class="panel-description">
+						<p>
+							Table Grid System
+						</p>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Defined Classes</span>
 						</div>
-					</section>
-					<section id="icons" class="icons panel-container">
-						<div class="panel row">
-							<div class="panel-head">
-								<h3 class="panel-title"><span class="label panel-label">2.2</span> Icons</h3>
+						<div class="container panel-content o-col o-col-md-9">
+							<h2 class="beta"><small>Grid</small></h2>
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
+								<div class="o-col o-col-md-1">1</div>
 							</div>
-							<div class="panel-description">
-								<p>
-									Icon Reference
-								</p>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Button</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<h2 class="beta"><small>Icons</small></h2>
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-plus"></i> NEW</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-lock"></i> LOCK</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-mail-forward"></i> FORWARD</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-mail-reply"></i> REPLY</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-sort-down"></i> CARET</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-wrench"></i> TOOLS</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Navigation</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-edit"></i> REGISTER</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-home"></i> HOME</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-question-circle"></i> FAQ</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-bell-o"></i> NOTIFICATION</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-inbox"></i> PM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-power-off"></i> LOGIN / LOGOUT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-search"></i> SEARCH</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-cog"></i> ADV SEARCH</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-location-arrow"></i> PAGE JUMP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-share-square-o"></i> JUMP TO</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-user"></i> PROFILE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-sliders"></i> UCP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-gavel"></i> MCP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-cogs"></i> ADMIN</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Action</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-sort-amount-desc"></i> DISPLAY & SORT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-gavel"></i> MOD TOOLS</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-check-square"></i> MARK</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-square-o"></i> SUBSCRIBE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-check-square-o"></i> UNSUBSCRIBE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-level-up"></i> BUMP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-bookmark"></i> BOOKMARK</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-envelope-o"></i> SEND EMAIL</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-print"></i> PRINT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-accent"><i class="fa fa-cloud-download"></i> DOWNLOAD</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Post</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-align-left"></i> POST MENU</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-pencil"></i> EDIT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-times"></i> DELETE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-info"></i> INFO</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation"></i> REPORT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation-circle"></i> REPORTED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-check-circle-o"></i> APPROVED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-times-circle-o"></i> UNAPPROVED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation-triangle"></i> WARN</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-quote-left"></i> QUOTE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-quote-right"></i> RTL QUOTE</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Footer</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-group"></i> MEMBERS</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-shield"></i> TEAM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-trash-o"></i> DELETE COOKIES</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Directional</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-down"></i> DOWN</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-up"></i> UP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-left"></i> LEFT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-right"></i> RIGHT</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Editor</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-bold"></i> BOLD</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-italic"></i> ITALIC</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-underline"></i> UNDERLINE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-quote-right"></i> QUOTE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-code"></i> CODE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-list"></i> LIST</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-list-ol"></i> LIST=</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-asterisk"></i> LIST ITEM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-picture-o"></i> IMAGE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-link"></i> URL</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-font"></i> FONT SIZE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-tint"></i> COLOR</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-strikethrough"></i> STRIKE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-code-fork"></i> GIST</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-ui"><i class="fa fa-smile-o"></i> SMILES</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Other</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-times-circle"></i> ALERT CLOSE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-chevron-circle-up"></i> TOP</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-plus-square"></i> EXPAND</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-minus-square"></i> COLLAPSE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-files-o"></i> PAGES</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-paperclip"></i> ATTACH</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-recycle"></i> TOPIC DELETED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-external-link"></i> LATEST / NEWEST</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-file-text"></i> SUBFORUM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-bar-chart-o"></i> POLL</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Forums</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-comments"></i> FORUM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-comments-o"></i> HAS SUBFORUMS</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-lock"></i> LOCKED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary"><i class="fa fa-link"></i> LINKED</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Topics</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-file-text-o"></i> TOPIC</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-fire"></i> HOT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-thumb-tack"></i> STICKY</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-info-circle"></i> ANNOUNCEMENT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-primary-hover"><i class="fa fa-arrows"></i> MOVED</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-row o-grid">
-								<div class="panel-side o-col o-col-3-m">
-									<span class="label panel-label">Social</span>
-								</div>
-								<div class="panel-content o-col o-col-9-m">
-									<ul class="icon-list list-inline">
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-comment-o"></i> CONTACT</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-comment"></i> PM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-envelope"></i> EMAIL</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-globe"></i> WWW</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-lightbulb-o"></i> JABBER</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-skype"></i> SKYPE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-rss-square"></i> FEED</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-facebook"></i> FACEBOOK</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-twitter"></i> TWITTER</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-google-plus-square"></i> GOOGLE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-yahoo"></i> YAHOO</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa-youtube-play"></i> YOUTUBE</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa2-aim middle"></i> AIM</span>
-										</li>
-										<li>
-											<span class="icon-wrap swatch-secondary"><i class="fa fa2-icq middle"></i> ICQ</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="panel-code">
-								<pre class="language-html">
-									<code>
-										&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;</code></pre>
-									</div>
-									<div class="panel-foot">
-										Version: 1.0.0
-									</div>
-								</div>
-							</section>
-						</div>
-						<div id="component" class="components">
 
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-2">2</div>
+								<div class="o-col o-col-md-2">2</div>
+								<div class="o-col o-col-md-2">2</div>
+								<div class="o-col o-col-md-2">2</div>
+								<div class="o-col o-col-md-2">2</div>
+								<div class="o-col o-col-md-2">2</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-3">3</div>
+								<div class="o-col o-col-md-3">3</div>
+								<div class="o-col o-col-md-3">3</div>
+								<div class="o-col o-col-md-3">3</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-4">4</div>
+								<div class="o-col o-col-md-4">4</div>
+								<div class="o-col o-col-md-4">4</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-5">5</div>
+								<div class="o-col o-col-md-7">7</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-6">6</div>
+								<div class="o-col o-col-md-6">6</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-8">8</div>
+								<div class="o-col o-col-md-4">4</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col o-col-md-12">12</div>
+							</div>
 						</div>
 					</div>
+
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Defined Classes</span>
+						</div>
+						<div class="container panel-content o-col o-col-md-9">
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+								<div class="o-col">Col</div>
+							</div>
+
+							<div class="o-row grid-example">
+								<div class="o-col">Col</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel-foot">
+						Version: 1.0.0
+					</div>
 				</div>
-				<footer>
-				</footer>
-			</div>
+			</section>
+			<section id="icons" class="icons panel-container">
+				<div class="panel row">
+					<div class="panel-head">
+						<h3 class="panel-title"><span class="label panel-label">2.2</span> Icons</h3>
+					</div>
+					<div class="panel-description">
+						<p>
+							Icon Reference
+						</p>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Button</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<h2 class="beta"><small>Icons</small></h2>
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-plus"></i> NEW</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-lock"></i> LOCK</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-mail-forward"></i> FORWARD</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-mail-reply"></i> REPLY</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-sort-down"></i> CARET</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-wrench"></i> TOOLS</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Navigation</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-edit"></i> REGISTER</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-home"></i> HOME</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-question-circle"></i> FAQ</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-bell-o"></i> NOTIFICATION</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-inbox"></i> PM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-power-off"></i> LOGIN / LOGOUT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-search"></i> SEARCH</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-cog"></i> ADV SEARCH</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-location-arrow"></i> PAGE JUMP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-share-square-o"></i> JUMP TO</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-user"></i> PROFILE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-sliders"></i> UCP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-gavel"></i> MCP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-cogs"></i> ADMIN</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Action</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-sort-amount-desc"></i> DISPLAY & SORT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-gavel"></i> MOD TOOLS</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-check-square"></i> MARK</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-square-o"></i> SUBSCRIBE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-check-square-o"></i> UNSUBSCRIBE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-level-up"></i> BUMP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-bookmark"></i> BOOKMARK</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-envelope-o"></i> SEND EMAIL</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-print"></i> PRINT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-accent"><i class="fa fa-cloud-download"></i> DOWNLOAD</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Post</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-align-left"></i> POST MENU</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-pencil"></i> EDIT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-times"></i> DELETE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-info"></i> INFO</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation"></i> REPORT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation-circle"></i> REPORTED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-check-circle-o"></i> APPROVED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-times-circle-o"></i> UNAPPROVED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-exclamation-triangle"></i> WARN</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-quote-left"></i> QUOTE</span>
+								</li>
+								<li>
+										<span class="icon-wrap swatch-primary-hover"><i class="fa fa-quote-right"></i> RTL QUOTE</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Footer</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-group"></i> MEMBERS</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-shield"></i> TEAM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-trash-o"></i> DELETE COOKIES</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Directional</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-down"></i> DOWN</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-up"></i> UP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-left"></i> LEFT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-alt"><i class="fa fa-angle-right"></i> RIGHT</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Editor</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-bold"></i> BOLD</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-italic"></i> ITALIC</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-underline"></i> UNDERLINE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-quote-right"></i> QUOTE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-code"></i> CODE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-list"></i> LIST</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-list-ol"></i> LIST=</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-asterisk"></i> LIST ITEM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-picture-o"></i> IMAGE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-link"></i> URL</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-font"></i> FONT SIZE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-tint"></i> COLOR</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-strikethrough"></i> STRIKE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-code-fork"></i> GIST</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-ui"><i class="fa fa-smile-o"></i> SMILES</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Other</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-times-circle"></i> ALERT CLOSE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-chevron-circle-up"></i> TOP</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-plus-square"></i> EXPAND</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-minus-square"></i> COLLAPSE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-files-o"></i> PAGES</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-paperclip"></i> ATTACH</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-recycle"></i> TOPIC DELETED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-external-link"></i> LATEST / NEWEST</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-file-text"></i> SUBFORUM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-bar-chart-o"></i> POLL</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Forums</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-comments"></i> FORUM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-comments-o"></i> HAS SUBFORUMS</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-lock"></i> LOCKED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary"><i class="fa fa-link"></i> LINKED</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Topics</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-file-text-o"></i> TOPIC</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-fire"></i> HOT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-thumb-tack"></i> STICKY</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-info-circle"></i> ANNOUNCEMENT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-primary-hover"><i class="fa fa-arrows"></i> MOVED</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-row o-row">
+						<div class="panel-side o-col o-col-md-3">
+							<span class="label panel-label">Social</span>
+						</div>
+						<div class="panel-content o-col o-col-md-9">
+							<ul class="icon-list list-inline">
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-comment-o"></i> CONTACT</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-comment"></i> PM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-envelope"></i> EMAIL</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-globe"></i> WWW</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-lightbulb-o"></i> JABBER</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-skype"></i> SKYPE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-rss-square"></i> FEED</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-facebook"></i> FACEBOOK</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-twitter"></i> TWITTER</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-google-plus-square"></i> GOOGLE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-yahoo"></i> YAHOO</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa-youtube-play"></i> YOUTUBE</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa2-aim middle"></i> AIM</span>
+								</li>
+								<li>
+									<span class="icon-wrap swatch-secondary"><i class="fa fa2-icq middle"></i> ICQ</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-code">
+						<pre class="language-html">
+							<code>
+								&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;</code></pre>
+					</div>
+					<div class="panel-foot">
+						Version: 1.0.0
+					</div>
+				</div>
+			</section>
 		</div>
-		{% endblock %}
+	</div>
+	<footer>
+	</footer>
+</div>
+{% endblock %}
