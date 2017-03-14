@@ -67,12 +67,15 @@ $btn-text-hover-color: $default-primary-color !default;
 	will-change: box-shadow; // google material design
 
 	// UI states
-	&:hover,
-	&:focus {
-		@include shadow(focus);
+	&:hover {
 		text-decoration: none;  // [4]
 		background-color: $btn-hover-color;
 		color: $btn-text-hover-color;
+	}
+
+	&:focus {
+		@include shadow(focus);
+		outline: none; // [9]
 	}
 
 	&:disabled {

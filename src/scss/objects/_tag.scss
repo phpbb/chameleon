@@ -9,12 +9,12 @@
 // @settings
 
 // Layout Variables
+$tag-spacing: 8px !default;
 $tag-border-radius: $default-border-radius !default;
-$tag-padding: 4px !default;
 
 // Theme Variables
-$tag-background-color: $default-gray !default;
-$tag-color: $default-gray-dark !default;
+$tag-background-color: $yellow-100 !default;
+$tag-color: $black-54 !default;
 
 //
 // @scss
@@ -25,8 +25,8 @@ $tag-color: $default-gray-dark !default;
 	border-radius: $tag-border-radius;
 	color: $tag-color;
 	display: inline-block;
-	margin-left: ($tag-padding * 2);
-	padding: ($tag-padding / 2) $tag-padding;
+	margin: 0 $tag-spacing 0 0;
+	padding: ($tag-spacing / 4) $tag-spacing;
 	@media (min-width: $bp-md) {
 		white-space: nowrap;
 	}
