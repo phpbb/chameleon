@@ -1,0 +1,76 @@
+//------------------------------------------------------------------------------
+// @object: Type
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$btn-spacing: 16px !default;
+
+
+// Theme Variables
+$btn-background-color: $gray-100 !default;
+
+
+//
+// @scss
+
+.display4 {
+	@include type(display4);
+}
+
+.display3 {
+	@include type(display3);
+}
+
+.display2 {
+	@include type(display2);
+}
+
+.display1 {
+	@include type(display1);
+}
+
+.headline {
+	@include type(headline);
+}
+
+.blockquote {
+	@include type(blockquote);
+}
+
+.title {
+	@include type(title);
+}
+
+.subhead2 {
+	@include type(subhead2);
+}
+
+.subhead1 {
+	@include type(subhead1);
+}
+
+.body2 {
+	@include type(body2);
+}
+
+.body1 {
+	@include type(body1);
+}
+
+.button {
+	@include type(button);
+}
+
+.menu {
+	@include type(menu);
+}
+
+.caption {
+	@include type(caption);
+}

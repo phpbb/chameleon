@@ -33,7 +33,11 @@ var manageEnvironment = function (environment) {
 // Config
 var build = {
 	css: './dist/assets/css',
-	html: './docs/',
+	docs: {
+		scss: './docs/assets/scss/',
+		css: './docs/assets/css/',
+		html: './docs/'
+	},
 	twig: './src/views/',
 	data: './src/mock/',
 	scss: './src/scss/'
@@ -117,7 +121,7 @@ gulp.task('minify', ['css'], function () {
 	return css;
 });
 
-gulp.task('twig', function () {
+gulp.task('docs:html', function () {
 	var css = gulp
 	.src(build.twig + '*.twig')
 	.pipe(data(function () {
@@ -131,16 +135,67 @@ gulp.task('twig', function () {
 	.pipe(rename({
 		extname: '.html'
 	}))
-	.pipe(gulp.dest(build.html));
+	.pipe(gulp.dest(build.docs.html));
+
+	return css;
+});
+
+gulp.task('docs:css', function () {
+	var css = gulp
+	.src(build.docs.scss + '*.scss')
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		indentType: 'tab',
+		indentWidth: 1,
+		outputStyle: 'expanded',
+		precision: 10,
+		onError: console.error.bind(console, 'Sass error:')
+	}))
+	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+	.pipe(
+		postcss([
+			sorting(sortOrder),
+			torem({
+				rootValue: 16,
+				unitPrecision: 7,
+				propWhiteList: [
+					'font',
+					'font-size',
+					'margin',
+					'margin-left',
+					'margin-right',
+					'margin-top',
+					'margin-bottom',
+					'padding',
+					'padding-left',
+					'padding-right',
+					'padding-top',
+					'padding-bottom'],
+				selectorBlackList: [],
+				replace: true,
+				mediaQuery: false,
+				minPixelValue: 0
+			})
+		])
+	)
+	.pipe(stylefmt())
+	.pipe(cssnano())
+	.pipe(rename({
+		suffix: '.' + pkg.version + '.min',
+		extname: '.css'
+	}))
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest(build.docs.css));
 
 	return css;
 });
 
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
-	gulp.watch('src/views/**/*.twig', ['twig']);
-	gulp.watch('src/mock/**/*.json', ['twig']);
+	gulp.watch('docs/assets/scss/**/*.scss', ['docs:css', 'minify']);
+	gulp.watch('src/views/**/*.twig', ['docs:html']);
+	gulp.watch('src/mock/**/*.json', ['docs:html']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'minify', 'twig', 'watch']);
+gulp.task('default', ['css', 'minify', 'docs:html', 'docs:css', 'watch']);
