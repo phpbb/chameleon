@@ -592,6 +592,16 @@ main {
 		}
 	}
 
+	.anchor {
+		&:hover {
+			text-decoration: none;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	.tip {
 		background-color: $tip-bg-color;
 		border-left: 4px solid $accent-color;
