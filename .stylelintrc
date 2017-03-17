@@ -69,8 +69,8 @@
 			"line-height": ["rem", "px", "em", "%"]
 		},
 		"declaration-property-unit-whitelist": {
-			"height": ["px", "%"],
-			"width": ["px", "%"],
+			"height": ["px", "%", "vh"],
+			"width": ["px", "%", "vw"],
 			"font-size": ["px", "rem", "%"],
 			"margin-left": ["px", "rem", "%"],
 			"margin-right": ["px", "rem", "%"],
