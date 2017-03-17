@@ -7,7 +7,7 @@
 @import "../../src/scss/functions";
 @import "../../src/scss/mixins";
 
-$primary-color: #42b983 !default;
+$primary-color: #6257a8 !default;
 $accent-color: #ff6666 !default;
 
 $text-color: #34495e !default;
@@ -171,10 +171,12 @@ kbd {
 			color: $primary-color;
 		}
 
+		/* stylelint-disable selector-no-qualifying-type */
 		&.active {
 			border-bottom: 2px solid $primary-color;
 			color: $primary-color;
 		}
+		/* stylelint-enable selector-no-qualifying-type */
 	}
 
 	/* navbar dropdown */
@@ -215,9 +217,11 @@ kbd {
 				margin: 0;
 				padding: 0;
 
+				/* stylelint-disable selector-no-qualifying-type */
 				&.active {
 					border-bottom: 0;
 				}
+				/* stylelint-enable selector-no-qualifying-type */
 			}
 		}
 
@@ -317,12 +321,13 @@ main {
 	ul,
 	ul li {
 		list-style: none;
-
+		/* stylelint-disable selector-no-qualifying-type */
 		&.active > a {
 			font-weight: 600;
 			border-right: 2px solid;
 			color: $primary-color;
 		}
+		/* stylelint-enable selector-no-qualifying-type */
 	}
 
 	ul li a {
@@ -583,7 +588,9 @@ main {
 		padding: 12px 24px 12px 30px;
 
 		&:before {
+			/* stylelint-disable font-family-name-quotes */
 			font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+			/* stylelint-enable font-family-name-quotes */
 			font-size: 14px;
 			font-weight: bold;
 			line-height: 1.4286;
@@ -614,6 +621,7 @@ main {
 	}
 }
 
+/* stylelint-disable no-duplicate-selectors */
 .markdown-section pre {
 	-webkit-font-smoothing: initial;
 	-moz-osx-font-smoothing: initial;
@@ -628,6 +636,7 @@ main {
 		}
 	}
 }
+/* stylelint-enable no-duplicate-selectors */
 
 .close {
 	.sidebar {
