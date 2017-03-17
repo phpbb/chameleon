@@ -449,6 +449,10 @@ main {
 		}
 	}
 
+	p a:hover {
+		border-bottom: 2px solid $primary-color;
+	}
+
 	h1 {
 		font-size: 30px;
 		margin: 0 0 15px;
