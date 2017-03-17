@@ -291,10 +291,11 @@ main {
 	background-color: $docs-bg-color;
 	border-right: 1px solid rgba(0, 0, 0, 0.07);
 	color: $sidebar-color;
-	position: absolute 0 * 0 0;
+	position: absolute;
 	z-index: 20;
 	overflow-y: auto;
 	width: $sidebar-width;
+	margin: 0;
 	padding: 40px 0;
 	transition: transform 250ms ease-out;
 
@@ -376,13 +377,14 @@ main {
 	/* sidebar toggle */
 	&-toggle {
 		text-align: center;
-		background-color: rgba($primary-color, 0.8);
+		background-color: rgba($docs-bg-color, 0.8);
 		border: 0;
 		outline: none;
-		position: absolute 0 * 0 0;
+		position: absolute;
 		z-index: 30;
 		width: 30px;
 		width: calc($sidebar-width - 16px);
+		margin: 0;
 		padding: 10px;
 		transition: opacity 0.3s;
 
@@ -411,7 +413,8 @@ main {
 
 /* main content */
 .content {
-	position: absolute 0 0 0 $sidebar-width;
+	position: absolute;
+	margin: 0 0 0 $sidebar-width;
 	padding-top: 20px;
 	transition: left 250ms ease;
 }
@@ -652,10 +655,10 @@ main {
 .close {
 	.sidebar {
 		transform: translateX(-$sidebar-width);
-	}
 
-	.sidebar-toggle {
-		width: auto;
+		&-toggle {
+			width: auto;
+		}
 	}
 
 	.content {
@@ -686,6 +689,11 @@ main {
 	.sidebar {
 		left: -$sidebar-width;
 		transition: transform 250ms ease-out;
+
+		&-toggle {
+			background-color: transparent;
+			width: auto;
+		}
 	}
 
 	.content {
@@ -700,20 +708,15 @@ main {
 		transition: transform 250ms ease-out;
 	}
 
-	.sidebar-toggle {
-		background-color: transparent;
-		width: auto;
-	}
-
 	.close {
 		.sidebar {
 			transform: translateX($sidebar-width);
-		}
 
-		.sidebar-toggle {
-			background-color: rgba($docs-bg-color, 0.8);
-			width: calc($sidebar-width - 16px);
-			transition: 1s background-color;
+			&-toggle {
+				background-color: rgba($docs-bg-color, 0.8);
+				width: calc($sidebar-width - 16px);
+				transition: 1s background-color;
+			}
 		}
 
 		.content {
