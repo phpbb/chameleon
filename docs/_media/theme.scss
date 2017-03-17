@@ -438,7 +438,12 @@ main {
 
 	a {
 		font-weight: 600;
+		text-decoration: none;
 		color: $primary-color;
+
+		&:hover {
+			border-bottom: 2px solid $primary-color;
+		}
 	}
 
 	h1 {
