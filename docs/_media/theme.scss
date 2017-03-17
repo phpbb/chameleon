@@ -780,7 +780,7 @@ main {
 
 	a {
 		text-decoration: none;
-		color: #ffffff;
+		color: $primary-color;
 
 		&:hover {
 			text-decoration: none;
@@ -802,7 +802,7 @@ main {
 		margin: 9px 0 36px;
 
 		a {
-			color: #ffffff;
+			color: $primary-color;
 			display: block;
 		}
 
@@ -845,6 +845,7 @@ main {
 
 		&:last-child {
 			background-color: $primary-color;
+			border-color: $primary-color;
 			color: #ffffff;
 			margin-right: 0;
 
