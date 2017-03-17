@@ -269,11 +269,16 @@ main {
 	transition: all 0.3s;
 
 	span {
-		color: #ffffff;
+		font-weight: 700;
+		color: $primary-color;
 	}
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
+
+		span {
+			border-bottom: 2px solid $primary-color;
+		}
 	}
 }
 
@@ -779,6 +784,7 @@ main {
 	}
 
 	a {
+		font-weight: 700;
 		text-decoration: none;
 		color: $primary-color;
 
@@ -803,8 +809,13 @@ main {
 		margin: 9px 0 36px;
 
 		a {
+			font-weight: 700;
 			color: $primary-color;
 			display: block;
+
+			&:hover {
+				border: none;
+			}
 		}
 
 		small {
