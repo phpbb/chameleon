@@ -383,7 +383,6 @@ main {
 		position: absolute;
 		z-index: 30;
 		width: 30px;
-		width: ($sidebar-width - 16px);
 		margin: 0;
 		padding: 10px;
 		transition: opacity 0.3s;
@@ -396,7 +395,7 @@ main {
 			background-color: $primary-color;
 			display: block;
 			margin-bottom: 4px;
-			padding: 16px 2px;
+			padding: 1px 2px;
 		}
 	}
 }
