@@ -595,6 +595,7 @@ main {
 	.anchor {
 		&:hover {
 			text-decoration: none;
+			border: none;
 
 			span {
 				text-decoration: underline;
