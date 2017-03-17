@@ -382,7 +382,7 @@ main {
 		outline: none;
 		position: absolute;
 		z-index: 30;
-		width: 30px;
+		width: 36px;
 		margin: 0;
 		padding: 10px;
 		transition: opacity 0.3s;
@@ -656,7 +656,7 @@ main {
 		transform: translateX(-$sidebar-width);
 
 		&-toggle {
-			width: auto;
+			width: 36px;
 		}
 	}
 
