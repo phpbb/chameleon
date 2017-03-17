@@ -34,7 +34,7 @@ var manageEnvironment = function (environment) {
 var build = {
 	css: './dist/assets/css',
 	docs: {
-		scss: './docs/assets/scss/',
+		scss: './docs/_media/',
 		css: './docs/assets/css/',
 		html: './docs/'
 	},
@@ -185,17 +185,17 @@ gulp.task('docs:css', function () {
 		extname: '.css'
 	}))
 	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(build.docs.css));
+	.pipe(gulp.dest(build.docs.scss));
 
 	return css;
 });
 
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
-	// gulp.watch('docs/assets/scss/**/*.scss', ['docs:css', 'minify']);
+	gulp.watch('docs/_media/*.scss', ['docs:css']);
 	// gulp.watch('src/views/**/*.twig', ['docs:html']);
 	// gulp.watch('src/mock/**/*.json', ['docs:html']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'minify', 'watch']);
+gulp.task('default', ['css', 'minify', 'docs:css', 'watch']);
