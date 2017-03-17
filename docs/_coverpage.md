@@ -14,3 +14,6 @@
 
 [GitHub](https://github.com/hanakin/base-l/)
 [Get Started](#base-l)
+
+<!-- background color -->
+![color](#312c54)
