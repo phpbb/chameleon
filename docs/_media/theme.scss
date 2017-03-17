@@ -165,7 +165,7 @@ kbd {
 	a {
 		font-size: 16px;
 		text-decoration: none;
-		color: inherit;
+		color: #ffffff;
 		transition: color 0.3s;
 
 		&:hover {
@@ -269,7 +269,7 @@ main {
 	transition: all 0.3s;
 
 	span {
-		color: $text-color;
+		color: #ffffff;
 	}
 
 	&:hover {
@@ -789,6 +789,7 @@ main {
 
 	p {
 		line-height: 1.4667;
+		color: #ffffff;
 		margin: 15px 0;
 	}
 
@@ -801,6 +802,7 @@ main {
 		margin: 9px 0 36px;
 
 		a {
+			color: #ffffff;
 			display: block;
 		}
 
@@ -814,6 +816,7 @@ main {
 	blockquote {
 		font-size: 22px;
 		text-align: center;
+		color: #ffffff;
 	}
 
 	ul {
@@ -831,9 +834,9 @@ main {
 		letter-spacing: 0.094em;
 		border-width: 1px;
 		border-style: solid;
-		border-color: $primary-color;
+		border-color: #ffffff;
 		border-radius: 30px;
-		color: $primary-color;
+		color: #ffffff;
 		display: inline-block;
 		box-sizing: border-box;
 		margin-right: 15px;
@@ -851,7 +854,8 @@ main {
 		}
 
 		&:hover {
-			color: inherit;
+			background-color: lighten($primary-color, 15%);
+			color: #ffffff;
 		}
 	}
 
