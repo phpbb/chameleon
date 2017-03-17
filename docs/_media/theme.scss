@@ -784,6 +784,7 @@ main {
 
 		&:hover {
 			text-decoration: none;
+			border-bottom: 2px solid $primary-color;
 		}
 	}
 
@@ -851,11 +852,13 @@ main {
 
 			&:hover {
 				background-color: lighten($primary-color, 15%);
+				border-color: lighten($primary-color, 15%);
 			}
 		}
 
 		&:hover {
 			background-color: lighten($primary-color, 15%);
+			border-color: lighten($primary-color, 15%);
 			color: #ffffff;
 		}
 	}
