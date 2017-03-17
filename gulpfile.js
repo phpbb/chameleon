@@ -192,10 +192,10 @@ gulp.task('docs:css', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
-	gulp.watch('docs/assets/scss/**/*.scss', ['docs:css', 'minify']);
-	gulp.watch('src/views/**/*.twig', ['docs:html']);
-	gulp.watch('src/mock/**/*.json', ['docs:html']);
+	// gulp.watch('docs/assets/scss/**/*.scss', ['docs:css', 'minify']);
+	// gulp.watch('src/views/**/*.twig', ['docs:html']);
+	// gulp.watch('src/mock/**/*.json', ['docs:html']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'minify', 'docs:html', 'docs:css', 'watch']);
+gulp.task('default', ['css', 'minify', 'watch']);
