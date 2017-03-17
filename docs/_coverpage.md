@@ -2,7 +2,7 @@
 
 ![logo](_media/logo.svg)
 
-#0.12.0
+# 0.12.0
 
 > A well structured top down base css framework.
 
