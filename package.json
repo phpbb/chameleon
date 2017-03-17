@@ -7,7 +7,7 @@
       "env": ["browser", "node", "jquery"]
   },
   "scripts": {
-    "test": "xo && gulp css minify twig && stylelint"
+    "test": "xo && gulp css minify docs:html docs:css && stylelint --config ./.stylelintrc './src/**/*.scss'"
   },
   "repository": {
     "type": "git",
