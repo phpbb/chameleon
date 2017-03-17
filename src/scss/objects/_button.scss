@@ -10,18 +10,15 @@
 
 // Layout Variables
 $btn-spacing: 16px !default;
-$btn-padding: $btn-spacing !default;
 $btn-border-radius: $default-border-radius !default;
 $btn-min-width: ($btn-spacing * 4) !default;
 $btn-height: ($btn-spacing * 2.375) !default;
 
 // Theme Variables
-$btn-background-color: $gray-100 !default;
-$btn-hover-color: $gray-200 !default;
-$btn-active-color: $gray-300 !default;
-$btn-text-color: $black-54 !default;
-$btn-text-hover-color: $default-primary-color !default;
-
+$btn-background-color: $default-action-bg !default;
+$btn-hover-color: $default-action-bg-hover !default;
+$btn-text-color: $default-action-color !default;
+$btn-text-hover-color: $default-link-color !default;
 
 //
 // @scss
@@ -57,7 +54,7 @@ $btn-text-hover-color: $default-primary-color !default;
 	overflow: hidden; // [6]
 	min-width: $btn-min-width; // google material design
 	margin: 0; // [4]
-	padding: 0 $btn-padding; // [7]
+	padding: 0 $btn-spacing; // [7]
 	cursor: pointer;
 	user-select: none; // [8]
 	transition:

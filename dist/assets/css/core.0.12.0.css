@@ -1300,7 +1300,7 @@ table {
 	font-size: 0.8125rem;
 	white-space: nowrap;
 	background-color: #ffffff;
-	border: 1px solid rgba(0, 0, 0, 0.12);
+	border: 1px solid #e0e0e0;
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -1352,8 +1352,8 @@ table th:last-of-type {
 
 table td {
 	vertical-align: top;
-	border-top: 1px solid rgba(0, 0, 0, 0.12);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
 	padding-top: 0.75rem;
 }
 
@@ -1364,7 +1364,7 @@ table th {
 	vertical-align: bottom;
 	letter-spacing: 0.04em;
 	text-overflow: ellipsis;
-	color: rgba(0, 0, 0, 0.54);
+	color: #757575;
 	padding-bottom: 0.5rem;
 }
 

@@ -22,10 +22,10 @@ $table-button-padding-right: 16px;
 $table-cell-top: $table-card-padding / 2;
 
 //Theme Variables
-$table-header-color: rgba($black, 0.54);
-$table-divider-color: rgba($black, 0.12);
-$table-hover-color: $gray-200;
-$table-selection-color: $default-gray-light;
+$table-header-color: $default-action-color;
+$table-divider-color: $default-gray-light;
+$table-hover-color: $default-action-bg-hover;
+$table-selection-color: $default-action-bg;
 
 
 //
