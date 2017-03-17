@@ -16,7 +16,7 @@ $(function () {
 
 	var pageScrollTo = function (target) {
 		target = target > 0 ? target : target.offset().top;
-		$page.animate({'scrollTop': target}, pageScrollSpeed);
+		$page.animate({scrollTop: target}, pageScrollSpeed);
 	};
 
 	// CLICK EVENTS ------------------------------------------------------------

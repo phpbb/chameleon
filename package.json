@@ -3,6 +3,9 @@
   "version": "0.12.0",
   "description": "A well structured top down base css framework",
   "main": "gulpfile.js",
+  "xo": {
+      "env": ["browser", "node", "jquery"]
+  },
   "scripts": {
     "test": "xo && gulp css minify twig && stylelint"
   },
