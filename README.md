@@ -1,6 +1,10 @@
-[![Base-L](https://rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
+<p align="center">
+	<a href="https://github.com/hanakin/base-l">
+		<img alt="base-l" src="https://rawgit.com/hanakin/base-l/master/base-l-banner.svg)">
+	</a>
+</p>
 
-# Base-L [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
+# Base-L [![Version](https://www.npmjs.com/package/base-l)](https://img.shields.io/npm/v/base-l.svg?style=flat-square) [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg?style=flat-square)](https://travis-ci.org/hanakin/base-l)
 Is meant as a core layer to your workflow. Its a true CSS framework following
 the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
 this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4). Designed with
@@ -22,8 +26,7 @@ include the following in your project head.
 ```
 
 ## Development Usage
->! To gain the full benefits of the framework as its intended, you need to use it
-in development.
+	To gain the full benefits of the framework as its intended, you need to use it in development.
 
 Start by cloneing the repo
 ```git
@@ -38,8 +41,7 @@ npm install
 All the magic lives in the `src/scss` folder. To build everything simply run
 `gulp`.
 
->? by default everything builds in the `dist/assets/css` folder, but this can be
-configured to work with your project.
+	by default everything builds in the `dist/assets/css` folder, but this can be configured to work with your project.
 
 For detailed information about the setup and configuration of the framework see
 the [Framework Usage](http://hanakin.github.io/base-l/#/about/) section.
