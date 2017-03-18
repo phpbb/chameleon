@@ -149,10 +149,35 @@ gulp.task('docs:css', function () {
 	return css;
 });
 
+gulp.task('setup:settings', function () {
+	var settings = gulp
+	.src('node_modules/base-l.settings/*.scss')
+	.pipe(gulp.dest('src/scss/settings/'));
+
+	return settings;
+});
+
+gulp.task('setup:mixins', function () {
+	var mixins = gulp
+		.src('node_modules/base-l.tools/mixin/*.scss')
+		.pipe(gulp.dest('src/scss/tools/mixin/'));
+
+	return mixins;
+});
+
+gulp.task('setup:functions', function () {
+	var funcitons = gulp
+		.src('node_modules/base-l.tools/function/*.scss')
+		.pipe(gulp.dest('src/scss/tools/funciton/'));
+
+	return funcitons;
+});
+
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
 	gulp.watch('docs/_media/*.scss', ['docs:css']);
 });
 
+gulp.task('setup', ['setup:settings', 'setup:mixins', 'setup:functions']);
 gulp.task('serve', ['watch']);
 gulp.task('default', ['css', 'minify', 'watch']);

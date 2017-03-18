@@ -4,10 +4,15 @@
   "description": "A well structured top down base css framework",
   "main": "gulpfile.js",
   "xo": {
-      "env": ["browser", "node", "jquery"]
+    "env": [
+      "browser",
+      "node",
+      "jquery"
+    ]
   },
   "scripts": {
-    "test": "xo && gulp css minify docs:html docs:css && stylelint --config ./.stylelintrc './src/**/*.scss'"
+    "test": "xo && gulp css minify docs:html docs:css && stylelint --config ./.stylelintrc './src/**/*.scss'",
+    "postinstall": "gulp setup"
   },
   "repository": {
     "type": "git",
@@ -40,5 +45,9 @@
     "stylelint-order": "^0.3.0",
     "stylelint-scss": "^1.4.1",
     "xo": "^0.16.0"
+  },
+  "dependencies": {
+    "base-l.settings": "^1.0.0",
+    "base-l.tools": "^1.0.0"
   }
 }
