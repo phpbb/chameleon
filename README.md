@@ -4,7 +4,7 @@
 	</a>
 </p>
 
-# Base-l <small>0.12.0</small> [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg?style=flat-square)](https://travis-ci.org/hanakin/base-l)
+# Base-l <small>0.12.0</small> [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg?style=flat)](https://travis-ci.org/hanakin/base-l)
 Is meant as a core layer to your workflow. Its a true CSS framework following
 the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
 this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4). Designed with
