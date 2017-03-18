@@ -20,12 +20,15 @@
 		</nav>
 		<div id="app" class="app"></div>
 	</body>
-	<script src="//unpkg.com/docsify"
-		data-repo="hanakin/base-l"
-		data-coverpage
-		data-router
-		data-themeColor="#6257a8"
-		data-auto2top>
+	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+	<script>
+		window.$docsify = {
+			repo: "hanakin/base-l",
+			coverpage: true,
+			router: true,
+			auto2top: true,
+			themeColor: "#6257a8"
+		}
 	</script>
 	<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 	<script src="//unpkg.com/prismjs/components/prism-git.min.js"></script>
