@@ -1,7 +1,7 @@
 
 # Framework Usage
 
->! Beofre we cover how to use the framework its best to understand the concepts
+!> Beofre we cover how to use the framework its best to understand the concepts
 of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4).
 
 Each layer of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) has its own
@@ -21,7 +21,7 @@ Then simply import it in the correct _build file_
 There are three _build files_ in the main `src/scss` folder. These are the heart
 of the framework.
 
->? For more understanding about why checkout the [About](/about/) section.
+?> For more understanding about why checkout the [About](/about/) section.
 
 Each _build file_ is responsible for a different subset of the layers talked
 about in [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
@@ -32,7 +32,7 @@ about in [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 
 Each of these has a specific focus or _**"seperation of concerns"**_.
 
->! Its important to know that the first two layers of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+!> Its important to know that the first two layers of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 are used/imported into each _build file_ as they are globals for the framework.
 This is not to be confused with the term global for the rendered css.
 

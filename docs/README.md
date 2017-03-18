@@ -22,7 +22,7 @@ include the following in your project head.
 ```
 
 ## Development Usage
->! To gain the full benefits of the framework as its intended, you need to use it
+!> To gain the full benefits of the framework as its intended, you need to use it
 in development.
 
 Start by cloneing the repo
@@ -38,7 +38,7 @@ npm install
 All the magic lives in the `src/scss` folder. To build everything simply run
 `gulp`.
 
->? by default everything builds in the `dist/assets/css` folder, but this can be
+?> by default everything builds in the `dist/assets/css` folder, but this can be
 configured to work with your project.
 
 For detailed information about the setup and configuration of the framework see
