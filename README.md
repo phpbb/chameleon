@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://github.com/hanakin/base-l">
-		<img alt="base-l" src="https://rawgit.com/hanakin/base-l/master/base-l-banner.svg)">
+		<img alt="base-l" src="https://cdn.rawgit.com/hanakin/base-l/master/base-l-banner.svg)">
 	</a>
 </p>
 
