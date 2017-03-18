@@ -9,37 +9,15 @@ var sourcemaps = require('gulp-sourcemaps');
 var cssnano = require('gulp-cssnano');
 var postcss = require('gulp-postcss');
 var stylefmt = require('gulp-stylefmt');
-var nunjucks = require('gulp-nunjucks-render');
-var data = require('gulp-data');
 var sorting = require('postcss-sorting');
 var torem = require('postcss-pxtorem');
-var moment = require('moment');
 var sortOrder = require('./.postcss-sorting.json');
 var pkg = require('./package.json');
-var mock = require('./src/mock/index.json');
-
-var manageEnvironment = function (environment) {
-	environment.addFilter('moment', function (date, format, fromNow) {
-		if (fromNow) {
-			date = moment(date, format).fromNow();
-		} else {
-			date = moment(date, format);
-		}
-
-		return date;
-	});
-};
 
 // Config
 var build = {
 	css: './dist/assets/css',
-	docs: {
-		scss: './docs/_media/',
-		css: './docs/assets/css/',
-		html: './docs/'
-	},
-	twig: './src/views/',
-	data: './src/mock/',
+	docs: './docs/_media/',
 	scss: './src/scss/'
 };
 
@@ -121,28 +99,9 @@ gulp.task('minify', ['css'], function () {
 	return css;
 });
 
-gulp.task('docs:html', function () {
-	var css = gulp
-	.src(build.twig + '*.twig')
-	.pipe(data(function () {
-		mock.version = pkg.version;
-		return mock;
-	}))
-	.pipe(nunjucks({
-		path: [build.twig],
-		manageEnv: manageEnvironment
-	}))
-	.pipe(rename({
-		extname: '.html'
-	}))
-	.pipe(gulp.dest(build.docs.html));
-
-	return css;
-});
-
 gulp.task('docs:css', function () {
 	var css = gulp
-	.src(build.docs.scss + '*.scss')
+	.src(build.docs + '*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		indentType: 'tab',
@@ -185,7 +144,7 @@ gulp.task('docs:css', function () {
 		extname: '.css'
 	}))
 	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(build.docs.scss));
+	.pipe(gulp.dest(build.docs));
 
 	return css;
 });
@@ -193,9 +152,7 @@ gulp.task('docs:css', function () {
 gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
 	gulp.watch('docs/_media/*.scss', ['docs:css']);
-	// gulp.watch('src/views/**/*.twig', ['docs:html']);
-	// gulp.watch('src/mock/**/*.json', ['docs:html']);
 });
 
 gulp.task('serve', ['watch']);
-gulp.task('default', ['css', 'minify', 'docs:css', 'watch']);
+gulp.task('default', ['css', 'minify', 'watch']);
