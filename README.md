@@ -1,44 +1,45 @@
-[![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
-
 [![Base-L](https://rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
 
-# Base-L
+# Base-L [![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
 Is meant as a core layer to your workflow. Its a true CSS framework following
 the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
-this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4). Designed with
+applications in mind. Developed in conjunction with the popular open source
+forum application [phpBB](http://www.phpbb.org). It lends it self beautifully to
+the project improving its code base and simplifying the process of designing and
+creating rich, beautiful custom themes.
 
-## Usage
-You can include the core.css file in your project as a starting place and/or use the
-framework as a boilerplate for your overall design.
+# Getting Started
+The framework is meant to allow for adaptability. As such you can use it in a
+number of ways to fit your needs.
 
-## Scope
-Base-L is only part of the equation... It takes what Harry talks about being the
-main layers and groups them into three sections.
+## Production Usage
+To use the framework in its simpleist form as a base for your project, simply
+include the following in your project head.
 
-1. Core
-2. Theme
-3. Other/utilities
+```html
+<link rel="stylesheet" href="https://cdn.rawgit.com/hanakin/base-l/05504206/dist/assets/css/core.0.12.0.css">
+```
 
-By doing this we can break out the framework from the design. This is the main
-focus of Base-L. It provides you with a solid starting point for your projects.
-You can also just include the **Core** layer to easily build your work
-off of. We also provide a common **Utilities** layer to start from.
+## Development Usage
+>! To gain the full benefits of the framework as its intended, you need to use it
+in development.
 
-The **Theme** however is left up to you!
+Start by cloneing the repo
+```git
+git clone git@github.com:hanakin/base-l.git
+```
 
-#### Core
-This is essentially your **generic** and **base** layers as well as some global
-**objects**.
+Install all the dependencies by running
+```bash
+npm install
+```
 
-#### Theme
-This is all of your none global **objects** and individual **components** as
-well as any **theme** specific stuff
+All the magic lives in the `src/scss` folder. To build everything simply run
+`gulp`.
 
-#### Utilities
-This is your catch all things that are overly specific, the rest of the layers.
+>? by default everything builds in the `dist/assets/css` folder, but this can be
+configured to work with your project.
 
-## Why
-Base-L was designed with applications in mind. Developed in conjunction with the
-popular open source forum application [phpBB](http://www.phpbb.org). It lends it
-self beautifully to the project improving its code base and simplifying the
-process of designing and creating rich, beautiful custom themes.
+For detailed information about the setup and configuration of the framework see
+the [Framework Usage](http://hanakin.github.io/base-l/#/about/) section.
