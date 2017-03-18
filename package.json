@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "base-l.settings": "^1.0.0",
-    "base-l.tools": "^1.0.0"
+    "base-l.tools": "^1.0.1"
   }
 }
