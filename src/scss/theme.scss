@@ -76,13 +76,17 @@
 
 // 1. Global Settings
 //-------------------------
-@import "settings";
+@import "settings/settings";
 
 
 // 2. Tools
 //-------------------------
-@import "functions";
-@import "mixins";
+@import "tools/functions/funcitons";
+@import "tools/mixins/mixins";
+
+
+// 6. Components
+//-------------------------
 
 
 // 7. Theme

@@ -74,20 +74,15 @@
 //
 
 
-// 0. Config Flags
-//-------------------------
-$use-material: false !default;
-$use-html-layout: true !default;
-
 // 1. Global Settings
 //-------------------------
-@import "settings";
+@import "settings/settings";
 
 
 // 2. Tools
 //-------------------------
-@import "functions";
-@import "mixins";
+@import "tools/functions/funcitons";
+@import "tools/mixins/mixins";
 
 
 // 3. Generic
