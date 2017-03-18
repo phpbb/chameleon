@@ -25,7 +25,7 @@ $tip-icon-color: $white !default;
 $tip-em-color: $black !default;
 
 $code-bg-color: $gray-100 !default;
-$code-color: #e96900 !default;
+$code-color: #2973b7 !default;
 $pre-code-color: $gray-700 !default;
 
 $ui-color-light: $gray-300 !default;
@@ -381,9 +381,12 @@ main {
 		background-color: rgba($docs-bg-color, 0.8);
 		border: 0;
 		outline: none;
-		position: absolute;
-		z-index: 30;
-		width: 36px;
+		position: fixed;
+		z-index: 4;
+		bottom: 0;
+		left: 0;
+		width: 30px;
+		width: 284px;
 		margin: 0;
 		padding: 10px;
 		cursor: pointer;
@@ -396,6 +399,8 @@ main {
 		span {
 			background-color: $primary-color;
 			display: block;
+			width: 16px;
+			height: 2px;
 			margin-bottom: 4px;
 			padding: 1px 2px;
 		}
