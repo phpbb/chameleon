@@ -261,7 +261,7 @@ kbd {
 main {
 	position: relative;
 	display: block;
-	size: 100vw 100%;
+	width: 100vw 100%;
 }
 
 .anchor {
@@ -637,8 +637,8 @@ main {
 			position: absolute;
 			top: 14px;
 			left: -12px;
+			width: 20px;
 			content: "!";
-			size: 20px;
 		}
 
 		code {
@@ -802,7 +802,7 @@ main {
 		background-color: $docs-bg-color;
 		opacity: 0.8;
 		position: absolute;
-		size: 100%;
+		width: 100%;
 	}
 
 	& &-main {
