@@ -168,7 +168,7 @@ gulp.task('setup:mixins', function () {
 gulp.task('setup:functions', function () {
 	var funcitons = gulp
 		.src('node_modules/base-l.tools/function/*.scss')
-		.pipe(gulp.dest('src/scss/tools/funciton/'));
+		.pipe(gulp.dest('src/scss/tools/function/'));
 
 	return funcitons;
 });
