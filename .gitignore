@@ -33,3 +33,11 @@ node_modules
 .node_repl_history
 /src/scss/settings
 /src/scss/tools
+/dist/assets/css/theme.0.12.0.min.css.map
+/dist/assets/css/theme.0.12.0.min.css
+/dist/assets/css/theme.0.12.0.css.map
+/dist/assets/css/theme.0.12.0.css
+/dist/assets/css/colours.0.12.0.min.css.map
+/dist/assets/css/colours.0.12.0.min.css
+/dist/assets/css/colours.0.12.0.css.map
+/dist/assets/css/colours.0.12.0.css
