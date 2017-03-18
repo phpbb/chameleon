@@ -1,11 +1,12 @@
 // 1. Global Settings
 //-------------------------
-@import "../../src/scss/settings";
+@import "../../src/scss/settings/settings";
+
 
 // 2. Tools
 //-------------------------
-@import "../../src/scss/functions";
-@import "../../src/scss/mixins";
+@import "../../src/scss/tools/functions/funcitons";
+@import "../../src/scss/tools/mixins/mixins";
 
 $primary-color: #6257a8 !default;
 $accent-color: #ff6666 !default;
