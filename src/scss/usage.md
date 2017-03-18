@@ -1,8 +1,6 @@
-
 # Framework Usage
 
-!> Beofre we cover how to use the framework its best to understand the concepts
-of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4).
+!> Beofre we cover how to use the framework its best to understand the concepts of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4).
 
 Each layer of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) has its own
 folder. All corresponding partials should be created in the appropriate folder.
@@ -32,9 +30,7 @@ about in [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 
 Each of these has a specific focus or _**"seperation of concerns"**_.
 
-!> Its important to know that the first two layers of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
-are used/imported into each _build file_ as they are globals for the framework.
-This is not to be confused with the term global for the rendered css.
+!> Its important to know that the first two layers of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) are used/imported into each _build file_ as they are globals for the framework. This is not to be confused with the term global for the rendered css.
 
 ### Core
 The `core.scss` _build file_ which builds the `core.css` file houses the aspects
