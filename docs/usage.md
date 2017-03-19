@@ -5,14 +5,14 @@
 Each layer of [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) has its own
 folder. All corresponding partials should be created in the appropriate folder.
 
-- 1. Settings
-- 2. Tools
-- 3. Generic
-- 4. Base
-- 5. Objects
-- 6. Components
-- 7. Theme
-- 8. Utilities/Other/Trumps
+1. Settings
+2. Tools
+3. Generic
+4. Base
+5. Objects
+6. Components
+7. Theme
+8. Utilities/Other/Trumps
 
 Then simply import it in the correct _build file_
 
@@ -36,9 +36,9 @@ Each of these has a specific focus or _**"seperation of concerns"**_.
 The `core.scss` _build file_ which builds the `core.css` file houses the aspects
 of your project that rarely change. These are the foundation layers.
 
-- 3. Generic
-- 4. Base
-- 5. Objects
+3. Generic
+4. Base
+5. Objects
 
 The first two may be obvious why they belong in **Core**, but for clarification
 all _objects_ are included in the core as well as they should be applied first
@@ -49,8 +49,8 @@ The `theme.scss` _build file_ which builds the `theme.css` file houses the all
 your components as well as all the themeing. This is essentially the main theme
 of your project.
 
-- 6. Component
-- 7. Theme
+6. Component
+7. Theme
 
 Its meant to be included on top of the `core.css` layer.
 
