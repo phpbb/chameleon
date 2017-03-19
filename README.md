@@ -17,9 +17,9 @@ creating rich, beautiful customizable themes.
 Check out the detailed documentation for the project [here](http://hanakin.github.io/base-l)
 
 ## Contribute
-1. For the project
+1. Fork the project
 2. Create an Issue
-3. Read our Coding guidelines and Git Contribution Guidelines
+3. Read our [Code guidelines](http://hanakin.github.io/base-l/codeing-guidelines) and [Git Contribution Guidelines](http://hanakin.github.io/base-l/git-quidelines)
 4. Submit a Pull Request
 
 ## License
