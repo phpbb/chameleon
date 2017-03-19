@@ -41,8 +41,8 @@ of your project that rarely change. These are the foundation layers.
 5. Objects
 
 The first two may be obvious why they belong in **Core**, but for clarification
-all _objects_ are included in the core as well as they should be applied first
-in selector order building the foundation for your components.
+all _objects_ are included in the **Core** as well since they should be applied
+first in selector order building the foundation for your components.
 
 ### Theme
 The `theme.scss` _build file_ which builds the `theme.css` file houses the all
@@ -57,3 +57,5 @@ Its meant to be included on top of the `core.css` layer.
 ### Utilities
 The `utilities.scss` _build file_ which builds the `utilities.css` file houses
 everything else. Any utility classes, important trumps, etc...
+
+as such its meant to be included as the last layer.
