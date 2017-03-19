@@ -151,7 +151,7 @@ kbd {
 	}
 
 	> a {
-		color: #ffffff;
+		color: $primary-color;
 		margin: 0 15px;
 		padding: 5px 0;
 	}
@@ -166,17 +166,17 @@ kbd {
 	a {
 		font-size: 16px;
 		text-decoration: none;
-		color: #ffffff;
+		color: $primary-color;
 		transition: color 0.3s;
 
 		&:hover {
-			color: $primary-color;
+			color: lighten($primary-color, 15%);
 		}
 
 		/* stylelint-disable selector-no-qualifying-type */
 		&.active {
-			border-bottom: 2px solid $primary-color;
-			color: $primary-color;
+			border-bottom: 2px solid lighten($primary-color, 15%);
+			color: lighten($primary-color, 15%);
 		}
 		/* stylelint-enable selector-no-qualifying-type */
 	}
