@@ -1,2 +1,2 @@
-# Coding Guidelines
+# Code Guidelines
 !> Coming Soon!

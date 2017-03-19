@@ -2,5 +2,5 @@
 	- [Quick start](/quickstart)
 	- [Framework Usage](/usage)
 - Contribution
-	- [Git Guidlines](/git-guidelines)
-	- [Codeing Guidlines](/codeing-gudielines)
+	- [Git Guidelines](/git-guidelines)
+	- [Code Guidelines](/codeing-guidelines)
