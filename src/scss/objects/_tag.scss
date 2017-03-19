@@ -27,12 +27,12 @@ $tag-color: $black-54 !default;
 	display: inline-block;
 	margin: 0 $tag-spacing 0 0;
 	padding: ($tag-spacing / 4) $tag-spacing;
-	@media (min-width: $bp-md) {
-		white-space: nowrap;
-	}
 
 	// Empty tags collapse automatically
 	&:empty {
 		display: none;
+	}
+	@media (min-width: $bp-md) {
+		white-space: nowrap;
 	}
 }

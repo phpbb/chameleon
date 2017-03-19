@@ -40,13 +40,6 @@ table {
 	display: block;
 	overflow-x: auto;
 	width: 100%;
-	@media (min-width: $bp-md) {
-		display: table;
-	}
-
-	@media (min-width: $bp-md) {
-		width: auto;
-	}
 
 	thead {
 		padding-bottom: ($table-header-padding-bottom / 2);
@@ -94,5 +87,12 @@ table {
 		text-overflow: ellipsis;
 		color: $table-header-color;
 		padding-bottom: $table-header-padding-bottom;
+	}
+	@media (min-width: $bp-md) {
+		display: table;
+	}
+
+	@media (min-width: $bp-md) {
+		width: auto;
 	}
 }

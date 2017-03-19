@@ -30,17 +30,16 @@ $base-input-invalid-color: $default-important-light-color;
 //
 // @scss
 form {
+	span {
+		@include vertical-rhythm();
+		display: block;
+	}
 	@media (min-width: $bp-md) {
 		span {
 			vertical-align: middle;
 			display: inline-block;
 			margin-bottom: 0;
 		}
-	}
-
-	span {
-		@include vertical-rhythm();
-		display: block;
 	}
 }
 
@@ -79,9 +78,6 @@ textarea {
 	height: $base-input-height; // [1]
 	padding: $base-input-padding;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-	@media (min-width: $bp-md) {
-		display: inline-block;
-	}
 
 	&:hover {
 		border-color: $base-input-border-hover-color;
@@ -119,6 +115,9 @@ textarea {
 	&:focus:invalid {
 		border-color: $base-input-invalid-border-color;
 		color: $base-input-invalid-color;
+	}
+	@media (min-width: $bp-md) {
+		display: inline-block;
 	}
 }
 
