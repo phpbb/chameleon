@@ -52,7 +52,7 @@ of your project.
 - 6. Component
 - 7. Theme
 
-Its meant to be included ontop of the `core.css` layer.
+Its meant to be included on top of the `core.css` layer.
 
 ### Utilities
 The `utilities.scss` _build file_ which builds the `utilities.css` file houses
