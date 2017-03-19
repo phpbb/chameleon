@@ -107,11 +107,13 @@ body {
 	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 	font-size: 15px;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0;
 	color: $text-color;
 	overflow-x: hidden;
 	margin: 0;
+	/* stylelint-disable order/declaration-block-properties-specified-order */
+	-moz-osx-font-smoothing: grayscale;
+	/* stylelint-enable order/declaration-block-properties-specified-order */
 }
 
 img {
