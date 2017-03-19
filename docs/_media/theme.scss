@@ -43,11 +43,11 @@ $sidebar-width: 300px;
 
 
 * {
-	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
-	-webkit-overflow-scrolling: touch;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
 	-webkit-touch-callout: none;
 }
 
@@ -106,12 +106,12 @@ body {
 body {
 	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0;
 	color: $text-color;
 	overflow-x: hidden;
 	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -169,11 +169,8 @@ kbd {
 		color: $primary-color;
 		transition: color 0.3s;
 
-		&:hover {
-			color: lighten($primary-color, 15%);
-		}
-
 		/* stylelint-disable selector-no-qualifying-type */
+		&:hover,
 		&.active {
 			border-bottom: 2px solid lighten($primary-color, 15%);
 			color: lighten($primary-color, 15%);
