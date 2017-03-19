@@ -39,7 +39,7 @@ $btn-text-hover-color: $default-link-color !default;
 .o-btn {
 	@include type(button);
 	@include shadow(2);
-	line-height: $btn-height;
+	line-height: unitless($btn-height, map-get(map-get($type-styles, button), font-size));
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
 	white-space: nowrap; // bs only
