@@ -7,9 +7,9 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="./_media/theme.0.12.0.min.css">
 		<style media="screen">
-			.cover-main img[alt="logo"] {
-				width: 60%;
-			}
+		.cover-main img[alt="logo"] {
+			width: 60%;
+		}
 		</style>
 	</head>
 	<body>
@@ -20,15 +20,18 @@
 		</nav>
 		<div id="app" class="app"></div>
 	</body>
-	<script src="//unpkg.com/docsify"
-		data-name="base-l"
-		data-repo="hanakin/base-l"
-		data-coverpage
-		data-paths="auto"
-		data-loadSidebar="true"
-		data-router
-		data-auto2top>
+	<script>
+		window.$docsify = {
+			auto2top: true,
+			coverpage: true,
+			loadSidebar: true,
+			maxLevel: 4,
+			repo: "hanakin/base-l",
+			name: 'base-l',
+			subMaxLevel: 2
+		}
 	</script>
+	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 	<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 	<script src="//unpkg.com/prismjs/components/prism-git.min.js"></script>
 	<script src="//unpkg.com/prismjs/components/prism-css.min.js"></script>
