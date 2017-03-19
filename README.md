@@ -17,10 +17,10 @@ creating rich, beautiful customizable themes.
 Check out the detailed documentation for the project [here](http://hanakin.github.io/base-l)
 
 ## Contribute
-- 1. For the project
-- 2. Create an Issue
-- 3. Read our Coding guidelines and Git Contribution Guidelines
-- 4. Submit a Pull Request
+1. For the project
+2. Create an Issue
+3. Read our Coding guidelines and Git Contribution Guidelines
+4. Submit a Pull Request
 
 ## License
 Copyright ©️ 2016 Michael Miday
