@@ -3,4 +3,4 @@
 	- [Framework Usage](/usage)
 - Contribution
 	- [Git Guidlines](/git-guidelines)
-	- [Code Guidlines](/code-gudielines)
+	- [Codeing Guidlines](/codeing-gudielines)
