@@ -490,36 +490,6 @@ form {
 	padding: 0;
 }
 
-[role="button"] {
-	cursor: pointer;
-}
-
-button {
-	background: transparent;
-	border: 1px solid #9e9e9e;
-	padding: 0.125rem 0.25rem;
-	cursor: pointer;
-}
-
-button:focus {
-	outline: 1px dotted;
-	outline: 4px auto -webkit-focus-ring-color;
-}
-
-input,
-button,
-select,
-optgroup,
-textarea {
-	line-height: inherit;
-	vertical-align: middle;
-	background-color: transparent;
-	background-image: none;
-	background-clip: padding-box;
-	border-radius: 0;
-	color: inherit;
-}
-
 label {
 	display: inline-block;
 	margin: 0 0.5rem 1rem;
@@ -542,6 +512,36 @@ legend {
 	margin: 0 0 1rem;
 }
 
+input,
+button,
+select,
+optgroup,
+textarea {
+	line-height: inherit;
+	vertical-align: middle;
+	background-color: transparent;
+	background-image: none;
+	background-clip: padding-box;
+	border-radius: 0;
+	color: inherit;
+}
+
+button {
+	background: transparent;
+	border: 1px solid #9e9e9e;
+	padding: 0.125rem 0.25rem;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 1px dotted;
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+[role="button"] {
+	cursor: pointer;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
 	margin-right: 0.5rem;
@@ -557,6 +557,16 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
 	-webkit-appearance: listbox;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
 }
 
 input[type="search"] {
@@ -595,13 +605,13 @@ input[type="color"] {
 	padding: 0.25rem;
 }
 
-select[multiple="multiple"] {
-	height: auto;
-}
-
 select[multiple="multiple"],
 textarea {
 	vertical-align: top;
+}
+
+select[multiple="multiple"] {
+	height: auto;
 }
 
 textarea {
@@ -621,16 +631,6 @@ select::-ms-expand {
 
 select::-ms-value {
 	color: currentColor;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-[type="date"]::-webkit-inner-spin-button {
-	display: none;
-	-webkit-appearance: none;
 }
 
 html {
@@ -777,17 +777,17 @@ ol {
 	letter-spacing: 0.04em;
 }
 
+form span {
+	display: block;
+	margin: 0 0 1.5rem;
+}
+
 @media (min-width: 768px) {
 	form span {
 		vertical-align: middle;
 		display: inline-block;
 		margin-bottom: 0;
 	}
-}
-
-form span {
-	display: block;
-	margin: 0 0 1.5rem;
 }
 
 [type="date"],
@@ -815,27 +815,6 @@ textarea {
 	height: 40px;
 	padding: 0.5rem;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-@media (min-width: 768px) {
-	[type="date"],
-	[type="datetime"],
-	[type="datetime-local"],
-	[type="email"],
-	[type="month"],
-	[type="number"],
-	[type="password"],
-	[type="search"],
-	[type="tel"],
-	[type="text"],
-	[type="time"],
-	[type="url"],
-	[type="week"],
-	[type="color"],
-	select,
-	textarea {
-		display: inline-block;
-	}
 }
 
 [type="date"]:hover,
@@ -1064,6 +1043,27 @@ textarea:focus:invalid,
 textarea:focus:invalid {
 	border-color: #e23936;
 	color: #ec7f7d;
+}
+
+@media (min-width: 768px) {
+	[type="date"],
+	[type="datetime"],
+	[type="datetime-local"],
+	[type="email"],
+	[type="month"],
+	[type="number"],
+	[type="password"],
+	[type="search"],
+	[type="tel"],
+	[type="text"],
+	[type="time"],
+	[type="url"],
+	[type="week"],
+	[type="color"],
+	select,
+	textarea {
+		display: inline-block;
+	}
 }
 
 textarea {
@@ -1320,18 +1320,6 @@ table {
 	width: 100%;
 }
 
-@media (min-width: 768px) {
-	table {
-		display: table;
-	}
-}
-
-@media (min-width: 768px) {
-	table {
-		width: auto;
-	}
-}
-
 table thead {
 	padding-bottom: 0.25rem;
 }
@@ -1380,6 +1368,18 @@ table th {
 	text-overflow: ellipsis;
 	color: #757575;
 	padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	table {
+		display: table;
+	}
+}
+
+@media (min-width: 768px) {
+	table {
+		width: auto;
+	}
 }
 
 code,
@@ -2700,14 +2700,14 @@ pre code {
 	padding: 0.125rem 0.5rem;
 }
 
+.o-tag:empty {
+	display: none;
+}
+
 @media (min-width: 768px) {
 	.o-tag {
 		white-space: nowrap;
 	}
-}
-
-.o-tag:empty {
-	display: none;
 }
 
 /*# sourceMappingURL=core.0.12.0.css.map */

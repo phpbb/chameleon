@@ -104,16 +104,11 @@ body {
 }
 
 body {
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-	font-size: 15px;
-	-webkit-font-smoothing: antialiased;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
 	letter-spacing: 0;
 	color: $text-color;
 	overflow-x: hidden;
 	margin: 0;
-	/* stylelint-disable order/declaration-block-properties-specified-order */
-	-moz-osx-font-smoothing: grayscale;
-	/* stylelint-enable order/declaration-block-properties-specified-order */
 }
 
 img {
@@ -121,14 +116,14 @@ img {
 }
 
 kbd {
-	font-size: 12px !important;
-	line-height: 1;
-	vertical-align: middle;
-	border: solid 1px $ui-color-dark;
-	border-radius: 3px;
-	display: inline-block;
-	margin-bottom: 3px;
-	padding: 3px 5px;
+	// font-size: 12px !important;
+	// line-height: 1;
+	// vertical-align: middle;
+	// border: solid 1px $ui-color-dark;
+	// border-radius: 3px;
+	// display: inline-block;
+	// margin-bottom: 3px;
+	// padding: 3px 5px;
 }
 
 
@@ -502,6 +497,7 @@ main {
 
 	ul,
 	ol {
+		margin-left: 18px;
 		padding-left: 22px;
 	}
 
@@ -560,7 +556,7 @@ main {
 	}
 
 	code {
-		font-family: "Roboto Mono", Monaco, courier, monospace;
+		font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
 		font-size: 12px;
 		white-space: nowrap;
 		background-color: $code-bg-color;
@@ -576,7 +572,7 @@ main {
 	}
 
 	pre {
-		font-family: "Roboto Mono", Monaco, courier, monospace;
+		font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
 		line-height: 1.4667;
 		word-wrap: normal;
 		background-color: $code-bg-color;
@@ -586,13 +582,13 @@ main {
 		padding: 0 21px;
 
 		code {
-			font-family: "Roboto Mono", Monaco, courier, monospace;
+			font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
 			font-size: 12px;
 			line-height: inherit;
 			white-space: inherit;
 			background-color: $code-bg-color;
 			border-radius: 2px;
-			color: $pre-code-color;
+			color: #f56e4d;
 			display: block;
 			overflow: inherit;
 			max-width: inherit;
@@ -930,7 +926,8 @@ main {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #8e908c;
+	font-style: italic;
+	color: #ccd7da;
 }
 
 .token.namespace {
@@ -939,38 +936,55 @@ main {
 
 .token.boolean,
 .token.number {
-	color: #c76b29;
+	color: #f56e4d;
+}
+
+.token.parent.important {
+	color: #fc5572;
 }
 
 .token.punctuation {
-	color: #525252;
+	color: #40adb4;
 }
 
 .token.property {
-	color: #c08b30;
-}
-
-.token.tag {
-	color: #2973b7;
+	color: #8896af;
 }
 
 .token.string {
-	color: #42b983;
+	color: #92b75e;
 }
 
 .token.selector {
-	color: #6679cc;
+	color: #fdb53e;
+}
+
+.token.keyword,
+.token.important {
+	color: #7c55fb;
+}
+
+.token.placeholder,
+.token.variable,
+.token.atrule {
+	color: #83cbc4;
+}
+
+.token.deleted {
+	text-decoration: line-through;
+}
+
+.token.statement,
+.token.regex {
+	color: #22a2c9;
+}
+
+.token.tag {
+	color: #fc5572;
 }
 
 .token.attr-name {
-	color: #2973b7;
-}
-
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-	color: #22a2c9;
+	color: #fdb53e;
 }
 
 .token.attr-value,
@@ -980,23 +994,11 @@ main {
 	color: #42b983;
 }
 
-.token.keyword {
-	color: #e96900;
-}
-
-.token.statement,
-.token.regex,
-.token.atrule {
-	color: #22a2c9;
-}
-
-.token.placeholder,
-.token.variable {
-	color: #3d8fd1;
-}
-
-.token.deleted {
-	text-decoration: line-through;
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #6283b6;
 }
 
 .token.inserted {
@@ -1011,10 +1013,6 @@ main {
 .token.important,
 .token.bold {
 	font-weight: bold;
-}
-
-.token.important {
-	color: #c94922;
 }
 
 .token.entity {
