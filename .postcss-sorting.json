@@ -74,12 +74,7 @@
 				"background-origin",
 				"background-size",
 				"interpolation-mode",
-				"filter"
-			]
-		},
-		{
-			"emptyLineBefore": false,
-			"properties": [
+				"filter",
 				"border",
 				"border-width",
 				"border-style",
