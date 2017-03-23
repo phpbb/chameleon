@@ -1,44 +1,49 @@
 //------------------------------------------------------------------------------
-// @generic: Forms
+// #generic: Forms
 //------------------------------------------------------------------------------
-// @description:
+// #description:
 //
 //------------------------------------------------------------------------------
 
 //
-// @scss
+// #scss
+
 form {
 	@include vertical-rhythm();
 	padding: 0;
 }
 
 //
-// iOS 'clickable elements' fix for role="button"
+// Organizational elements
+//------------------------------------------------------------------------------
 //
-// Fixes 'clickability' issue (and more generally, the firing of events such as
-// focus as well) for traditionally non-focusable elements with role="button"
-// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+// 1. Allow labels to use `margin` for spacing.
+// 2. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+//    so we reset that to ensure it behaves more like a standard block element.
+//    See https://github.com/twbs/bootstrap/issues/12359.
 //
-[role="button"] {
-	cursor: pointer;
+label {
+	display: inline-block;
+	margin: 0 8px 16px; // [1]
+}
+
+fieldset { // [2]
+	@include vertical-rhythm();
+	border: 0;
+	min-width: 0;
+	padding: 0;
+}
+
+legend {
+	@include type(headline);
+	display: block;
+	width: 100%;
+	margin: 0 0 16px;
 }
 
 //
-// 1. Work around a Firefox/IE bug where the transparent `button` background
-//    results in a loss of the default `button` focus styles.
-//
-button {
-	background: transparent;
-	border: $default-border-size solid $default-gray;
-	padding: 2px 4px;
-	cursor: pointer;
-
-	&:focus {
-		outline: 1px dotted; // [1]
-		outline: 4px auto -webkit-focus-ring-color; // [1]
-	}
-}
-
+// Control elements
+//------------------------------------------------------------------------------
 //
 // 1. Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc
 //    are properly inherited. However, `line-height` isn't addressed there.
@@ -63,39 +68,50 @@ textarea {
 }
 
 //
-// 1. Allow labels to use `margin` for spacing.
+// Buttons
+//------------------------------------------------------------------------------
 //
-label {
-	display: inline-block;
-	margin: 0 8px 16px; // [1]
+// 1. Work around a Firefox/IE bug where the transparent `button` background
+//    results in a loss of the default `button` focus styles.
+// 2. iOS 'clickable elements' fix for role="button" Fixes 'clickability' issue
+//    (and more generally, the firing of events such as focus as well) for
+//    traditionally non-focusable elements with role="button"
+//    see: https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+//
+button {
+	background: transparent;
+	border: $default-border-size solid $default-gray;
+	padding: 2px 4px;
+	cursor: pointer;
+
+	&:focus {
+		outline: 1px dotted; // [1]
+		outline: 4px auto -webkit-focus-ring-color; // [1]
+	}
+}
+
+// [2]
+[role="button"] {
+	cursor: pointer;
 }
 
 //
-// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-// so we reset that to ensure it behaves more like a standard block element.
-// See https://github.com/twbs/bootstrap/issues/12359.
+// Inputs
+//------------------------------------------------------------------------------
 //
-fieldset {
-	@include vertical-rhythm();
-	border: 0;
-	min-width: 0;
-	padding: 0;
-}
-
-legend {
-	@include type(headline);
-	display: block;
-	width: 100%;
-	margin: 0 0 16px;
-}
-
-//
-// 1. radios nor checkboxes require slight spacing on the right to account for
-// labels.
+// 1. Radios & Checkboxes require slight spacing on the right to account for
+//    labels.
 // 2. Apply a disabled cursor for radios and checkboxes.
+// 3. Remove the default appearance of temporal inputs to avoid a Mobile Safari
+//    bug where setting a custom line-height prevents text from being vertically
+//    centered within the input. Bug report: https://github.com/twbs/bootstrap/issues/11266
+// 4. This overrides the extra rounded corners on search inputs in iOS so that
+//    our `.form-control` class can properly style them. Note that this cannot
+//    simply be added to `.form-control` as it's not specific enough.
+//    For details, see: https://github.com/twbs/bootstrap/issues/11586.
+// 5. specify the minimum height of form controls.
 //
 // Note: Neither radios nor checkboxes can be readonly.
-//
 //
 input[type="radio"],
 input[type="checkbox"] {
@@ -106,13 +122,7 @@ input[type="checkbox"] {
 	}
 }
 
-//
-// Remove the default appearance of temporal inputs to avoid a Mobile Safari
-// bug where setting a custom line-height prevents text from being vertically
-// centered within the input.
-//
-// Bug report: https://github.com/twbs/bootstrap/issues/11266
-//
+// [3]
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
@@ -120,12 +130,17 @@ input[type="month"] {
 	-webkit-appearance: listbox;
 }
 
-//
-// This overrides the extra rounded corners on search inputs in iOS so that our
-// `.form-control` class can properly style them. Note that this cannot simply
-// be added to `.form-control` as it's not specific enough. For details, see
-// https://github.com/twbs/bootstrap/issues/11586.
-//
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
+}
+
+// [4]
 input[type="search"] {
 	-webkit-appearance: none;
 }
@@ -135,9 +150,7 @@ output {
 	display: inline-block;
 }
 
-//
-// specify the minimum height of form elements
-//
+// [5]
 button,
 [type="button"],
 [type="date"],
@@ -166,49 +179,39 @@ input[type="color"] {
 	padding: 4px;
 }
 
-select[multiple="multiple"] {
-	height: auto;
-}
-
+//
+// Selects & Textareas
+//------------------------------------------------------------------------------
 //
 // 1. Align when inline to top for better conssistant alignments.
+// 2. Allow only vertical resizing of textareas.
+// 3. Specify the standard appearance of selects
 //
 select[multiple="multiple"],
 textarea {
 	vertical-align: top; // [1]
 }
 
-//
-// 1. Allow only vertical resizing of textareas.
-//
-textarea {
-	resize: vertical; // [1]
+select[multiple="multiple"] {
+	height: auto;
 }
 
-//
-// specify the standard appearance of selects
-//
+textarea {
+	resize: vertical; // [2]
+}
+
+// [3]
 select {
 	-moz-appearance: none; // Firefox 40+
 	-webkit-appearance: none; // Chrome 45+
 
 	&::-ms-expand {
-		background-color: transparent; // IE10+
-		border: 0; // IE10+
-		display: none; // Edge 12+, Internet Explorer 11-
+		background-color: transparent; // IE 10+
+		border: 0; // IE 10+
+		display: none; // Edge 12+, IE 11-
 	}
 
 	&::-ms-value {
-		color: currentColor; // Edge 12+, Internet Explorer 11-
+		color: currentColor; // Edge 12+, IE 11-
 	}
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-[type="date"]::-webkit-inner-spin-button {
-	display: none;
-	-webkit-appearance: none;
 }

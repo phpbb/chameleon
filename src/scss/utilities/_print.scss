@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// @utilities: Print
+// #utilities: Print
 //------------------------------------------------------------------------------
-// @description
+// #description
 //
 // Inlined to avoid the additional HTTP request:
 // http://www.phpied.com/delay-loading-your-print-css/
@@ -11,7 +11,7 @@
 //------------------------------------------------------------------------------
 
 //
-// @scss
+// #scss
 @media print {
 	*,
 	*:before,

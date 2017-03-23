@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// @utilities: Resets
+// #utilities: Resets
 //------------------------------------------------------------------------------
-// @description
+// #description
 //
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
 // This prevents an unwanted focus outline from appearing around elements that
@@ -10,7 +10,8 @@
 //------------------------------------------------------------------------------
 
 //
-// @scss
+// #scss
+
 [tabindex="-1"]:focus {
 	outline: none !important;
 }

@@ -1,12 +1,12 @@
 //------------------------------------------------------------------------------
-// @base: Forms
+// #base: Forms
 //------------------------------------------------------------------------------
-// @description:
+// #description:
 //
 //------------------------------------------------------------------------------
 
 //
-// @settings
+// #settings
 
 // Layout Variables
 $base-input-padding: 8px;
@@ -28,7 +28,8 @@ $base-input-invalid-color: $default-important-light-color;
 
 
 //
-// @scss
+// #scss
+
 form {
 	span {
 		@include vertical-rhythm();
@@ -43,7 +44,7 @@ form {
 	}
 }
 
-
+//
 // 1. Make inputs at least the height of their button counterpart
 //    (base line-height + padding + border)
 // 3. This has no effect on <select>s in some browsers, due to the limited
@@ -95,6 +96,7 @@ textarea {
 		opacity: 1; // [4]
 	}
 
+	//
 	// Disabled and read-only inputs
 	//
 	// HTML5 says that controls under a fieldset > legend:first-child won"t be
@@ -260,7 +262,6 @@ input[type="checkbox"] {
 	transform: rotate(90deg);
 	transform-origin: 100% 100%;
 	backface-visibility: hidden;
-
 
 	// Disabled indeterminate
 	&:disabled {

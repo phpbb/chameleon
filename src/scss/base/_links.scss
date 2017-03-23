@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// @base: Links
+// #base: Links
 //------------------------------------------------------------------------------
-// @description:
+// #description:
 //
 // Establish the default link look
 //
@@ -18,14 +18,14 @@
 //------------------------------------------------------------------------------
 
 //
-// @settings
+// #settings
 
 // Theme Variables
 $link-color: $default-link-color !default;
 $link-hover-color: $default-link-color-hover !default;
 
 //
-// @scss
+// #scss
 
 a {
 	text-decoration: none;

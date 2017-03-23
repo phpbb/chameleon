@@ -1,12 +1,12 @@
 //------------------------------------------------------------------------------
-// @object: Tag
+// #object: Tag
 //------------------------------------------------------------------------------
-// @description
+// #description
 //
 //------------------------------------------------------------------------------
 
 //
-// @settings
+// #settings
 
 // Layout Variables
 $tag-spacing: 8px !default;
@@ -17,7 +17,8 @@ $tag-background-color: $yellow-100 !default;
 $tag-color: $black-54 !default;
 
 //
-// @scss
+// #scss
+
 .o-tag {
 	text-align: center;
 	vertical-align: middle;

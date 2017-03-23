@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
-// @base: Global
+// #base: Global
 //------------------------------------------------------------------------------
-// @description:
+// #description:
 //
 // High-level, page-level styling.
 //
@@ -13,7 +13,8 @@
 
 
 //
-// @scss
+// #scss
+
 html {
 	font-family: $default-font;
 	font-size: $default-font-size; // [1]

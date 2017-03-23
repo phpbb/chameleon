@@ -1,26 +1,18 @@
 //------------------------------------------------------------------------------
-// @object: Grid
+// #object: Grid
 //------------------------------------------------------------------------------
-// @description
+// #description
 //
-// This grid system uses table layout to simplify the use of a grid. Define the
-// wrapper with o-grid class and all wrappers within in it use o-col object
-// combined with o-col-x-x modifier to set the width which enables
-// table-layout: fixed on all layouts large enough to not be fluid. The system
-// disables this once you reach small devices where fluid layouts are better.
-// The grid col & sizes can both be applied either in your html (recomended) or
-// as a mixin.
+// This grid system is uses flex-box based on the BS4 grid system
 //
 //------------------------------------------------------------------------------
 
 //
-// @settings
-
-// Layout Variables
-
+// #settings
 
 //
-// @scss
+// #scss
+
 //
 // Set up the default container and grid class for mobile browsers
 .o-container {

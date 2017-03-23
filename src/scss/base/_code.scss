@@ -1,12 +1,12 @@
 //------------------------------------------------------------------------------
-// @base: Code
+// #base: Code
 //------------------------------------------------------------------------------
-// @description:
+// #description:
 //
 //------------------------------------------------------------------------------
 
 //
-// @settings
+// #settings
 
 // Layout Variables
 $base-kbd-padding: 4px !default;
@@ -29,7 +29,8 @@ $base-pre-border-radius: $default-border-radius !default;
 $base-pre-color: $white !default;
 
 //
-// @scss
+// #scss
+
 // Inline and block code styles
 code,
 kbd,
