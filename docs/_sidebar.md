@@ -3,4 +3,11 @@
 	- [Framework Usage](/usage)
 - Contribution
 	- [Git Guidelines](/git-guidelines)
-	- [Code Guidelines](/codeing-guidelines)
+	- [Code Standards](/codeing-guidelines)
+- HTML
+	- [HTML Guidelines](/html-guidelines)
+- CSS
+	- [CSS Guidelines](/css-guidelines)
+	- [CSS Naming Conventions](/css-naming-conventions)
+	- [CSS Selectors](/css-selectors)
+	- [CSS Specificity](/css-specificity)
