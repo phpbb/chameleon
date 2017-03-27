@@ -27,7 +27,6 @@
 			}
 		],
 		"block-closing-brace-newline-before": "always-multi-line",
-		"block-closing-brace-space-after": "always-single-line",
 		"block-closing-brace-space-before": "always-single-line",
 
 		"block-no-empty": true,
@@ -86,7 +85,8 @@
 			"padding-right": ["px", "rem"],
 			"padding-top": ["px", "rem"],
 			"padding-bottom": ["px", "rem"],
-			"letter-spacing": ["em"]
+			"letter-spacing": ["em"],
+			"word-spacing": ["em"]
 		},
 
 		"font-family-name-quotes": "always-where-recommended",
