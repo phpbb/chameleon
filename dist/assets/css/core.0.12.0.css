@@ -529,7 +529,7 @@ textarea {
 button {
 	background: transparent;
 	border: 1px solid #9e9e9e;
-	padding: 0.125rem 0.25rem;
+	padding: 0.5rem 0.125rem;
 	cursor: pointer;
 }
 
@@ -602,7 +602,7 @@ textarea {
 
 input[type="color"] {
 	vertical-align: middle;
-	padding: 0.25rem;
+	padding: 0.125rem;
 }
 
 select[multiple="multiple"],
@@ -1175,7 +1175,7 @@ input[type="checkbox"]:focus:invalid:focus {
 
 [type="checkbox"] + label:before {
 	border: 1px solid #9e9e9e;
-	border-radius: 1px;
+	border-radius: 2px;
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -1311,8 +1311,11 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 table {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.7142857143;
 	white-space: nowrap;
+	letter-spacing: 0.04em;
 	background-color: #ffffff;
 	border: 1px solid #e0e0e0;
 	display: block;
