@@ -32,11 +32,10 @@ $table-selection-color: $default-action-bg;
 // #scss
 
 table {
-	font-size: 13px;
+	@include type(body2);
 	white-space: nowrap;
 	background-color: $white;
 	border: 1px solid $table-divider-color;
-	// border-collapse: collapse;
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -63,7 +62,6 @@ table {
 		box-sizing: border-box;
 		height: $table-row-height;
 		padding: 0 $table-column-padding;
-		// position: relative;
 
 		&:first-of-type {
 			padding-left: $table-card-padding;

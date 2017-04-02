@@ -59,17 +59,14 @@ blockquote {
 
 		&:before {
 			content: "“";
-			// content: open-quote;
 		}
 
 		&:after {
 			content: "";
-			// content: no-close-quote;
 		}
 
 		&:last-of-type:after {
 			content: "”";
-			// content: close-quote;
 		}
 	}
 }

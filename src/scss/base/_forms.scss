@@ -45,6 +45,9 @@ form {
 }
 
 //
+// General Form element styling
+//------------------------------------------------------------------------------
+//
 // 1. Make inputs at least the height of their button counterpart
 //    (base line-height + padding + border)
 // 3. This has no effect on <select>s in some browsers, due to the limited
@@ -53,6 +56,9 @@ form {
 //    https://github.com/twbs/bootstrap/pull/11526.
 // 5. iOS fix for unreadable disabled content;
 //    see https://github.com/twbs/bootstrap/issues/11655.
+// 6. HTML5 says that controls under a fieldset > legend:first-child won"t be
+//    disabled if the fieldset is disabled. Due to implementation difficulty, we
+//    don"t honor that edge case; we style them as disabled anyway.
 //
 [type="date"],
 [type="datetime"],
@@ -96,12 +102,7 @@ textarea {
 		opacity: 1; // [4]
 	}
 
-	//
-	// Disabled and read-only inputs
-	//
-	// HTML5 says that controls under a fieldset > legend:first-child won"t be
-	// disabled if the fieldset is disabled. Due to implementation difficulty, we
-	// don"t honor that edge case; we style them as disabled anyway.
+	// [6]
 	&:disabled,
 	&[readonly] {
 		background-color: $base-input-disabled-color;
@@ -128,11 +129,15 @@ textarea {
 }
 
 //
+// Select elements
+//------------------------------------------------------------------------------
+//
 // 1. Suppress the nested default white text on blue background highlight given
 //    to the selected option text when the (still closed) <select> receives
 //    focusin IE and (under certain conditions) Edge, as it looks bad and cannot
 //    be made to match the appearance of the native widget.
 //    See https://github.com/twbs/bootstrap/issues/19398.
+//
 select {
 	@include background-triangle($base-input-border-color);
 	background-color: $base-input-background-color;
@@ -172,7 +177,11 @@ input[type="color"] {
 }
 
 //
+// File & Range elements
+//------------------------------------------------------------------------------
+//
 // Make file inputs better match text inputs by forcing them to new lines.
+//
 input[type="file"],
 input[type="range"] {
 	display: block;
@@ -186,7 +195,12 @@ input[type="checkbox"] {
 	}
 }
 
+//
+// Radio & Checkbox elements
+//------------------------------------------------------------------------------
+//
 // Remove default checkbox
+//
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked,
 [type="radio"]:not(:checked),
@@ -210,7 +224,7 @@ input[type="checkbox"] {
 
 [type="checkbox"] + label:before {
 	border: $base-input-border-width solid $base-input-border-color;
-	border-radius: ($base-input-padding * 0.125);
+	border-radius: $base-input-border-radius;
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -334,6 +348,8 @@ input[type="checkbox"] {
 
 //
 // Placeholder Colour
+//------------------------------------------------------------------------------
+//
 ::-webkit-input-placeholder {
 	color: $base-input-placeholder-color;
 }

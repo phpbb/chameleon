@@ -6,6 +6,14 @@
 //------------------------------------------------------------------------------
 
 //
+// #settings
+// Layout Variables
+$base-form-spacing: ($default-line-height / 3);
+$base-double-spacing: ($base-form-spacing * 2);
+$base-half-spacing: ($base-form-spacing / 2);
+$base-quarter-spacing: ($base-half-spacing / 2);
+
+//
 // #scss
 
 form {
@@ -24,7 +32,7 @@ form {
 //
 label {
 	display: inline-block;
-	margin: 0 8px 16px; // [1]
+	margin: 0 $base-form-spacing $base-double-spacing; // [1]
 }
 
 fieldset { // [2]
@@ -38,7 +46,7 @@ legend {
 	@include type(headline);
 	display: block;
 	width: 100%;
-	margin: 0 0 16px;
+	margin: 0 0 $base-double-spacing;
 }
 
 //
@@ -81,7 +89,7 @@ textarea {
 button {
 	background: transparent;
 	border: $default-border-size solid $default-gray;
-	padding: 2px 4px;
+	padding: ($base-double-spacing / 2) $base-quarter-spacing;
 	cursor: pointer;
 
 	&:focus {
@@ -115,7 +123,7 @@ button {
 //
 input[type="radio"],
 input[type="checkbox"] {
-	margin-right: 8px; // [1]
+	margin-right: $base-form-spacing; // [1]
 
 	&:disabled {
 		cursor: not-allowed; // [2]
@@ -171,12 +179,12 @@ button,
 [type="color"],
 select,
 textarea {
-	min-height: 24px;
+	min-height: $default-line-height;
 }
 
 input[type="color"] {
 	vertical-align: middle; // [1]
-	padding: 4px;
+	padding: $base-quarter-spacing;
 }
 
 //

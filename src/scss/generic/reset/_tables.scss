@@ -16,7 +16,7 @@ table {
 	@include vertical-rhythm();
 	background-color: transparent; // [1]
 	width: 100%;
-	border-spacing: 0; // from inuit
+	border-spacing: 0;
 	border-collapse: collapse; // [2]
 }
 
@@ -24,7 +24,7 @@ caption {
 	text-align: left;
 	color: $default-gray;
 	margin: 0;
-	padding: 8px 0;
+	padding: ($default-line-height / 3); 0;
 	caption-side: bottom;
 }
 
@@ -38,5 +38,5 @@ th {
 th,
 td {
 	margin: 0;
-	padding: $default-line-height / 2;
+	padding: ($default-line-height / 2);
 }

@@ -15,6 +15,9 @@
 //
 // See https://github.com/twbs/bootstrap/issues/19402
 //
+// 1. Its more problematic when setting text-decoration globally so we remove in
+//    favour of specific components/helpers setting it as needed.
+//
 //------------------------------------------------------------------------------
 
 //
@@ -33,7 +36,7 @@ a {
 
 	&:focus,
 	&:hover {
-		text-decoration: none;
+		text-decoration: none; // [1]
 		color: $link-hover-color;
 	}
 
