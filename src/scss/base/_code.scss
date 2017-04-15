@@ -9,24 +9,24 @@
 // #settings
 
 // Layout Variables
-$base-kbd-padding: 4px !default;
-$base-pre-padding: 16px !default;
+$kbd-padding: 4px !default;
+$pre-padding: 16px !default;
 
 // Theme Variables
-$base-code-font-family: $default-code-font;
-$base-code-bg: $default-action-bg-hover !default;
-$base-code-color: $default-primary-light-color !default;
-$base-code-border-radius: $default-border-radius !default;
-$base-kbd-nested-font-weight: 700 !default;
-$base-kbd-bg: $gray-900 !default;
-$base-kbd-color: $white !default;
-$base-kbd-border-color: rgba(0, 0, 0, 0.25) !default;
-$base-pre-bg: $gray-800 !default;
-$base-pre-border-width: 0 !default;
-$base-pre-border-style: solid !default;
-$base-pre-border-color: $default-gray !default;
-$base-pre-border-radius: $default-border-radius !default;
-$base-pre-color: $white !default;
+$code-font-family: $default-code-font;
+$code-bg: $default-action-bg-hover !default;
+$code-color: $default-primary-light-color !default;
+$code-border-radius: $default-border-radius !default;
+$kbd-nested-font-weight: 700 !default;
+$kbd-bg: $gray-900 !default;
+$kbd-color: $white !default;
+$kbd-border-color: rgba(0, 0, 0, 0.25) !default;
+$pre-bg: $gray-800 !default;
+$pre-border-width: 0 !default;
+$pre-border-style: solid !default;
+$pre-border-color: $default-gray !default;
+$pre-border-radius: $default-border-radius !default;
+$pre-color: $white !default;
 
 //
 // #scss
@@ -36,29 +36,29 @@ code,
 kbd,
 pre,
 samp {
-	font-family: $base-code-font-family;
+	font-family: $code-font-family;
 }
 
 // Inline code
 code,
 kbd {
 	font-size: 90%;
-	background-color: $base-code-bg;
-	border-radius: $base-code-border-radius;
-	color: $base-code-color;
-	padding: ($base-kbd-padding / 2) $base-kbd-padding;
+	background-color: $code-bg;
+	border-radius: $code-border-radius;
+	color: $code-color;
+	padding: ($kbd-padding / 2) $kbd-padding;
 }
 
 // User input typically entered via keyboard
 kbd {
-	background-color: $base-kbd-bg;
-	box-shadow: inset 0 -1px 0 $base-kbd-border-color;
-	color: $base-kbd-color;
+	background-color: $kbd-bg;
+	box-shadow: inset 0 -1px 0 $kbd-border-color;
+	color: $kbd-color;
 	display: inline-block;
 
 	kbd {
 		font-size: 100%;
-		font-weight: $base-kbd-nested-font-weight;
+		font-weight: $kbd-nested-font-weight;
 		box-shadow: none;
 		padding: 0;
 	}
@@ -69,16 +69,16 @@ pre {
 	font-size: 90%;
 	word-wrap: break-word;
 	word-break: break-all;
-	background-color: $base-pre-bg;
-	border-width: $base-pre-border-width;
-	border-style: $base-pre-border-style;
-	border-color: $base-pre-border-color;
-	border-radius: $base-pre-border-radius;
-	color: $base-pre-color;
+	background-color: $pre-bg;
+	border-width: $pre-border-width;
+	border-style: $pre-border-style;
+	border-color: $pre-border-color;
+	border-radius: $pre-border-radius;
+	color: $pre-color;
 	display: block;
 	margin-top: 0;
-	margin-bottom: $base-pre-padding;
-	padding: $base-pre-padding;
+	margin-bottom: $pre-padding;
+	padding: $pre-padding;
 
 	// Account for some code outputs that place code tags in pre tags
 	code {
