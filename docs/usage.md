@@ -47,8 +47,9 @@ first in selector order building the foundation for your components.
 ### Theme
 The `theme.scss` _build file_ which builds the `theme.css` file houses the all
 your components as well as all the themeing. This is essentially the main theme
-of your project.
+of your project. You can also add theme specific objects here as well.
 
+- 5 Objects
 - 6 Component
 - 7 Theme
 
