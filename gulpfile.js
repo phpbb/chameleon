@@ -1,16 +1,17 @@
 'use strict';
 
-const del = require('del');
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const sass = require('gulp-sass');
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const cssnano = require('gulp-cssnano');
-const postcss = require('gulp-postcss');
-const stylefmt = require('gulp-stylefmt');
-const sorting = require('postcss-sorting');
-const torem = require('postcss-pxtorem');
+import {del} from 'del';
+import {gulp} from 'gulp';
+import {autoprefixer} from 'gulp-autoprefixer';
+import {sass} from 'gulp-sass';
+import {rename} from 'gulp-rename';
+import {sourcemaps} from 'gulp-sourcemaps';
+import {cssnano} from 'gulp-cssnano';
+import {postcss} from 'gulp-postcss';
+import {stylefmt} from 'gulp-stylefmt';
+import {sorting} from 'postcss-sorting';
+import {torem} from 'postcss-pxtorem';
+
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
