@@ -101,7 +101,7 @@ indentation).
 As such, the following would be incorrect:
 
 ```scss
-.foo, .foo--bar, .baz
+.foo, .foo-bar, .baz
 {
   display:block;
   background-color:green;
@@ -137,10 +137,10 @@ that only carry one declaration each, for example:
 	background-image: url(/img/sprite.svg);
 }
 
-.icon--home     { background-position: 0 0; }
-.icon--person   { background-position: -16px 0; }
-.icon--files    { background-position: 0 -16px; }
-.icon--settings { background-position: -16px -16px; }
+.icon-home     { background-position: 0 0; }
+.icon-person   { background-position: -16px 0; }
+.icon-files    { background-position: 0 -16px; }
+.icon-settings { background-position: -16px -16px; }
 ```
 
 These types of ruleset benefit from being single-lined because
@@ -221,9 +221,9 @@ by default. This can lead to unwanted effects and bloated code. A `sass`
 function called `unitless` is provided which will convert px values for
 convienence, but for clarity the math is simply
 
-	```scss
+```scss
 	line-height: (desired px value) / (current elements font-size)
-	```
+```
 
 #### Font-size
 All `font-size` should be specified either in `px` or `%` in small cases. All px
