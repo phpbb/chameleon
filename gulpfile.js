@@ -1,24 +1,42 @@
 'use strict';
 
-import {del} from 'del';
-import {gulp} from 'gulp';
-import {autoprefixer} from 'gulp-autoprefixer';
-import {sass} from 'gulp-sass';
-import {rename} from 'gulp-rename';
-import {sourcemaps} from 'gulp-sourcemaps';
-import {cssnano} from 'gulp-cssnano';
-import {postcss} from 'gulp-postcss';
-import {stylefmt} from 'gulp-stylefmt';
-import {sorting} from 'postcss-sorting';
-import {torem} from 'postcss-pxtorem';
-
+const fs = require('fs');
+const path = require('path');
+const del = require('del');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('gulp-cssnano');
+const postcss = require('gulp-postcss');
+const stylefmt = require('gulp-stylefmt');
+const nunjucks = require('gulp-nunjucks-render');
+const data = require('gulp-data');
+const sorting = require('postcss-sorting');
+const torem = require('postcss-pxtorem');
+const moment = require('moment');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
+
+const manageEnvironment = function (environment) {
+	environment.addFilter('moment', (date, format, fromNow) => {
+		if (fromNow) {
+			date = moment(date, format).fromNow();
+		} else {
+			date = moment(date, format);
+		}
+
+		return date;
+	});
+};
 
 // Config
 const build = {
 	css: './dist/assets/css',
-	docs: './docs/_media/',
+	html: './dist/views/',
+	twig: './src/views/',
+	data: './src/mock/',
 	scss: './src/scss/'
 };
 
@@ -100,6 +118,26 @@ gulp.task('minify', ['css'], () => {
 	return css;
 });
 
+gulp.task('twig', () => {
+	const css = gulp
+	.src(build.twig + '*.twig')
+	.pipe(data(file => {
+		const data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
+		data.version = pkg.version;
+		return data;
+	}))
+	.pipe(nunjucks({
+		path: [build.twig],
+		manageEnv: manageEnvironment
+	}))
+	.pipe(rename({
+		extname: '.html'
+	}))
+	.pipe(gulp.dest(build.html));
+
+	return css;
+});
+
 gulp.task('docs:css', () => {
 	const css = gulp
 	.src(build.docs + '*.scss')
@@ -176,10 +214,11 @@ gulp.task('setup:functions', () => {
 
 gulp.task('watch', () => {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
-	gulp.watch('docs/_media/*.scss', ['docs:css']);
+	gulp.watch('src/views/**/*.twig', ['twig']);
+	gulp.watch('src/mock/**/*.json', ['twig']);
 });
 
 gulp.task('setup', ['setup:settings', 'setup:mixins', 'setup:functions']);
 gulp.task('serve', ['watch']);
-gulp.task('test', ['css', 'minify', 'docs:css']);
-gulp.task('default', ['css', 'minify', 'watch']);
+gulp.task('test', ['css', 'minify', 'twig']);
+gulp.task('default', ['css', 'minify', 'twig', 'watch']);
