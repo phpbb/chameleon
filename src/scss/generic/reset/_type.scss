@@ -54,9 +54,9 @@ dfn[title] {
 }
 
 address {
-	@include vertical-rhythm();
 	font-style: normal;
 	line-height: inherit;
+	@include vertical-rhythm();
 }
 
 ol,
@@ -82,8 +82,8 @@ nav ul {
 
 nav > ol,
 nav > ul {
-	@include vertical-rhythm();
 	padding: 0;
+	@include vertical-rhythm();
 }
 
 dt {
@@ -94,9 +94,9 @@ dt {
 // 1. Hang the opening quote of the blockquote.
 //
 blockquote {
-	@include vertical-rhythm();
 	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 	text-indent: -0.41em; // [1]
+	@include vertical-rhythm();
 	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
 }
 

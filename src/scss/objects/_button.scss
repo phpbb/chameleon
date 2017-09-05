@@ -38,7 +38,6 @@ $btn-text-hover-color: $default-link-color !default;
 //
 .o-btn {
 	@include type(button);
-	@include shadow(2);
 	line-height: unitless($btn-height, map-get(map-get($type-styles, button), font-size));
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
@@ -71,8 +70,8 @@ $btn-text-hover-color: $default-link-color !default;
 	}
 
 	&:focus {
-		@include shadow(focus);
 		outline: none; // [9]
+		@include shadow(focus);
 	}
 
 	&:disabled {
@@ -86,4 +85,5 @@ $btn-text-hover-color: $default-link-color !default;
 		border: 0;
 		padding: 0;
 	}
+	@include shadow(2);
 }

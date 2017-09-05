@@ -17,8 +17,8 @@ $base-quarter-spacing: ($base-half-spacing / 2);
 // #scss
 
 form {
-	@include vertical-rhythm();
 	padding: 0;
+	@include vertical-rhythm();
 }
 
 //
@@ -35,11 +35,11 @@ label {
 	margin: 0 $base-form-spacing $base-double-spacing; // [1]
 }
 
-fieldset { // [2]
-	@include vertical-rhythm();
+fieldset {
 	border: 0;
 	min-width: 0;
-	padding: 0;
+	padding: 0; // [2]
+	@include vertical-rhythm();
 }
 
 legend {

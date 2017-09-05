@@ -50,7 +50,6 @@ p {
 
 blockquote {
 	@include type(blockquote);
-	@include space(margin-left);
 
 	p {
 		font-size: inherit;
@@ -69,6 +68,7 @@ blockquote {
 			content: "”";
 		}
 	}
+	@include space(margin-left);
 }
 
 mark {
