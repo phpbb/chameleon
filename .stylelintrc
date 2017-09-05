@@ -194,10 +194,16 @@
 			"dollar-variables",
 			{
 				"type": "at-rule",
-				"name": "include"
+				"name": "include",
+				"parameter": "type"
 			},
 			"declarations",
 			"rules",
+			{
+				"type": "at-rule",
+				"name": "include",
+				"parameter": "fluid"
+			},
 			{
 				"type": "at-rule",
 				"name": "media"
