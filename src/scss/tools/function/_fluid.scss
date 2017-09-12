@@ -1,0 +1,19 @@
+//------------------------------------------------------------------------------
+// @tool: Responsive Fluid Type
+//------------------------------------------------------------------------------
+// @description
+//
+// responsive fluid text based on min max breakpoints and viewport size
+//
+// based on:
+// https://madebymike.com.au/writing/precise-control-responsive-typography/
+// https://medium.com/@zkareemz/golden-ratio-62b3b6d4282a
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@function fluid($mn, $mx, $sm, $lg) {
+	$val: calc(#{$mn}PX + (#{$mx} - #{$mn}) * ( (100vw - #{$sm}PX) / ( #{$lg} - #{$sm}) ));
+	@return $val;
+}

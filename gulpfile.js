@@ -188,37 +188,12 @@ gulp.task('docs:css', () => {
 	return css;
 });
 
-gulp.task('setup:settings', () => {
-	const settings = gulp
-	.src('node_modules/base-l.settings/*.scss')
-	.pipe(gulp.dest('src/scss/settings/'));
-
-	return settings;
-});
-
-gulp.task('setup:mixins', () => {
-	const mixins = gulp
-		.src('node_modules/base-l.tools/mixin/*.scss')
-		.pipe(gulp.dest('src/scss/tools/mixin/'));
-
-	return mixins;
-});
-
-gulp.task('setup:functions', () => {
-	const funcitons = gulp
-		.src('node_modules/base-l.tools/function/*.scss')
-		.pipe(gulp.dest('src/scss/tools/function/'));
-
-	return funcitons;
-});
-
 gulp.task('watch', () => {
 	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
 	gulp.watch('src/views/**/*.twig', ['twig']);
 	gulp.watch('src/mock/**/*.json', ['twig']);
 });
 
-gulp.task('setup', ['setup:settings', 'setup:mixins', 'setup:functions']);
 gulp.task('serve', ['watch']);
 gulp.task('test', ['css', 'minify', 'twig']);
 gulp.task('default', ['css', 'minify', 'twig', 'watch']);

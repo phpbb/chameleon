@@ -1,0 +1,24 @@
+//------------------------------------------------------------------------------
+// @tool: Backround Triangle
+//------------------------------------------------------------------------------
+// @description
+//
+// Adds a downward-facing triangle as a background image to an element.
+// The image is formatted as an SVG, making it easy to change the color.
+// Because Internet Explorer doesn't support encoded SVGs as background images,
+// a fallback is also included.
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@mixin background-triangle($color: $black) {
+	/* stylelint-disable string-quotes */
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #{$color}"></polygon></svg>');
+	/* stylelint-enable string-quotes */
+	@media screen and (min-width: 0\0) {
+		/* stylelint-disable string-quotes */
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==');
+		/* stylelint-enable string-quotes */
+	}
+}

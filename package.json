@@ -12,7 +12,6 @@
   },
   "scripts": {
     "test": "xo && gulp setup && gulp test && stylelint --config ./.stylelintrc './**/*.scss'",
-    "postinstall": "gulp setup"
   },
   "repository": {
     "type": "git",
@@ -47,7 +46,5 @@
     "xo": "0.18.2"
   },
   "dependencies": {
-    "base-l.settings": "^1.1.0",
-    "base-l.tools": "^1.5.0"
   }
 }
