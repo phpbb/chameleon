@@ -1,0 +1,36 @@
+//------------------------------------------------------------------------------
+// @tool: Grid
+//------------------------------------------------------------------------------
+// @description
+//
+// Mixin for generating the grid col widths
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$grid-gutter: $default-grid-gutter !default;
+
+// Breakpoints sizes are global
+
+//
+// @scss
+
+@mixin col-width($w: 0) {
+	flex: 0 0 percentage($w / 12);
+	width: percentage($w / 12);
+}
+
+@mixin pull($w: 0) {
+	right: percentage($w / 12);
+}
+
+@mixin push($w: 0) {
+	left: percentage($w / 12);
+}
+
+@mixin offset($w: 0) {
+	margin-left: percentage($w / 12);
+}

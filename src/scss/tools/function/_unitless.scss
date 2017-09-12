@@ -1,0 +1,14 @@
+//------------------------------------------------------------------------------
+// @tool: Unitless
+//------------------------------------------------------------------------------
+// @description
+//
+// A function for returning unitless numer based on root font-size
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@function unitless($line-height, $font-size: $default-font-size) {
+	@return strip-units($line-height / $font-size);
+}

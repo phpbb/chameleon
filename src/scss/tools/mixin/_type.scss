@@ -1,0 +1,144 @@
+//------------------------------------------------------------------------------
+// @tool: Type
+//------------------------------------------------------------------------------
+// @description
+//
+// A mixin for generating type settings based on Google Material Design types
+//
+//------------------------------------------------------------------------------
+
+//@settings
+$type-font-weight: (
+	thin: 100,
+	light: 300,
+	regular: 400,
+	medium: 500,
+	bold: 700,
+	black: 900
+);
+
+$type-styles: (
+	display4: (
+		font-size: 112px,
+		letter-spacing: -0.04em,
+		font-weight: map-get($type-font-weight, light),
+		line-height: unitless(112px, 112px),
+		opacity: 0.54
+	),
+	display3: (
+		font-size: 56px,
+		letter-spacing: -0.02em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(56px, 56px),
+		opacity: 0.54
+	),
+	display2: (
+		font-size: 45px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(48px, 45px),
+		opacity: 0.54
+	),
+	display1: (
+		font-size: 34px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(40px, 34px),
+		opacity: 0.87
+	),
+	headline: (
+		font-size: 24px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(32px, 24px),
+		opacity: 0.87
+	),
+	blockquote: (
+		font-size: 24px,
+		letter-spacing: 0.02em,
+		font-weight: map-get($type-font-weight, thin),
+		line-height: normal,
+		opacity: 0.54
+	),
+	title: (
+		font-size: 20px,
+		letter-spacing: 0.02em,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: unitless(32px, 20px),
+		opacity: 0.87
+	),
+	subhead2: (
+		font-size: 16px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(28px),
+		opacity: 0.87
+	),
+	subhead1: (
+		font-size: 15px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(24px, 15px),
+		opacity: 0.87
+	),
+	body2: (
+		font-size: 14px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: unitless(24px, 14px),
+		opacity: 0.87
+	),
+	body1: (
+		font-size: 14px,
+		letter-spacing: 0.04em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(20px, 14px),
+		opacity: 0.87
+	),
+	button: (
+		font-size: 14px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: 1,
+		opacity: 0.54
+	),
+	menu: (
+		font-size: 14px,
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, medium),
+		line-height: normal,
+		opacity: 0.54
+	),
+	caption: (
+		font-size: 12px,
+		letter-spacing: 0.08em,
+		font-weight: map-get($type-font-weight, regular),
+		line-height: unitless(20px, 12px),
+		opacity: 0.87
+	)
+);
+
+//
+// @scss
+@mixin type($type, $color-contrast: false) {
+	$type-props: map-get($type-styles, $type);
+	@if not map-has-key($type-styles, $type) {
+		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
+	}
+	@if $type == blockquote {
+		font-style: italic;
+	}
+	@if $type == button {
+		text-transform: uppercase;
+	}
+	@if $type == blockquote {
+		position: relative;
+	}
+	@if $color-contrast {
+		opacity: map-get($type-props, opacity);
+	}
+	font-size: map-get($type-props, font-size);
+	font-weight: #{map-get($type-props, font-weight)};
+	line-height: map-get($type-props, line-height);
+	letter-spacing: map-get($type-props, letter-spacing);
+}
