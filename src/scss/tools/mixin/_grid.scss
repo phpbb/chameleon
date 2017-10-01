@@ -38,7 +38,6 @@ $grid-gutter: $default-grid-gutter !default;
 @mixin parent($col: row) {
 	display: flex;
 	flex-direction: $col;
-	flex-wrap: nowrap;
 }
 
 @mixin column {
