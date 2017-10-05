@@ -61,7 +61,7 @@ Specificity can, among other things,
 - prevent things from working as expected when moved into different environments;
 - lead to serious developer frustration.
 
-All of these issues are greatly magnified when working on a largerproject with
+All of these issues are greatly magnified when working on a larger project with
 a number of developers contributing code.
 
 
@@ -116,7 +116,7 @@ chained classes cannot override the specificity of a single ID:
 
 It is often suggested that developers who choose not to use IDs in CSS merely
 don’t understand how specificity works. This is as incorrect as it is
-offensive: no matter how experienced a developer you are, this behaviour cannot
+offensive: no matter how experienced a developer you are, this behavior cannot
 be circumvented; no amount of knowledge will make an ID less specific.
 
 Opting into this way of working only introduces the chance of problems
@@ -274,7 +274,7 @@ For example:
 
 These two helper, or _utility_, classes are very specific in their intentions:
 you would only use them if you wanted something to be rendered at 50% width or
-not rendered at all. If you didn’t want this behaviour, you would not use these
+not rendered at all. If you didn’t want this behavior, you would not use these
 classes, therefore whenever you do use them you will definitely want them to
 win.
 

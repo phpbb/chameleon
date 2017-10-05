@@ -110,7 +110,7 @@ element when it carries a certain class, for example:
 
 ```css
 /**
- * Embolden and colour any element with a class of `.error`.
+ * Embolden and color any element with a class of `.error`.
  */
 .error {
 	color: red;
@@ -152,7 +152,7 @@ This means that we can apply `.error-box` to any element, and not just a
 
 #### Quasi-Qualified Selectors
 
-One thing that qualified selectors can be useful for is signalling where a class
+One thing that qualified selectors can be useful for is signaling where a class
 might be expected or intended to be used, for example:
 
 ```css
@@ -179,7 +179,7 @@ I won’t comment on the former claim here, but the latter has plagued me for
 years. My advice with regard to naming things in CSS is to pick a name that is
 sensible, but somewhat ambiguous: aim for high reusability. For example, instead
 of a class like `.site-nav`, choose something like `.primary-nav`; rather than
-`.footer-links`, favour a class like `.sub-links`.
+`.footer-links`, favor a class like `.sub-links`.
 
 The differences in these names is that the first of each two examples is tied to
 a very specific use case: they can only be used as the site’s navigation or the
@@ -231,7 +231,7 @@ take an example:
 It is important to strike a balance between names that do not literally describe
 the style that the class brings, but also ones that do not explicitly describe
 specific use cases. Instead of `.home-page-panel`, choose `.masthead`; instead
-of `.site-nav`, favour `.primary-nav`; instead of `.btn-login`, opt for
+of `.site-nav`, favor `.primary-nav`; instead of `.btn-login`, opt for
 `.btn-primary`.
 
 
@@ -306,7 +306,7 @@ avoiding inefficient selectors by default; we are very unlikely to have greedy
 key selectors if we’re targeting the right things for the right reason.
 
 That said, however, CSS selector performance should be fairly low on your list
-of things to optimise; browsers are fast, and are only ever getting faster, and
+of things to optimize; browsers are fast, and are only ever getting faster, and
 it is only on notable edge cases that inefficient selectors would be likely to
 pose a problem.
 

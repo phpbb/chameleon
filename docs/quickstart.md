@@ -3,7 +3,7 @@ The framework is meant to allow for adaptability. As such you can use it in a
 number of ways to fit your needs.
 
 ## Production Usage
-To use the framework in its simpleist form as a base for your project, simply
+To use the framework in its simplest form as a base for your project, simply
 include the following in your project head.
 
 ```html
@@ -13,7 +13,7 @@ include the following in your project head.
 ## Development Usage
 !> To gain the full benefits of the framework as its intended, you need to use it in development.
 
-Start by cloneing the repo
+Start by cloning the repo
 ```git
 git clone git@github.com:hanakin/base-l.git
 ```

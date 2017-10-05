@@ -56,7 +56,7 @@ responsibilities. From Wikipedia:
 ?> Object-oriented programming (OOP) is a programming paradigm that represents the concept of ‘objects’ […] which are usually instances of classes, [and] are used to interact with one another to design applications and computer programs.
 
 When applied to CSS, we call it object-oriented CSS, or OOCSS. OOCSS was coined
-and popularised by Nicole Sullivan, whose Media Object has become the poster
+and popularized by Nicole Sullivan, whose Media Object has become the poster
 child of the methodology.
 
 OOCSS deals with the separation of UIs into structure and skin: breaking UI
@@ -107,17 +107,17 @@ give that DOM node specific cosmetics:
 <button class="btn btn-inverse">Delete</button>
 ```
 
-Favour the multiple-class approach over using something like `@extend`: using
+Favor the multiple-class approach over using something like `@extend`: using
 multiple classes in your markup—as opposed to wrapping the classes up into one
 using a preprocessor—gives you a better paper-trail in your markup, and allows
 you to see quickly and explicitly which classes are acting on a piece of HTML;
 allows for greater composition in that classes are not tightly bound to other
 styles in your CSS. Whenever you are building a UI component, try and see if
 you can break it into two parts: one for structural styles (paddings, layout,
-etc.) and another for skin (colours, typefaces, etc.).
+etc.) and another for skin (colors, typefaces, etc.).
 
-As a rule its a resonable practice to set defaults of all skin classes on the
-objects and then use the modifiers to overight them.
+As a rule its a reasonable practice to set defaults of all skin classes on the
+objects and then use the modifiers to overwrite them.
 
 ##### Further Reading
 
@@ -302,7 +302,7 @@ the necessity to never repeat the exact same thing twice at all in a project.
 This is impractical and usually counterproductive, and can lead to forced
 abstractions, over-thought and -engineered code, and unusual dependencies.
 
-The key isn’t to avoid all repetition, but to normalise and abstract meaningful
+The key isn’t to avoid all repetition, but to normalize and abstract meaningful
 repetition. If two things happen to share the same declarations coincidentally,
 then we needn’t DRY anything out; that repetition is purely circumstantial and
 cannot be shared or abstracted. For example:
@@ -431,13 +431,13 @@ a multitude of very different looking results.
 This idea of building through composition is not a new one, and is often
 referred to as composition over inheritance. This principle suggests that
 larger systems should be composed from much smaller, individual parts, rather
-than inheriting behaviour from a much larger, monolithic object. This should
+than inheriting behavior from a much larger, monolithic object. This should
 keep your code decoupled—nothing inherently relies on anything else.
 
 Composition is a very valuable principle for an architecture to make use of,
 particularly considering the move toward component-based UIs. It will mean you
 can more easily recycle and reuse functionality, as well rapidly construct
-larger parts of UI from a known set of composable objects. Think back to our
+larger parts of UI from a known set of composeable objects. Think back to our
 error message example in the
 [Single Responsibility Principle](#/codeing-guidelines?id=the-single-responsibility-principle)
 section; we created a complete UI component by composing a number of much
@@ -452,7 +452,7 @@ code should be broken up
 ?> into distinct sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program. A program that embodies SoC well is called a modular program.
 
 Modular is a word we’re probably used to; the idea of breaking UIs and CSS into
-much smaller, composable pieces. The separation of concerns is just a formal
+much smaller, composeable pieces. The separation of concerns is just a formal
 definition which covers the concepts of modularity and encapsulation in code.
 In CSS this means building individual components, and writing code which only
 focusses itself on one task at a time.

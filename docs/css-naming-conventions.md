@@ -151,12 +151,12 @@ list should acquaint you.
 
 - `o-`: Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.
 - `c-`: Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
-- `u-`: Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI. You will probably recognise this namespace from libraries and methodologies like [SUITcss](https://suitcss.github.io/).
+- `u-`: Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI. You will probably recognize this namespace from libraries and methodologies like [SUITcss](https://suitcss.github.io/).
 - `t-`: Signify that a class is responsible for adding a Theme to a view. It lets us know that UI Components’ current cosmetic appearance may be due to the presence of a theme. Vastly improves templating for large projects
 - `s-`: Signify that a class creates a new styling context or Scope. Similar to a Theme, but not necessarily cosmetic, these should be used sparingly—they can be open to abuse and lead to poor CSS if not used wisely.
 - `is-`, `has-`: Signify that the piece of UI in question is currently styled a certain way because of a state or condition. This stateful namespace is gorgeous, and comes from [SMACSS](https://smacss.com/). It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
 - `_`: Signify that this class is the worst of the worst—a hack! Sometimes, although incredibly rarely, we need to add a class in our markup in order to force something to work. If we do this, we need to let others know that this class is less than ideal, and hopefully temporary (i.e. do not bind onto this).
-- `js`-: Signify that this piece of the DOM has some behaviour acting upon it, and that JavaScript binds onto it to provide that behaviour. If you’re not a developer working with JavaScript, leave these well alone.
+- `js`-: Signify that this piece of the DOM has some behavior acting upon it, and that JavaScript binds onto it to provide that behavior. If you’re not a developer working with JavaScript, leave these well alone.
 
 Even from this short list alone, we can see just how much more information we
 can communicate to developers simply by placing a character or two at the front
@@ -186,7 +186,7 @@ Typically, these are classes that are prepended with `js-`, for example:
 ```
 
 This means that we can have an element elsewhere which can carry with style of
-`.btn {}`, but without the behaviour of `.js-btn`.
+`.btn {}`, but without the behavior of `.js-btn`.
 
 #### `data-*` Attributes
 

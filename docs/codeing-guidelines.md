@@ -22,7 +22,7 @@ who
 Whilst styleguides are typically more suited to production teams—large codebases
 on long-lived and evolving projects, with multiple developers contributing over
 prolonged periods of time—all developers should strive for a degree of
-standardisation in their code.
+standardization in their code.
 
 A good styleguide, when well followed, will
 
@@ -58,7 +58,7 @@ Always be consistent in your use of whitespace. Use whitespace to improve
 readability.
 
 - Never mix spaces and tabs for indentation. Stick to your choice without fail. (**Preference: tabs**)
-- Choose the number of prefered characters used per indentation level. (**Preference: 4 spaces**)
+- Choose the number of preferred characters used per indentation level. (**Preference: 4 spaces**)
 
 !> configure your editor to "show invisibles" or to automatically remove end-of-line whitespace. The use of an [EditorConfig](http://editorconfig.org/) file is being used to help maintain the basic whitespace conventions.
 
@@ -104,7 +104,7 @@ code into their own files, which are concatenated during a build step.
 
 We follow the ITCSS principles for the organization of our code and as such
 everything is broken up into partials. All partials are to be named to reflect
-the contained component/module and lead by an undercore(`_`) to prevent self
+the contained component/module and lead by an underscore(`_`) to prevent self
 rendering.
 
 
@@ -120,7 +120,7 @@ extent, but anyone inheriting CSS barely stands a chance.
 
 This is why well commented code is extremely important. Take time to describe
 components, how they work, their limitations, and the way they are constructed.
-Don't leaveothers in the project guessing as to the purpose of uncommon or
+Don't leave others in the project guessing as to the purpose of uncommon or
 non-obvious code.
 
 Comment style should be simple and consistent within the code base.
@@ -232,7 +232,7 @@ comment detailing the larger site headers mentioned above:
 // 7. Subtract the border size from the padding value so that buttons do not
 //    grow larger as we add borders.
 // 8. Prevent button text from being selectable.
-// 9. Prevent deafult browser outline halo
+// 9. Prevent default browser outline halo
 //
 .o-btn {
 	@include type(button);
