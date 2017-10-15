@@ -42,10 +42,17 @@ $default-icon-lg: 2 * $default-font-size !default;
 // body
 $default-body-bg:                 $white !default;
 $default-body-color:              $gray-800 !default;
-$default-text-color:              $black-87 !default; // 87%
 $default-gray-light:              $black-12 !default; // 12%
 $default-gray:                    $black-38 !default; // 38%
 $default-gray-dark:               $black-54 !default; // 54%
+$default-text-color:              $black-87 !default; // 87%
+
+// opacity
+$default-opacity:                 1 !default;
+$default-opacity-87:              0.87 !default;
+$default-opacity-54:              0.54 !default;
+$default-opacity-38:              0.38 !default;
+$default-opacity-12:              0.12 !default;
 
 // color scheme Main
 $default-primary-color:           $blue-500 !default;
