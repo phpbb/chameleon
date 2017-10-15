@@ -120,8 +120,10 @@ $type-styles: (
 
 //
 // @scss
-@mixin type($type, $color-contrast: false) {
+@mixin type($type, $opacity: false, $lh: false, $fw: false) {
 	$type-props: map-get($type-styles, $type);
+	font-size: map-get($type-props, font-size);
+	letter-spacing: map-get($type-props, letter-spacing);
 	@if not map-has-key($type-styles, $type) {
 		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
 	}
@@ -134,11 +136,17 @@ $type-styles: (
 	@if $type == blockquote {
 		position: relative;
 	}
-	@if $color-contrast {
+	@if $opacity {
 		opacity: map-get($type-props, opacity);
 	}
-	font-size: map-get($type-props, font-size);
-	font-weight: #{map-get($type-props, font-weight)};
-	line-height: map-get($type-props, line-height);
-	letter-spacing: map-get($type-props, letter-spacing);
+	@if $fw {
+		font-weight: $fw;
+	} @else {
+		font-weight: #{map-get($type-props, font-weight)};
+	}
+	@if $lh {
+		line-height: $lh;
+	} @else {
+		line-height: map-get($type-props, line-height);
+	}
 }
