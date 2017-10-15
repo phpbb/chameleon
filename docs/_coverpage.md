@@ -3,7 +3,7 @@
 ![logo](_media/logo.svg)
 
 # 0.12.0
-[![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
+[![Build Status](https://travis-ci.org/hanakin/base-l.svg?branch=master)](https://travis-ci.org/hanakin/base-l)
 
 > A well structured top down base css framework.
 
