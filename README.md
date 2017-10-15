@@ -1,5 +1,5 @@
 [![Logo](https://cdn.rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
-[![Build Status](https://img.shields.io/travis/hanakin/base-l/master.svg)](http://travis-ci.org/hanakin/base-l/master)
+[![Build Status](https://travis-ci.org/hanakin/base-l.svg?branch=master)](https://travis-ci.org/hanakin/base-l)
 
 ## Base-L
 > A well structured top down base css framework meant for web apps
