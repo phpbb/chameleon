@@ -29,7 +29,7 @@ $tag-color: $white !default;
 	color: $tag-color;
 	display: inline-flex;
 	margin: 0 $tag-spacing 0 0;
-	padding: ($tag-spacing / 4) (($tag-spacing / 4) + 2px);
+	padding: ($tag-spacing / 2) (($tag-spacing / 2) + 2px);
 
 	// Empty tags collapse automatically
 	&:empty {
