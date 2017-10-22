@@ -2692,24 +2692,24 @@ pre code {
 }
 
 .o-tag {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1;
 	text-align: center;
 	vertical-align: middle;
-	background-color: #fffabd;
+	white-space: nowrap;
+	letter-spacing: 0.08em;
+	background-color: #7b929d;
 	border-radius: 2px;
-	color: #757575;
-	display: inline-block;
+	color: #ffffff;
+	display: -webkit-inline-flex;
+	display: inline-flex;
 	margin: 0 0.5rem 0 0;
-	padding: 0.125rem 0.5rem;
+	padding: 0.125rem 0.25rem;
 }
 
 .o-tag:empty {
 	display: none;
-}
-
-@media (min-width: 768px) {
-	.o-tag {
-		white-space: nowrap;
-	}
 }
 
 /*# sourceMappingURL=core.0.13.0.css.map */

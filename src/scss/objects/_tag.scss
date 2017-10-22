@@ -13,27 +13,26 @@ $tag-spacing: 8px !default;
 $tag-border-radius: $default-border-radius !default;
 
 // Theme Variables
-$tag-background-color: $yellow-100 !default;
-$tag-color: $black-54 !default;
+$tag-background-color: $default-info-color !default;
+$tag-color: $white !default;
 
 //
 // #scss
 
 .o-tag {
+	@include type(caption, $lh: 1);
 	text-align: center;
 	vertical-align: middle;
+	white-space: nowrap;
 	background-color: $tag-background-color;
 	border-radius: $tag-border-radius;
 	color: $tag-color;
-	display: inline-block;
+	display: inline-flex;
 	margin: 0 $tag-spacing 0 0;
-	padding: ($tag-spacing / 4) $tag-spacing;
+	padding: ($tag-spacing / 4) (($tag-spacing / 4) + 2px);
 
 	// Empty tags collapse automatically
 	&:empty {
 		display: none;
-	}
-	@media (min-width: $bp-md) {
-		white-space: nowrap;
 	}
 }
