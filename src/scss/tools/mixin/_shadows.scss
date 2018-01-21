@@ -149,8 +149,8 @@ $shadows: (
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.36);
 	} @else {
 		box-shadow:
-			map-get($shadow, penumbra),
 			map-get($shadow, umbra),
+			map-get($shadow, penumbra),
 			map-get($shadow, ambient);
 	}
 }
