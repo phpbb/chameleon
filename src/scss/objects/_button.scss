@@ -11,8 +11,8 @@
 // Layout Variables
 $btn-spacing: 16px !default;
 $btn-border-radius: $default-border-radius !default;
-$btn-min-width: ($btn-spacing * 4) !default;
-$btn-height: ($btn-spacing * 2.375) !default;
+$btn-min-width: 64px !default;
+$btn-height: 36px !default;
 
 // Theme Variables
 $btn-background-color: $default-action-bg !default;
@@ -37,47 +37,56 @@ $btn-text-hover-color: $default-link-color !default;
 // 9. Prevent deafult browser outline halo
 //
 .o-btn {
-	@include type(button);
-	line-height: unitless($btn-height, map-get(map-get($type-styles, button), font-size));
+	@include type(button); // google material design
+	-webkit-font-smoothing: antialiased; // google material design
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
-	white-space: nowrap; // bs only
 	text-decoration: none; // [4]
 	background-color: $btn-background-color;
-	border: none;
+	border: none; // google material design
 	border-radius: $btn-border-radius;
 	outline: none; // [9]
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // google material design
 	color: $btn-text-color;
-	position: relative;
+	position: relative; // google material design
 	display: inline-block; // [1]
 	overflow: hidden; // [6]
+	box-sizing: border-box;
 	min-width: $btn-min-width; // google material design
+	height: 36px; // google material design
 	margin: 0; // [4]
 	padding: 0 $btn-spacing; // [7]
-	cursor: pointer;
 	user-select: none; // [8]
 	transition:
 		box-shadow 0.2s $animation-curve-fast-out-linear-in,
 		background-color 0.2s $default-animation-curve,
 		color 0.2s $default-animation-curve;
-	will-change: box-shadow; // google material design
+	-webkit-appearence: none; // google material design
+	will-change: transform, opacity; // google material design
 
 	// UI states
+	&:active {
+		outline: none;
+	}
+
 	&:hover {
 		text-decoration: none;  // [4]
 		background-color: $btn-hover-color;
 		color: $btn-text-hover-color;
+		cursor: pointer;
 	}
 
 	&:focus {
 		outline: none; // [9]
-		@include shadow(focus);
+		@include shadow(4);
 	}
 
 	&:disabled {
 		background-color: transparent;
 		box-shadow: none;
 		cursor: default;
+		pointer-events: none;
+		@include shadow(0);
 	}
 
 	// Remove excess padding and border in Firefox 4+
@@ -85,5 +94,5 @@ $btn-text-hover-color: $default-link-color !default;
 		border: 0;
 		padding: 0;
 	}
-	@include shadow(2);
+	@include shadow(2); // google material design
 }
