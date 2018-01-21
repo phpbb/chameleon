@@ -38,6 +38,7 @@ $btn-text-hover-color: $default-link-color !default;
 //
 .o-btn {
 	@include type(button); // google material design
+	@include shadow(2); // google material design
 	-webkit-font-smoothing: antialiased; // google material design
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
@@ -77,16 +78,16 @@ $btn-text-hover-color: $default-link-color !default;
 	}
 
 	&:focus {
-		outline: none; // [9]
 		@include shadow(4);
+		outline: none; // [9]
 	}
 
 	&:disabled {
+		@include shadow(0);
 		background-color: transparent;
 		box-shadow: none;
 		cursor: default;
 		pointer-events: none;
-		@include shadow(0);
 	}
 
 	// Remove excess padding and border in Firefox 4+
@@ -94,5 +95,4 @@ $btn-text-hover-color: $default-link-color !default;
 		border: 0;
 		padding: 0;
 	}
-	@include shadow(2); // google material design
 }
