@@ -8,6 +8,18 @@
 //
 // #scss
 
+
+//
+// 1. Correct the inheritance and scaling of font size in all browsers.
+//
+
+code,
+kbd,
+pre,
+samp {
+	font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; // [1]
+}
+
 //
 // 1. Reset browser default `rem`s
 // 2. code should wrap not cause horizontal scrolling
@@ -15,9 +27,9 @@
 //    of wrapping code snippets
 //
 pre {
+	@include vertical-rhythm(); // [1]
 	white-space: pre-wrap; // [2]
 	overflow: auto; // [3]
-	@include vertical-rhythm(); // [1]
 }
 
 figure {

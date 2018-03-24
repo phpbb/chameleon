@@ -17,8 +17,8 @@ $base-quarter-spacing: ($base-half-spacing / 2);
 // #scss
 
 form {
-	padding: 0;
 	@include vertical-rhythm();
+	padding: 0;
 }
 
 //
@@ -36,10 +36,10 @@ label {
 }
 
 fieldset {
+	@include vertical-rhythm();
 	border: 0;
 	min-width: 0;
 	padding: 0; // [2]
-	@include vertical-rhythm();
 }
 
 legend {
@@ -57,21 +57,23 @@ legend {
 //    are properly inherited. However, `line-height` isn't addressed there.
 //    Using this ensures we don't need to unnecessarily redeclare the global
 //    font stack.
-// 2. iOS adds rounded borders by default
-// 3. Ensure all elements have same inital alignment
+// 2. Change the font-size style in all browsers.
+// 3. iOS adds rounded borders by default
+// 4. Ensure all elements have same inital alignment
 //
 input,
 button,
 select,
 optgroup,
 textarea {
+	font-size: 100%; // 2
 	line-height: inherit; // [1]
-	vertical-align: middle; // [3]
+	vertical-align: middle; // [4]
 	background-color: transparent;
-	background-image: none; // [2]
+	background-image: none; // [3]
 	background-clip: padding-box;
-	-webkit-border-radius: 0; // [2] iOS 8+
-	border-radius: 0; // [2]
+	-webkit-border-radius: 0; // [3] iOS 8+
+	border-radius: 0; // [3]
 	color: inherit;
 }
 
