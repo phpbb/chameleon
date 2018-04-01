@@ -61,7 +61,7 @@ The following is a `[ruleset]`
 
 Example:
 
-```scss
+```css
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
@@ -87,7 +87,7 @@ indentation).
 
 As such, the following would be incorrect:
 
-```scss
+```css
 .foo, .foo-bar, .baz
 {
   display:block;
@@ -147,7 +147,7 @@ following the order
 
 Example:
 
-```scss
+```css
 .declaration-order {
 	/* Typography */
 	font: normal 13px "Helvetica Neue", sans-serif;
@@ -196,7 +196,7 @@ The ‘em’ unit. This is a very problematic unit which wreaks havoc on countle
 
 All line-heights are to be specified as ``unitless`` in order to prevent improper inheritance. By nature when using units with line-heights the children inherit by default. This can lead to unwanted effects and bloated code. A ``sass`` function called ``unitless`` is provided which will convert px values for convenience, but for clarity the math is simply
 
-```scss
+```css
 	line-height: (desired px value) / (current elements font-size)
 ```
 

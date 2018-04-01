@@ -7,7 +7,7 @@ A good naming convention will tell you and your team
 -  what type of thing a class does
 -  where a class can be used
 -  what (else) a class might be related to
-+
+
 The naming convention we follow are as follows
 
 -  Hyphen (``-``) delimited strings
