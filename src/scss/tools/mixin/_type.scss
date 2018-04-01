@@ -22,84 +22,84 @@ $type-styles: (
 		font-size: 112px,
 		letter-spacing: -0.04em,
 		font-weight: map-get($type-font-weight, light),
-		line-height: unitless(112px, 112px),
+		line-height: 7,
 		opacity: 0.54
 	),
 	display3: (
 		font-size: 56px,
 		letter-spacing: -0.02em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(56px, 56px),
+		line-height: 3.5,
 		opacity: 0.54
 	),
 	display2: (
 		font-size: 45px,
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(48px, 45px),
+		line-height: 3,
 		opacity: 0.54
 	),
 	display1: (
 		font-size: 34px,
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(40px, 34px),
+		line-height: 2.5,
 		opacity: 0.87
 	),
 	headline: (
 		font-size: 24px,
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(32px, 24px),
+		line-height: 2,
 		opacity: 0.87
 	),
 	title: (
 		font-size: 20px,
 		letter-spacing: 0.02em,
 		font-weight: map-get($type-font-weight, medium),
-		line-height: unitless(32px, 20px),
+		line-height: 2,
 		opacity: 0.87
 	),
 	subhead2: (
 		font-size: 16px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(28px, 16px),
+		line-height: 1.75,
 		opacity: 0.87
 	),
 	subhead1: (
 		font-size: 15px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(24px, 15px),
+		line-height: 1.5,
 		opacity: 0.87
 	),
 	body2: (
 		font-size: 14px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, medium),
-		line-height: unitless(24px, 14px),
+		line-height: 1.5,
 		opacity: 0.87
 	),
 	body1: (
 		font-size: 14px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(20px, 14px),
+		line-height: 1.25,
 		opacity: 0.87
 	),
 	button: (
 		font-size: 14px,
 		letter-spacing: 0.04em,
 		font-weight: map-get($type-font-weight, medium),
-		line-height: unitless(36px, 14px),
+		line-height: 2.25,
 		opacity: 0.54
 	),
 	caption: (
 		font-size: 12px,
 		letter-spacing: 0.08em,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: unitless(20px, 12px),
+		line-height: 1.25,
 		opacity: 0.87
 	),
 	blockquote: (
