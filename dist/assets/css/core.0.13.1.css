@@ -1192,8 +1192,8 @@ input[type="checkbox"]:focus:invalid:focus {
 	z-index: 0;
 	top: 0;
 	left: 0;
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	margin-top: 0.125rem;
 	content: "";
 	transition: 0.2s;

@@ -229,8 +229,8 @@ input[type="checkbox"] {
 	z-index: 0;
 	top: 0;
 	left: 0;
-	width: ($input-padding * 2);
-	height: ($input-padding * 2);
+	width: ($input-padding * 2.5);
+	height: ($input-padding * 2.5);
 	margin-top: ($input-padding * 0.25);
 	content: "";
 	transition: 0.2s;
