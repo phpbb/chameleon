@@ -11,7 +11,7 @@
 // Layout Variables
 $input-padding: 8px;
 $input-height: ($input-padding * 5);
-$input-border-width: $default-border-size;
+$input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
@@ -32,8 +32,8 @@ $input-invalid-color: $default-important-light-color;
 
 form {
 	span {
-		display: block;
 		@include vertical-rhythm();
+		display: block;
 	}
 	@media (min-width: $bp-md) {
 		span {
@@ -139,6 +139,7 @@ textarea {
 //    See https://github.com/twbs/bootstrap/issues/19398.
 //
 select {
+	@include background-triangle($input-border-color);
 	background-color: $input-background-color;
 	background-repeat: no-repeat;
 	background-position: right unit(-2) center;
@@ -155,9 +156,9 @@ select {
 	}
 
 	&:focus::-ms-value {
+		@include background-triangle($input-border-hover-color);
 		background-color: $input-background-color; // [1]
 		color: $input-color; // [1]
-		@include background-triangle($input-border-hover-color);
 	}
 
 	&:focus:-moz-focusring {
@@ -168,7 +169,6 @@ select {
 	&[multiple="multiple"] {
 		background-image: none;
 	}
-	@include background-triangle($input-border-color);
 }
 
 input[type="color"] {
@@ -207,7 +207,7 @@ input[type="checkbox"] {
 [type="radio"]:checked {
 	opacity: 0;
 	position: absolute;
-	left: -9999px;
+	// left: -9999px;
 }
 
 // Default Styles
