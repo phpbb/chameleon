@@ -1,6 +1,6 @@
 {
   "name": "base-l",
-  "version": "0.13.1",
+  "version": "0.14.0",
   "description": "A well structured top down base css framework meant for web apps",
   "main": "gulpfile.js",
   "xo": {
