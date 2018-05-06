@@ -1,0 +1,168 @@
+//------------------------------------------------------------------------------
+// @object: Bar
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$bar-spacing: 16px !default;
+$bar-avatar-size: 40px !default;
+$bar-badge-radius: 50px !default;
+$bar-badge-offset: 11px !default;
+$bar-profile-max: 296px !default;
+$bar-opacity-1: $default-opacity !default;
+$bar-opacity-87: $default-opacity-87 !default;
+$bar-opacity-54: $default-opacity-54 !default;
+$bar-opacity-38: $default-opacity-38 !default;
+$bar-opacity-12: $default-opacity-12 !default;
+
+
+// Theme Variables
+$bar-bg-color: $default-action-bg !default;
+$bar-bg-hover-color: $default-action-bg-hover !default;
+$bar-color: $default-action-color !default;
+$bar-hover-color: $default-action-color-hover !default;
+$bar-user-title-color: $default-text-color !default;
+$bar-badge-color: $white !default;
+$bar-badge-bg-color: $default-important-color !default;
+
+
+//
+// @scss
+
+//
+// 1. handle inconsistent rendering of ul across browsers when not using as
+//    a list element
+// 2. Magic alignment
+//
+.o-bar {
+
+	@include parent();
+	background-color: $bar-bg-color;
+	flex-wrap: nowrap;
+
+	&-left,
+	&-right {
+		line-height: 0; // [1]
+		flex-shrink: 1;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&-left {
+		align-self: flex-end;
+		margin-right: auto; // [2]
+	}
+
+	&-left &-item {
+		color: $bar-user-title-color;
+		float: left;
+	}
+
+	&-right {
+		align-self: flex-start;
+		margin-left: auto; // [2]
+	}
+
+	&-right &-item {
+		line-height: 0;
+		float: right;
+	}
+
+	&-item-text {
+		align-self: center;
+		padding-left: ($bar-spacing / 2);
+	}
+
+	&-info {
+		display: inline-flex;
+		padding: $bar-spacing;
+		padding-right: 0;
+	}
+
+	&-action {
+		color: $bar-color;
+		position: relative;
+		display: inline-flex;
+		overflow: hidden;
+		padding: $bar-spacing;
+		transform: translate3d(0, 0, 0);
+
+		&:after {
+			background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			content: "";
+			transition: transform 0.5s, opacity 1s;
+			transform: scale(10, 10);
+			pointer-events: none;
+		}
+
+		&:active:after {
+			opacity: 0.2;
+			transition: 0s;
+			transform: scale(0, 0);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $bar-bg-hover-color;
+			color: $bar-hover-color;
+			transition: 0.5s;
+		}
+	}
+
+	&-avatar {
+		display: inline-block;
+		width: $bar-avatar-size;
+		height: $bar-avatar-size;
+		margin: 0 ($bar-spacing / 2) 0 0;
+		padding: 0;
+	}
+
+	&-title {
+		@include type(title, $lh: 1);
+		@include child();
+		float: left;
+		margin-bottom: 0;
+		padding: $bar-spacing;
+	}
+
+	&-profile {
+		max-width: $bar-profile-max;
+		padding: ($bar-spacing / 2) $bar-spacing;
+	}
+
+	&-user {
+		@include type(body2, $lh: 1.35);
+		vertical-align: middle;
+		display: inline-block;
+		padding: 0 $bar-spacing 0 0;
+
+		&-title {
+			@include type(caption);
+			color: $bar-user-title-color;
+			opacity: $bar-opacity-54;
+			display: block;
+		}
+	}
+
+	&-badge {
+		background-color: $bar-badge-bg-color;
+		border-radius: $bar-badge-radius;
+		align-self: center;
+		margin: -($bar-spacing * 1.5) 0 0 ($bar-badge-offset * -1);
+	}
+}

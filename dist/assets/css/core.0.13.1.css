@@ -1453,6 +1453,75 @@ pre code {
 }
 
 /* stylelint-enable no-duplicate-selectors */
+.o-avatar {
+	vertical-align: middle;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+}
+
+.o-avatar-wrap {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.o-avatar-online {
+	background-color: #cfdd3c;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 101;
+	top: 10%;
+	right: 0;
+	float: left;
+	padding: 8%;
+}
+
+.o-avatar-small {
+	display: inline-block;
+	width: 40px;
+	height: 50px;
+}
+
+.o-avatar-rate-icon {
+	margin-right: 0;
+}
+
+.o-avatar-rate-good,
+.o-avatar-rate-bad {
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	color: #ffffff;
+	position: absolute;
+	z-index: 101;
+	bottom: 0;
+	float: left;
+	padding: 0.5rem;
+}
+
+.o-avatar-rate-good {
+	background-color: #5eba66;
+}
+
+.o-avatar-rate-good:hover,
+.o-avatar-rate-good:focus {
+	background-color: #97d29c;
+	color: #ffffff;
+	transition: 0.5s;
+}
+
+.o-avatar-rate-bad {
+	background-color: #e23936;
+	right: 0;
+}
+
+.o-avatar-rate-bad:hover,
+.o-avatar-rate-bad:focus {
+	background-color: #ec7f7d;
+	color: #ffffff;
+	transition: 0.5s;
+}
+
 .o-btn {
 	font-size: 0.875rem;
 	font-weight: 500;
@@ -2855,6 +2924,164 @@ pre code {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+}
+
+.o-bar {
+	background-color: #f5f5f5;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+.o-bar-left,
+.o-bar-right {
+	line-height: 0;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.o-bar-left {
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+	margin-right: auto;
+}
+
+.o-bar-left .o-bar-item {
+	color: #212121;
+	float: left;
+}
+
+.o-bar-right {
+	-webkit-align-self: flex-start;
+	align-self: flex-start;
+	margin-left: auto;
+}
+
+.o-bar-right .o-bar-item {
+	line-height: 0;
+	float: right;
+}
+
+.o-bar-item-text {
+	-webkit-align-self: center;
+	align-self: center;
+	padding-left: 0.5rem;
+	-ms-grid-row-align: center;
+}
+
+.o-bar-info {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	padding: 1rem;
+	padding-right: 0;
+}
+
+.o-bar-action {
+	color: #757575;
+	position: relative;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	overflow: hidden;
+	padding: 1rem;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.o-bar-action:after {
+	background-image: radial-gradient(circle, #000000 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	transition: opacity 1s, -webkit-transform 0.5s;
+	transition: transform 0.5s, opacity 1s;
+	transition: transform 0.5s, opacity 1s, -webkit-transform 0.5s;
+	-webkit-transform: scale(10, 10);
+	transform: scale(10, 10);
+	pointer-events: none;
+}
+
+.o-bar-action:active:after {
+	opacity: 0.2;
+	transition: 0s;
+	-webkit-transform: scale(0, 0);
+	transform: scale(0, 0);
+}
+
+.o-bar-action:hover,
+.o-bar-action:focus {
+	background-color: #eeeeee;
+	color: #258cf4;
+	transition: 0.5s;
+}
+
+.o-bar-avatar {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 0 0.5rem 0 0;
+	padding: 0;
+}
+
+.o-bar-title {
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	float: left;
+	-webkit-flex: 1;
+	flex: 1;
+	-webkit-align-self: auto;
+	align-self: auto;
+	margin-bottom: 0;
+	padding: 1rem;
+	-ms-grid-row-align: auto;
+}
+
+.o-bar-profile {
+	max-width: 296px;
+	padding: 0.5rem 1rem;
+}
+
+.o-bar-user {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.35;
+	vertical-align: middle;
+	letter-spacing: 0.04em;
+	display: inline-block;
+	padding: 0 1rem 0 0;
+}
+
+.o-bar-user-title {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+	color: #212121;
+	opacity: 0.54;
+	display: block;
+}
+
+.o-bar-badge {
+	background-color: #e23936;
+	border-radius: 50px;
+	-webkit-align-self: center;
+	align-self: center;
+	margin: -1.5rem 0 0 -0.6875rem;
+	-ms-grid-row-align: center;
 }
 
 /*# sourceMappingURL=core.0.13.1.css.map */
