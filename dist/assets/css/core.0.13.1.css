@@ -1564,6 +1564,8 @@ pre code {
 .o-row {
 	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: -1rem;
@@ -2731,6 +2733,128 @@ pre code {
 
 .o-tag:empty {
 	display: none;
+}
+
+.o-list {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75;
+	line-height: 1.25;
+	letter-spacing: 0.04em;
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.o-list-item {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	overflow: hidden;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+.o-list-media {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	margin-right: 1rem;
+	margin-left: 0;
+}
+
+.o-list-media-icon {
+	color: #258cf4;
+	width: 40px;
+	height: 40px;
+}
+
+.o-list-primary,
+.o-list-secondary,
+.o-list-meta-primary,
+.o-list-meta-secondary {
+	display: block;
+}
+
+.o-list-primary {
+	line-height: 1.25;
+}
+
+.o-list-secondary {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.25;
+	text-decoration: inherit;
+	letter-spacing: 0.04em;
+	text-transform: inherit;
+}
+
+.o-list-secondary-item {
+	line-height: 1.2857142857;
+	padding-right: 1rem;
+}
+
+.o-list-secondary-item-icon {
+	width: 18px;
+	height: 18px;
+	margin-right: 0.5rem;
+}
+
+.o-list-secondary-item-link:hover {
+	text-decoration: underline;
+}
+
+.o-list-meta {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.o-list-meta-link:hover {
+	text-decoration: underline;
+}
+
+.o-list-meta-primary {
+	line-height: 1.25;
+}
+
+.o-list-meta-secondary {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.25;
+	text-decoration: inherit;
+	letter-spacing: 0.04em;
+	text-transform: inherit;
+}
+
+.o-list-meta-media {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	margin-right: 0;
+	margin-left: 1rem;
+}
+
+.o-list-avatar {
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
 }
 
 /*# sourceMappingURL=core.0.13.1.css.map */

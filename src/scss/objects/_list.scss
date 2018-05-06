@@ -1,0 +1,136 @@
+//------------------------------------------------------------------------------
+// #object: List
+//------------------------------------------------------------------------------
+// #description
+//
+//------------------------------------------------------------------------------
+
+//
+// #settings
+
+// Layout Variables
+$list-spacing: 16px !default;
+$list-media-size: 40px !default;
+$list-small-icon-size: 18px !default;
+
+// Theme Variables
+$list-background-color: $default-action-bg !default;
+$list-hover-color: $default-action-bg-hover !default;
+$list-text-color: $default-action-color !default;
+$list-icon-color: $default-link-color !default;
+
+//
+// #scss
+
+//
+// 1. Allow us to style box model properties.
+// 2. Line different sized buttons up a little nicer.
+// 3. Make buttons inherit font styles (often necessary when styling `input`s as
+//    buttons).
+// 4. Reset/normalize some styles.
+// 5. Force all button-styled elements to appear clickable.
+// 6. Fixes odd inner spacing in IE7.
+// 7. Subtract the border size from the padding value so that buttons do not
+//    grow larger as we add borders.
+// 8. Prevent button text from being selectable.
+// 9. Prevent deafult browser outline halo
+//
+.o-list {
+	@include type(subhead2); // google material design
+	@include shadow(2); // google material design
+	line-height: unitless(20, 16);
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&-item {
+		@include parent();
+		position: relative;
+		overflow: hidden;
+		justify-content: flex-start;
+		align-items: center;
+		padding: $list-spacing;
+	}
+
+	&-media {
+		display: inline-flex;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		margin-right: $list-spacing;
+		margin-left: 0;
+
+		&-icon {
+			color: $list-icon-color;
+			width: $list-media-size;
+			height: $list-media-size;
+		}
+	}
+
+	&-primary,
+	&-secondary,
+	&-meta-primary,
+	&-meta-secondary {
+		display: block;
+	}
+
+	&-primary {
+		line-height: unitless(20, 16);
+	}
+
+	&-secondary {
+		@include type(body1); // google material design
+		text-decoration: inherit;
+		text-transform: inherit;
+
+		&-item {
+			line-height: unitless(18, 14);
+			padding-right: $list-spacing;
+
+			&-icon {
+				width: $list-small-icon-size;
+				height: $list-small-icon-size;
+				margin-right: ($list-spacing / 2);
+			}
+
+			&-link:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&-meta {
+		margin-right: 0;
+		margin-left: auto;
+
+		&-link:hover {
+			text-decoration: underline;
+		}
+
+		&-primary {
+			line-height: unitless(20, 16);
+		}
+
+		&-secondary {
+			@include type(body1); // google material design
+			text-decoration: inherit;
+			text-transform: inherit;
+		}
+
+		&-media {
+			display: inline-flex;
+			flex-shrink: 0;
+			justify-content: center;
+			align-items: center;
+			margin-right: 0;
+			margin-left: $list-spacing;
+		}
+	}
+
+	&-avatar {
+		width: $list-media-size;
+		height: $list-media-size;
+		margin: 0;
+		padding: 0;
+	}
+}

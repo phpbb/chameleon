@@ -53,7 +53,7 @@
 
 /* stylelint-disable value-no-vendor-prefix */
 .o-row {
-	display: flex;
+	@include parent();
 	flex-wrap: wrap;
 	margin-right: -$grid-gutter;
 	margin-left: -$grid-gutter;
