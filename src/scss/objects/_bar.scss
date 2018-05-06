@@ -40,7 +40,6 @@ $bar-badge-bg-color: $default-important-color !default;
 // 2. Magic alignment
 //
 .o-bar {
-
 	@include parent();
 	background-color: $bar-bg-color;
 	flex-wrap: nowrap;
@@ -119,6 +118,7 @@ $bar-badge-bg-color: $default-important-color !default;
 		&:hover,
 		&:focus {
 			background-color: $bar-bg-hover-color;
+			outline: 0;
 			color: $bar-hover-color;
 			transition: 0.5s;
 		}

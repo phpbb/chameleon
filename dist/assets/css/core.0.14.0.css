@@ -3023,6 +3023,7 @@ pre code {
 .o-bar-action:hover,
 .o-bar-action:focus {
 	background-color: #eeeeee;
+	outline: 0;
 	color: #258cf4;
 	transition: 0.5s;
 }
