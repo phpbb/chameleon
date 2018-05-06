@@ -38,7 +38,7 @@ $list-icon-color: $default-link-color !default;
 .o-list {
 	@include type(subhead2); // google material design
 	@include shadow(2); // google material design
-	line-height: unitless(20, 16);
+	line-height: unitless(24, 16);
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
