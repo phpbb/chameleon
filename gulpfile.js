@@ -103,7 +103,7 @@ gulp.task('clean', () => {
 	del(['dist']);
 });
 
-gulp.task('minify', ['css'], () => {
+gulp.task('minify', gulp.series('css', () => {
 	const css = gulp
 	.src(build.css + '/*.' + pkg.version + '.css')
 	.pipe(sourcemaps.init())
@@ -116,7 +116,7 @@ gulp.task('minify', ['css'], () => {
 	.pipe(gulp.dest(build.css));
 
 	return css;
-});
+}));
 
 gulp.task('twig', () => {
 	const css = gulp
@@ -189,11 +189,11 @@ gulp.task('docs:css', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch('src/scss/**/*.scss', ['css', 'minify']);
-	gulp.watch('src/views/**/*.twig', ['twig']);
-	gulp.watch('src/mock/**/*.json', ['twig']);
+	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
+	gulp.watch('src/views/**/*.twig', gulp.series('twig'));
+	gulp.watch('src/mock/**/*.json', gulp.series('twig'));
 });
 
-gulp.task('serve', ['watch']);
-gulp.task('test', ['css', 'minify', 'twig']);
-gulp.task('default', ['css', 'minify', 'twig', 'watch']);
+gulp.task('serve', gulp.series('watch'));
+gulp.task('test', gulp.series('css', 'minify', 'twig'));
+gulp.task('default', gulp.series('css', 'minify', 'twig', 'watch'));
