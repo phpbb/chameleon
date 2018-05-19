@@ -17,7 +17,6 @@ $list-small-icon-size: 18px !default;
 $list-background-color: $default-action-bg !default;
 $list-hover-color: $default-action-bg-hover !default;
 $list-text-color: $default-action-color !default;
-$list-icon-color: $default-link-color !default;
 
 //
 // #scss
@@ -61,7 +60,6 @@ $list-icon-color: $default-link-color !default;
 		margin-left: 0;
 
 		&-icon {
-			color: $list-icon-color;
 			width: $list-media-size;
 			height: $list-media-size;
 		}
