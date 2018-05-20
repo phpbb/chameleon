@@ -2982,6 +2982,10 @@ pre code {
 }
 
 .o-bar-action {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
 	color: #757575;
 	position: relative;
 	display: -webkit-inline-flex;
