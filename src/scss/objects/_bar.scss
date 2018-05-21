@@ -85,7 +85,7 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 
 	&-action {
-		@include type(subhead2, $lh: 1.5);
+		@include type(subhead2, $lh: 1.5, $fh: 700);
 		color: $bar-color;
 		position: relative;
 		display: inline-flex;
