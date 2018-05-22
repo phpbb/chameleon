@@ -2952,7 +2952,6 @@ pre code {
 }
 
 .o-bar-left .o-bar-item {
-	color: #212121;
 	float: left;
 }
 
@@ -2975,6 +2974,7 @@ pre code {
 }
 
 .o-bar-info {
+	color: #212121;
 	display: -webkit-inline-flex;
 	display: inline-flex;
 	padding: 1rem;

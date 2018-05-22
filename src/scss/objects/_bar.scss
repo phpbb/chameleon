@@ -59,7 +59,6 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 
 	&-left &-item {
-		color: $bar-user-title-color;
 		float: left;
 	}
 
@@ -79,6 +78,7 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 
 	&-info {
+		color: $bar-user-title-color;
 		display: inline-flex;
 		padding: $bar-spacing;
 		padding-right: 0;
