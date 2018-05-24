@@ -9,10 +9,10 @@
 // #settings
 
 // Layout Variables
-$btn-spacing: 16px !default;
+$btn-spacing: $default-spacing !default;
 $btn-border-radius: $default-border-radius !default;
 $btn-min-width: 64px !default;
-$btn-height: 36px !default;
+$btn-height: $default-height-dense !default;
 
 // Theme Variables
 $btn-background-color: $default-action-bg !default;
@@ -24,7 +24,7 @@ $btn-text-hover-color: $default-link-color !default;
 // #scss
 
 //
-// 1. Allow us to style box model properties.
+// 1. Allow us to vertically center content
 // 2. Line different sized buttons up a little nicer.
 // 3. Make buttons inherit font styles (often necessary when styling `input`s as
 //    buttons).
@@ -37,7 +37,7 @@ $btn-text-hover-color: $default-link-color !default;
 // 9. Prevent deafult browser outline halo
 //
 .o-btn {
-	@include type(button); // google material design
+	@include type(button, $lh: inherit); // google material design
 	@include shadow(2); // google material design
 	-webkit-font-smoothing: antialiased; // google material design
 	text-align: center; // [4]
@@ -50,13 +50,15 @@ $btn-text-hover-color: $default-link-color !default;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // google material design
 	color: $btn-text-color;
 	position: relative; // google material design
-	display: inline-block; // [1]
+	display: inline-flex; // [1]
 	overflow: hidden; // [6]
+	justify-content: center; // [1]
+	align-items: center; // [1]
 	box-sizing: border-box;
 	min-width: $btn-min-width; // google material design
-	height: 36px; // google material design
+	height: 36px; // [1]
 	margin: 0; // [4]
-	padding: 0 $btn-spacing; // [7]
+	padding: 0 ($btn-spacing * 2); // [7]
 	user-select: none; // [8]
 	transition:
 		box-shadow 0.2s $animation-curve-fast-out-linear-in,

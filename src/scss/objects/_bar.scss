@@ -9,8 +9,8 @@
 // @settings
 
 // Layout Variables
-$bar-spacing: 16px !default;
-$bar-avatar-size: 40px !default;
+$bar-spacing: $default-spacing !default;
+$bar-avatar-size: $default-icon-lg !default;
 $bar-badge-radius: 50px !default;
 $bar-badge-offset: 11px !default;
 $bar-profile-max: 296px !default;
@@ -73,14 +73,16 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 
 	&-item-text {
-		align-self: center;
-		padding-left: ($bar-spacing / 2);
+		padding-left: $bar-spacing;
 	}
 
 	&-info {
 		color: $bar-user-title-color;
 		display: inline-flex;
-		padding: $bar-spacing;
+		justify-content: center;
+		align-items: center;
+		height: 56px;
+		padding: ($bar-spacing * 2);
 		padding-right: 0;
 	}
 
@@ -90,7 +92,10 @@ $bar-badge-bg-color: $default-important-color !default;
 		position: relative;
 		display: inline-flex;
 		overflow: hidden;
-		padding: $bar-spacing;
+		justify-content: center;
+		align-items: center;
+		height: 56px;
+		padding: ($bar-spacing * 2);
 		transform: translate3d(0, 0, 0);
 
 		&:after {
@@ -129,28 +134,32 @@ $bar-badge-bg-color: $default-important-color !default;
 		display: inline-block;
 		width: $bar-avatar-size;
 		height: $bar-avatar-size;
-		margin: 0 ($bar-spacing / 2) 0 0;
+		margin: 0 $bar-spacing 0 0;
 		padding: 0;
 	}
 
 	&-title {
 		@include type(title, $lh: 1);
 		@include child();
+		display: inline-flex;
 		float: left;
+		justify-content: center;
+		align-items: center;
+		height: 56px;
 		margin-bottom: 0;
-		padding: $bar-spacing;
+		padding: ($bar-spacing * 2);
 	}
 
 	&-profile {
 		max-width: $bar-profile-max;
-		padding: ($bar-spacing / 2) $bar-spacing;
+		padding: $bar-spacing ($bar-spacing * 2);
 	}
 
 	&-user {
 		@include type(body2, $lh: 1.35);
 		vertical-align: middle;
 		display: inline-block;
-		padding: 0 $bar-spacing 0 0;
+		padding: 0 ($bar-spacing * 2) 0 0;
 
 		&-title {
 			@include type(caption);

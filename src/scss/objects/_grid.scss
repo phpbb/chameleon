@@ -9,6 +9,7 @@
 
 //
 // #settings
+$grid-gutter: $default-grid-gutter !default;
 
 //
 // #scss
@@ -20,7 +21,7 @@
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: $default-grid-gutter;
+	padding-right: $grid-gutter;
 	padding-left: $default-grid-gutter;
 
 	//

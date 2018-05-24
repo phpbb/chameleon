@@ -9,9 +9,9 @@
 // #settings
 
 // Layout Variables
-$list-spacing: 16px !default;
-$list-media-size: 40px !default;
-$list-small-icon-size: 18px !default;
+$list-spacing: $default-spacing !default;
+$list-media-size: $default-icon-lg !default;
+$list-icon-size: $default-icon-sm !default;
 
 // Theme Variables
 $list-background-color: $default-action-bg !default;
@@ -48,7 +48,7 @@ $list-text-color: $default-action-color !default;
 		overflow: hidden;
 		justify-content: flex-start;
 		align-items: center;
-		padding: $list-spacing;
+		padding: ($list-spacing * 2);
 	}
 
 	&-media {
@@ -56,7 +56,7 @@ $list-text-color: $default-action-color !default;
 		flex-shrink: 0;
 		justify-content: center;
 		align-items: center;
-		margin-right: $list-spacing;
+		margin-right: ($list-spacing * 2);
 		margin-left: 0;
 
 		&-icon {
@@ -83,12 +83,12 @@ $list-text-color: $default-action-color !default;
 
 		&-item {
 			line-height: unitless(18, 14);
-			padding-right: $list-spacing;
+			padding-right: ($list-spacing * 2);
 
 			&-icon {
-				width: $list-small-icon-size;
-				height: $list-small-icon-size;
-				margin-right: ($list-spacing / 2);
+				width: $list-icon-size;
+				height: $list-icon-size;
+				margin-right: $list-spacing;
 			}
 
 			&-link:hover {

@@ -27,14 +27,21 @@ $bp-md: 768px !default;
 $bp-lg: 992px !default;
 $bp-xl: 1200px !default;
 
+// Spacing
+$default-spacing: 8px !default;
+
+// Object heights
+$default-height: 56px !default;
+$default-height-dense: 36px !default;
+
+// icons
+$default-icon-sm: 18px !default;
+$default-icon-md: 24px !default;
+$default-icon-lg: 40px !default;
+
 // Fonts
 $default-font: Roboto, Helvetica, Arial, sans-serif !default;
 $default-code-font: Monaco, Andale Mono, Courier New, Courier, Mono !default;
-
-// icons
-$default-icon-sm: $default-font-size !default;
-$default-icon-md: $default-line-height !default;
-$default-icon-lg: 2 * $default-font-size !default;
 
 //
 // color scheme
