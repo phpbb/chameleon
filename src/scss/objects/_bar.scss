@@ -86,6 +86,22 @@ $bar-badge-bg-color: $default-important-color !default;
 		padding-right: 0;
 	}
 
+	&-logo {
+		position: relative;
+		display: inline-flex;
+		overflow: hidden;
+		justify-content: left;
+		align-items: center;
+		height: 56px;
+		padding: 1rem;
+
+		&-icon {
+			width: inherit;
+			max-width: 64px;
+			height: 24px;
+		}
+	}
+
 	&-action {
 		@include type(subhead2, $lh: 1.5, $fw: 700);
 		color: $bar-color;

@@ -2996,6 +2996,25 @@ pre code {
 	padding-right: 0;
 }
 
+.o-bar-logo {
+	position: relative;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	overflow: hidden;
+	-webkit-justify-content: left;
+	justify-content: left;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 56px;
+	padding: 1rem;
+}
+
+.o-bar-logo-icon {
+	width: inherit;
+	max-width: 64px;
+	height: 24px;
+}
+
 .o-bar-action {
 	font-size: 1rem;
 	font-weight: 700;
