@@ -15,8 +15,7 @@ $avatar-online-top: 10% !default;
 $avatar-attribute-size: 8 !default;
 $avatar-border-size: 2px !default;
 $avatar-border-type: solid !default;
-$avatar-small-width: $default-icon-lg !default;
-$avatar-small-height: 50px !default;
+$avatar-small-size: $default-icon-lg !default;
 
 
 // Theme Variables
@@ -54,9 +53,9 @@ $avatar-bad-color-hover: $default-important-light-color !default;
 	}
 
 	&-small {
-		display: inline-block;
-		width: $avatar-small-width;
-		height: $avatar-small-height;
+		display: inline-flex;
+		width: $avatar-small-size;
+		height: $avatar-small-size;
 	}
 
 	&-rate-icon {

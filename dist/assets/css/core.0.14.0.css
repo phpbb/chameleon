@@ -1478,9 +1478,10 @@ pre code {
 }
 
 .o-avatar-small {
-	display: inline-block;
+	display: -webkit-inline-flex;
+	display: inline-flex;
 	width: 40px;
-	height: 50px;
+	height: 40px;
 }
 
 .o-avatar-rate-icon {
