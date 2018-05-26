@@ -139,7 +139,8 @@ $bar-badge-bg-color: $default-important-color !default;
 			transition: 0.5s;
 		}
 
-		&-icon + &-text {
+		&-icon + &-text,
+		&-text + &-icon {
 			padding-left: $bar-spacing;
 		}
 	}

@@ -18,7 +18,7 @@
 //
 // @scss
 
-@mixin center($height) {
+@mixin center($height: false) {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;

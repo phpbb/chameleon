@@ -2818,7 +2818,6 @@ pre code {
 .o-list {
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 1.75;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -3068,6 +3067,11 @@ pre code {
 	outline: 0;
 	color: #258cf4;
 	transition: 0.5s;
+}
+
+.o-bar-action-icon + .o-bar-action-text,
+.o-bar-action-text + .o-bar-action-icon {
+	padding-left: 0.5rem;
 }
 
 .o-bar-avatar {
