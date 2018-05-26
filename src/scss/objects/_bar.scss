@@ -138,6 +138,10 @@ $bar-badge-bg-color: $default-important-color !default;
 			color: $bar-hover-color;
 			transition: 0.5s;
 		}
+
+		&-icon + &-text {
+			padding-left: $bar-spacing;
+		}
 	}
 
 	&-avatar {
