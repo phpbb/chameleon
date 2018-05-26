@@ -3001,8 +3001,8 @@ pre code {
 	display: -webkit-inline-flex;
 	display: inline-flex;
 	overflow: hidden;
-	-webkit-justify-content: left;
-	justify-content: left;
+	-webkit-justify-content: center;
+	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
 	height: 56px;
@@ -3010,9 +3010,9 @@ pre code {
 }
 
 .o-bar-logo-icon {
-	width: inherit;
-	max-width: 64px;
-	height: 24px;
+	width: 64px;
+	height: auto;
+	max-height: 24px;
 }
 
 .o-bar-action {
@@ -3100,7 +3100,14 @@ pre code {
 }
 
 .o-bar-profile {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
 	max-width: 296px;
+	height: 56px;
 	padding: 0.5rem 1rem;
 }
 
@@ -3108,9 +3115,7 @@ pre code {
 	font-size: 0.875rem;
 	font-weight: 500;
 	line-height: 1.35;
-	vertical-align: middle;
 	letter-spacing: 0.04em;
-	display: inline-block;
 	padding: 0 1rem 0 0;
 }
 

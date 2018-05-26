@@ -10,6 +10,7 @@
 
 // Layout Variables
 $btn-spacing: $default-spacing !default;
+$btn-height: $default-height-dense !default;
 $btn-border-radius: $default-border-radius !default;
 $btn-min-width: 64px !default;
 $btn-height: $default-height-dense !default;
@@ -50,13 +51,10 @@ $btn-text-hover-color: $default-link-color !default;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // google material design
 	color: $btn-text-color;
 	position: relative; // google material design
-	display: inline-flex; // [1]
+	@include center($btn-height);  // [1]
 	overflow: hidden; // [6]
-	justify-content: center; // [1]
-	align-items: center; // [1]
 	box-sizing: border-box;
 	min-width: $btn-min-width; // google material design
-	height: 36px; // [1]
 	margin: 0; // [4]
 	padding: 0 ($btn-spacing * 2); // [7]
 	user-select: none; // [8]

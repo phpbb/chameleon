@@ -11,6 +11,9 @@
 // Layout Variables
 $bar-spacing: $default-spacing !default;
 $bar-avatar-size: $default-icon-lg !default;
+$bar-height: $default-height !default;
+$bar-logo-max-height: 24px !default;
+$bar-logo-width: 64px !default;
 $bar-badge-radius: 50px !default;
 $bar-badge-offset: 11px !default;
 $bar-profile-max: 296px !default;
@@ -78,27 +81,21 @@ $bar-badge-bg-color: $default-important-color !default;
 
 	&-info {
 		color: $bar-user-title-color;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		height: 56px;
+		@include center($bar-height);
 		padding: ($bar-spacing * 2);
 		padding-right: 0;
 	}
 
 	&-logo {
 		position: relative;
-		display: inline-flex;
+		@include center($bar-height);
 		overflow: hidden;
-		justify-content: left;
-		align-items: center;
-		height: 56px;
-		padding: 1rem;
+		padding: ($bar-spacing * 2);
 
 		&-icon {
-			width: inherit;
-			max-width: 64px;
-			height: 24px;
+			width: $bar-logo-width;
+			height: auto;
+			max-height: $bar-logo-max-height;
 		}
 	}
 
@@ -106,11 +103,8 @@ $bar-badge-bg-color: $default-important-color !default;
 		@include type(subhead2, $lh: 1.5, $fw: 700);
 		color: $bar-color;
 		position: relative;
-		display: inline-flex;
+		@include center($bar-height);
 		overflow: hidden;
-		justify-content: center;
-		align-items: center;
-		height: 56px;
 		padding: ($bar-spacing * 2);
 		transform: translate3d(0, 0, 0);
 
@@ -157,24 +151,20 @@ $bar-badge-bg-color: $default-important-color !default;
 	&-title {
 		@include type(title, $lh: 1);
 		@include child();
-		display: inline-flex;
+		@include center($bar-height);
 		float: left;
-		justify-content: center;
-		align-items: center;
-		height: 56px;
 		margin-bottom: 0;
 		padding: ($bar-spacing * 2);
 	}
 
 	&-profile {
+		@include center($bar-height);
 		max-width: $bar-profile-max;
 		padding: $bar-spacing ($bar-spacing * 2);
 	}
 
 	&-user {
 		@include type(body2, $lh: 1.35);
-		vertical-align: middle;
-		display: inline-block;
 		padding: 0 ($bar-spacing * 2) 0 0;
 
 		&-title {
