@@ -1,0 +1,28 @@
+//------------------------------------------------------------------------------
+// @tool: Vertical Align
+//------------------------------------------------------------------------------
+// @description
+//
+// Mixin for centering content in the vertical center of an element.
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+
+
+// Breakpoints sizes are global
+
+//
+// @scss
+
+@mixin center($height) {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	@if ($height) {
+		height: $height;
+	}
+}
