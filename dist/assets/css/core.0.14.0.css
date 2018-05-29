@@ -3070,6 +3070,17 @@ pre code {
 	transition: 0.5s;
 }
 
+.o-bar-action-text {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	.o-bar-action-text {
+		display: -webkit-inline-flex;
+		display: inline-flex;
+	}
+}
+
 .o-bar-action-icon + .o-bar-action-text,
 .o-bar-action-text + .o-bar-action-icon {
 	padding-left: 0.5rem;
@@ -3137,10 +3148,24 @@ pre code {
 .o-bar-badge {
 	background-color: #e23936;
 	border-radius: 50px;
+	color: #e23936;
+	overflow: hidden;
 	-webkit-align-self: center;
 	align-self: center;
-	margin: -0.75rem 0 0 -0.6875rem;
+	width: 10px;
+	height: 12px;
+	margin: -0.75rem 0 -0.75rem;
 	-ms-grid-row-align: center;
+}
+
+@media (min-width: 576px) {
+	.o-bar-badge {
+		color: #ffffff;
+		display: -webkit-inline-flex;
+		display: inline-flex;
+		width: auto;
+		height: auto;
+	}
 }
 
 /*# sourceMappingURL=core.0.14.0.css.map */

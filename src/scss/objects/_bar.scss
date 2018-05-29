@@ -15,7 +15,6 @@ $bar-height: $default-height !default;
 $bar-logo-max-height: 24px !default;
 $bar-logo-width: 64px !default;
 $bar-badge-radius: 50px !default;
-$bar-badge-offset: 11px !default;
 $bar-profile-max: 296px !default;
 $bar-opacity-1: $default-opacity !default;
 $bar-opacity-87: $default-opacity-87 !default;
@@ -139,6 +138,13 @@ $bar-badge-bg-color: $default-important-color !default;
 			transition: 0.5s;
 		}
 
+		&-text {
+			display: none;
+			@media (min-width: $bp-sm) {
+				display: inline-flex;
+			}
+		}
+
 		&-icon + &-text,
 		&-text + &-icon {
 			padding-left: $bar-spacing;
@@ -183,7 +189,18 @@ $bar-badge-bg-color: $default-important-color !default;
 	&-badge {
 		background-color: $bar-badge-bg-color;
 		border-radius: $bar-badge-radius;
+		color: $bar-badge-bg-color;
+		overflow: hidden;
 		align-self: center;
-		margin: -($bar-spacing * 1.5) 0 0 ($bar-badge-offset * -1);
+		width: 10px;
+		height: 12px;
+		margin: -($bar-spacing * 1.5) 0 0 -($bar-spacing * 1.5);
+
+		@media (min-width: $bp-sm) {
+			color: $bar-badge-color;
+			display: inline-flex;
+			width: auto;
+			height: auto;
+		}
 	}
 }
