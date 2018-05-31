@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------
+// @tool: RTL
+//------------------------------------------------------------------------------
+// @description
+//
+//
+// Helper mixin to include rtl changes to a components. Mixin is a port of the
+// material-web components project: https://github.com/material-components/material-components-web/blob/master/packages/mdc-rtl/_mixins.scss
+// Guidance on usage rtl can be found here: https://material.io/design/usability/bidirectionality.html#mirroring-layout
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@mixin rtl($root-selector: null) {
+	@if ($root-selector) {
+		@at-root {
+			#{$root-selector}[dir="rtl"] &,
+			[dir="rtl"] #{$root-selector} & {
+				@content;
+			}
+		}
+	} @else {
+		[dir="rtl"] &,
+		&[dir="rtl"] {
+			@content;
+		}
+	}
+}
