@@ -194,7 +194,7 @@ $bar-badge-bg-color: $default-important-color !default;
 		align-self: center;
 		width: 10px;
 		height: 12px;
-		margin: -($bar-spacing * 1.5) 0 0 -($bar-spacing * 1.5);
+		margin: ($bar-spacing * -1.5) 0 0 ($bar-spacing * -1.5);
 
 		@media (min-width: $bp-sm) {
 			color: $bar-badge-color;

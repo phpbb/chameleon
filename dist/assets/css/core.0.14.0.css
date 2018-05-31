@@ -3154,7 +3154,7 @@ pre code {
 	align-self: center;
 	width: 10px;
 	height: 12px;
-	margin: -0.75rem 0 -0.75rem;
+	margin: -0.75rem 0 0 -0.75rem;
 	-ms-grid-row-align: center;
 }
 
