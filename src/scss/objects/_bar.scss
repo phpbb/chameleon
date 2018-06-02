@@ -25,6 +25,7 @@ $bar-opacity-12: $default-opacity-12 !default;
 
 // Theme Variables
 $bar-bg-color: $default-action-bg !default;
+$bar-search-bg-color: $white !default;
 $bar-bg-hover-color: $default-action-bg-hover !default;
 $bar-color: $default-action-color !default;
 $bar-hover-color: $default-action-color-hover !default;
@@ -201,6 +202,70 @@ $bar-badge-bg-color: $default-important-color !default;
 			display: inline-flex;
 			width: auto;
 			height: auto;
+		}
+	}
+
+	&-search {
+		background-color: $bar-search-bg-color;
+		opacity: 0;
+		position: absolute;
+		z-index: 999;
+		display: none;
+		float: left;
+		width: 100%;
+		transition: 0.5s;
+
+		&.is-active {
+			opacity: 1;
+			display: block;
+		}
+
+		&-form {
+			@include parent();
+			justify-content: flex-start;
+			width: 100%;
+			margin: 0;
+		}
+
+		&-toggle {
+			@include type(subhead2, $lh: 1.5, $fw: 700);
+			color: $bar-hover-color;
+			flex-shrink: 0;
+			@include center($bar-height);
+			margin-right: 0;
+			margin-left: 0;
+			padding: ($bar-spacing * 2);
+		}
+
+		&-action {
+			@include type(subhead2, $lh: 1.5, $fw: 700);
+			color: $bar-color;
+			@include center($bar-height);
+			margin-right: 0;
+			margin-left: auto;
+			padding: ($bar-spacing * 2);
+
+			&:hover,
+			&:focus {
+				color: $bar-hover-color;
+			}
+		}
+
+		&-feild {
+			@include type(subhead2, $lh: 1.5, $fw: 700);
+			background-color: transparent;
+			border: 0;
+			color: $bar-color;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			height: $bar-height;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: $bar-hover-color;
+			}
 		}
 	}
 }
