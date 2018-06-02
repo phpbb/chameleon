@@ -53,6 +53,22 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 }
 
+@keyframes shrink {
+	0% {
+		opacity: 1;
+		transform: scaleX(1);
+	}
+
+	50% {
+		transform: scaleX(0.01);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+}
+
 //
 // 1. handle inconsistent rendering of ul across browsers when not using as
 //    a list element
@@ -228,12 +244,12 @@ $bar-badge-bg-color: $default-important-color !default;
 		z-index: 999;
 		float: left;
 		width: 100%;
-		transition: 5s ease;
 		transform: scaleX(0);
 		transform-origin: right;
+		animation: shrink 200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
 		&.is-active {
-			animation: grow 400ms cubic-bezier(0, 0, 0.2, 1) forwards;
+			animation: grow 400ms cubic-bezier(0.4, 0, 1, 1) forwards;
 		}
 
 		&-form {
