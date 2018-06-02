@@ -3213,7 +3213,7 @@ pre code {
 	z-index: 999;
 	float: left;
 	width: 100%;
-	transition: 0.5s ease;
+	transition: 5s ease;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: right;
@@ -3221,8 +3221,8 @@ pre code {
 }
 
 .o-bar-search.is-active {
-	-webkit-animation: grow 200ms cubic-bezier(0, 0, 0.2, 1) forwards;
-	animation: grow 200ms cubic-bezier(0, 0, 0.2, 1) forwards;
+	-webkit-animation: grow 400ms cubic-bezier(0, 0, 0.2, 1) forwards;
+	animation: grow 400ms cubic-bezier(0, 0, 0.2, 1) forwards;
 }
 
 .o-bar-search-form {
