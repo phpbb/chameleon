@@ -1,0 +1,58 @@
+//------------------------------------------------------------------------------
+// #object: Form
+//------------------------------------------------------------------------------
+// #description
+//
+//------------------------------------------------------------------------------
+
+//
+// #settings
+
+// Layout Variables
+$form-spacing: $default-spacing !default;
+$form-select-icon-offset: 20px !default;
+$form-select-icon-position: 6px !default;
+
+// Theme Variables
+$form-select-icon-color: $default-action-color !default;
+$form-select-icon-hover-color: $default-action-color-hover !default;
+
+
+//
+// #scss
+
+.o-form {
+	&-group {
+		@include child();
+	}
+
+	&-inline {
+		@include parent();
+	}
+
+	&-select {
+		> select {
+			border-right: ($input-padding * 5) solid $input-border-color;
+		}
+
+		&:before {
+			@include background-triangle($form-select-icon-color);
+			background-position: center $form-select-icon-position;
+			position: absolute;
+			top: 0;
+			right: $form-select-icon-offset;
+			padding: $form-spacing;
+			content: " ";
+			transition: 0.5s;
+			pointer-events: none;
+		}
+
+		&:hover {
+			&:before {
+				@include background-triangle($form-select-icon-hover-color);
+				outline: 0;
+				color: #258cf4;
+			}
+		}
+	}
+}

@@ -15,14 +15,15 @@ $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
-$input-color: $default-body-color;
+$input-color: $default-action-icon-color;
 $input-background-color: $white;
-$input-border-color: $default-gray;
-$input-border-hover-color: $default-link-color;
+$input-border-color: $default-action-bg;
+$input-border-hover-color: $default-action-bg-hover;
 $input-background-focus-color: $input-background-color;
-$input-border-focus-color: $input-border-hover-color;
-$input-placeholder-color: $default-gray;
-$input-disabled-color: $default-gray-light;
+$input-border-focus-color: $default-action-bg-hover;
+$input-hover-color: $default-action-color-hover;
+$input-placeholder-color: $default-action-bg;
+$input-disabled-color: $default-gray-dark;
 $input-invalid-border-color: $default-important-color;
 $input-invalid-color: $default-important-light-color;
 
@@ -84,7 +85,7 @@ textarea {
 	width: 100%;
 	height: $input-height; // [1]
 	padding: $input-padding;
-	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: ease-in-out 0.15s;
 
 	&:hover {
 		border-color: $input-border-hover-color;
@@ -94,7 +95,7 @@ textarea {
 		background-color: $input-background-focus-color;
 		border-color: $input-border-focus-color;
 		outline: none;
-		color: $input-border-focus-color;
+		color: $input-hover-color;
 	}
 
 	&::placeholder {
@@ -139,27 +140,17 @@ textarea {
 //    See https://github.com/twbs/bootstrap/issues/19398.
 //
 select {
-	/* stylelint-disable string-quotes */
-	@include background-triangle($input-border-color);
+	@include background-triangle($input-color);
 	background-color: $input-background-color;
-	background-repeat: no-repeat;
-	background-position: right center;
-	background-origin: content-box;
-	background-size: 9px 6px;
 	display: inline-block;
 	min-width: ($input-padding * 10);
 	max-width: 100%;
-	padding: $input-padding ($input-padding * 4.5) $input-padding ($input-padding * 2);
-
-	&:hover,
-	&:focus {
-		@include background-triangle($input-border-hover-color);
-	}
+	padding: $input-padding;
+	cursor: pointer;
 
 	&:focus::-ms-value {
-		@include background-triangle($input-border-hover-color);
 		background-color: $input-background-color; // [1]
-		color: $input-color; // [1]
+		color: $input-hover-color; // [1]
 	}
 
 	&:focus:-moz-focusring {
@@ -170,7 +161,6 @@ select {
 	&[multiple="multiple"] {
 		background-image: none;
 	}
-	/* stylelint-enable string-quotes */
 }
 
 input[type="color"] {

@@ -816,14 +816,14 @@ form span {
 select,
 textarea {
 	background-color: #ffffff;
-	border: 2px solid #9e9e9e;
+	border: 2px solid #f5f5f5;
 	border-radius: 2px;
-	color: #424242;
+	color: #757575;
 	display: block;
 	width: 100%;
 	height: 40px;
 	padding: 0.5rem;
-	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: ease-in-out 0.15s;
 }
 
 [type="date"]:hover,
@@ -842,7 +842,7 @@ textarea {
 [type="color"]:hover,
 select:hover,
 textarea:hover {
-	border-color: #258cf4;
+	border-color: #eeeeee;
 }
 
 [type="date"]:focus,
@@ -862,7 +862,7 @@ textarea:hover {
 select:focus,
 textarea:focus {
 	background-color: #ffffff;
-	border-color: #258cf4;
+	border-color: #eeeeee;
 	outline: none;
 	color: #258cf4;
 }
@@ -883,7 +883,7 @@ textarea:focus {
 [type="color"]::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 	opacity: 1;
 }
 
@@ -903,7 +903,7 @@ textarea::-webkit-input-placeholder {
 [type="color"]::-moz-placeholder,
 select::-moz-placeholder,
 textarea::-moz-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 	opacity: 1;
 }
 
@@ -923,7 +923,7 @@ textarea::-moz-placeholder {
 [type="color"]:-ms-input-placeholder,
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 	opacity: 1;
 }
 
@@ -943,7 +943,7 @@ textarea:-ms-input-placeholder {
 [type="color"]::placeholder,
 select::placeholder,
 textarea::placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 	opacity: 1;
 }
 
@@ -978,7 +978,7 @@ select:disabled,
 select[readonly],
 textarea:disabled,
 textarea[readonly] {
-	background-color: #e0e0e0;
+	background-color: #757575;
 	opacity: 1;
 }
 
@@ -1078,45 +1078,17 @@ textarea {
 
 select {
 	background-color: #ffffff;
-	/* stylelint-disable string-quotes */
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #9e9e9e"></polygon></svg>');
-	background-repeat: no-repeat;
-	background-position: right center;
-	background-origin: content-box;
-	background-size: 9px 6px;
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill-rule="evenodd" style="fill:#757575" d="M12 16c-.297 0-.578-.133-.768-.359l-5-6A1.001 1.001 0 0 1 7 8h10a1 1 0 0 1 .767 1.64l-5 6A1 1 0 0 1 12 16zm-2.865-6L12 13.437l2.865-3.438h-5.73V10z"%3E%3C/path%3E%3C/svg%3E');
 	display: inline-block;
 	min-width: 80px;
 	max-width: 100%;
-	padding: 0.5rem 2.25rem 0.5rem 1rem;
-	/* stylelint-enable string-quotes */
-}
-
-@media screen and (min-width: 0\0) {
-	select {
-		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==");
-	}
-}
-
-select:hover, select:focus {
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #258cf4"></polygon></svg>');
-}
-
-@media screen and (min-width: 0\0) {
-	select:hover, select:focus {
-		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==");
-	}
+	padding: 0.5rem;
+	cursor: pointer;
 }
 
 select:focus::-ms-value {
 	background-color: #ffffff;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #258cf4"></polygon></svg>');
-	color: #424242;
-}
-
-@media screen and (min-width: 0\0) {
-	select:focus::-ms-value {
-		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==");
-	}
+	color: #258cf4;
 }
 
 select:focus:-moz-focusring {
@@ -1167,7 +1139,7 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 [type="checkbox"] + label:before {
-	border: 2px solid #9e9e9e;
+	border: 2px solid #f5f5f5;
 	border-radius: 2px;
 	position: absolute;
 	z-index: 0;
@@ -1181,18 +1153,18 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 [type="checkbox"] + label:before:hover {
-	border-color: #258cf4;
+	border-color: #eeeeee;
 }
 
 [type="checkbox"] + label:before:not(:checked):disabled {
-	background-color: #e0e0e0;
+	background-color: #757575;
 	border: none;
 }
 
 [type="checkbox"]:checked + label:before {
 	border-top: 2px solid transparent;
-	border-right: 2px solid #258cf4;
-	border-bottom: 2px solid #258cf4;
+	border-right: 2px solid #eeeeee;
+	border-bottom: 2px solid #eeeeee;
 	border-left: 2px solid transparent;
 	top: -4px;
 	left: -5px;
@@ -1207,8 +1179,8 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 [type="checkbox"]:checked + label:before:disabled {
-	border-right: 2px solid #e0e0e0;
-	border-bottom: 2px solid #e0e0e0;
+	border-right: 2px solid #757575;
+	border-bottom: 2px solid #757575;
 }
 
 [type="checkbox"]:indeterminate + label:before {
@@ -1229,7 +1201,7 @@ input[type="checkbox"]:focus:invalid:focus {
 
 [type="checkbox"]:indeterminate + label:before:disabled {
 	background-color: transparent;
-	border-right: 2px solid #e0e0e0;
+	border-right: 2px solid #757575;
 }
 
 [type="radio"] + label:before,
@@ -1247,7 +1219,7 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 [type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after {
-	border: 2px solid #9e9e9e;
+	border: 2px solid #f5f5f5;
 }
 
 [type="radio"]:not(:checked) + label:after {
@@ -1258,48 +1230,48 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 [type="radio"]:hover + label:before {
-	border-color: #258cf4;
+	border-color: #eeeeee;
 }
 
 [type="radio"]:checked + label:before {
-	border: 2px solid #258cf4;
+	border: 2px solid #eeeeee;
 }
 
 [type="radio"]:checked + label:after {
-	background-color: #258cf4;
+	background-color: #eeeeee;
 	z-index: 0;
 	-webkit-transform: scale(0.5) opacity(1);
 	        transform: scale(0.5) opacity(1);
 }
 
 [type="radio"]:disabled + label {
-	color: #e0e0e0;
+	color: #757575;
 }
 
 [type="radio"]:disabled:checked + label:before,
 [type="radio"]:disabled:not(:checked) + label:before {
-	border: 2px solid #e0e0e0;
+	border: 2px solid #757575;
 }
 
 [type="radio"]:disabled :checked + label:after {
-	background-color: #e0e0e0;
+	background-color: #757575;
 	border: none;
 }
 
 ::-webkit-input-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 }
 
 :-moz-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 }
 
 ::-moz-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 }
 
 :-ms-input-placeholder {
-	color: #9e9e9e;
+	color: #f5f5f5;
 }
 
 table {
@@ -1433,6 +1405,43 @@ pre code {
 }
 
 /* stylelint-enable no-duplicate-selectors */
+.o-form-group {
+	-webkit-flex: 1;
+	        flex: 1;
+	-webkit-align-self: auto;
+	        align-self: auto;
+	            -ms-grid-row-align: auto;
+}
+
+.o-form-inline {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+
+.o-form-select > select {
+	border-right: 40px solid #f5f5f5;
+}
+
+.o-form-select:before {
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill-rule="evenodd" style="fill:#757575" d="M12 16c-.297 0-.578-.133-.768-.359l-5-6A1.001 1.001 0 0 1 7 8h10a1 1 0 0 1 .767 1.64l-5 6A1 1 0 0 1 12 16zm-2.865-6L12 13.437l2.865-3.438h-5.73V10z"%3E%3C/path%3E%3C/svg%3E');
+	background-position: center 6px;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	padding: 0.5rem;
+	content: " ";
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.o-form-select:hover:before {
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill-rule="evenodd" style="fill:#258cf4" d="M12 16c-.297 0-.578-.133-.768-.359l-5-6A1.001 1.001 0 0 1 7 8h10a1 1 0 0 1 .767 1.64l-5 6A1 1 0 0 1 12 16zm-2.865-6L12 13.437l2.865-3.438h-5.73V10z"%3E%3C/path%3E%3C/svg%3E');
+	outline: 0;
+	color: #258cf4;
+}
+
 .o-avatar {
 	vertical-align: middle;
 	border: 2px solid #ffffff;
