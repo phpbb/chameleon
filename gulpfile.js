@@ -88,7 +88,7 @@ gulp.task('css', () => {
 			})
 		])
 	)
-	.pipe(stylefmt())
+	// .pipe(stylefmt())
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'
