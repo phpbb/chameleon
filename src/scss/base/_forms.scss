@@ -81,7 +81,7 @@ textarea {
 	border: $input-border-width solid $input-border-color;
 	border-radius: $input-border-radius;
 	color: $input-color;
-	display: block;
+	display: inline-flex;
 	width: 100%;
 	height: $input-height; // [1]
 	padding: $input-padding;
@@ -121,7 +121,7 @@ textarea {
 		color: $input-invalid-color;
 	}
 	@media (min-width: $bp-md) {
-		display: inline-block;
+		display: inline-flex;
 	}
 }
 
@@ -142,7 +142,7 @@ textarea {
 select {
 	@include background-triangle($input-color);
 	background-color: $input-background-color;
-	display: inline-block;
+	display: inline-flex;
 	min-width: ($input-padding * 10);
 	max-width: 100%;
 	padding: $input-padding;
@@ -176,7 +176,7 @@ input[type="color"] {
 //
 input[type="file"],
 input[type="range"] {
-	display: block;
+	display: inline-flex;
 }
 
 input[type="file"],
@@ -206,7 +206,7 @@ input[type="checkbox"] {
 [type="checkbox"] + label,
 [type="radio"] + label {
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
 	margin: 0 $input-padding;
 	padding-left: ($input-padding * 4);
 	cursor: pointer;
