@@ -139,12 +139,21 @@ textarea {
 //    See https://github.com/twbs/bootstrap/issues/19398.
 //
 select {
-	@include background-triangle($input-border-color);
 	background-color: $input-background-color;
+	background-image:
+		linear-gradient(45deg, transparent 50%, $input-border-color 50%),
+		linear-gradient(135deg, $input-border-color 50%, transparent 50%),
+		linear-gradient(to right, $input-border-color, $input-border-color);
 	background-repeat: no-repeat;
-	background-position: right unit(-2) center;
+	background-position:
+		calc(100% - 20px) calc(16px + 2px),
+		calc(100% - 15px) calc(16px + 2px),
+		calc(100% - 40px) 8px;
 	background-origin: content-box;
-	background-size: 9px 6px;
+	background-size:
+		5px 5px,
+		5px 5px,
+		1px 24px;
 	display: inline-block;
 	min-width: ($input-padding * 10);
 	max-width: 100%;
@@ -152,12 +161,18 @@ select {
 
 	&:hover,
 	&:focus {
-		@include background-triangle($input-border-hover-color);
+		background-image:
+			linear-gradient(45deg, transparent 50%, $input-border-hover-color 50%),
+			linear-gradient(135deg, $input-border-hover-color 50%, transparent 50%),
+			linear-gradient(to right, $input-border-hover-color, $input-border-hover-color);
 	}
 
 	&:focus::-ms-value {
-		@include background-triangle($input-border-hover-color);
 		background-color: $input-background-color; // [1]
+		background-image:
+			linear-gradient(45deg, transparent 50%, $input-border-hover-color 50%),
+			linear-gradient(135deg, $input-border-hover-color 50%, transparent 50%),
+			linear-gradient(to right, $input-border-hover-color, $input-border-hover-color);
 		color: $input-color; // [1]
 	}
 
