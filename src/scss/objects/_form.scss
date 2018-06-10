@@ -16,6 +16,9 @@ $form-select-icon-positiony: 4px !default;
 $form-select-icon-offset: 20px !default;
 
 // Theme Variables
+$form-select-border-color: $default-action-bg !default;
+$form-select-border-hover-color: $default-action-bg-hover !default;
+$form-select-icon-color: $default-action-color !default;
 $form-select-icon-color: $default-action-color !default;
 $form-select-icon-hover-color: $default-action-color-hover !default;
 
@@ -34,7 +37,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 
 	&-select {
 		> select {
-			border-right: ($input-padding * 5) solid $input-border-color;
+			border-right: ($input-padding * 5) solid $form-select-border-color;
 		}
 
 		&:before {
@@ -54,6 +57,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		&:hover {
 			&:before {
 				@include background-triangle($form-select-icon-hover-color);
+				border-right: ($input-padding * 5) solid $form-select-border-hover-color;
 				outline: 0;
 				color: #258cf4;
 			}
