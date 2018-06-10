@@ -1796,6 +1796,11 @@ pre code {
 	will-change: transform, opacity;
 }
 
+.o-btn-icon + .o-btn-text,
+.o-btn-text + .o-btn-icon {
+	margin-left: 0.5rem;
+}
+
 .o-btn:active {
 	outline: none;
 }

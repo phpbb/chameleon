@@ -65,6 +65,11 @@ $btn-text-hover-color: $default-link-color !default;
 	-webkit-appearence: none; // google material design
 	will-change: transform, opacity; // google material design
 
+	&-icon + &-text,
+	&-text + &-icon {
+		margin-left: $btn-spacing;
+	}
+
 	// UI states
 	&:active {
 		outline: none;
