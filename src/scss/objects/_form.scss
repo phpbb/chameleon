@@ -11,8 +11,7 @@
 // Layout Variables
 $form-spacing: $default-spacing !default;
 $form-select-icon-size: $default-icon-lg !default;
-$form-select-icon-positionx: 8px !default;
-$form-select-icon-positiony: 4px !default;
+$form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
 
 // Theme Variables
@@ -28,24 +27,25 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 
 .o-form {
 	&-group {
-		@include child();
+		@include vertical-rhythm();
+		display: block;
 	}
 
 	&-inline {
-		@include parent();
+		.o-form-group {
+			display: inline-block;
+		}
 	}
 
 	&-select {
-		> select {
-			border-right: ($input-padding * 5) solid $form-select-border-color;
-		}
+		position: relative;
 
 		&:before {
 			@include background-triangle($form-select-icon-color);
-			background-position: $form-select-icon-positionx $form-select-icon-positiony;
+			background-position: center $form-select-icon-position;
 			position: absolute;
 			top: 0;
-			right: $form-select-icon-offset;
+			right: 0;
 			width: $form-select-icon-size;
 			height: $form-select-icon-size;
 			padding: $form-spacing;
@@ -54,16 +54,17 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 			pointer-events: none;
 		}
 
-		&:hover {
-			> select {
-				border-right: ($input-padding * 5) solid $form-select-border-hover-color;
-			}
-
+		&:hover,
+		&:focus {
 			&:before {
 				@include background-triangle($form-select-icon-hover-color);
 				outline: 0;
 				color: #258cf4;
 			}
 		}
+	}
+
+	&-helptext {
+		margin: ($form-spacing / 2) 0;
 	}
 }

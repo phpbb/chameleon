@@ -33,88 +33,21 @@
 
 				<h1>Form Tests</h1>
 
-				<h2>Input normalization</h2>
+				<h2>Inline Form</h2>
 
-				<form class="form-inline">
-					<legend>An inline form. Check for alignment and input/select sizing.</legend>
-					<fieldset class="form-group">
-						<input type="text" placeholder="text input">
-					</fieldset>
-					<fieldset class="form-group">
-						<input type="search" placeholder="search input">
-					</fieldset>
-					<fieldset class="form-group">
-						<select name="fooselect">
-							<option value="CA">CA</option>
-							<option value="NY">NY</option>
-						</select>
-					</fieldset>
-					<fieldset class="form-group">
-						<button type="submit" class="o-btn">Sign in</button>
-					</fieldset>
-				</form>
-
-				<h2>Default Form</h2>
-
-				<form class="form-inline">
-					<legend>A default inline form.</legend>
-					<fieldset class="form-group">
+				<form class="o-form-inline">
+					<fieldset class="o-form-group">
 						<input type="text" placeholder="Email">
 					</fieldset>
-					<fieldset class="form-group">
+					<fieldset class="o-form-group">
 						<input type="password" placeholder="Password">
 					</fieldset>
-					<fieldset class="form-group">
+					<fieldset class="o-form-group">
 						<input type="checkbox" id="checkbox1" />
 						<label for="checkbox1">Remember me</label>
 					</fieldset>
-					<fieldset class="form-group">
+					<fieldset class="o-form-group">
 						<button type="submit" class="o-btn">Sign in</button>
-					</fieldset>
-				</form>
-
-
-				<h2>Multi-Column Form with Grids</h2>
-
-				<form>
-					<legend>Legend</legend>
-					<fieldset class="o-grid">
-						<div class="o-col o-col-md-3">
-							<label>First Name</label>
-							<input type="text">
-						</div>
-						<div class="o-col o-col-md-3">
-							<label>Password</label>
-							<input type="password">
-						</div>
-						<div class="o-col o-col-md-3">
-							<label>E-Mail</label>
-							<input type="email" required>
-						</div>
-						<div class="o-col o-col-md-2">
-							<label>City</label>
-							<input type="text">
-						</div>
-						<div class="o-col o-col-md-1">
-							<label>State</label>
-							<select>
-								<option>AL</option>
-								<option>CA</option>
-								<option>IL</option>
-								<option>MD</option>
-								<option>NY</option>
-							</select>
-						</div>
-					</fieldset>
-
-					<fieldset class="form-group">
-						<input type="checkbox" id="checkbox2" />
-						<label for="checkbox2">I've read the terms and conditions</label>
-					</fieldset>
-
-					<fieldset class="o-grid">
-						<button type="submit" class="o-btn">Submit</button>
-						<button type="reset" class="o-btn">Reset</button>
 					</fieldset>
 				</form>
 
@@ -123,38 +56,30 @@
 
 				<form>
 					<fieldset>
-						<legend>Legend</legend>
+						<legend>Legend intro text block</legend>
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>First Name</label>
-						<input type="text">
+					<fieldset class="o-form-group">
+						<input type="text" placeholder="First Name">
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>Password</label>
-						<input type="password">
+					<fieldset class="o-form-group">
+						<input type="password" placeholder="Password">
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>
-							E-Mail
-							<span class="o-tag">This is a required field.</span>
-						</label>
-						<input type="email" required>
+					<fieldset class="o-form-group">
+						<input type="email" placeholder="E-Mail">
+						<span class="o-tag o-form-helptext">This is helper text.</span>
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>
-							City
-							<span class="o-tag">This is another required field.</span>
-						</label>
-						<input type="text">
+					<fieldset class="o-form-group">
+						<input type="text" placeholder="City" required>
+						<span class="o-tag o-form-helptext">This is a required field.</span>
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>State</label>
+					<fieldset class="o-form-group o-form-select">
 						<select>
+							<option>Choose State...</option>
 							<option>AL</option>
 							<option>CA</option>
 							<option>IL</option>
@@ -163,70 +88,22 @@
 						</select>
 					</fieldset>
 
-					<fieldset class="form-group">
-						<label>Color</label>
-						<input type="color">
+					<fieldset class="o-form-group">
+						<input type="color" placeholder="Color">
 					</fieldset>
 
-					<fieldset class="form-group">
+					<fieldset class="o-form-group">
 						<input type="checkbox" id="checkbox3" />
 						<label for="checkbox3">I've read the terms and conditions</label>
 					</fieldset>
 
-					<fieldset class="form-group">
+					<fieldset class="o-form-group">
+						<textarea rows="5" cols="40" placeholder="Message..."></textarea>
+					</fieldset>
+
+					<fieldset class="o-form-group">
 						<button type="submit" class="o-btn">Submit</button>
 						<button type="reset" class="o-btn">Reset</button>
-					</fieldset>
-				</form>
-
-
-				<h2>Grouped Inputs</h2>
-
-				<form>
-					<fieldset>
-						<input type="text" placeholder="Username">
-						<input type="text" placeholder="Password">
-						<input type="text" placeholder="Email">
-					</fieldset>
-
-					<fieldset>
-						<input type="text" placeholder="Another Group">
-						<textarea placeholder="Textareas can work here too"></textarea>
-						<input type="text" placeholder="Even More Stuff">
-						<input type="text" placeholder="Last Item">
-					</fieldset>
-
-					<button type="submit" class="o-btn">Sign in</button>
-				</form>
-
-
-				<h2>Dynamic Grouped Inputs</h2>
-
-				<form onsubmit="return false">
-					<script type="text/javascript">
-					function testDynamicGroupAdd() {
-						var g = document.getElementById('test-dynamic-group'),
-						newNode = g.getElementsByTagName('input')[0].cloneNode();
-
-						g.appendChild(newNode);
-					}
-					function testDynamicGroupRemove() {
-						var g = document.getElementById('test-dynamic-group'),
-						nodeCount = g.getElementsByTagName('input').length;
-
-						if (nodeCount > 1) {
-							g.removeChild(g.lastChild);
-						}
-					}
-					</script>
-
-					<fieldset>
-						<button type="submit" class="o-btn" onclick="testDynamicGroupAdd()">Add field</button>
-						<button type="submit" class="o-btn" onclick="testDynamicGroupRemove()">Remove field</button>
-					</fieldset>
-
-					<fieldset id="test-dynamic-group">
-						<input type="text" placeholder="Add or remove fields to test">
 					</fieldset>
 				</form>
 
@@ -234,133 +111,123 @@
 				<h2>Input Sizing</h2>
 
 				<form>
-					<input type="text" placeholder=".input-1"><br/>
-					<input type="text" placeholder=".input-3-4"><br/>
-					<input type="text" placeholder=".input-2-3"><br/>
-					<input type="text" placeholder=".input-1-2"><br/>
-					<input type="text" placeholder=".input-1-3"><br/>
-					<input type="text" placeholder=".input-1-4"><br/>
-				</form>
-
-
-				<form>
-					<fieldset class="o-grid grid-example">
-						<div class="o-col o-col-md-1">
+					<div class="o-row grid-example">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-1">
+						<feildset class="o-form-group o-col o-col-md-1">
 							<input type="text" placeholder=".col-1">
-						</div>
-					</fieldset>
+						</feildset>
+					</div>
 
-					<fieldset class="o-grid grid-example">
-						<div class="o-col o-col-md-2">
+					<div class="o-row grid-example">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-2">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-2">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-2">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-2">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-2">
+						<feildset class="o-form-group o-col o-col-md-2">
 							<input type="text" placeholder=".col-2">
-						</div>
-					</fieldset>
+						</feildset>
+					</div>
 
-					<fieldset class="o-grid grid-example">
-						<div class="o-col o-col-md-3">
+					<div class="o-row grid-example">
+						<feildset class="o-form-group o-col o-col-md-3">
 							<input type="text" placeholder=".col-3">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-3">
+						<feildset class="o-form-group o-col o-col-md-3">
 							<input type="text" placeholder=".col-3">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-3">
+						<feildset class="o-form-group o-col o-col-md-3">
 							<input type="text" placeholder=".col-3">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-3">
+						<feildset class="o-form-group o-col o-col-md-3">
 							<input type="text" placeholder=".col-3">
-						</div>
-					</fieldset>
+						</feildset>
+					</div>
 
-					<fieldset class="o-grid grid-example">
-						<div class="o-col o-col-md-4">
+					<div class="o-row grid-example">
+						<feildset class="o-form-group o-col o-col-md-4">
 							<input type="text" placeholder=".col-4">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-4">
+						<feildset class="o-form-group o-col o-col-md-4">
 							<input type="text" placeholder=".col-4">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-4">
+						<feildset class="o-form-group o-col o-col-md-4">
 							<input type="text" placeholder=".col-4">
-						</div>
-					</fieldset>
+						</feildset>
+					</div>
 
-					<fieldset class="o-grid grid-example">
-						<div class="o-col o-col-md-6">
+					<div class="o-row grid-example">
+						<feildset class="o-form-group o-col o-col-md-6">
 							<input type="text" placeholder=".col-6">
-						</div>
+						</feildset>
 
-						<div class="o-col o-col-md-6">
+						<feildset class="o-form-group o-col o-col-md-6">
 							<input type="text" placeholder=".col-6">
-						</div>
-					</fieldset>
+						</feildset>
+					</div>
 				</form>
 
 
@@ -374,39 +241,21 @@
 				<h2>Disabled Inputs</h2>
 
 				<form>
-					<input type="text" placeholder="Disabled input here..." value="Foo bar baz" disabled>
+					<input type="text" placeholder="Disabled input here..." disabled>
 				</form>
 
 
 				<h2>Readonly Inputs</h2>
 
 				<form>
-					<input type="text" placeholder="Readonly input here..." value="Foo bar baz" readonly>
-				</form>
-
-
-				<h2>Rounded Form</h2>
-
-				<form>
-					<fieldset>
-						<label>Subject</label>
-						<input type="text" placeholder="Subject" />
-					</fieldset>
-
-					<fieldset>
-						<label>Message</label>
-						<textarea rows="5" cols="40" placeholder="Message..."></textarea>
-					</fieldset>
-
-					<button type="submit" class="o-btn">Search</button>
-					<input type="reset" class="o-btn" value="Reset" />
+					<input type="text" placeholder="Readonly input here..." readonly>
 				</form>
 
 
 				<h2>Selects</h2>
 
 				<form>
-					<fieldset>
+					<fieldset class="o-form-group o-form-select">
 						<select>
 							<option>Brazil</option>
 							<option>Canada</option>
@@ -416,7 +265,7 @@
 						</select>
 					</fieldset>
 
-					<fieldset>
+					<fieldset class="o-form-group">
 						<select multiple="multiple">
 							<option>Brazil</option>
 							<option>Canada</option>
@@ -444,19 +293,6 @@
 					<fieldset>
 						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
 						<label for="optionsRadios2">...Or this one!</label>
-					</fieldset>
-				</form>
-
-
-				<h2>Help text</h2>
-
-				<form>
-					<fieldset>
-						<label>
-							Last Name
-							<span class="o-tag">Block help text</span>
-						</label>
-						<input type="text" />
 					</fieldset>
 				</form>
 

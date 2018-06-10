@@ -10,19 +10,19 @@
 
 // Layout Variables
 $input-padding: 8px;
-$input-height: ($input-padding * 5);
+$input-height: $default-height;
 $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
 $input-color: $default-action-icon-color;
-$input-background-color: $white;
+$input-background-color: $default-action-bg;
 $input-border-color: $default-action-bg;
-$input-border-hover-color: $default-action-bg-hover;
+$input-border-hover-color: darken($input-border-color, 10%);
 $input-background-focus-color: $input-background-color;
 $input-border-focus-color: $default-action-bg-hover;
 $input-hover-color: $default-action-color-hover;
-$input-placeholder-color: $default-action-bg;
+$input-placeholder-color: $default-action-icon-color;
 $input-disabled-color: $default-gray-dark;
 $input-invalid-border-color: $default-important-color;
 $input-invalid-color: $default-important-light-color;
@@ -30,20 +30,6 @@ $input-invalid-color: $default-important-light-color;
 
 //
 // #scss
-
-form {
-	span {
-		@include vertical-rhythm();
-		display: block;
-	}
-	@media (min-width: $bp-md) {
-		span {
-			vertical-align: middle;
-			display: inline-block;
-			margin-bottom: 0;
-		}
-	}
-}
 
 //
 // General Form element styling
@@ -78,36 +64,51 @@ form {
 select,
 textarea {
 	background-color: $input-background-color;
-	border: $input-border-width solid $input-border-color;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $input-hover-color 3%);
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	border: none;
+	border-bottom: solid ($input-border-width / 2) $input-border-color;
 	border-radius: $input-border-radius;
 	color: $input-color;
-	display: inline-flex;
+	display: inline-block;
 	width: 100%;
-	height: $input-height; // [1]
-	padding: $input-padding;
-	transition: ease-in-out 0.15s;
+	height: $input-height;
+	padding: ($input-padding * 2.5) ($input-padding * 2) 4;
+	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+	&::placeholder {
+		transform: translateY(-8px);
+	}
 
 	&:hover {
-		border-color: $input-border-hover-color;
+		border-bottom-color: $input-border-hover-color;
 	}
 
 	&:focus {
-		background-color: $input-background-focus-color;
-		border-color: $input-border-focus-color;
+		background-size: 100% 100%;
+		border-color: $input-hover-color;
 		outline: none;
-		color: $input-hover-color;
-	}
+		box-shadow: none;
 
-	&::placeholder {
-		color: $input-placeholder-color;
-		opacity: 1; // [4]
+		&::placeholder {
+			font-size: 11px;
+			color: $input-hover-color;
+			transform: translateY(-20px);
+		}
 	}
 
 	// [6]
 	&:disabled,
 	&[readonly] {
 		background-color: $input-disabled-color;
+		color: $white;
 		opacity: 1; // [5]
+
+		&::placeholder {
+			color: $white;
+		}
+
 	}
 
 	&:disabled {
@@ -120,13 +121,22 @@ textarea {
 		border-color: $input-invalid-border-color;
 		color: $input-invalid-color;
 	}
-	@media (min-width: $bp-md) {
-		display: inline-flex;
-	}
 }
 
 textarea {
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, $input-hover-color 1%);
 	height: auto;
+	padding-top: 24px;
+
+	&::placeholder {
+		transform: translateY(0);
+	}
+
+	&:focus {
+		&::placeholder {
+			transform: translateY(-16px);
+		}
+	}
 }
 
 //
@@ -141,7 +151,7 @@ textarea {
 //
 select {
 	background-color: $input-background-color;
-	display: inline-flex;
+	display: inline-block;
 	min-width: ($input-padding * 10);
 	max-width: 100%;
 	padding: $input-padding;
@@ -175,7 +185,7 @@ input[type="color"] {
 //
 input[type="file"],
 input[type="range"] {
-	display: inline-flex;
+	display: inline-block;
 }
 
 input[type="file"],
@@ -189,7 +199,7 @@ input[type="checkbox"] {
 //
 // Radio & Checkbox elements
 //------------------------------------------------------------------------------
-//
+
 // Remove default checkbox
 //
 [type="checkbox"]:not(:checked),
@@ -198,14 +208,13 @@ input[type="checkbox"] {
 [type="radio"]:checked {
 	opacity: 0;
 	position: absolute;
-	// left: -9999px;
 }
 
 // Default Styles
 [type="checkbox"] + label,
 [type="radio"] + label {
 	position: relative;
-	display: inline-flex;
+	display: inline-block;
 	margin: 0 $input-padding;
 	padding-left: ($input-padding * 4);
 	cursor: pointer;
@@ -214,7 +223,7 @@ input[type="checkbox"] {
 }
 
 [type="checkbox"] + label:before {
-	border: $input-border-width solid $input-border-color;
+	border: $input-border-width solid $input-border-hover-color;
 	border-radius: $input-border-radius;
 	position: absolute;
 	z-index: 0;
@@ -225,34 +234,20 @@ input[type="checkbox"] {
 	margin-top: ($input-padding * 0.25);
 	content: "";
 	transition: 0.2s;
-
-	&:hover {
-		border-color: $input-border-hover-color;
-	}
-
-	&:not(:checked):disabled {
-		background-color: $input-disabled-color;
-		border: none;
-	}
 }
 
-[type="checkbox"]:checked + label:before {
-	border-top: $input-border-width solid transparent;
-	border-right: $input-border-width solid $input-hover-color;
-	border-bottom: $input-border-width solid $input-hover-color;
-	border-left: $input-border-width solid transparent;
-	top: ($input-padding * -0.5);
-	left: -5px;
-	width: ($input-padding * 1.5);
-	height: ($input-padding * 2.75);
-	transform: rotate(40deg);
-	transform-origin: 100% 100%;
-	backface-visibility: hidden;
-
-	&:disabled {
-		border-right: $input-border-width solid $input-disabled-color;
-		border-bottom: $input-border-width solid $input-disabled-color;
-	}
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+	border-radius: 50%;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: ($input-padding * 2);
+	height: ($input-padding * 2);
+	margin: ($input-padding * 0.5) ($input-padding *0.5) ($input-padding * 0.5) 0;
+	content: "";
+	transition: 0.28s ease;
 }
 
 // Indeterminate checkbox
@@ -275,24 +270,11 @@ input[type="checkbox"] {
 	}
 }
 
-[type="radio"] + label:before,
-[type="radio"] + label:after {
-	border-radius: 50%;
-	position: absolute;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	width: ($input-padding * 2);
-	height: ($input-padding * 2);
-	margin: ($input-padding * 0.5) ($input-padding *0.5) ($input-padding * 0.5) 0;
-	content: "";
-	transition: 0.28s ease;
-}
-
+// Not Checked
 [type="radio"]:not(:checked) + label {
 	&:before,
 	&:after {
-		border: $input-border-width solid $input-border-color;
+		border: $input-border-width solid $input-border-hover-color;
 	}
 
 	&:after {
@@ -302,11 +284,21 @@ input[type="checkbox"] {
 	}
 }
 
-[type="radio"]:hover + label:before {
-	border-color: $input-border-hover-color;
+// Checked
+[type="checkbox"]:checked + label:before {
+	border-top: $input-border-width solid transparent;
+	border-right: $input-border-width solid $input-hover-color;
+	border-bottom: $input-border-width solid $input-hover-color;
+	border-left: $input-border-width solid transparent;
+	top: ($input-padding * -0.5);
+	left: -5px;
+	width: ($input-padding * 1.5);
+	height: ($input-padding * 2.75);
+	transform: rotate(40deg);
+	transform-origin: 100% 100%;
+	backface-visibility: hidden;
 }
 
-// Checked
 [type="radio"]:checked + label {
 	&:before {
 		border: $input-border-width solid $input-hover-color;
@@ -320,6 +312,18 @@ input[type="checkbox"] {
 }
 
 // Disabled style
+[type="checkbox"]:disabled {
+	&:checked + label:before {
+		border-right: $input-border-width solid $input-disabled-color;
+		border-bottom: $input-border-width solid $input-disabled-color;
+	}
+
+	&:not(:checked) + label:before {
+		background-color: $input-disabled-color;
+		border: none;
+	}
+}
+
 [type="radio"]:disabled {
 	+ label {
 		color: $input-disabled-color;
@@ -336,6 +340,11 @@ input[type="checkbox"] {
 	}
 }
 
+// Hover
+[type="checkbox"]:hover:not(:checked) + label:before,
+[type="radio"]:hover + label:before {
+	border-color: darken($input-border-hover-color, 10%);
+}
 
 //
 // Placeholder Colour
