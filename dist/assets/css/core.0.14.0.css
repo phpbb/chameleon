@@ -514,11 +514,11 @@ fieldset {
 legend {
 	font-size: 1.5rem;
 	font-weight: 400;
-	line-height: 2;
+	line-height: 1.5;
 	letter-spacing: normal;
 	display: block;
 	width: 100%;
-	margin: 0 0 1rem;
+	margin: 0 0 1.5rem;
 }
 
 input,
@@ -784,6 +784,11 @@ ol {
 	font-weight: 400;
 	line-height: 1.25;
 	letter-spacing: 0.04em;
+}
+
+legend {
+	line-height: 1.5;
+	margin: 0 0 1.5rem;
 }
 
 [type="date"],
@@ -1652,6 +1657,7 @@ pre code {
 }
 
 .o-form-group {
+	position: relative;
 	display: block;
 	margin: 0 0 1.5rem;
 }
@@ -1686,6 +1692,26 @@ pre code {
 
 .o-form-helptext {
 	margin: 0.25rem 0;
+}
+
+.o-form-icon {
+	color: #757575;
+	position: absolute;
+	right: auto;
+	bottom: 16px;
+	left: 16px;
+}
+
+.o-form-icon + [type="text"] {
+	padding-left: 3.125rem;
+}
+
+.o-col .o-form-icon {
+	left: 32px;
+}
+
+.o-col.o-form-select:before {
+	right: 16px;
 }
 
 .o-avatar {
@@ -1756,15 +1782,14 @@ pre code {
 }
 
 .o-btn {
-	font-size: 0.875rem;
-	font-weight: 500;
+	font-size: 1rem;
+	font-weight: 700;
 	-webkit-font-smoothing: antialiased;
-	line-height: inherit;
+	line-height: 1.5;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	letter-spacing: 0.08929em;
-	text-transform: uppercase;
+	letter-spacing: 0.04em;
 	background-color: #f5f5f5;
 	border: none;
 	border-radius: 2px;

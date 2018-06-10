@@ -43,10 +43,10 @@ fieldset {
 }
 
 legend {
-	@include type(headline);
+	@include type(headline, $lh: 1.5);
 	display: block;
 	width: 100%;
-	margin: 0 0 $base-double-spacing;
+	@include vertical-rhythm();
 }
 
 //

@@ -31,6 +31,11 @@ $input-invalid-color: $default-important-light-color;
 //
 // #scss
 
+legend {
+	line-height: unitless($default-line-height);
+	@include vertical-rhythm();
+}
+
 //
 // General Form element styling
 //------------------------------------------------------------------------------

@@ -10,6 +10,7 @@
 
 // Layout Variables
 $form-spacing: $default-spacing !default;
+$form-icon-size: $default-icon-sm !default;
 $form-select-icon-size: $default-icon-lg !default;
 $form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
@@ -17,8 +18,7 @@ $form-select-icon-offset: 20px !default;
 // Theme Variables
 $form-select-border-color: $default-action-bg !default;
 $form-select-border-hover-color: $default-action-bg-hover !default;
-$form-select-icon-color: $default-action-color !default;
-$form-select-icon-color: $default-action-color !default;
+$form-icon-color: $default-action-color !default;
 $form-select-icon-hover-color: $default-action-color-hover !default;
 
 
@@ -27,6 +27,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 
 .o-form {
 	&-group {
+		position: relative;
 		@include vertical-rhythm();
 		display: block;
 	}
@@ -41,7 +42,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		position: relative;
 
 		&:before {
-			@include background-triangle($form-select-icon-color);
+			@include background-triangle($form-icon-color);
 			background-position: center $form-select-icon-position;
 			position: absolute;
 			top: 0;
@@ -67,4 +68,26 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 	&-helptext {
 		margin: ($form-spacing / 2) 0;
 	}
+
+	&-icon {
+		color: $form-icon-color;
+		position: absolute;
+		right: auto;
+		bottom: ($form-spacing * 2);
+		left: ($form-spacing * 2);
+
+		+ [type="text"] {
+			padding-left: ($form-icon-size + ($form-spacing * 4));
+		}
+	}
+}
+
+
+// Fix weird bug caused by current grid system
+.o-col .o-form-icon {
+	left: ($form-spacing * 4);
+}
+
+.o-col.o-form-select:before {
+	right: ($form-spacing * 2);
 }
