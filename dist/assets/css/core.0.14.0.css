@@ -813,7 +813,7 @@ textarea {
 	display: inline-block;
 	width: 100%;
 	height: 56px;
-	padding: 1.25rem 1rem 4;
+	padding: 1.25rem 1rem 0;
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 

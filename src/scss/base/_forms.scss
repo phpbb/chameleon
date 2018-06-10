@@ -74,7 +74,7 @@ textarea {
 	display: inline-block;
 	width: 100%;
 	height: $input-height;
-	padding: ($input-padding * 2.5) ($input-padding * 2) 4;
+	padding: ($input-padding * 2.5) ($input-padding * 2) 0;
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
 	&::placeholder {
