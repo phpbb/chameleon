@@ -55,9 +55,12 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		}
 
 		&:hover {
+			> select {
+				border-right: ($input-padding * 5) solid $form-select-border-hover-color;
+			}
+
 			&:before {
 				@include background-triangle($form-select-icon-hover-color);
-				border-right: ($input-padding * 5) solid $form-select-border-hover-color;
 				outline: 0;
 				color: #258cf4;
 			}
