@@ -10,7 +10,9 @@
 
 // Layout Variables
 $form-spacing: $default-spacing !default;
-$form-select-icon-offset: 20px !default;
+$form-select-icon-size: $default-icon-lg !default;
+$form-select-icon-offsetx: 8px !default;
+$form-select-icon-offsety: 4px !default;
 $form-select-icon-position: 6px !default;
 
 // Theme Variables
@@ -37,10 +39,12 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 
 		&:before {
 			@include background-triangle($form-select-icon-color);
-			background-position: center $form-select-icon-position;
+			background-position: $form-select-icon-offsetx $form-select-icon-offsety;
 			position: absolute;
 			top: 0;
 			right: $form-select-icon-offset;
+			width: $form-select-icon-size;
+			height: $form-select-icon-size;
 			padding: $form-spacing;
 			content: " ";
 			transition: 0.5s;
