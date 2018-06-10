@@ -140,7 +140,6 @@ textarea {
 //    See https://github.com/twbs/bootstrap/issues/19398.
 //
 select {
-	@include background-triangle($input-color);
 	background-color: $input-background-color;
 	display: inline-flex;
 	min-width: ($input-padding * 10);
@@ -239,8 +238,8 @@ input[type="checkbox"] {
 
 [type="checkbox"]:checked + label:before {
 	border-top: $input-border-width solid transparent;
-	border-right: $input-border-width solid $input-border-hover-color;
-	border-bottom: $input-border-width solid $input-border-hover-color;
+	border-right: $input-border-width solid $input-hover-color;
+	border-bottom: $input-border-width solid $input-hover-color;
 	border-left: $input-border-width solid transparent;
 	top: ($input-padding * -0.5);
 	left: -5px;
@@ -310,11 +309,11 @@ input[type="checkbox"] {
 // Checked
 [type="radio"]:checked + label {
 	&:before {
-		border: $input-border-width solid $input-border-hover-color;
+		border: $input-border-width solid $input-hover-color;
 	}
 
 	&:after {
-		background-color: $input-border-hover-color;
+		background-color: $input-hover-color;
 		z-index: 0;
 		transform: scale(0.5) opacity(1);
 	}
