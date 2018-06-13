@@ -32,9 +32,16 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		display: block;
 	}
 
-	&-inline {
-		.o-form-group {
-			display: inline-block;
+	&-row {
+		@include parent();
+		flex-wrap: wrap;
+		margin-right: -($form-spacing * 2.5);
+
+		@media (min-width: $bp-sm) {
+			.o-form-group {
+				flex-grow: 1;
+				margin-right: ($form-spacing * 2.5);
+			}
 		}
 	}
 
@@ -80,14 +87,4 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 			padding-left: ($form-icon-size + ($form-spacing * 4));
 		}
 	}
-}
-
-
-// Fix weird bug caused by current grid system
-.o-col .o-form-icon {
-	left: ($form-spacing * 4);
-}
-
-.o-col.o-form-select:before {
-	right: ($form-spacing * 2);
 }

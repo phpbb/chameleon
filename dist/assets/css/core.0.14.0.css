@@ -1662,8 +1662,22 @@ pre code {
 	margin: 0 0 1.5rem;
 }
 
-.o-form-inline .o-form-group {
-	display: inline-block;
+.o-form-row {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	margin-right: -1.25rem;
+}
+
+@media (min-width: 576px) {
+	.o-form-row .o-form-group {
+		-webkit-flex-grow: 1;
+		        flex-grow: 1;
+		margin-right: 1.25rem;
+	}
 }
 
 .o-form-select {
@@ -1704,14 +1718,6 @@ pre code {
 
 .o-form-icon + [type="text"] {
 	padding-left: 3.125rem;
-}
-
-.o-col .o-form-icon {
-	left: 32px;
-}
-
-.o-col.o-form-select:before {
-	right: 16px;
 }
 
 .o-avatar {
