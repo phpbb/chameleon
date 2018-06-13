@@ -35,12 +35,12 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 	&-row {
 		@include parent();
 		flex-wrap: wrap;
-		margin-right: -($form-spacing * 2.5);
+		margin-right: -($form-spacing * 3);
 
 		@media (min-width: $bp-sm) {
 			.o-form-group {
 				flex-grow: 1;
-				margin-right: ($form-spacing * 2.5);
+				margin-right: ($form-spacing * 3);
 			}
 		}
 	}
