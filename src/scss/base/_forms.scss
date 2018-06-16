@@ -9,7 +9,7 @@
 // #settings
 
 // Layout Variables
-$input-padding: 8px;
+$input-padding: $default-spacing;
 $input-height: $default-height;
 $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
@@ -82,10 +82,6 @@ textarea {
 	padding: ($input-padding * 2.5) ($input-padding * 2) 0;
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
-	&::placeholder {
-		transform: translateY(-8px);
-	}
-
 	&:hover {
 		border-bottom-color: $input-border-hover-color;
 	}
@@ -95,12 +91,6 @@ textarea {
 		border-color: $input-hover-color;
 		outline: none;
 		box-shadow: none;
-
-		&::placeholder {
-			font-size: 11px;
-			color: $input-hover-color;
-			transform: translateY(-20px);
-		}
 	}
 
 	// [6]
@@ -131,17 +121,7 @@ textarea {
 textarea {
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, $input-hover-color 1%);
 	height: auto;
-	padding-top: 24px;
-
-	&::placeholder {
-		transform: translateY(0);
-	}
-
-	&:focus {
-		&::placeholder {
-			transform: translateY(-16px);
-		}
-	}
+	padding-top: ($input-padding * 4);
 }
 
 //
@@ -201,160 +181,205 @@ input[type="checkbox"] {
 	}
 }
 
+
 //
-// Radio & Checkbox elements
+// Checkbox element styling
 //------------------------------------------------------------------------------
-
-// Remove default checkbox
 //
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked,
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
-	opacity: 0;
-	position: absolute;
-}
-
-// Default Styles
-[type="checkbox"] + label,
-[type="radio"] + label {
-	position: relative;
-	display: inline-block;
-	margin: 0 $input-padding;
-	padding-left: ($input-padding * 4);
-	cursor: pointer;
-	user-select: none;
-	transition: 0.28s ease;
-}
-
-[type="checkbox"] + label:before {
-	border: $input-border-width solid $input-border-hover-color;
-	border-radius: $input-border-radius;
-	position: absolute;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	width: ($input-padding * 2.5);
-	height: ($input-padding * 2.5);
-	margin-top: ($input-padding * 0.25);
-	content: "";
-	transition: 0.2s;
-}
-
-[type="radio"] + label:before,
-[type="radio"] + label:after {
-	border-radius: 50%;
-	position: absolute;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	width: ($input-padding * 2);
-	height: ($input-padding * 2);
-	margin: ($input-padding * 0.5) ($input-padding *0.5) ($input-padding * 0.5) 0;
-	content: "";
-	transition: 0.28s ease;
-}
-
-// Indeterminate checkbox
-[type="checkbox"]:indeterminate + label:before {
-	border-top: none;
-	border-right: $input-border-width solid $input-invalid-border-color;
-	border-bottom: none;
-	border-left: none;
-	top: -11px;
-	left: ($input-padding * -1.5);
-	height: ($input-padding * 2.25);
-	transform: rotate(90deg);
-	transform-origin: 100% 100%;
-	backface-visibility: hidden;
-
-	// Disabled indeterminate
-	&:disabled {
-		background-color: transparent;
-		border-right: $input-border-width solid $input-disabled-color;
-	}
-}
-
-// Not Checked
-[type="radio"]:not(:checked) + label {
-	&:before,
-	&:after {
-		border: $input-border-width solid $input-border-hover-color;
-	}
-
-	&:after {
+// 1. Remove the default browser styling.
+// 2. Apply our own default styling.
+// 3. Apply styling for the not checked state.
+// 4. Apply styling for the checked state.
+// 5. Apply styling for on hover state.
+// 6. Apply styling for on disabled state.
+//
+[type="checkbox"] {
+	//[1]
+	&:not(:checked),
+	:checked {
 		opacity: 0;
-		z-index: -1;
-		transform: scale(2);
-	}
-}
-
-// Checked
-[type="checkbox"]:checked + label:before {
-	border-top: $input-border-width solid transparent;
-	border-right: $input-border-width solid $input-hover-color;
-	border-bottom: $input-border-width solid $input-hover-color;
-	border-left: $input-border-width solid transparent;
-	top: ($input-padding * -0.5);
-	left: -5px;
-	width: ($input-padding * 1.5);
-	height: ($input-padding * 2.75);
-	transform: rotate(40deg);
-	transform-origin: 100% 100%;
-	backface-visibility: hidden;
-}
-
-[type="radio"]:checked + label {
-	&:before {
-		border: $input-border-width solid $input-hover-color;
+		position: absolute;
 	}
 
-	&:after {
-		background-color: $input-hover-color;
-		z-index: 0;
-		transform: scale(0.5) opacity(1);
-	}
-}
-
-// Disabled style
-[type="checkbox"]:disabled {
-	&:checked + label:before {
-		border-right: $input-border-width solid $input-disabled-color;
-		border-bottom: $input-border-width solid $input-disabled-color;
-	}
-
-	&:not(:checked) + label:before {
-		background-color: $input-disabled-color;
-		border: none;
-	}
-}
-
-[type="radio"]:disabled {
+	// [2]
 	+ label {
-		color: $input-disabled-color;
+		position: relative;
+		display: inline-block;
+		margin: 0 $input-padding;
+		padding-left: ($input-padding * 4);
+		cursor: pointer;
+		user-select: none;
+		transition: 0.28s ease;
+
+		&:before {
+			border: $input-border-width solid $input-border-hover-color;
+			border-radius: $input-border-radius;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			width: ($input-padding * 2.5);
+			height: ($input-padding * 2.5);
+			margin-top: ($input-padding * 0.25);
+			content: "";
+			transition: 0.2s;
+		}
 	}
 
-	&:checked + label:before,
-	&:not(:checked) + label:before {
-		border: $input-border-width solid $input-disabled-color;
+	// [3]
+	&:indeterminate + label:before {
+		border-top: none;
+		border-right: $input-border-width solid $input-invalid-border-color;
+		border-bottom: none;
+		border-left: none;
+		top: -11px;
+		left: ($input-padding * -1.5);
+		height: ($input-padding * 2.25);
+		transform: rotate(90deg);
+		transform-origin: 100% 100%;
+		backface-visibility: hidden;
+
+		// Disabled indeterminate
+		&:disabled {
+			background-color: transparent;
+			border-right: $input-border-width solid $input-disabled-color;
+		}
 	}
 
-	:checked + label:after {
-		background-color: $input-disabled-color;
-		border: none;
+	// [4]
+	&:checked + label:before {
+		border-top: $input-border-width solid transparent;
+		border-right: $input-border-width solid $input-hover-color;
+		border-bottom: $input-border-width solid $input-hover-color;
+		border-left: $input-border-width solid transparent;
+		top: ($input-padding * -0.5);
+		left: -5px;
+		width: ($input-padding * 1.5);
+		height: ($input-padding * 2.75);
+		transform: rotate(40deg);
+		transform-origin: 100% 100%;
+		backface-visibility: hidden;
+	}
+	// [5]
+
+	&:hover:not(:checked) + label:before {
+		border-color: darken($input-border-hover-color, 10%);
+	}
+
+	// [6]
+	&:disabled {
+		&:checked + label:before {
+			border-right: $input-border-width solid $input-disabled-color;
+			border-bottom: $input-border-width solid $input-disabled-color;
+		}
+
+		&:not(:checked) + label:before {
+			background-color: $input-disabled-color;
+			border: none;
+		}
 	}
 }
 
-// Hover
-[type="checkbox"]:hover:not(:checked) + label:before,
-[type="radio"]:hover + label:before {
-	border-color: darken($input-border-hover-color, 10%);
+
+//
+// Radio element styling
+//------------------------------------------------------------------------------
+//
+// 1. Remove the default browser styling.
+// 2. Apply our own default styling.
+// 3. Apply styling for the not checked state.
+// 4. Apply styling for the checked state.
+// 5. Apply styling for on hover state.
+// 6. Apply styling for on disabled state.
+//
+[type="radio"] {
+	//[1]
+	&:not(:checked),
+	:checked {
+		opacity: 0;
+		position: absolute;
+	}
+
+	// [2]
+	+ label {
+		position: relative;
+		display: inline-block;
+		margin: 0 $input-padding;
+		padding-left: ($input-padding * 4);
+		cursor: pointer;
+		user-select: none;
+		transition: 0.28s ease;
+
+		&:before,
+		&:after {
+			border-radius: 50%;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			width: ($input-padding * 2);
+			height: ($input-padding * 2);
+			margin: ($input-padding * 0.5) ($input-padding *0.5) ($input-padding * 0.5) 0;
+			content: "";
+			transition: 0.28s ease;
+		}
+	}
+
+	// [3]
+	&:not(:checked) + label {
+		&:before,
+		&:after {
+			border: $input-border-width solid $input-border-hover-color;
+		}
+
+		&:after {
+			opacity: 0;
+			z-index: -1;
+			transform: scale(2);
+		}
+	}
+
+	// [4]
+	&:checked + label {
+		&:before {
+			border: $input-border-width solid $input-hover-color;
+		}
+
+		&:after {
+			background-color: $input-hover-color;
+			z-index: 0;
+			transform: scale(0.5) opacity(1);
+		}
+	}
+
+	// [5]
+	&:hover + label:before {
+		border-color: darken($input-border-hover-color, 10%);
+	}
+
+	// [6]
+	&:disabled {
+		+ label {
+			color: $input-disabled-color;
+		}
+
+		&:checked + label:before,
+		&:not(:checked) + label:before {
+			border: $input-border-width solid $input-disabled-color;
+		}
+
+		:checked + label:after {
+			background-color: $input-disabled-color;
+			border: none;
+		}
+	}
 }
+
 
 //
 // Placeholder Colour
 //------------------------------------------------------------------------------
-//
+
 ::-webkit-input-placeholder {
 	color: $input-placeholder-color;
 }
