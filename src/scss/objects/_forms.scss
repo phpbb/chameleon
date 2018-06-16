@@ -82,6 +82,10 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		margin-left: ($form-spacing * 2);
 		will-change: transform;
 
+		textarea + & {
+			top: ($form-spacing * 1.5);
+		}
+
 		input:focus + &,
 		textarea:focus + & {
 			font-size: 11px;

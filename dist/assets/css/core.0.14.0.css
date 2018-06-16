@@ -1531,6 +1531,10 @@ pre code {
 	will-change: transform;
 }
 
+textarea + .o-form-floating-label {
+	top: 12px;
+}
+
 input:focus + .o-form-floating-label,
 textarea:focus + .o-form-floating-label {
 	font-size: 0.6875rem;
