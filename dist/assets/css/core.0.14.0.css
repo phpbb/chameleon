@@ -1115,7 +1115,7 @@ select {
 	display: inline-block;
 	min-width: 80px;
 	max-width: 100%;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	cursor: pointer;
 }
 
@@ -1510,7 +1510,7 @@ pre code {
 	right: 0;
 	width: 56px;
 	height: 56px;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem;
 	content: " ";
 	transition: 0.5s;
 	pointer-events: none;
@@ -1531,7 +1531,7 @@ pre code {
 }
 
 textarea + .o-form-floating-label {
-	top: 12px;
+	top: 24px;
 }
 
 input:focus + .o-form-floating-label,

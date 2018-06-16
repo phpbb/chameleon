@@ -139,7 +139,7 @@ select {
 	display: inline-block;
 	min-width: ($input-padding * 10);
 	max-width: 100%;
-	padding: $input-padding;
+	padding: $input-padding ($input-padding * 2);
 	cursor: pointer;
 
 	&:focus::-ms-value {

@@ -59,7 +59,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 			right: 0;
 			width: $form-select-icon-size;
 			height: $form-select-icon-size;
-			padding: $form-spacing ($form-spacing * 2);
+			padding: $form-spacing;
 			content: " ";
 			transition: 0.5s;
 			pointer-events: none;
@@ -83,7 +83,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 		will-change: transform;
 
 		textarea + & {
-			top: ($form-spacing * 1.5);
+			top: ($form-spacing * 3);
 		}
 
 		input:focus + &,
