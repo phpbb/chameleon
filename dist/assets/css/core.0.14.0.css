@@ -1107,7 +1107,7 @@ textarea:focus:invalid {
 textarea {
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, #258cf4 1%);
 	height: auto;
-	padding-top: 2rem;
+	padding-top: 1.5rem;
 }
 
 select {
@@ -1234,8 +1234,7 @@ input[type="checkbox"]:focus:invalid:focus {
 	border: none;
 }
 
-[type="radio"]:not(:checked),
-[type="radio"] :checked {
+[type="radio"]:not(:checked), [type="radio"]:checked {
 	opacity: 0;
 	position: absolute;
 }
