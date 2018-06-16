@@ -11,5 +11,6 @@ cache:
   - node_modules # NPM packages
 install: npm install
 before_script:
+    - npm install -g gulp-cli
     - npm install -g gulp
 script:
