@@ -1511,7 +1511,7 @@ pre code {
 	right: 0;
 	width: 56px;
 	height: 56px;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	content: " ";
 	transition: 0.5s;
 	pointer-events: none;

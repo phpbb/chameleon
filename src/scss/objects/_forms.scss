@@ -59,7 +59,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 			right: 0;
 			width: $form-select-icon-size;
 			height: $form-select-icon-size;
-			padding: $form-spacing;
+			padding: $form-spacing ($form-spacing * 2);
 			content: " ";
 			transition: 0.5s;
 			pointer-events: none;
