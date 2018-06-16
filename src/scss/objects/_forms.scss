@@ -11,7 +11,7 @@
 // Layout Variables
 $form-spacing: $default-spacing !default;
 $form-icon-size: $default-icon-sm !default;
-$form-select-icon-size: $default-icon-lg !default;
+$form-select-icon-size: $default-height !default;
 $form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
 
@@ -19,6 +19,8 @@ $form-select-icon-offset: 20px !default;
 $form-select-border-color: $default-action-bg !default;
 $form-select-border-hover-color: $default-action-bg-hover !default;
 $form-icon-color: $default-action-color !default;
+$form-label-color: $default-action-color !default;
+$form-active-color: $default-action-color-hover !default;
 $form-select-icon-hover-color: $default-action-color-hover !default;
 
 
@@ -50,6 +52,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 
 		&:before {
 			@include background-triangle($form-icon-color);
+			background-repeat: no-repeat;
 			background-position: center $form-select-icon-position;
 			position: absolute;
 			top: 0;
@@ -67,8 +70,27 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 			&:before {
 				@include background-triangle($form-select-icon-hover-color);
 				outline: 0;
-				color: #258cf4;
+				color: $form-active-color;
 			}
+		}
+	}
+
+	&-floating-label {
+		color: $form-label-color;
+		position: absolute;
+		bottom: 0;
+		margin-left: ($form-spacing * 2);
+		will-change: transform;
+
+		input:focus + &,
+		textarea:focus + & {
+			font-size: 11px;
+			color: $form-active-color;
+			transform: translateY(-($form-spacing * 2));
+		}
+
+		.o-form-group-with-icon & {
+			margin-left: ($form-spacing * 6.5);
 		}
 	}
 
