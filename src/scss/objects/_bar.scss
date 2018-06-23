@@ -286,12 +286,14 @@ $bar-badge-bg-color: $default-important-color !default;
 		&-feild {
 			@include type(subhead2, $lh: 1.5, $fw: 700);
 			background-color: transparent;
+			background-image: none;
 			border: 0;
 			color: $bar-color;
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
 			height: $bar-height;
+			padding: ($bar-spacing * 2);
 
 			&:hover,
 			&:focus {

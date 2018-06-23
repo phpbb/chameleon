@@ -3203,6 +3203,7 @@ textarea:focus + .o-form-floating-label {
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	background-color: transparent;
+	background-image: none;
 	border: 0;
 	color: #757575;
 	display: -webkit-inline-flex;
@@ -3212,6 +3213,7 @@ textarea:focus + .o-form-floating-label {
 	-webkit-align-items: center;
 	        align-items: center;
 	height: 56px;
+	padding: 1rem;
 }
 
 .o-bar-search-feild:hover, .o-bar-search-feild:focus {
