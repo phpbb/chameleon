@@ -1149,8 +1149,7 @@ input[type="checkbox"]:focus:invalid:focus {
 	outline-color: #e23936;
 }
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"] :checked {
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
 	opacity: 0;
 	position: absolute;
 }
