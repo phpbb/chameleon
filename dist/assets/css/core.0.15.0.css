@@ -674,70 +674,69 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-	font-size: 3.5rem;
+	font-size: 3.75rem;
 	font-size: 60%;
-	font-weight: 400;
-	line-height: 3.5;
-	letter-spacing: -0.02em;
-	opacity: 0.54;
+	font-weight: 300;
+	line-height: true;
+	letter-spacing: -0.0083333333em;
 	display: block;
 }
 
 h1 {
-	font-size: 3.5rem;
-	font-weight: 400;
-	line-height: 3.5;
-	letter-spacing: -0.02em;
+	font-size: 3.75rem;
+	font-weight: 300;
+	line-height: 3.75rem;
+	letter-spacing: -0.0083333333em;
 }
 
 h2 {
-	font-size: 2.8125rem;
+	font-size: 3rem;
 	font-weight: 400;
-	line-height: 3;
+	line-height: 3.125rem;
 	letter-spacing: normal;
 }
 
 h3 {
 	font-size: 2.125rem;
 	font-weight: 400;
-	line-height: 2.5;
-	letter-spacing: normal;
+	line-height: 2.5rem;
+	letter-spacing: 0.0073529412em;
 }
 
 h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
-	line-height: 2;
+	line-height: 2rem;
 	letter-spacing: normal;
 }
 
 h5 {
 	font-size: 1.25rem;
 	font-weight: 500;
-	line-height: 2;
-	letter-spacing: 0.02em;
+	line-height: 2rem;
+	letter-spacing: 0.0125em;
 }
 
 h6 {
 	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.75;
-	letter-spacing: 0.04em;
+	font-weight: 300;
+	line-height: 1.75rem;
+	letter-spacing: 0.009375em;
 }
 
 p {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: 0.04em;
+	line-height: 1.5rem;
+	letter-spacing: 0.03125em;
 }
 
 blockquote {
 	font-size: 1.5rem;
-	font-weight: 100;
+	font-weight: 400;
 	font-style: italic;
-	line-height: normal;
-	letter-spacing: 0.02em;
+	line-height: 2rem;
+	letter-spacing: normal;
 	position: relative;
 	margin-left: 3rem;
 }
@@ -767,23 +766,23 @@ mark {
 cite {
 	font-size: 0.75rem;
 	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.08em;
+	line-height: 1.25rem;
+	letter-spacing: 0.0333333333em;
 }
 
 address {
 	font-size: 0.875rem;
 	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.04em;
+	line-height: 1.25rem;
+	letter-spacing: 0.0178571429em;
 }
 
 ul,
 ol {
 	font-size: 0.875rem;
 	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.04em;
+	line-height: 1.25rem;
+	letter-spacing: 0.0178571429em;
 }
 
 legend {
@@ -1321,11 +1320,11 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 table {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 500;
-	line-height: 1.5;
+	line-height: 1.5rem;
 	white-space: nowrap;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.03125em;
 	background-color: #ffffff;
 	border: 1px solid #e0e0e0;
 	display: block;
@@ -1373,11 +1372,11 @@ table td {
 }
 
 table th {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 500;
-	line-height: 1.5;
+	line-height: 1.5rem;
 	vertical-align: bottom;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.03125em;
 	text-overflow: ellipsis;
 	color: #757575;
 	padding-bottom: 0.5rem;
@@ -1458,7 +1457,7 @@ pre code {
 	text-align: center;
 	vertical-align: middle;
 	white-space: nowrap;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.0333333333em;
 	background-color: #7b929d;
 	border-radius: 2px;
 	color: #ffffff;
@@ -1636,7 +1635,7 @@ textarea:focus + .o-form-floating-label {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	background-color: #f5f5f5;
 	border: none;
 	border-radius: 2px;
@@ -2710,9 +2709,9 @@ textarea:focus + .o-form-floating-label {
 
 .o-list {
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 	margin: 0;
 	padding: 0;
@@ -2764,9 +2763,9 @@ textarea:focus + .o-form-floating-label {
 .o-list-secondary {
 	font-size: 0.875rem;
 	font-weight: 400;
-	line-height: 1.25;
+	line-height: 1.25rem;
 	text-decoration: inherit;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.0178571429em;
 	text-transform: inherit;
 }
 
@@ -2801,9 +2800,9 @@ textarea:focus + .o-form-floating-label {
 .o-list-meta-secondary {
 	font-size: 0.875rem;
 	font-weight: 400;
-	line-height: 1.25;
+	line-height: 1.25rem;
 	text-decoration: inherit;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.0178571429em;
 	text-transform: inherit;
 }
 
@@ -2975,7 +2974,7 @@ textarea:focus + .o-form-floating-label {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	color: #757575;
 	position: relative;
 	display: -webkit-inline-flex;
@@ -3053,7 +3052,7 @@ textarea:focus + .o-form-floating-label {
 	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.0125em;
 	display: inline-flex;
 	display: -webkit-inline-flex;
 	float: left;
@@ -3083,18 +3082,18 @@ textarea:focus + .o-form-floating-label {
 }
 
 .o-bar-user {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.35;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.03125em;
 	padding: 0 1rem 0 0;
 }
 
 .o-bar-user-title {
 	font-size: 0.75rem;
 	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.08em;
+	line-height: 1.25rem;
+	letter-spacing: 0.0333333333em;
 	color: #212121;
 	opacity: 0.54;
 	display: block;
@@ -3158,7 +3157,7 @@ textarea:focus + .o-form-floating-label {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	color: #258cf4;
 	display: inline-flex;
 	display: -webkit-inline-flex;
@@ -3178,7 +3177,7 @@ textarea:focus + .o-form-floating-label {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	color: #757575;
 	display: -webkit-inline-flex;
 	display: inline-flex;
@@ -3200,7 +3199,7 @@ textarea:focus + .o-form-floating-label {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.009375em;
 	background-color: transparent;
 	background-image: none;
 	border: 0;
@@ -3220,4 +3219,4 @@ textarea:focus + .o-form-floating-label {
 	color: #258cf4;
 }
 
-/*# sourceMappingURL=core.0.14.0.css.map */
+/*# sourceMappingURL=core.0.15.0.css.map */

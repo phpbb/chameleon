@@ -43,7 +43,7 @@ fieldset {
 }
 
 legend {
-	@include type(headline, $lh: 1.5);
+	@include type(headline5, $lh: 1.5);
 	display: block;
 	width: 100%;
 	@include vertical-rhythm();

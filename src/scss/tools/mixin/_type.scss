@@ -18,132 +18,111 @@ $type-font-weight: (
 );
 
 $type-styles: (
-	display4: (
-		font-size: 112px,
-		letter-spacing: -0.04em,
+	headline1: (
+		font-size: 6rem, // 96px
+		letter-spacing: letterSpacing(-1.5, 6),
 		font-weight: map-get($type-font-weight, light),
-		line-height: 7,
-		opacity: 0.54
+		line-height: 6rem
 	),
-	display3: (
-		font-size: 56px,
-		letter-spacing: -0.02em,
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 3.5,
-		opacity: 0.54
+	headline2: (
+		font-size: 3.75rem, // 60px
+		letter-spacing: letterSpacing(-0.5, 3.75),
+		font-weight: map-get($type-font-weight, light),
+		line-height: 3.75rem
 	),
-	display2: (
-		font-size: 45px,
+	headline3: (
+		font-size: 3rem, // 48px
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: 3,
-		opacity: 0.54
+		line-height: 3.125rem // 50px
 	),
-	display1: (
-		font-size: 34px,
+	headline4: (
+		font-size: 2.125rem, // 34px
+		letter-spacing: letterSpacing(0.25, 2.125),
+		font-weight: map-get($type-font-weight, regular),
+		line-height: 2.5rem // 40px
+	),
+	headline5: (
+		font-size: 1.5rem, // 24px
 		letter-spacing: normal,
 		font-weight: map-get($type-font-weight, regular),
-		line-height: 2.5,
-		opacity: 0.87
-	),
-	headline: (
-		font-size: 24px,
-		letter-spacing: normal,
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 2,
-		opacity: 0.87
+		line-height: 2rem // 32px
 	),
 	title: (
-		font-size: 20px,
-		letter-spacing: 0.02em,
+		font-size: 1.25rem, // 20px
+		letter-spacing: letterSpacing(0.25, 1.25),
 		font-weight: map-get($type-font-weight, medium),
-		line-height: 2,
-		opacity: 0.87
+		line-height: 2rem // 32px
 	),
-	subhead2: (
-		font-size: 16px,
-		letter-spacing: 0.04em,
+	subtitle1: (
+		font-size: 1rem, // 16px
+		letter-spacing: letterSpacing(0.15, 1),
+		font-weight: map-get($type-font-weight, light),
+		line-height: 1.75rem // 28px
+	),
+	subtitle2: (
+		font-size: 0.875rem, // 14px
+		letter-spacing: letterSpacing(0.1, 0.875),
 		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.75,
-		opacity: 0.87
-	),
-	subhead1: (
-		font-size: 15px,
-		letter-spacing: 0.04em,
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.5,
-		opacity: 0.87
-	),
-	body2: (
-		font-size: 14px,
-		letter-spacing: 0.04em,
-		font-weight: map-get($type-font-weight, medium),
-		line-height: 1.5,
-		opacity: 0.87
+		line-height: 1.375rem // 28px
 	),
 	body1: (
-		font-size: 14px,
-		letter-spacing: 0.04em,
+		font-size: 1rem, // 16px
+		letter-spacing: letterSpacing(0.5, 1),
+		font-weight: map-get($type-font-weight, medium),
+		line-height: 1.5rem // 24px
+	),
+	body2: (
+		font-size: 0.875rem, // 14px
+		letter-spacing: letterSpacing(0.25, 0.875),
 		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.25,
-		opacity: 0.87
+		line-height: 1.25rem // 20px
 	),
 	button: (
-		font-size: 14px,
-		letter-spacing: 0.08929em,
+		font-size: 0.875rem, // 14px
+		letter-spacing: letterSpacing(01.25, 0.875),
 		font-weight: map-get($type-font-weight, medium),
-		line-height: 2.25,
-		opacity: 0.54
+		line-height: 2.25rem // 36px
 	),
 	caption: (
-		font-size: 12px,
-		letter-spacing: 0.08em,
+		font-size: 0.75rem, // 12px
+		letter-spacing: letterSpacing(0.4, 0.75),
 		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.25,
-		opacity: 0.87
+		line-height: 1.25rem // 20px
 	),
-	blockquote: (
-		font-size: 24px,
-		letter-spacing: 0.02em,
-		font-weight: map-get($type-font-weight, thin),
-		line-height: normal,
-		opacity: 0.54
-	),
-	menu: (
-		font-size: 14px,
-		letter-spacing: normal,
-		font-weight: map-get($type-font-weight, medium),
-		line-height: normal,
-		opacity: 0.54
+	overline: (
+		font-size: 0.75rem, // 12px
+		letter-spacing: letterSpacing(2, 0.75),
+		font-weight: map-get($type-font-weight, regular),
+		line-height: 2rem // 32px
 	)
 );
 
 //
 // @scss
-@mixin type($type, $opacity: false, $lh: false, $fw: false) {
+@mixin type($type, $lh: false, $fw: false) {
 	$type-props: map-get($type-styles, $type);
 	font-size: map-get($type-props, font-size);
 	letter-spacing: map-get($type-props, letter-spacing);
+
 	@if not map-has-key($type-styles, $type) {
 		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
 	}
-	@if $type == blockquote {
-		font-style: italic;
-	}
+
 	@if $type == button {
 		text-transform: uppercase;
 	}
-	@if $type == blockquote {
-		position: relative;
+
+	@if $type == overline {
+		text-transform: uppercase;
 	}
-	@if $opacity {
-		opacity: map-get($type-props, opacity);
-	}
+
 	@if $fw {
 		font-weight: $fw;
 	} @else {
 		font-weight: #{map-get($type-props, font-weight)};
 	}
+
 	@if $lh {
 		line-height: $lh;
 	} @else {

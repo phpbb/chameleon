@@ -15,25 +15,25 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-	@include type(display3, true);
+	@include type(headline2, true);
 	font-size: 60%;
 	display: block;
 }
 
 h1 {
-	@include type(display3);
+	@include type(headline2);
 }
 
 h2 {
-	@include type(display2);
+	@include type(headline3);
 }
 
 h3 {
-	@include type(display1);
+	@include type(headline4);
 }
 
 h4 {
-	@include type(headline);
+	@include type(headline5);
 }
 
 h5 {
@@ -41,15 +41,17 @@ h5 {
 }
 
 h6 {
-	@include type(subhead2);
+	@include type(subtitle1);
 }
 
 p {
-	@include type(body2);
+	@include type(body1);
 }
 
 blockquote {
-	@include type(blockquote);
+	@include type(headline5);
+	font-style: italic;
+	position: relative;
 
 	p {
 		font-size: inherit;
@@ -80,10 +82,10 @@ cite {
 }
 
 address {
-	@include type(body1);
+	@include type(body2);
 }
 
 ul,
 ol {
-	@include type(body1);
+	@include type(body2);
 }

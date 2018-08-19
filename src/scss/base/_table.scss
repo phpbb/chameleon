@@ -32,7 +32,7 @@ $table-selection-color: $default-action-bg;
 // #scss
 
 table {
-	@include type(body2);
+	@include type(body1);
 	white-space: nowrap;
 	background-color: $white;
 	border: 1px solid $table-divider-color;
@@ -80,7 +80,7 @@ table {
 	}
 
 	th {
-		@include type(body2);
+		@include type(body1);
 		vertical-align: bottom;
 		text-overflow: ellipsis;
 		color: $table-header-color;

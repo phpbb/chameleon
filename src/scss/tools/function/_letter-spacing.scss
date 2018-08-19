@@ -1,0 +1,14 @@
+//------------------------------------------------------------------------------
+// @tool: Letter Spacing
+//------------------------------------------------------------------------------
+// @description
+//
+// A function for returning proper letter spacing based on font-size
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@function letterSpacing($tracking, $font-size) {
+  @return $tracking / ($font-size * 16) * 1em;
+}

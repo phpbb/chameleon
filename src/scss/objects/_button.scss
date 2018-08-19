@@ -38,7 +38,7 @@ $btn-text-hover-color: $default-link-color !default;
 // 9. Prevent deafult browser outline halo
 //
 .o-btn {
-	@include type(subhead2, $lh: 1.5, $fw: 700);
+	@include type(subtitle1, $lh: 1.5, $fw: 700);
 	@include shadow(2); // google material design
 	-webkit-font-smoothing: antialiased; // google material design
 	text-align: center; // [4]

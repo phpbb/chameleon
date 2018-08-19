@@ -35,7 +35,7 @@ $list-text-color: $default-action-color !default;
 // 9. Prevent deafult browser outline halo
 //
 .o-list {
-	@include type(subhead2, $lh: unitless(24, 16)); // google material design
+	@include type(subtitle1, $lh: unitless(24, 16)); // google material design
 	@include shadow(2); // google material design
 	margin: 0;
 	padding: 0;
@@ -74,7 +74,7 @@ $list-text-color: $default-action-color !default;
 	}
 
 	&-secondary {
-		@include type(body1); // google material design
+		@include type(body2); // google material design
 		text-decoration: inherit;
 		text-transform: inherit;
 
@@ -107,7 +107,7 @@ $list-text-color: $default-action-color !default;
 		}
 
 		&-secondary {
-			@include type(body1); // google material design
+			@include type(body2); // google material design
 			text-decoration: inherit;
 			text-transform: inherit;
 		}
