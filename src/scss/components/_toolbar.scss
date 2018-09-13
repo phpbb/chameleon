@@ -1,0 +1,113 @@
+//------------------------------------------------------------------------------
+// @component: Toolbar
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$toolbar-spacing: $default-spacing !default;
+$toolbar-height: $default-height-dense !default;
+$toolbar-border-radius: $default-border-radius !default;
+
+// Theme Variables
+$toolbar-background-color: $default-action-bg !default;
+$toolbar-text-color: $default-action-color !default;
+$toolbar-hover-color: $default-action-bg-hover !default;
+$toolbar-text-hover-color: $default-action-color-hover !default;
+
+
+//
+// @scss
+
+//
+// 1. Allow us to vertically center all content easily.
+// 2. Line different sized buttons up a little nicer.
+// 3. Make buttons inherit font styles (often necessary when styling `input`s as
+//    buttons).
+// 4. Reset/normalize some styles.
+// 5. Force all button-styled elements to appear clickable.
+// 6. Fixes odd inner spacing in IE7.
+// 7. Subtract the border size from the padding value so that buttons do not
+//    grow larger as we add borders.
+// 8. Prevent button text from being selectable.
+// 9. Prevent deafult browser outline halo
+//
+.c-toolbar {
+	@include shadow(2); // google material design
+	background-color: $toolbar-background-color;
+	border-radius: $toolbar-border-radius;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-item {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	&-action {
+		@include type(button); // google material design
+		-webkit-font-smoothing: antialiased; // google material design
+		text-align: center; // [4]
+		vertical-align: middle; // [2]
+		text-decoration: none; // [4]
+		border: none; // google material design
+		outline: none; // [9]
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // google material design
+		color: $toolbar-text-color;
+		position: relative; // google material design
+		@include center($toolbar-height); // [1]
+		overflow: hidden; // [6]
+		box-sizing: border-box;
+		margin: 0; // [4]
+		padding: 0 ($toolbar-spacing * 2); // [7]
+		user-select: none; // [8]
+		transition:
+			box-shadow 0.2s $animation-curve-fast-out-linear-in,
+			background-color 0.2s $default-animation-curve,
+			color 0.2s $default-animation-curve;
+		-webkit-appearence: none; // google material design
+		will-change: transform, opacity; // google material design
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;  // [4]
+			background-color: $toolbar-hover-color;
+			color: $toolbar-text-hover-color;
+			cursor: pointer;
+		}
+
+		// Remove excess padding and border in Firefox 4+
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	&-icon {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&-text + &-icon {
+		margin-left: $toolbar-spacing;
+	}
+
+	&-icon + &-text {
+		margin-right: $toolbar-spacing;
+	}
+}

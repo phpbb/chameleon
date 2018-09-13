@@ -119,11 +119,13 @@ gulp.task('minify', gulp.series('css', () => {
 }));
 
 gulp.task('twig', () => {
+	const icons = JSON.parse(fs.readFileSync('./src/mock/icons.json'));
 	const css = gulp
 	.src(build.twig + '*.twig')
 	.pipe(data(file => {
 		const data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
 		data.version = pkg.version;
+		data.icons = icons.icons;
 		return data;
 	}))
 	.pipe(nunjucks({

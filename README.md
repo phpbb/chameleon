@@ -1,111 +1,27 @@
-Chameleon
-=========
+[![Logo](https://cdn.rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
+[![Build Status](https://travis-ci.org/hanakin/base-l.svg?branch=phpbb)](https://travis-ci.org/hanakin/base-l)
 
-The phpBB default style
+## Base-L
+> A well structured top down base css framework meant for web apps
 
-__Commits__:
-````
-[chameleon] Commit Message
+## What is it
+Base-L is meant as a core layer to your workflow. Its a true CSS framework following
+the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
+this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4). Designed with
+applications in mind. Developed in conjunction with the popular open source
+forum application [phpBB](http://www.phpbb.org). It lends it self beautifully to
+the project improving its code base and simplifying the process of designing and
+creating rich, beautiful customizable themes.
 
-PHPBB3-13327
-````
+## Read the Documentation
+Check out the detailed documentation for the project [here](http://hanakin.github.io/base-l)
 
-In order to automatically have this added to all commit messages (and to have all
-your commit messages checked upon committing) please run the following in your terminal:
-````
-cd git-tools/hooks
-./install
-````
+## Contribute
+1. Fork the project
+2. Create an Issue
+3. Read our [Code guidelines](http://hanakin.github.io/base-l/codeing-guidelines) and [Git Contribution Guidelines](http://hanakin.github.io/base-l/git-quidelines)
+4. Submit a Pull Request
 
-_Note_: The `*.html` (not .twig) templates currently in the repo are temporary. They will be removed once the template names are no longer hard-coded in the backend.
-
----------
-
-Style guide: http://phpbb.github.io/chameleon/
-
-CSS coding guidelines: https://github.com/phpbb/chameleon/tree/gh-pages/Coding%20Guidlines/CSS
-
-Trello: https://trello.com/b/gdHw0JBq
-
----------
-
-__Proposed structure__
-- `assets/`
-  - `dist/` (compiled CSS and JS (with minified versions))
-    - `core.css`
-    - `core.min.css`
-    - `core.css.map`
-    - `theme.css`
-    - `theme.min.css`
-    - `theme.css.map`
-    - `scripts.js`
-    - `scripts.min.js`
-    - `scripts.js.map`
-  - `images/`
-  - `src/`
-	- `css/` (or `less/`)
-	- `js/`
-- `template/`
-  - `base.html.twig`
-  - `base_simple.html.twig`
-  - `faq.html.twig`
-  - `index.html.twig`
-  - `mcp.html.twig`
-  - `members.html.twig` (previously `memberlist_body.html`)
-  - `posting.html.twig`
-  - `search_form.html.twig`
-  - `search_results.html.twig`
-  - `ucp.html.twig`
-  - `viewforum.html.twig`
-  - `viewonline.html.twig`
-  - `viewprofile.html.twig` (previously `memberlist_view.html`)
-  - `viewtopic.html.twig`
-  - `includes/` (or `components/`)
-    - `components/`
-      - `forum_row.html.twig`
-      - `poll.html.twig`
-      - `post_row.html.twig`
-      - `post_profile.html.twig`
-      - `topic_row.html.twig`
-      - etc
-    - `dialogs/`
-      - `captcha_*`
-      - `confirm.html.twig`
-      - `login.html.twig`
-      - `report.html.twig`
-      - etc.
-    - `posting/`
-      - all posting components
-    - `profile_fields/`
-      - all profile field components
-    - `breadcrumbs.html.twig`
-    - `display_sorting.html.twig`
-    - `forum_list.html.twig`
-    - `macros.html.twig`
-    - `nav_footer.html.twig`
-    - `nav_header.html.twig`
-    - `pagination.html.twig`
-    - `sidebar.html.twig`
-    - `topic_list.html.twig`
-    - etc.
-  - `mcp/`
-    - `components/`
-      - `ban_row.html.twig`
-      - `log_row.html.twig`
-      - `report_row.html.twig`
-    - `mcp_ban.html.twig`
-    - `mcp_*.html.twig`
-  - `ucp/`
-    - `components/`
-      - `attachment_row.html.twig`
-      - `notification_row.html.twig`
-      - `pm_row.html.twig`
-      - etc.
-    - `ucp_attachments.html.twig`
-    - `ucp_*.html.twig`
-- `composer.json`
-- `gulpfile.js`
-- `package.json`
-- `templates.json` (for the new template abstraction layer)
-- `README.md`
-- `style.cfg` (temporary, until we switch to composer.json)
+## License
+Copyright ©️ 2016 Michael Miday
+[MIT](https://opensource.org/licenses/MIT)

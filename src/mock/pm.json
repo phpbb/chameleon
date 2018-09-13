@@ -1,0 +1,180 @@
+{
+	"pms": [
+		{
+			"id":1,
+			"author":"Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"online": true,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":1,
+			"important": true,
+			"active":true
+		},
+		{
+			"id":2,
+			"author":"Bob",
+			"color": "#000099",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/73085?v=4&amp;s=460",
+			"online": false,
+			"type": "foe",
+			"participants": [
+				{ "name":"Bob", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"foe"},
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"},
+				{ "name":"MOD Team", "color":"#009900","url": "./memberlist.php?mode=viewprofile&amp;u=61815", "type":"group"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":0,
+			"important": true,
+			"active":false
+		},
+		{
+			"id":3,
+			"author":"Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"online": false,
+			"type": "user",
+			"participants": [
+				{ "name":"Bob", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"foe"},
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":0,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":4,
+			"author":"Cindy",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/73085?v=4&amp;s=460",
+			"online": false,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":2,
+			"important": true,
+			"active":false
+		},
+		{
+			"id":5,
+			"author":"Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"online": true,
+			"type": "user",
+			"participants": [
+				{ "name":"Bob", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"foe"},
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"},
+				{ "name":"MOD Team", "color":"#009900","url": "./memberlist.php?mode=viewprofile&amp;u=61815", "type":"group"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":3,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":6,
+			"author":"LongNamedGoodBoyMagee",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/73087?v=4&amp;s=460",
+			"online": true,
+			"type": "foe",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":0,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":7,
+			"author":"Susan",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/73088?v=4&amp;s=460",
+			"online": false,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":18,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":8,
+			"author":"James",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/73031?v=4&amp;s=460",
+			"online": false,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"},
+				{ "name":"MOD Team", "color":"#009900","url": "./memberlist.php?mode=viewprofile&amp;u=61815", "type":"group"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":0,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":9,
+			"author":"Carl",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/37081?v=4&amp;s=460",
+			"online": true,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":1,
+			"important": false,
+			"active":false
+		},
+		{
+			"id":10,
+			"author":"Jeff",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar":"https://avatars2.githubusercontent.com/u/00018?v=4&amp;s=460",
+			"online": false,
+			"type": "user",
+			"participants": [
+				{ "name":"Frank", "color":"#000099", "url":"./memberlist.php?mode=viewprofile&amp;u=61815", "type":"user"}
+			],
+			"title":"Your first pm msg title",
+			"created":"2016-11-11T19:18:00Z",
+			"unread":0,
+			"important": true,
+			"active":false
+		}
+	]
+}

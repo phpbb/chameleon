@@ -1,0 +1,57 @@
+{# topic.twig #}
+{% extends "./layout/layout.twig" %}
+
+{% block component %}
+				<ul class="o-list c-topic">
+					<li class="c-topic-header">
+						<div class="o-bar">
+							<ul class="o-bar-left">
+								<li class="o-bar-item">
+									<h2 class="o-bar-title">Announcments</h2>
+								</li>
+							</ul>
+							<ul class="o-bar-right">
+								<li class="o-bar-item">
+									<a class="o-bar-action" href="" data-toggle="tooltip" data-placement="top" title="SubForums">
+										<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				{% for topic in topics %}
+					{% if topic.type === "announce" %}
+						{% include './includes/topic-item.twig' %}
+					{% endif %}
+				{% endfor %}
+				</ul>
+
+				<ul class="o-list c-topic">
+					<li class="c-topic-header">
+						<div class="o-bar">
+							<ul class="o-bar-left">
+								<li class="o-bar-item">
+									<h2 class="o-bar-title">Forum</h2>
+								</li>
+							</ul>
+							<ul class="o-bar-right">
+								<li class="o-bar-item">
+									<a class="o-bar-action" href="" data-toggle="tooltip" data-placement="top" title="SubForums">
+										<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					{% for topic in topics %}
+						{% if topic.type === "sticky" %}
+							{% include './includes/topic-item.twig' %}
+						{% endif %}
+					{% endfor %}
+					{% for topic in topics %}
+						{% if topic.type === "topic" %}
+							{% include './includes/topic-item.twig' %}
+						{% endif %}
+					{% endfor %}
+				</ul>
+{% endblock %}

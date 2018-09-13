@@ -1,0 +1,38 @@
+//------------------------------------------------------------------------------
+// @component: Footer
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$footer-spacing: $default-spacing !default;
+$footer-height: $default-height-dense !default;
+
+// Theme Variables
+
+//
+// @scss
+
+.c-footer {
+	text-align: center;
+	margin: ($footer-spacing * 8) 0 ($footer-spacing * 6);
+
+	&-nav {
+		&-link {
+			@include center($footer-height);
+			padding: 0 ($footer-spacing * 2);
+
+			&-icon + &-text {
+				margin-left: $footer-spacing;
+			}
+		}
+	}
+
+	&-copyright {
+		margin-top: ($footer-spacing * 2);
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"msgs": [
+		{
+			"id":1,
+			"pm":1,
+			"author": "Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": true,
+			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"time": "2016-11-11T19:18:00Z",
+			"content":"This is the copy for this message."
+		},
+		{
+			"id":2,
+			"pm":1,
+			"author": "Bob",
+			"color": "#000099",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": true,
+			"avatar": "https://avatars2.githubusercontent.com/u/73085?v=4&amp;s=460",
+			"time": "2016-11-11T20:10:00Z",
+			"content":"This is the copy for this message."
+		},
+		{
+			"id":3,
+			"pm":1,
+			"author": "Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": true,
+			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"time": "2016-11-12T09:18:00Z",
+			"content":"This is the copy for this message."
+		},
+		{
+			"id":4,
+			"pm":1,
+			"author": "Frank",
+			"color": "#000099",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": false,
+			"avatar": "https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460",
+			"time": "2016-11-12T12:08:00Z",
+			"content":"This is the copy for this message."
+		},
+		{
+			"id":5,
+			"pm":1,
+			"author": "James",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": false,
+			"avatar": "https://avatars2.githubusercontent.com/u/73031?v=4&amp;s=460",
+			"time": "2016-11-12T15:16:00Z",
+			"content":"This is the copy for this message."
+		},
+		{
+			"id":6,
+			"pm":1,
+			"author": "Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"online": true,
+			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"time": "2016-11-13T10:11:00Z",
+			"content":"This is the copy for this message."
+		},
+	]
+}

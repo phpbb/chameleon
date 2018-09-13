@@ -1,0 +1,49 @@
+{# post.twig #}
+{% extends "./layout/layout.twig" %}
+
+{% block component %}
+	<div class="c-pm-container">
+		<ul class="o-list c-pm-list">
+			{% for pm in pms %}
+			<li class="o-list-item c-pm-item">
+				<a class="o-list-media c-pm-media" href="{{ pm.url }}">
+					<span class="o-avatar-wrap o-list-avatar">
+						{% if pm.participants.length > 1 %}
+						<img class="o-avatar" src="http://ensmm-annaba.dz/wp-content/uploads/wp-user-manager-uploads/2016/02/54cf0cfd8466607d037b7f25_team-icon.png" alt="User Avatar">
+						{% else %}
+						<img class="o-avatar" src="{{ pm.avatar }}" alt="User Avatar">
+							{% if pm.online %}
+						<span class="o-avatar-online o-action-bar-avatar-online"></span>
+						{% endif %} {% endif %}
+						{% if pm.unread %}
+						<span class="o-tag c-pm-badge">{{ pm.unread }}</span>
+						{% endif %}
+					</span>
+				</a>
+				<span class="o-list-primary c-pm-primary">
+					<span class="o-list-secondary c-pm-secondary">
+						{% if pm.important %}
+						<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#important"></use></svg>
+						{% endif %}
+						<a class="o-list-title" href="#"><strong>{{ pm.title }}</strong></a>
+					</span>
+					<span class="o-list-secondary c-pm-secondary">
+						<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#{{ pm.type }}"></use></svg>
+						<a class="o-list-secondary-item-link" href="{{ pm.url }}" style="color: {{ pm.color }};">{{ pm.author }}</a>
+						{% if pm.participants.length > 1 %} {% for user in pm.participants %}
+						, <svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#{{ user.type }}"></use></svg>
+						<a class="o-list-secondary-item-link" href="{{ user.url }}" style="color: {{ user.color }};">{{ user.name }}</a>
+						{% endfor %} {% endif %}
+					</span>
+					<span class="o-list-secondary c-pm-secondary">
+						<span class="o-list-secondary-item">
+							<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#time"></use></svg>
+							<time datetime="{{ pm.created }}" title="{{ pm.created }}" data-short="{{ pm.created }}">{{ pm.created|moment("YYYYMMDD", true) }}</time>
+						</span>
+					</span>
+				</span>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

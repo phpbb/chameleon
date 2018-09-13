@@ -1,0 +1,66 @@
+{# icons.twig #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<title></title>
+
+		<style media="screen">
+			section {
+				margin: 2rem auto;
+			}
+
+			.icon-display {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.icon-display li a {
+				display: block;
+				width: 300px;
+				margin-bottom: 0.5rem;
+				padding: 0.5rem;
+				color: #757575;
+			}
+
+			.icon-display li a:hover {
+				background-color: #eeeeee;
+				color: #258cf4;
+			}
+		</style>
+	</head>
+	<body>
+		{% include './includes/defs.twig' %}
+		{% for item in icons %}
+			{% if loop.first %}
+		<section>
+			<h3>{{ item.cat|capitalize }}</h3>
+			<ul class="icon-display">
+			{% elseif item.cat !== cat %}
+			</ul>
+		</section>
+
+		<section>
+			<h3>{{ item.cat|capitalize }}</h3>
+			<ul class="icon-display">
+			{% endif %}
+				<li><a href=""><svg class="o-icon"><use xlink:href="#{{ item.icon }}"></use></svg> <span>{{ item.icon|capitalize }}</span></a></li>
+			{% set cat = item.cat %}
+			{% if loop.last %}
+			</ul>
+		</section>
+			{% endif %}
+		{% endfor %}
+		<section>
+			<h3>Logo</h3>
+			<ul class="icon-display">
+				<li><a href=""><svg class="o-icon"><use xlink:href="#logo"></use></svg> <span>Logo</span></a></li>
+				<li><a href=""><svg class="o-icon"><use xlink:href="#logo-dense"></use></svg> <span>Logo-Dense</span></a></li>
+			</ul>
+		</section>
+	</body>
+</html>

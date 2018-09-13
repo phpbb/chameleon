@@ -1,0 +1,104 @@
+//------------------------------------------------------------------------------
+// @component: Menu
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$menu-spacing: $default-spacing !default;
+$menu-icon-size: $default-icon-md !default;
+$menu-link-size: 48px !default;
+$menu-border-radius: $default-border-radius !default;
+$menu-divider-height: $default-border-size !default;
+$menu-opacity-1: $default-opacity !default;
+$menu-opacity-87: $default-opacity-87 !default;
+$menu-opacity-54: $default-opacity-54 !default;
+$menu-opacity-38: $default-opacity-38 !default;
+$menu-opacity-12: $default-opacity-12 !default;
+
+// Theme Variables
+$menu-background-color: $white !default;
+$menu-link-color: $default-text-color !default;
+$menu-action-icon-color: $default-action-icon-color !default;
+$menu-action-color-hover: $default-action-color-hover !default;
+$menu-action-bg: $default-action-bg-hover !default;
+$menu-divider-color: rgba(0, 0, 0, 0.125) !default;
+
+
+//
+// @scss
+.c-menu {
+	margin: 0;
+	padding: $menu-spacing 0;
+	list-style: none;
+
+	&-container {
+		text-align: left;
+		background-color: $menu-background-color;
+		border-radius: $menu-border-radius;
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		overflow: auto;
+		transition: all 0.2s ease;
+		transform: scale(0);
+
+		&.is-active {
+			transform: scale(1);
+		}
+		@include shadow(1);
+	}
+
+	&-item {
+		position: relative;
+	}
+
+	&-toggle {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&-link {
+		@include type(body2);
+		white-space: nowrap;
+		text-decoration: none;
+		color: $menu-link-color;
+		align-items: center;
+		height: $menu-link-size;
+		padding: 0 ($menu-spacing * 2) 0 ($menu-spacing * 2);
+		cursor: pointer;
+
+		&-icon {
+			color: $menu-action-icon-color;
+			opacity: $menu-opacity-54;
+			width: $menu-icon-size;
+			height: $menu-icon-size;
+			margin-right: ($menu-spacing * 3);
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: $menu-action-bg;
+			color: $menu-action-color-hover;
+			transition: 0.5s;
+
+			.c-menu-link-icon {
+				color: $menu-action-color-hover;
+				opacity: $menu-opacity-1;
+				transition: 0.5s;
+			}
+		}
+		@include parent();
+	}
+
+	&-divider {
+		background-color: $menu-divider-color;
+		height: $menu-divider-height;
+		margin-top: $default-spacing;
+		margin-bottom: $default-spacing;
+	}
+}

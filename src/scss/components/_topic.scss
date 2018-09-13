@@ -1,0 +1,88 @@
+
+// @component: Topic
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$topic-spacing: $default-spacing !default;
+$topic-data-icon-size: 20px !default;
+$topic-border-size: $default-border-size !default;
+
+// Theme Variables
+$topic-icon-color: $default-secondary-color !default;
+$topic-icon-color-read: $default-primary-color !default;
+$topic-hover-color: $gray-50 !default;
+$topic-border-color: rgba(0, 0, 0, 0.125) !default;
+
+
+//
+// @scss
+.c-topic {
+	&-item {
+		border-top: $topic-border-size solid $topic-border-color;
+
+		&:hover {
+			background-color: $topic-hover-color;
+			transition: 0.5s;
+		}
+	}
+
+	&-meta {
+		@include parent();
+		text-align: right;
+		position: relative;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&-unread {
+		color: $topic-icon-color;
+	}
+
+	&-read {
+		color: $topic-icon-color-read;
+	}
+
+	&-unapproved {
+		color: $topic-icon-color;
+		padding: 0;
+	}
+
+	&-meta-primary,
+	&-time,
+	&-date {
+		display: none;
+
+		@media (min-width: $bp-lg) {
+			display: inline-block;
+		}
+	}
+
+	&-paging {
+		display: none;
+
+		&-link {
+			font-size: inherit;
+			padding: ($topic-spacing / 4) ($topic-spacing / 2);
+
+			&-icon {
+				width: $topic-data-icon-size;
+				height: $topic-data-icon-size;
+			}
+		}
+
+		@media (min-width: $bp-md) {
+			display: inline-flex;
+		}
+	}
+
+	&-checkbox-label {
+		text-indent: 9999px;
+		width: 0;
+	}
+}
