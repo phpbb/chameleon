@@ -1,27 +1,16 @@
-[![Logo](https://cdn.rawgit.com/hanakin/base-l/master/base-l-banner.svg)](https://github.com/hanakin/base-l)
-[![Build Status](https://travis-ci.org/hanakin/base-l.svg?branch=phpbb)](https://travis-ci.org/hanakin/base-l)
+## CODENAME: Chameleon
 
-## Base-L
-> A well structured top down base css framework meant for web apps
+## WHAT IS IT
+A new theme being developed to replace prosilver going forward for the phpBB platform. It is meant to be forward thinking, easily maintainable and endlessly scaleable yet still be very customizable. Checkout the [Development Topic](https://area51.phpbb.com/docs/dev/development/index.html) on phpBB.com or open a disscussion on area51 in the [Style Development](https://area51.phpbb.com/phpBB/viewforum.php?f=131&sid=719d3d0bbf257d54cbe43d1dfb4fb8c2) forum.
 
-## What is it
-Base-L is meant as a core layer to your workflow. Its a true CSS framework following
-the ITCSS guidelines outlined by [Harry Roberts](http://www.csswizardry.com) in
-this [seminar](https://www.youtube.com/watch?v=1OKZOV-iLj4). Designed with
-applications in mind. Developed in conjunction with the popular open source
-forum application [phpBB](http://www.phpbb.org). It lends it self beautifully to
-the project improving its code base and simplifying the process of designing and
-creating rich, beautiful customizable themes.
+## GUIDLINES
+We are using very strict coding guidlines now to help ensure everything stays maintainable and easy to use.
+Check out them out [here](https://area51.phpbb.com/docs/dev/development/index.html)
 
-## Read the Documentation
-Check out the detailed documentation for the project [here](http://hanakin.github.io/base-l)
-
-## Contribute
+## HOW TO CONTRIBUTE
 1. Fork the project
 2. Create an Issue
-3. Read our [Code guidelines](http://hanakin.github.io/base-l/codeing-guidelines) and [Git Contribution Guidelines](http://hanakin.github.io/base-l/git-quidelines)
-4. Submit a Pull Request
+4. Submit a Pull Request ensure that to link to the issue in your Pull Request comment
 
-## License
-Copyright ©️ 2016 Michael Miday
+## LICENSE
 [MIT](https://opensource.org/licenses/MIT)
