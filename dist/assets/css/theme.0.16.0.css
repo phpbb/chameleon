@@ -237,6 +237,7 @@
 
 .c-topic-paging-link {
 	font-size: inherit;
+	height: 32px;
 	padding: 0.125rem 0.25rem;
 }
 
@@ -621,7 +622,9 @@
 	border-radius: 50%;
 	color: #757575;
 	padding: 1rem;
-	transition: 0.5s;
+	transition: opacity 1s, -webkit-transform 0.5s;
+	transition: transform 0.5s, opacity 1s;
+	transition: transform 0.5s, opacity 1s, -webkit-transform 0.5s;
 	-webkit-transform: translate3d(0, 0, 0);
 	        transform: translate3d(0, 0, 0);
 }
@@ -658,6 +661,19 @@
 	color: #258cf4;
 }
 
+.c-notification-unread .c-notification-meta {
+	background-color: #258cf4;
+	color: #ffffff;
+	transition: opacity 1s, -webkit-transform 0.5s;
+	transition: transform 0.5s, opacity 1s;
+	transition: transform 0.5s, opacity 1s, -webkit-transform 0.5s;
+}
+
+.c-notification-unread .c-notification-meta:hover {
+	background-color: #eeeeee;
+	color: #258cf4;
+}
+
 .c-notification-footer {
 	border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -676,11 +692,11 @@
 	color: #3c8b42;
 }
 
-.c-notification-disapproved {
+.c-notification-unapproved {
 	color: #e23936;
 }
 
-.c-notification-disapproved:hover {
+.c-notification-unapproved:hover {
 	color: #ad1c19;
 }
 

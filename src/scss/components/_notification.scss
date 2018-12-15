@@ -28,6 +28,7 @@ $notification-border-color: rgba(0, 0, 0, 0.125) !default;
 $notification-action-icon-color: $default-action-icon-color !default;
 $notification-action-color-hover: $default-action-color-hover !default;
 $notification-action-bg: $default-action-bg-hover !default;
+$notification-unread: $default-action-color-hover !default;
 
 
 //
@@ -57,7 +58,7 @@ $notification-action-bg: $default-action-bg-hover !default;
 		border-radius: $notification-meta-border-radius;
 		color: $notification-action-icon-color;
 		padding: ($notification-spacing * 2);
-		transition: 0.5s;
+		transition: transform 0.5s, opacity 1s;
 		transform: translate3d(0, 0, 0);
 
 		&:after {
@@ -89,6 +90,17 @@ $notification-action-bg: $default-action-bg-hover !default;
 		}
 	}
 
+	&-unread .c-notification-meta {
+		background-color: $notification-unread;
+		color: $notification-color;
+		transition: transform 0.5s, opacity 1s;
+
+		&:hover {
+			background-color: $notification-action-bg;
+			color: $notification-action-color-hover;
+		}
+	}
+
 	&-footer {
 		border-top: $notification-border-size solid $notification-border-color;
 
@@ -107,7 +119,7 @@ $notification-action-bg: $default-action-bg-hover !default;
 		}
 	}
 
-	&-disapproved {
+	&-unapproved {
 		color: $notification-disapproved-color;
 
 		&:hover {
