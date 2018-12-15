@@ -1,7 +1,7 @@
 {
-  "name": "base-l",
-  "version": "0.16.0",
-  "description": "A well structured top down base css framework meant for web apps",
+  "name": "chameleon",
+  "version": "0.1.0",
+  "description": "The default theme for phpbb",
   "main": "gulpfile.js",
   "xo": {
     "env": [
@@ -15,20 +15,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanakin/base-l.git"
+    "url": "git+https://github.com/phpbb/chameleon.git"
   },
   "author": "Michael Miday (Hanakin)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hanakin/base-l/issues"
+    "url": "https://github.com/phpbb/chameleon/issues"
   },
-  "homepage": "https://github.com/hanakin/base-l#readme",
+  "homepage": "https://github.com/phpbb/chameleon#readme",
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-data": "^1.3.1",
+    "gulp-merge-json": "1.3.1",
     "gulp-nunjucks-render": "github:carlosl/gulp-nunjucks-render#master",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "1.3.0",

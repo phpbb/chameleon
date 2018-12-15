@@ -1,7 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const path = require('path');
 const del = require('del');
 const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
@@ -12,7 +11,7 @@ const cssnano = require('gulp-cssnano');
 const postcss = require('gulp-postcss');
 const stylefmt = require('gulp-stylefmt');
 const nunjucks = require('gulp-nunjucks-render');
-const data = require('gulp-data');
+const merge = require('gulp-merge-json');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
 const moment = require('moment');
@@ -32,14 +31,6 @@ const manageEnvironment = function (environment) {
 };
 
 // Config
-const build = {
-	css: './dist/assets/css',
-	html: './dist/views/',
-	twig: './src/views/',
-	data: './src/mock/',
-	scss: './src/scss/'
-};
-
 const AUTOPREFIXER_BROWSERS = [
 	'ie >= 11',
 	'edge >= 12',
@@ -49,6 +40,19 @@ const AUTOPREFIXER_BROWSERS = [
 	'opera >= 35',
 	'ios >= 8'
 ];
+const theme = '';
+const build = {
+	css: './all/css',
+	twig: './all/views/',
+	scss: './all/scss/',
+	data: './tests/mock/',
+	html: './tests/views/'
+};
+
+if (theme) {
+	build.css = './' + theme + '/css';
+	build.twig = './' + theme + '/css';
+}
 
 gulp.task('css', () => {
 	const css = gulp
@@ -88,7 +92,7 @@ gulp.task('css', () => {
 			})
 		])
 	)
-	// .pipe(stylefmt())
+	.pipe(stylefmt())
 	.pipe(rename({
 		suffix: '.' + pkg.version,
 		extname: '.css'
@@ -100,7 +104,19 @@ gulp.task('css', () => {
 });
 
 gulp.task('clean', () => {
-	del(['dist']);
+	del([build.css]);
+	del([build.html]);
+});
+
+gulp.task('data', () => {
+	const json = gulp
+	.src(build.data + '*.json')
+	.pipe(merge({
+		fileName: 'db.json'
+	}))
+	.pipe(gulp.dest(build.data));
+
+	return json;
 });
 
 gulp.task('minify', gulp.series('css', () => {
@@ -118,17 +134,13 @@ gulp.task('minify', gulp.series('css', () => {
 	return css;
 }));
 
-gulp.task('twig', () => {
-	const icons = JSON.parse(fs.readFileSync('./src/mock/icons.json'));
+gulp.task('twig', gulp.series('data', () => {
+	const db = JSON.parse(fs.readFileSync(build.data + 'db.json'));
+	db.version = pkg.version;
 	const css = gulp
 	.src(build.twig + '*.twig')
-	.pipe(data(file => {
-		const data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
-		data.version = pkg.version;
-		data.icons = icons.icons;
-		return data;
-	}))
 	.pipe(nunjucks({
+		data: db,
 		path: [build.twig],
 		manageEnv: manageEnvironment
 	}))
@@ -138,64 +150,13 @@ gulp.task('twig', () => {
 	.pipe(gulp.dest(build.html));
 
 	return css;
-});
-
-gulp.task('docs:css', () => {
-	const css = gulp
-	.src(build.docs + '*.scss')
-	.pipe(sourcemaps.init())
-	.pipe(sass({
-		indentType: 'tab',
-		indentWidth: 1,
-		outputStyle: 'expanded',
-		precision: 10,
-		onError: console.error.bind(console, 'Sass error:')
-	}))
-	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-	.pipe(
-		postcss([
-			sorting(sortOrder),
-			torem({
-				rootValue: 16,
-				unitPrecision: 7,
-				propWhiteList: [
-					'font',
-					'font-size',
-					'margin',
-					'margin-left',
-					'margin-right',
-					'margin-top',
-					'margin-bottom',
-					'padding',
-					'padding-left',
-					'padding-right',
-					'padding-top',
-					'padding-bottom'],
-				selectorBlackList: [],
-				replace: true,
-				mediaQuery: false,
-				minPixelValue: 0
-			})
-		])
-	)
-	.pipe(stylefmt())
-	.pipe(cssnano())
-	.pipe(rename({
-		suffix: '.' + pkg.version + '.min',
-		extname: '.css'
-	}))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(build.docs));
-
-	return css;
-});
+}));
 
 gulp.task('watch', () => {
-	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
-	gulp.watch('src/views/**/*.twig', gulp.series('twig'));
-	gulp.watch('src/mock/**/*.json', gulp.series('twig'));
+	gulp.watch(build.scss + '**/*.scss', gulp.series('css', 'minify'));
+	gulp.watch(build.twig + '**/*.twig', gulp.series('twig'));
 });
 
 gulp.task('serve', gulp.series('watch'));
-gulp.task('test', gulp.series('css', 'minify', 'twig'));
-gulp.task('default', gulp.series('css', 'minify', 'twig', 'watch'));
+gulp.task('test', gulp.series('css', 'minify', 'data', 'twig'));
+gulp.task('default', gulp.series('css', 'minify', 'data', 'twig', 'watch'));
