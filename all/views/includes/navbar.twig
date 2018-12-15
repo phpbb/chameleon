@@ -1,0 +1,40 @@
+<div class="o-bar t-bar">
+	<ul class="o-bar-left t-bar-left">
+		<li class="o-bar-item t-bar-item">
+			<a class="o-bar-logo t-bar-logo t-bar-logo" href="#" data-toggle="tooltip" data-placement="top" title="phpBB">
+				<svg class="o-icon o-bar-logo-icon t-bar-logo-icon"><use xlink:href="#phpbb-logo-dense"></use></svg>
+			</a>
+		</li>
+	</ul>
+	<ul class="o-bar-right t-bar-right">
+		<li class="o-bar-item t-bar-item" data-toggle="drawer">
+			<a class="o-bar-action t-bar-action" href="#" data-tooltip="Hanakin" title="Hanakin">
+				<span class="o-avatar-wrap o-bar-avatar t-bar-avatar">
+					<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460" alt="User Avatar">
+					<span class="o-avatar-online"></span>
+
+				</span>
+				<span class="o-bar-action-text t-bar-action-text">Hanakin</span>
+			</a>
+		</li>
+		<li class="o-bar-item t-bar-item" data-toggle="notifications" >
+			<a class="o-bar-action t-bar-action" href="#"data-tooltip="Notifications" title="Notifications">
+				<svg class="o-icon o-bar-action-icon t-bar-action-icon"><use xlink:href="#notifications"></use></svg>
+				<span class="o-bar-action-text t-bar-action-text u-sr-only">Notifications</span>
+			</a>
+			{% include './notification.twig' %}
+		</li>
+		<li class="o-bar-item t-bar-item">
+			<a class="o-bar-action t-bar-action" href="#" data-tooltip="PMs" title="PMs">
+				<svg class="o-icon o-bar-action-icon t-bar-action-icon" ><use xlink:href="#inbox"></use></svg>
+				<span class="o-tag o-bar-badge t-bar-badge">4525</span>
+				<span class="o-bar-action-text t-bar-action-text u-sr-only">Private Messages</span>
+			</a>
+		</li>
+		<li class="o-bar-item t-bar-item" data-toggle="search">
+			<a class="o-bar-action t-bar-action" href="#" data-tooltip="Search" title="Search">
+				<svg class="o-icon o-bar-action-icon t-bar-action-icon"><use xlink:href="#search"></use></svg>
+			</a>
+		</li>
+	</ul>
+</div>

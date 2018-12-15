@@ -1,0 +1,45 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<title></title>
+		<link href="https://rawgit.com/hanakin/base-l/master/dist/assets/css/core.0.16.0.css" rel="stylesheet">
+		<link href="../../all/css/theme.{{ version }}.css" rel="stylesheet">
+		<link href="https://rawgit.com/hanakin/base-l/master/dist/assets/css/utilities.0.16.0.css" rel="stylesheet">
+		<script type="text/javascript" src="../all/scripts/temp.js" ></script>
+	</head>
+	<body>
+		{% include '../includes/defs.twig' %}
+
+		<header>
+			{% block header %}
+				{% block navbar %}
+					{% include '../includes/search.twig' %}
+					{% include '../includes/navbar.twig' %}
+				{% endblock %}
+				{% block sidemenu %}
+					{% include '../includes/drawer.twig' %}
+				{% endblock %}
+				{% block crumb %}
+					{% include '../includes/crumb.twig' %}
+				{% endblock %}
+				{% block hero %}
+					{% include '../includes/hero.twig' %}
+				{% endblock %}
+			{% endblock %}
+		</header>
+
+		{% block main %}{% endblock %}
+
+		<footer>
+			{% block footer %}
+
+			{% endblock %}
+			{% include '../includes/footer.twig' %}
+		</footer>
+	</body>
+</html>
