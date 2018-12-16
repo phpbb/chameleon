@@ -1,13 +1,13 @@
-<div class="c-notification-container t-notification-container">
+<div class="c-notification-container t-notification-container" data-container="notificiations">
 	<ul class="o-list t-notification-list">
 		<li class="c-notification-header t-notification-header">
 			<div class="o-bar t-notification-bar">
 				<ul class="o-bar-left t-notification-bar-left">
 					<li class="o-bar-item t-notification-bar-item">
-						<h2 class="o-bar-title t-notification-bar-item">Notifications</h2>
+						<h2 class="o-bar-title t-notification-bar-title">Notifications</h2>
 					</li>
 				</ul>
-				<ul class="o-bar-right t-notification-bar-rigth">
+				<ul class="o-bar-right t-notification-bar-right">
 					<li class="o-bar-item t-notification-bar-item">
 						<a class="o-bar-action t-notification-bar-action" href="" data-toggle="tooltip" data-placement="top" title="Settings">
 							<svg class="o-icon o-bar-action-icon t-notification-bar-action-icon"><use xlink:href="#settings"></use></svg>
@@ -17,7 +17,7 @@
 			</div>
 		</li>
 		{% for item in notification %}
-			<li class="o-list-item c-notification-item t-notification-item {% if item.unread %} c-notification-unread t-notification-unread {% endif %}">
+			<li class="o-list-item c-notification-item t-notification-item{% if item.unread %} c-notification-unread t-notification-unread{% endif %}">
 				<a class="o-list-media c-notification-media t-notification-media" href="{{ item.url }}">
 					<span class="o-avatar-wrap o-list-avatar t-notification-list-avatar">
 						<img class="o-avatar t-notification-avatar" src="{{ item.avatar }}" alt="User Avatar">

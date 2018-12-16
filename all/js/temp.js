@@ -12,7 +12,7 @@ const $searchToggle = '[data-toggle="search"]';
 const $search = '[data-container="search"]';
 const $tabs = '[data-toggle="tabs"]';
 
-function clearToggle(e, $el, $toggle) {
+const clearToggle = function (e, $el, $toggle) {
 	const target = e.target;
 
 	if (
@@ -21,30 +21,30 @@ function clearToggle(e, $el, $toggle) {
 		!$(target).is($toggle) &&
 		!$(target).parents().is($toggle)
 	) {
-		$($el).each(() => {
+		$($el).each(function () {
 			$(this).toggleClass('is-active', false);
 		});
 	}
-}
+};
 
-function clearTabs(e, $links) {
-	$($links).children().each(() => {
+const clearTabs = function (e, $links) {
+	$($links).children().each(function () {
 		const $this = $(this);
 		const $that = $this.attr('href');
 
 		$this.toggleClass('is-active', false);
 		$($that).toggleClass('is-active', false);
 	});
-}
+};
 
 //---------------------------------------------
 
-$($tabs).children().each(() => {
+$($tabs).children().each(function () {
 	const $this = $(this);
 	const $that = $this.attr('href');
 
 	$this.on({
-		mouseup: e => {
+		'mouseup': e => {
 			e.preventDefault();
 			e.stopPropagation();
 			clearTabs(e, $tabs);
@@ -62,7 +62,7 @@ $($drawerToggle).click(e => {
 	$($drawer).toggleClass('is-active');
 });
 
-$($drawerMenuToggle).click(e => {
+$($drawerMenuToggle).click(function (e) {
 	e.preventDefault();
 	e.stopPropagation();
 	$(this).next($drawerMenu).toggleClass('is-active');
@@ -78,7 +78,7 @@ $($searchToggle).click(e => {
 
 //---------------------------------------------
 
-$($notificationToggle).click(e => {
+$($notificationToggle).click(function (e) {
 	e.preventDefault();
 	e.stopPropagation();
 	const $this = $(this);
@@ -90,17 +90,17 @@ $($notificationToggle).click(e => {
 
 //---------------------------------------------
 
-$($menu).each(() => {
+$($menu).each(function () {
 	const $this = $(this);
 	const $targetOffset = $this.offset();
 	if ($targetOffset.left > $(window).width() / 2) {
-		$this.css({'transform-origin': 'right top', right: '0'});
+		$this.css({'transform-origin': 'right top', 'right': 0});
 	} else {
 		$this.css('transform-origin', 'left top');
 	}
 });
 
-$($menuToggle).click(e => {
+$($menuToggle).click(function (e) {
 	const $this = $(this);
 	const $that = $($menu);
 	e.preventDefault();
@@ -114,13 +114,13 @@ $($menuToggle).click(e => {
 // Clear menus
 
 $(document).on({
-	touchstart: e => {
+	'touchstart': e => {
 		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
 	},
-	mouseup: e => {
+	'mouseup': e => {
 		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);

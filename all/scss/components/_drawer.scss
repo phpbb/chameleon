@@ -34,6 +34,7 @@ $drawer-border-color: rgba($black, 0.125) !default;
 	background-color: $drawer-bg-color;
 	border: none;
 	position: absolute;
+	z-index: 1000;
 	top: $drawer-bar-offset;
 	right: 0;
 	bottom: 0;
