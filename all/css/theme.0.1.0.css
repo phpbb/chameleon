@@ -1126,6 +1126,13 @@
 	list-style: none;
 }
 
+.c-crumbs-container {
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14);
+	position: absolute;
+	width: 100%;
+}
+
 .c-crumbs-item {
 	margin: 0;
 	padding: 0;
@@ -1359,7 +1366,7 @@
 .c-hero {
 	text-align: center;
 	position: relative;
-	padding-top: 5rem;
+	padding-top: 7rem;
 }
 
 .c-hero-container {
@@ -1368,7 +1375,6 @@
 	background-position: 50% 0;
 	background-size: cover;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-	position: relative;
 	height: 400px;
 }
 
