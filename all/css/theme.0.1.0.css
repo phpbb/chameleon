@@ -1127,9 +1127,17 @@
 }
 
 .c-crumbs-container {
+	background-color: #f5f5f5;
 	border-top: 1px solid rgba(0, 0, 0, 0.125);
 	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14);
 	position: absolute;
+	z-index: 10;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
 	width: 100%;
 }
 
