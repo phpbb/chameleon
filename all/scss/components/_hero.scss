@@ -27,7 +27,7 @@ $hero-background: url("https://i.imgur.com/DnPCBsG.jpg") !default;
 .c-hero {
 	text-align: center;
 	position: relative;
-	padding-top: ($hero-spacing * 10);
+	padding-top: ($hero-spacing * 14);
 
 	&-container {
 		background: $hero-background;
@@ -35,7 +35,6 @@ $hero-background: url("https://i.imgur.com/DnPCBsG.jpg") !default;
 		background-position: 50% 0;
 		background-size: cover;
 		border-bottom: $hero-border-size solid $hero-border-color;
-		position: relative;
 		height: $hero-height;
 	}
 
