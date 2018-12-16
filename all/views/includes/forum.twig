@@ -53,10 +53,10 @@
 							<ul class="o-bar-right">
 								{% if item.subs %}
 								<li class="o-bar-item">
-									<a class="o-bar-action" href="" data-toggle="tooltip" data-placement="top" title="SubForums">
+									<a class="o-bar-action" href="" data-toggle="menu" data-placement="top" title="SubForums">
 										<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
 									</a>
-									<div class="c-menu-container t-menu-container">
+									<div class="c-menu-container t-menu-container" data-container="menu">
 										<ul class="c-menu t-menu">
 											{% for sub in item.subs %}
 												<li class="c-menu-item t-menu-item">
