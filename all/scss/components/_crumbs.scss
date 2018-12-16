@@ -31,11 +31,15 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 	list-style: none;
 
 	&-container {
+		background-color: $crumbs-bg-color;
 		border-top: 1px solid $crumbs-border-color;
 		box-shadow:
 			0 11px 15px -7px rgba(0, 0, 0, 0.2),
 			0 24px 38px 3px rgba(0, 0, 0, 0.14);
 		position: absolute;
+		z-index: 10;
+		@include parent();
+		flex-wrap: nowrap;
 		width: 100%;
 	}
 
