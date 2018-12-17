@@ -4,7 +4,14 @@
   "description": "A well structured top down base css framework meant for web apps",
   "main": "gulpfile.js",
   "xo": {
+    "rules": {
+      "quote-props": [
+        "error",
+        "always"
+      ]
+    },
     "env": [
+      "es6",
       "browser",
       "node",
       "jquery"
@@ -43,7 +50,7 @@
     "stylelint": "^7.8.0",
     "stylelint-order": "^0.3.0",
     "stylelint-scss": "^1.4.1",
-    "xo": "0.18.2"
+    "xo": "0.23.0"
   },
   "dependencies": {}
 }
