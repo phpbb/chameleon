@@ -1,7 +1,5 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
 const del = require('del');
 const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
@@ -11,33 +9,18 @@ const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
 const postcss = require('gulp-postcss');
 const stylefmt = require('gulp-stylefmt');
-const nunjucks = require('gulp-nunjucks-render');
-const data = require('gulp-data');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
-const moment = require('moment');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
-const manageEnvironment = function (environment) {
-	environment.addFilter('moment', (date, format, fromNow) => {
-		if (fromNow) {
-			date = moment(date, format).fromNow();
-		} else {
-			date = moment(date, format);
-		}
-
-		return date;
-	});
-};
-
 // Config
 const build = {
-	css: './dist/assets/css',
-	html: './dist/views/',
-	twig: './src/views/',
-	data: './src/mock/',
-	scss: './src/scss/'
+	'css': './dist/assets/css',
+	'html': './dist/views/',
+	'twig': './src/views/',
+	'data': './src/mock/',
+	'scss': './src/scss/'
 };
 
 const AUTOPREFIXER_BROWSERS = [
@@ -55,20 +38,20 @@ gulp.task('css', () => {
 	.src(build.scss + '*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
-		indentType: 'tab',
-		indentWidth: 1,
-		outputStyle: 'expanded',
-		precision: 10,
-		onError: console.error.bind(console, 'Sass error:')
+		'indentType': 'tab',
+		'indentWidth': 1,
+		'outputStyle': 'expanded',
+		'precision': 10,
+		'onError': console.error.bind(console, 'Sass error:')
 	}))
 	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 	.pipe(
 		postcss([
 			sorting(sortOrder),
 			torem({
-				rootValue: 16,
-				unitPrecision: 7,
-				propWhiteList: [
+				'rootValue': 16,
+				'unitPrecision': 7,
+				'propWhiteList': [
 					'font',
 					'font-size',
 					'margin',
@@ -81,17 +64,17 @@ gulp.task('css', () => {
 					'padding-right',
 					'padding-top',
 					'padding-bottom'],
-				selectorBlackList: [],
-				replace: true,
-				mediaQuery: false,
-				minPixelValue: 0
+				'selectorBlackList': [],
+				'replace': true,
+				'mediaQuery': false,
+				'minPixelValue': 0
 			})
 		])
 	)
 	// .pipe(stylefmt())
 	.pipe(rename({
-		suffix: '.' + pkg.version,
-		extname: '.css'
+		'suffix': '.' + pkg.version,
+		'extname': '.css'
 	}))
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(build.css));
@@ -109,8 +92,8 @@ gulp.task('minify', gulp.series('css', () => {
 	.pipe(sourcemaps.init())
 	.pipe(cssnano())
 	.pipe(rename({
-		suffix: '.min',
-		extname: '.css'
+		'suffix': '.min',
+		'extname': '.css'
 	}))
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(build.css));
@@ -118,45 +101,25 @@ gulp.task('minify', gulp.series('css', () => {
 	return css;
 }));
 
-gulp.task('twig', () => {
-	const css = gulp
-	.src(build.twig + '*.twig')
-	.pipe(data(file => {
-		const data = JSON.parse(fs.readFileSync(build.data + path.basename(file.path, '.twig') + '.json'));
-		data.version = pkg.version;
-		return data;
-	}))
-	.pipe(nunjucks({
-		path: [build.twig],
-		manageEnv: manageEnvironment
-	}))
-	.pipe(rename({
-		extname: '.html'
-	}))
-	.pipe(gulp.dest(build.html));
-
-	return css;
-});
-
 gulp.task('docs:css', () => {
 	const css = gulp
 	.src(build.docs + '*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
-		indentType: 'tab',
-		indentWidth: 1,
-		outputStyle: 'expanded',
-		precision: 10,
-		onError: console.error.bind(console, 'Sass error:')
+		'indentType': 'tab',
+		'indentWidth': 1,
+		'outputStyle': 'expanded',
+		'precision': 10,
+		'onError': console.error.bind(console, 'Sass error:')
 	}))
 	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 	.pipe(
 		postcss([
 			sorting(sortOrder),
 			torem({
-				rootValue: 16,
-				unitPrecision: 7,
-				propWhiteList: [
+				'rootValue': 16,
+				'unitPrecision': 7,
+				'propWhiteList': [
 					'font',
 					'font-size',
 					'margin',
@@ -169,18 +132,18 @@ gulp.task('docs:css', () => {
 					'padding-right',
 					'padding-top',
 					'padding-bottom'],
-				selectorBlackList: [],
-				replace: true,
-				mediaQuery: false,
-				minPixelValue: 0
+				'selectorBlackList': [],
+				'replace': true,
+				'mediaQuery': false,
+				'minPixelValue': 0
 			})
 		])
 	)
 	.pipe(stylefmt())
 	.pipe(cssnano())
 	.pipe(rename({
-		suffix: '.' + pkg.version + '.min',
-		extname: '.css'
+		'suffix': '.' + pkg.version + '.min',
+		'extname': '.css'
 	}))
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(build.docs));
@@ -190,10 +153,8 @@ gulp.task('docs:css', () => {
 
 gulp.task('watch', () => {
 	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
-	gulp.watch('src/views/**/*.twig', gulp.series('twig'));
-	gulp.watch('src/mock/**/*.json', gulp.series('twig'));
 });
 
 gulp.task('serve', gulp.series('watch'));
-gulp.task('test', gulp.series('css', 'minify', 'twig'));
-gulp.task('default', gulp.series('css', 'minify', 'twig', 'watch'));
+gulp.task('test', gulp.series('css', 'minify'));
+gulp.task('default', gulp.series('css', 'minify', 'watch'));
