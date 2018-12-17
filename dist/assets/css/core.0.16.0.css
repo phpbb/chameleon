@@ -3044,7 +3044,6 @@ textarea:focus + .o-form-floating-label {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	margin: 0 0.5rem 0 0;
 	padding: 0;
 }
 
