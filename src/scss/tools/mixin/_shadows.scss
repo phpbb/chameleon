@@ -23,7 +23,7 @@ $shadow-elevation-property: box-shadow !default;
 $shadow-duration: 280ms !default;
 
 // The default easing value for elevation transitions.
-$shadow-easing: cubic-bezier(.4, 0, .2, 1) !default;
+$shadow-easing: cubic-bezier(0.4, 0, 0.2, 1) !default;
 
 $shadow-umbra-elevation: (
 	0: "0px 0px 0px 0px",
