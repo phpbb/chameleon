@@ -1,56 +1,56 @@
 {
-  "name": "base-l",
-  "version": "0.16.0",
-  "description": "A well structured top down base css framework meant for web apps",
-  "main": "gulpfile.js",
-  "xo": {
-    "rules": {
-      "quote-props": [
-        "error",
-        "always"
-      ]
-    },
-    "env": [
-      "es6",
-      "browser",
-      "node",
-      "jquery"
-    ]
-  },
-  "scripts": {
-    "test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hanakin/base-l.git"
-  },
-  "author": "Michael Miday (Hanakin)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hanakin/base-l/issues"
-  },
-  "homepage": "https://github.com/hanakin/base-l#readme",
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "4.0.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-data": "^1.3.1",
-    "gulp-nunjucks-render": "github:carlosl/gulp-nunjucks-render#master",
-    "gulp-postcss": "^6.2.0",
-    "gulp-rename": "1.3.0",
-    "gulp-sass": "4.0.1",
-    "gulp-sourcemaps": "^1.12.1",
-    "gulp-stylefmt": "^1.1.0",
-    "moment": "2.22.2",
-    "postcss-discard-comments": "^2.0.4",
-    "postcss-pxtorem": "^3.3.1",
-    "postcss-rtl": "^0.5.0",
-    "postcss-sorting": "^2.0.1",
-    "stylelint": "^7.8.0",
-    "stylelint-order": "^0.3.0",
-    "stylelint-scss": "^1.4.1",
-    "xo": "0.23.0"
-  },
-  "dependencies": {}
+	"name": "base-l",
+	"version": "0.16.0",
+	"description": "A well structured top down base css framework meant for web apps",
+	"main": "gulpfile.js",
+	"xo": {
+		"rules": {
+			"quote-props": [
+				"error",
+				"always"
+			]
+		},
+		"env": [
+			"es6",
+			"browser",
+			"node",
+			"jquery"
+		]
+	},
+	"scripts": {
+		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hanakin/base-l.git"
+	},
+	"author": "Michael Miday (Hanakin)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hanakin/base-l/issues"
+	},
+	"homepage": "https://github.com/hanakin/base-l#readme",
+	"devDependencies": {
+		"del": "^2.2.0",
+		"gulp": "4.0.0",
+		"gulp-autoprefixer": "^3.1.0",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-data": "^1.3.1",
+		"gulp-nunjucks-render": "github:carlosl/gulp-nunjucks-render#master",
+		"gulp-postcss": "^6.2.0",
+		"gulp-rename": "1.3.0",
+		"gulp-sass": "4.0.1",
+		"gulp-sourcemaps": "^1.12.1",
+		"gulp-stylefmt": "^1.1.0",
+		"moment": "2.22.2",
+		"postcss-discard-comments": "^2.0.4",
+		"postcss-pxtorem": "^3.3.1",
+		"postcss-rtl": "^0.5.0",
+		"postcss-sorting": "^2.0.1",
+		"stylelint": "^7.8.0",
+		"stylelint-order": "^0.3.0",
+		"stylelint-scss": "^1.4.1",
+		"xo": "0.23.0"
+	},
+	"dependencies": {}
 }
