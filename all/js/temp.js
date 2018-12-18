@@ -1,5 +1,3 @@
-'use strict';
-
 const $drawerToggle = '[data-toggle="drawer"]';
 const $drawer = '[data-container="drawer"]';
 const $drawerMenuToggle = '[data-toggle="drawer-menu"]';
@@ -10,7 +8,13 @@ const $menuToggle = '[data-toggle="menu"]';
 const $menu = '[data-container="menu"]';
 const $searchToggle = '[data-toggle="search"]';
 const $search = '[data-container="search"]';
+const $profileToggle = '[data-toggle="profileToggle"]';
+const $profile = '[data-container="profile"]';
 const $tabs = '[data-toggle="tabs"]';
+const $modalToggle = '[data-toggle="modal"]';
+const $modal = '[data-container="modal"]';
+const $toastToggle = '[data-toggle="toast"]';
+const $toast = '[data-container="toast"]';
 
 const clearToggle = function (e, $el, $toggle) {
 	const {target} = e;
@@ -36,6 +40,22 @@ const clearTabs = function (e, $links) {
 		$($that).toggleClass('is-active', false);
 	});
 };
+
+//---------------------------------------------
+
+$($modalToggle).click(e => {
+	e.preventDefault();
+	e.stopPropagation();
+	$($modal).toggleClass('is-active');
+});
+
+//---------------------------------------------
+
+$($toastToggle).click(e => {
+	e.preventDefault();
+	e.stopPropagation();
+	$($toast).toggleClass('is-active');
+});
 
 //---------------------------------------------
 
@@ -90,6 +110,14 @@ $($notificationToggle).click(function (e) {
 
 //---------------------------------------------
 
+$($profileToggle).click(e => {
+	e.preventDefault();
+	e.stopPropagation();
+	$($profile).toggleClass('is-active');
+});
+
+//---------------------------------------------
+
 $($menu).each(function () {
 	const $this = $(this);
 	const $targetOffset = $this.offset();
@@ -119,11 +147,13 @@ $(document).on({
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
+		clearToggle(e, $profile, $profileToggle);
 	},
 	'mouseup': e => {
 		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
+		clearToggle(e, $profile, $profileToggle);
 	}
 });
