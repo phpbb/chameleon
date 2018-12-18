@@ -9,6 +9,6 @@
 
 //
 // @scss
-@function letterSpacing($tracking, $font-size) {
-  @return $tracking / ($font-size * 16) * 1em;
+@function letterspacing($tracking, $font-size) {
+	@return $tracking / ($font-size * 16) * 1em;
 }
