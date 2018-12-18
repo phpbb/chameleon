@@ -13,7 +13,7 @@ const $search = '[data-container="search"]';
 const $tabs = '[data-toggle="tabs"]';
 
 const clearToggle = function (e, $el, $toggle) {
-	const target = e.target;
+	const {target} = e;
 
 	if (
 		!$(target).is($el) &&
