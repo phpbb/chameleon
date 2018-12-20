@@ -115,7 +115,7 @@ gulp.task('data', () => {
 		.pipe(merge({
 			'fileName': 'db.json'
 		}))
-		.pipe(gulp.dest(build.data));
+		.pipe(gulp.dest(build.data + '/db/'));
 
 	return json;
 });
@@ -136,7 +136,7 @@ gulp.task('minify', gulp.series('css', () => {
 }));
 
 gulp.task('twig', gulp.series('data', () => {
-	const db = JSON.parse(fs.readFileSync(build.data + 'db.json'));
+	const db = JSON.parse(fs.readFileSync(build.data + 'db/db.json'));
 	db.version = pkg.version;
 	const css = gulp
 		.src(build.twig + '*.twig')
@@ -156,6 +156,7 @@ gulp.task('twig', gulp.series('data', () => {
 gulp.task('watch', () => {
 	gulp.watch(build.scss + '**/*.scss', gulp.series('css', 'minify'));
 	gulp.watch(build.twig + '**/*.twig', gulp.series('twig'));
+	gulp.watch(build.data + '*.json', gulp.series('twig'));
 });
 
 gulp.task('serve', gulp.series('watch'));

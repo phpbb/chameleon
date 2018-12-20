@@ -1,4 +1,80 @@
 {
+	"birthdays": [
+		{
+			"id": 1,
+			"name": "user11",
+			"profile": "./memberlist.php",
+			"age": 53
+		},
+		{
+			"id": 2,
+			"name": "myNameBart",
+			"profile": "./memberlist.php",
+			"age": 47
+		},
+		{
+			"id": 3,
+			"name": "ihelp",
+			"profile": "./memberlist.php",
+			"group": "#FFAB40",
+			"age": 35
+		},
+		{
+			"id": 4,
+			"name": "user32",
+			"profile": "./memberlist.php",
+			"age": 38
+		},
+		{
+			"id": 5,
+			"name": "meInIrene",
+			"profile": "./memberlist.php",
+			"age": 15
+		},
+		{
+			"id": 6,
+			"name": "Dave",
+			"profile": "./memberlist.php",
+			"age": 31
+		},
+		{
+			"id": 7,
+			"name": "francony",
+			"profile": "./memberlist.php",
+			"age": 42
+		},
+		{
+			"id": 8,
+			"name": "widgetFree",
+			"profile": "./memberlist.php",
+			"age": 26
+		},
+		{
+			"id": 9,
+			"name": "imanage",
+			"profile": "./memberlist.php",
+			"group": "#4F6772",
+			"age": 33
+		},
+		{
+			"id": 10,
+			"name": "scubaSteve",
+			"profile": "./memberlist.php",
+			"age": 67
+		},
+		{
+			"id": 11,
+			"name": "pickleRick",
+			"profile": "./memberlist.php",
+			"age": 22
+		},
+		{
+			"id": 12,
+			"name": "suboba",
+			"profile": "./memberlist.php",
+			"age": 17
+		}
+	],
 	"crumbs": [
 		{
 			"id": 1,
@@ -291,11 +367,24 @@
 			"cat": 0
 		}
 	],
+	"phpbb": {
+		"notifications": "2",
+		"pms": "103",
+		"user": {
+			"name": "Hanakin",
+			"avatar": "https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460"
+		}
+	},
 	"icons": [
 		{
 			"icon": "menu",
 			"path": "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z",
 			"cat": "primary"
+		},
+		{
+			"icon": "online",
+			"path": "M4.93,4.93C3.12,6.74 2,9.24 2,12C2,14.76 3.12,17.26 4.93,19.07L6.34,17.66C4.89,16.22 4,14.22 4,12C4,9.79 4.89,7.78 6.34,6.34L4.93,4.93M19.07,4.93L17.66,6.34C19.11,7.78 20,9.79 20,12C20,14.22 19.11,16.22 17.66,17.66L19.07,19.07C20.88,17.26 22,14.76 22,12C22,9.24 20.88,6.74 19.07,4.93M7.76,7.76C6.67,8.85 6,10.35 6,12C6,13.65 6.67,15.15 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,10.89 8.45,9.89 9.17,9.17L7.76,7.76M16.24,7.76L14.83,9.17C15.55,9.89 16,10.89 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.15 18,13.65 18,12C18,10.35 17.33,8.85 16.24,7.76M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z",
+			"cat": "other"
 		},
 		{
 			"icon": "register",
@@ -679,7 +768,12 @@
 		},
 		{
 			"icon": "unapproved",
-			"path": "M12 22a.997.997 0 0 1-.707-.293l-9-9a.999.999 0 0 1 0-1.414l9-9a.999.999 0 0 1 1.414 0l9 9a.999.999 0 0 1 0 1.414l-9 9A.993.993 0 0 1 12 22zM4.414 12L12 4.415 19.586 12 12 19.586 4.414 12zM11 8v6h2V8h-2zm1 9.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z",
+			"path": "M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M13,17H11V15H13V17M13,13H11V7H13V13Z",
+			"cat": "other"
+		},
+		{
+			"icon": "approved",
+			"path": "M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z",
 			"cat": "other"
 		},
 		{
@@ -1033,11 +1127,6 @@
 			"cat": "topic"
 		}
 	],
-	"global": [
-		{
-			"id": 1
-		}
-	],
 	"msgs": [
 		{
 			"id": 1,
@@ -1149,7 +1238,7 @@
 			],
 			"title": "Your first pm msg title",
 			"time": "2016-11-11T19:18:00Z",
-			"unread": 0,
+			"unread": 1,
 			"approved": 0
 		},
 		{
@@ -1238,7 +1327,7 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "unapproved",
+			"type": "approved",
 			"typeTitle": "Approved Post",
 			"participants": [
 				{
@@ -1251,6 +1340,108 @@
 			"time": "2016-11-11T19:18:00Z",
 			"unread": 0,
 			"approved": 1
+		}
+	],
+	"online": [
+		{
+			"id": 1,
+			"name": "Alexa [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 2,
+			"name": "Yahoo Slurp [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 3,
+			"name": "imanage",
+			"profile": "./memberlist.php",
+			"group": "#4F6772"
+		},
+		{
+			"id": 4,
+			"name": "Bing [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 5,
+			"name": "devIsMe",
+			"profile": "./memberlist.php",
+			"group": "#00BFA5"
+		},
+		{
+			"id": 6,
+			"name": "Google Feedfetcher [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 7,
+			"name": "Baidu [Spider]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 8,
+			"name": "user1",
+			"profile": "./memberlist.php"
+		},
+		{
+			"id": 9,
+			"name": "communAnyOne",
+			"profile": "./memberlist.php",
+			"group": "#3F54C0"
+		},
+		{
+			"id": 10,
+			"name": "Google [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 11,
+			"name": "siteMaintainer",
+			"profile": "./memberlist.php",
+			"group": "#00BCD4"
+		},
+		{
+			"id": 12,
+			"name": "user2",
+			"profile": "./memberlist.php"
+		},
+		{
+			"id": 13,
+			"name": "thisIsUser3",
+			"profile": "./memberlist.php"
+		},
+		{
+			"id": 14,
+			"name": "Exabot [Bot]",
+			"profile": "./memberlist.php",
+			"bot": 1,
+			"group": "#9E8DA7"
+		},
+		{
+			"id": 15,
+			"name": "helpUiCan",
+			"profile": "./memberlist.php",
+			"group": "#FFAB40"
+		},
+		{
+			"id": 16,
+			"name": "orangeCounty",
+			"profile": "./memberlist.php",
+			"group": "#B84FDB"
 		}
 	],
 	"pms": [
@@ -1543,6 +1734,22 @@
 			"time": "2016-11-11T19:18:00Z"
 		}
 	],
+	"stats": {
+		"online": {
+			"current": "519",
+			"registered": "16",
+			"hidden": "1",
+			"guests": "502",
+			"most": "3056"
+		},
+		"posts": "161430",
+		"topics": "20309",
+		"members": "63056",
+		"newest": {
+			"name": "bobMarley",
+			"profile": "./memberlist.php"
+		}
+	},
 	"topics": [
 		{
 			"id": 1,
