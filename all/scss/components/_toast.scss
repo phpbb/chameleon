@@ -17,8 +17,10 @@ $toast-height: ($toast-spacing * 6) !default;
 $toast-bg-color: $gray-900 !default;
 $toast-bg-hover-color: $gray-800 !default;
 $toast-text-color: $white !default;
-$toast-action-color: $default-link-color-hover !default;
-$toast-action-hover-color: $default-action-color-hover !default;
+$toast-success-color: $default-success-color-hover !default;
+$toast-success-hover-color: $default-success-dark-color-hover !default;
+$toast-important-color: $default-important-color-hover !default;
+$toast-important-hover-color: $default-important-dark-color-hover !default;
 
 //
 // @scss
@@ -59,10 +61,27 @@ $toast-action-hover-color: $default-action-color-hover !default;
 		padding: ($toast-spacing * 0.75) ($toast-spacing * 3);
 		transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0ms;
 
+		&-success {
+			color: $toast-success-color;
+
+			&:hover,
+			&:focus {
+				color: $toast-success-hover-color;
+			}
+		}
+
+		&-important {
+			color: $toast-important-color;
+
+			&:hover,
+			&:focus {
+				color: $toast-important-hover-color;
+			}
+		}
+
 		&:hover,
 		&:focus {
-			background-color: $toast-bg-hover-color;
-			color: $toast-action-hover-color;
+			background-color: $gray-800;
 		}
 	}
 
