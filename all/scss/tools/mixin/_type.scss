@@ -92,7 +92,7 @@ $type-styles: (
 	),
 	overline: (
 		font-size: 0.75rem, // 12px
-		letter-spacing: letterSpacing(2, 0.75),
+		letter-spacing: letterspacing(2, 0.75),
 		font-weight: map-get($type-font-weight, regular),
 		line-height: 2rem // 32px
 	)
