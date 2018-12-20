@@ -30,7 +30,7 @@
 			],
 			"title":"Your first pm msg title",
 			"time":"2016-11-11T19:18:00Z",
-			"unread":0,
+			"unread":1,
 			"approved":0
 		},
 		{
@@ -103,7 +103,7 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "unapproved",
+			"type": "approved",
 			"typeTitle": "Approved Post",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}

@@ -42,11 +42,11 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 const theme = '';
 const build = {
-	css: './all/css',
-	twig: './all/views/',
-	scss: './all/scss/',
-	data: './tests/mock/',
-	html: './tests/views/'
+	'css': './all/css',
+	'twig': './all/views/',
+	'scss': './all/scss/',
+	'data': './tests/mock/',
+	'html': './tests/views/'
 };
 
 if (theme) {
@@ -56,49 +56,50 @@ if (theme) {
 
 gulp.task('css', () => {
 	const css = gulp
-	.src(build.scss + '*.scss')
-	.pipe(sourcemaps.init())
-	.pipe(sass({
-		indentType: 'tab',
-		indentWidth: 1,
-		outputStyle: 'expanded',
-		precision: 10,
-		onError: console.error.bind(console, 'Sass error:')
-	}))
-	.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-	.pipe(
-		postcss([
-			sorting(sortOrder),
-			torem({
-				rootValue: 16,
-				unitPrecision: 7,
-				propWhiteList: [
-					'font',
-					'font-size',
-					'margin',
-					'margin-left',
-					'margin-right',
-					'margin-top',
-					'margin-bottom',
-					'padding',
-					'padding-left',
-					'padding-right',
-					'padding-top',
-					'padding-bottom'],
-				selectorBlackList: [],
-				replace: true,
-				mediaQuery: false,
-				minPixelValue: 0
-			})
-		])
-	)
-	.pipe(stylefmt())
-	.pipe(rename({
-		suffix: '.' + pkg.version,
-		extname: '.css'
-	}))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(build.css));
+		.src(build.scss + '*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			'indentType': 'tab',
+			'indentWidth': 1,
+			'outputStyle': 'expanded',
+			'precision': 10,
+			'onError': console.error.bind(console, 'Sass error:')
+		}))
+		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+		.pipe(
+			postcss([
+				sorting(sortOrder),
+				torem({
+					'rootValue': 16,
+					'unitPrecision': 7,
+					'propWhiteList': [
+						'font',
+						'font-size',
+						'margin',
+						'margin-left',
+						'margin-right',
+						'margin-top',
+						'margin-bottom',
+						'padding',
+						'padding-left',
+						'padding-right',
+						'padding-top',
+						'padding-bottom'
+					],
+					'selectorBlackList': [],
+					'replace': true,
+					'mediaQuery': false,
+					'minPixelValue': 0
+				})
+			])
+		)
+		.pipe(stylefmt())
+		.pipe(rename({
+			'suffix': '.' + pkg.version,
+			'extname': '.css'
+		}))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(build.css));
 
 	return css;
 });
@@ -110,44 +111,44 @@ gulp.task('clean', () => {
 
 gulp.task('data', () => {
 	const json = gulp
-	.src(build.data + '*.json')
-	.pipe(merge({
-		fileName: 'db.json'
-	}))
-	.pipe(gulp.dest(build.data));
+		.src(build.data + '*.json')
+		.pipe(merge({
+			'fileName': 'db.json'
+		}))
+		.pipe(gulp.dest(build.data + '/db/'));
 
 	return json;
 });
 
 gulp.task('minify', gulp.series('css', () => {
 	const css = gulp
-	.src(build.css + '/*.' + pkg.version + '.css')
-	.pipe(sourcemaps.init())
-	.pipe(cssnano())
-	.pipe(rename({
-		suffix: '.min',
-		extname: '.css'
-	}))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(build.css));
+		.src(build.css + '/*.' + pkg.version + '.css')
+		.pipe(sourcemaps.init())
+		.pipe(cssnano())
+		.pipe(rename({
+			'suffix': '.min',
+			'extname': '.css'
+		}))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(build.css));
 
 	return css;
 }));
 
 gulp.task('twig', gulp.series('data', () => {
-	const db = JSON.parse(fs.readFileSync(build.data + 'db.json'));
+	const db = JSON.parse(fs.readFileSync(build.data + 'db/db.json'));
 	db.version = pkg.version;
 	const css = gulp
-	.src(build.twig + '*.twig')
-	.pipe(nunjucks({
-		data: db,
-		path: [build.twig],
-		manageEnv: manageEnvironment
-	}))
-	.pipe(rename({
-		extname: '.html'
-	}))
-	.pipe(gulp.dest(build.html));
+		.src(build.twig + '*.twig')
+		.pipe(nunjucks({
+			'data': db,
+			'path': [build.twig],
+			'manageEnv': manageEnvironment
+		}))
+		.pipe(rename({
+			'extname': '.html'
+		}))
+		.pipe(gulp.dest(build.html));
 
 	return css;
 }));
@@ -155,6 +156,7 @@ gulp.task('twig', gulp.series('data', () => {
 gulp.task('watch', () => {
 	gulp.watch(build.scss + '**/*.scss', gulp.series('css', 'minify'));
 	gulp.watch(build.twig + '**/*.twig', gulp.series('twig'));
+	gulp.watch(build.data + '*.json', gulp.series('twig'));
 });
 
 gulp.task('serve', gulp.series('watch'));

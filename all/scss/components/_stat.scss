@@ -13,7 +13,9 @@ $stat-spacing: $default-spacing !default;
 
 
 // Theme Variables
-
+$stat-badge-color: $white;
+$stat-badge-bg-color: $default-link-color;
+$stat-badge-bg-hover-color: $default-link-color-hover;
 
 //
 // @scss
@@ -47,5 +49,17 @@ $stat-spacing: $default-spacing !default;
 		text-align: center;
 		opacity: 0.54;
 		flex-grow: 1;
+	}
+
+	&-badge {
+		&-link {
+			background-color: $stat-badge-bg-color;
+			color: $stat-badge-color;
+
+			&:hover {
+				background-color: $stat-badge-bg-hover-color;
+				color: $stat-badge-color;
+			}
+		}
 	}
 }

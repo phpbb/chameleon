@@ -69,14 +69,16 @@ $profile-bad-color: $default-important-color !default;
 	}
 
 	&-menu {
-		color: $profile-action-color;
-		display: inline-block;
-		padding: ($profile-spacing * 2);
+		&-link {
+			color: $profile-action-color;
+			display: inline-block;
+			padding: ($profile-spacing * 2);
 
-		&:hover,
-		&:focus {
-			color: $profile-action-color-hover;
-			transition: 0.5s;
+			&:hover,
+			&:focus {
+				color: $profile-action-color-hover;
+				transition: 0.5s;
+			}
 		}
 	}
 

@@ -5,8 +5,7 @@
 	],
 	"ignoreFiles": [
 		"./src/scss/generic/_normalize.scss",
-		"./src/scss/settings/*.scss",
-		"./src/scss/tools/**/*.scss"
+		"./src/scss/settings/*.scss"
 	],
 	"rules": {
 		"scss/at-extend-no-missing-placeholder": true,
@@ -189,7 +188,7 @@
 		"value-list-comma-newline-before": "never-multi-line",
 		"value-list-comma-space-after": "always-single-line",
 		"value-list-comma-space-before": "never",
-		"order/declaration-block-order": [
+		"order/order": [
 			"custom-properties",
 			"dollar-variables",
 			{
@@ -209,7 +208,7 @@
 				"name": "media"
 			}
 		],
-		"order/declaration-block-properties-specified-order": [
+		"order/properties-order": [
 			[
 				"font",
 				"font-family",
