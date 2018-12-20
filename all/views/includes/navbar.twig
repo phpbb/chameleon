@@ -8,9 +8,9 @@
 	</ul>
 	<ul class="o-bar-right t-navbar-right">
 		<li class="o-bar-item t-navbar-item" data-toggle="drawer">
-			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="Hanakin" title="Hanakin">
+			<a class="o-bar-action t-navbar-action" href="#" title="{{phpbb.user.name}}">
 				<span class="o-avatar-wrap o-bar-avatar t-navbar-avatar">
-					<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460" alt="User Avatar">
+					<img class="o-avatar" src="{{phpbb.user.avatar}}" alt="User Avatar">
 					<span class="o-avatar-online"></span>
 
 				</span>
@@ -19,6 +19,7 @@
 		<li class="o-bar-item t-navbar-item" data-toggle="notifications" >
 			<a class="o-bar-action t-navbar-action" href="#"data-tooltip="Notifications" title="Notifications">
 				<svg class="o-icon o-bar-action-icon t-navbar-action-icon"><use xlink:href="#notifications"></use></svg>
+				<span class="o-tag o-bar-badge t-navbar-badge">{{phpbb.notifications}}</span>
 				<span class="o-bar-action-text t-navbar-action-text u-sr-only">Notifications</span>
 			</a>
 			{% include './notification.twig' %}
@@ -26,7 +27,7 @@
 		<li class="o-bar-item t-navbar-item">
 			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="PMs" title="PMs">
 				<svg class="o-icon o-bar-action-icon t-navbar-action-icon" ><use xlink:href="#inbox"></use></svg>
-				<span class="o-tag o-bar-badge t-navbar-badge">4525</span>
+				<span class="o-tag o-bar-badge t-navbar-badge">{{phpbb.pms}}</span>
 				<span class="o-bar-action-text t-navbar-action-text u-sr-only">Private Messages</span>
 			</a>
 		</li>
