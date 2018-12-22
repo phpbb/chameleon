@@ -106,6 +106,7 @@ $notification-unread: $default-action-color-hover !default;
 
 		&-action {
 			text-align: center;
+			text-transform: uppercase;
 			display: block;
 			width: 100%;
 		}

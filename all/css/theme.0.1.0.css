@@ -688,6 +688,7 @@
 
 .c-notification-footer-action {
 	text-align: center;
+	text-transform: uppercase;
 	display: block;
 	width: 100%;
 }
