@@ -31,9 +31,9 @@ html {
 	min-height: 100%; // [2]
 	-ms-touch-action: manipulation; // [5]
 	touch-action: manipulation;
-	/* stylelint-disable order/declaration-block-properties-specified-order */
+	/* stylelint-disable order/properties-order */
 	-moz-osx-font-smoothing: grayscale;  // [3]
-	/* stylelint-enable order/declaration-block-properties-specified-order */
+	/* stylelint-enable order/properties-order */
 	-ms-overflow-style: -ms-autohiding-scrollbar; // [1] Edge 12+, IE 11
 }
 
