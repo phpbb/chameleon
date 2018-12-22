@@ -4,12 +4,12 @@
 			<div class="o-bar t-notification-bar">
 				<ul class="o-bar-left t-notification-bar-left">
 					<li class="o-bar-item t-notification-bar-item">
-						<h2 class="o-bar-title t-notification-bar-title">Notifications</h2>
+						<h2 class="o-bar-title t-notification-bar-title">{{lang.notifications}}</h2>
 					</li>
 				</ul>
 				<ul class="o-bar-right t-notification-bar-right">
 					<li class="o-bar-item t-notification-bar-item">
-						<a class="o-bar-action t-notification-bar-action" href="" data-toggle="tooltip" data-placement="top" title="Settings">
+						<a class="o-bar-action t-notification-bar-action" href="" data-tooltip="{{lang.settings}}" title="{{lang.settings}}">
 							<svg class="o-icon o-bar-action-icon t-notification-bar-action-icon"><use xlink:href="#settings"></use></svg>
 						</a>
 					</li>
@@ -48,8 +48,8 @@
 		{% endfor %}
 		<li class="c-notification-footer t-notification-footer">
 			<div class="o-bar t-notification-bar">
-				<a class="o-bar-action c-notification-footer-action t-notification-footer-action" href="" data-toggle="tooltip" data-placement="top" title="SubForums">
-					SEE ALL
+				<a class="o-bar-action c-notification-footer-action t-notification-footer-action" href="" data-tooltip="{{lang.subforums}}" title="{{lang.subforums}}">
+					{{lang.see_all}}
 				</a>
 			</div>
 		</li>

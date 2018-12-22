@@ -3,7 +3,7 @@
 		{% if loop.first %}
 			<div class="c-forum-cat t-forum-cat">
 				<h2 class="c-forum-cat-title t-forum-cat-title">
-					<a class="c-forum-cat-link t-forum-cat-link" href="#">{{ item.name }}</a>
+					<a class="c-forum-cat-link t-forum-cat-link" href="#">{{item.name}}</a>
 				</h2>
 				<div class="c-forum-deck t-forum-deck">
 		{% else %}
@@ -11,7 +11,7 @@
 			</div>
 			<div class="c-forum-cat t-forum-cat">
 				<h2 class="c-forum-cat-title t-forum-cat-title">
-					<a class="c-forum-cat-link t-forum-cat-link" href="#">{{ item.name }}</a>
+					<a class="c-forum-cat-link t-forum-cat-link" href="#">{{item.name}}</a>
 				</h2>
 				<div class="c-forum-deck t-forum-deck">
 		{% endif %}
@@ -19,18 +19,18 @@
 					<div class="c-forum t-forum">
 						<a class="c-forum-body t-forum-body" href="">
 							<span class="c-forum-media t-forum-media">
-								<svg class="o-icon {% if item.status === 0 %}c-forum-media-icon t-forum-media-icon{% else %}c-forum-media-icon-read t-forum-media-icon-read{% endif %}"><use xlink:href="#{{ item.type }}"></use></svg>
+								<svg class="o-icon {% if item.status === 0 %}c-forum-media-icon t-forum-media-icon{% else %}c-forum-media-icon-read t-forum-media-icon-read{% endif %}"><use xlink:href="#{{item.type}}"></use></svg>
 							</span>
 							<div class="c-forum-info t-forum-info">
 								<h4 class="c-forum-title t-forum-title">
 									{% if item.icon %}
-									<svg class="o-icon c-forum-title-icon t-forum-title-icon"><use xlink:href="#topic-{{ item.icon }}"></use></svg>
+									<svg class="o-icon c-forum-title-icon t-forum-title-icon"><use xlink:href="#topic-{{item.icon}}"></use></svg>
 									{% endif %}
-									{{ item.name }}
+									{{item.name}}
 								</h4>
 								{% if item.desc %}
 								<p class="c-forum-text t-forum-text">
-									{{ item.desc }}
+									{{item.desc}}
 								</p>
 								{% endif %}
 							</div>
@@ -40,20 +40,20 @@
 								<li class="o-bar-item">
 									<span class="o-bar-info">
 										<svg class="o-icon o-bar-info-icon"><use xlink:href="#topic"></use></svg>
-										<span class="o-bar-item-text">{{ item.topics }}</span>
+										<span class="o-bar-item-text">{{item.topics}}</span>
 									</span>
 								</li>
 								<li class="o-bar-item">
 									<span class="o-bar-info">
 										<svg class="o-icon o-bar-info-icon"><use xlink:href="#replies"></use></svg>
-										<span class="o-bar-item-text">{{ item.posts }}</span>
+										<span class="o-bar-item-text">{{item.posts}}</span>
 									</span>
 								</li>
 							</ul>
 							<ul class="o-bar-right">
 								{% if item.subs %}
 								<li class="o-bar-item">
-									<a class="o-bar-action" href="" data-toggle="menu" data-placement="top" title="SubForums">
+									<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="{{lang.subforums}}" title="{{lang.subforums}}">
 										<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
 									</a>
 									<div class="c-menu-container t-menu-container" data-container="menu">
@@ -61,7 +61,7 @@
 											{% for sub in item.subs %}
 												<li class="c-menu-item t-menu-item">
 													<a class="c-menu-link t-menu-item" href="">
-														<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#forum-sub"></use></svg> <span class="c-menu-text t-forum-text">{{ sub.name }}</span>
+														<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#forum-sub"></use></svg> <span class="c-menu-text t-forum-text">{{sub.name}}</span>
 													</a>
 												</li>
 											{% endfor %}
@@ -71,7 +71,7 @@
 								{% endif %}
 								{% if item.last_subject %}
 								<li class="o-bar-item">
-									<a class="o-bar-action" href="" style="color: {{ item.last_color}}" href="" data-toggle="tooltip" data-placement="top" title="{{ item.last_subject }}, by {{ item.last_name }}, {{ item.last_time }}">
+									<a class="o-bar-action" href="" style="color: {{item.last_color}}" href="" data-tooltip="{{item.last_subject}}, by {{item.last_name}}, {{item.last_time}}" title="{{item.last_subject}}, by {{item.last_name}}, {{item.last_time}}">
 										<svg class="o-icon o-bar-action-icon"><use xlink:href="#last-page"></use></svg>
 									</a>
 								</li>
