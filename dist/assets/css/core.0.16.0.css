@@ -3482,10 +3482,13 @@ textarea:focus + .o-form-floating-label {
 	height: 100%;
 }
 
-.o-modal-mask.is-active .c-modal {
-	opacity: 1;
+.o-modal-mask.is-active {
 	display: -webkit-inline-flex;
 	display: inline-flex;
+}
+
+.o-modal-mask.is-active .o-modal {
+	opacity: 1;
 	transition: all 0.3s ease;
 	-webkit-transform: scale(1);
 	transform: scale(1);

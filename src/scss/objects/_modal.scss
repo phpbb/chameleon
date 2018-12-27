@@ -45,11 +45,14 @@ $modal-background-color: $default-action-bg !default;
 		width: 100%;
 		height: 100%;
 
-		&.is-active .c-modal {
-			opacity: 1;
+		&.is-active {
 			display: inline-flex;
-			transition: all 0.3s ease;
-			transform: scale(1);
+
+			.o-modal {
+				opacity: 1;
+				transition: all 0.3s ease;
+				transform: scale(1);
+			}
 		}
 	}
 
