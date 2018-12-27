@@ -21,7 +21,7 @@ $modal-background-color: $default-action-bg !default;
 
 //
 // @scss
-.c-modal {
+.o-modal {
 	@include shadow(4);
 	@include parent(column);
 	background-color: $modal-background-color;
