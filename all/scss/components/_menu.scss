@@ -37,6 +37,7 @@ $menu-divider-color: rgba(0, 0, 0, 0.125) !default;
 	list-style: none;
 
 	&-container {
+		@include shadow(1);
 		text-align: left;
 		background-color: $menu-background-color;
 		border-radius: $menu-border-radius;
@@ -50,7 +51,6 @@ $menu-divider-color: rgba(0, 0, 0, 0.125) !default;
 		&.is-active {
 			transform: scale(1);
 		}
-		@include shadow(1);
 	}
 
 	&-item {
@@ -62,8 +62,20 @@ $menu-divider-color: rgba(0, 0, 0, 0.125) !default;
 		cursor: pointer;
 	}
 
+	&-header {
+		@include type(body2);
+		@include parent();
+		background-color: $menu-divider-color;
+		color: $menu-link-color;
+		position: relative;
+		align-items: center;
+		height: $menu-link-size;
+		padding: 0 ($menu-spacing * 2) 0 ($menu-spacing * 2);
+	}
+
 	&-link {
 		@include type(body2);
+		@include parent();
 		white-space: nowrap;
 		text-decoration: none;
 		color: $menu-link-color;
@@ -92,7 +104,6 @@ $menu-divider-color: rgba(0, 0, 0, 0.125) !default;
 				transition: 0.5s;
 			}
 		}
-		@include parent();
 	}
 
 	&-divider {

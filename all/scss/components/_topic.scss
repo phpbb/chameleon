@@ -32,6 +32,10 @@ $topic-border-color: rgba(0, 0, 0, 0.125) !default;
 		}
 	}
 
+	&-header-info {
+		padding-right: ($topic-spacing * 2);
+	}
+
 	&-meta {
 		@include parent();
 		text-align: right;

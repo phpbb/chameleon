@@ -15,6 +15,7 @@ const $modalToggle = '[data-toggle="modal"]';
 const $modal = '[data-container="modal"]';
 const $toastToggle = '[data-toggle="toast"]';
 const $toast = '[data-container="toast"]';
+const $tooltip = '[data-tooltip="true"]';
 
 const clearToggle = function (e, $el, $toggle) {
 	const {target} = e;
@@ -157,3 +158,34 @@ $(document).on({
 		clearToggle(e, $profile, $profileToggle);
 	}
 });
+
+//---------------------------------------------
+
+$($tooltip).each(function () {
+	const $this = $(this);
+	const tip = $this.attr('title');
+	$this.data('tip', tip);
+	$this.on({
+		'mouseenter': () => {
+			$this.attr('title', '');
+			$('body').append('<span class="tooltip"></span>');
+			const $that = $('.tooltip');
+			$that.append(tip);
+			const $link = $this.offset();
+			const $tipPos = $that.offset();
+			$tipPos.top = $link.top + $this.innerHeight() + 6;
+			$tipPos.left = ($link.left + ($this.innerWidth() / 2)) - ($that.innerWidth() / 2);
+			$that.attr('style', 'left: ' + $tipPos.left + 'px; top: ' + $tipPos.top + 'px;');
+			$that.toggleClass('is-active');
+		},
+		'mouseleave': () => {
+			$this.attr('title', tip);
+			$('.tooltip').each(function () {
+				const $this = $(this);
+				$this.remove();
+			});
+		}
+	});
+});
+
+//----------------------------------------------

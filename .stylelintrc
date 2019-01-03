@@ -399,7 +399,7 @@
 				"animation-direction",
 				"pointer-events"
 			],
-			{ unspecified: "bottomAlphabetical" }
+			{ "unspecified": "bottomAlphabetical" }
 		]
 	}
 }
