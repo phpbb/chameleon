@@ -29,6 +29,7 @@ $profile-bad-color: $default-important-color !default;
 //
 // @scss
 .c-profile {
+	@include shadow(2);
 	background-color: $profile-background-color;
 	border-radius: $profile-border-radius;
 	position: absolute;
@@ -68,17 +69,15 @@ $profile-bad-color: $default-important-color !default;
 		margin: ($profile-spacing / 2) 0 -$profile-spacing;
 	}
 
-	&-menu {
-		&-link {
-			color: $profile-action-color;
-			display: inline-block;
-			padding: ($profile-spacing * 2);
+	&-action {
+		color: $profile-action-color;
+		display: inline-block;
+		padding: ($profile-spacing * 2);
 
-			&:hover,
-			&:focus {
-				color: $profile-action-color-hover;
-				transition: 0.5s;
-			}
+		&:hover,
+		&:focus {
+			color: $profile-action-color-hover;
+			transition: 0.5s;
 		}
 	}
 
@@ -93,14 +92,15 @@ $profile-bad-color: $default-important-color !default;
 	}
 
 	&-stats {
+		@include parent();
 		flex-wrap: wrap;
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		@include parent();
 	}
 
 	&-stat {
+		@include child();
 		text-align: center;
 		min-width: calc((100% / 3));
 		padding: $profile-spacing ($profile-spacing * 2);
@@ -119,7 +119,6 @@ $profile-bad-color: $default-important-color !default;
 			@include type(caption);
 			padding-top: $profile-spacing;
 		}
-		@include child();
 	}
 
 	&-rating {
@@ -133,5 +132,4 @@ $profile-bad-color: $default-important-color !default;
 			color: $profile-bad-color;
 		}
 	}
-	@include shadow(2);
 }
