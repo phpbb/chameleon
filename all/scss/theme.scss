@@ -115,3 +115,16 @@
 section {
 	margin: 0 0 1.5rem;
 }
+
+.t-forum-page-title {
+	@include type(headline4);
+}
+
+.t-jumpto {
+	overflow-y: scroll;
+	max-height: 240px;
+}
+
+.o-container-centered {
+	text-align: center;
+}
