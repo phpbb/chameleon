@@ -1686,7 +1686,7 @@ textarea:focus + .o-form-floating-label {
 	will-change: transform, opacity;
 }
 
-.o-btn-icon + .o-btn-text,
+.o-btn-icon + .o-btn,
 .o-btn-text + .o-btn-icon {
 	margin-left: 0.5rem;
 }
@@ -3213,8 +3213,8 @@ textarea:focus + .o-form-floating-label {
 	letter-spacing: 0.009375em;
 	color: #757575;
 	position: relative;
-	display: -webkit-inline-flex;
 	display: inline-flex;
+	display: -webkit-inline-flex;
 	overflow: hidden;
 	-webkit-justify-content: center;
 	justify-content: center;
@@ -3322,7 +3322,7 @@ textarea:focus + .o-form-floating-label {
 	font-weight: 500;
 	line-height: 1.35;
 	letter-spacing: 0.03125em;
-	padding: 0 1rem 0 0;
+	padding: 0 0.5rem;
 }
 
 .o-bar-user-title {
@@ -3417,8 +3417,8 @@ textarea:focus + .o-form-floating-label {
 	color: #757575;
 	display: -webkit-inline-flex;
 	display: inline-flex;
-	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
 	height: 56px;

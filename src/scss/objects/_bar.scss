@@ -112,15 +112,15 @@ $bar-badge-bg-color: $default-important-color !default;
 	}
 
 	&-info {
-		color: $bar-user-title-color;
 		@include center($bar-height);
+		color: $bar-user-title-color;
 		padding: ($bar-spacing * 2);
 		padding-right: 0;
 	}
 
 	&-logo {
-		position: relative;
 		@include center($bar-height);
+		position: relative;
 		overflow: hidden;
 		padding: ($bar-spacing * 2);
 
@@ -133,9 +133,9 @@ $bar-badge-bg-color: $default-important-color !default;
 
 	&-action {
 		@include type(subtitle1, $lh: 1.5, $fw: 700);
+		@include center($bar-height);
 		color: $bar-color;
 		position: relative;
-		@include center($bar-height);
 		overflow: hidden;
 		padding: ($bar-spacing * 2);
 		transform: translate3d(0, 0, 0);
@@ -208,7 +208,7 @@ $bar-badge-bg-color: $default-important-color !default;
 
 	&-user {
 		@include type(body1, $lh: 1.35);
-		padding: 0 ($bar-spacing * 2) 0 0;
+		padding: 0 $bar-spacing;
 
 		&-title {
 			@include type(caption);
@@ -260,9 +260,9 @@ $bar-badge-bg-color: $default-important-color !default;
 
 		&-toggle {
 			@include type(subtitle1, $lh: 1.5, $fw: 700);
+			@include center($bar-height);
 			color: $bar-hover-color;
 			flex-shrink: 0;
-			@include center($bar-height);
 			margin-right: 0;
 			margin-left: 0;
 			padding: ($bar-spacing * 2);
@@ -270,8 +270,8 @@ $bar-badge-bg-color: $default-important-color !default;
 
 		&-action {
 			@include type(subtitle1, $lh: 1.5, $fw: 700);
-			color: $bar-color;
 			@include center($bar-height);
+			color: $bar-color;
 			margin-right: 0;
 			margin-left: auto;
 			padding: ($bar-spacing * 2);
