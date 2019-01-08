@@ -3155,6 +3155,10 @@ textarea:focus + .o-form-floating-label {
 	margin-right: auto;
 }
 
+.o-bar-item {
+	position: relative;
+}
+
 .o-bar-left .o-bar-item {
 	float: left;
 }

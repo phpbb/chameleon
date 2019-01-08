@@ -93,6 +93,10 @@ $bar-badge-bg-color: $default-important-color !default;
 		margin-right: auto; // [2]
 	}
 
+	&-item {
+		position: relative;
+	}
+
 	&-left &-item {
 		float: left;
 	}
