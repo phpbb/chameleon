@@ -12,6 +12,8 @@
 			"last_colour":"",
 			"posts":"",
 			"topics":"",
+			"url":"#",
+			"url":"#",
 			"cat": 1
 		},
 		{
@@ -25,8 +27,28 @@
 			"last_name":"hanakin",
 			"last_colour":"AA0000",
 			"posts":"196",
-			"topics":"43",
-			"cat": 0
+			"topics":"127",
+			"url":"#",
+			"cat": 0,
+			"online": [
+				{
+					"id":8,
+					"name":"user1",
+					"profile":"./memberlist.php"
+				},
+				{
+					"id":9,
+					"name":"communAnyOne",
+					"profile":"./memberlist.php",
+					"group":"#3F54C0"
+				},
+				{
+					"id":11,
+					"name":"siteMaintainer",
+					"profile":"./memberlist.php",
+					"group":"#00BCD4"
+				}
+			]
 		},
 		{
 			"id":3,
@@ -40,6 +62,7 @@
 			"last_colour":"",
 			"posts":"",
 			"topics":"",
+			"url":"#",
 			"icon":"heart",
 			"cat": 1
 		},
@@ -55,6 +78,7 @@
 			"last_colour":"",
 			"posts":"0",
 			"topics":"0",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -69,6 +93,7 @@
 			"last_colour":"",
 			"posts":"0",
 			"topics":"0",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -83,12 +108,13 @@
 			"last_colour":"",
 			"posts":"0",
 			"topics":"0",
+			"url":"#",
 			"cat": 0,
 			"subs": [
-				{ "name":"MOD 1" },
-				{ "name":"MOD 2" },
-				{ "name":"MOD 3" },
-				{ "name":"MOD 4" }
+				{ "name":"MOD 1", "url":"#" },
+				{ "name":"MOD 2", "url":"#" },
+				{ "name":"MOD 3", "url":"#" },
+				{ "name":"MOD 4", "url":"#" }
 			]
 		},
 		{
@@ -103,6 +129,7 @@
 			"last_colour":"",
 			"posts":"",
 			"topics":"",
+			"url":"#",
 			"cat": 1
 		},
 		{
@@ -117,6 +144,7 @@
 			"last_colour":"00AA00",
 			"posts":"2",
 			"topics":"2",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -131,6 +159,7 @@
 			"last_colour":"",
 			"posts":"0",
 			"topics":"0",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -145,6 +174,7 @@
 			"last_colour":"00AA00",
 			"posts":"1",
 			"topics":"1",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -159,6 +189,7 @@
 			"last_colour":"",
 			"posts":"",
 			"topics":"",
+			"url":"#",
 			"cat": 1
 		},
 		{
@@ -173,13 +204,14 @@
 			"last_colour":"AA0000",
 			"posts":"1",
 			"topics":"1",
+			"url":"#",
 			"cat": 0
 		},
 		{
 			"id":13,
 			"name":"Forum Support",
 			"desc":"For support relating to the forums please report here",
-			"type":"forum",
+			"type":"forum-locked",
 			"status":1,
 			"last_subject":"[GUIDE] test post",
 			"last_time":"1403082471",
@@ -187,6 +219,7 @@
 			"last_colour":"AA0000",
 			"posts":"1",
 			"topics":"1",
+			"url":"#",
 			"cat": 0
 		},
 		{
@@ -201,12 +234,13 @@
 			"last_colour":"AA0000",
 			"posts":"1",
 			"topics":"1",
+			"url":"#",
 			"cat": 0,
 			"subs": [
-				{ "name":"MOD 1" },
-				{ "name":"MOD 2" },
-				{ "name":"MOD 3" },
-				{ "name":"MOD 4" }
+				{ "name":"MOD 1", "url":"#" },
+				{ "name":"MOD 2", "url":"#" },
+				{ "name":"MOD 3", "url":"#" },
+				{ "name":"MOD 4", "url":"#" }
 			]
 		},
 		{
@@ -221,6 +255,7 @@
 			"last_colour":"",
 			"posts":"",
 			"topics":"",
+			"url":"#",
 			"cat": 1
 		},
 		{
@@ -235,6 +270,7 @@
 			"last_colour":"",
 			"posts":"0",
 			"topics":"0",
+			"url":"#",
 			"cat": 0
 		}
 	]

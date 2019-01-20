@@ -128,3 +128,11 @@ section {
 .o-container-centered {
 	text-align: center;
 }
+
+.o-bar-center {
+	line-height: 0; // [1]
+	// flex-shrink: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
