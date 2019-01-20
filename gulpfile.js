@@ -138,7 +138,7 @@ gulp.task('minify', gulp.series('css', () => {
 gulp.task('twig', gulp.series('data', () => {
 	const db = JSON.parse(fs.readFileSync(build.data + 'db/db.json'));
 	db.version = pkg.version;
-	const css = gulp
+	const html = gulp
 		.src(build.twig + '*.twig')
 		.pipe(nunjucks({
 			'data': db,
@@ -150,7 +150,7 @@ gulp.task('twig', gulp.series('data', () => {
 		}))
 		.pipe(gulp.dest(build.html));
 
-	return css;
+	return html;
 }));
 
 gulp.task('watch', () => {

@@ -21,7 +21,7 @@
 				</ul>
 				<ul class="o-action-bar-actions">
 					<li class="o-action-bar-action">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Post Actions">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Post Actions">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#more-v"></use></svg>
 						</a>
 						<div class="c-menu-container t-menu-container">
@@ -65,37 +65,37 @@
 						</div>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Info">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Info">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#info"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Warn">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Warn">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#warn"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Report">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Report">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#report"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Quote">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Quote">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#quote"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Delete">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Delete">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#delete"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Edit">
+						<a class="o-action-bar-action-link" href="" data-toggle="true" title="Edit">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#edit"></use></svg>
 						</a>
 					</li>
 					<li class="o-action-bar-action u-hidden-md-down">
-						<a class="o-action-bar-action-link" href="" data-toggle="tooltip" data-placement="top" title="Like">
+						<a class="o-action-bar-action-link" href="" data-toggle="true" title="Like">
 							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#thumbs-up"></use></svg>
 						</a>
 					</li>
@@ -105,7 +105,7 @@
 				<div class="c-post-meta">
 					<h4 class="c-post-title">{{ post.title }}</h4>
 					<span class="c-post-subtitle">
-						<time class="c-post-subtitle-item c-post-meta-time" datetime="{{ post.time }}" title="{{ post.time }}" data-short="{{ post.time }}">{{ post.time|moment("YYYYMMDD", true) }}</time>
+						<time class="c-post-subtitle-item c-post-meta-time" datetime="{{ post.time }}" title="{{ post.time }}" data-short="{{ post.time }}">{{ post.time }}</time>
 						<a class="c-post-subtitle-item c-post-meta-number" href="#">#{{ post.id }}</a>
 					</span>
 				</div>
