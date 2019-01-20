@@ -8,7 +8,7 @@
 		{% block meta %}{% endblock %}
 
 		<title></title>
-		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@master/dist/assets/css/core.0.16.0.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@15f86f417a24f2650a3d1440121d8134d9e3b48d/dist/assets/css/core.0.16.0.min.css" rel="stylesheet">
 		<link href="../../all/css/theme.{{ version }}.css" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@master/dist/assets/css/utilities.0.16.0.min.css" rel="stylesheet">
 		{% block css %}{% endblock %}
@@ -17,21 +17,20 @@
 		{% include '../includes/defs.twig' %}
 
 		<header>
-			{% block header %}
-				{% block navbar %}
-					{% include '../includes/search.twig' %}
-					{% include '../includes/navbar.twig' %}
-				{% endblock %}
-				{% block sidemenu %}
-					{% include '../includes/drawer.twig' %}
-				{% endblock %}
-				{% block crumb %}
-					{% include '../includes/crumb.twig' %}
-				{% endblock %}
-				{% block hero %}
-					{% include '../includes/hero.twig' %}
-				{% endblock %}
+			{% block navbar %}
+				{% include '../includes/search.twig' %}
+				{% include '../includes/navbar.twig' %}
 			{% endblock %}
+			{% block sidemenu %}
+				{% include '../includes/drawer.twig' %}
+			{% endblock %}
+			{% block crumb %}
+				{% include '../includes/crumb.twig' %}
+			{% endblock %}
+			{% block hero %}
+				{% include '../includes/hero.twig' %}
+			{% endblock %}
+			{% block header %}{% endblock %}
 		</header>
 
 		{% block main %}{% endblock %}
