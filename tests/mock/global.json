@@ -6,5 +6,11 @@
 			"name":"Hanakin",
 			"avatar":"https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460"
 		}
+	},
+	"page": {
+		"index": 0,
+		"forum:": 0,
+		"topic": 0,
+		"ucp": 0
 	}
 }

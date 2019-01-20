@@ -1,0 +1,30 @@
+<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.jump_to }}">
+	<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#jump-to"></use></svg>
+</a>
+<div class="c-menu-container c-jumpto t-menu-container t-jumpto" data-container="menu">
+	<ul class="c-menu t-menu">
+	{% for item in forums %}
+		{% if item.cat == 1 %}
+			<li class="c-menu-header t-menu-header">
+				<span class="c-menu-header-text t-forum-header-text">{{ item.name }}</span>
+			</li>
+		{% else %}
+			<li class="c-menu-item t-menu-item">
+				<a class="c-menu-link t-menu-link" href="{{ item.url }}" title="{{ item.name }}">
+					<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#{{ item.type }}"></use></svg> <span class="c-menu-text t-forum-text">{{ item.name }}</span>
+				</a>
+			</li>
+			{% if item.subs %}
+			<li class="c-menu-divider"></li>
+				{% for sub in item.subs %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="{{ sub.url }}" title="{{ sub.name }}">
+							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#sub-forum"></use></svg> <span class="c-menu-text t-forum-text">{{ sub.name }}</span>
+						</a>
+					</li>
+				{% endfor %}
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	</ul>
+</div>
