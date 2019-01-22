@@ -15,16 +15,16 @@ $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
-$input-color: $black-54 !default;
+$input-color: $gray-600 !default;
 $input-background-color: $gray-100 !default;
 $input-border-color: $gray-100 !default;
-$input-border-alt-color: $black-12 !default;
+$input-border-alt-color: $gray-300 !default;
 $input-border-hover-color: $gray-200 !default;
 $input-hover-color: $blue-500 !default;
-$input-placeholder-color: $black-54 !default;
-$input-disabled-color: $black-38 !default;
-$input-invalid-border-color: $default-error-color !default;
-$input-invalid-color: $default-error-light-color !default;
+$input-placeholder-color: $gray-600 !default;
+$input-disabled-color: $gray-500 !default;
+$input-invalid-border-color: $red-500 !default;
+$input-invalid-color: $red-300 !default;
 
 
 //

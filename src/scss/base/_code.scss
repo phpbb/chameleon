@@ -11,21 +11,20 @@
 // Layout Variables
 $kbd-padding: 4px !default;
 $pre-padding: 16px !default;
+$pre-border-radius: $default-border-radius !default;
+$code-border-radius: $default-border-radius !default;
+$pre-border-width: 0 !default;
+$kbd-nested-font-weight: 700 !default;
 
 // Theme Variables
 $code-font-family: $default-code-font;
 $code-bg: $gray-200 !default;
 $code-color: $light-green-500 !default;
-$code-border-radius: $default-border-radius !default;
-$kbd-nested-font-weight: 700 !default;
-$kbd-bg: $black-87 !default;
+$kbd-bg: $gray-900 !default;
 $kbd-color: $white !default;
-$kbd-border-color: rgba(0, 0, 0, 0.25) !default;
+$kbd-border-color: rgba($black, 0.125) !default;
 $pre-bg: $gray-800 !default;
-$pre-border-width: 0 !default;
-$pre-border-style: solid !default;
-$pre-border-color: $black-38 !default;
-$pre-border-radius: $default-border-radius !default;
+$pre-border-color: $gray-500 !default;
 $pre-color: $white !default;
 
 //
@@ -71,7 +70,7 @@ pre {
 	word-break: break-all;
 	background-color: $pre-bg;
 	border-width: $pre-border-width;
-	border-style: $pre-border-style;
+	border-style: solid;
 	border-color: $pre-border-color;
 	border-radius: $pre-border-radius;
 	color: $pre-color;
