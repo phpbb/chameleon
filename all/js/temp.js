@@ -61,6 +61,20 @@ const clearTabs = function (e, $links) {
 //---------------------------------------------
 
 /**
+ * Toggles the "is-active" class for the given element
+ *
+ * @this     {object}
+ * @param     {object} target      element to apply toggle class on
+ */
+const isActive = function (target) {
+	this.click(e => {
+		e.preventDefault();
+		e.stopPropagation();
+		target.toggleClass('is-active');
+	});
+};
+
+/**
  * Toggles the state for Modals
  *
  * @todo      Refactor to toggle function
@@ -245,7 +259,7 @@ $($tooltip).each(function () {
 		'mouseenter': () => {
 			$this.attr('title', '');
 			$('body').append('<span class="c-tooltip"></span>');
-			$that = $('.tooltip');
+			$that = $('.c-tooltip');
 			$that.append(tip);
 			const link = $this.offset();
 			const tipPos = $that.offset();
