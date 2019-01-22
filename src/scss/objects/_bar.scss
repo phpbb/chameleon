@@ -80,7 +80,8 @@ $bar-badge-color: $default-error-item-color !default;
 	flex-wrap: nowrap;
 
 	&-left,
-	&-right {
+	&-right,
+	&-center {
 		line-height: 0; // [1]
 		flex-shrink: 1;
 		margin: 0;

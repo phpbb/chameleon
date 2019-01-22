@@ -3140,7 +3140,8 @@ textarea:focus + .o-form-floating-label {
 }
 
 .o-bar-left,
-.o-bar-right {
+.o-bar-right,
+.o-bar-center {
 	line-height: 0;
 	-webkit-flex-shrink: 1;
 	flex-shrink: 1;
