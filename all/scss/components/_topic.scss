@@ -17,7 +17,7 @@ $topic-border-size: $default-border-size !default;
 $topic-icon-color: $default-secondary-color !default;
 $topic-icon-color-read: $default-primary-color !default;
 $topic-bg-color: $default-background-color !default;
-$topic-bg-hover-color: $default-background-alt-color !default;
+$topic-bg-hover-color: lighten($topic-bg-color, 4%) !default;
 $topic-color: $default-background-item-color !default;
 $topic-border-color: $default-border-color !default;
 
