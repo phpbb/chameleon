@@ -15,17 +15,16 @@ $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
-$input-color: $default-action-icon-color;
-$input-background-color: $default-action-bg;
-$input-border-color: $default-action-bg;
-$input-border-hover-color: darken($input-border-color, 10%);
-$input-background-focus-color: $input-background-color;
-$input-border-focus-color: $default-action-bg-hover;
-$input-hover-color: $default-action-color-hover;
-$input-placeholder-color: $default-action-icon-color;
-$input-disabled-color: $default-gray-dark;
-$input-invalid-border-color: $default-error-color;
-$input-invalid-color: $default-error-light-color;
+$input-color: $black-54 !default;
+$input-background-color: $gray-100 !default;
+$input-border-color: $gray-100 !default;
+$input-border-alt-color: $black-12 !default;
+$input-border-hover-color: $gray-200 !default;
+$input-hover-color: $blue-500 !default;
+$input-placeholder-color: $black-54 !default;
+$input-disabled-color: $black-38 !default;
+$input-invalid-border-color: $default-error-color !default;
+$input-invalid-color: $default-error-light-color !default;
 
 
 //
@@ -263,7 +262,7 @@ input[type="checkbox"] {
 	// [5]
 
 	&:hover:not(:checked) + label:before {
-		border-color: darken($input-border-hover-color, 10%);
+		border-color: $input-border-alt-color;
 	}
 
 	// [6]
@@ -354,7 +353,7 @@ input[type="checkbox"] {
 
 	// [5]
 	&:hover + label:before {
-		border-color: darken($input-border-hover-color, 10%);
+		border-color: $input-border-alt-color;
 	}
 
 	// [6]

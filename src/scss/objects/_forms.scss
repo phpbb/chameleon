@@ -16,10 +16,14 @@ $form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
 
 // Theme Variables
-$form-select-border-color: $default-action-bg !default;
-$form-select-border-hover-color: $default-action-bg-hover !default;
+$form-color: $default-action-color !default;
+$form-bg-color: $default-action-bg !default;
+$form-border-color: $default-action-bg !default;
+$form-border-hover-color: $default-action-bg-hover !default;
+$form-border-alt-color: darken($form-border-color, 8%) !default;
+$form-disabled-color: lighten($form-color, 8%) !default;
 $form-icon-color: $default-action-color !default;
-$form-label-color: $default-action-color !default;
+$form-placeholder-color: $default-action-icon-color;
 $form-active-color: $default-action-color-hover !default;
 $form-select-icon-hover-color: $default-action-color-hover !default;
 
@@ -27,10 +31,160 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 //
 // #scss
 
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+[type="color"],
+select,
+textarea {
+	background-color: $form-bg-color;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $form-active-color 3%);
+	border-bottom-color: $form-border-color;
+	color: $form-color;
+
+	&:hover {
+		border-bottom-color: $form-border-hover-color;
+	}
+
+	&:focus {
+		border-color: $form-active-color;
+	}
+
+	&:disabled,
+	&[readonly] {
+		background-color: $form-disabled-color;
+		color: $white;
+
+		&::placeholder {
+			color: $white;
+		}
+
+	}
+
+	&:focus:invalid,
+	&:focus:invalid,
+	&:focus:invalid {
+		border-color: $input-invalid-border-color;
+		color: $input-invalid-color;
+	}
+}
+
+textarea {
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, $form-active-color 1%);
+}
+
+select {
+	background-color: $form-bg-color;
+
+	&:focus::-ms-value {
+		background-color: $form-bg-color;
+		color: $form-active-color;
+	}
+}
+
+[type="checkbox"] {
+	+ label {
+		&:before {
+			border-color: $form-border-hover-color;
+		}
+	}
+
+	&:indeterminate + label:before {
+		// Disabled indeterminate
+		&:disabled {
+			border-right-color: $form-disabled-color;
+		}
+	}
+
+	&:checked + label:before {
+		border-right-color: $form-active-color;
+		border-bottom-color: $form-active-color;
+	}
+
+	&:hover:not(:checked) + label:before {
+		border-color: $form-border-alt-color;
+	}
+
+	&:disabled {
+		&:checked + label:before {
+			border-right-color: $form-disabled-color;
+			border-bottom-color: $form-disabled-color;
+		}
+
+		&:not(:checked) + label:before {
+			background-color: $form-disabled-color;
+		}
+	}
+}
+
+[type="radio"] {
+	&:not(:checked) + label {
+		&:before,
+		&:after {
+			border-color: $form-border-hover-color;
+		}
+	}
+
+	&:checked + label {
+		&:before {
+			border-color: $form-active-color;
+		}
+
+		&:after {
+			background-color: $form-active-color;
+		}
+	}
+
+	&:hover + label:before {
+		border-color: $form-border-alt-color;
+	}
+
+	&:disabled {
+		+ label {
+			color: $form-disabled-color;
+		}
+
+		&:checked + label:before,
+		&:not(:checked) + label:before {
+			border-color: $form-disabled-color;
+		}
+
+		:checked + label:after {
+			background-color: $form-disabled-color;
+		}
+	}
+}
+
+::-webkit-input-placeholder {
+	color: $form-placeholder-color;
+}
+
+:-moz-placeholder {
+	color: $form-placeholder-color;
+}
+
+::-moz-placeholder {
+	color: $form-placeholder-color;
+}
+
+:-ms-input-placeholder {
+	color: $form-placeholder-color;
+}
+
 .o-form {
 	&-group {
-		position: relative;
 		@include vertical-rhythm();
+		position: relative;
 		display: block;
 	}
 
@@ -76,7 +230,7 @@ $form-select-icon-hover-color: $default-action-color-hover !default;
 	}
 
 	&-floating-label {
-		color: $form-label-color;
+		color: $form-color;
 		position: absolute;
 		bottom: 0;
 		margin-left: ($form-spacing * 2);
