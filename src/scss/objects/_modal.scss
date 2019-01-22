@@ -17,6 +17,7 @@ $modal-max-width: 865px !default;
 
 // Theme Variables
 $modal-background-color: $default-action-bg !default;
+$modal-text-color: $default-action-color !default;
 
 
 //
@@ -70,7 +71,7 @@ $modal-background-color: $default-action-bg !default;
 
 	&-body {
 		@include type(body1);
-		color: $black-54;
+		color: $modal-text-color;
 		margin-top: ($modal-spacing * 2.5) 0 0;
 		padding: 0 ($modal-spacing * 3) ($modal-spacing * 3);
 
