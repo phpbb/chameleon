@@ -18,17 +18,18 @@ $notification-container-width: 300px !default;
 $notification-container-size-lg: 420px !default;
 
 // Theme Variables
-$notification-color: $white !default;
-$notification-hover-color: $gray-100 !default;
+$notification-bg-color: $default-background-color !default;
+$notification-hover-color: $default-surface-color !default;
 $notification-approved-color: $default-success-color !default;
 $notification-approved-hover-color: $default-success-dark-color !default;
-$notification-disapproved-color: $default-important-color !default;
-$notification-disapproved-hover-color: $default-important-dark-color !default;
+$notification-disapproved-color: $default-error-color !default;
+$notification-disapproved-hover-color: $default-error-dark-color !default;
 $notification-border-color: rgba(0, 0, 0, 0.125) !default;
 $notification-action-icon-color: $default-action-icon-color !default;
 $notification-action-color-hover: $default-action-color-hover !default;
 $notification-action-bg: $default-action-bg-hover !default;
-$notification-unread: $default-action-color-hover !default;
+$notification-unread: $default-primary-color !default;
+$notification-unread-color: $default-primary-item-color !default;
 
 
 //
@@ -41,7 +42,7 @@ $notification-unread: $default-action-color-hover !default;
 	}
 
 	&-item {
-		background-color: $notification-color;
+		background-color: $notification-bg-color;
 		border-top: $notification-border-size solid $notification-border-color;
 
 		&:hover {
@@ -92,7 +93,7 @@ $notification-unread: $default-action-color-hover !default;
 
 	&-unread .c-notification-meta {
 		background-color: $notification-unread;
-		color: $notification-color;
+		color: $notification-unread-color;
 		transition: transform 0.5s, opacity 1s;
 
 		&:hover {

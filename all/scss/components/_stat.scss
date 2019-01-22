@@ -13,9 +13,9 @@ $stat-spacing: $default-spacing !default;
 
 
 // Theme Variables
-$stat-badge-color: $white;
-$stat-badge-bg-color: $default-link-color;
-$stat-badge-bg-hover-color: $default-link-color-hover;
+$stat-badge-bg-color: $default-primary-color;
+$stat-badge-bg-hover-color: $default-primary-dark-color;
+$stat-badge-color: $default-primary-item-color;
 
 //
 // @scss

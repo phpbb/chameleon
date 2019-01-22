@@ -18,6 +18,7 @@ $hero-lead-max-width: 448px !default;
 
 // Theme Variables
 $hero-logo-color: $default-primary-color !default;
+$hero-color: $default-primary-item-color !default;
 $hero-border-color: rgba(255, 255, 255, 0.15) !default;
 $hero-background: url("https://i.imgur.com/DnPCBsG.jpg") !default;
 
@@ -48,12 +49,12 @@ $hero-background: url("https://i.imgur.com/DnPCBsG.jpg") !default;
 	&-heading {
 		@include type(headline5, $lh: 1.2, $fw: 700);
 		text-transform: uppercase;
-		color: $white;
+		color: $hero-color;
 	}
 
 	&-lead {
 		@include type(headline5, $lh: 1, $fw: 200);
-		color: $white;
+		color: $hero-color;
 
 		@media (min-width: $bp-md) {
 			@include type(headline4, $lh: 1, $fw: 200);

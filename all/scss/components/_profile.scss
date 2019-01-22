@@ -17,13 +17,12 @@ $profile-opacity-38: $default-opacity-38 !default;
 
 
 // Theme Variables
-$profile-background-color: $default-action-bg !default;
-$profile-user-title-color: $default-text-color !default;
-$profile-group-color: $white !default;
+$profile-background-color: $default-background-color !default;
+$profile-user-title-color: $default-background-item-color !default;
 $profile-action-color: $default-action-color !default;
 $profile-action-color-hover: $default-action-color-hover !default;
 $profile-good-color: $default-success-color !default;
-$profile-bad-color: $default-important-color !default;
+$profile-bad-color: $default-error-color !default;
 
 
 //
@@ -64,7 +63,6 @@ $profile-bad-color: $default-important-color !default;
 	&-group {
 		@include type(body2);
 		text-align: center;
-		color: $profile-group-color;
 		height: $profile-group-height;
 		margin: ($profile-spacing / 2) 0 -$profile-spacing;
 	}

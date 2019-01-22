@@ -20,25 +20,26 @@ $post-emoji-size-min: $default-icon-sm !default;
 
 // Theme Variables
 $post-header-bg-color: $default-action-bg !default;
-$post-group-color: $white !default;
 $post-border-color: rgba(0, 0, 0, 0.125) !default;
 
 
 //
 // @scss
 .c-post {
+	@include parent(column);
+	@include shadow(2);
 	border-radius: $post-border-radius;
 	margin-bottom: ($post-spacing * 3);
 
 	&-header {
-		border-bottom: $post-border-size $post-border-style $post-border-color;
 		@include child();
+		border-bottom: $post-border-size $post-border-style $post-border-color;
 	}
 
 	&-body {
+		@include parent(column);
 		min-height: $post-body-min-height;
 		padding: ($post-spacing * 2);
-		@include parent(column);
 	}
 
 	&-meta {
@@ -52,8 +53,8 @@ $post-border-color: rgba(0, 0, 0, 0.125) !default;
 		margin-bottom: 0;
 
 		@media (min-width: $bp-lg) {
-			padding-right: $post-spacing;
 			@include child();
+			padding-right: $post-spacing;
 		}
 	}
 
@@ -65,12 +66,12 @@ $post-border-color: rgba(0, 0, 0, 0.125) !default;
 			padding-left: $post-spacing;
 		}
 	}
-	@include parent(column);
-	@include shadow(2);
 }
 
 .c-copy {
 	@include type(subtitle1);
+
+	@include child();
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;
 
@@ -137,8 +138,6 @@ $post-border-color: rgba(0, 0, 0, 0.125) !default;
 		height: $post-emoji-size;
 		min-height: $post-emoji-size-min;
 	}
-
-	@include child();
 }
 
 .c-post-fluid {
