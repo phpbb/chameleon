@@ -25,7 +25,7 @@ $tab-text-color: $default-action-color !default;
 $tab-icon-color: $default-action-color !default;
 $tab-icon-hover-color: $default-action-color-hover !default;
 $tab-border-type: solid !default;
-$tab-border-color: rgba(0, 0, 0, 0.125) !default;
+$tab-border-color: $default-border-color !default;
 $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 
 

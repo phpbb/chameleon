@@ -16,18 +16,22 @@ $topic-border-size: $default-border-size !default;
 // Theme Variables
 $topic-icon-color: $default-secondary-color !default;
 $topic-icon-color-read: $default-primary-color !default;
-$topic-hover-color: $gray-50 !default;
-$topic-border-color: rgba(0, 0, 0, 0.125) !default;
+$topic-bg-color: $default-background-color !default;
+$topic-bg-hover-color: $default-background-alt-color !default;
+$topic-color: $default-background-item-color !default;
+$topic-border-color: $default-border-color !default;
 
 
 //
 // @scss
 .c-topic {
 	&-item {
+		background-color: $topic-bg-color;
 		border-top: $topic-border-size solid $topic-border-color;
+		color: $topic-color;
 
 		&:hover {
-			background-color: $topic-hover-color;
+			background-color: $topic-bg-hover-color;
 			transition: 0.5s;
 		}
 	}
