@@ -244,7 +244,7 @@ $($tooltip).each(function () {
 	$this.on({
 		'mouseenter': () => {
 			$this.attr('title', '');
-			$('body').append('<span class="tooltip"></span>');
+			$('body').append('<span class="c-tooltip"></span>');
 			$that = $('.tooltip');
 			$that.append(tip);
 			const link = $this.offset();

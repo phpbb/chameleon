@@ -1296,7 +1296,7 @@
 	}
 }
 
-.tooltip {
+.c-tooltip {
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1;
@@ -1321,7 +1321,7 @@
 	transform-origin: center center;
 }
 
-.tooltip.is-active {
+.c-tooltip.is-active {
 	-webkit-animation: pulse 200ms cubic-bezier(0, 0, 0.2, 1) forwards;
 	animation: pulse 200ms cubic-bezier(0, 0, 0.2, 1) forwards;
 }
