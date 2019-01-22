@@ -43,56 +43,76 @@ $default-icon-lg: 40px !default;
 $default-font: Roboto, Helvetica, Arial, sans-serif !default;
 $default-code-font: Monaco, Andale Mono, Courier New, Courier, Mono !default;
 
-//
-// color scheme
-
-// body
-$default-body-bg:                 $white !default;
-$default-body-color:              $gray-800 !default;
-$default-gray-light:              $black-12 !default; // 12%
-$default-gray:                    $black-38 !default; // 38%
-$default-gray-dark:               $black-54 !default; // 54%
-$default-text-color:              $black-87 !default; // 87%
-
 // opacity
-$default-opacity:                 1 !default;
-$default-opacity-87:              0.87 !default;
-$default-opacity-54:              0.54 !default;
-$default-opacity-38:              0.38 !default;
-$default-opacity-12:              0.12 !default;
+$default-opacity: 1 !default;
+$default-opacity-87: 0.87 !default;
+$default-opacity-54: 0.54 !default;
+$default-opacity-38: 0.38 !default;
+$default-opacity-12: 0.12 !default;
 
-// color scheme Main
-$default-primary-color:           $blue-500 !default;
-$default-secondary-color:         $pink-500 !default;
-$default-accent-color:            $yellow-500 !default;
-$default-warning-color:           $amber-500 !default;
-$default-info-color:              $blue-gray-500 !default;
-$default-important-color:         $red-500 !default;
-$default-success-color:           $green-500 !default;
+// color scheme Grays
+$default-gray-light:                    $black-12 !default; // 12%
+$default-gray:                          $black-38 !default; // 38%
+$default-gray-dark:                     $black-54 !default; // 54%
+$default-black:                         $black-87 !default; // 87%
 
-// color scheme Light
-$default-primary-light-color:      $blue-300 !default;
-$default-secondary-light-color:    $pink-300 !default;
-$default-accent-light-color:       $yellow-300 !default;
-$default-warning-light-color:      $amber-300 !default;
-$default-info-light-color:         $blue-gray-300 !default;
-$default-important-light-color:    $red-300 !default;
-$default-success-light-color:      $green-300 !default;
+// color scheme Primary
+$default-primary-color:                 $blue-500 !default;
+$default-primary-dark-color:            $blue-700 !default;
+$default-primary-light-color:           $blue-300 !default;
+$default-primary-item-color:            $white !default;
+$default-primary-item-light-color:      $default-black !default;
 
-// color scheme Dark
-$default-primary-dark-color:      $blue-700 !default;
-$default-secondary-dark-color:    $pink-700 !default;
-$default-accent-dark-color:       $yellow-700 !default;
-$default-warning-dark-color:      $amber-700 !default;
-$default-info-dark-color:         $blue-gray-700 !default;
-$default-important-dark-color:    $red-700 !default;
-$default-success-dark-color:      $green-700 !default;
+// color scheme Secondary
+$default-secondary-color:               $pink-500 !default;
+$default-secondary-dark-color:          $pink-700 !default;
+$default-secondary-light-color:         $pink-300 !default;
+$default-secondary-item-color:          $white !default;
+$default-secondary-item-light-color:    $default-black !default;
+
+// color shceme Error
+$default-error-color:                   $red-500 !default;
+$default-error-dark-color:              $red-700 !default;
+$default-error-light-color:             $red-300 !default;
+$default-error-item-color:              $white !default;
+$default-error-item-light-color:        $default-black !default;
+
+// color scheme Success
+$default-success-color:                 $green-500 !default;
+$default-success-dark-color:            $green-700 !default;
+$default-success-light-color:           $green-300 !default;
+$default-success-item-color:            $white !default;
+$default-success-item-light-color:      $default-black !default;
+
+// color scheme Background
+$default-background-color:              $white !default;
+$default-background-item-color:         $default-black !default;
+
+// color scheme Surface
+$default-surface-color:                 $gray-100 !default;
+$default-surface-alt-color:             $gray-200 !default;
+$default-surface-item-color:            $black-54 !default;
+
+// color scheme Warning
+$default-warning-color:                 $amber-500 !default;
+$default-warning-dark-color:            $amber-700 !default;
+$default-warning-light-color:           $amber-300 !default;
+$default-warning-item-color:            $white !default;
+$default-warning-item-light-color:      $default-black !default;
+
+// color scheme Info
+$default-info-color:                    $blue-gray-500 !default;
+$default-info-dark-color:               $blue-gray-700 !default;
+$default-info-light-color:              $blue-gray-300 !default;
+$default-info-item-color:               $white !default;
+$default-info-item-light-color:         $default-black !default;
 
 // color scheme
-$default-link-color:              $blue-500 !default;
-$default-link-color-hover:        $blue-700 !default;
-$default-action-bg:               $gray-100 !default;
-$default-action-bg-hover:         $gray-200 !default;
-$default-action-color:            $black-54 !default;
-$default-action-color-hover:      $blue-500 !default;
-$default-action-icon-color:       $black-54 !default;
+$default-link-color:                    $default-primary-color !default;
+$default-link-color-hover:              $default-primary-dark-color !default;
+
+$default-action-bg:                     $default-surface-color !default;
+$default-action-bg-hover:               $default-surface-alt-color !default;
+$default-action-color:                  $default-surface-item-color !default;
+$default-action-color-hover:            $default-primary-color !default;
+$default-action-icon-color:             $default-surface-item-color !default;

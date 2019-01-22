@@ -21,8 +21,8 @@ $menu-opacity-38: $default-opacity-38 !default;
 $menu-opacity-12: $default-opacity-12 !default;
 
 // Theme Variables
-$menu-background-color: $white !default;
-$menu-link-color: $default-text-color !default;
+$menu-background-color: $default-background-color !default;
+$menu-link-color: $default-background-item-color !default;
 $menu-action-icon-color: $default-action-icon-color !default;
 $menu-action-color-hover: $default-action-color-hover !default;
 $menu-action-bg: $default-action-bg-hover !default;
