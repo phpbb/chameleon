@@ -8,6 +8,8 @@
 //
 // @settings
 
+$dark-mode: false !default;
+
 $default-font-size:             16px !default;
 $default-line-height:           24px !default;
 
@@ -56,6 +58,26 @@ $default-gray:                          $black-38 !default; // 38%
 $default-gray-dark:                     $black-54 !default; // 54%
 $default-black:                         $black-87 !default; // 87%
 
+// color scheme Background
+$default-background-color:              $white !default;
+$default-background-item-color:         $default-black !default;
+
+// color scheme Surface
+$default-surface-color:                 $gray-100 !default;
+$default-surface-alt-color:             $gray-200 !default;
+$default-surface-item-color:            $default-gray-dark !default;
+
+@if $dark-mode == true {
+	// color scheme Background
+	$default-background-color:              $gray-900 !default;
+	$default-background-item-color:         $white !default;
+
+	// color scheme Surface
+	$default-surface-color:                 $gray-800 !default;
+	$default-surface-alt-color:             $gray-700 !default;
+	$default-surface-item-color:            $default-gray !default;
+}
+
 // color scheme Primary
 $default-primary-color:                 $blue-500 !default;
 $default-primary-dark-color:            $blue-700 !default;
@@ -83,15 +105,6 @@ $default-success-dark-color:            $green-700 !default;
 $default-success-light-color:           $green-300 !default;
 $default-success-item-color:            $white !default;
 $default-success-item-light-color:      $default-black !default;
-
-// color scheme Background
-$default-background-color:              $white !default;
-$default-background-item-color:         $default-black !default;
-
-// color scheme Surface
-$default-surface-color:                 $gray-100 !default;
-$default-surface-alt-color:             $gray-200 !default;
-$default-surface-item-color:            $black-54 !default;
 
 // color scheme Warning
 $default-warning-color:                 $amber-500 !default;
