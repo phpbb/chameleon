@@ -24,16 +24,16 @@ $input-border-focus-color: $default-action-bg-hover;
 $input-hover-color: $default-action-color-hover;
 $input-placeholder-color: $default-action-icon-color;
 $input-disabled-color: $default-gray-dark;
-$input-invalid-border-color: $default-important-color;
-$input-invalid-color: $default-important-light-color;
+$input-invalid-border-color: $default-error-color;
+$input-invalid-color: $default-error-light-color;
 
 
 //
 // #scss
 
 legend {
-	line-height: unitless($default-line-height);
 	@include vertical-rhythm();
+	line-height: unitless($default-line-height);
 }
 
 //
