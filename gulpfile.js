@@ -20,7 +20,8 @@ const build = {
 	'html': './dist/views/',
 	'twig': './src/views/',
 	'data': './src/mock/',
-	'scss': './src/scss/'
+	'scss': './src/scss/',
+	'docs': './docs/_media/'
 };
 
 const AUTOPREFIXER_BROWSERS = [
