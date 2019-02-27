@@ -9,7 +9,7 @@
 // @settings
 
 // Layout Variables
-$modal-spacing: $default-spacing !default;
+$modal-spacing: $sp1 !default;
 $modal-border-radius: $default-border-radius !default;
 $modal-min-width-sm: 280px !default;
 $modal-min-width-lg: 640px !default;
@@ -72,7 +72,7 @@ $modal-text-color: $default-action-color !default;
 	&-body {
 		@include type(body1);
 		color: $modal-text-color;
-		margin-top: ($modal-spacing * 2.5) 0 0;
+		margin-top: ($modal-spacing * 3) 0 0;
 		padding: 0 ($modal-spacing * 3) ($modal-spacing * 3);
 
 		@media (min-width: $bp-md) {

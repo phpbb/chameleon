@@ -9,8 +9,8 @@
 // #settings
 
 // Layout Variables
-$kbd-padding: 4px !default;
-$pre-padding: 16px !default;
+$kbd-padding: $sp1-2 !default;
+$pre-padding: $sp2 !default;
 $pre-border-radius: $default-border-radius !default;
 $code-border-radius: $default-border-radius !default;
 $pre-border-width: 0 !default;

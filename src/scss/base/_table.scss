@@ -9,16 +9,16 @@
 // #settings
 
 // Layout Variables
-$table-row-height: 48px;
-$table-last-row-height: 56px;
+$table-row-height: $sp6;
+$table-last-row-height: $default-height;
 $table-header-height: $table-last-row-height;
-$table-header-padding-bottom: 8px;
-$table-column-spacing: 36px;
+$table-header-padding-bottom: $sp1;
+$table-column-spacing: $sp4;
 $table-column-padding: $table-column-spacing / 2;
-$table-card-header-height: 64px;
+$table-card-header-height: $sp8;
 $table-card-title-top: 20px;
-$table-card-padding: 24px;
-$table-button-padding-right: 16px;
+$table-card-padding: $sp2;
+$table-button-padding-right: $table-card-padding;
 $table-cell-top: $table-card-padding / 2;
 
 //Theme Variables
@@ -36,7 +36,7 @@ table {
 	@include type(body1);
 	white-space: nowrap;
 	background-color: $table-bg-color;
-	border: 1px solid $table-divider-color;
+	border: $default-border-size solid $table-divider-color;
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -75,8 +75,8 @@ table {
 
 	td {
 		vertical-align: top;
-		border-top: 1px solid $table-divider-color;
-		border-bottom: 1px solid $table-divider-color;
+		border-top: $default-border-size solid $table-divider-color;
+		border-bottom: $default-border-size solid $table-divider-color;
 		padding-top: $table-cell-top;
 	}
 

@@ -9,7 +9,7 @@
 // #settings
 
 // Layout Variables
-$tag-spacing: 8px !default;
+$tag-spacing: $sp1-2 $sp1 !default;
 $tag-border-radius: $default-border-radius !default;
 
 // Theme Variables
@@ -29,7 +29,7 @@ $tag-color: $default-info-item-color !default;
 	color: $tag-color;
 	display: inline-flex;
 	margin: 0 0 0 $tag-spacing;
-	padding: ($tag-spacing / 2) (($tag-spacing / 2) + 2px);
+	padding: $tag-spacing;
 
 	// Empty tags collapse automatically
 	&:empty {

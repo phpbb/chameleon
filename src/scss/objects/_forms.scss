@@ -9,7 +9,7 @@
 // #settings
 
 // Layout Variables
-$form-spacing: $default-spacing !default;
+$form-spacing: $sp1 !default;
 $form-icon-size: $default-icon-sm !default;
 $form-select-icon-size: $default-height !default;
 $form-select-icon-position: 12px !default;
@@ -90,7 +90,7 @@ $form-active-color: $default-action-color-hover !default;
 		}
 
 		.o-form-group-with-icon & {
-			margin-left: ($form-spacing * 6.5);
+			margin-left: ($form-spacing * 6);
 		}
 	}
 

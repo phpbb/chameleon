@@ -32,12 +32,24 @@ $bp-xl: 1200px !default;
 // Spacing
 $default-spacing: 8px !default;
 
+$sp1: $default-spacing; // (1) 8px
+$sp1-4: ($sp1 * 0.25); // (1/4) 2px
+$sp1-2: ($sp1 * 0.5); // (1/2) 4px
+$sp2: ($sp1 * 2); // (2) 16px
+$sp3: ($sp1 * 3); // (3) 24px
+$sp4: ($sp1 * 4); // (4) 32px
+$sp5: ($sp1 * 5); // (5) 40px
+$sp6: ($sp1 * 6); // (6) 48px
+$sp7: ($sp1 * 7); // (7) 56px
+$sp8: ($sp1 * 8); // (8) 64px
+$sp9: ($sp1 * 9); // (9) 72px
+
 // Object heights
 $default-height: 56px !default;
-$default-height-dense: 36px !default;
+$default-height-dense: 32px !default;
 
 // icons
-$default-icon-sm: 18px !default;
+$default-icon-sm: 16px !default;
 $default-icon-md: 24px !default;
 $default-icon-lg: 40px !default;
 

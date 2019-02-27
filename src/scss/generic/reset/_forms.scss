@@ -8,10 +8,10 @@
 //
 // #settings
 // Layout Variables
-$base-form-spacing: ($default-line-height / 3);
-$base-double-spacing: ($base-form-spacing * 2);
-$base-half-spacing: ($base-form-spacing / 2);
-$base-quarter-spacing: ($base-half-spacing / 2);
+$base-form-spacing: $sp1;
+$base-label-margin: 0 $sp1 $sp2;
+$base-button-padding: $sp1 $sp1-4;
+$base-input-color-padding: $sp1-4;
 
 //
 // #scss
@@ -32,7 +32,7 @@ form {
 //
 label {
 	display: inline-block;
-	margin: 0 $base-form-spacing $base-double-spacing; // [1]
+	margin: $base-label-margin; // [1]
 }
 
 fieldset {
@@ -44,9 +44,9 @@ fieldset {
 
 legend {
 	@include type(headline5, $lh: 1.5);
+	@include vertical-rhythm();
 	display: block;
 	width: 100%;
-	@include vertical-rhythm();
 }
 
 //
@@ -91,7 +91,7 @@ textarea {
 button {
 	background: transparent;
 	border: $default-border-size solid $default-gray;
-	padding: ($base-double-spacing / 2) $base-quarter-spacing;
+	padding: $base-button-padding;
 	cursor: pointer;
 
 	&:focus {
@@ -186,7 +186,7 @@ textarea {
 
 input[type="color"] {
 	vertical-align: middle; // [1]
-	padding: $base-quarter-spacing;
+	padding: $base-input-color-padding;
 }
 
 //

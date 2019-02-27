@@ -9,12 +9,14 @@
 // @settings
 
 // Layout Variables
-$bar-spacing: $default-spacing !default;
+$bar-spacing: $sp1 !default;
 $bar-avatar-size: $default-icon-lg !default;
 $bar-height: $default-height !default;
 $bar-logo-max-height: 24px !default;
 $bar-logo-width: 64px !default;
 $bar-badge-radius: 50px !default;
+$bar-badge-width: 10px !default;
+$bar-badge-height: 12px !default;
 $bar-profile-max: 296px !default;
 $bar-opacity-1: $default-opacity !default;
 $bar-opacity-87: $default-opacity-87 !default;
@@ -229,9 +231,9 @@ $bar-badge-color: $default-error-item-color !default;
 		color: $bar-badge-bg-color;
 		overflow: hidden;
 		align-self: center;
-		width: 10px;
-		height: 12px;
-		margin: ($bar-spacing * -1.5) 0 0 ($bar-spacing * -1.5);
+		width: $bar-badge-width;
+		height: $bar-badge-height;
+		margin: $bar-badge-height 0 0 $bar-badge-height;
 
 		@media (min-width: $bp-sm) {
 			color: $bar-badge-color;
