@@ -9,7 +9,6 @@
 // #settings
 
 // Layout Variables
-$input-padding: $sp1;
 $input-height: $default-height;
 $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
@@ -78,7 +77,7 @@ textarea {
 	display: inline-block;
 	width: 100%;
 	height: $input-height;
-	padding: $sp3 $sp2 0;
+	padding: $sp2 $sp2 0;
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
 	&:hover {

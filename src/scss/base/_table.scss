@@ -23,7 +23,7 @@ $table-cell-top: $table-card-padding / 2;
 
 //Theme Variables
 $table-bg-color: $white;
-$table-header-color: $gray-100;
+$table-header-color: $default-action-bg;
 $table-divider-color: rgba($black, 0.125);
 $table-hover-color: $gray-200;
 $table-selection-color: $gray-100;
@@ -84,7 +84,7 @@ table {
 		@include type(body1);
 		vertical-align: bottom;
 		text-overflow: ellipsis;
-		color: $table-header-color;
+		background-color: $table-header-color;
 		padding-bottom: $table-header-padding-bottom;
 	}
 	@media (min-width: $bp-md) {
