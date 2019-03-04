@@ -233,7 +233,7 @@ $bar-badge-color: $default-error-item-color !default;
 		align-self: center;
 		width: $bar-badge-width;
 		height: $bar-badge-height;
-		margin: $bar-badge-height 0 0 $bar-badge-height;
+		margin: -$bar-badge-height 0 0 -$bar-badge-height;
 
 		@media (min-width: $bp-sm) {
 			color: $bar-badge-color;

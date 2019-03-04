@@ -1597,7 +1597,7 @@ textarea:focus + .o-form-floating-label {
 	top: 10%;
 	right: 0;
 	float: left;
-	padding: 0.5%;
+	padding: 8%;
 }
 
 .o-avatar-small {
@@ -1620,7 +1620,7 @@ textarea:focus + .o-form-floating-label {
 	z-index: 101;
 	bottom: 0;
 	float: left;
-	padding: 0.03125rem;
+	padding: 0.5rem;
 }
 
 .o-avatar-rate-good {
@@ -3349,7 +3349,7 @@ textarea:focus + .o-form-floating-label {
 	align-self: center;
 	width: 10px;
 	height: 12px;
-	margin: 0.75rem 0 0 0.75rem;
+	margin: -0.75rem 0 -0.75rem;
 	-ms-grid-row-align: center;
 }
 
