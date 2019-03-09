@@ -1620,7 +1620,7 @@ textarea:focus + .o-form-floating-label {
 	z-index: 101;
 	bottom: 0;
 	float: left;
-	padding: 0.25rem;
+	padding: 0.5rem;
 }
 
 .o-avatar-rate-good {
