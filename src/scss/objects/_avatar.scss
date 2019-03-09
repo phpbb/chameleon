@@ -71,7 +71,7 @@ $avatar-bad-color-hover: $default-error-light-color !default;
 		z-index: 101;
 		bottom: 0;
 		float: left;
-		padding: ($avatar-attribute-size * 1px);
+		padding: $sp1-2;
 	}
 
 	&-rate-good {
