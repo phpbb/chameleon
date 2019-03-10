@@ -19,7 +19,7 @@ $crumbs-bg-color: $default-action-bg !default;
 $crumbs-bg-hover-color: $default-action-bg-hover !default;
 $crumbs-text-color: $default-action-color !default;
 $crumbs-icon-color: $default-action-color !default;
-$crumbs-border-color: rgba(0, 0, 0, 0.125) !default;
+$crumbs-border-color: $default-border-color !default;
 $crumbs-icon-hover-color: $default-action-color-hover !default;
 
 //
@@ -31,6 +31,7 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 	list-style: none;
 
 	&-container {
+		@include parent();
 		background-color: $crumbs-bg-color;
 		border-top: 1px solid $crumbs-border-color;
 		box-shadow:
@@ -38,7 +39,6 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 			0 24px 38px 3px rgba(0, 0, 0, 0.14);
 		position: absolute;
 		z-index: 10;
-		@include parent();
 		flex-wrap: nowrap;
 		width: 100%;
 	}

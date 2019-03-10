@@ -8,7 +8,7 @@
 //
 // @settings
 
-$dark-mode: false !default;
+$mode: light;
 
 $default-font-size:             16px !default;
 $default-line-height:           24px !default;
@@ -52,31 +52,122 @@ $default-opacity-54: 0.54 !default;
 $default-opacity-38: 0.38 !default;
 $default-opacity-12: 0.12 !default;
 
+// Map light/dark colors
+@function mode($arr: 'background', $key: 'light', $variant: 'color') {
+	$map: map-get($defaults, $arr);
+	$map: map-get($map, $key);
+	@return map-get($map, $variant);
+}
+
+// color scheme Light/Dark prestaged
+$default-background-color:              null;
+$default-background-alt-color:          null;
+$default-background-item-color:         null;
+$default-surface-color:                 null;
+$default-surface-alt-color:             null;
+$default-surface-item-color:            null;
+$default-border-color:                  null;
+$default-shadow-color:                  null;
+
+// color scheme Light/Dark variables
+$defaults: (
+	'background': (
+		'dark': (
+			'color': $gray-900,
+			'alt':   lighten($gray-900, 4%),
+			'item':  darken($white, 12%)
+		),
+		'light': (
+			'color': $white,
+			'alt':   darken($white, 4%),
+			'item':  $gray-900
+		)
+	),
+	'surface': (
+		'dark': (
+			'color': lighten($gray-900, 8%),
+			'alt':   lighten($gray-900, 12%),
+			'item':  lighten($gray-900, 24%)
+		),
+		'light': (
+			'color': darken($white, 8%),
+			'alt':   darken($white, 12%),
+			'item':  darken($white, 36%)
+		)
+	),
+	'border': (
+		'dark': (
+			'color': rgba($white, 0.125)
+		),
+		'light': (
+			'color': rgba($black, 0.125)
+		)
+	),
+	'shadow': (
+		'dark': (
+			'color': $black
+		),
+		'light': (
+			'color': $black
+		)
+	),
+);
+
+@if $mode == dark {
+	// color scheme Background
+	$default-background-color:              mode('background', 'dark', 'color');
+	$default-background-alt-color:          mode('background', 'dark', 'alt');
+	$default-background-item-color:         mode('background', 'dark', 'item');
+
+	// color scheme Surface
+	$default-surface-color:                 mode('surface', 'dark', 'color');
+	$default-surface-alt-color:             mode('surface', 'dark', 'alt');
+	$default-surface-item-color:            mode('surface', 'dark', 'item');
+
+	// color scheme Border
+	$default-border-color:                  mode('border', 'dark', 'color');
+
+	// color scheme Shadow
+	$default-shadow-color:                  mode('shadow', 'dark', 'color');
+} @else if $mode == light {
+	// color scheme Background
+	$default-background-color:              mode('background', 'light', 'color');
+	$default-background-alt-color:          mode('background', 'light', 'alt');
+	$default-background-item-color:         mode('background', 'light', 'item');
+
+	// color scheme Surface
+	$default-surface-color:                 mode('surface', 'light', 'color');
+	$default-surface-alt-color:             mode('surface', 'light', 'alt');
+	$default-surface-item-color:            mode('surface', 'light', 'item');
+
+	// color scheme Border
+	$default-border-color:                  mode('border', 'light', 'color');
+
+	// color scheme Shadow
+	$default-shadow-color:                  mode('shadow', 'light', 'color');
+} @else if $mode == null {
+	// color scheme Background
+	$default-background-color:              mode('background', 'light', 'color');
+	$default-background-alt-color:          mode('background', 'light', 'alt');
+	$default-background-item-color:         mode('background', 'light', 'item');
+
+	// color scheme Surface
+	$default-surface-color:                 mode('surface', 'light', 'color');
+	$default-surface-alt-color:             mode('surface', 'light', 'alt');
+	$default-surface-item-color:            mode('surface', 'light', 'item');
+
+	// color scheme Border
+	$default-border-color:                  mode('border', 'light', 'color');
+
+	// color scheme Shadow
+	$default-shadow-color:                  mode('shadow', 'light', 'color');
+}
+
 // color scheme Grays
 $default-gray-light:                    $black-12 !default; // 12%
 $default-gray:                          $black-38 !default; // 38%
 $default-gray-dark:                     $black-54 !default; // 54%
 $default-black:                         $black-87 !default; // 87%
-
-// color scheme Background
-$default-background-color:              $white !default;
-$default-background-item-color:         $default-black !default;
-
-// color scheme Surface
-$default-surface-color:                 $gray-100 !default;
-$default-surface-alt-color:             $gray-200 !default;
-$default-surface-item-color:            $default-gray-dark !default;
-
-@if $dark-mode == true {
-	// color scheme Background
-	$default-background-color:              $gray-900 !default;
-	$default-background-item-color:         $white !default;
-
-	// color scheme Surface
-	$default-surface-color:                 $gray-800 !default;
-	$default-surface-alt-color:             $gray-700 !default;
-	$default-surface-item-color:            $default-gray !default;
-}
 
 // color scheme Primary
 $default-primary-color:                 $blue-500 !default;

@@ -20,7 +20,7 @@ $forum-border-size: $default-border-size !default;
 // Theme Variables
 $forum-background-color: $default-background-color !default;
 $forum-text-color: $default-background-item-color !default;
-$forum-border-color: rgba(0, 0, 0, 0.125) !default;
+$forum-border-color: $default-border-color !default;
 $forum-media-color: $default-secondary-color !default;
 $forum-media-read-color: $default-primary-color !default;
 $forum-title-icon-color: $default-info-color !default;
