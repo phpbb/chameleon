@@ -9,18 +9,50 @@
 	</ul>
 	<ul class="o-bar-right">
 		<li class="o-bar-item">
-			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.page_goto }}">
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.page_goto }}">
 				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#pages"></use></svg>
 			</a>
-			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.filter }}">
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					<li class="o-form-row c-menu-item t-menu-item">
+						{# <a class="c-menu-link t-menu-link" href="#"></a> #}
+						<fieldset class="c-menu-form-group">
+							<input class="c-menu-form-field" id="goto" type="text">
+							<label class="o-form-floating-label c-menu-form-floating-label" for="goto">Jump To</label>
+						</fieldset>
+						<fieldset class="c-menu-form-group">
+							<button class="o-btn c-menu-form-btn" type="submit">Go</button>
+						</fieldset>
+					</li>
+				</ul>
+			</div>
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
 				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#filter"></use></svg>
 			</a>
-			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.sort }}">
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in filters %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.order }}">
 				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#sort"></use></svg>
 			</a>
-			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.order }}">
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
 				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#order"></use></svg>
 			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in sorts %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
 			<a class="o-bar-action u-hidden-md-up" href="" data-toggle="menu" title="{{lang.topic_tools}}">
 				<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
 			</a>
