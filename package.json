@@ -5,17 +5,17 @@
 	"main": "gulpfile.js",
 	"xo": {
 		"rules": {
-			"quote-props": [
+			"quotes": [
 				"error",
-				"always"
+				"single"
 			]
 		},
-		"env": [
-			"es6",
-			"browser",
-			"node",
-			"jquery"
-		]
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true,
+			"jquery": true
+		}
 	},
 	"scripts": {
 		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
@@ -31,6 +31,7 @@
 	},
 	"homepage": "https://github.com/phpbb/chameleon#readme",
 	"devDependencies": {
+		"acorn": "6.1.0",
 		"del": "^2.2.0",
 		"gulp": "4.0.0",
 		"gulp-autoprefixer": "^3.1.0",
@@ -50,8 +51,7 @@
 		"postcss-sorting": "^2.0.1",
 		"stylelint": "9.9.0",
 		"stylelint-order": "2.0.0",
-		"stylelint-scss": "1.5.2",
-		"xo": "0.23.0"
-	},
-	"dependencies": {}
+		"stylelint-scss": "3.5.4",
+		"xo": "0.24.0"
+	}
 }
