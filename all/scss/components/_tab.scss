@@ -55,7 +55,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		left: 0;
 		width: 0;
 		height: ($tab-spacing / 2);
-		content: "";
+		content: '';
 		transition:
 			background-color 0s ease-in 0.5s,
 			width 0.15s ease-in 0.25s;
