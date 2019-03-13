@@ -5,11 +5,13 @@ A new theme being developed to replace prosilver going forward for the phpBB pla
 
 ## GUIDLINES
 We are using very strict coding guidlines now to help ensure everything stays maintainable and easy to use.
-Check them out [here](https://area51.phpbb.com/docs/dev/development/index.html)
+Check them out [here](https://area51.phpbb.com/docs/dev/development/index.html). They are being enforce via [stylelint](https://stylelint.io/) and [xo](https://github.com/xojs/xo)
 
 ## DEPENDENCIES
-This project relies on the new [Base-L](https://github.com/hanakin/base-l) front-end framework being built along side of the theme.
-
+ - This project relies on the new [Base-L](https://github.com/hanakin/base-l) front-end framework being built along side of the theme.
+ - We are using [Gulpjs](https://gulpjs.com/) as our build tool
+ - The templates are being rendered via [Nunjucks](https://mozilla.github.io/nunjucks/) which is a js port of Django the python template engine that Twig is based on so our Twig syntak is nearly indentical (Anyone willing to help develop plugins/extensions for this to help get it closer to the phpBB imlimentation is extremely welcome)
+ 
 ## HOW TO CONTRIBUTE
 1. Fork the project
 2. Create an Issue or inquire about taking on an open issue (Issue not currently assigned to anyone)
@@ -18,7 +20,7 @@ This project relies on the new [Base-L](https://github.com/hanakin/base-l) front
 
 You can track the status of the project and the issues here: https://github.com/phpbb/chameleon/projects/1
 
-For all other questions please DM me on the phpbb discord: https://discord.gg/y6kjMdA
+For all other questions please DM me on the phpbb [Discord](https://discord.gg/y6kjMdA)
 
 ## LICENSE
 [MIT](https://opensource.org/licenses/MIT)
