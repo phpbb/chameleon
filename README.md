@@ -12,8 +12,13 @@ This project relies on the new [Base-L](https://github.com/hanakin/base-l) front
 
 ## HOW TO CONTRIBUTE
 1. Fork the project
-2. Create an Issue
-4. Submit a Pull Request ensure you add a link to the issue in your Pull Request comment
+2. Create an Issue or inquire about taking on an open issue (Issue not currently assigned to anyone)
+	- To be assigned to an issue just reply to the issue asking to work on it.
+3. Submit a Pull Request ensure you add a link to the issue in your Pull Request comment
+
+You can track the status of the project and the issues here: https://github.com/phpbb/chameleon/projects/1
+
+For all other questions please DM me on the phpbb discord: https://discord.gg/y6kjMdA
 
 ## LICENSE
 [MIT](https://opensource.org/licenses/MIT)
