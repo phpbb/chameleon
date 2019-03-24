@@ -67,7 +67,7 @@ $list-icon-size: $default-icon-sm !default;
 	}
 
 	&-primary {
-		line-height: unitless(20, 16);
+		line-height: unitless(24, 16);
 	}
 
 	&-secondary {
@@ -76,7 +76,7 @@ $list-icon-size: $default-icon-sm !default;
 		text-transform: inherit;
 
 		&-item {
-			line-height: unitless(18, 14);
+			line-height: unitless(20, 14);
 			padding-right: ($list-spacing * 2);
 
 			&-icon {
@@ -96,15 +96,12 @@ $list-icon-size: $default-icon-sm !default;
 		margin-left: auto;
 
 		&-link:hover {
+			line-height: unitless(24, 16);
 			text-decoration: underline;
 		}
 
-		&-primary {
-			line-height: unitless(20, 16);
-		}
-
 		&-secondary {
-			@include type(body2); // google material design
+			@include type(body2, $lh: unitless(20, 14)); // google material design;
 			text-decoration: inherit;
 			text-transform: inherit;
 		}
