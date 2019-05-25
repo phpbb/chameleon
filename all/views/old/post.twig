@@ -1,0 +1,197 @@
+{# post.twig #}
+{% extends "./layout/layout.twig" %}
+
+{% block component %}
+	{% for post in posts %}
+		<div class="c-post">
+			<div class="o-action-bar c-post-header">
+				<ul class="o-action-bar-list">
+					<li class="o-action-bar-list-item o-action-bar-profile">
+						<a class="o-action-bar-profile-link" href="">
+							<span class="o-avatar-wrap o-action-bar-avatar">
+								<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460" alt="User Avatar">
+								<span class="o-avatar-online o-action-bar-avatar-online"></span>
+							</span>
+							<span class="o-action-bar-user" style="color: {{ post.color }};">
+								{{ post.author }}
+								<small class="o-action-bar-user-title">{{ post.group }}</small>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="o-action-bar-actions">
+					<li class="o-action-bar-action">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Post Actions">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#more-v"></use></svg>
+						</a>
+						<div class="c-menu-container t-menu-container">
+							<ul class="c-menu t-menu">
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#thumbs-up"></use></svg> <span class="c-menu-text t-forum-text">Like</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#edit"></use></svg> <span class="c-menu-text t-forum-text">Edit</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#delete"></use></svg> <span class="c-menu-text t-forum-text">Delete</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#quote"></use></svg> <span class="c-menu-text t-forum-text">Quote</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#report"></use></svg> <span class="c-menu-text t-forum-text">Report</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#warn"></use></svg> <span class="c-menu-text t-forum-text">Warn</span>
+									</a>
+								</li>
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-item" href="">
+										<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#info"></use></svg> <span class="c-menu-text t-forum-text">Info</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Info">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#info"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Warn">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#warn"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Report">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#report"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Quote">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#quote"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-tooltip="true" title="Delete">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#delete"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-toggle="true" title="Edit">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#edit"></use></svg>
+						</a>
+					</li>
+					<li class="o-action-bar-action u-hidden-md-down">
+						<a class="o-action-bar-action-link" href="" data-toggle="true" title="Like">
+							<svg class="o-icon o-action-bar-action-icon"><use xlink:href="#thumbs-up"></use></svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="c-post-body">
+				<div class="c-post-meta">
+					<h4 class="c-post-title">{{ post.title }}</h4>
+					<span class="c-post-subtitle">
+						<time class="c-post-subtitle-item c-post-meta-time" datetime="{{ post.time }}" title="{{ post.time }}" data-short="{{ post.time }}">{{ post.time }}</time>
+						<a class="c-post-subtitle-item c-post-meta-number" href="#">#{{ post.id }}</a>
+					</span>
+				</div>
+				<div class="c-copy">
+					<p>
+						Creating a new theme for phpBB is a daunting task especially given the small number of individuals on the team and the fact that most of us have day jobs.
+					</p>
+
+					<p>
+						In order to help drive this thing and generate community involvement both in discussions and development, I wanted to put together a sort of outline of what we need to help steer the individual posts as well as provide a sort of table of contents for reference and ultimately a checklist/progression chart.
+					</p>
+					<p>
+						Before we start let me preface how this is laid out for better understanding.
+					</p>
+					<p>
+						There are four main stages or areas of focus each with their own sub task. They are listed in order of requirement/workload.
+					</p>
+
+					<ol class="c-copy-list" style="list-style-type: decimal">
+						<li> StyleGuide ( GUI for editing, maintaining &amp; documenting themes )</li>
+						<li> Themes Code</li>
+						<li> Themes Design</li>
+						<li> Any Core Improvements/fixes</li>
+					</ol>
+					<p>
+						Each task/subtask should have its own dedicated discussion thread to avoid confusion
+					</p>
+					<p>
+						sub task will be defined and added/linked appropriately as we progress.
+					</p>
+					<p>
+						This should also allow for community involvement with the actual development in an easier to follow manner
+					</p>
+					<p>
+						<strong class="c-copy-bold">
+							<span class="c-copy-underline">KEY</span>
+						</strong>
+					</p>
+					<p>
+						<img alt="❓" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/2753.svg"> Have not started working on it or still in discussion
+					</p>
+					<p>
+						<img alt="🚧" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg"> Working on it, still in progress
+					</p>
+					<p>
+						<img alt="⌛" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/231b.svg"> Needs reviewed
+					</p>
+					<p>
+						<img alt="✅" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/2705.svg"> Merged or completed
+					</p>
+					<p>
+						[status] [disscussion link] [pull-request]
+					</p>
+					<p>
+						EXP: <img alt="🚧" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg"> <a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=131&amp;t=50381" class="postlink">How to handle icons</a> (<a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=131&amp;t=50381"
+							 class="postlink c-copy-link">#ticket-18273</a>)
+					</p>
+					<p>
+						<strong>
+							<span class="c-copy-underline">
+								<span class="c-copy-color" style="color: #FF0000">PLEASE KEEP DISCUSSION IN THIS THREAD RELATED TO IMPROVING, CHANGING OR UPDATING THE LIST ONLY</span>
+							</span>
+						</strong>
+					</p>
+					<ol class="c-copy-list" style="list-style-type: decimal">
+						<li> StyleGuide</li>
+						<li>
+							Theme Code
+							<ul class="c-copy-list">
+								<li>
+									<img alt="⌛" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/231b.svg"> <a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=131&amp;t=47746" class="postlink">1. What browsers should we support?</a>
+								</li>
+								<li>
+									<img alt="🚧" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg"> <a href="http://area51.phpbb.com/phpBB/viewtopic.php?f=131&amp;t=50326" class="postlink">2. Why is a framework so usefull?</a> (<a href="https://github.com/hanakin/base-l"
+										 class="postlink">https://github.com/hanakin/base-l</a>)
+								</li>
+								<li>
+									<img alt="🚧" class="c-copy-emoji c-copy-smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg"> <a href="https://area51.phpbb.com/phpBB/viewtopic.php?f=131&amp;t=50426" class="postlink">3. Lets talk grids</a>
+								</li>
+							</ul>
+						</li>
+						<li> Design</li>
+						<li> Core Changes</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}

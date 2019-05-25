@@ -1,0 +1,15 @@
+<div class="c-tab-pane t-tab-pane" id="birthdays" role="tabpane">
+	<div class="c-tab-pane-row t-tab-pane-row">
+		<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.congrats }}{{ lang.colon }} </h4>
+		<span class="c-tab-pane-text t-tab-pane-text">
+			{% for item in birthdays %}
+				{% if item.group %}
+					<a class="c-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a> ({{ item.age }})
+				{% else %}
+					<a class="c-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a> ({{ item.age }})
+				{% endif %}
+				{% if loop.last %}{% else %}, {% endif %}
+			{% endfor %}
+		</span>
+	</div>
+</div>

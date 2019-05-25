@@ -1,0 +1,85 @@
+<div class="o-bar c-toolbar">
+	<ul class="o-bar-left">
+		<li class="o-bar-item">
+			<a class="o-bar-action" href="#" title="{{ lang.new_topic }}">
+				<span class="c-toolbar-action-text">{{ lang.new_topic }}</span>
+					<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#add"></use></svg>
+			</a>
+		</li>
+	</ul>
+	<ul class="o-bar-right">
+		<li class="o-bar-item">
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.page_goto }}">
+				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#pages"></use></svg>
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					<li class="o-form-row c-menu-item t-menu-item">
+						{# <a class="c-menu-link t-menu-link" href="#"></a> #}
+						<fieldset class="c-menu-form-group">
+							<input class="c-menu-form-field" id="goto" type="text">
+							<label class="o-form-floating-label c-menu-form-floating-label" for="goto">Jump To</label>
+						</fieldset>
+						<fieldset class="c-menu-form-group">
+							<button class="o-btn c-menu-form-btn" type="submit">Go</button>
+						</fieldset>
+					</li>
+				</ul>
+			</div>
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#filter"></use></svg>
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in filters %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.order }}">
+				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#sort"></use></svg>
+			</a>
+			<a class="o-bar-action u-hidden-sm-down" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#order"></use></svg>
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in sorts %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<a class="o-bar-action u-hidden-md-up" href="" data-toggle="menu" title="{{lang.topic_tools}}">
+				<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#" title="{{ lang.page_goto }}">
+							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#jump-to"></use></svg> <span class="c-menu-text t-forum-text">{{ lang.page_goto }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#" title="{{ lang.filter }}">
+							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#filter"></use></svg> <span class="c-menu-text t-forum-text">{{ lang.filter }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#" title="{{ lang.sort }}">
+							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#sort"></use></svg> <span class="c-menu-text t-forum-text">{{ lang.sort }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#" title="{{ lang.order }}">
+							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#order"></use></svg> <span class="c-menu-text t-forum-text">{{ lang.order }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
