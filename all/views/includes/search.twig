@@ -1,0 +1,14 @@
+<div class="o-bar o-bar-search t-bar-search" data-container="search">
+	<form class="o-bar-search-form t-bar-search-form" action="./search.php" method="get" id="search">
+		<a class="o-bar-search-toggle t-bar-search-toggle" href="#" data-tooltip="true" title="{{ lang.search }}">
+			<svg class="o-icon o-bar-search-toggle-icon t-bar-search-toggle-icon"><use xlink:href="#search"></use></svg>
+		</a>
+		<input class="o-bar-search-feild t-bar-search-feild" name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang.search }}" value="" placeholder="Search…">
+		<a class="o-bar-search-action t-bar-search-action" href="./search.php" data-tooltip="true" title="{{ lang.search_adv }}">
+			<svg class="o-icon o-bar-search-action-icon t-bar-search-action-icon"><use xlink:href="#settings"></use></svg>
+			<span class="o-bar-action-text t-bar-action-text u-sr-only">
+				{{ lang.search_adv }}
+			</span>
+		</a>
+	</form>
+</div>

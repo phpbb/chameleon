@@ -1,0 +1,156 @@
+//------------------------------------------------------------------------------
+// @component: Notification
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$notification-spacing: $default-spacing !default;
+$notification-border-radius: $default-border-radius !default;
+$notification-border-size: $default-border-size !default;
+$notification-icon-size: $default-icon-md !default;
+$notification-meta-border-radius: 50% !default;
+$notification-container-width: 300px !default;
+$notification-container-size-lg: 420px !default;
+
+// Theme Variables
+$notification-bg-color: $default-background-color !default;
+$notification-hover-color: $default-surface-color !default;
+$notification-approved-color: $default-success-color !default;
+$notification-approved-hover-color: $default-success-dark-color !default;
+$notification-disapproved-color: $default-error-color !default;
+$notification-disapproved-hover-color: $default-error-dark-color !default;
+$notification-border-color: $default-border-color !default;
+$notification-action-icon-color: $default-action-icon-color !default;
+$notification-action-color-hover: $default-action-color-hover !default;
+$notification-action-bg: $default-action-bg-hover !default;
+$notification-unread: $default-primary-color !default;
+$notification-unread-color: $default-primary-item-color !default;
+
+
+//
+// @scss
+.c-notification {
+	&-list {
+		box-shadow: none;
+		overflow-y: scroll;
+		max-height: $notification-container-size-lg;
+	}
+
+	&-item {
+		background-color: $notification-bg-color;
+		border-top: $notification-border-size solid $notification-border-color;
+
+		&:hover {
+			background-color: $notification-hover-color;
+			transition: 0.5s;
+		}
+
+		&:first-of-type {
+			border: none;
+		}
+	}
+
+	&-meta {
+		border-radius: $notification-meta-border-radius;
+		color: $notification-action-icon-color;
+		padding: ($notification-spacing * 2);
+		transition: transform 0.5s, opacity 1s;
+		transform: translate3d(0, 0, 0);
+
+		&:after {
+			background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			content: "";
+			transition: transform 0.5s, opacity 1s;
+			transform: scale(10, 10);
+			pointer-events: none;
+		}
+
+		&:active:after {
+			opacity: 0.2;
+			transition: 0s;
+			transform: scale(0, 0);
+		}
+
+		&:hover {
+			background-color: $notification-action-bg;
+			color: $notification-action-color-hover;
+		}
+	}
+
+	&-unread .c-notification-meta {
+		background-color: $notification-unread;
+		color: $notification-unread-color;
+		transition: transform 0.5s, opacity 1s;
+
+		&:hover {
+			background-color: $notification-action-bg;
+			color: $notification-action-color-hover;
+		}
+	}
+
+	&-footer {
+		border-top: $notification-border-size solid $notification-border-color;
+
+		&-action {
+			text-align: center;
+			text-transform: uppercase;
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&-approved {
+		color: $notification-approved-color;
+
+		&:hover {
+			color: $notification-approved-hover-color;
+		}
+	}
+
+	&-unapproved {
+		color: $notification-disapproved-color;
+
+		&:hover {
+			color: $notification-disapproved-hover-color;
+		}
+	}
+
+	&-users {
+		text-overflow: ellipsis;
+		display: block;
+	}
+
+	&-container {
+		@include shadow(2);
+		border-radius: $notification-border-radius;
+		position: absolute;
+		z-index: 999;
+		overflow: auto;
+		width: $notification-container-width;
+		transition: all 0.2s ease;
+		transform: scale(0);
+		transform-origin: right top;
+
+		&.is-active {
+			transform: scale(1);
+		}
+
+		@media (min-width: $bp-md) {
+			width: $notification-container-size-lg;
+		}
+	}
+}
