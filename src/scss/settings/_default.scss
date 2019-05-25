@@ -80,6 +80,7 @@ $default-surface-alt-color:             null;
 $default-surface-item-color:            null;
 $default-border-color:                  null;
 $default-shadow-color:                  null;
+$default-page-color:                   	null;
 
 // color scheme Light/Dark variables
 $defaults: (
@@ -141,6 +142,9 @@ $defaults: (
 
 	// color scheme Shadow
 	$default-shadow-color:                  mode('shadow', 'dark', 'color');
+
+	// other
+	$default-page-color:					$dark;
 } @else if $mode == light {
 	// color scheme Background
 	$default-background-color:              mode('background', 'light', 'color');
@@ -157,6 +161,9 @@ $defaults: (
 
 	// color scheme Shadow
 	$default-shadow-color:                  mode('shadow', 'light', 'color');
+
+	// other
+	$default-page-color:					mode('background', 'light', 'color');
 } @else if $mode == null {
 	// color scheme Background
 	$default-background-color:              mode('background', 'light', 'color');
@@ -173,6 +180,9 @@ $defaults: (
 
 	// color scheme Shadow
 	$default-shadow-color:                  mode('shadow', 'light', 'color');
+
+	// other
+	$default-page-color:					mode('background', 'light', 'color');
 }
 
 // color scheme Grays
@@ -224,6 +234,7 @@ $default-info-item-color:               $white !default;
 $default-info-item-light-color:         $default-black !default;
 
 // color scheme
+$default-page-bg:                    	$default-page-color !default;
 $default-link-color:                    $default-primary-color !default;
 $default-link-color-hover:              $default-primary-dark-color !default;
 
