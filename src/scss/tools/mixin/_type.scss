@@ -106,7 +106,7 @@ $type-styles: (
 	letter-spacing: map-get($type-props, letter-spacing);
 
 	@if not map-has-key($type-styles, $type) {
-		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
+		@error 'Invalid style specified! Choose one of #{map-keys($type-styles)}';
 	}
 
 	@if $type == button {
