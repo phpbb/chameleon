@@ -122,6 +122,7 @@ $post-border-color: $default-border-color !default;
 		margin-right: 0;
 		padding-left: ($post-spacing * 2);
 
+		&,
 		& & {
 			margin: $post-spacing ($post-spacing * 3);
 			margin-right: 0;
