@@ -1,0 +1,68 @@
+//------------------------------------------------------------------------------
+// @component: Hero
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$hero-spacing: $default-spacing !default;
+$hero-border-size: $default-border-size !default;
+$hero-logo-max-height: 120px !default;
+$hero-logo-width: 300px !default;
+$hero-height: 400px !default;
+$hero-lead-max-width: 448px !default;
+
+// Theme Variables
+$hero-logo-color: $default-primary-color !default;
+$hero-color: $default-primary-item-color !default;
+$hero-border-color: rgba(255, 255, 255, 0.15) !default;
+$hero-background: url("https://i.imgur.com/DnPCBsG.jpg") !default;
+
+//
+// @scss
+
+.c-hero {
+	text-align: center;
+	position: relative;
+	padding-top: ($hero-spacing * 14);
+
+	&-container {
+		background: $hero-background;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: cover;
+		border-bottom: $hero-border-size solid $hero-border-color;
+		height: $hero-height;
+	}
+
+	&-logo {
+		color: $hero-logo-color;
+		width: $hero-logo-width;
+		height: auto;
+		max-height: $hero-logo-max-height;
+	}
+
+	&-heading {
+		@include type(headline5, $lh: 1.2, $fw: 700);
+		text-transform: uppercase;
+		color: $hero-color;
+	}
+
+	&-lead {
+		@include type(headline5, $lh: 1, $fw: 200);
+		color: $hero-color;
+
+		@media (min-width: $bp-md) {
+			@include type(headline4, $lh: 1, $fw: 200);
+			max-width: $hero-lead-max-width;
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		text-align: left;
+	}
+}

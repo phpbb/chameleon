@@ -1,0 +1,65 @@
+//------------------------------------------------------------------------------
+// @component: Stat
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$stat-spacing: $default-spacing !default;
+
+
+// Theme Variables
+$stat-badge-bg-color: $default-primary-color;
+$stat-badge-bg-hover-color: $default-primary-dark-color;
+$stat-badge-color: $default-primary-item-color;
+
+//
+// @scss
+.c-stat {
+	&-wrap {
+		@include parent(column);
+		justify-content: center;
+		margin: 0 auto;
+		padding-bottom: ($stat-spacing * 2);
+	}
+
+	&-list {
+		@include parent();
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 auto;
+		padding: ($stat-spacing * 2);
+	}
+
+	&-item {
+		flex-shrink: 1;
+		padding: $stat-spacing;
+		list-style: none;
+		@media (min-width: $bp-lg) {
+			padding: 0 $stat-spacing;
+		}
+	}
+
+	&-info {
+		@include type(caption, $lh: 1);
+		text-align: center;
+		opacity: 0.54;
+		flex-grow: 1;
+	}
+
+	&-badge {
+		&-link {
+			background-color: $stat-badge-bg-color;
+			color: $stat-badge-color;
+
+			&:hover {
+				background-color: $stat-badge-bg-hover-color;
+				color: $stat-badge-color;
+			}
+		}
+	}
+}

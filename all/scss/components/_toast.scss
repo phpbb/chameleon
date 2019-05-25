@@ -1,0 +1,99 @@
+//------------------------------------------------------------------------------
+// @component: Toast
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$toast-spacing: $default-spacing !default;
+$toast-height: ($toast-spacing * 6) !default;
+
+
+// Theme Variables
+$toast-bg-color: $default-info-dark-color !default;
+$toast-bg-hover-color: $default-info-light-color !default;
+$toast-text-color: $default-info-item-color !default;
+$toast-success-color: $default-success-color-hover !default;
+$toast-success-hover-color: $default-success-dark-color-hover !default;
+$toast-important-color: $default-error-color-hover !default;
+$toast-important-hover-color: $default-error-dark-color-hover !default;
+
+//
+// @scss
+.c-toast {
+	background-color: $toast-bg-color;
+	position: fixed;
+	right: ($toast-spacing * 3);
+	bottom: ($toast-spacing * 3);
+	left: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1) 0ms;
+	transform: translate(-50%, 100%);
+	transform: translateY(200%);
+	pointer-events: none;
+	will-change: transform;
+
+	&-text {
+		@include type(body1);
+		color: $toast-text-color;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		height: $toast-height;
+		margin-right: auto;
+		margin-left: 0;
+		padding-right: ($toast-spacing * 3);
+		padding-left: ($toast-spacing * 3);
+		transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0ms;
+	}
+
+	&-action {
+		@include type(button);
+		color: $toast-action-color;
+		opacity: 0;
+		visibility: inherit;
+		padding: ($toast-spacing * 0.75) ($toast-spacing * 3);
+		transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0ms;
+
+		&-success {
+			color: $toast-success-color;
+
+			&:hover,
+			&:focus {
+				color: $toast-success-hover-color;
+			}
+		}
+
+		&-important {
+			color: $toast-important-color;
+
+			&:hover,
+			&:focus {
+				color: $toast-important-hover-color;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $gray-800;
+		}
+	}
+
+	&.is-active {
+		transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1) 0ms;
+		transform: translate(0);
+		pointer-events: auto;
+
+		.c-toast-text,
+		.c-toast-action {
+			opacity: 1;
+			transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0ms;
+		}
+	}
+}
