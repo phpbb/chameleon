@@ -51,7 +51,7 @@ $theme-dark-border: rgba($black, 0.5);
 	margin-top: -56px;
 
 	&-right {
-		background-color: $default-background-color;
+		background-color: $default-background-alt-color;
 	}
 
 	&-action {
@@ -59,7 +59,7 @@ $theme-dark-border: rgba($black, 0.5);
 
 		&:hover,
 		&:focus {
-			background-color: $default-background-alt-color;
+			background-color: $default-action-bg-hover;
 		}
 	}
 }
@@ -73,7 +73,7 @@ $theme-dark-border: rgba($black, 0.5);
 }
 
 .t-crumbs-container {
-	background-color: $default-background-color;
+	background-color: $default-background-alt-color;
 }
 
 .t-forum-page-title {
