@@ -24,6 +24,7 @@ $toolbar-background-color: $default-action-bg !default;
 	@include shadow(2); // google material design
 	background-color: $toolbar-background-color;
 	border-radius: $toolbar-border-radius;
+	margin: 0 0 ($toolbar-spacing * 3);
 
 	&-action {
 		&-text + &-icon {
