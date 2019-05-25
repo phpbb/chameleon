@@ -1,0 +1,57 @@
+<div class="c-notification-container t-notification-container" data-container="notificiations">
+	<ul class="o-list t-notification-list">
+		<li class="c-notification-header t-notification-header">
+			<div class="o-bar t-notification-bar">
+				<ul class="o-bar-left t-notification-bar-left">
+					<li class="o-bar-item t-notification-bar-item">
+						<h2 class="o-bar-title t-notification-bar-title">{{ lang.notifications }}</h2>
+					</li>
+				</ul>
+				<ul class="o-bar-right t-notification-bar-right">
+					<li class="o-bar-item t-notification-bar-item">
+						<a class="o-bar-action t-notification-bar-action" href="" data-tooltip="true" title="{{ lang.settings }}">
+							<svg class="o-icon o-bar-action-icon t-notification-bar-action-icon"><use xlink:href="#settings"></use></svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		{% for item in notification %}
+			<li class="o-list-item c-notification-item t-notification-item{% if item.unread %} c-notification-unread t-notification-unread{% endif %}">
+				<a class="o-list-media c-notification-media t-notification-media" href="{{ item.url }}">
+					<span class="o-avatar-wrap o-list-avatar t-notification-list-avatar">
+						<img class="o-avatar t-notification-avatar" src="{{ item.avatar }}" alt="User Avatar">
+						{% if item.online %}
+							<span class="o-avatar-online o-action-bar-avatar-online t-notification-action-bar-avatar-online"></span>
+						{% endif %}
+					</span>
+				</a>
+				<span class="o-list-primary c-notification-primary t-notification-primary">
+					<span class="o-list-secondary c-notification-users t-notification-users">
+						<svg class="o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon"><use xlink:href="#user"></use></svg>
+						<a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.user }}</a>
+					{% for participant in item.participants %}, <a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ participant.url }}" style="color: {{ participant.color }};">{{ participant.name }}</a>{% endfor %}
+					</span>
+					<span class="o-list-secondary c-notification-title t-notification-title">
+						<svg class="o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon"><use xlink:href="#last-page"></use></svg>
+						<a class="o-list-title t-notification-title" href="#"><strong>{{ item.title }}</strong></a>
+					</span>
+					<span class="o-list-secondary c-notification-time t-notification-time">
+						<svg class="o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon"><use xlink:href="#time"></use></svg>
+						<time class="c-notification-time-text t-notification-time-text" datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time }}</time>
+					</span>
+				</span>
+			<a class="o-list-meta c-notification-meta t-notification-meta{% if item.approved == 1 %} c-notification-approved t-notification-approved{% elseif item.approved == 2 %} c-notification-unapproved t-notification-unapproved{% endif %}" href="" data-tooltip="true" title="{{ item.typeTitle|capitalize() }}">
+					<svg class="o-icon o-list-media-icon t-notification-list-media-icon"><use xlink:href="#{{ item.type }}"></use></svg>
+				</a>
+			</li>
+		{% endfor %}
+		<li class="c-notification-footer t-notification-footer">
+			<div class="o-bar t-notification-bar">
+				<a class="o-bar-action c-notification-footer-action t-notification-footer-action" href="" data-tooltip="true" title="{{ lang.subforums }}">
+					{{ lang.see_all }}
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>

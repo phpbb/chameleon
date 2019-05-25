@@ -1,0 +1,169 @@
+//------------------------------------------------------------------------------
+// @component: stat
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$drawer-spacing: $default-spacing !default;
+$drawer-bar-offset: 58px !default;
+$drawer-width: 248px !default;
+$drawer-border-height: $default-border-size;
+$drawer-opacity-87: $default-opacity-87 !default;
+$drawer-opacity-54: $default-opacity-54 !default;
+
+
+// Theme Variables
+$drawer-bg-color: $default-action-bg !default;
+$drawer-bg-hover-color: $default-action-bg-hover !default;
+$drawer-bg-sub-color: rgba($black, 0.01) !default;
+$drawer-text-color: $default-action-color !default;
+$drawer-icon-color: $default-action-color !default;
+$drawer-icon-hover-color: $default-action-color-hover !default;
+$drawer-border-color: rgba($black, 0.125) !default;
+
+
+//
+// @scss
+.c-drawer {
+	@include shadow(2);
+	background-color: $drawer-bg-color;
+	border: none;
+	position: absolute;
+	z-index: 1000;
+	top: $drawer-bar-offset;
+	right: 0;
+	bottom: 0;
+	flex-shrink: 1;
+	align-self: auto;
+	height: 100%;
+	padding: 0;
+	transform: scaleX(0);
+	transform-origin: center right;
+
+	&:hover,
+	&.is-active {
+		transition: 0.35s ease-in-out;
+		transform: scaleX(1);
+
+		.c-drawer-link-text {
+			display: inline-block;
+			min-width: $drawer-width;
+		}
+
+		.c-drawer-user-name {
+			display: inline-block;
+		}
+		//
+		// @media (min-width: $bp-lg) {
+		// 	transition: 0.5s;
+		// }
+	}
+
+	&-user {
+		@include type(body2);
+		border-bottom: $drawer-border-height solid $drawer-border-color;
+		color: $drawer-text-color;
+		margin-bottom: 0;
+		padding: ($drawer-spacing * 2);
+
+		&-name {
+			@include type(body1);
+			vertical-align: middle;
+			display: none;
+			margin-left: $drawer-spacing;
+			padding: 0 ($drawer-spacing * 2) 0 0;
+		}
+
+		&-title {
+			@include type(caption);
+			color: $drawer-text-color;
+			opacity: $drawer-opacity-54;
+			display: block;
+		}
+	}
+
+	&-menu {
+		display: none;
+		margin: 0;
+		padding: 0;
+		transition: 0.35s ease;
+		transform: scaleY(0);
+		transform-origin: top;
+
+		&.is-active {
+			display: block;
+			transform: scaleY(1);
+		}
+	}
+
+	&-item > &-menu {
+		background-color: rgba(0, 0, 0, 0.01);
+		border-top: $drawer-border-height solid $drawer-border-color;
+		border-bottom: $drawer-border-height solid $drawer-border-color;
+	}
+
+	&-divider {
+		background-color: $drawer-border-color;
+		height: $drawer-border-height;
+	}
+
+	&-link {
+		color: rgba($drawer-text-color, $drawer-opacity-87);
+		position: relative;
+		display: block;
+		overflow: hidden;
+		padding: ($drawer-spacing * 2) ($drawer-spacing * 2) ($drawer-spacing * 2) ($drawer-spacing * 3);
+		cursor: pointer;
+		transition:
+			background-color 0.2s $default-animation-curve,
+			color 0.2s $default-animation-curve;
+		transform: translate3d(0, 0, 0);
+
+		&-icon {
+			color: rgba($drawer-icon-color, $drawer-opacity-54);
+			margin: 0;
+		}
+
+		&-text {
+			display: none;
+			padding-left: $drawer-spacing;
+		}
+
+		&:after {
+			background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			content: "";
+			transition: transform 0.5s, opacity 1s;
+			transform: scale(10, 10);
+			pointer-events: none;
+		}
+
+		&:active:after {
+			opacity: 0.2;
+			transition: 0s;
+			transform: scale(0, 0);
+		}
+
+		&:hover {
+			background-color: $drawer-bg-hover-color;
+			color: $drawer-text-color;
+
+			.c-drawer-link-icon {
+				color: $drawer-icon-hover-color;
+			}
+		}
+	}
+}
