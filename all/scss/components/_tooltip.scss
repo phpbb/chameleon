@@ -38,7 +38,7 @@ $tooltip-text-color: $default-info-item-color !default;
 }
 
 .c-tooltip {
-	@include type(caption, $lh: 1);
+	@include type(caption, $lh: 1.375);
 	text-align: center;
 	background-color: $tooltip-bg-color;
 	border-radius: $tooltip-border-radius;
