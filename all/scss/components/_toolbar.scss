@@ -1,0 +1,37 @@
+//------------------------------------------------------------------------------
+// @component: Toolbar
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$toolbar-spacing: $default-spacing !default;
+$toolbar-border-radius: $default-border-radius !default;
+
+// Theme Variables
+$toolbar-background-color: $default-action-bg !default;
+
+
+//
+// @scss
+
+//
+.c-toolbar {
+	@include shadow(2); // google material design
+	background-color: $toolbar-background-color;
+	border-radius: $toolbar-border-radius;
+
+	&-action {
+		&-text + &-icon {
+			margin-left: $toolbar-spacing;
+		}
+
+		&-icon + &-text {
+			margin-right: $toolbar-spacing;
+		}
+	}
+}
