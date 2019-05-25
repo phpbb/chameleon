@@ -1,0 +1,39 @@
+<div class="o-bar t-navbar">
+	<ul class="o-bar-left t-navbar-left">
+		<li class="o-bar-item t-navbar-item">
+			<a class="o-bar-logo t-navbar-logo t-navbar-logo" href="#" title="{{ lang.site_title }}">
+				<svg class="o-icon o-bar-logo-icon t-navbar-logo-icon"><use xlink:href="#logo-dense"></use></svg>
+			</a>
+		</li>
+	</ul>
+	<ul class="o-bar-right t-navbar-right">
+		<li class="o-bar-item t-navbar-item" data-toggle="drawer">
+			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ phpbb.user.name }}">
+				<span class="o-avatar-wrap o-bar-avatar t-navbar-avatar">
+					<img class="o-avatar" src="{{ phpbb.user.avatar }}" alt="User Avatar">
+					<span class="o-avatar-online"></span>
+				</span>
+			</a>
+		</li>
+		<li class="o-bar-item t-navbar-item" data-toggle="notifications" >
+			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.notifications }}">
+				<svg class="o-icon o-bar-action-icon t-navbar-action-icon"><use xlink:href="#notifications"></use></svg>
+				<span class="o-tag o-bar-badge t-navbar-badge">{{ phpbb.notifications }}</span>
+				<span class="o-bar-action-text t-navbar-action-text u-sr-only">{{ lang.notifications }}</span>
+			</a>
+			{% include './notification.twig' %}
+		</li>
+		<li class="o-bar-item t-navbar-item">
+			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.private_msgs }}">
+				<svg class="o-icon o-bar-action-icon t-navbar-action-icon" ><use xlink:href="#inbox"></use></svg>
+				<span class="o-tag o-bar-badge t-navbar-badge">{{ phpbb.pms }}</span>
+				<span class="o-bar-action-text t-navbar-action-text u-sr-only">{{ lang.private_msgs }}</span>
+			</a>
+		</li>
+		<li class="o-bar-item t-navbar-item" data-toggle="search">
+			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.search }}">
+				<svg class="o-icon o-bar-action-icon t-navbar-action-icon"><use xlink:href="#search"></use></svg>
+			</a>
+		</li>
+	</ul>
+</div>
