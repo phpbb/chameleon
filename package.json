@@ -1,0 +1,57 @@
+{
+	"name": "chameleon",
+	"version": "0.1.0",
+	"description": "The default theme for phpbb",
+	"main": "gulpfile.js",
+	"xo": {
+		"rules": {
+			"quotes": [
+				"error",
+				"single"
+			]
+		},
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true,
+			"jquery": true
+		}
+	},
+	"scripts": {
+		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/phpbb/chameleon.git"
+	},
+	"author": "Michael Miday (Hanakin)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/phpbb/chameleon/issues"
+	},
+	"homepage": "https://github.com/phpbb/chameleon#readme",
+	"devDependencies": {
+		"acorn": "6.1.0",
+		"del": "^2.2.0",
+		"gulp": "4.0.0",
+		"gulp-autoprefixer": "^3.1.0",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-data": "^1.3.1",
+		"gulp-merge-json": "1.3.1",
+		"gulp-nunjucks-render": "github:carlosl/gulp-nunjucks-render#master",
+		"gulp-postcss": "^6.2.0",
+		"gulp-rename": "1.3.0",
+		"gulp-sass": "4.0.1",
+		"gulp-sourcemaps": "^1.12.1",
+		"gulp-stylefmt": "1.1.0",
+		"moment": "2.22.2",
+		"postcss-discard-comments": "^2.0.4",
+		"postcss-pxtorem": "^3.3.1",
+		"postcss-rtl": "^0.5.0",
+		"postcss-sorting": "^2.0.1",
+		"stylelint": "9.9.0",
+		"stylelint-order": "2.0.0",
+		"stylelint-scss": "3.5.4",
+		"xo": "0.24.0"
+	}
+}
