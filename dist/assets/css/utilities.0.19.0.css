@@ -1,11 +1,11 @@
-[tabindex="-1"]:focus {
+[tabindex='-1']:focus {
 	outline: none !important;
 }
 
 .u-clearfix:after {
 	display: table;
 	clear: both;
-	content: " ";
+	content: ' ';
 }
 
 .u-sr-only {
@@ -107,16 +107,16 @@
 	}
 
 	a[href]:after {
-		content: " (" attr(href) ")";
+		content: ' (' attr(href) ')';
 	}
 
 	abbr[title]:after {
-		content: " (" attr(title) ")";
+		content: ' (' attr(title) ')';
 	}
 
-	a[href^="#"]:after,
-	a[href^="javascript:"]:after {
-		content: "";
+	a[href^='#']:after,
+	a[href^='javascript:']:after {
+		content: '';
 	}
 
 	pre,

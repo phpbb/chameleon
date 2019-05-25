@@ -42,28 +42,28 @@ legend {
 //    (base line-height + padding + border)
 // 3. This has no effect on <select>s in some browsers, due to the limited
 //    stylability of `<select>`s in CSS.
-// 4. Override Firefox"s unusual default opacity; see
+// 4. Override Firefox's unusual default opacity; see
 //    https://github.com/twbs/bootstrap/pull/11526.
 // 5. iOS fix for unreadable disabled content;
 //    see https://github.com/twbs/bootstrap/issues/11655.
-// 6. HTML5 says that controls under a fieldset > legend:first-child won"t be
+// 6. HTML5 says that controls under a fieldset > legend:first-child won't be
 //    disabled if the fieldset is disabled. Due to implementation difficulty, we
-//    don"t honor that edge case; we style them as disabled anyway.
+//    don't honor that edge case; we style them as disabled anyway.
 //
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-[type="color"],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+[type='color'],
 select,
 textarea {
 	background-color: $input-background-color;
@@ -150,12 +150,12 @@ select {
 		color: transparent;
 	}
 
-	&[multiple="multiple"] {
+	&[multiple='multiple'] {
 		background-image: none;
 	}
 }
 
-input[type="color"] {
+input[type='color'] {
 	width: $input-height;
 	height: $input-height;
 }
@@ -166,14 +166,14 @@ input[type="color"] {
 //
 // Make file inputs better match text inputs by forcing them to new lines.
 //
-input[type="file"],
-input[type="range"] {
+input[type='file'],
+input[type='range'] {
 	display: inline-block;
 }
 
-input[type="file"],
-input[type="radio"],
-input[type="checkbox"] {
+input[type='file'],
+input[type='radio'],
+input[type='checkbox'] {
 	&:focus:invalid:focus {
 		outline-color: $input-invalid-border-color;
 	}
@@ -191,7 +191,7 @@ input[type="checkbox"] {
 // 5. Apply styling for on hover state.
 // 6. Apply styling for on disabled state.
 //
-[type="checkbox"] {
+[type='checkbox'] {
 	//[1]
 	&:not(:checked),
 	&:checked {
@@ -219,7 +219,7 @@ input[type="checkbox"] {
 			width: 20px;
 			height: 20px;
 			margin-top: $sp1-4;
-			content: "";
+			content: '';
 			transition: 0.2s;
 		}
 	}
@@ -290,7 +290,7 @@ input[type="checkbox"] {
 // 5. Apply styling for on hover state.
 // 6. Apply styling for on disabled state.
 //
-[type="radio"] {
+[type='radio'] {
 	//[1]
 	&:not(:checked),
 	&:checked {
@@ -318,7 +318,7 @@ input[type="checkbox"] {
 			width: $sp2;
 			height: $sp2;
 			margin: $sp1-2 $sp1-2 $sp1-2 0;
-			content: "";
+			content: '';
 			transition: 0.28s ease;
 		}
 	}

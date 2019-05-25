@@ -1,12 +1,12 @@
 // 1. Global Settings
 //-------------------------
-@import "../../src/scss/settings/settings";
+@import '../../src/scss/settings/settings';
 
 
 // 2. Tools
 //-------------------------
-@import "../../src/scss/tools/function/functions";
-@import "../../src/scss/tools/mixin/mixins";
+@import '../../src/scss/tools/function/functions';
+@import '../../src/scss/tools/mixin/mixins';
 
 $primary-color: #6257a8 !default;
 $accent-color: #ff6666 !default;
@@ -39,7 +39,7 @@ $dropmenu-bg-color: $white !default;
 
 $sidebar-width: 300px;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600');
 
 
 * {
@@ -68,7 +68,7 @@ body:not(.ready) {
 	margin: 40vh auto;
 
 	&:empty:before {
-		content: "Loading...";
+		content: 'Loading...';
 	}
 }
 
@@ -556,7 +556,7 @@ main {
 	}
 
 	code {
-		font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
+		font-family: Monaco, 'Andale Mono', 'Courier New', Courier, Mono;
 		font-size: 12px;
 		white-space: nowrap;
 		background-color: $code-bg-color;
@@ -572,7 +572,7 @@ main {
 	}
 
 	pre {
-		font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
+		font-family: Monaco, 'Andale Mono', 'Courier New', Courier, Mono;
 		line-height: 1.4667;
 		word-wrap: normal;
 		background-color: $code-bg-color;
@@ -582,7 +582,7 @@ main {
 		padding: 0 21px;
 
 		code {
-			font-family: Monaco, "Andale Mono", "Courier New", Courier, Mono;
+			font-family: Monaco, 'Andale Mono', 'Courier New', Courier, Mono;
 			font-size: 12px;
 			line-height: inherit;
 			white-space: inherit;
@@ -620,7 +620,7 @@ main {
 
 		&:before {
 			/* stylelint-disable font-family-name-quotes */
-			font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+			font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 			/* stylelint-enable font-family-name-quotes */
 			font-size: 14px;
 			font-weight: bold;
@@ -633,7 +633,7 @@ main {
 			top: 14px;
 			left: -12px;
 			width: 20px;
-			content: "!";
+			content: '!';
 		}
 
 		code {
@@ -914,7 +914,7 @@ main {
 
 .app-sub-sidebar .section-link:before {
 	padding-right: 4px;
-	content: "-";
+	content: '-';
 }
 
 

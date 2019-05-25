@@ -59,15 +59,15 @@ blockquote {
 		line-height: inherit;
 
 		&:before {
-			content: "“";
+			content: '“';
 		}
 
 		&:after {
-			content: "";
+			content: '';
 		}
 
 		&:last-of-type:after {
-			content: "”";
+			content: '”';
 		}
 	}
 	@include space(margin-left);

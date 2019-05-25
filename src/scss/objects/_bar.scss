@@ -158,7 +158,7 @@ $bar-badge-color: $default-error-item-color !default;
 			display: block;
 			width: 100%;
 			height: 100%;
-			content: "";
+			content: '';
 			transition: transform 0.5s, opacity 1s;
 			transform: scale(10, 10);
 			pointer-events: none;

@@ -83,9 +83,9 @@ textarea {
 //
 // 1. Work around a Firefox/IE bug where the transparent `button` background
 //    results in a loss of the default `button` focus styles.
-// 2. iOS 'clickable elements' fix for role="button" Fixes 'clickability' issue
+// 2. iOS 'clickable elements' fix for role='button' Fixes 'clickability' issue
 //    (and more generally, the firing of events such as focus as well) for
-//    traditionally non-focusable elements with role="button"
+//    traditionally non-focusable elements with role='button'
 //    see: https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 //
 button {
@@ -101,7 +101,7 @@ button {
 }
 
 // [2]
-[role="button"] {
+[role='button'] {
 	cursor: pointer;
 }
 
@@ -123,8 +123,8 @@ button {
 //
 // Note: Neither radios nor checkboxes can be readonly.
 //
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
 	margin-right: $base-form-spacing; // [1]
 
 	&:disabled {
@@ -133,25 +133,25 @@ input[type="checkbox"] {
 }
 
 // [3]
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
 	-webkit-appearance: listbox;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
 	height: auto;
 }
 
-[type="date"]::-webkit-inner-spin-button {
+[type='date']::-webkit-inner-spin-button {
 	display: none;
 	-webkit-appearance: none;
 }
 
 // [4]
-input[type="search"] {
+input[type='search'] {
 	-webkit-appearance: none;
 }
 
@@ -162,29 +162,29 @@ output {
 
 // [5]
 button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-[type="color"],
+[type='button'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='reset'],
+[type='search'],
+[type='submit'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+[type='color'],
 select,
 textarea {
 	min-height: $default-line-height;
 }
 
-input[type="color"] {
+input[type='color'] {
 	vertical-align: middle; // [1]
 	padding: $base-input-color-padding;
 }
@@ -197,12 +197,12 @@ input[type="color"] {
 // 2. Allow only vertical resizing of textareas.
 // 3. Specify the standard appearance of selects
 //
-select[multiple="multiple"],
+select[multiple='multiple'],
 textarea {
 	vertical-align: top; // [1]
 }
 
-select[multiple="multiple"] {
+select[multiple='multiple'] {
 	height: auto;
 }
 

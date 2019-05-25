@@ -101,22 +101,22 @@ blockquote {
 }
 
 q {
-	quotes: "‘" "’" "“" "”";
+	quotes: '‘' '’' '“' '”';
 
 	&:before {
-		content: "‘";
+		content: '‘';
 	}
 
 	&:after {
-		content: "’";
+		content: '’';
 	}
 
 	q:before {
-		content: "“";
+		content: '“';
 	}
 
 	q:after {
-		content: "”";
+		content: '”';
 	}
 
 	//

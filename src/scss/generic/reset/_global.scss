@@ -41,7 +41,7 @@ html {
 // 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 //
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // [1]
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // [1]
 	width: 100%;
 	min-height: 100%;
 }
@@ -85,7 +85,7 @@ video {
 a,
 area,
 button,
-[role="button"],
+[role='button'],
 input,
 label,
 select,
@@ -130,7 +130,7 @@ svg {
 //
 // specify the progress cursor of updating elements
 //
-[aria-busy="true"] {
+[aria-busy='true'] {
 	cursor: progress;
 }
 
@@ -152,7 +152,7 @@ svg {
 //
 // specify the style of visually hidden yet accessible elements
 //
-[hidden][aria-hidden="false"] {
+[hidden][aria-hidden='false'] {
 	position: absolute;
 	display: inherit;
 	clip: rect(0 0 0 0);
