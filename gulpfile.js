@@ -66,11 +66,11 @@ gulp.task('css', () => {
 						'padding-top',
 						'padding-bottom',
 					],
-					selectorBlackList': [],
-					replace': true,
-					mediaQuery': false,
-					minPixelValue': 0,
-				})
+					selectorBlackList: [],
+					replace: true,
+					mediaQuery: false,
+					minPixelValue: 0,
+				}),
 			])
 		)
 		.pipe(stylefmt())
@@ -85,7 +85,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('clean', () => {
-	del(['dist']);
+	del([ 'dist', ]);
 });
 
 gulp.task('minify', gulp.series('css', () => {
@@ -108,7 +108,7 @@ gulp.task('docs:css', () => {
 		.src(build.docs + '*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			indentType' 'tab',
+			indentType: 'tab',
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
@@ -139,7 +139,7 @@ gulp.task('docs:css', () => {
 					replace: true,
 					mediaQuery: false,
 					minPixelValue: 0,
-				})
+				}),
 			])
 		)
 		.pipe(stylefmt())
