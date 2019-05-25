@@ -128,9 +128,6 @@ $defaults: (
 	$default-surface-alt-color:             mode('surface', 'dark', 'alt');
 	$default-surface-item-color:            mode('surface', 'dark', 'item');
 
-	// color scheme Border
-	$default-border-color:                  mode('border', 'dark', 'color');
-
 	// color scheme Shadow
 	$default-shadow-color:                  mode('shadow', 'dark', 'color');
 
@@ -150,9 +147,6 @@ $defaults: (
 	// color scheme Border
 	$default-border-color:                  mode('border', 'light', 'color');
 
-	// color scheme Shadow
-	$default-shadow-color:                  mode('shadow', 'light', 'color');
-
 	// other
 	$default-page-color:					mode('background', 'light', 'color');
 } @else if $mode == null {
@@ -168,9 +162,6 @@ $defaults: (
 
 	// color scheme Border
 	$default-border-color:                  mode('border', 'light', 'color');
-
-	// color scheme Shadow
-	$default-shadow-color:                  mode('shadow', 'light', 'color');
 
 	// other
 	$default-page-color:					mode('background', 'light', 'color');
