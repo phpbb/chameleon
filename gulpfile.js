@@ -16,12 +16,12 @@ const pkg = require('./package.json');
 
 // Config
 const build = {
-	'css': './dist/assets/css',
-	'html': './dist/views/',
-	'twig': './src/views/',
-	'data': './src/mock/',
-	'scss': './src/scss/',
-	'docs': './docs/_media/'
+	css: './dist/assets/css',
+	html: './dist/views/',
+	twig: './src/views/',
+	data: './src/mock/',
+	scss: './src/scss/',
+	docs: './docs/_media/',
 };
 
 const AUTOPREFIXER_BROWSERS = [
@@ -31,7 +31,7 @@ const AUTOPREFIXER_BROWSERS = [
 	'chrome >= 35',
 	'safari >= 8',
 	'opera >= 35',
-	'ios >= 8'
+	'ios >= 8',
 ];
 
 gulp.task('css', () => {
@@ -39,20 +39,20 @@ gulp.task('css', () => {
 		.src(build.scss + '*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			'indentType': 'tab',
-			'indentWidth': 1,
-			'outputStyle': 'expanded',
-			'precision': 10,
-			'onError': console.error.bind(console, 'Sass error:')
+			indentType: 'tab',
+			indentWidth: 1,
+			outputStyle: 'expanded',
+			precision: 10,
+			onError: console.error.bind(console, 'Sass error:'),
 		}))
 		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
 				sorting(sortOrder),
 				torem({
-					'rootValue': 16,
-					'unitPrecision': 7,
-					'propWhiteList': [
+					rootValue: 16,
+					unitPrecision: 7,
+					propWhiteList: [
 						'font',
 						'font-size',
 						'margin',
@@ -64,19 +64,19 @@ gulp.task('css', () => {
 						'padding-left',
 						'padding-right',
 						'padding-top',
-						'padding-bottom'
+						'padding-bottom',
 					],
-					'selectorBlackList': [],
-					'replace': true,
-					'mediaQuery': false,
-					'minPixelValue': 0
+					selectorBlackList': [],
+					replace': true,
+					mediaQuery': false,
+					minPixelValue': 0,
 				})
 			])
 		)
 		.pipe(stylefmt())
 		.pipe(rename({
-			'suffix': '.' + pkg.version,
-			'extname': '.css'
+			suffix: '.' + pkg.version,
+			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(build.css));
@@ -94,8 +94,8 @@ gulp.task('minify', gulp.series('css', () => {
 		.pipe(sourcemaps.init())
 		.pipe(cssnano())
 		.pipe(rename({
-			'suffix': '.min',
-			'extname': '.css'
+			suffix: '.min',
+			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(build.css));
@@ -108,20 +108,20 @@ gulp.task('docs:css', () => {
 		.src(build.docs + '*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			'indentType': 'tab',
-			'indentWidth': 1,
-			'outputStyle': 'expanded',
-			'precision': 10,
-			'onError': console.error.bind(console, 'Sass error:')
+			indentType' 'tab',
+			indentWidth: 1,
+			outputStyle: 'expanded',
+			precision: 10,
+			onError: console.error.bind(console, 'Sass error:'),
 		}))
 		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
 				sorting(sortOrder),
 				torem({
-					'rootValue': 16,
-					'unitPrecision': 7,
-					'propWhiteList': [
+					rootValue: 16,
+					unitPrecision: 7,
+					propWhiteList: [
 						'font',
 						'font-size',
 						'margin',
@@ -133,20 +133,20 @@ gulp.task('docs:css', () => {
 						'padding-left',
 						'padding-right',
 						'padding-top',
-						'padding-bottom'
+						'padding-bottom',
 					],
-					'selectorBlackList': [],
-					'replace': true,
-					'mediaQuery': false,
-					'minPixelValue': 0
+					selectorBlackList: [],
+					replace: true,
+					mediaQuery: false,
+					minPixelValue: 0,
 				})
 			])
 		)
 		.pipe(stylefmt())
 		.pipe(cssnano())
 		.pipe(rename({
-			'suffix': '.' + pkg.version + '.min',
-			'extname': '.css'
+			suffix: '.' + pkg.version + '.min',
+			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(build.docs));
