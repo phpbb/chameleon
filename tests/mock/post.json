@@ -1,0 +1,34 @@
+{
+	"posts": [
+		{
+			"id":1,
+			"title":"This is a title",
+			"author": "John bob",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar": "https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460",
+			"group": "Development Team Leader",
+			"time": "2016-11-11T19:18:00Z"
+		},
+		{
+			"id":2,
+			"title":"This is a title that is alot longer then the first",
+			"author": "francona",
+			"color": "#990000",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar": "https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460",
+			"group": "Administrator",
+			"time": "2016-11-11T19:18:00Z"
+		},
+		{
+			"id":3,
+			"title":"This is a title",
+			"author": "I have a long username",
+			"color": "#000099",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar": "https://avatars2.githubusercontent.com/u/73081?v=4&amp;s=460",
+			"group": "Community Team Leader",
+			"time": "2016-11-11T19:18:00Z"
+		}
+	]
+}

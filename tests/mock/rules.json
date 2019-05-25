@@ -1,0 +1,14 @@
+{
+	"rules": [
+		{
+			"id":"1",
+			"forum":"1",
+			"content":"test"
+		},
+		{
+			"id":"2",
+			"forum":"2",
+			"content":"<p>Please do not post support questions regarding installing, updating, or upgrading phpBB 3.2.x. If you need support for phpBB 3.2.x please visit the <a class='c-warning-link' href=''>3.2.x Support Forum</a> on phpbb.com.</p><p>If you have questions regarding writing extensions please post in <a class='c-warning-link' href=''>Extension Writers Discussion</a> to receive proper guidance from our staff and community.</p>"
+		}
+	]
+}
