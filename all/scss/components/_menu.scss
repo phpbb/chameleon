@@ -1,0 +1,132 @@
+//------------------------------------------------------------------------------
+// @component: Menu
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$menu-spacing: $default-spacing !default;
+$menu-icon-size: $default-icon-md !default;
+$menu-link-size: 48px !default;
+$menu-border-radius: $default-border-radius !default;
+$menu-divider-height: $default-border-size !default;
+$menu-opacity-1: $default-opacity !default;
+$menu-opacity-87: $default-opacity-87 !default;
+$menu-opacity-54: $default-opacity-54 !default;
+$menu-opacity-38: $default-opacity-38 !default;
+$menu-opacity-12: $default-opacity-12 !default;
+
+// Theme Variables
+$menu-background-color: $default-background-color !default;
+$menu-link-color: $default-background-item-color !default;
+$menu-action-icon-color: $default-action-icon-color !default;
+$menu-action-color-hover: $default-action-color-hover !default;
+$menu-action-bg: $default-action-bg-hover !default;
+$menu-divider-color: $default-border-color !default;
+
+
+//
+// @scss
+.c-menu {
+	margin: 0;
+	padding: $menu-spacing 0;
+	list-style: none;
+
+	&-container {
+		@include shadow(1);
+		text-align: left;
+		background-color: $menu-background-color;
+		border-radius: $menu-border-radius;
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		overflow: auto;
+		transition: all 0.2s ease;
+		transform: scale(0);
+
+		&.is-active {
+			transform: scale(1);
+		}
+	}
+
+	&-item {
+		position: relative;
+		margin: 0;
+	}
+
+	&-toggle {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&-header {
+		@include type(body2);
+		@include parent();
+		background-color: $menu-divider-color;
+		color: $menu-link-color;
+		position: relative;
+		align-items: center;
+		height: $menu-link-size;
+		padding: 0 ($menu-spacing * 2) 0 ($menu-spacing * 2);
+	}
+
+	&-link {
+		@include type(body2);
+		@include parent();
+		white-space: nowrap;
+		text-decoration: none;
+		color: $menu-link-color;
+		align-items: center;
+		height: $menu-link-size;
+		padding: 0 ($menu-spacing * 2) 0 ($menu-spacing * 2);
+		cursor: pointer;
+
+		&-icon {
+			color: $menu-action-icon-color;
+			opacity: $menu-opacity-54;
+			width: $menu-icon-size;
+			height: $menu-icon-size;
+			margin-right: ($menu-spacing * 3);
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: $menu-action-bg;
+			color: $menu-action-color-hover;
+			transition: 0.5s;
+
+			.c-menu-link-icon {
+				color: $menu-action-color-hover;
+				opacity: $menu-opacity-1;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	&-divider {
+		background-color: $menu-divider-color;
+		height: $menu-divider-height;
+		margin-top: $default-spacing;
+		margin-bottom: $default-spacing;
+	}
+
+	&-form {
+		&-group {
+			flex: 1.5;
+			margin: 0;
+
+			&:first-of-type {
+				margin-right: ($menu-spacing * 2);
+				padding-left: ($menu-spacing * 2);
+			}
+
+			&:last-of-type {
+				flex: 1;
+			}
+		}
+	}
+}
