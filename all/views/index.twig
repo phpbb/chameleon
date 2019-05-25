@@ -1,0 +1,35 @@
+{# index.twig #}
+{% extends "./layout/layout.twig" %}
+
+{% block main %}
+<section class="o-container">
+	{% include './includes/forums.twig' %}
+</section>
+{% endblock %}
+
+{% block footer %}
+{% from './macros/online.twig' import whos_online %}
+<section class="o-container">
+	<div class="c-tab-card t-tab-card">
+		<div class="c-tab-bar-frame t-tab-bar-frame">
+			<nav class="c-tab-bar t-tab-bar" role="tablist" data-toggle="tabs">
+				<a class="c-tab t-tab is-active" href="#statistics" role="tab" aria-controls="statistics">
+					<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#stats"></use></svg>
+					<span class="c-tab-text t-tab-text">{{ lang.stats }}</span>
+				</a>
+				<a class="c-tab t-tab" href="#whos-online" role="tab" aria-controls="whos-online">
+					<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#online"></use></svg>
+					<span class="c-tab-text t-tab-text">{{ lang.whos_online }}</span>
+				</a>
+				<a class="c-tab t-tab" href="#birthdays" role="tab" aria-controls="birthdays">
+					<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#cake"></use></svg>
+					<span class="c-tab-text t-tab-text">{{ lang.bday }}</span>
+				</a>
+			</nav>
+		</div>
+		{% include './includes/stats.twig' %}
+		{{ whos_online('index', online, lang, stats, groups) }}
+		{% include './includes/birthdays.twig' %}
+	</div>
+</section>
+{% endblock %}
