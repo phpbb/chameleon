@@ -20,11 +20,29 @@ $topic-bg-color: $default-background-color !default;
 $topic-bg-hover-color: lighten($topic-bg-color, 4%) !default;
 $topic-color: $default-background-item-color !default;
 $topic-border-color: $default-border-color !default;
+$topic-header-color: $default-action-bg !default;
+$topic-header-icon-color: $default-action-icon-color !default;
 
 
 //
 // @scss
 .c-topic {
+	box-shadow: none;
+	display: block;
+	transition: 0.35s ease-in-out;
+	transform: scaleY(1);
+	transform-origin: center top;
+
+	&.is-collapsed {
+		display: none;
+		transition: 0.35s ease-in-out;
+		transform: scaleY(0);
+	}
+
+	&-container {
+		@include shadow(2); // google material design
+	}
+
 	&-item {
 		background-color: $topic-bg-color;
 		border-top: $topic-border-size solid $topic-border-color;
@@ -36,8 +54,35 @@ $topic-border-color: $default-border-color !default;
 		}
 	}
 
-	&-header-info {
-		padding-right: ($topic-spacing * 2);
+	&-header {
+		&-info {
+			padding-right: ($topic-spacing * 2);
+		}
+
+		&-action {
+			&:focus {
+				background-color: $topic-header-color;
+				color: $topic-header-icon-color;
+			}
+
+			&-icon {
+				transition: 0.35s ease-in-out;
+			}
+
+			&.is-collapsed .c-topic-header-action-icon {
+				transition: 0.35s ease-in-out;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-title {
+		line-height: 1;
+		margin: 0;
+
+		&-text {
+			@include type(subtitle1);
+		}
 	}
 
 	&-meta {
