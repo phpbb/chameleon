@@ -1,141 +1,168 @@
 <nav class="c-drawer t-drawer" data-container="drawer">
-	<ul class="c-drawer-nav">
+	<ul class="c-drawer-nav t-drawer-nav">
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#login"></use></svg> <span class="c-drawer-link-text">{{lang.logout}}</span>
+				{{ 'exit-to-app'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.logout}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#user"></use></svg> <span class="c-drawer-link-text">{{lang.profile}}</span>
+				{{ 'account-circle-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.profile}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-divider t-drawer-divider"></li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link" data-toggle="drawer-menu">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#ucp"></use></svg> <span class="c-drawer-link-text">{{lang.user_panel}}</span>
+				{{ 'tune'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.user_panel}}</span>
 			</a>
 			<ul class="c-drawer-menu t-drawer-menu" data-container="drawer-menu">
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#overview"></use></svg> <span class="c-drawer-link-text">{{lang.forum_overview}}</span>
+						{{ 'guage'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.forum_overview}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#prefs"></use></svg> <span class="c-drawer-link-text">{{lang.board_prefs}}</span>
+						{{ 'format-list-checks'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.board_prefs}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#profile"></use></svg> <span class="c-drawer-link-text">{{lang.profile_settings}}</span>
+						{{ 'account-settings'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.profile_settings}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#group"></use></svg> <span class="c-drawer-link-text">{{lang.groups}}</span>
+						{{ 'outline-group'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.groups}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#friends"></use></svg> <span class="c-drawer-link-text">{{lang.friends_foes}}</span>
+						{{ 'account-heart-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.friends_foes}}</span>
 					</a>
 				</li>
 			</ul>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link" data-toggle="drawer-menu">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#gavel"></use></svg> <span class="c-drawer-link-text">{{lang.mod_panel}}</span>
+				{{ 'gavel'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.mod_panel}}</span>
 			</a>
 			<ul class="c-drawer-menu t-drawer-menu" data-container="drawer-menu">
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#queue"></use></svg> <span class="c-drawer-link-text">{{lang.queue}}</span>
+						{{ 'chart-donut'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.queue}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#report"></use></svg> <span class="c-drawer-link-text">{{lang.reports}}</span>
+						{{ 'alert-circle-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.reports}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#note"></use></svg> <span class="c-drawer-link-text">{{lang.notes}}</span>
+						<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-drawer-link-icon t-drawer-link-icon">
+						{{ 'outline-receipt'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.notes}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#warning"></use></svg> <span class="c-drawer-link-text">{{lang.warnings}}</span>
+						{{ 'alert-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.warnings}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#log"></use></svg> <span class="c-drawer-link-text">{{lang.logs}}</span>
+						{{ 'outline-assignment'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.logs}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#ban"></use></svg> <span class="c-drawer-link-text">{{lang.bans}}</span>
+						{{ 'ban'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.bans}}</span>
 					</a>
 				</li>
 			</ul>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#acp"></use></svg> <span class="c-drawer-link-text">{{lang.admin_panel}}</span>
+				{{ 'shield-account-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.admin_panel}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-divider t-drawer-divider"></li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link" data-toggle="drawer-menu">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#quickmenu"></use></svg> <span class="c-drawer-link-text">{{lang.quick_links}}</span>
+				{{ 'file-multiple-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.quick_links}}</span>
 			</a>
 			<ul class="c-drawer-menu t-drawer-menu" data-container="drawer-menu">
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#yours"></use></svg> <span class="c-drawer-link-text">{{lang.your_posts}}</span>
+						{{ 'file-yours'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.your_posts}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#new"></use></svg> <span class="c-drawer-link-text">{{lang.new_posts}}</span>
+						{{ 'file-new'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.new_posts}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#unread"></use></svg> <span class="c-drawer-link-text">{{lang.unread_posts}}</span>
+						{{ 'file-document-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.unread_posts}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#unanswered"></use></svg> <span class="c-drawer-link-text">{{lang.unanswered_topics}}</span>
+						{{ 'file-alert'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.unanswered_topics}}</span>
 					</a>
 				</li>
 				<li class="c-drawer-item t-drawer-item">
 					<a class="c-drawer-link t-drawer-link">
-						<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#active"></use></svg> <span class="c-drawer-link-text">{{lang.active_topics}}</span>
+						{{ 'file-active'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+						<span class="c-drawer-link-text t-drawer-link-text">{{lang.active_topics}}</span>
 					</a>
 				</li>
 			</ul>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#faq"></use></svg> <span class="c-drawer-link-text">{{lang.faqs}}</span>
+				{{ 'help-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.faqs}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#members"></use></svg> <span class="c-drawer-link-text">{{lang.members}}</span>
+				{{ 'outline-contacts'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.members}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#team"></use></svg> <span class="c-drawer-link-text">{{lang.team}}</span>
+				{{ 'account-group-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.team}}</span>
 			</a>
 		</li>
 		<li class="c-drawer-item t-drawer-item">
 			<a class="c-drawer-link t-drawer-link">
-				<svg class="o-icon c-drawer-link-icon t-drawer-link-icon"><use xlink:href="#contact-us"></use></svg> <span class="c-drawer-link-text">{{lang.contact_us}}</span>
+				{{ 'email-outline'|icon('inline', 'o-icon c-drawer-link-icon t-drawer-link-icon')|safe }}
+				<span class="c-drawer-link-text t-drawer-link-text">{{lang.contact_us}}</span>
 			</a>
 		</li>
 	</ul>

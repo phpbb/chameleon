@@ -1,11 +1,21 @@
-<div class="c-tab-pane t-tab-pane is-active" id="forum-permissions" role="tabpane">
+<div class="c-tab-pane t-tab-pane is-active" id="forum-permissions" role="tabpanel">
 	<div class="c-tab-pane-row t-tab-pane-row">
-		<span class="c-tab-pane-text t-tab-text">
-			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_post }}"><svg class="o-icon"><use xlink:href="#new"></use></svg></span>
-			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_reply }}"><svg class="o-icon"><use xlink:href="#reply"></use></svg></span>
-			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_edit }}"><svg class="o-icon"><use xlink:href="#edit"></use></svg></span>
-			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_delete }}"><svg class="o-icon"><use xlink:href="#delete"></use></svg></span>
-			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_attach }}"><svg class="o-icon"><use xlink:href="#attach"></use></svg></span>
+		<span class="c-tab-pane-text t-tab-text" role="list">
+			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_post }}" role="listitem">
+				{{ 'file-new'|icon('inline', 'o-icon c-stat-badge-icon t-stat-badge-icon')|safe }}
+			</span>
+			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_reply }}" role="listitem">
+				{{ 'reply'|icon('inline', 'o-icon c-stat-badge-icon t-stat-badge-icon')|safe }}
+			</span>
+			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_edit }}" role="listitem">
+				{{ 'pencil-circle-outline'|icon('inline', 'o-icon c-stat-badge-icon t-stat-badge-icon')|safe }}
+			</span>
+			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_delete }}" role="listitem">
+				{{ 'close-circle-outline'|icon('inline', 'o-icon c-stat-badge-icon t-stat-badge-icon')|safe }}
+			</span>
+			<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="true" title="{{ lang.forum_attach }}" role="listitem">
+				{{ 'attach-file'|icon('inline', 'o-icon c-stat-badge-icon t-stat-badge-icon')|safe }}
+			</span>
 		</span>
 	</div>
 </div>

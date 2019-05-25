@@ -1,0 +1,77 @@
+<li class="o-list-item c-topic-item" role="row" data-tooltip="true" title="{{ item.desc }}">
+	<span class="o-list-media">
+		{% if item.status == 1 %}
+			{% if item.icon %}
+				{{ item.icon|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
+			{% else %}
+				{{ 'forum'|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
+			{% endif %}
+		{% else %}
+			{% if item.icon %}
+				{{ item.icon|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
+			{% else %}
+				{{ 'forum'|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
+			{% endif %}
+		{% endif %}
+	</span>
+	<span class="o-list-primary">
+		<h4 class="c-topic-title" role="heading" aria-level="4">
+			<a class="o-list-title c-topic-title-text" href="#">{{item.name}}</a>
+		</h4>
+		<span class="o-list-secondary">
+			{% if item.approved %}
+				{% if item.approved == false %}
+					<a class="o-list-secondary-item c-topic-unapproved" href="#" data-tooltip="true" title="{{ lang.unapproved }}">
+						{{ 'alert-decagram-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					</a>
+				{% endif %}
+				<span class="o-list-secondary-item c-topic-user">
+					{{ 'account-circle-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					<a class="o-list-secondary-item-link" href="{{ item.author_profile }}" style="color: {{ item.author_color }};">{{ item.author }}</a>
+				</span>
+				<span class="o-list-secondary-item c-topic-time">
+					{{ 'clock-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					<time datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
+				</span>
+				<span class="o-list-secondary-item c-topic-views">
+					{{ 'eye-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					{{ item.views }}
+				</span>
+				<span class="o-list-secondary-item c-topic-replies">
+					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					{{ item.replies }}
+				</span>
+				{% if item.pages %}
+					<a class="o-list-secondary-item" href="#" data-tooltip="true" title="{{ lang.page_goto }}">
+						{{ 'pages'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					</a>
+				{% endif %}
+			{% else %}
+				<span class="o-list-secondary-item c-topic-subforum-topics">
+					{{ 'file-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					{{ item.topics }}
+				</span>
+				<span class="o-list-secondary-item c-topic-subforum-posts">
+					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
+					{{ item.posts }}
+				</span>
+			{% endif %}
+		</span>
+	</span>
+	<span class="o-list-meta c-topic-meta">
+		<span class="o-list-meta-primary c-topic-meta-primary">
+			<a class="o-list-meta-link c-topic-link" href="{{ item.last_author_profile }}" style="color: #{{ item.last_color }};">{{ item.last_author }}</a>
+			<span class="o-list-meta-secondary">
+				<a class="o-list-meta-link" href="">
+					<time datetime="{{ item.last_time }}" title="{{ item.last_time }}" data-short="{{ item.last_time }}">{{ item.last_time|moment("YYYYMMDD", true) }}</time>
+				</a>
+			</span>
+		</span>
+		<a class="o-list-meta-media" href="{{ item.last_author_profile }}">
+			<span class="o-avatar-wrap o-list-avatar">
+				<img class="o-avatar" src="{{ item.last_avatar }}" alt="User Avatar">
+				<span class="o-avatar-online o-action-bar-avatar-online"></span>
+			</span>
+		</a>
+	</span>
+</li>

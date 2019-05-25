@@ -1,17 +1,17 @@
 <div class="c-tab-card t-tab-card">
 	<div class="c-tab-bar-frame t-tab-bar-frame">
-		<nav class="c-tab-bar t-tab-bar" role="tablist" data-toggle="tabs">
+		<nav class="c-tab-bar t-tab-bar" data-toggle="tabs">
 			<a class="c-tab t-tab is-active" href="#whos-online" role="tab" aria-controls="whos-online">
-				<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#online"></use></svg>
+				{{ 'access-point'|icon('inline', 'o-icon c-tab-icon t-tab-icon')|safe }}
 				<span class="c-tab-text t-tab-text">{{ lang.whos_online }}</span>
 			</a>
 			<a class="c-tab t-tab" href="#forum-permissions" role="tab" aria-controls="forum-permissions">
-				<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#permissions"></use></svg>
+				{{ 'check-shield'|icon('inline', 'o-icon c-tab-icon t-tab-icon')|safe }}
 				<span class="c-tab-text t-tab-text">{{ lang.permissions }}</span>
 			</a>
 		</nav>
 	</div>
-	<div class="c-tab-pane t-tab-pane is-active" id="whos-online" role="tabpane">
+	<div class="c-tab-pane t-tab-pane is-active" id="whos-online">
 		<div class="c-tab-pane-row t-tab-pane-row">
 			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.online_forum }}{{ lang.colon }}</h4>
 			<span class="c-tab-pane-text t-tab-text">
@@ -20,25 +20,15 @@
 						{% if item.bot %}
 							<span style="color: {{ item.group }};">{{ item.name }}</span>
 						{% else %}
-							<a class="c-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a>
+							<a class="c-tab-pane-link t-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a>
 						{% endif %}
 					{% else %}
-						<a class="c-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a>
+						<a class="c-tab-pane-link t-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a>
 					{% endif %}
 					{% if loop.last %}{% else %}, {% endif %}
 				{% endfor %}
 			</span>
 		</div>
 	</div>
-	<div class="c-tab-pane t-tab-pane" id="forum-permissions" role="tabpane">
-		<div class="c-tab-pane-row t-tab-pane-row">
-			<span class="c-tab-pane-text t-tab-text">
-				<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="{{ lang.forum_post }}" title="{{ lang.forum_post }}"><svg class="o-icon"><use xlink:href="#new"></use></svg></span>
-				<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="{{ lang.forum_reply }}" title="{{ lang.forum_reply }}"><svg class="o-icon"><use xlink:href="#reply"></use></svg></span>
-				<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="{{ lang.forum_edit }}" title="{{ lang.forum_edit }}"><svg class="o-icon"><use xlink:href="#edit"></use></svg></span>
-				<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="{{ lang.forum_delete }}" title="{{ lang.forum_delete }}"><svg class="o-icon"><use xlink:href="#delete"></use></svg></span>
-				<span class="o-tag c-stat-badge t-stat-badge" data-tooltip="{{ lang.forum_attach }}" title="{{ lang.forum_attach }}"><svg class="o-icon"><use xlink:href="#attach"></use></svg></span>
-			</span>
-		</div>
-	</div>
+	{% include './permissions.twig' %}
 </div>

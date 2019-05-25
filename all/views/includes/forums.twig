@@ -1,32 +1,62 @@
 {% for item in forums %}
 	{% if item.cat == 1 %}
 		{% if loop.first %}
-			<div class="c-forum-cat t-forum-cat">
-				<h2 class="c-forum-cat-title t-forum-cat-title">
-					<a class="c-forum-cat-link t-forum-cat-link" href="{{ item.url }}">{{ item.name }}</a>
-				</h2>
-				<div class="c-forum-deck t-forum-deck">
+			<div class="c-forum-cat t-forum-cat" role="list">
+				<div class="o-bar c-forum-cat-header t-forum-cat-header" role="list" data-toggle-parent="collapse">
+					<ul class="o-bar-left c-forum-cat-header-left t-forum-cat-header-left">
+						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
+							<h2 class="o-bar-title c-forum-cat-header-title t-forum-cat-header-title" role="heading" aria-level="2">
+								<a class="c-forum-cat-link t-forum-cat-link" href="{{ item.url }}">{{ item.name }}</a>
+							</h2>
+						</li>
+					</ul>
+					<ul class="o-bar-right c-forum-cat-header-right t-forum-cat-header-right">
+						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
+							<a class="o-bar-action c-forum-cat-header-action t-forum-cat-header-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="Expand" title="Collapse">
+								{{ 'chevron-up'|icon('inline', 'o-icon c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-forum-deck t-forum-deck" data-container="collapse">
 		{% else %}
 				</div>
 			</div>
-			<div class="c-forum-cat t-forum-cat">
-				<h2 class="c-forum-cat-title t-forum-cat-title">
-					<a class="c-forum-cat-link t-forum-cat-link" href="{{ item.url }}">{{ item.name }}</a>
-				</h2>
-				<div class="c-forum-deck t-forum-deck">
+			<div class="c-forum-cat t-forum-cat" role="list">
+				<div class="o-bar c-forum-cat-header t-forum-cat-header" role="list" data-toggle-parent="collapse">
+					<ul class="o-bar-left c-forum-cat-header-left t-forum-cat-header-left">
+						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
+							<h2 class="o-bar-title c-forum-cat-header-title t-forum-cat-header-title" role="heading" aria-level="2">
+								<a class="c-forum-cat-link t-forum-cat-link" href="{{ item.url }}">{{ item.name }}</a>
+							</h2>
+						</li>
+					</ul>
+					<ul class="o-bar-right c-forum-cat-header-right t-forum-cat-header-right">
+						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
+							<a class="o-bar-action c-forum-cat-header-action t-forum-cat-header-action" href="#" data-tooltip="true" data-toggle="collapse" title="Collapse">
+								{{ 'chevron-up'|icon('inline', 'o-icon c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-forum-deck t-forum-deck" data-container="collapse">
 		{% endif %}
-	{% else %}
-					<div class="c-forum t-forum">
+	{% elseif item.sub == 0 %}
+					<div class="c-forum t-forum" role="listitem">
 						<a class="c-forum-body t-forum-body" href="{{ item.url }}">
 							<span class="c-forum-media t-forum-media">
-								<svg class="o-icon {% if item.status == 0 %}c-forum-media-icon t-forum-media-icon{% else %}c-forum-media-icon-read t-forum-media-icon-read{% endif %}"><use xlink:href="#{{ item.type }}"></use></svg>
+							{% if item.status == 0 %}
+								{{ item.type|icon('inline', 'o-icon c-forum-media-icon t-forum-media-icon')|safe }}
+							{% else %}
+								{{ item.type|icon('inline', 'o-icon c-forum-media-icon-read t-forum-media-icon-read')|safe }}
+							{% endif %}
 							</span>
 							<div class="c-forum-info t-forum-info">
-								<h4 class="c-forum-title t-forum-title">
+								<h4 class="c-forum-title t-forum-title" role="heading" aria-level="3">
 									{% if item.icon %}
-									<svg class="o-icon c-forum-title-icon t-forum-title-icon"><use xlink:href="#topic-{{ item.icon }}"></use></svg>
+										{{ item.icon|icon('inline', 'o-icon c-forum-title-icon t-forum-title-icon')|safe }}
 									{% endif %}
-									{{ item.name }}
+										{{ item.name }}
 								</h4>
 								{% if item.desc %}
 								<p class="c-forum-text t-forum-text">
@@ -39,29 +69,31 @@
 							<ul class="o-bar-left">
 								<li class="o-bar-item">
 									<span class="o-bar-info">
-										<svg class="o-icon o-bar-info-icon"><use xlink:href="#topic"></use></svg>
+										{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
 										<span class="o-bar-item-text">{{ item.topics }}</span>
 									</span>
 								</li>
 								<li class="o-bar-item">
 									<span class="o-bar-info">
-										<svg class="o-icon o-bar-info-icon"><use xlink:href="#replies"></use></svg>
+										{{ 'comment-text-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
 										<span class="o-bar-item-text">{{ item.posts }}</span>
 									</span>
 								</li>
 							</ul>
+							{% if item.type !== 'link' %}
 							<ul class="o-bar-right">
 								{% if item.subs %}
 								<li class="o-bar-item">
 									<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
-										<svg class="o-icon o-bar-action-icon"><use xlink:href="#more-v"></use></svg>
+										{{ 'more-vert'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
 									</a>
 									<div class="c-menu-container t-menu-container" data-container="menu">
 										<ul class="c-menu t-menu">
 											{% for sub in item.subs %}
 												<li class="c-menu-item t-menu-item">
 													<a class="c-menu-link t-menu-item" href="{{ sub.url }}">
-														<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#sub-forum"></use></svg> <span class="c-menu-text t-forum-text">{{ sub.name }}</span>
+														{{ 'circle-small-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
+														<span class="c-menu-text t-forum-text">{{ sub.name }}</span>
 													</a>
 												</li>
 											{% endfor %}
@@ -71,12 +103,13 @@
 								{% endif %}
 								{% if item.last_subject %}
 								<li class="o-bar-item">
-									<a class="o-bar-action" href="" style="color: {{ item.last_color }}" href="" data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_name }}, {{ item.last_time }}">
-										<svg class="o-icon o-bar-action-icon"><use xlink:href="#last-page"></use></svg>
+									<a class="o-bar-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
+										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
 									</a>
 								</li>
 								{% endif %}
 							</ul>
+							{% endif %}
 						</div>
 					</div>
 		{% if loop.last %}

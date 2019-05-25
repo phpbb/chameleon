@@ -1,38 +1,31 @@
-<div class="o-bar t-navbar">
-	<ul class="o-bar-left t-navbar-left">
-		<li class="o-bar-item t-navbar-item">
-			<a class="o-bar-logo t-navbar-logo t-navbar-logo" href="#" title="{{ lang.site_title }}">
-				<svg class="o-icon o-bar-logo-icon t-navbar-logo-icon"><use xlink:href="#logo-dense"></use></svg>
-			</a>
-		</li>
-	</ul>
-	<ul class="o-bar-right t-navbar-right">
-		<li class="o-bar-item t-navbar-item" data-toggle="drawer">
-			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ phpbb.user.name }}">
-				<span class="o-avatar-wrap o-bar-avatar t-navbar-avatar">
+<div class="o-bar c-navbar t-navbar">
+	<ul class="o-bar-right c-navbar-right t-navbar-right">
+		<li class="o-bar-item c-navbar-item t-navbar-item" data-toggle="drawer">
+			<a class="o-bar-action c-navbar-action t-navbar-action" href="#" data-tooltip="true" title="{{ phpbb.user.name }}">
+				<span class="o-avatar-wrap o-bar-avatar c-navbar-avatar t-navbar-avatar">
 					<img class="o-avatar" src="{{ phpbb.user.avatar }}" alt="User Avatar">
 					<span class="o-avatar-online"></span>
 				</span>
 			</a>
 		</li>
-		<li class="o-bar-item t-navbar-item" data-toggle="notifications" >
-			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.notifications }}">
-				<svg class="o-icon o-bar-action-icon t-navbar-action-icon"><use xlink:href="#notifications"></use></svg>
-				<span class="o-tag o-bar-badge t-navbar-badge">{{ phpbb.notifications }}</span>
-				<span class="o-bar-action-text t-navbar-action-text u-sr-only">{{ lang.notifications }}</span>
+		<li class="o-bar-item c-navbar-item t-navbar-item" data-toggle="notifications" >
+			<a class="o-bar-action c-navbar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.notifications }}">
+				{{ 'bell-outline'|icon('inline', 'o-icon c-navbar-action-icon t-navbar-action-icon')|safe }}
+				<span class="o-tag o-bar-badge c-navbar-badge t-navbar-badge">{{ phpbb.notifications }}</span>
+				<span class="o-bar-action-text c-navbar-action-text t-navbar-action-text u-sr-only">{{ lang.notifications }}</span>
 			</a>
 			{% include './notification.twig' %}
 		</li>
-		<li class="o-bar-item t-navbar-item">
-			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.private_msgs }}">
-				<svg class="o-icon o-bar-action-icon t-navbar-action-icon" ><use xlink:href="#inbox"></use></svg>
-				<span class="o-tag o-bar-badge t-navbar-badge">{{ phpbb.pms }}</span>
-				<span class="o-bar-action-text t-navbar-action-text u-sr-only">{{ lang.private_msgs }}</span>
+		<li class="o-bar-item c-navbar-item t-navbar-item">
+			<a class="o-bar-action c-navbar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.private_msgs }}">
+				{{ 'inbox'|icon('inline', 'o-icon c-navbar-action-icon t-navbar-action-icon')|safe }}
+				<span class="o-tag o-bar-badge c-navbar-badge t-navbar-badge">{{ phpbb.pms }}</span>
+				<span class="o-bar-action-text c-navbar-action-text t-navbar-action-text u-sr-only">{{ lang.private_msgs }}</span>
 			</a>
 		</li>
-		<li class="o-bar-item t-navbar-item" data-toggle="search">
-			<a class="o-bar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.search }}">
-				<svg class="o-icon o-bar-action-icon t-navbar-action-icon"><use xlink:href="#search"></use></svg>
+		<li class="o-bar-item c-navbar-item t-navbar-item" data-toggle="search">
+			<a class="o-bar-action c-navbar-action t-navbar-action" href="#" data-tooltip="true" title="{{ lang.search }}">
+				{{ 'search'|icon('inline', 'o-icon c-navbar-action-icon t-navbar-action-icon')|safe }}
 			</a>
 		</li>
 	</ul>

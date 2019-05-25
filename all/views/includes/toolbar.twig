@@ -1,25 +1,25 @@
-<div class="o-bar c-toolbar">
-	<ul class="o-bar-left">
-		<li class="o-bar-item">
-			<a class="o-bar-action" href="#" title="{{ lang.new_topic }}">
-				<span class="c-toolbar-action-text">{{ lang.new_topic }}</span>
-					<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#add"></use></svg>
+<div class="o-bar c-toolbar t-toolbar">
+	<ul class="o-bar-left c-toolbar-left t-toolbar-left">
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" title="{{ lang.new_topic }}">
+				<span class="c-toolbar-action-text t-toolbar-action-text">{{ lang.new_topic }}</span>
+				{{ 'plus'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 		</li>
 	</ul>
-	<ul class="o-bar-right">
-		<li class="o-bar-item">
-			<a class="o-bar-action" href="#" data-tooltip="true" title="Jump To">
-				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#jump-to"></use></svg>
+	<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="Jump To">
+				{{ 'debug-step-over'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
-			<a class="o-bar-action" href="#" data-tooltip="true" title="Filter">
-				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#filter"></use></svg>
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="Filter">
+				{{ 'filter-variant'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
-			<a class="o-bar-action" href="#" data-tooltip="true" title="Sort">
-				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#sort"></use></svg>
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="Sort">
+				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
-			<a class="o-bar-action" href="#" data-tooltip="true" title="Order">
-				<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#order"></use></svg>
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="Order">
+				{{ 'sort-ascending'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 		</li>
 	</ul>

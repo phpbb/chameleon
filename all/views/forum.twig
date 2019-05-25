@@ -1,127 +1,197 @@
 {# forum.twig #}
 {% extends "./layout/layout.twig" %}
 
-{% block header %}
-<section class="o-container is-active">
-	<h2 class="t-forum-page-title"><a class="t-forum-page-title-link" href="" title="{{ forums[1].name }}">{{ forums[1].name }}</a></h2>
-	<div class="o-modal c-warning is-active" data-container="modal">
-		<a class="c-warning-close" href="" data-toggle="modal" data-tooltip="true" title="{{ lang.close }}">
-			<svg class="o-icon c-warning-icon"><use xlink:href="#close"></use></svg>
-			</a>
-		<header class="o-modal-header">
-			<h2 class="o-modal-header-title c-warning-title">
-				{{ lang.forum_rules }}
-			</h2>
-		</header>
-		<div class="o-modal-body c-warning-body">
-			{{ rules[1].content | safe }}
-		</div>
-	</div>
-</section>
-<section class="o-container">
-	{% include './includes/forum-tools.twig' %}
-</section>
-{% endblock %}
-
 {% block main %}
-<section class="o-container">
-	<ul class="o-list c-topic">
-		<li class="c-topic-header">
-			<div class="o-bar">
-				<ul class="o-bar-left">
-					<li class="o-bar-item">
-						<h2 class="o-bar-title">{{ lang.announcements }}</h2>
+	<section class="o-container is-active">
+		<h2 class="t-forum-page-title" role="heading" aria-level="2">
+			<a class="t-forum-page-title-link" href="" title="{{ forums[1].name }}">{{ forums[1].name }}</a>
+		</h2>
+		<div class="o-modal c-warning t-warning is-active" data-container="modal">
+			<a class="c-warning-close t-warning-close" href="" data-toggle="modal" data-tooltip="true" title="{{ lang.close }}">
+				{{ 'close'|icon('inline', 'o-icon c-warning-icon t-warning-icon')|safe }}
+				</a>
+			<header class="o-modal-header c-warning-header t-warning-header">
+				<h2 class="o-modal-header-title c-warning-title t-warning-title">
+					{{ lang.forum_rules }}
+				</h2>
+			</header>
+			<div class="o-modal-body c-warning-body t-warning-body">
+				{{ rules[1].content | safe }}
+			</div>
+		</div>
+	</section>
+
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<ul class="o-bar-left c-topic-header-left t-topic-header-left">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.subforums }}</h2>
 					</li>
 				</ul>
-				<ul class="o-bar-right">
-					<li class="o-bar-item">
-						<a class="o-bar-action" href="" data-tooltip="true" title="{{ lang.mark }}">
-							<svg class="o-icon o-bar-action-icon"><use xlink:href="#mark"></use></svg>
+				<ul class="o-bar-right c-topic-header-right t-topic-header-right">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+							{{ 'chevron-up'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 						</a>
 					</li>
 				</ul>
 			</div>
-		</li>
-		{% for topic in announcments %}
-			{% include './includes/topic.twig' %}
-		{% endfor %}
-	</ul>
-</section>
-<section class="o-container">
-	<ul class="o-list c-topic">
-		<li class="c-topic-header">
-			<div class="o-bar">
-				<ul class="o-bar-left">
-					<li class="o-bar-item">
-						<h2 class="o-bar-title">{{lang.forum}}</h2>
+			<ul class="o-list c-topic t-topic" role="rowgroup" data-container="collapse">
+				{% for item in forums %}
+					{% if item.sub == forums[5].id %}
+						{% include './includes/topic.twig' %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<div class="o-container">
+		{% include './includes/forum-tools.twig' %}
+	</div>
+
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<ul class="o-bar-left c-topic-header-left t-topic-header-left">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.announcements }}</h2>
 					</li>
 				</ul>
-				<ul class="o-bar-right">
-					<li class="o-bar-item">
-						<a class="o-bar-action" href="" data-tooltip="true" title="{{ lang.mark }}">
-							<svg class="o-icon o-bar-action-icon"><use xlink:href="#mark"></use></svg>
+				<ul class="o-bar-right c-topic-header-right t-topic-header-right">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+							{{ 'chevron-up'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 						</a>
 					</li>
-					<li class="o-bar-item">
-						<span class="o-bar-info c-topic-header-info">
-							<svg class="o-icon o-bar-info-icon"><use xlink:href="#topic"></use></svg>
-							<span class="o-bar-item-text">{{ topics|length }}</span>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<a class="o-bar-action c-topic-header-action" href="#" data-tooltip="true" title="{{ lang.mark }}">
+							{{ 'checkbox-marked-outline'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="o-list c-topic" role="rowgroup" data-container="collapse">
+				{% for item in announcments %}
+					{% include './includes/topic.twig' %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header" data-toggle-parent="collapse">
+				<ul class="o-bar-left c-topic-header-left t-topic-header-left">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.topics }}</h2>
+					</li>
+				</ul>
+				<ul class="o-bar-right c-topic-header-right t-topic-header-right">
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+							{{ 'chevron-up'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+					</li>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" title="{{ lang.mark }}">
+							{{ 'checkbox-marked-outline'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+					</li>
+
+					<li class="o-bar-item c-topic-header-item t-topic-header-item u-hidden-sm-down">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+							{{ 'filter-variant'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+						<div class="c-menu-container t-menu-container" data-container="menu">
+							<ul class="c-menu t-menu">
+							{% for item in filters %}
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item u-hidden-sm-down">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+							{{ 'sort'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+						<div class="c-menu-container t-menu-container" data-container="menu">
+							<ul class="c-menu t-menu">
+							{% for item in sorts %}
+								<li class="c-menu-item t-menu-item">
+									<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item u-hidden-sm-down">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" title="{{ lang.order }}">
+							{{ 'sort-ascending'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+					</li>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item u-hidden-md-up">
+						<a class="o-bar-action c-topic-header-action t-topic-header-action" href="#" data-tooltip="true" title="{{ lang.sort }}">
+							{{ 'sort'|icon('inline', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+						</a>
+						<div class="c-menu-container t-menu-container" data-container="menu"></div>
+					</li>
+					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+						<span class="o-bar-info c-topic-header-info t-topic-header-info">
+							{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon c-topic-info-icon t-topic-info-icon')|safe }}
+							<span class="o-bar-item-text c-topic-header-item-text">{{ topics|length }}</span>
 						</span>
 					</li>
 				</ul>
 			</div>
-		</li>
-		{% for topic in topics | sort(false, false, 'type') %}
-			{% if loop.index <= 25 %}
-				{% include './includes/topic.twig' %}
-			{% endif %}
-		{% endfor %}
-	</ul>
-</section>
+			<ul class="o-list c-topic" role="rowgroup" data-container="collapse">
+				{% for item in topics | sort(false, false, 'type') | sort(false, false, 'time') %}
+					{% if loop.index <= 25 %}
+						{% include './includes/topic.twig' %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
 {% endblock %}
 
 {% block footer %}
-{% from './macros/online.twig' import whos_online %}
-<section class="o-container">
-	<div class="o-bar c-toolbar">
-		<ul class="o-bar-left">
-			<li class="o-bar-item">
-				<a class="o-bar-action" href="" data-tooltip="true" title="{{ lang.return }}">
-					<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#chevron-left"></use></svg>
-				</a>
-			</li>
-		</ul>
-		<ul class="o-bar-center">
-			<li class="o-bar-item">
-				<a class="o-bar-action" href="" title="{{ lang.load_more }}">
-					<span class="c-toolbar-action-text t-toolbar-action-text">{{ lang.load_more }}</span>
-					<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#load"></use></svg>
-				</a>
-			</li>
-		</ul>
-		<ul class="o-bar-right">
-			<li class="o-bar-item">
-				{% include './includes/jumpto.twig' %}
-			</li>
-		</ul>
-	</div>
-</section>
-<section class="o-container">
-	<div class="c-tab-card t-tab-card">
-		<div class="c-tab-bar-frame t-tab-bar-frame">
-			<nav class="c-tab-bar t-tab-bar" role="tablist" data-toggle="tabs">
-				<a class="c-tab t-tab is-active" href="#forum-permissions" role="tab" aria-controls="forum-permissions">
-					<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#permissions"></use></svg>
-					<span class="c-tab-text t-tab-text">{{lang.permissions}}</span>
-				</a>
-				<a class="c-tab t-tab" href="#whos-online" role="tab" aria-controls="whos-online">
-					<svg class="o-icon c-tab-icon t-tab-icon"><use xlink:href="#online"></use></svg>
-					<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
-				</a>
-			</nav>
+	{% from './macros/online.twig' import whos_online %}
+	<div class="o-container">
+		<div class="o-bar c-toolbar t-toolbar">
+			<ul class="o-bar-left c-toolbar-left t-toolbar-left">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					<a class="o-bar-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.return }}">
+						{{ 'chevron-left'|icon('inline', 'o-icon o-bar-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					</a>
+				</li>
+			</ul>
+			<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					{% include './includes/jumpto.twig' %}
+				</li>
+			</ul>
 		</div>
-		{% include './includes/permissions.twig' %}
-		{{ whos_online('forum', forums[1].online, lang) }}
 	</div>
-</section>
+	<div class="o-container">
+		<div class="c-tab-card t-tab-card">
+			<div class="c-tab-bar-frame t-tab-bar-frame">
+				<nav class="c-tab-bar t-tab-bar" data-toggle="tabs">
+					<a class="c-tab t-tab is-active" href="#forum-permissions" role="tab" aria-controls="forum-permissions" aria-selected="true">
+						{{ 'shield-check-outline'|icon('inline', 'o-icon c-tab-icon t-tab-icon')|safe }}
+						<span class="c-tab-text t-tab-text">{{lang.permissions}}</span>
+					</a>
+					<a class="c-tab t-tab" href="#whos-online" role="tab" aria-controls="whos-online" aria-selected="false">
+						{{ 'access-point'|icon('inline', 'o-icon c-tab-icon t-tab-icon')|safe }}
+						<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
+					</a>
+				</nav>
+			</div>
+			{% include './includes/permissions.twig' %}
+			{{ whos_online('forum', forums[1].online, lang) }}
+		</div>
+	</div>
 {% endblock %}

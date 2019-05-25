@@ -1,4 +1,4 @@
-<div class="c-tab-pane t-tab-pane is-active" id="statistics" role="tabpane">
+<div class="c-tab-pane t-tab-pane is-active" id="statistics" role="tabpanel">
 	<div class="c-tab-pane-row t-tab-pane-row">
 		<ul class="c-stat-list c-tab-pane-stats t-tab-list t-tab-pane-stats">
 			<li class="c-stat-item t-stat-item">{{ lang.total_posts }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.posts }}</span></li>
@@ -6,7 +6,7 @@
 			<li class="c-stat-item t-stat-item">{{ lang.total_members }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.members }}</span></li>
 			<li class="c-stat-item t-stat-item">{{ lang.most_online }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.online.most }}</span></li>
 			<li class="c-stat-item t-stat-item">{{ lang.newest_member }}
-				<a class="o-tag c-stat-badge c-stat-badge-link t-stat-badge" href="{{ stats.newest.profile }}">{{ stats.newest.name }}</a>
+				<a class="o-tag c-stat-badge c-stat-badge-link t-stat-badge t-stat-badge-link" href="{{ stats.newest.profile }}">{{ stats.newest.name }}</a>
 			</li>
 		</ul>
 	</div>

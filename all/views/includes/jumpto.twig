@@ -1,5 +1,5 @@
-<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.jump_to }}">
-	<svg class="o-icon o-bar-action-icon c-toolbar-action-icon"><use xlink:href="#jump-to"></use></svg>
+<a class="o-bar-action c-toolbar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.jump_to }}">
+	{{ 'outline-directions'|icon('inline', 'o-icon o-bar-action-icon c-toolbar-action-icon')|safe }}
 </a>
 <div class="c-menu-container c-jumpto t-menu-container t-jumpto" data-container="menu">
 	<ul class="c-menu t-menu">
@@ -11,7 +11,8 @@
 		{% else %}
 			<li class="c-menu-item t-menu-item">
 				<a class="c-menu-link t-menu-link" href="{{ item.url }}" title="{{ item.name }}">
-					<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#{{ item.type }}"></use></svg> <span class="c-menu-text t-forum-text">{{ item.name }}</span>
+					{{ item.type|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
+					<span class="c-menu-text t-forum-text">{{ item.name }}</span>
 				</a>
 			</li>
 			{% if item.subs %}
@@ -19,7 +20,8 @@
 				{% for sub in item.subs %}
 					<li class="c-menu-item t-menu-item">
 						<a class="c-menu-link t-menu-link" href="{{ sub.url }}" title="{{ sub.name }}">
-							<svg class="o-icon c-menu-link-icon t-menu-forum-icon"><use xlink:href="#sub-forum"></use></svg> <span class="c-menu-text t-forum-text">{{ sub.name }}</span>
+							{{ 'circle-small-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
+							<span class="c-menu-text t-forum-text">{{ sub.name }}</span>
 						</a>
 					</li>
 				{% endfor %}

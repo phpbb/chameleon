@@ -1,16 +1,16 @@
-<div class="c-crumbs-container t-crumbs-container">
-	<ul class="c-crumbs">
-		<li class="c-crumbs-item">
+<div class="c-crumbs-container t-crumbs-container" role="navigation">
+	<ul class="c-crumbs t-crumbs" role="list">
+		<li class="c-crumbs-item t-crumbs-item" role="listitem">
 			<a class="c-crumbs-link t-crumbs-link" href="#" title="{{ lang.board_index }}">
-				<svg class="o-icon"><use xlink:href="#home"></use></svg>
-				<span class="c-crumbs-text">{{ lang.board_index }}</span>
+				{{ 'outline-home'|icon('inline', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
+				<span class="c-crumbs-text t-crumbs-text">{{ lang.board_index }}</span>
 			</a>
 		</li>
 		{% for crumb in crumbs %}
-			<li class="c-crumbs-item">
+			<li class="c-crumbs-item t-crumbs-item" role="listitem">
 				<a class="c-crumbs-link t-crumbs-link" href="{{ crumb.link }}">
-					<svg class="o-icon c-crumbs-seperator t-crumbs-seperator"><use xlink:href="#chevron-right"></use></svg>
-					<span class="c-crumbs-text">{{ crumb.title }}</span>
+					{{ 'chevron-right'|icon('inline', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
+					<span class="c-crumbs-text t-crumbs-text">{{ crumb.title }}</span>
 				</a>
 			</li>
 		{% endfor %}
