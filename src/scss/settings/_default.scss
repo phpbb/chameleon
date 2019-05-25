@@ -79,7 +79,6 @@ $default-surface-color:                 null;
 $default-surface-alt-color:             null;
 $default-surface-item-color:            null;
 $default-border-color:                  null;
-$default-shadow-color:                  null;
 $default-page-color:                   	null;
 
 // color scheme Light/Dark variables
@@ -104,7 +103,7 @@ $defaults: (
 		),
 		'light': (
 			'color': $gray-100,
-			'alt':   $gray-200,
+			'alt':   $gray-300,
 			'item':  $gray-600
 		)
 	),
@@ -115,15 +114,7 @@ $defaults: (
 		'light': (
 			'color': rgba($black, 0.125)
 		)
-	),
-	'shadow': (
-		'dark': (
-			'color': none
-		),
-		'light': (
-			'color': $black
-		)
-	),
+	)
 );
 
 @if $mode == dark {
@@ -239,7 +230,7 @@ $default-link-color:                    $default-primary-color !default;
 $default-link-color-hover:              $default-primary-dark-color !default;
 
 $default-action-bg:                     $default-surface-color !default;
-$default-action-bg-hover:               lighten($default-surface-color, 8%) !default;
+$default-action-bg-hover:               $default-surface-alt-color !default;
 $default-action-color:                  $default-surface-item-color !default;
 $default-action-color-hover:            $default-primary-color !default;
 $default-action-icon-color:             $default-surface-item-color !default;
