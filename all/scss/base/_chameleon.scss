@@ -1,0 +1,138 @@
+//------------------------------------------------------------------------------
+// @theme: Chameleon
+//------------------------------------------------------------------------------
+// @description
+//
+// @author: hanakin
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+
+// Variables
+$o-bg-color: $default-action-bg !default;
+$o-search-bg-color: $default-background-color !default;
+$o-bg-hover-color: $default-action-bg-hover !default;
+$o-color: $default-action-color !default;
+$o-user-title-color: $default-background-item-color !default;
+$o-alt-color: darken($o-bg-color, 8%) !default;
+$o-disabled-color: lighten($o-color, 8%) !default;
+
+
+//
+// @scss
+html {
+	background-color: darken($default-background-color, 4%);
+	color: $default-background-item-color;
+}
+
+header,
+section,
+footer {
+	margin: 0 0 1.5rem;
+}
+
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+[type='color'],
+select,
+textarea {
+	background-color: $o-bg-color;
+	border-bottom-color: $o-bg-color;
+	color: $o-color;
+
+	&:hover {
+		border-bottom-color: $o-bg-hover-color;
+	}
+
+	&:disabled,
+	&[readonly] {
+		background-color: $o-disabled-color;
+	}
+}
+
+select {
+	background-color: $o-bg-color;
+
+	&:focus::-ms-value {
+		background-color: $o-bg-color;
+	}
+}
+
+[type='checkbox'] {
+	+ label {
+		&:before {
+			border-color: $o-bg-hover-color;
+		}
+	}
+
+	&:indeterminate + label:before {
+		// Disabled indeterminate
+		&:disabled {
+			border-right-color: $o-disabled-color;
+		}
+	}
+
+	&:hover:not(:checked) + label:before {
+		border-color: $o-alt-color;
+	}
+
+	&:disabled {
+		&:checked + label:before {
+			border-right-color: $o-disabled-color;
+			border-bottom-color: $o-disabled-color;
+		}
+
+		&:not(:checked) + label:before {
+			background-color: $o-disabled-color;
+		}
+	}
+}
+
+[type='radio'] {
+	&:not(:checked) + label {
+		&:before,
+		&:after {
+			border-color: $o-bg-hover-color;
+		}
+	}
+
+	&:hover + label:before {
+		border-color: $o-alt-color;
+	}
+
+	&:disabled {
+		+ label {
+			color: $o-disabled-color;
+		}
+
+		&:checked + label:before,
+		&:not(:checked) + label:before {
+			border-color: $o-disabled-color;
+		}
+
+		:checked + label:after {
+			background-color: $o-disabled-color;
+		}
+	}
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+	color: $o-bg-color;
+}

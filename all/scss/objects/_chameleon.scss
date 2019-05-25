@@ -1,0 +1,100 @@
+//------------------------------------------------------------------------------
+// @theme: Chameleon
+//------------------------------------------------------------------------------
+// @description
+//
+// @author: hanakin
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+
+// Variables
+$o-bg-color: $default-action-bg !default;
+$o-search-bg-color: $default-background-color !default;
+$o-bg-hover-color: $default-action-bg-hover !default;
+$o-color: $default-action-color !default;
+$o-user-title-color: $default-background-item-color !default;
+$o-alt-color: darken($o-bg-color, 8%) !default;
+$o-disabled-color: lighten($o-color, 8%) !default;
+
+//
+// @scss
+.o-bar {
+	background-color: $o-bg-color;
+
+	&-info {
+		color: $o-user-title-color;
+	}
+
+	&-action {
+		color: $o-color;
+
+		&:hover,
+		&:focus {
+			background-color: $o-bg-hover-color;
+		}
+	}
+
+	&-user {
+		&-title {
+			color: $o-user-title-color;
+		}
+	}
+
+	&-search {
+		background-color: $o-search-bg-color;
+
+		&-action {
+			color: $o-color;
+		}
+
+		&-feild {
+			background: transparent;
+			color: $o-color;
+		}
+	}
+}
+
+.o-btn {
+	@include shadow(2);
+	background-color: $o-bg-color;
+	color: $o-color;
+
+	&:hover {
+		background-color: $o-bg-hover-color;
+	}
+
+	&:focus {
+		@include shadow(4);
+	}
+}
+
+.o-form {
+	&-select {
+		position: relative;
+
+		&:before {
+			@include background-triangle($o-color);
+		}
+	}
+
+	&-floating-label {
+		color: $o-color;
+	}
+
+	&-icon {
+		color: $o-color;
+	}
+}
+
+.o-modal {
+	@include shadow(4);
+	background-color: $o-bg-color;
+
+	&-body {
+		color: $o-color;
+	}
+}
