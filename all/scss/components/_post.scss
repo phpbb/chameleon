@@ -14,6 +14,7 @@ $post-border-radius: $default-border-radius !default;
 $post-border-style: solid !default;
 $post-border-size: $default-border-size !default;
 $post-body-min-height: 192px !default;
+$post-pre-max-height: 264px !default;
 $post-emoji-size: 1em !default;
 $post-emoji-size-min: $default-icon-sm !default;
 
@@ -21,7 +22,8 @@ $post-emoji-size-min: $default-icon-sm !default;
 // Theme Variables
 $post-header-bg-color: $default-action-bg !default;
 $post-border-color: $default-border-color !default;
-
+$post-copy-code-action-color: $white !default;
+$post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 //
 // @scss
@@ -39,10 +41,12 @@ $post-border-color: $default-border-color !default;
 	&-body {
 		@include parent(column);
 		min-height: $post-body-min-height;
-		padding: ($post-spacing * 2);
+		padding: ($post-spacing * 4) ($post-spacing * 6);
 	}
 
 	&-meta {
+		margin-bottom: ($post-spacing * 3);
+
 		@media (min-width: $bp-lg) {
 			@include parent();
 		}
@@ -75,11 +79,80 @@ $post-border-color: $default-border-color !default;
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;
 
-	> p {
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		margin-bottom: ($post-spacing * 2);
+	> p,
+	&-list,
+	&-blockquote {
+		font-size: calc(18px + 0.25vw);
+		line-height: calc(34px + 0.2vw);
+		word-wrap: break-word;
+		word-break: break-word;
+		margin-bottom: ($post-spacing * 4);
+	}
+
+	&-blockquote {
+		@include parent(column);
+		border: $post-border-size $post-border-style $post-border-color;
+		border-radius: $post-border-radius;
+
+		&-wrap {
+			text-indent: 0;
+			margin: 0;
+			padding-left: ($post-spacing * 6);
+		}
+
+		&-header {
+			background-color: $post-header-bg-color;
+			@include child();
+			border-bottom: $post-border-size $post-border-style $post-border-color;
+			padding: $post-spacing ($post-spacing * 2);
+		}
+
+		&-meta {
+			@include child();
+		}
+
+		&-date {
+			@include child();
+		}
+
+		&-author,
+		&-jumpto {
+			display: inline;
+		}
+
+		&-body {
+			@include child();
+			padding: ($post-spacing * 3) ($post-spacing * 4);
+
+			p {
+				margin-bottom: 0;
+
+				&:before,
+				&:after,
+				&:last-of-type:after {
+					content: '';
+				}
+			}
+		}
+
+		.c-copy-blockquote-wrap {
+			padding-left: ($post-spacing * 3);
+		}
+
+		.c-copy-blockquote {
+			margin-bottom: ($post-spacing * 3);
+		}
+	}
+
+	&-list {
+		margin-right: 0;
+		padding-left: ($post-spacing * 2);
+
+		&,
+		& & {
+			margin: $post-spacing ($post-spacing * 3);
+			margin-right: 0;
+		}
 	}
 
 	&-links {
@@ -87,10 +160,11 @@ $post-border-color: $default-border-color !default;
 	}
 
 	&-bold {
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	&-italic {
+		font-weight: 200;
 		font-style: italic;
 	}
 
@@ -106,27 +180,38 @@ $post-border-color: $default-border-color !default;
 		//
 	}
 
+	pre {
+		background-color: #282c34;
+		max-height: $post-pre-max-height;
+		padding: ($post-spacing * 3);
+	}
+
 	&-code {
-		//
+		position: relative;
+
+		&-action {
+			border-radius: 50%;
+			display: block;
+			padding: ($post-spacing * 2);
+
+			&:hover {
+				background-color: $post-copy-code-action-bg-color;
+				color: $post-copy-code-action-color;
+			}
+
+			&-wrap {
+				position: relative;
+				z-index: 999;
+				float: right;
+				margin-left: -($post-spacing * 9);
+				padding-top: ($post-spacing * 2);
+				padding-right: ($post-spacing * 2);
+			}
+		}
 	}
 
 	&-color {
 		//
-	}
-
-	&-list {
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		margin: ($post-spacing * 4);
-		margin-right: 0;
-		padding-left: ($post-spacing * 2);
-
-		&,
-		& & {
-			margin: $post-spacing ($post-spacing * 3);
-			margin-right: 0;
-		}
 	}
 
 	&-smilies {
