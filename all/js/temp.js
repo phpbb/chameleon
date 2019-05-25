@@ -4,6 +4,7 @@ const $drawerToggle = '[data-toggle="drawer"]';
 const $drawer = '[data-container="drawer"]';
 const $drawerMenuToggle = '[data-toggle="drawer-menu"]';
 const $drawerMenu = '[data-container="drawer-menu"]';
+const $page = '[data-container="page"]';
 const $notificationToggle = '[data-toggle="notifications"]';
 const $notification = '[data-container="notificiations"]';
 const $menuToggle = '[data-toggle="menu"]';
@@ -17,7 +18,14 @@ const $modalToggle = '[data-toggle="modal"]';
 const $modal = '[data-container="modal"]';
 const $toastToggle = '[data-toggle="toast"]';
 const $toast = '[data-container="toast"]';
+const $collapseToggle = '[data-toggle="collapse"]';
+const $collapseToggleParent = '[data-toggle-parent="collapse"]';
+const $collapse = '[data-container="collapse"]';
 const $tooltip = '[data-tooltip="true"]';
+const $tooltipContainer = '[data-tooltip-container="true"]';
+const $toolbarToggle = '[data-toggle="toolbar"]';
+const $toolbar = '[data-container="toolbar"]';
+const $overlayContainer = '[data-container="overlay"]';
 
 /**
  * Clears the active state of the provided elements
@@ -39,6 +47,46 @@ const clearToggle = function (e, $el, $toggle) {
 			$(this).toggleClass('is-active', false);
 		});
 	}
+};
+
+/**
+ * Returns clearence object for displaying content to avoid edges
+ *
+ * @param     {object} $target Element to test
+ * @param     {number} x custom top offset
+ * @param     {number} y custom left offset
+ * @returns   {object} boolean for each edge of window and all dimensions and positions
+ */
+const edgeDetect = ($target, x, y) => {
+	const $win = $(window);
+	const tgt = {};
+
+	if (!x) {
+		x = $target.offset().left;
+	}
+
+	if (!y) {
+		y = $target.offset().top;
+	}
+
+	tgt.l = x;
+	tgt.t = y;
+	tgt.w = $target.innerWidth();
+	tgt.h = $target.innerHeight();
+	tgt.b = (tgt.t + tgt.h);
+	tgt.r = (tgt.l + tgt.w);
+
+	tgt.tc = (tgt.t - tgt.h);
+	tgt.lc = (tgt.l - tgt.w);
+	tgt.rc = $win.width() - (tgt.l + tgt.w);
+	tgt.bc = $win.height() - (tgt.t + tgt.h);
+
+	tgt.top = tgt.tc > 0;
+	tgt.left = tgt.lc > 0;
+	tgt.right = tgt.rc > tgt.w;
+	tgt.bottom = tgt.bc > tgt.lc;
+
+	return tgt;
 };
 
 /**
@@ -89,6 +137,28 @@ $($modalToggle).click(e => {
 	$($modal).toggleClass('is-active');
 });
 
+/**
+ * Toggles the state for Collapse
+ *
+ * @todo Refactor to toggle function
+ * @param     {object} e      Event
+ * @constant  {object} $this
+ */
+$($collapseToggle).click(function (e) {
+	const $this = $(this);
+	const $that = $this.parents($collapseToggleParent).next($collapse);
+	const tip = $this.attr('data-toggle-tooltip');
+
+	e.preventDefault();
+	e.stopPropagation();
+
+	$that.toggleClass('is-collapsed');
+	$this.attr('data-toggle-tooltip', $this.attr('title'));
+	$this.attr('title', tip);
+	$this.toggleClass('is-collapsed');
+	$($tooltipContainer).remove();
+});
+
 //---------------------------------------------
 
 /**
@@ -101,6 +171,21 @@ $($toastToggle).click(e => {
 	e.preventDefault();
 	e.stopPropagation();
 	$($toast).toggleClass('is-active');
+});
+
+//---------------------------------------------
+
+/**
+ * Toggles the state for Editor Toolbar
+ *
+ * @todo      Refactor to toggle function
+ * @param     {object} e      Event
+ */
+$($toolbarToggle).click(e => {
+	e.preventDefault();
+	e.stopPropagation();
+	$($toolbar).toggleClass('is-active');
+	$($overlayContainer).toggleClass('is-active');
 });
 
 //---------------------------------------------
@@ -129,6 +214,7 @@ $($profileToggle).click(e => {
 	e.preventDefault();
 	e.stopPropagation();
 	$($profile).toggleClass('is-active');
+	$($overlayContainer).toggleClass('is-active');
 });
 
 //---------------------------------------------
@@ -138,11 +224,15 @@ $($profileToggle).click(e => {
  *
  * @todo      Refactor to toggle function
  * @param     {object} e      Event
+ * @constant  {object} $that
  */
 $($drawerToggle).click(e => {
+	const $that = $($drawer);
 	e.preventDefault();
 	e.stopPropagation();
-	$($drawer).toggleClass('is-active');
+	$that.toggleClass('is-active');
+	$($overlayContainer).toggleClass('is-active');
+	$($page).attr('style', 'position: relative; transition: 0.35s ease-in-out; left: -' + $that.width() + 'px');
 });
 
 /**
@@ -150,11 +240,13 @@ $($drawerToggle).click(e => {
  *
  * @todo Refactor to toggle function
  * @param     {object} e      Event
+ * @constant  {object} $this
  */
 $($drawerMenuToggle).click(function (e) {
+	const $this = $(this);
 	e.preventDefault();
 	e.stopPropagation();
-	$(this).next($drawerMenu).toggleClass('is-active');
+	$this.next($drawerMenu).toggleClass('is-active');
 });
 
 //---------------------------------------------
@@ -191,14 +283,14 @@ $($tabs).children().each(function () {
  * @constant  {object} $that
  * @constant  {number} $targetOffset
  */
-$($notificationToggle).click(function (e) {
+$($notificationToggle).click(e => {
+	const $that = $($notification);
+
 	e.preventDefault();
 	e.stopPropagation();
-	const $this = $(this);
-	const $that = $($notification);
-	const $targetOffset = $(window).width() - $this.offset().left - $this.width();
+
 	$that.toggleClass('is-active');
-	$that.css('right', $targetOffset);
+	$($overlayContainer).toggleClass('is-active');
 });
 
 //---------------------------------------------
@@ -213,10 +305,15 @@ $($notificationToggle).click(function (e) {
 $($menu).each(function () {
 	const $this = $(this);
 	const targetOffset = $this.offset();
-	if (targetOffset.left > $(window).width() / 2) {
-		$this.css({ 'transform-origin': 'right top', right: 0, });
+	const $direction = $this.data('direction');
+	if ($direction) {
+		$this.css({ 'transform-origin': $direction, top: 'inherit', bottom: 0, });
 	} else {
-		$this.css('transform-origin', 'left top');
+		if (targetOffset.left > $(window).width() / 2) {
+			$this.css({ 'transform-origin': 'right top', right: 0, });
+		} else {
+			$this.css('transform-origin', 'left top');
+		}
 	}
 });
 
@@ -237,6 +334,11 @@ $($menuToggle).click(function (e) {
 		$this.toggleClass('is-active', false);
 	});
 	$this.next($menu).toggleClass('is-active');
+	if ($this.next($menu).hasClass('is-ative')) {
+		if (!$($overlayContainer).hasClass('is-active')) {
+			$($overlayContainer).toogleClass('is-active');
+		}
+	}
 });
 
 //---------------------------------------------
@@ -255,32 +357,36 @@ $($menuToggle).click(function (e) {
  */
 $($tooltip).each(function () {
 	const $this = $(this);
-	const tip = $this.attr('title');
 	let $that = {};
-	$this.data('tip', tip);
 	$this.on({
 		mouseenter: () => {
-			$this.attr('title', '');
-			$('body').append('<span class="c-tooltip"></span>');
-			$that = $('.c-tooltip');
-			$that.append(tip);
-			const link = $this.offset();
-			const tipPos = $that.offset();
-			tipPos.top = link.top + $this.innerHeight() + 6;
-			if ((tipPos.top + $that.innerHeight() + 6) > ($(window).height() - 8)) {
-				tipPos.top = link.top - $that.innerHeight() - 12;
+			$('body').append('<span class="c-tooltip" data-tooltip-container="true"></span>');
+			$that = $($tooltipContainer);
+			$that.append($this.attr('title'));
+
+			const link = edgeDetect($this);
+			const tip = edgeDetect($that);
+
+			tip.t = (link.b + 6);
+			tip.b = (tip.t + tip.h);
+			tip.l = ((link.l + (link.w / 2)) - (tip.w / 2));
+
+			if ((tip.b + 6) > $(window).height()) {
+				tip.t = (link.t - tip.h - 12);
 			}
 
-			tipPos.left = (link.left + ($this.innerWidth() / 2)) - ($that.innerWidth() / 2);
-			if ((tipPos.left + $that.width()) > ($(window).width() - 8)) {
-				tipPos.left = $(window).width() - 8 - $that.innerWidth();
+			if ((tip.l + tip.w) > $(window).width()) {
+				tip.l = ($(window).width() - 8 - tip.w);
 			}
 
-			$that.attr('style', 'left: ' + tipPos.left + 'px; top: ' + tipPos.top + 'px;');
+			if (tip.l < 8) {
+				tip.l = 8;
+			}
+
+			$that.attr('style', 'left: ' + tip.l + 'px; top: ' + tip.t + 'px;');
 			$that.toggleClass('is-active');
 		},
 		mouseleave: () => {
-			$this.attr('title', tip);
 			$that.remove();
 		},
 	});
@@ -301,18 +407,31 @@ $($tooltip).each(function () {
  */
 $(document).on({
 	touchstart: e => {
-		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
-		clearToggle(e, $notification, $notificationToggle);
+	},
+	mouseup: e => {
+		clearToggle(e, $search, $searchToggle);
+	},
+});
+
+$($overlayContainer).on({
+	touchstart: e => {
+		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $menu, $menuToggle);
 		clearToggle(e, $profile, $profileToggle);
+		clearToggle(e, $toolbar, $toolbarToggle);
+		clearToggle(e, $notification, $notificationToggle);
+		$($overlayContainer).toggleClass('is-active');
+		$($page).removeAttr('style');
 	},
 	mouseup: e => {
 		clearToggle(e, $drawer, $drawerToggle);
-		clearToggle(e, $search, $searchToggle);
-		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
 		clearToggle(e, $profile, $profileToggle);
+		clearToggle(e, $toolbar, $toolbarToggle);
+		clearToggle(e, $notification, $notificationToggle);
+		$($overlayContainer).toggleClass('is-active');
+		$($page).removeAttr('style');
 	},
 });
 
