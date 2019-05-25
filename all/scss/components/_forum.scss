@@ -24,6 +24,7 @@ $forum-border-color: $default-border-color !default;
 $forum-media-color: $default-secondary-color !default;
 $forum-media-read-color: $default-primary-color !default;
 $forum-title-icon-color: $default-info-color !default;
+$forum-action-color: $default-action-icon-color !default;
 
 
 //
@@ -97,16 +98,45 @@ $forum-title-icon-color: $default-info-color !default;
 	}
 
 	&-cat {
-		&-title {
-			@include type(headline5);
+		&-header {
+			background-color: transparent;
 			border-bottom: $forum-border-size $forum-border-style $forum-border-color;
 			margin-top: ($forum-spacing * 2);
 			margin-bottom: ($forum-spacing * 3);
-			padding-bottom: ($forum-spacing / 2);
 
-			&-link {
-				line-height: 1;
+			&-title {
+				@include type(headline5);
+				// margin: 0;
 			}
+
+			&-action {
+				&:focus {
+					background-color: transparent;
+					color: $forum-action-color;
+				}
+
+				&-icon {
+					transition: 0.35s ease-in-out;
+				}
+
+				&.is-collapsed .c-forum-cat-header-action-iocn {
+					transition: 0.35s ease-in-out;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	&-deck {
+		display: block;
+		transition: 0.35s ease-in-out;
+		transform: scaleY(1);
+		transform-origin: center top;
+
+		&.is-collapsed {
+			display: none;
+			transition: 0.35s ease-in-out;
+			transform: scaleY(0);
 		}
 	}
 
