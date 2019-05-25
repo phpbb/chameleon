@@ -1,0 +1,47 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		{% block meta %}{% endblock %}
+
+		<title></title>
+		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@bdaece8bf5558fdfeec1d09b765486cca5c59515/dist/assets/css/core.0.16.0.min.css" rel="stylesheet">
+		<link href="../../all/css/theme.{{ version }}.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@master/dist/assets/css/utilities.0.16.0.min.css" rel="stylesheet">
+		{% block css %}{% endblock %}
+	</head>
+	<body>
+		{% include '../includes/defs.twig' %}
+
+		<header>
+			{% block navbar %}
+				{% include '../includes/search.twig' %}
+				{% include '../includes/navbar.twig' %}
+			{% endblock %}
+			{% block sidemenu %}
+				{% include '../includes/drawer.twig' %}
+			{% endblock %}
+			{% block crumb %}
+				{% include '../includes/crumb.twig' %}
+			{% endblock %}
+			{% block hero %}
+				{% include '../includes/hero.twig' %}
+			{% endblock %}
+			{% block header %}{% endblock %}
+		</header>
+
+		{% block main %}{% endblock %}
+
+		<footer>
+			{% block footer %}{% endblock %}
+			{% include '../includes/footer.twig' %}
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../../all/js/temp.js" ></script>
+		{% block scripts %}{% endblock %}
+	</body>
+</html>
