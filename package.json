@@ -8,14 +8,34 @@
 			"quotes": [
 				"error",
 				"single"
+			],
+			"comma-dangle": [
+				"error",
+				"always"
+			],
+			"block-spacing": "error",
+			"array-bracket-spacing": [
+				"error",
+				"always"
+			],
+			"multiline-comment-style": [
+				"error",
+				"starred-block"
+			],
+			"computed-property-spacing": "off",
+			"space-in-parens": "off",
+			"capitalized-comments": "off",
+			"object-curly-spacing": [
+				"error",
+				"always"
 			]
 		},
-		"env": {
-			"es6": true,
-			"browser": true,
-			"node": true,
-			"jquery": true
-		}
+		"env": [
+			"es6",
+			"browser",
+			"node",
+			"jquery"
+		]
 	},
 	"scripts": {
 		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"

@@ -38,15 +38,15 @@ const AUTOPREFIXER_BROWSERS = [
 	'chrome >= 35',
 	'safari >= 8',
 	'opera >= 35',
-	'ios >= 8'
+	'ios >= 8',
 ];
 const theme = '';
 const build = {
-	'css': './all/css',
-	'twig': './all/views/',
-	'scss': './all/scss/',
-	'data': './tests/mock/',
-	'html': './tests/views/'
+	css: './all/css',
+	twig: './all/views/',
+	scss: './all/scss/',
+	data: './tests/mock/',
+	html: './tests/views/',
 };
 
 if (theme) {
@@ -59,20 +59,20 @@ gulp.task('css', () => {
 		.src(build.scss + '*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			'indentType': 'tab',
-			'indentWidth': 1,
-			'outputStyle': 'expanded',
-			'precision': 10,
-			'onError': console.error.bind(console, 'Sass error:')
+			indentType: 'tab',
+			indentWidth: 1,
+			outputStyle: 'expanded',
+			precision: 10,
+			onError: console.error.bind(console, 'Sass error:'),
 		}))
 		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
 				sorting(sortOrder),
 				torem({
-					'rootValue': 16,
-					'unitPrecision': 7,
-					'propWhiteList': [
+					rootValue: 16,
+					unitPrecision: 7,
+					propWhiteList: [
 						'font',
 						'font-size',
 						'margin',
@@ -84,19 +84,19 @@ gulp.task('css', () => {
 						'padding-left',
 						'padding-right',
 						'padding-top',
-						'padding-bottom'
+						'padding-bottom',
 					],
-					'selectorBlackList': [],
-					'replace': true,
-					'mediaQuery': false,
-					'minPixelValue': 0
-				})
+					selectoBlackList: [],
+					replace: true,
+					mediaQuery: false,
+					minPixelValue: 0,
+				}),
 			])
 		)
 		.pipe(stylefmt())
 		.pipe(rename({
-			'suffix': '.' + pkg.version,
-			'extname': '.css'
+			suffix: '.' + pkg.version,
+			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(build.css));
@@ -105,15 +105,15 @@ gulp.task('css', () => {
 });
 
 gulp.task('clean', () => {
-	del([build.css]);
-	del([build.html]);
+	del([ build.css, ]);
+	del([ build.html, ]);
 });
 
 gulp.task('data', () => {
 	const json = gulp
 		.src(build.data + '*.json')
 		.pipe(merge({
-			'fileName': 'db.json'
+			fileName: 'db.json',
 		}))
 		.pipe(gulp.dest(build.data + '/db/'));
 
@@ -126,8 +126,8 @@ gulp.task('minify', gulp.series('css', () => {
 		.pipe(sourcemaps.init())
 		.pipe(cssnano())
 		.pipe(rename({
-			'suffix': '.min',
-			'extname': '.css'
+			suffix: '.min',
+			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(build.css));
@@ -141,12 +141,12 @@ gulp.task('twig', gulp.series('data', () => {
 	const html = gulp
 		.src(build.twig + '*.twig')
 		.pipe(nunjucks({
-			'data': db,
-			'path': [build.twig],
-			'manageEnv': manageEnvironment
+			data: db,
+			path: [ build.twig, ],
+			manageEnv: manageEnvironment,
 		}))
 		.pipe(rename({
-			'extname': '.html'
+			extname: '.html',
 		}))
 		.pipe(gulp.dest(build.html));
 
