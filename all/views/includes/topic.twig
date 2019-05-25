@@ -1,0 +1,48 @@
+<li class="o-list-item c-topic-item">
+	<span class="o-list-media">
+		<svg class="o-icon o-list-media-icon {% if topic.status == 1 %} c-topic-read{% else %} c-topic-unread{% endif %}"><use xlink:href="#{{ topic.icon }}"></use></svg>
+	</span>
+	<span class="o-list-primary">
+		<a class="o-list-title" href="#">{{topic.name}}</a>
+		<span class="o-list-secondary">
+			{% if topic.approved == false %}
+				<a class="o-list-secondary-item c-topic-unapproved" href="#" data-tooltip="true" title="{{ lang.unapproved }}"><svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#unapproved"></use></svg></a>
+			{% endif %}
+			<span class="o-list-secondary-item c-topic-user">
+				<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#user"></use></svg>
+				<a class="o-list-secondary-item-link" href="{{ topic.author_profile }}" style="color: #{{ topic.author_color }};">{{ topic.author }}</a>
+			</span>
+			<span class="o-list-secondary-item c-topic-time">
+				<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#time"></use></svg>
+				<time datetime="{{ topic.time }}" title="{{ topic.time }}" data-short="{{ topic.time }}">{{ topic.time }}</time>
+			</span>
+			<span class="o-list-secondary-item c-topic-views">
+				<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#views"></use></svg>
+				{{ topic.views }}
+			</span>
+			<span class="o-list-secondary-item c-topic-replies">
+				<svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#replies"></use></svg>
+				{{ topic.replies }}
+			</span>
+			{% if topic.pages %}
+				<a class="o-list-secondary-item" href="#" data-tooltip="true" title="{{ lang.page_goto }}"><svg class="o-icon o-list-secondary-item-icon"><use xlink:href="#pages"></use></svg></a>
+			{% endif %}
+		</span>
+	</span>
+	<span class="o-list-meta c-topic-meta">
+		<span class="o-list-meta-primary c-topic-meta-primary">
+			<a class="o-list-meta-link c-topic-link" href="{{ topic.last_author_profile }}" style="color: #{{ topic.last_color }};">{{ topic.last_author }}</a>
+			<span class="o-list-meta-secondary">
+				<a class="o-list-meta-link" href="">
+					<time datetime="{{ topic.last_time }}" title="{{ topic.last_time }}" data-short="{{ topic.last_time }}">{{ topic.last_time }}</time>
+				</a>
+			</span>
+		</span>
+		<a class="o-list-meta-media" href="{{ topic.last_author_profile }}">
+			<span class="o-avatar-wrap o-list-avatar">
+				<img class="o-avatar" src="{{ topic.last_avatar }}" alt="User Avatar">
+				<span class="o-avatar-online o-action-bar-avatar-online"></span>
+			</span>
+		</a>
+	</span>
+</li>
