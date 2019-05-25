@@ -75,7 +75,7 @@
 		"declaration-property-unit-whitelist": {
 			"height": ["px", "%", "vh"],
 			"width": ["px", "%", "vw"],
-			"font-size": ["px", "rem", "%"],
+			"font-size": ["px", "rem", "%", "vw"],
 			"margin-left": ["px", "rem", "%"],
 			"margin-right": ["px", "rem", "%"],
 			"margin-top": ["px", "rem", "%"],
