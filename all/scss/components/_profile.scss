@@ -1,0 +1,133 @@
+//------------------------------------------------------------------------------
+// @component: Profile
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$profile-spacing: $default-spacing !default;
+$profile-width: 336px !default;
+$profile-group-height: $default-height-dense !default;
+$profile-border-radius: $default-border-radius !default;
+$profile-opacity-38: $default-opacity-38 !default;
+
+
+// Theme Variables
+$profile-background-color: $default-background-color !default;
+$profile-user-title-color: $default-background-item-color !default;
+$profile-action-color: $default-action-color !default;
+$profile-action-color-hover: $default-action-color-hover !default;
+$profile-good-color: $default-success-color !default;
+$profile-bad-color: $default-error-color !default;
+
+
+//
+// @scss
+.c-profile {
+	@include shadow(2);
+	background-color: $profile-background-color;
+	border-radius: $profile-border-radius;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	width: $profile-width;
+	padding: 0 0 ($profile-spacing * 2) 0;
+	transition: all 0.2s ease;
+	transform: scale(0);
+
+	&.is-active {
+		transform: scale(1);
+	}
+
+	&-toggle {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&-user {
+		&-title {
+			color: $profile-user-title-color;
+			opacity: $profile-opacity-38;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			transition: 0.5s;
+		}
+	}
+
+	&-group {
+		@include type(body2);
+		text-align: center;
+		height: $profile-group-height;
+		margin: ($profile-spacing / 2) 0 -$profile-spacing;
+	}
+
+	&-action {
+		color: $profile-action-color;
+		display: inline-block;
+		padding: ($profile-spacing * 2);
+
+		&:hover,
+		&:focus {
+			color: $profile-action-color-hover;
+			transition: 0.5s;
+		}
+	}
+
+	&-close {
+		float: right;
+	}
+
+	&-meta {
+		text-align: center;
+		margin: 0;
+		padding: ($profile-spacing * 2);
+	}
+
+	&-stats {
+		@include parent();
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&-stat {
+		@include child();
+		text-align: center;
+		min-width: calc((100% / 3));
+		padding: $profile-spacing ($profile-spacing * 2);
+
+		&-wrap {
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+
+		&-title {
+			margin-left: $profile-spacing;
+		}
+
+		&-value {
+			@include type(caption);
+			padding-top: $profile-spacing;
+		}
+	}
+
+	&-rating {
+		&-good {
+			font-weight: 600;
+			color: $profile-good-color;
+		}
+
+		&-bad {
+			font-weight: 600;
+			color: $profile-bad-color;
+		}
+	}
+}
