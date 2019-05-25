@@ -1,3 +1,5 @@
+/* eslint-disable multiline-comment-style */
+
 const $drawerToggle = '[data-toggle="drawer"]';
 const $drawer = '[data-container="drawer"]';
 const $drawerMenuToggle = '[data-toggle="drawer-menu"]';
@@ -25,7 +27,7 @@ const $tooltip = '[data-tooltip="true"]';
  * @param     {object} $toggle The element that contorls the state
  */
 const clearToggle = function (e, $el, $toggle) {
-	const {target} = e;
+	const { target, } = e;
 
 	if (
 		!$(target).is($el) &&
@@ -66,13 +68,14 @@ const clearTabs = function (e, $links) {
  * @this     {object}
  * @param     {object} target      element to apply toggle class on
  */
-const isActive = function (target) {
-	this.click(e => {
-		e.preventDefault();
-		e.stopPropagation();
-		target.toggleClass('is-active');
-	});
-};
+
+// const isActive = function (target) {
+// 	this.click(e => {
+// 		e.preventDefault();
+// 		e.stopPropagation();
+// 		target.toggleClass('is-active');
+// 	});
+// };
 
 /**
  * Toggles the state for Modals
@@ -169,13 +172,13 @@ $($tabs).children().each(function () {
 	const $that = $($this.attr('href'));
 
 	$this.on({
-		'mouseup': e => {
+		mouseup: e => {
 			e.preventDefault();
 			e.stopPropagation();
 			clearTabs(e, $tabs);
 			$this.toggleClass('is-active');
 			$that.toggleClass('is-active');
-		}
+		},
 	});
 });
 
@@ -211,7 +214,7 @@ $($menu).each(function () {
 	const $this = $(this);
 	const targetOffset = $this.offset();
 	if (targetOffset.left > $(window).width() / 2) {
-		$this.css({'transform-origin': 'right top', 'right': 0});
+		$this.css({ 'transform-origin': 'right top', right: 0, });
 	} else {
 		$this.css('transform-origin', 'left top');
 	}
@@ -256,7 +259,7 @@ $($tooltip).each(function () {
 	let $that = {};
 	$this.data('tip', tip);
 	$this.on({
-		'mouseenter': () => {
+		mouseenter: () => {
 			$this.attr('title', '');
 			$('body').append('<span class="c-tooltip"></span>');
 			$that = $('.c-tooltip');
@@ -267,17 +270,19 @@ $($tooltip).each(function () {
 			if ((tipPos.top + $that.innerHeight() + 6) > ($(window).height() - 8)) {
 				tipPos.top = link.top - $that.innerHeight() - 12;
 			}
+
 			tipPos.left = (link.left + ($this.innerWidth() / 2)) - ($that.innerWidth() / 2);
 			if ((tipPos.left + $that.width()) > ($(window).width() - 8)) {
 				tipPos.left = $(window).width() - 8 - $that.innerWidth();
 			}
+
 			$that.attr('style', 'left: ' + tipPos.left + 'px; top: ' + tipPos.top + 'px;');
 			$that.toggleClass('is-active');
 		},
-		'mouseleave': () => {
+		mouseleave: () => {
 			$this.attr('title', tip);
 			$that.remove();
-		}
+		},
 	});
 });
 
@@ -295,20 +300,20 @@ $($tooltip).each(function () {
  * @event     Hide#Profile
  */
 $(document).on({
-	'touchstart': e => {
+	touchstart: e => {
 		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
 		clearToggle(e, $profile, $profileToggle);
 	},
-	'mouseup': e => {
+	mouseup: e => {
 		clearToggle(e, $drawer, $drawerToggle);
 		clearToggle(e, $search, $searchToggle);
 		clearToggle(e, $notification, $notificationToggle);
 		clearToggle(e, $menu, $menuToggle);
 		clearToggle(e, $profile, $profileToggle);
-	}
+	},
 });
 
 //---------------------------------------------
