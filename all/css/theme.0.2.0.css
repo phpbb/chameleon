@@ -46,7 +46,7 @@ textarea {
 [type='color']:hover,
 select:hover,
 textarea:hover {
-	border-bottom-color: white;
+	border-bottom-color: #e0e0e0;
 }
 
 [type='date']:disabled,
@@ -93,7 +93,7 @@ select:focus::-ms-value {
 }
 
 [type='checkbox'] + label:before {
-	border-color: white;
+	border-color: #e0e0e0;
 }
 
 [type='checkbox']:indeterminate + label:before:disabled {
@@ -115,7 +115,7 @@ select:focus::-ms-value {
 
 [type='radio']:not(:checked) + label:before,
 [type='radio']:not(:checked) + label:after {
-	border-color: white;
+	border-color: #e0e0e0;
 }
 
 [type='radio']:hover + label:before {
@@ -156,7 +156,7 @@ select:focus::-ms-value {
 
 .o-bar-action:hover,
 .o-bar-action:focus {
-	background-color: white;
+	background-color: #e0e0e0;
 }
 
 .o-bar-user-title {
@@ -185,7 +185,7 @@ select:focus::-ms-value {
 }
 
 .o-btn:hover {
-	background-color: white;
+	background-color: #e0e0e0;
 }
 
 .o-btn:focus {
@@ -266,7 +266,7 @@ select:focus::-ms-value {
 
 .c-paging-link:hover {
 	text-decoration: none;
-	background: white;
+	background: #e0e0e0;
 	border-radius: 2px;
 	transition: 0.5s;
 }
@@ -1016,7 +1016,7 @@ select:focus::-ms-value {
 
 .c-menu-link:hover {
 	text-decoration: none;
-	background-color: white;
+	background-color: #e0e0e0;
 	color: #258cf4;
 	transition: 0.5s;
 }
@@ -1113,7 +1113,7 @@ select:focus::-ms-value {
 }
 
 .c-notification-meta:hover {
-	background-color: white;
+	background-color: #e0e0e0;
 	color: #258cf4;
 }
 
@@ -1126,7 +1126,7 @@ select:focus::-ms-value {
 }
 
 .c-notification-unread .c-notification-meta:hover {
-	background-color: white;
+	background-color: #e0e0e0;
 	color: #258cf4;
 }
 
@@ -1342,7 +1342,7 @@ select:focus::-ms-value {
 }
 
 .c-drawer-link:hover {
-	background-color: white;
+	background-color: #e0e0e0;
 	color: #757575;
 }
 
@@ -1901,7 +1901,7 @@ select:focus::-ms-value {
 }
 
 .t-navbar-right {
-	background-color: #ffffff;
+	background-color: #fafafa;
 }
 
 .t-navbar-action {
@@ -1910,7 +1910,7 @@ select:focus::-ms-value {
 
 .t-navbar-action:hover,
 .t-navbar-action:focus {
-	background-color: #fafafa;
+	background-color: #e0e0e0;
 }
 
 .t-bar-search {
@@ -1922,7 +1922,7 @@ select:focus::-ms-value {
 }
 
 .t-crumbs-container {
-	background-color: #ffffff;
+	background-color: #fafafa;
 }
 
 .t-forum-page-title {
