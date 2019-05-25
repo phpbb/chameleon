@@ -1,0 +1,65 @@
+//------------------------------------------------------------------------------
+// @component: Paging
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$paging-spacing: $default-spacing !default;
+$paging-border-radius: $default-border-radius !default;
+$paging-icon-size: $default-icon-md !default;
+$paging-height: $default-height-dense;
+
+// Theme Variables
+$paging-link-background-color: $default-action-bg !default;
+$paging-link-background-hover-color: $default-action-bg-hover !default;
+
+
+//
+// @scss
+.c-paging {
+	@include parent();
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	align-content: center;
+
+	&-item {
+		margin: 0;
+
+		&:first-of-type .c-paging-link {
+			border-top-left-radius: $paging-border-radius;
+			border-bottom-left-radius: $paging-border-radius;
+		}
+
+		&:last-of-type .c-paging-link {
+			border-top-right-radius: $paging-border-radius;
+			border-bottom-right-radius: $paging-border-radius;
+		}
+	}
+
+	&-link {
+		@include type(subtitle1);
+		background: $paging-link-background-color;
+		@include center($paging-height);
+		margin: 0;
+		padding: $paging-spacing ($paging-spacing * 2);
+
+		&:hover {
+			text-decoration: none;
+			background: $paging-link-background-hover-color;
+			border-radius: $paging-border-radius;
+			transition: 0.5s;
+		}
+
+		&-icon {
+			width: $paging-icon-size;
+			height: $paging-icon-size;
+			margin: (-$paging-spacing / 2) -($paging-spacing * 2) 0;
+		}
+	}
+}
