@@ -85,8 +85,8 @@ $default-shadow-color:                  null;
 $defaults: (
 	'background': (
 		'dark': (
-			'color': $dark,
-			'alt':   $dark-1,
+			'color': $dark-1,
+			'alt':   $dark-2,
 			'item':  $white
 		),
 		'light': (
@@ -97,8 +97,8 @@ $defaults: (
 	),
 	'surface': (
 		'dark': (
-			'color': $dark-2,
-			'alt':   $dark-3,
+			'color': $dark-6,
+			'alt':   $dark-8,
 			'item':  $white
 		),
 		'light': (
@@ -228,7 +228,7 @@ $default-link-color:                    $default-primary-color !default;
 $default-link-color-hover:              $default-primary-dark-color !default;
 
 $default-action-bg:                     $default-surface-color !default;
-$default-action-bg-hover:               $default-surface-alt-color !default;
+$default-action-bg-hover:               lighten($default-surface-color, 8%) !default;
 $default-action-color:                  $default-surface-item-color !default;
 $default-action-color-hover:            $default-primary-color !default;
 $default-action-icon-color:             $default-surface-item-color !default;
