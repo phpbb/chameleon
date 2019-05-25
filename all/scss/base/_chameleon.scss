@@ -24,7 +24,7 @@ $o-disabled-color: lighten($o-color, 8%) !default;
 //
 // @scss
 html {
-	background-color: darken($default-background-color, 4%);
+	background-color: $default-page-bg;
 	color: $default-background-item-color;
 }
 
