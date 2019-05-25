@@ -1,0 +1,40 @@
+{
+	"groups": [
+		{
+			"id":1,
+			"name":"Management",
+			"color":"#4F6772",
+			"url":"./memberlist.php"
+		},
+		{
+			"id":2,
+			"name":"Development",
+			"color":"#00BFA5",
+			"url":"./memberlist.php"
+		},
+		{
+			"id":3,
+			"name":"Customisations",
+			"color":"#B84FDB",
+			"url":"./memberlist.php"
+		},
+		{
+			"id":4,
+			"name":"Support",
+			"color":"#FFAB40",
+			"url":"./memberlist.php"
+		},
+		{
+			"id":5,
+			"name":"Community",
+			"color":"#3F54C0",
+			"url":"./memberlist.php"
+		},
+		{
+			"id":6,
+			"name":"Infrastructure",
+			"color":"#00BCD4",
+			"url":"./memberlist.php"
+		}
+	]
+}
