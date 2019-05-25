@@ -1,0 +1,109 @@
+//------------------------------------------------------------------------------
+// @component: Crumbs
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$crumbs-spacing: $default-spacing !default;
+$crumbs-height: $default-height !default;
+$crumbs-seperator-height: $default-height-dense !default;
+
+
+// Theme Variables
+$crumbs-bg-color: $default-action-bg !default;
+$crumbs-bg-hover-color: $default-action-bg-hover !default;
+$crumbs-text-color: $default-action-color !default;
+$crumbs-icon-color: $default-action-color !default;
+$crumbs-border-color: $default-border-color !default;
+$crumbs-icon-hover-color: $default-action-color-hover !default;
+
+//
+// @scss
+.c-crumbs {
+	@include parent();
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-container {
+		@include parent();
+		background-color: $crumbs-bg-color;
+		border-top: 1px solid $crumbs-border-color;
+		box-shadow:
+			0 11px 15px -7px rgba(0, 0, 0, 0.2),
+			0 24px 38px 3px rgba(0, 0, 0, 0.14);
+		position: absolute;
+		z-index: 10;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+
+	&-item {
+		margin: 0;
+		padding: 0;
+
+		&:not(:first-of-type) {
+			display: none;
+		}
+
+		@media (min-width: $bp-sm) {
+			&:nth-last-of-type(-n+1) {
+				display: block;
+			}
+		}
+
+		@media (min-width: $bp-md) {
+			&:nth-last-of-type(-n+2) {
+				display: block;
+			}
+		}
+
+		@media (min-width: $bp-lg) {
+			&:nth-last-of-type(-n+3) {
+				display: block;
+			}
+		}
+
+		@media (min-width: $bp-xl) {
+			&:nth-last-of-type(-n+4) {
+				display: block;
+			}
+		}
+	}
+
+	&-seperator {
+		width: $crumbs-seperator-height;
+		height: $crumbs-seperator-height;
+		margin-left: -($crumbs-spacing / 2);
+	}
+
+	&-link {
+		white-space: nowrap;
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: $crumbs-height;
+		padding: $crumbs-spacing;
+		padding-right: 0;
+
+		&:hover {
+			text-decoration: underline;
+			color: $crumbs-icon-hover-color;
+		}
+	}
+
+	&-text {
+		align-self: center;
+		padding-left: ($crumbs-spacing / 2);
+	}
+
+	&-icon {
+		margin-right: ($crumbs-spacing / 2);
+	}
+}
