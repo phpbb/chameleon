@@ -1,0 +1,47 @@
+{% macro whos_online(page, online, lang, stats, groups) %}
+<div class="c-tab-pane t-tab-pane" id="whos-online" role="tabpane">
+	<div class="c-tab-pane-row t-tab-pane-row">
+		{% if page == "index" %}
+			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.registered_users }}{{ lang.colon }}</h4>
+		{% elseif page == "forum" %}
+			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.online_forum }}{{ lang.colon }}</h4>
+		{% endif %}
+		<span class="c-tab-pane-text t-tab-text">
+			{% for item in online %}
+				{% if item.group %}
+					{% if item.bot %}
+						<span style="color: {{ item.group }};">{{ item.name }}</span>
+					{% else %}
+						<a class="c-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a>
+					{% endif %}
+				{% else %}
+					<a class="c-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a>
+				{% endif %}
+				{% if loop.last %}{% else %}, {% endif %}
+			{% endfor %}
+		</span>
+	</div>
+	{% if page == "index" %}
+		<div class="c-tab-pane-row t-tab-pane-row">
+			<div class="c-stat-wrap s-stat-wrap">
+				<ul class="c-stat-list c-tab-pane-stats t-stat-list t-tab-pane-stats">
+					<li class="c-stat-item t-stat-item">{{ lang.total_online }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.online.current }}</span></li>
+					<li class="c-stat-item t-stat-item">{{ lang.registered }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.online.registered }}</span></li>
+					<li class="c-stat-item t-stat-item">{{ lang.hidden }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.online.hidden }}</span></li>
+					<li class="c-stat-item t-stat-item">{{ lang.guests }} <span class="o-tag c-stat-badge t-stat-badge">{{ stats.online.guests }}</span></li>
+				</ul>
+				<span class="c-stat-info t-stat-info">{{ lang.stats.stats_disclaimer }}</span>
+			</div>
+		</div>
+		<div class="c-tab-pane-footer t-tab-pane-footer">
+			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.legend }}{{ lang.colon }}</h4>
+			<span class="c-tab-pane-text t-tab-pane-text">
+				{% for item in groups %}
+					<a class="c-tab-pane-link t-tab-pane-link" style="color:{{ item.color }};" href="{{ item.url }}">{{ item.name }}</a>
+					{% if loop.last %}{% else %}, {% endif %}
+				{% endfor %}
+			</span>
+		</div>
+	{% endif %}
+</div>
+{% endmacro %}

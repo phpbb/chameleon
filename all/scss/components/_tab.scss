@@ -1,0 +1,161 @@
+//------------------------------------------------------------------------------
+// @object: Tab
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$tab-spacing: $default-spacing !default;
+$tab-height: 72px !default;
+$tab-width: 160px !default;
+$tab-border-radius: $default-border-radius !default;
+$tab-border-height: $default-border-size !default;
+$tab-icon-size: $default-icon-md !default;
+
+
+// Theme Variables
+$tab-bg-color: $default-action-bg !default;
+$tab-pane-bg-color: $default-background-color !default;
+$tab-bg-hover-color: $default-action-bg-hover !default;
+$tab-text-color: $default-action-color !default;
+$tab-icon-color: $default-action-color !default;
+$tab-icon-hover-color: $default-action-color-hover !default;
+$tab-border-type: solid !default;
+$tab-border-color: $default-border-color !default;
+$tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
+
+
+//
+// @scss
+.c-tab {
+	@include type(body1);
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: $tab-text-color;
+	position: relative;
+	display: table-cell;
+	overflow: hidden;
+	min-width: $tab-width;
+	height: $tab-height;
+	margin: 0 $tab-border-height;
+	padding: 0 ($tab-spacing * 1.5);
+	transition: color 0.25s;
+
+	&:after {
+		background-color: $tab-icon-hover-color;
+		position: absolute;
+		bottom: -$tab-border-height;
+		left: 0;
+		width: 0;
+		height: ($tab-spacing / 2);
+		content: '';
+		transition:
+			background-color 0s ease-in 0.5s,
+			width 0.15s ease-in 0.25s;
+	}
+
+	&:hover,
+	&.is-active {
+		color: $tab-icon-hover-color;
+		transition: 0.5s;
+
+		&:after {
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&-icon {
+		text-align: center;
+		display: block;
+		width: $tab-icon-size;
+		height: $tab-icon-size;
+		margin: 0 auto;
+		margin-top: ($tab-spacing / 2);
+	}
+
+	&-icon + &-text {
+		padding-top: ($tab-spacing * 0.75);
+	}
+
+	&-card {
+		@include shadow(2);
+		background-color: $tab-pane-bg-color;
+		border-radius: $tab-border-radius;
+	}
+
+	&-bar {
+		border-bottom: 0;
+		position: relative;
+		display: table;
+
+		&-frame {
+			@include parent();
+			@include child();
+			border-bottom: $tab-border;
+			position: relative;
+			overflow-x: scroll;
+			justify-content: flex-start;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+
+	&-pane {
+		@include parent(column);
+		display: none;
+		margin: 0;
+
+		&.is-active {
+			display: block;
+		}
+
+		&-row {
+			@include child();
+			@include parent(column);
+			@media (min-width: $bp-lg) {
+				flex-direction: row;
+			}
+		}
+
+		&-title {
+			@include type(title, $lh: 1);
+			flex-shrink: 1;
+			margin-bottom: 0;
+			padding: ($tab-spacing * 2) 0 0 ($tab-spacing * 2);
+			@media (min-width: $bp-lg) {
+				padding-bottom: ($tab-spacing * 2);
+			}
+		}
+
+		&-text {
+			@include child();
+			padding: ($tab-spacing * 2);
+		}
+
+		&-link:hover {
+			text-decoration: underline;
+			transition: 0.5s;
+		}
+
+		&-row + &-row &-stats {
+			padding-top: 0;
+		}
+
+		&-footer {
+			@include parent();
+			@include border-radius(bottom, $tab-border-radius);
+			background-color: $tab-bg-color;
+			border-top: $tab-border;
+		}
+	}
+}
