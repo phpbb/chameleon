@@ -8,7 +8,7 @@
 		<ul class="o-bar-right c-notification-bar-right t-notification-bar-right">
 			<li class="o-bar-item c-notification-bar-item t-notification-bar-item">
 				<a class="o-bar-action t-notification-bar-action" href="" data-tooltip="true" title="{{ lang.settings }}">
-					{{ 'settings-outline'|icon('inline', 'o-icon c-notification-bar-action-icon t-notification-bar-action-icon')|safe }}
+					{{ 'settings-outline'|icon('inline', 'o-icon iconify c-notification-bar-action-icon t-notification-bar-action-icon')|safe }}
 				</a>
 			</li>
 		</ul>
@@ -26,21 +26,21 @@
 				</a>
 				<span class="o-list-primary c-notification-primary t-notification-primary">
 					<span class="o-list-secondary c-notification-users t-notification-users">
-						{{ 'account-circle-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
+						{{ 'account-circle-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
 						<a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.user }}</a>
 					{% for participant in item.participants %}, <a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ participant.url }}" style="color: {{ participant.color }};">{{ participant.name }}</a>{% endfor %}
 					</span>
 					<span class="o-list-secondary c-notification-title t-notification-title">
-						{{ 'page-last'|icon('inline', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
+						{{ 'page-last'|icon('inline', 'o-icon iconify o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
 						<a class="o-list-title t-notification-title" href="#"><strong>{{ item.title }}</strong></a>
 					</span>
 					<span class="o-list-secondary c-notification-time t-notification-time">
-						{{ 'clock-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
+						{{ 'clock-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
 						<time class="c-notification-time-text t-notification-time-text" datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time }}</time>
 					</span>
 				</span>
 				<a class="o-list-meta c-notification-meta t-notification-meta{% if item.approved == 1 %} c-notification-approved t-notification-approved{% elseif item.approved == 2 %} c-notification-unapproved t-notification-unapproved{% endif %}" href="" data-tooltip="true" title="{{ item.typeTitle|capitalize() }}">
-					{{ item.type|icon('inline', 'o-icon o-list-media-icon t-notification-list-media-icon')|safe }}
+					{{ item.type|icon('inline', 'o-icon iconify o-list-media-icon t-notification-list-media-icon')|safe }}
 				</a>
 			</li>
 		{% endfor %}
