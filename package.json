@@ -28,7 +28,8 @@
 			"object-curly-spacing": [
 				"error",
 				"always"
-			]
+			],
+			"no-lonely-if": "off"
 		},
 		"env": [
 			"es6",
