@@ -1,5 +1,5 @@
 {
-	"announcments": [
+	"announcements": [
 		{
 			"id": 1,
 			"name": "Announce Locked",
@@ -156,7 +156,7 @@
 	"crumbs": [
 		{
 			"id": 1,
-			"title": "[1] phpBB 3.x Disscussion",
+			"title": "[1] phpBB 3.x Discussion",
 			"link": "#1"
 		},
 		{
@@ -269,7 +269,7 @@
 		{
 			"id": 4,
 			"name": "General Announcements",
-			"desc": "No specific focus, Just relavent news",
+			"desc": "No specific focus, Just relevant news",
 			"type": "forum",
 			"status": 0,
 			"last_subject": "",
@@ -298,7 +298,7 @@
 		},
 		{
 			"id": 6,
-			"name": "MOD specific announcments",
+			"name": "MOD specific announcements",
 			"desc": "Here you can find announcements related to specific MODs",
 			"type": "forum-sub",
 			"status": 1,
@@ -1376,7 +1376,7 @@
 		"privacy": "Privacy",
 		"subforums": "SubForums",
 		"see_all": "See All",
-		"announcements": "Announcments",
+		"announcements": "Announcements",
 		"forum": "Forum",
 		"forum_rules": "Forum Rules",
 		"topic_tools": "Topic Tools",

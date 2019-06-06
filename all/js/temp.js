@@ -24,7 +24,7 @@ const $tooltip = '[data-tooltip="true"]';
  *
  * @param     {object} e       Event
  * @param     {object} $el     The element with the state
- * @param     {object} $toggle The element that contorls the state
+ * @param     {object} $toggle The element that controls the state
  */
 const clearToggle = function (e, $el, $toggle) {
 	const { target, } = e;
