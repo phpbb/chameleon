@@ -1,14 +1,13 @@
 'use strict';
 
 const del = require('del');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const cssnano = require('gulp-cssnano');
 const postcss = require('gulp-postcss');
-const stylefmt = require('gulp-stylefmt');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
 const sortOrder = require('./.postcss-sorting.json');
@@ -45,9 +44,9 @@ gulp.task('css', () => {
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:'),
 		}))
-		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
+				autoprefixer(AUTOPREFIXER_BROWSERS),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
@@ -73,7 +72,6 @@ gulp.task('css', () => {
 				}),
 			])
 		)
-		.pipe(stylefmt())
 		.pipe(rename({
 			suffix: '.' + pkg.version,
 			extname: '.css',
@@ -92,7 +90,11 @@ gulp.task('minify', gulp.series('css', () => {
 	const css = gulp
 		.src(build.css + '/*.' + pkg.version + '.css')
 		.pipe(sourcemaps.init())
-		.pipe(cssnano())
+		.pipe(
+			postcss([
+				cssnano(),
+			])
+		)
 		.pipe(rename({
 			suffix: '.min',
 			extname: '.css',
@@ -114,9 +116,9 @@ gulp.task('docs:css', () => {
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:'),
 		}))
-		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
+				autoprefixer(AUTOPREFIXER_BROWSERS),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
@@ -140,10 +142,9 @@ gulp.task('docs:css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
+				cssnano(),
 			])
 		)
-		.pipe(stylefmt())
-		.pipe(cssnano())
 		.pipe(rename({
 			suffix: '.' + pkg.version + '.min',
 			extname: '.css',

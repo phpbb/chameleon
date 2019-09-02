@@ -731,7 +731,7 @@ main {
 
 			&-toggle {
 				background-color: rgba($docs-bg-color, 0.8);
-				width: calc($sidebar-width - 16px);
+				width: calc(#{$sidebar-width} - 16px);
 				transition: 1s background-color;
 			}
 		}
