@@ -28,7 +28,7 @@ $modal-text-color: $default-action-color !default;
 	background-color: $modal-background-color;
 	border-radius: $modal-border-radius;
 	opacity: 0;
-	width: calc(100% - ( #{$modal-spacing} * 4 ) );
+	width: calc(100% - (#{$modal-spacing} * 4));
 	min-width: $modal-min-width-sm;
 	max-width: $modal-max-width;
 	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
