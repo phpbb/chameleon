@@ -38,6 +38,7 @@ $profile-bad-color: $default-error-color !default;
 	padding: 0 0 ($profile-spacing * 2) 0;
 	transition: all 0.2s ease;
 	transform: scale(0);
+	transform-origin: left top;
 
 	&.is-active {
 		transform: scale(1);
