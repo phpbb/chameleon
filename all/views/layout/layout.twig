@@ -20,7 +20,6 @@
 			{% include '../includes/drawer.twig' %}
 		{% endblock %}
 		<div class="page" id="page" data-container="page">
-			<div class="c-overlay t-overlay" data-container="overlay"></div>
 			<header>
 				{% block hero %}
 					{% include '../includes/hero.twig' %}
@@ -35,9 +34,9 @@
 				{% block header %}{% endblock %}
 			</header>
 
-			<div id="main" role="main">
+			<main role="main">
 				{% block main %}{% endblock %}
-			</div>
+			</main>
 
 			<footer>
 				{% block footer %}{% endblock %}

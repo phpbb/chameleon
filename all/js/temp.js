@@ -329,11 +329,6 @@ $($menuToggle).click(function (e) {
 		$this.toggleClass('is-active', false);
 	});
 	$this.next($menu).toggleClass('is-active');
-	if ($this.next($menu).hasClass('is-ative')) {
-		if (!$($overlayContainer).hasClass('is-active')) {
-			$($overlayContainer).toogleClass('is-active');
-		}
-	}
 });
 
 //---------------------------------------------
