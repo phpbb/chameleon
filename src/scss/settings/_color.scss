@@ -24,16 +24,27 @@ $gray-700:                     #616161 !default;    // 38
 $gray-800:                     #424242 !default;    // 26
 $gray-900:                     #212121 !default;    // 12
 
-$dark:                    		#121212 !default;
-$dark-1:                		lighten($dark, 5%) !default;
-$dark-2:                		lighten($dark, 7%) !default;
-$dark-3:                		lighten($dark, 8%) !default;
-$dark-4:                		lighten($dark, 9%) !default;
-$dark-6:                		lighten($dark, 11%) !default;
-$dark-8:                		lighten($dark, 12%) !default;
-$dark-12:                		lighten($dark, 14%) !default;
-$dark-16:                		lighten($dark, 15%) !default;
-$dark-24:                		lighten($dark, 16%) !default;
+$grey-50:                      $gray-50 !default;
+$grey-100:                     $gray-100 !default;
+$grey-200:                     $gray-200 !default;
+$grey-300:                     $gray-300 !default;
+$grey-400:                     $gray-400 !default;
+$grey-500:                     $gray-500 !default;
+$grey-600:                     $gray-600 !default;
+$grey-700:                     $gray-700 !default;
+$grey-800:                     $gray-800 !default;
+$grey-900:                     $gray-900 !default;
+
+$dark:                         #121212 !default;
+$dark-1:                       lighten($dark, 5%) !default;
+$dark-2:                       lighten($dark, 7%) !default;
+$dark-3:                       lighten($dark, 8%) !default;
+$dark-4:                       lighten($dark, 9%) !default;
+$dark-6:                       lighten($dark, 11%) !default;
+$dark-8:                       lighten($dark, 12%) !default;
+$dark-12:                      lighten($dark, 14%) !default;
+$dark-16:                      lighten($dark, 15%) !default;
+$dark-24:                      lighten($dark, 16%) !default;
 
 $black:                        #000000 !default;    // 0
 $black-87:                     $gray-900 !default;
