@@ -13,6 +13,8 @@ const torem = require('postcss-pxtorem');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
+sass.compiler = require('node-sass');
+
 // Config
 const build = {
 	css: './dist/assets/css',
@@ -42,8 +44,7 @@ gulp.task('css', () => {
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
-			onError: console.error.bind(console, 'Sass error:'),
-		}))
+		}).on('error', sass.logError))
 		.pipe(
 			postcss([
 				autoprefixer(AUTOPREFIXER_BROWSERS),
@@ -114,8 +115,7 @@ gulp.task('docs:css', () => {
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
-			onError: console.error.bind(console, 'Sass error:'),
-		}))
+		}).on('error', sass.logError))
 		.pipe(
 			postcss([
 				autoprefixer(AUTOPREFIXER_BROWSERS),
