@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const chromatic = require('chromatic-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
@@ -44,6 +45,7 @@ gulp.task('css', () => {
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
+			functions: chromatic,
 		}).on('error', sass.logError))
 		.pipe(
 			postcss([
@@ -115,6 +117,7 @@ gulp.task('docs:css', () => {
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
+			functions: chromatic,
 		}).on('error', sass.logError))
 		.pipe(
 			postcss([
@@ -142,11 +145,10 @@ gulp.task('docs:css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-				cssnano(),
 			])
 		)
 		.pipe(rename({
-			suffix: '.' + pkg.version + '.min',
+			suffix: '.' + pkg.version,
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
@@ -155,10 +157,31 @@ gulp.task('docs:css', () => {
 	return css;
 });
 
+gulp.task('docs:minify', gulp.series('docs:css', () => {
+	const css = gulp
+		.src(build.docs + '/*.' + pkg.version + '.css')
+		.pipe(sourcemaps.init())
+		.pipe(
+			postcss([
+				cssnano(),
+			])
+		)
+		.pipe(rename({
+			suffix: '.min',
+			extname: '.css',
+		}))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(build.docs));
+
+	return css;
+}));
+
 gulp.task('watch', () => {
 	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
+	gulp.watch('docs/media/**/*.scss', gulp.series('docs:css', 'docs:minify'));
 });
 
 gulp.task('serve', gulp.series('watch'));
 gulp.task('test', gulp.series('css', 'minify'));
+gulp.task('docs', gulp.series('docs:css', 'docs:minify'));
 gulp.task('default', gulp.series('css', 'minify', 'watch'));
