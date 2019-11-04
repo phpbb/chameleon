@@ -14,16 +14,16 @@ $input-border-width: 2px;
 $input-border-radius: $default-border-radius;
 
 // Theme Variables
-$input-color: $gray-600 !default;
-$input-background-color: $gray-100 !default;
-$input-border-color: $gray-100 !default;
-$input-border-alt-color: $gray-300 !default;
-$input-border-hover-color: $gray-200 !default;
-$input-hover-color: $blue-500 !default;
-$input-placeholder-color: $gray-600 !default;
-$input-disabled-color: $gray-500 !default;
-$input-invalid-border-color: $red-500 !default;
-$input-invalid-color: $red-300 !default;
+$input-color: $default-action-color !default;
+$input-background-color: $default-action-bg !default;
+$input-border-color: $default-action-bg !default;
+$input-border-alt-color: $default-action-bg-hover !default;
+$input-border-hover-color: $default-action-bg-hover !default;
+$input-hover-color: $default-action-color-hover !default;
+$input-placeholder-color: $default-action-color !default;
+$input-disabled-color: $default-disabled-color !default;
+$input-invalid-border-color: $default-error-color !default;
+$input-invalid-color: $default-error-light-color !default;
 
 
 //
@@ -111,6 +111,7 @@ textarea {
 	&:focus:invalid,
 	&:focus:invalid,
 	&:focus:invalid {
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $input-invalid-border-color 3%);
 		border-color: $input-invalid-border-color;
 		color: $input-invalid-color;
 	}

@@ -15,11 +15,12 @@
 //
 // #scss
 
-html {
+html,
+body {
 	font-family: $default-font;
 	font-size: $default-font-size; // [1]
 	font-weight: 400;
 	line-height: unitless($default-line-height); // [1]
-	background-color: $default-background-color;
+	background-color: $default-page-bg;
 	color: $default-background-item-color;
 }

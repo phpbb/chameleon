@@ -22,11 +22,11 @@ $table-button-padding-right: $table-card-padding;
 $table-cell-top: $table-card-padding / 2;
 
 //Theme Variables
-$table-bg-color: $white;
+$table-bg-color: $default-page-color;
 $table-header-color: $default-action-bg;
-$table-divider-color: rgba($black, 0.125);
-$table-hover-color: $gray-200;
-$table-selection-color: $gray-100;
+$table-border-color: $default-border-color;
+$table-hover-color: $default-action-bg-hover;
+$table-selection-color: $default-action-bg;
 
 
 //
@@ -36,7 +36,7 @@ table {
 	@include type(body1);
 	white-space: nowrap;
 	background-color: $table-bg-color;
-	border: $default-border-size solid $table-divider-color;
+	border: $default-border-size solid $table-border-color;
 	display: block;
 	overflow-x: auto;
 	width: 100%;
@@ -60,6 +60,8 @@ table {
 	td,
 	th {
 		text-align: right;
+		border-top: $default-border-size solid $table-border-color;
+		border-bottom: $default-border-size solid $table-border-color;
 		box-sizing: border-box;
 		height: $table-row-height;
 		padding: 0 $table-column-padding;
@@ -75,8 +77,6 @@ table {
 
 	td {
 		vertical-align: top;
-		border-top: $default-border-size solid $table-divider-color;
-		border-bottom: $default-border-size solid $table-divider-color;
 		padding-top: $table-cell-top;
 	}
 

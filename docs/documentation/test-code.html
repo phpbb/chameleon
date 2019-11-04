@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Test - Forms</title>
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<link href="../../dist/assets/css/core.0.21.0.css" rel="stylesheet">
+		<link href="../../dist/assets/css/utilities.0.21.0.css" rel="stylesheet">
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+		<style media="screen">
+			.wrap {
+				margin: 16px 0;
+			}
+		</style>
+
+		<!-- FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<!-- JS HEADER -->
+		<!-- <script src="./assets/js/svg4everybody.min.js"></script>
+		<script>svg4everybody(); // run it now or whenever you are ready</script> -->
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="o-container">
+
+				<p>If you open <code class="inline">styles/prosilver/template/viewtopic_body.html</code> you'll find <kbd>this at</kbd> the top.</p>
+
+				<div class="c-copy-code">
+					<div class="o-bar c-copy-code-header">
+						<div class="o-bar-left">
+							<span class="o-bar-title c-copy-code-header-title">HTML</span>
+						</div>
+						<div class="c-bar-right">
+							<a class="o-bar-action c-copy-code-action" href="#" onclick="selectCode(this); return false;">
+								<span class="iconify o-icon o-bar-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false"></span>
+							</a>
+						</div>
+					</div>
+							<pre class="hljs"><code class="hljs xml"><span class="hljs-comment">&lt;!-- IF S_FORUM_RULES --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rules&lt;!-- IF U_FORUM_RULES --&gt; rules-link&lt;!-- ENDIF --&gt;"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner"</span>&gt;</span>
+
+		<span class="hljs-comment">&lt;!-- IF U_FORUM_RULES --&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{U_FORUM_RULES}"</span>&gt;</span>{L_FORUM_RULES}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+		<span class="hljs-comment">&lt;!-- ELSE --&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{L_FORUM_RULES}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+			{FORUM_RULES}
+		<span class="hljs-comment">&lt;!-- ENDIF --&gt;</span>
+
+		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- ENDIF --&gt;</span></code></pre>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="https://code.iconify.design/1/1.0.0-rc7/iconify.min.js"></script>
+	</body>
+</html>

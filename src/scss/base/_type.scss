@@ -5,6 +5,11 @@
 //
 //------------------------------------------------------------------------------
 
+//
+// #settings
+
+//Theme Variables
+$mark-bg-color: $yellow-200 !default;
 
 //
 // #scss
@@ -74,7 +79,7 @@ blockquote {
 }
 
 mark {
-	background-color: $yellow-200;
+	background-color: $mark-bg-color;
 }
 
 cite {

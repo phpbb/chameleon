@@ -8,7 +8,7 @@
 //
 // @settings
 
-$mode: light;
+$mode: dark;
 
 $default-font-size:             16px !default;
 $default-line-height:           24px !default;
@@ -72,100 +72,168 @@ $default-opacity-12: 0.12 !default;
 }
 
 // color scheme Light/Dark prestaged
-$default-background-color:              null;
-$default-background-alt-color:          null;
-$default-background-item-color:         null;
-$default-surface-color:                 null;
-$default-surface-alt-color:             null;
-$default-surface-item-color:            null;
-$default-border-color:                  null;
-$default-page-color:                   	null;
+$default-background-color:                 null;
+$default-background-alt-color:             null;
+$default-background-item-color:            null;
+$default-surface-color:                    null;
+$default-surface-hover-color:              null;
+$default-surface-alt-color:                null;
+$default-surface-alt-hover-color:          null;
+$default-surface-item-color:               null;
+$default-border-color:                     null;
+$default-border-hover-color:               null;
+$default-page-color:                   	   null;
+
+$default-background-color-inverted:        null;
+$default-background-alt-color-inverted:    null;
+$default-background-item-color-inverted:   null;
+$default-surface-color-inverted:           null;
+$default-surface-hover-color-inverted:     null;
+$default-surface-alt-color-inverted:       null;
+$default-surface-alt-hover-color-inverted: null;
+$default-surface-item-color-inverted:      null;
+$default-border-color-inverted:            null;
+$default-border-hover-color-inverted:      null;
 
 // color scheme Light/Dark variables
 $defaults: (
 	'background': (
 		'dark': (
-			'color': $dark-1,
-			'alt':   $dark-2,
-			'item':  $white
+			'color': $gray-900,
+			'alt': $gray-800,
+			'item': $gray-50
 		),
 		'light': (
-			'color': $white,
-			'alt':   $gray-50,
-			'item':  $gray-900
+			'color': $gray-50,
+			'alt': $gray-100,
+			'item':  $gray-800
 		)
 	),
 	'surface': (
 		'dark': (
-			'color': $dark-6,
-			'alt':   $dark-8,
-			'item':  $white
+			'color': $gray-800,
+			'color-hover': $gray-700,
+			'alt': $gray-700,
+			'alt-hover': $gray-500,
+			'item': $gray-500
 		),
 		'light': (
 			'color': $gray-100,
-			'alt':   $gray-300,
-			'item':  $gray-600
+			'color-hover': $gray-300,
+			'alt': $gray-200,
+			'alt-hover': $gray-400,
+			'item': $gray-700
 		)
 	),
 	'border': (
 		'dark': (
-			'color': rgba($white, 0.125)
+			'color': $gray-700,
+			'color-hover': $gray-700
 		),
 		'light': (
-			'color': rgba($black, 0.125)
+			'color': $gray-400,
+			'color-hover': $gray-400
 		)
 	)
 );
 
 @if $mode == dark {
 	// color scheme Background
-	$default-background-color:              mode('background', 'dark', 'color');
-	$default-background-alt-color:          mode('background', 'dark', 'alt');
-	$default-background-item-color:         mode('background', 'dark', 'item');
+	$default-background-color:                 mode('background', 'dark', 'color');
+	$default-background-alt-color:             mode('background', 'dark', 'alt');
+	$default-background-item-color:            mode('background', 'dark', 'item');
+
+	$default-background-color-inverted:        mode('background', 'light', 'color');
+	$default-background-alt-color-inverted:    mode('background', 'light', 'alt');
+	$default-background-item-color-inverted:   mode('background', 'light', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                 mode('surface', 'dark', 'color');
-	$default-surface-alt-color:             mode('surface', 'dark', 'alt');
-	$default-surface-item-color:            mode('surface', 'dark', 'item');
+	$default-surface-color:                    mode('surface', 'dark', 'color');
+	$default-surface-hover-color:              mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color:                mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color:          mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color:               mode('surface', 'dark', 'item');
+
+	$default-surface-color-inverted:           mode('surface', 'light', 'color');
+	$default-surface-hover-color-inverted:     mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color-inverted:       mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color-inverted: mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color-inverted:      mode('surface', 'light', 'item');
 
 	// color scheme Border
-	$default-border-color:                  mode('border', 'dark', 'color');
+	$default-border-color:                     mode('border', 'dark', 'color');
+	$default-border-hover-color:               mode('border', 'dark', 'color-hover');
+	$default-border-color-inverted:            mode('border', 'light', 'color');
+	$default-border-hover-color-inverted:      mode('border', 'light', 'color-hover');
 
 	// other
-	$default-page-color:					$dark;
+	$default-page-color:					   mode('background', 'dark', 'color');
 } @else if $mode == light {
 	// color scheme Background
-	$default-background-color:              mode('background', 'light', 'color');
-	$default-background-alt-color:          mode('background', 'light', 'alt');
-	$default-background-item-color:         mode('background', 'light', 'item');
+	$default-background-color:                 mode('background', 'light', 'color');
+	$default-background-alt-color:             mode('background', 'light', 'alt');
+	$default-background-item-color:            mode('background', 'light', 'item');
+
+	$default-background-color-inverted:        mode('background', 'dark', 'color');
+	$default-background-alt-color-inverted:    mode('background', 'dark', 'alt');
+	$default-background-item-color-inverted:   mode('background', 'dark', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                 mode('surface', 'light', 'color');
-	$default-surface-alt-color:             mode('surface', 'light', 'alt');
-	$default-surface-item-color:            mode('surface', 'light', 'item');
+	$default-surface-color:                    mode('surface', 'light', 'color');
+	$default-surface-hover-color:              mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color:                mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color:          mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color:               mode('surface', 'light', 'item');
+
+	$default-surface-color-inverted:           mode('surface', 'dark', 'color');
+	$default-surface-hover-color-inverted:     mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color-inverted:       mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color-inverted: mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color-inverted:      mode('surface', 'dark', 'item');
 
 	// color scheme Border
-	$default-border-color:                  mode('border', 'light', 'color');
+	$default-border-color:                     mode('border', 'light', 'color');
+	$default-border-hover-color:               mode('border', 'light', 'color-hover');
+	$default-border-color-inverted:            mode('border', 'dark', 'color');
+	$default-border-hover-color-inverted:      mode('border', 'dark', 'color-hover');
 
 	// other
-	$default-page-color:					mode('background', 'light', 'color');
+	$default-page-color:					 $white;
 } @else if $mode == null {
 	// color scheme Background
-	$default-background-color:              mode('background', 'light', 'color');
-	$default-background-alt-color:          mode('background', 'light', 'alt');
-	$default-background-item-color:         mode('background', 'light', 'item');
+	$default-background-color:                 mode('background', 'light', 'color');
+	$default-background-alt-color:             mode('background', 'light', 'alt');
+	$default-background-item-color:            mode('background', 'light', 'item');
+
+	$default-background-color-inverted:        mode('background', 'dark', 'color');
+	$default-background-alt-color-inverted:    mode('background', 'dark', 'alt');
+	$default-background-item-color-inverted:   mode('background', 'dark', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                 mode('surface', 'light', 'color');
-	$default-surface-alt-color:             mode('surface', 'light', 'alt');
-	$default-surface-item-color:            mode('surface', 'light', 'item');
+	$default-surface-color:                    mode('surface', 'light', 'color');
+	$default-surface-hover-color:              mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color:                mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color:          mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color:               mode('surface', 'light', 'item');
+
+	$default-surface-color-inverted:           mode('surface', 'dark', 'color');
+	$default-surface-hover-color-inverted:     mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color-inverted:       mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color-inverted: mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color-inverted:      mode('surface', 'dark', 'item');
 
 	// color scheme Border
-	$default-border-color:                  mode('border', 'light', 'color');
+	$default-border-color:                     mode('border', 'light', 'color');
+	$default-border-hover-color:               mode('border', 'light', 'color-hover');
+	$default-border-color-inverted:            mode('border', 'dark', 'color');
+	$default-border-hover-color-inverted:      mode('border', 'dark', 'color-hover');
 
 	// other
-	$default-page-color:					mode('background', 'light', 'color');
+	$default-page-color:					 $white;
 }
+
+$default-disabled-color: $gray-500 !default;
+$default-disabled-stroke: $gray-200 !default;
 
 // color scheme Grays
 $default-gray-light:                    $black-12 !default; // 12%
@@ -177,43 +245,43 @@ $default-black:                         $black-87 !default; // 87%
 $default-primary-color:                 $blue-500 !default;
 $default-primary-dark-color:            $blue-700 !default;
 $default-primary-light-color:           $blue-300 !default;
-$default-primary-item-color:            $white !default;
-$default-primary-item-light-color:      $default-black !default;
+$default-primary-item-color:            $gray-50 !default;
+$default-primary-item-light-color:      $gray-800 !default;
 
 // color scheme Secondary
 $default-secondary-color:               $pink-500 !default;
 $default-secondary-dark-color:          $pink-700 !default;
 $default-secondary-light-color:         $pink-300 !default;
-$default-secondary-item-color:          $white !default;
-$default-secondary-item-light-color:    $default-black !default;
+$default-secondary-item-color:          $gray-50 !default;
+$default-secondary-item-light-color:    $gray-800 !default;
 
 // color shceme Error
 $default-error-color:                   $red-500 !default;
 $default-error-dark-color:              $red-700 !default;
 $default-error-light-color:             $red-300 !default;
-$default-error-item-color:              $white !default;
-$default-error-item-light-color:        $default-black !default;
+$default-error-item-color:              $gray-50 !default;
+$default-error-item-light-color:        $gray-800 !default;
 
 // color scheme Success
 $default-success-color:                 $green-500 !default;
 $default-success-dark-color:            $green-700 !default;
 $default-success-light-color:           $green-300 !default;
-$default-success-item-color:            $white !default;
-$default-success-item-light-color:      $default-black !default;
+$default-success-item-color:            $gray-50 !default;
+$default-success-item-light-color:      $gray-800 !default;
 
 // color scheme Warning
 $default-warning-color:                 $amber-500 !default;
 $default-warning-dark-color:            $amber-700 !default;
 $default-warning-light-color:           $amber-300 !default;
-$default-warning-item-color:            $white !default;
-$default-warning-item-light-color:      $default-black !default;
+$default-warning-item-color:            $gray-50 !default;
+$default-warning-item-light-color:      $gray-800 !default;
 
 // color scheme Info
 $default-info-color:                    $blue-gray-500 !default;
 $default-info-dark-color:               $blue-gray-700 !default;
 $default-info-light-color:              $blue-gray-300 !default;
-$default-info-item-color:               $white !default;
-$default-info-item-light-color:         $default-black !default;
+$default-info-item-color:               $gray-50 !default;
+$default-info-item-light-color:         $gray-800 !default;
 
 // color scheme
 $default-page-bg:                    	$default-page-color !default;
