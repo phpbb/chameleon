@@ -2,14 +2,14 @@
 	<ul class="c-crumbs t-crumbs" role="list">
 		<li class="c-crumbs-item t-crumbs-item" role="listitem">
 			<a class="c-crumbs-link t-crumbs-link" href="#" title="{{ lang.board_index }}">
-				{{ 'outline-home'|icon('inline', 'o-icon iconify c-crumbs-icon t-crumbs-icon')|safe }}
+				{{ 'outline-home'|icon('inline', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
 				<span class="c-crumbs-text t-crumbs-text">{{ lang.board_index }}</span>
 			</a>
 		</li>
 		{% for crumb in crumbs %}
 			<li class="c-crumbs-item t-crumbs-item" role="listitem">
 				<a class="c-crumbs-link t-crumbs-link" href="{{ crumb.link }}">
-					{{ 'chevron-right'|icon('inline', 'o-icon iconify c-crumbs-icon t-crumbs-icon')|safe }}
+					{{ 'chevron-right'|icon('inline', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
 					<span class="c-crumbs-text t-crumbs-text">{{ crumb.title }}</span>
 				</a>
 			</li>

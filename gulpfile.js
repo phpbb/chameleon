@@ -58,35 +58,44 @@ const manageEnvironment = function (environment) {
 		return date;
 	});
 
-	environment.addFilter('icon', (icon, type, classlist, hidden = false) => {
+	environment.addFilter('icon', (icon, type, classlist, hidden = false, title = '') => {
+		let source = '';
 		let html;
 		hidden = hidden ? hidden = 'true' : hidden = 'false';
-		let item = {};
-		for (item in db.icons) {
-			if (db.icons[item].name) {
-				item = db.icons[item];
-				if (item.name === icon) {
-					if (type === 'iconify' && item.lib !== 'mdi') {
-						type = 'inline';
-					}
+		type = type.toLowerCase();
+		if (type === 'svg') {
+			title = title === '' ? '' : 'alt="' + title + '" ';
+		} else {
+			title = title === '' ? '' : 'title="' + title + '" ';
+		}
+		// $icon = icon.isArray() ? $this->get_first_icon($icon) : $icon;
 
-					if (type === 'inline') {
+		if (icon === '')		{
+			return '';
+		}
+
+		if (type === 'iconify') {
+			source = icon.split(':');
+			source = source[0];
+			html = `<span class="iconify o-icon o-icon-src-${source} ${classlist}" ${title}data-icon="${icon}" data-inline="false" aria-hidden="${hidden}"></span>`;
+		} else if (type === 'inline') {
+			let item = {};
+			for (item in db.icons) {
+				if (db.icons[item].name) {
+					item = db.icons[item];
+					if (item.name === icon) {
 						html = `
 							<svg class="${classlist}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="${hidden}" role="img">
 								<path fill-rule="evenodd" d="${item.path}" />
 							</svg>`;
-					} else if (type === 'iconify') {
-						html = `<span class="iconify ${classlist}" data-icon="${item.lib}:${item.name}" data-inline="false" aria-hidden="${hidden}"></span>`;
-					} else if (type === 'iconify-api') {
-						html = `<img class="${classlist}" src="https://api.iconify.design/${item.lib}-${item.name}.svg" data-inline="false" aria-hidden="${hidden}"></span>`;
-					} else {
-						html = `<svg class="${classlist}" aria-hidden="${hidden}"><use xlink:href="#${item.name}"></use></svg>`;
 					}
-
-					return html;
 				}
 			}
+		} else if (type === 'svg') {
+			html = `<img class="o-icon o-icon-svg ${classlist}" ${title}src="../svg/${icon}.svg" aria-hidden="${hidden}">`;
 		}
+
+		return html;
 	});
 };
 
