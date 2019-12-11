@@ -13,6 +13,10 @@
 				"error",
 				"always"
 			],
+			"max-params": [
+				"error",
+				6
+			],
 			"block-spacing": "error",
 			"array-bracket-spacing": [
 				"error",
