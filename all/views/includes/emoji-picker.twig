@@ -2,7 +2,7 @@
 	<div class="c-emoji-picker-header">
 		<div class="c-emoji-picker-search-wrap">
 			<div class="c-emoji-picker-search">
-				<input class="c-emoji-picker-search-feild" type="text" spellcheck="false" placeholder=":innocent:" value="">
+				<input class="c-emoji-picker-search-feild" type="text" spellcheck="false" placeholder=":innocent:" value="" data-emoji-filter="input">
 				<a class="c-emoji-picker-search-feild-button" href="#recent" tabindex="0" role="button">
 					{{ 'mdi:search'|icon('iconify', 'o-icon c-emoji-picker-search-button-icon')|safe }}
 				</a>
@@ -63,9 +63,9 @@
 	<div class="c-emoji-picker-preview" data-emoji-preview="container">
 		{{ 'twemoji:grinning-face'|icon('iconify', 'o-icon c-emoji-picker-preview-icon')|safe }}<span class="c-emoji-picker-preview-icon">:grinning-face:</span>
 	</div>
-	<nav class="c-emoji-picker-footer">
+	<nav class="c-emoji-picker-footer" data-toggle="tabs">
 		{% for item in emojis %}
-			<a class="c-emoji-picker-tab" href="#{{ item.slug }}" title="{{ item.title }}" role="tab" aria-controls="{{ item.slug }}">
+	<a class="c-emoji-picker-tab{% if loop.first %} is-active{% endif %}" href="#{{ item.slug }}" title="{{ item.title }}" role="tab" aria-controls="{{ item.slug }}">
 				{{ item.icon|icon('iconify', 'o-icon c-emoji-picker-tab-icon')|safe }}
 			</a>
 		{% endfor %}

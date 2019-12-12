@@ -21,15 +21,18 @@ $emoji-picker-emoji-size: $default-height-dense !default;
 $emoji-picker-footer-height: $default-height !default;
 
 // Theme Variables
-$emoji-picker-bg-color: $white !default;
-$emoji-picker-search-bg-color: $default-action-bg !default;
+$emoji-picker-bg-color: $default-background-color !default;
+$emoji-picker-header-bg: $default-surface-color !default;
+$emoji-picker-tone-hover: $default-surface-hover-color !default;
+$emoji-picker-footer-bg: $default-surface-color !default;
+$emoji-picker-search-bg-color: $default-background-color !default;
 $emoji-picker-text-color: $gray-400 !default;
-$emoji-picker-preview-bg-color: $gray-100 !default;
-$emoji-picker-icon-color: $default-action-color !default;
+$emoji-picker-preview-bg-color: $default-surface-alt-color !default;
+$emoji-picker-icon-color: $default-surface-item-color !default;
 $emoji-picker-icon-hover-color: $default-action-color-hover !default;
 $emoji-picker-border-hover-color: $default-action-color-hover !default;
-$emoji-picker-search-icon-color: $default-action-color !default;
-$emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
+$emoji-picker-search-icon-color: $default-surface-item-color !default;
+$emoji-picker-divider-color: $default-border-color !default;
 
 //
 // @scss
@@ -39,13 +42,13 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 
 	&-header {
 		@include parent();
+		background-color: $emoji-picker-header-bg;
 		border-bottom: $emoji-picker-divider-height solid $emoji-picker-divider-color;
 		position: relative;
 		align-items: center;
 	}
 
 	&-search {
-
 		@include parent();
 		@include child();
 		background-color: $emoji-picker-search-bg-color;
@@ -64,6 +67,7 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 
 		&-feild {
 			@include child();
+			background-color: $emoji-picker-search-bg-color;
 			background-image: none;
 			width: auto;
 			height: $emoji-picker-emoji-size;
@@ -98,7 +102,7 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 
 				&:hover,
 				&:focus {
-					background-color: $default-action-bg-hover;
+					background-color: $emoji-picker-tone-hover;
 					outline: none;
 				}
 			}
@@ -199,6 +203,7 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 
 	&-footer {
 		@include parent();
+		background-color: $emoji-picker-footer-bg;
 		border-top: $emoji-picker-divider-height solid $emoji-picker-divider-color;
 		overflow-x: scroll;
 		height: $emoji-picker-footer-height;

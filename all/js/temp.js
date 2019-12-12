@@ -25,9 +25,9 @@ const $tooltip = '[data-tooltip="true"]';
 const $tooltipContainer = '[data-tooltip-container="true"]';
 const $toolbarToggle = '[data-toggle="toolbar"]';
 const $toolbar = '[data-container="toolbar"]';
-
 const $emojis = '[data-emoji-preview="emoji" ]';
 const $emojiPreview = '[data-emoji-preview="container"]';
+const $emojiFilter = '[data-emoji-filter="input"]';
 
 /**
  * Clears the active state of the provided elements
@@ -152,9 +152,9 @@ $($modalToggle).click(e => {
  */
 $($emojis).hover(e => {
 	const $this = e.target;
-	let $emoji = $($this).children();
+	const $emoji = $($this).children();
 	const emojiLastClass = $emoji.attr('class').split(' ').pop();
-	let $desc = $($this).attr('data-emoji-name')
+	let $desc = $($this).attr('data-emoji-name');
 	$desc = $($emojiPreview).children().last().text($desc);
 	const newClass = $($emojiPreview).children().first().attr('class').split(' ').pop();
 
@@ -162,6 +162,27 @@ $($emojis).hover(e => {
 	$emoji.clone().removeClass(emojiLastClass).addClass(newClass).appendTo($emojiPreview);
 	$($emojiPreview).append($desc);
 });
+
+//---------------------------------------------
+
+/* eslint-disable no-negated-condition */
+
+/**
+ * Replaces emoji preview with selected emoji
+ *
+ * @todo      Refactor to toggle function
+ * @constant  {object} query	value to filter
+ */
+$($emojiFilter).on('input', function () {
+	const query = this.value;
+	if (query !== '') {
+		$('[data-emoji-preview="emoji"]:not([data-emoji-name*="' + query + '"])').hide();
+	} else {
+		$($emojis).show();
+	}
+});
+
+/* eslint-enable no-negated-condition */
 
 //---------------------------------------------
 
