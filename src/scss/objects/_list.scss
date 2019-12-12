@@ -76,7 +76,6 @@ $list-icon-size: $default-icon-sm !default;
 		text-transform: inherit;
 
 		&-item {
-			line-height: unitless(20, 14);
 			padding-right: ($list-spacing * 2);
 
 			&-icon {

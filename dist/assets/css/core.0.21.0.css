@@ -2803,7 +2803,6 @@ textarea:focus + .o-form-floating-label {
 }
 
 .o-list-secondary-item {
-	line-height: 1.4285714286;
 	padding-right: 1rem;
 }
 
