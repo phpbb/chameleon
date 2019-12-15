@@ -26,10 +26,10 @@ $bar-opacity-12: $default-opacity-12 !default;
 
 
 // Theme Variables
-$bar-bg-color: $default-action-bg !default;
-$bar-search-bg-color: $default-background-color !default;
-$bar-bg-hover-color: $default-action-bg-hover !default;
-$bar-color: $default-action-color !default;
+$bar-bg-color: $default-surface-color !default;
+$bar-search-bg-color: $default-surface-color !default;
+$bar-bg-hover-color: $default-surface-hover-color !default;
+$bar-color: $default-surface-item-color !default;
 $bar-hover-color: $default-action-color-hover !default;
 $bar-user-title-color: $default-background-item-color !default;
 $bar-badge-bg-color: $default-error-color !default;

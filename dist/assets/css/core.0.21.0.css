@@ -3154,7 +3154,7 @@ textarea:focus + .o-form-floating-label {
 }
 
 .o-bar-search {
-	background-color: #212529;
+	background-color: #343a40;
 	opacity: 0;
 	position: absolute;
 	z-index: 999;
