@@ -58,6 +58,23 @@ const manageEnvironment = function (environment) {
 		return date;
 	});
 
+	environment.addFilter('numFormatter', number => {
+		const SI_SYMBOL = [ '', 'k', 'M', 'G', 'T', 'P', 'E', ];
+
+		// what tier? (determines SI symbol)
+		const tier = Math.log10(number) / 3 | 0;
+
+		if (tier === 0) {
+			return number;
+		}
+
+		const suffix = SI_SYMBOL[tier];
+		const scale = 10 ** (tier * 3);
+		const scaled = number / scale;
+
+		return scaled.toFixed(1) + suffix;
+	});
+
 	environment.addFilter('icon', (icon, type, classlist, hidden = false, title = '') => {
 		let source = '';
 		let html;

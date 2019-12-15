@@ -1,27 +1,54 @@
-<div class="o-bar c-toolbar">
-	<ul class="o-bar-left c-toolbar-left">
-		<li class="o-bar-item c-toolbar-item">
-			<a class="o-bar-action c-toolbar-action" href="#" data-tooltip="true" title="{{ lang.new_topic }}">
-				<span class="c-toolbar-action-text">{{ lang.new_topic }}</span>
+<div class="o-bar c-toolbar t-toolbar">
+	<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.new_topic }}">
+				<span class="c-toolbar-action-text t-toolbar-action-text">{{ lang.new_topic }}</span>
 				{{ 'plus'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 		</li>
-	</ul>
-	<ul class="o-bar-right c-toolbar-right">
-		<li class="o-bar-item c-toolbar-item">
-			<a class="o-bar-action c-toolbar-action" href="#" data-tooltip="true" title="{{ lang.next }}">
-				{{ 'chevron-right'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.mark }}">
+				{{ 'checkbox-marked-outline'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 		</li>
-		<li class="o-bar-item c-toolbar-item">
-			<a class="o-bar-action c-toolbar-action" href="#" data-tooltip="true" title="{{ lang.page_goto }}">
-				578
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+				{{ 'filter-variant'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in filters %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in sorts %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item u-hidden-sm-down">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.order }}">
+				{{ 'sort-ascending'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 		</li>
-		<li class="o-bar-item c-toolbar-item">
-			<a class="o-bar-action c-toolbar-action" href="#" data-tooltip="true" title="{{ lang.prev }}">
-				{{ 'chevron-left'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		<li class="o-bar-item c-toolbar-item t-toolbar-item u-hidden-md-up">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu"></div>
 		</li>
 	</ul>
 </div>

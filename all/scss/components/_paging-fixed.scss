@@ -1,0 +1,82 @@
+//------------------------------------------------------------------------------
+// @component: Paging Fixed
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$paging-spacing: $default-spacing !default;
+$paging-height: $default-height;
+
+// Theme Variables
+$paging-bg-color: $default-surface-color !default;
+$paging-bg-hover-color: $default-primary-color !default;
+$paging-color: $default-surface-item-color !default;
+$paging-hover-color: $white !default;
+
+
+//
+// @scss
+.c-paging-fixed {
+	@include shadow(24);
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	display: inline-flex;
+	margin: 0 auto;
+	padding: 0;
+
+	&-item {
+		line-height: 0; // [1]
+		flex-shrink: 1;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&-spacer:hover {
+		background-color: $paging-bg-color;
+	}
+
+	&-action {
+		@include type(subtitle1, $lh: 1.5, $fw: 700);
+		@include center($paging-height);
+		background-color: $paging-bg-color;
+		color: $paging-color;
+		position: relative;
+		overflow: hidden;
+		padding: ($paging-spacing * 2);
+		transform: translate3d(0, 0, 0);
+
+		&:hover,
+		&:focus {
+			background-color: $paging-bg-hover-color;
+			color: $paging-hover-color;
+		}
+
+		&-text + &-icon {
+			margin-left: $paging-spacing;
+		}
+
+		&-icon + &-text {
+			margin-right: $paging-spacing;
+		}
+	}
+
+	&-menu {
+		margin-top: $paging-height;
+	}
+
+	&-form {
+		margin: 0;
+	}
+
+	@media (min-width: $bp-sm) {
+		right: 48px;
+	}
+}

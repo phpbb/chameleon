@@ -1,0 +1,66 @@
+<ul class="c-paging-fixed">
+	<li class="c-paging-fixed-item">
+		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.top }}">
+			{{ 'mdi:chevron-double-up'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-fixed-item">
+		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.next }}">
+			{{ 'mdi:chevron-left'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-fixed-item">
+		<a class="c-paging-fixed-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.page_goto }} #...">
+			578
+		</a>
+		<div class="c-menu-container c-paging-fixed-menu" data-container="menu">
+			<ul class="c-menu t-menu">
+				<li class="c-menu-form">
+					<form class="c-paging-fixed-form" action="./search.php" method="get" id="search" role="search">
+						<input class="c-paging-fixed-form-input" name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang.page_goto }} #..." value="" placeholder="{{ lang.page_goto }} #...">
+					</form>
+				</li>
+				<li class="c-menu-divider"></li>
+				<li class="c-menu-toolbar">
+					<ul class="c-paging-fixed">
+						<li class="c-paging-fixed-item">
+							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 1">
+								1
+							</a>
+						</li>
+						<li class="c-paging-fixed-item">
+							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 2">
+								2
+							</a>
+						</li>
+						<li class="c-paging-fixed-item c-paging-fixed-spacer">
+							<span class="c-paging-fixed-action" href="#">
+								...
+							</span>
+						</li>
+						<li class="c-paging-fixed-item">
+							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 998">
+								998
+							</a>
+						</li>
+						<li class="c-paging-fixed-item">
+							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 999">
+								999
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="c-paging-fixed-item">
+		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.prev }}">
+			{{ 'mdi:chevron-right'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-fixed-item">
+		<a class="c-paging-fixed-action" href="#bottom" data-tooltip="true" title="{{ lang.down }}">
+			{{ 'mdi:chevron-double-down'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+</ul>

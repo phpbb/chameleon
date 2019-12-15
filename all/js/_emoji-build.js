@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+// scaps data from http://unicode.org/emoji/charts/full-emoji-list.html
+
 var _emojis = [];
 $('td.code').each(function() {
 	if ($(this).siblings('.name').first().text().includes('⊛') || parseInt($(this).first().prev().text()) === 484 || parseInt($(this).first().prev().text()) === 485 || parseInt($(this).first().prev().text()) === 486) {

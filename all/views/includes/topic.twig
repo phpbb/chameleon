@@ -20,7 +20,7 @@
 		</h4>
 		<span class="o-list-secondary c-topic-secondary t-topic-secondary">
 			{% if item.type != 'sub' %}
-				{% if item.approved == false %}
+				{% if item.unapproved %}
 					<a class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-unapproved t-topic-unapproved" href="#" data-tooltip="true" title="{{ lang.unapproved }}">
 						{{ 'alert-decagram-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					</a>
@@ -43,7 +43,7 @@
 				</span>
 				{% if item.pages %}
 					<a class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item" href="#" data-tooltip="true" title="{{ lang.page_goto }}">
-						{{ 'pages'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+						{{ 'mdi:checkbox-multiple-blank-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					</a>
 				{% endif %}
 			{% else %}
