@@ -31,7 +31,7 @@
 	},
 	"homepage": "https://github.com/phpbb/chameleon#readme",
 	"devDependencies": {
-		"acorn": "6.1.0",
+		"acorn": "5.7.4",
 		"del": "^2.2.0",
 		"gulp": "4.0.0",
 		"gulp-autoprefixer": "^3.1.0",
