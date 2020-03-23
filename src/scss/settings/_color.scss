@@ -278,7 +278,7 @@ $amber-900:                    darken($amber, 16%) !default;
 $amber-1000:                   darken($amber, 24%) !default;
 $amber-1100:                   darken($amber, 32%) !default;
 
-$orange:                       hsl(35, 100%, 55%) !default; // mdl hsl(35, 100%, 50%)
+$orange:                       #ff9f1a !default; // mdl hsl(35, 100%, 50%)
 $orange-50:                    lighten($orange, 32%) !default;
 $orange-75:                    lighten($orange, 24%) !default;
 $orange-100:                   lighten($orange, 16%) !default;
@@ -308,7 +308,7 @@ $deep-orange-900:              darken($deep-orange, 16%) !default;
 $deep-orange-1000:             darken($deep-orange, 24%) !default;
 $deep-orange-1100:             darken($deep-orange, 32%) !default;
 
-$brown:                        hsl(27, 50%, 45%) !default; // hsl(27, 50%, 45%)
+$brown:                        #ac6d39 !default; // hsl(27, 50%, 45%)
 $brown-50:                     lighten($brown, 32%) !default;
 $brown-75:                     lighten($brown, 24%) !default;
 $brown-100:                    lighten($brown, 16%) !default;
