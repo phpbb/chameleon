@@ -59,7 +59,8 @@ table {
 
 	td,
 	th {
-		text-align: right;
+		text-align: center;
+		vertical-align: middle;
 		border-top: $default-border-size solid $table-border-color;
 		border-bottom: $default-border-size solid $table-border-color;
 		box-sizing: border-box;
@@ -75,9 +76,8 @@ table {
 		}
 	}
 
-	td {
-		vertical-align: top;
-		padding-top: $table-cell-top;
+	th {
+		text-align: left;
 	}
 
 	th {

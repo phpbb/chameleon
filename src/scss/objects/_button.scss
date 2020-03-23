@@ -63,8 +63,13 @@ $btn-text-hover-color: $default-action-color-hover !default;
 	-webkit-appearence: none; // google material design
 	will-change: transform, opacity; // google material design
 
+	&-icon {
+		margin-right: $btn-spacing;
+	}
+
 	&-icon + &,
 	&-text + &-icon {
+		margin-right: 0;
 		margin-left: $btn-spacing;
 	}
 
