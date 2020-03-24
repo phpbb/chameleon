@@ -77,11 +77,8 @@ table {
 	}
 
 	th {
-		text-align: left;
-	}
-
-	th {
 		@include type(body1);
+		text-align: left;
 		vertical-align: bottom;
 		text-overflow: ellipsis;
 		background-color: $table-header-color;

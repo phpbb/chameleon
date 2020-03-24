@@ -965,51 +965,21 @@ textarea:disabled {
 	cursor: not-allowed;
 }
 
-[type='date']:focus:invalid, [type='date']:focus:invalid, [type='date']:focus:invalid,
-[type='datetime']:focus:invalid,
-[type='datetime']:focus:invalid,
+[type='date']:focus:invalid,
 [type='datetime']:focus:invalid,
 [type='datetime-local']:focus:invalid,
-[type='datetime-local']:focus:invalid,
-[type='datetime-local']:focus:invalid,
-[type='email']:focus:invalid,
-[type='email']:focus:invalid,
 [type='email']:focus:invalid,
 [type='month']:focus:invalid,
-[type='month']:focus:invalid,
-[type='month']:focus:invalid,
-[type='number']:focus:invalid,
-[type='number']:focus:invalid,
 [type='number']:focus:invalid,
 [type='password']:focus:invalid,
-[type='password']:focus:invalid,
-[type='password']:focus:invalid,
-[type='search']:focus:invalid,
-[type='search']:focus:invalid,
 [type='search']:focus:invalid,
 [type='tel']:focus:invalid,
-[type='tel']:focus:invalid,
-[type='tel']:focus:invalid,
-[type='text']:focus:invalid,
-[type='text']:focus:invalid,
 [type='text']:focus:invalid,
 [type='time']:focus:invalid,
-[type='time']:focus:invalid,
-[type='time']:focus:invalid,
-[type='url']:focus:invalid,
-[type='url']:focus:invalid,
 [type='url']:focus:invalid,
 [type='week']:focus:invalid,
-[type='week']:focus:invalid,
-[type='week']:focus:invalid,
-[type='color']:focus:invalid,
-[type='color']:focus:invalid,
 [type='color']:focus:invalid,
 select:focus:invalid,
-select:focus:invalid,
-select:focus:invalid,
-textarea:focus:invalid,
-textarea:focus:invalid,
 textarea:focus:invalid {
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, #f44336 3%);
 	border-color: #f44336;
@@ -1281,13 +1251,10 @@ table th:last-of-type {
 }
 
 table th {
-	text-align: left;
-}
-
-table th {
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.5rem;
+	text-align: left;
 	vertical-align: bottom;
 	letter-spacing: 0.03125em;
 	text-overflow: ellipsis;

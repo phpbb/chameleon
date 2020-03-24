@@ -72,7 +72,7 @@ gulp.task('css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.' + pkg.version,
@@ -85,7 +85,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('clean', () => {
-	del([ 'dist', ]);
+	del([ 'dist' ]);
 });
 
 gulp.task('minify', gulp.series('css', () => {
@@ -95,7 +95,7 @@ gulp.task('minify', gulp.series('css', () => {
 		.pipe(
 			postcss([
 				cssnano(),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.min',
@@ -144,7 +144,7 @@ gulp.task('docs:css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.' + pkg.version,
@@ -163,7 +163,7 @@ gulp.task('docs:minify', gulp.series('docs:css', () => {
 		.pipe(
 			postcss([
 				cssnano(),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.min',

@@ -108,8 +108,6 @@ textarea {
 		cursor: not-allowed;
 	}
 
-	&:focus:invalid,
-	&:focus:invalid,
 	&:focus:invalid {
 		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $input-invalid-border-color 3%);
 		border-color: $input-invalid-border-color;
