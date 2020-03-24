@@ -26,15 +26,6 @@ const build = {
 	docs: './docs/_media/',
 };
 
-const AUTOPREFIXER_BROWSERS = [
-	'edge >= 12',
-	'ff >= 38',
-	'chrome >= 35',
-	'safari >= 8',
-	'opera >= 35',
-	'ios >= 8',
-];
-
 gulp.task('css', () => {
 	const css = gulp
 		.src(build.scss + '*.scss')
@@ -48,7 +39,7 @@ gulp.task('css', () => {
 		}).on('error', sass.logError))
 		.pipe(
 			postcss([
-				autoprefixer(AUTOPREFIXER_BROWSERS),
+				autoprefixer(),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
