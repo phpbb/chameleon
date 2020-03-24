@@ -111,7 +111,7 @@ gulp.task('docs:css', () => {
 		}).on('error', sass.logError))
 		.pipe(
 			postcss([
-				autoprefixer(AUTOPREFIXER_BROWSERS),
+				autoprefixer(),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
