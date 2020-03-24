@@ -42,6 +42,17 @@
 			"jquery"
 		]
 	},
+	"browserslist": [
+		"> 1%",
+		"not ie 11",
+		"not samsung 10.1",
+		"not and_uc 12.12",
+		"edge >= 18",
+		"ff >= 72",
+		"chrome >= 79",
+		"safari >= 13",
+		"ios >= 12.4"
+	],
 	"scripts": {
 		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
 	},

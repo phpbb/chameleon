@@ -30,15 +30,6 @@ const build = {
 	html: './tests/views/',
 };
 
-const AUTOPREFIXER_BROWSERS = [
-	'edge >= 12',
-	'ff >= 38',
-	'chrome >= 35',
-	'safari >= 8',
-	'opera >= 35',
-	'ios >= 8',
-];
-
 if (theme) {
 	build.css = './' + theme + '/css';
 	build.twig = './' + theme + '/css';
@@ -128,7 +119,7 @@ gulp.task('css', () => {
 		}))
 		.pipe(
 			postcss([
-				autoprefixer(AUTOPREFIXER_BROWSERS),
+				autoprefixer(),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
