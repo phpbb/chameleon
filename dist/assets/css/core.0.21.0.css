@@ -1238,6 +1238,7 @@ table th {
 	letter-spacing: 0.03125em;
 	text-overflow: ellipsis;
 	background-color: #343a40;
+	border-left: 1px solid #495057;
 	padding-bottom: 0.5rem;
 }
 

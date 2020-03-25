@@ -82,6 +82,7 @@ table {
 		vertical-align: bottom;
 		text-overflow: ellipsis;
 		background-color: $table-header-color;
+		border-left: $default-border-size solid $table-border-color;
 		padding-bottom: $table-header-padding-bottom;
 	}
 	@media (min-width: $bp-md) {
