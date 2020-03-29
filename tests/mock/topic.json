@@ -74,7 +74,26 @@
 			"last_avatar":"https://avatars2.githubusercontent.com/u/10946388?v=4&amp;s=46",
 			"replies":9999,
 			"unapproved":false,
-			"views":4213
+			"views":4213,
+			"online": [
+				{
+					"id":8,
+					"name":"user8",
+					"profile":"./memberlist.php"
+				},
+				{
+					"id":9,
+					"name":"communOne",
+					"profile":"./memberlist.php",
+					"group":"#3F54C0"
+				},
+				{
+					"id":11,
+					"name":"siteMaintainer7",
+					"profile":"./memberlist.php",
+					"group":"#00BCD4"
+				}
+			]
 		},
 		{
 			"id":6,
