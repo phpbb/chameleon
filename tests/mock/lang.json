@@ -88,6 +88,8 @@
 		"down":"Down",
 		"top":"Top",
 		"collapse":"Collapse",
-		"expand":"Expand"
+		"expand":"Expand",
+		"mod_tools":"Quick Mod Tools",
+		"post_reply": "Post Reply"
 	}
 }
