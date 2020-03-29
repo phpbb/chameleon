@@ -1,0 +1,61 @@
+<div class="o-bar c-toolbar t-toolbar">
+	<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.post_reply }}">
+				<span class="c-toolbar-action-text t-toolbar-action-text">{{ lang.post_reply }}</span>
+				{{ 'reply'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.topic_tools }}">
+				{{ 'mdi:wrench-outline'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu"></div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.mod_tools }}">
+				{{ 'gavel'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu"></div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+				{{ 'filter-variant'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in filters %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+				{% for item in sorts %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item u-hidden-sm-down">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.order }}">
+				{{ 'sort-ascending'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+		</li>
+		<li class="o-bar-item c-toolbar-item t-toolbar-item u-hidden-md-up">
+			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu"></div>
+		</li>
+	</ul>
+</div>
