@@ -65,7 +65,7 @@ const manageEnvironment = function (environment) {
 		return scaled.toFixed(1) + suffix;
 	});
 
-	environment.addFilter('icon', (icon, type, classlist, hidden = false, title = '') => {
+	environment.addFilter('icon', (icon, type, classlist, viewbox = '0 0 24 24', hidden = false, title = '') => {
 		let source = '';
 		let html;
 		hidden = hidden ? hidden = 'true' : hidden = 'false';
@@ -92,7 +92,7 @@ const manageEnvironment = function (environment) {
 					item = db.icons[item];
 					if (item.name === icon) {
 						html = `
-							<svg class="${classlist}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="${hidden}" role="img">
+							<svg class="${classlist}" viewBox="${viewbox}" xmlns="http://www.w3.org/2000/svg" aria-hidden="${hidden}" role="img">
 								<path fill-rule="evenodd" d="${item.path}" />
 							</svg>`;
 					}
