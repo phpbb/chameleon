@@ -1,5 +1,5 @@
 {% macro whos_online(page, online, lang, stats, groups) %}
-<div class="c-tab-pane t-tab-pane" id="whos-online" role="tabpanel">
+<div class="c-tab-pane t-tab-pane{% if page == "topic" %} is-active{% endif %}" id="whos-online" role="tabpanel">
 	<div class="c-tab-pane-row t-tab-pane-row">
 		{% if page == "index" %}
 			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.registered_users }}{{ lang.colon }}</h4>
