@@ -1,6 +1,10 @@
 {# forum.twig #}
 {% extends "./layout/layout.twig" %}
 
+{% block title %}
+{{ forums[1].name }}
+{% endblock %}
+
 {% block main %}
 	<section class="o-container is-active">
 		<h2 class="t-forum-page-title" role="heading" aria-level="2">
