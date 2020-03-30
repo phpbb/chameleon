@@ -418,7 +418,7 @@ $($tooltip).each(function () {
 			tip.bottom = (tip.top + tip.height);
 			tip.left = ((link.left + (link.width / 2)) - (tip.width / 2));
 
-			if ((tip.bottom + 6) > $(window).height()) {
+			if (tip.top > $(window).height()) {
 				tip.top = (link.top - tip.height - 12);
 			}
 
