@@ -10,7 +10,7 @@ const $menuToggle = '[data-toggle="menu"]';
 const $menu = '[data-container="menu"]';
 const $searchToggle = '[data-toggle="search"]';
 const $search = '[data-container="search"]';
-const $profileToggle = '[data-toggle="profileToggle"]';
+const $profileToggle = '[data-toggle="profile"]';
 const $profile = '[data-container="profile"]';
 const $tabs = '[data-toggle="tabs"]';
 const $modalToggle = '[data-toggle="modal"]';
@@ -252,20 +252,6 @@ $($searchToggle).click(event_ => {
 //---------------------------------------------
 
 /**
- * Toggles the state for Profile
- *
- * @todo      Refactor to toggle function
- * @param     {object} event_      Event
- */
-$($profileToggle).click(event_ => {
-	event_.preventDefault();
-	event_.stopPropagation();
-	$($profile).toggleClass('is-active');
-});
-
-//---------------------------------------------
-
-/**
  * Toggles the state for Drawer
  *
  * @todo      Refactor to toggle function
@@ -325,16 +311,15 @@ $($tabs).children().each(function () {
  * Handle state for Notification Menu
  *
  * @constant  {object} $this
- * @constant  {object} $that
  * @constant  {number} $targetOffset
  */
 $($notificationToggle).click(event_ => {
-	const $that = $($notification);
+	const $this = $($notification);
 
 	event_.preventDefault();
 	event_.stopPropagation();
 
-	$that.toggleClass('is-active');
+	$this.toggleClass('is-active');
 });
 
 //---------------------------------------------
@@ -378,6 +363,29 @@ $($menuToggle).click(function (event_) {
 		$this.toggleClass('is-active', false);
 	});
 	$this.next($menu).toggleClass('is-active');
+});
+
+//---------------------------------------------
+
+/**
+ * Toggles the state for Profile
+ *
+ * @todo      Refactor to toggle function
+ * @param     {object} event_      Event
+ * @constant  {object} $this
+ * @constant  {object} $that
+ */
+$($profileToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
+	const $this = $(this);
+	console.log($this.attr('href'));
+	const $that = $($profile);
+	$that.each(() => {
+		$this.toggleClass('is-active', false);
+	});
+	console.log($this.next($profile).attr('href'));
+	$this.next($profile).toggleClass('is-active');
 });
 
 //---------------------------------------------
