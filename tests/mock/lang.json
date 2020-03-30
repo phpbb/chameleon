@@ -109,6 +109,14 @@
 		"topic_announce":"Announce Topic",
 		"topic_normal":"Normal Topic",
 		"topic_logs":"View Topic Logs",
+		"post_info": "Post Info",
+		"post_edit": "Post Edit",
+		"post_quote": "Post Quote",
+		"post_warn": "Post Warn",
+		"post_like": "Post Like",
+		"post_share": "Post Share",
+		"post_delete": "Post Delete",
+		"post_report": "Post Report",
 		"post_reply": "Post Reply"
 	}
 }
