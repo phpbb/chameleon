@@ -65,7 +65,7 @@ const manageEnvironment = function (environment) {
 		return scaled.toFixed(1) + suffix;
 	});
 
-	environment.addFilter('icon', (icon, type, classlist, viewbox = '0 0 24 24', hidden = false, title = '') => {
+	environment.addFilter('icon', (icon, type, classlist, hidden = false, title = '', viewbox = '0 0 24 24' ) => {
 		let source = '';
 		let html;
 		hidden = hidden ? hidden = 'true' : hidden = 'false';
