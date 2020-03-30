@@ -1,40 +1,52 @@
 {
 	"groups": [
 		{
-			"id":1,
+			"id":0,
 			"name":"Management",
 			"color":"#4F6772",
-			"url":"./memberlist.php"
+			"url":"./memberlist.php?mode=group&g=0"
+		},
+		{
+			"id":1,
+			"name":"Development",
+			"color":"#00BFA5",
+			"url":"./memberlist.php?mode=group&g=1"
 		},
 		{
 			"id":2,
-			"name":"Development",
-			"color":"#00BFA5",
-			"url":"./memberlist.php"
+			"name":"Customisations",
+			"color":"#B84FDB",
+			"url":"./memberlist.php?mode=group&g=2"
 		},
 		{
 			"id":3,
-			"name":"Customisations",
-			"color":"#B84FDB",
-			"url":"./memberlist.php"
+			"name":"Support",
+			"color":"#FFAB40",
+			"url":"./memberlist.php?mode=group&g=3"
 		},
 		{
 			"id":4,
-			"name":"Support",
-			"color":"#FFAB40",
-			"url":"./memberlist.php"
+			"name":"Community",
+			"color":"#3F54C0",
+			"url":"./memberlist.php?mode=group&g=4"
 		},
 		{
 			"id":5,
-			"name":"Community",
-			"color":"#3F54C0",
-			"url":"./memberlist.php"
+			"name":"Infrastructure",
+			"color":"#00BCD4",
+			"url":"./memberlist.php?mode=group&g=5"
 		},
 		{
 			"id":6,
-			"name":"Infrastructure",
-			"color":"#00BCD4",
-			"url":"./memberlist.php"
+			"name":"Consultant",
+			"color":"#B0BEC5",
+			"url":"./memberlist.php?mode=group&g=6"
+		},
+		{
+			"id":7,
+			"name":"Registered User",
+			"color":"#008dff",
+			"url":"./memberlist.php?mode=group&g=7"
 		}
 	]
 }
