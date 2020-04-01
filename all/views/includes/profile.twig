@@ -1,0 +1,97 @@
+<div class="c-profile" data-container="menu">
+	<a class="c-profile-action" href="" data-toggle="menu" data-placement="top" data-tooltip="true" title="{{ lang.contact_menu }}">
+		{{ 'mdi:comment-processing-outline'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+	</a>
+	<div class="c-menu-container t-menu-container" data-container="menu">
+		<ul class="c-menu c-profile-menu t-menu t-profile-menu">
+			<li class="c-menu-item t-menu-item">
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_pm }}">
+					{{ 'mdi:comment-account-outline'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_pm }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_email }}">
+					{{ 'mdi:at'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_email }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_skype }}">
+					{{ 'mdi:skype'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_skype }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_website }}">
+					{{ 'website'|icon('inline', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_website }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_facebook }}">
+					{{ 'mdi:facebook-box'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_facebook }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_twitter }}">
+					{{ 'mdi:twitter'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_twitter }}</span>
+				</a>
+				<a class="c-menu-link c-menu-action" href="#" data-tooltip="true" title="{{ lang.contact_youtube }}">
+					{{ 'mdi:youtube'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+					<span class="c-menu-text t-topic-text u-sr-only">{{ lang.contact_youtube }}</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<a class="c-profile-action c-profile-close" href="" data-tooltip="true" title="{{ lang.profile_close }}">
+		{{ 'mdi:close'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}
+	</a>
+	<div class="o-avatar-wrap">
+		<a class="o-avatar-rate-good" href="" data-tooltip="true" title="{{ lang.profile_rating_up }}">{{ 'mdi:thumbs-up-outline'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}</a>
+		<a class="" href="{{ item.url }}">
+			<img class="o-avatar" src="{{ item.avatar }}" alt="User Avatar">
+		</a>
+		<a class="o-avatar-rate-bad" href="" data-tooltip="true" title="{{ lang.profile_rating_down }}">{{ 'mdi:thumbs-down-outline'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}</a>
+		{% if item.online %}
+		<span class="o-avatar-online" data-tooltip="true" title="{{ lang.profile_online }}"></span>
+		{% endif %}
+	</div>
+	<h4 class="c-profile-meta">
+		<a class="c-profile-user" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.name }}</a>
+		{% if item.rank %}
+		<small class="c-profile-user-title">{{ item.rank }}</small>
+		{% endif %}
+		{% if item.badge %}
+		<a class="c-group-link" href="{{ item.group_url }}">
+			{{ item.badge|safe }}
+		</a>
+		{% endif %}
+	</h4>
+	<ul class="c-profile-stats">
+		<li class="c-profile-stat">
+			<h5 class="c-profile-stat-wrap">
+				{{ 'mdi:comment-text-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.profile_posts }}</span>
+				<small class="c-profile-stat-value">{{ item.posts }}</small>
+			</h5>
+		</li>
+		<li class="c-profile-stat">
+			<h5 class="c-profile-stat-wrap">
+				{{ 'mdi:clock-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.profile_joined }}</span>
+				<small class="c-profile-stat-value">
+					<time>{{ item.joined|moment("YYYYMMDD", true) }}</time>
+				</small>
+			</h5>
+		</li>
+		<li class="c-profile-stat">
+			<h5 class="c-profile-stat-wrap">
+				{{ 'mdi:thumb-up-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.rating }}</span>
+			<small class="c-profile-stat-value"><span class="{% if item.rating|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.rating }}</span></small>
+			</h5>
+		</li>
+		<li class="c-profile-stat">
+			<h5 class="c-profile-stat-wrap">
+				{{ 'ic:outline-room'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.profile_location }}</span>
+				<small class="c-profile-stat-value">{{ item.location }}</small>
+			</h5>
+		</li>
+		<li class="c-profile-stat">
+			<h5 class="c-profile-stat-wrap">
+				{{ 'mdi:heart-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.profile_likes }}</span>
+			<small class="c-profile-stat-value"><span class="{% if item.likes|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.likes }}</span></small>
+			</h5>
+		</li>
+	</ul>
+</div>
