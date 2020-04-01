@@ -1,5 +1,6 @@
 {# forum.twig #}
 {% extends "./layout/layout.twig" %}
+{% from './macros/online.twig' import whos_online %}
 
 {% block title %}
 {{ forums[1].name }}
@@ -163,7 +164,6 @@
 {% endblock %}
 
 {% block footer %}
-	{% from './macros/online.twig' import whos_online %}
 	<div class="o-container">
 		<div class="o-bar c-toolbar t-toolbar">
 			<ul class="o-bar-left c-toolbar-left t-toolbar-left">

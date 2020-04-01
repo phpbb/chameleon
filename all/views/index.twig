@@ -1,5 +1,6 @@
 {# index.twig #}
 {% extends "./layout/layout.twig" %}
+{% from './macros/online.twig' import whos_online %}
 
 {% block title %}
 Chameleon
@@ -12,7 +13,6 @@ Chameleon
 {% endblock %}
 
 {% block footer %}
-{% from './macros/online.twig' import whos_online %}
 <div class="o-container">
 	<div class="c-tab-card t-tab-card">
 		<div class="c-tab-bar-frame t-tab-bar-frame">
