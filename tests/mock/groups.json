@@ -47,6 +47,12 @@
 			"name":"Registered User",
 			"color":"#008dff",
 			"url":"./memberlist.php?mode=group&g=7"
+		},
+		{
+			"id":8,
+			"name":"Bots",
+			"color":"#9E8DA7",
+			"url":"./memberlist.php?mode=group&g=8"
 		}
 	]
 }
