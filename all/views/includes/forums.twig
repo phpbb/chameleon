@@ -82,6 +82,13 @@
 							</ul>
 							{% if item.type !== 'link' %}
 							<ul class="o-bar-right c-forum-footer-right">
+								{% if item.last_subject %}
+								<li class="o-bar-item c-forum-footer-item">
+									<a class="o-bar-action c-forum-footer-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
+										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
+									</a>
+								</li>
+								{% endif %}
 								{% if item.subs %}
 								<li class="o-bar-item c-forum-footer-item">
 									<a class="o-bar-action c-forum-footer-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
@@ -99,13 +106,6 @@
 											{% endfor %}
 										</ul>
 									</div>
-								</li>
-								{% endif %}
-								{% if item.last_subject %}
-								<li class="o-bar-item c-forum-footer-item">
-							<a class="o-bar-action c-forum-footer-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
-										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
-									</a>
 								</li>
 								{% endif %}
 							</ul>
