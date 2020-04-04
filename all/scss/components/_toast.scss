@@ -11,6 +11,7 @@
 // Layout Variables
 $toast-spacing: $default-spacing !default;
 $toast-height: $default-height !default;
+$toast-right: 48px !default;
 
 
 // Theme Variables
@@ -89,5 +90,9 @@ $toast-important-hover-color: $default-error-dark-color !default;
 		transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1) 0ms, opacity 0.25s cubic-bezier(0.4, 0, 1, 1) 0ms;
 		transform: translate(0, 0);
 		pointer-events: auto;
+	}
+
+	@media (min-width: $bp-sm) {
+		right: $toast-right;
 	}
 }
