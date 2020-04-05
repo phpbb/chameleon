@@ -481,7 +481,7 @@ select:focus::-ms-value {
 }
 
 .c-paging-action:hover, .c-paging-action:focus {
-	background-color: #008dff;
+	background-color: #495057;
 	color: #008dff;
 }
 
@@ -499,6 +499,17 @@ select:focus::-ms-value {
 
 .c-paging-form {
 	margin: 0;
+	padding: 0 0.5rem;
+}
+
+.c-paging-form-btn {
+	background-color: #008dff;
+	color: #ffffff;
+}
+
+.c-paging-form-btn:hover {
+	background-color: #0076d6;
+	color: #ffffff;
 }
 
 @media (min-width: 576px) {
@@ -550,7 +561,7 @@ select:focus::-ms-value {
 }
 
 .c-paging-fixed-action:hover, .c-paging-fixed-action:focus {
-	background-color: #008dff;
+	background-color: #495057;
 	color: #008dff;
 }
 

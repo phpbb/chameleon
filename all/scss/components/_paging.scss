@@ -15,9 +15,14 @@ $paging-right: 48px !default;
 
 // Theme Variables
 $paging-bg-color: $default-action-bg !default;
-$paging-bg-hover-color: $default-primary-color !default;
+$paging-bg-hover-color: $default-action-bg-hover !default;
 $paging-color: $default-action-color !default;
-$paging-hover-color: $default-primary-color !default;
+$paging-hover-color: $default-action-color-hover !default;
+
+$paging-btn-bg-color: $default-primary-color !default;
+$paging-btn-bg-hover-color: $default-primary-dark-color !default;
+$paging-btn-color: $white !default;
+$paging-btn-hover-color: $white !default;
 
 
 //
@@ -75,6 +80,17 @@ $paging-hover-color: $default-primary-color !default;
 
 	&-form {
 		margin: 0;
+		padding: 0 $paging-spacing;
+
+		&-btn {
+			background-color: $paging-btn-bg-color;
+			color: $paging-btn-color;
+
+			&:hover {
+				background-color: $paging-btn-bg-hover-color;
+				color: $paging-btn-hover-color;
+			}
+		}
 	}
 
 	@media (min-width: $bp-sm) {
