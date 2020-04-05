@@ -11,6 +11,7 @@
 // Layout Variables
 $form-spacing: $sp1 !default;
 $form-icon-size: $default-icon-sm !default;
+$form-floating-label-font-size: 11px !default;
 $form-select-icon-size: $default-height !default;
 $form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
@@ -18,6 +19,7 @@ $form-select-icon-offset: 20px !default;
 // Theme Variables
 $form-color: $default-action-color !default;
 $form-active-color: $default-action-color-hover !default;
+$form-active-error-color: $default-error-color !default;
 
 
 //
@@ -27,7 +29,9 @@ $form-active-color: $default-action-color-hover !default;
 	&-group {
 		@include vertical-rhythm();
 		position: relative;
-		display: block;
+		display: flex;
+		align-items: center;
+		padding: 0 ($form-spacing * 2);
 	}
 
 	&-row {
@@ -78,35 +82,52 @@ $form-active-color: $default-action-color-hover !default;
 		margin-left: ($form-spacing * 2);
 		will-change: transform;
 
-		textarea + & {
+		textarea ~ & {
 			top: ($form-spacing * 3);
 		}
 
-		input:focus + &,
-		textarea:focus + & {
-			font-size: 11px;
+		input:focus ~ &,
+		textarea:focus ~ & {
+			font-size: $form-floating-label-font-size;
 			color: $form-active-color;
-			transform: translateY(-($form-spacing * 2));
+			transform: translateY(-($form-spacing * 2.5));
+		}
+
+		input:focus:invalid ~ &,
+		textarea:focus:invalid ~ & {
+			color: $form-active-color;
 		}
 
 		.o-form-group-with-icon & {
-			margin-left: ($form-spacing * 6);
+			margin-left: ($form-spacing * 5.5);
 		}
 	}
 
-	&-helptext {
-		margin: ($form-spacing / 2) 0;
+	&-help-text {
+		margin: -($form-spacing * 5) 0 0 ($form-spacing * 2);
 	}
 
-	&-icon {
+	&-input {
+		padding-bottom: ($form-spacing * 2);
+	}
+
+	&-leading-icon {
 		color: $form-color;
 		position: absolute;
-		right: auto;
-		bottom: ($form-spacing * 2);
-		left: ($form-spacing * 2);
+		margin-top: ($form-spacing * 2);
+		margin-left: ($form-spacing * 2);
 
-		+ [type='text'] {
-			padding-left: ($form-icon-size + ($form-spacing * 4));
+		~ .o-form-input {
+			padding-left: ($form-icon-size + ($form-spacing * 3.5));
 		}
+	}
+
+	&-trailing-icon {
+		color: $form-color;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: ($form-spacing * 2);
+		margin-right: ($form-spacing * 4);
 	}
 }

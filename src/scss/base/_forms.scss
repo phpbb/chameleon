@@ -392,3 +392,19 @@ input[type='checkbox'] {
 :-ms-input-placeholder {
 	color: $input-placeholder-color;
 }
+
+
+//
+// Radio element styling
+//------------------------------------------------------------------------------
+//
+// Remove the annoying default browser styling when selecting an auto complete
+//
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+	-webkit-transition-delay: 9999s;
+}

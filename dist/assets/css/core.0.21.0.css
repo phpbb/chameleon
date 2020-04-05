@@ -1181,6 +1181,14 @@ input[type='checkbox']:focus:invalid:focus {
 	color: #868e96;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+	-webkit-transition-delay: 9999s;
+}
+
 table {
 	font-size: 1rem;
 	font-weight: 500;
@@ -1321,7 +1329,7 @@ pre code {
 	border-radius: 2px;
 	color: #f8f9fa;
 	display: inline-flex;
-	margin: 0 0 0 0.25rem 0.5rem;
+	margin: 0.25rem 0.5rem;
 	padding: 0.25rem 0.5rem;
 }
 
@@ -1331,8 +1339,10 @@ pre code {
 
 .o-form-group {
 	position: relative;
-	display: block;
+	display: flex;
+	align-items: center;
 	margin: 0 0 1.5rem;
+	padding: 0 1rem;
 }
 
 .o-form-row {
@@ -1382,35 +1392,52 @@ pre code {
 	will-change: transform;
 }
 
-textarea + .o-form-floating-label {
+textarea ~ .o-form-floating-label {
 	top: 24px;
 }
 
-input:focus + .o-form-floating-label,
-textarea:focus + .o-form-floating-label {
+input:focus ~ .o-form-floating-label,
+textarea:focus ~ .o-form-floating-label {
 	font-size: 0.6875rem;
 	color: #008dff;
-	transform: translateY(-16px);
+	transform: translateY(-20px);
+}
+
+input:focus:invalid ~ .o-form-floating-label,
+textarea:focus:invalid ~ .o-form-floating-label {
+	color: #008dff;
 }
 
 .o-form-group-with-icon .o-form-floating-label {
-	margin-left: 3rem;
+	margin-left: 2.75rem;
 }
 
-.o-form-helptext {
-	margin: 0.25rem 0;
+.o-form-help-text {
+	margin: -2.5rem 0 0 1rem;
 }
 
-.o-form-icon {
+.o-form-input {
+	padding-bottom: 1rem;
+}
+
+.o-form-leading-icon {
 	color: #868e96;
 	position: absolute;
-	right: auto;
-	bottom: 16px;
-	left: 16px;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
-.o-form-icon + [type='text'] {
-	padding-left: 3rem;
+.o-form-leading-icon ~ .o-form-input {
+	padding-left: 2.75rem;
+}
+
+.o-form-trailing-icon {
+	color: #868e96;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 1rem;
+	margin-right: 2rem;
 }
 
 .o-avatar {
