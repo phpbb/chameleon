@@ -23,7 +23,8 @@ $form-select-icon-offset: 20px !default;
 $form-color: $default-action-color !default;
 $form-bg-color: $default-action-bg !default;
 $form-active-color: $default-action-color-hover !default;
-$form-disabled-color: $default-disabled-color !default;
+$form-disabled-bg-color: $default-disabled-color !default;
+$form-disabled-color: $gray-400 !default;
 $form-disabled-active-color: $default-action-bg !default;
 $form-invalid-color: $default-error-light-color !default;
 $form-invalid-border-color: $default-error-color !default;
@@ -60,13 +61,21 @@ $form-invalid-border-color: $default-error-color !default;
 
 		&.is-disabled,
 		&.is-readonly {
-			background-color: $input-disabled-color;
-			border-bottom: $form-border-size solid $input-disabled-color;
-			color: $white;
+			background-color: $form-disabled-bg-color;
+			border-bottom: $form-border-size solid $form-disabled-bg-color;
+			color: $form-disabled-color;
 			opacity: 1;
 
-			.o-form-input::placeholder {
-				color: $white;
+			> [type='text']:disabled,
+			> [type='text']:disabled::placeholder,
+			> [type='text'][readonly],
+			> [type='text'][readonly]::placeholder {
+				color: $form-disabled-color;
+			}
+
+			&:focus-within {
+				background-size: 0% 0%;
+				border-color: $form-disabled-bg-color;
 			}
 
 		}

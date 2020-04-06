@@ -1336,16 +1336,27 @@ pre code {
 .o-form-group.is-disabled, .o-form-group.is-readonly {
 	background-color: #868e96;
 	border-bottom: 1px solid #868e96;
-	color: #ffffff;
+	color: #adb5bd;
 	opacity: 1;
 }
 
-.o-form-group.is-disabled .o-form-input::-ms-input-placeholder, .o-form-group.is-readonly .o-form-input::-ms-input-placeholder {
-	color: #ffffff;
+.o-form-group.is-disabled > [type='text']:disabled::-ms-input-placeholder, .o-form-group.is-disabled > [type='text'][readonly]::-ms-input-placeholder, .o-form-group.is-readonly > [type='text']:disabled::-ms-input-placeholder, .o-form-group.is-readonly > [type='text'][readonly]::-ms-input-placeholder {
+	color: #adb5bd;
 }
 
-.o-form-group.is-disabled .o-form-input::placeholder, .o-form-group.is-readonly .o-form-input::placeholder {
-	color: #ffffff;
+.o-form-group.is-disabled > [type='text']:disabled,
+.o-form-group.is-disabled > [type='text']:disabled::placeholder,
+.o-form-group.is-disabled > [type='text'][readonly],
+.o-form-group.is-disabled > [type='text'][readonly]::placeholder, .o-form-group.is-readonly > [type='text']:disabled,
+.o-form-group.is-readonly > [type='text']:disabled::placeholder,
+.o-form-group.is-readonly > [type='text'][readonly],
+.o-form-group.is-readonly > [type='text'][readonly]::placeholder {
+	color: #adb5bd;
+}
+
+.o-form-group.is-disabled:focus-within, .o-form-group.is-readonly:focus-within {
+	background-size: 0% 0%;
+	border-color: #868e96;
 }
 
 .o-form-group.is-disabled {
@@ -1385,9 +1396,9 @@ pre code {
 
 .o-form-lead {
 	display: inline-flex;
-	flex-basis: 24px;
 	flex-grow: 0;
 	flex-shrink: 1;
+	flex-basis: 24px;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1396,9 +1407,9 @@ pre code {
 
 .o-form-prefix {
 	display: inline-flex;
-	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
+	flex-basis: auto;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1410,9 +1421,9 @@ pre code {
 	background-color: transparent;
 	border: none;
 	display: inline-flex;
-	flex-basis: 1;
 	flex-grow: 1;
 	flex-shrink: 1;
+	flex-basis: 1;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1440,9 +1451,9 @@ pre code {
 	bottom: inherit;
 	left: 16px;
 	display: inline-flex;
-	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
+	flex-basis: auto;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1470,9 +1481,9 @@ textarea + .o-form-floating-label {
 
 .o-form-suffix {
 	display: inline-flex;
-	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
+	flex-basis: auto;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1481,9 +1492,9 @@ textarea + .o-form-floating-label {
 
 .o-form-trail {
 	display: inline-flex;
-	flex-basis: 24px;
 	flex-grow: 0;
 	flex-shrink: 1;
+	flex-basis: 24px;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
@@ -1709,8 +1720,8 @@ textarea + .o-form-floating-label {
 /* stylelint-enable value-no-vendor-prefix */
 .o-col {
 	position: relative;
-	flex-basis: 0;
 	flex-grow: 1;
+	flex-basis: 0;
 	width: 100%;
 	max-width: 100%;
 	min-height: 1px;
