@@ -34,55 +34,58 @@
 
 				<h2>Inline Form</h2>
 
-				<form class="o-form-inline">
-					<fieldset class="o-form-group">
-						<input class="o-form-input" type="text" id="email">
+				<form class="o-form">
+					<div class="o-form-group">
+						<input class="o-form-input" type="text" id="email" placeholder="Email">
 						<label class="o-form-floating-label" for="email">Email</label>
-					</fieldset>
-					<fieldset class="o-form-group">
-						<input type="password" id="password">
+					</div>
+
+					<div class="o-form-group">
+						<input class="o-form-input" type="password" id="password">
 						<label class="o-form-floating-label" for="password">Password</label>
-					</fieldset>
-					<fieldset class="o-form-group">
+					</div>
+
+					<fieldset>
 						<input type="checkbox" id="checkbox1">
 						<label for="checkbox1">Remember me</label>
 					</fieldset>
-					<fieldset class="o-form-group">
+
+					<fieldset>
 						<button type="submit" class="o-btn">Sign in</button>
 					</fieldset>
 				</form>
 
 				<h2>Stacked Form</h2>
 
-				<form>
+				<form class="o-form">
 					<fieldset>
 						<legend>Legend intro text block</legend>
 					</fieldset>
 
-					<fieldset class="o-form-group">
+					<div class="o-form-group">
 						<input class="o-form-input" type="text" id="first-name-field">
 						<label class="o-form-floating-label" for="first-name-field">First Name</label>
-					</fieldset>
+					</div>
 
-					<fieldset class="o-form-group">
-						<input type="password" id="password-field">
+					<div class="o-form-group">
+						<input class="o-form-input" type="password" id="password-field">
 						<label class="o-form-floating-label" for="password-field">Password</label>
-					</fieldset>
+					</div>
 
-					<fieldset class="o-form-group">
-						<input type="email" id="e-mail">
+					<div class="o-form-group">
+						<input class="o-form-input" type="email" id="e-mail">
 						<label class="o-form-floating-label" for="e-mail">E-Mail</label>
-					</fieldset>
-					<span class="o-tag o-form-help-text">This is helper text.</span>
+					</div>
+					<span class="o-form-help-text">This is helper text.</span>
 
-					<fieldset class="o-form-group">
+					<div class="o-form-group">
 						<input class="o-form-input" type="text" id="city" required>
 						<label class="o-form-floating-label" for="city">City</label>
-					</fieldset>
-					<span class="o-tag o-form-help-text">This is a required field.</span>
+					</div>
+					<span class="o-form-help-text">This is a required field.</span>
 
-					<fieldset class="o-form-group o-form-select">
-						<select>
+					<div class="o-form-group">
+						<select class="o-form-input o-form-select">
 							<option>Choose State...</option>
 							<option>AL</option>
 							<option>CA</option>
@@ -90,18 +93,18 @@
 							<option>MD</option>
 							<option>NY</option>
 						</select>
-					</fieldset>
+					</div>
 
-					<fieldset class="o-form-group">
+					<fieldset>
 						<input type="color" placeholder="Color">
 					</fieldset>
 
-					<fieldset class="o-form-group">
+					<fieldset>
 						<input type="checkbox" id="checkbox3">
 						<label for="checkbox3">I've read the terms and conditions</label>
 					</fieldset>
 
-					<fieldset class="o-form-group">
+					<fieldset>
 						<textarea rows="5" cols="40" id="message"></textarea>
 						<label class="o-form-floating-label" for="message">Message</label>
 					</fieldset>
@@ -114,108 +117,108 @@
 
 				<h2>Input Sizing</h2>
 
-				<form>
-					<div class="o-form-row">
-						<fieldset class="o-form-group">
+				<form class="o-form">
+					<div class="o-row">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="one-fifth">
 							<label class="o-form-floating-label" for="one-fifth">Fifth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="two-fifth">
 							<label class="o-form-floating-label" for="two-fifth">Fifth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="three-fifth">
 							<label class="o-form-floating-label" for="three-fifth">Fifth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="four-fifth">
 							<label class="o-form-floating-label" for="four-fifth">Fifth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="five-fifth">
 							<label class="o-form-floating-label" for="five-fifth">Fifth</label>
-						</fieldset>
+						</div>
 					</div>
 
-					<div class="o-form-row">
-						<fieldset class="o-form-group">
+					<div class="o-row">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="one-fourth">
 							<label class="o-form-floating-label" for="one-fourth">Fourth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="two-fourth">
 							<label class="o-form-floating-label" for="two-fourth">Fourth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="three-fourth">
 							<label class="o-form-floating-label" for="three-fourth">Fourth</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="four-fourth">
 							<label class="o-form-floating-label" for="four-fourth">Fourth</label>
-						</fieldset>
+						</div>
 					</div>
 
-					<div class="o-form-row">
-						<fieldset class="o-form-group">
+					<div class="o-row">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="one-third">
 							<label class="o-form-floating-label" for="one-third">Third</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="two-third">
 							<label class="o-form-floating-label" for="two-third">Third</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="three-third">
 							<label class="o-form-floating-label" for="three-third">Third</label>
-						</fieldset>
+						</div>
 					</div>
 
-					<div class="o-form-row">
-						<fieldset class="o-form-group">
+					<div class="o-row">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="one-half">
 							<label class="o-form-floating-label" for="one-half">Half</label>
-						</fieldset>
+						</div>
 
-						<fieldset class="o-form-group">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="two-half">
 							<label class="o-form-floating-label" for="two-half">Half</label>
-						</fieldset>
+						</div>
 					</div>
 				</form>
 
 				<h2>Invalid, Disabled, Readonly Inputs</h2>
 
-				<form>
-					<fieldset class="o-form-group">
-						<input type="email" id="email-required" required>
+				<form class="o-form">
+					<div class="o-form-group">
+						<input class="o-form-input" type="email" id="email-required" required>
 						<label class="o-form-floating-label" for="email-required">Requires an email</label>
-					</fieldset>
-					<fieldset class="o-form-group">
+					</div>
+					<div class="o-form-group is-disabled">
 						<input class="o-form-input" type="text" id="disabled" disabled>
 						<label class="o-form-floating-label" for="disabled">Disabled input</label>
-					</fieldset>
-					<fieldset class="o-form-group">
+					</div>
+					<div class="o-form-group is-readonly">
 						<input class="o-form-input" type="text" id="readonly" readonly>
 						<label class="o-form-floating-label" for="readonly">Readonly input</label>
-					</fieldset>
+					</div>
 				</form>
 
 				<h2>Selects</h2>
 
-				<form>
-					<fieldset class="o-form-group o-form-select">
-						<select>
+				<form class="o-form">
+					<fieldset>
+						<select class="o-form-select">
 							<option>Brazil</option>
 							<option>Canada</option>
 							<option>United States</option>
@@ -224,8 +227,8 @@
 						</select>
 					</fieldset>
 
-					<fieldset class="o-form-group">
-						<select multiple="multiple">
+					<fieldset>
+						<select class="o-form-select-mulptiple" multiple="multiple">
 							<option>Brazil</option>
 							<option>Canada</option>
 							<option>United States</option>
@@ -237,7 +240,7 @@
 
 				<h2>Checkboxes and Radios</h2>
 
-				<form>
+				<form class="o-form">
 					<fieldset>
 						<input type="checkbox" id="checkbox4">
 						<label for="checkbox4">Here's option one.</label>
@@ -256,7 +259,7 @@
 
 				<h2>Buttons</h2>
 
-				<form>
+				<form class="o-form">
 					<a class="o-btn">Anchor</a>
 					<button class="o-btn">Button</button>
 					<input type="submit" class="o-btn" value="Submit">
@@ -266,7 +269,7 @@
 
 				<h2>Buttons with Icons</h2>
 
-				<form>
+				<form class="o-form">
 					<a class="o-btn">
 						<span class="o-btn-text">Anchor</span>
 						<span class="iconify o-icon o-btn-icon" data-icon="mdi:plus-outline" data-inline="false"></span>
@@ -279,93 +282,95 @@
 
 				<h2>Edit Profile</h2>
 
-				<form action="">
+				<form class="o-form" action="">
 					<legend>Please note that this information may be viewable to other members. Be careful when including any personal details. Any fields marked with a * must be completed.</legend>
-					<div class="o-form-row">
-						<fieldset class="o-form-group">
+					<div class="o-row">
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="first-name">
 							<label class="o-form-floating-label" for="first-name">First Name</label>
-						</fieldset>
-						<fieldset class="o-form-group">
+						</div>
+						<div class="o-col o-form-group">
 							<input class="o-form-input" type="text" id="last-lame">
 							<label class="o-form-floating-label" for="last-name">Last Name</label>
-						</fieldset>
+						</div>
 					</div>
-					<label for="">Birthday</label>
-					<div class="o-form-row">
-						<fieldset class="o-form-group o-form-select">
-							<select>
-								<option>Day...</option>
-								<option>1</option>
-								<option>2</option>
-							</select>
-						</fieldset>
-						<fieldset class="o-form-group o-form-select">
-							<select>
-								<option>Month...</option>
-								<option>1</option>
-								<option>2</option>
-							</select>
-						</fieldset>
-						<fieldset class="o-form-group o-form-select">
-							<select>
-								<option>Year...</option>
-								<option>1</option>
-								<option>2</option>
-							</select>
-						</fieldset>
+					<div class="o-form-group has-icon">
+						<span class="o-form-lead">
+							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:calendar-blank" data-inline="false"></span>
+						</span>
+						<input class="o-form-input" type="date" id="birthday">
+						<label class="o-form-floating-label" for="birthday">Birthday</label>
 					</div>
-					<fieldset class="o-form-group">
+					<fieldset>
 						<textarea rows="5" cols="40" id="intrests"></textarea>
 						<label class="o-form-floating-label" for="intrests">Intrests</label>
 					</fieldset>
-					<fieldset class="o-form-group">
+					<fieldset>
 						<textarea rows="5" cols="40" id="ocupation"></textarea>
 						<label class="o-form-floating-label" for="ocupation">Ocupation</label>
 					</fieldset>
-					<div class="o-form-row">
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:github" data-inline="false"></span>
+					<div class="o-row">
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:github" data-inline="false"></span>
+							</span>
 							<input class="o-form-input" type="text" id="github-account">
 							<label class="o-form-floating-label" for="github-account">Github</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:web" data-inline="false"></span>
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:web" data-inline="false"></span>
+							</span>
+							<span class="o-form-prefix">https://</span>
 							<input class="o-form-input" type="text" id="website-url">
 							<label class="o-form-floating-label" for="website-url">Website</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:map-marker" data-inline="false"></span>
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:map-marker" data-inline="false"></span>
+							</span>
 							<input class="o-form-input" type="text" id="location-field">
 							<label class="o-form-floating-label" for="location-field">Location</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:twitter" data-inline="false"></span>
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:twitter" data-inline="false"></span>
+							</span>
+							<span class="o-form-prefix">@</span>
 							<input class="o-form-input" type="text" id="twitter-account">
 							<label class="o-form-floating-label" for="twitter-account">Twitter</label>
-						</fieldset>
+						</div>
 					</div>
-					<div class="o-form-row">
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:facebook" data-inline="false"></span>
+					<div class="o-row">
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:facebook" data-inline="false"></span>
+							</span>
 							<input class="o-form-input" type="text" id="facebook-account">
 							<label class="o-form-floating-label" for="facebook-account">Facebook</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:google" data-inline="false"></span>
-							<input class="o-form-input" type="text" id="google-account">
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:google" data-inline="false"></span>
+							</span>
+							<input class="o-form-input o-form-input-right" type="text" id="google-account">
 							<label class="o-form-floating-label" for="google-account">Google</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:skype" data-inline="false"></span>
+							<span class="o-form-suffix">@google.com</span>
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:skype" data-inline="false"></span>
+							</span>
 							<input class="o-form-input" type="text" id="skype-account">
 							<label class="o-form-floating-label" for="skype-account">Skype</label>
-						</fieldset>
-						<fieldset class="o-form-group o-form-group-with-icon">
-							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:youtube" data-inline="false"></span>
+						</div>
+						<div class="o-col o-form-group has-icon">
+							<span class="o-form-lead">
+								<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:youtube" data-inline="false"></span>
+							</span>
 							<input class="o-form-input" type="text" id="youtube-account">
 							<label class="o-form-floating-label" for="youtube-account">Youtube</label>
-						</fieldset>
+						</div>
 					</div>
 					<fieldset>
 						<button type="submit" class="o-btn">Submit</button>

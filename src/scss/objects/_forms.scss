@@ -10,16 +10,23 @@
 
 // Layout Variables
 $form-spacing: $sp1 !default;
+$form-height: $default-height !default;
+$form-border-size: $default-border-size !default;
+$form-border-radius: $default-border-radius !default;
+$form-icon-size: $default-icon-md !default;
 $form-icon-size: $default-icon-sm !default;
-$form-floating-label-font-size: 11px !default;
 $form-select-icon-size: $default-height !default;
 $form-select-icon-position: 12px !default;
 $form-select-icon-offset: 20px !default;
 
 // Theme Variables
 $form-color: $default-action-color !default;
+$form-bg-color: $default-action-bg !default;
 $form-active-color: $default-action-color-hover !default;
-$form-active-error-color: $default-error-color !default;
+$form-disabled-color: $default-disabled-color !default;
+$form-disabled-active-color: $default-action-bg !default;
+$form-invalid-color: $default-error-light-color !default;
+$form-invalid-border-color: $default-error-color !default;
 
 
 //
@@ -27,23 +34,51 @@ $form-active-error-color: $default-error-color !default;
 
 .o-form {
 	&-group {
-		@include vertical-rhythm();
-		position: relative;
-		display: flex;
-		align-items: center;
-		padding: 0 ($form-spacing * 2);
-	}
-
-	&-row {
 		@include parent();
-		flex-wrap: wrap;
-		margin-right: -($form-spacing * 3);
+		@include center($form-height);
+		background-color: $form-bg-color;
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $form-active-color 3%);
+		background-repeat: no-repeat;
+		background-size: 0 100%;
+		border-bottom: $form-border-size solid $form-bg-color;
+		border-radius: $form-border-radius;
+		color: $form-color;
+		position: relative;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin: 0 0 ($form-spacing * 4);
+		padding: 0 ($form-spacing * 2);
+		transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
-		@media (min-width: $bp-sm) {
-			.o-form-group {
-				flex-grow: 1;
-				margin-right: ($form-spacing * 3);
+		&:focus-within {
+			background-size: 100% 100%;
+			border-color: $form-active-color;
+			outline: none;
+			box-shadow: none;
+			transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+		}
+
+		&.is-disabled,
+		&.is-readonly {
+			background-color: $input-disabled-color;
+			border-bottom: $form-border-size solid $input-disabled-color;
+			color: $white;
+			opacity: 1;
+
+			.o-form-input::placeholder {
+				color: $white;
 			}
+
+		}
+
+		&.is-disabled {
+			cursor: not-allowed;
+		}
+
+		&.is-invalid {
+			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $form-invalid-border-color 3%);
+			border-color: $form-invalid-border-color;
+			color: $form-invalid-color;
 		}
 	}
 
@@ -75,59 +110,94 @@ $form-active-error-color: $default-error-color !default;
 		}
 	}
 
-	&-floating-label {
-		color: $form-color;
-		position: absolute;
-		bottom: 0;
-		margin-left: ($form-spacing * 2);
-		will-change: transform;
-
-		textarea ~ & {
-			top: ($form-spacing * 3);
-		}
-
-		input:focus ~ &,
-		textarea:focus ~ & {
-			font-size: $form-floating-label-font-size;
-			color: $form-active-color;
-			transform: translateY(-($form-spacing * 2.5));
-		}
-
-		input:focus:invalid ~ &,
-		textarea:focus:invalid ~ & {
-			color: $form-active-color;
-		}
-
-		.o-form-group-with-icon & {
-			margin-left: ($form-spacing * 5.5);
-		}
+	&-lead {
+		@include center($form-height);
+		flex-basis: $form-icon-size;
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: 0 ($form-spacing * 2) 0 0;
 	}
 
-	&-help-text {
-		margin: -($form-spacing * 5) 0 0 ($form-spacing * 2);
+	&-prefix {
+		@include center($form-height);
+		flex-basis: auto;
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: $form-spacing ($form-spacing / 2) 0 0;
 	}
 
 	&-input {
-		padding-bottom: ($form-spacing * 2);
-	}
+		@include center(56px);
+		line-height: 1;
+		background-color: transparent;
+		border: none;
+		flex-basis: 1;
+		flex-grow: 1;
+		flex-shrink: 1;
+		margin: 0 ($form-spacing * 2) 0 0;
+		padding: $form-spacing 0 0;
 
-	&-leading-icon {
-		color: $form-color;
-		position: absolute;
-		margin-top: ($form-spacing * 2);
-		margin-left: ($form-spacing * 2);
+		&:focus {
+			background-image: none;
+			border: none;
+		}
 
-		~ .o-form-input {
-			padding-left: ($form-icon-size + ($form-spacing * 3.5));
+		&-right {
+			text-align: right;
+			margin-right: 0;
 		}
 	}
 
-	&-trailing-icon {
-		color: $form-color;
+	&-floating-label {
+		@include type(caption, $lh: 0);
+		@include center($form-height);
+		color: $form-active-color;
 		position: absolute;
-		top: 0;
-		right: 0;
-		margin-top: ($form-spacing * 2);
-		margin-right: ($form-spacing * 4);
+		bottom: inherit;
+		left: ($form-spacing * 2);
+		flex-basis: auto;
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: -($form-spacing * 2) 0 0;
+		padding: 0;
+
+		.has-icon & {
+			left: ($form-spacing * 7);
+		}
+
+		.is-readonly &,
+		.is-disabled & {
+			color: $form-disabled-active-color;
+		}
+
+		textarea + & {
+			top: 0;
+			margin-top: -($form-spacing * 2);
+		}
+	}
+
+	&-suffix {
+		@include center($form-height);
+		flex-basis: auto;
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: $form-spacing ($form-spacing * 2) 0 0;
+	}
+
+	&-trail {
+		@include center($form-height);
+		flex-basis: $form-icon-size;
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: 0;
+	}
+
+	&-help-text {
+		@include type(caption, $lh: 1);
+		color: $form-color;
+		display: block;
+		width: auto;
+		margin-top: -($form-spacing * 4);
+		padding: $form-spacing $form-spacing ($form-spacing * 1.5);
 	}
 }
