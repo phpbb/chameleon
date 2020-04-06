@@ -61,8 +61,8 @@ $grid-gutter: $default-grid-gutter !default;
 .o-row {
 	@include parent();
 	flex-wrap: wrap;
-	margin-right: -$grid-gutter;
-	margin-left: -$grid-gutter;
+	// margin-right: -$grid-gutter;
+	// margin-left: -$grid-gutter;
 }
 /* stylelint-enable value-no-vendor-prefix */
 
@@ -73,6 +73,9 @@ $grid-gutter: $default-grid-gutter !default;
 	width: 100%;
 	max-width: 100%;
 	min-height: 1px;
-	padding-right: $grid-gutter;
-	padding-left: $grid-gutter;
+	margin-right: $grid-gutter;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
