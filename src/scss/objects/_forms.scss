@@ -170,6 +170,10 @@ $form-invalid-border-color: $default-error-color !default;
 			color: $form-disabled-active-color;
 		}
 
+		.is-invalid > & {
+			color: $form-invalid-color;
+		}
+
 		textarea + & {
 			top: 0;
 			margin-top: -($form-spacing * 2);
@@ -190,6 +194,10 @@ $form-invalid-border-color: $default-error-color !default;
 		flex-grow: 0;
 		flex-shrink: 1;
 		margin: 0;
+
+		.is-invalid > & {
+			color: $form-invalid-color;
+		}
 	}
 
 	&-help-text {
@@ -199,5 +207,9 @@ $form-invalid-border-color: $default-error-color !default;
 		width: auto;
 		margin-top: -($form-spacing * 4);
 		padding: $form-spacing $form-spacing ($form-spacing * 1.5);
+
+		.is-invalid ~ & {
+			color: $form-invalid-color;
+		}
 	}
 }

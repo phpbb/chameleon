@@ -200,10 +200,14 @@
 				<h2>Invalid, Disabled, Readonly Inputs</h2>
 
 				<form class="o-form">
-					<div class="o-form-group">
+					<div class="o-form-group is-invalid">
 						<input class="o-form-input" type="email" id="email-required" required>
 						<label class="o-form-floating-label" for="email-required">Requires an email</label>
+						<span class="o-form-trail">
+							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:alert" data-inline="false"></span>
+						</span>
 					</div>
+					<span class="o-form-help-text">This is arequired field</span>
 					<div class="o-form-group is-disabled">
 						<input class="o-form-input" type="text" id="disabled" disabled>
 						<label class="o-form-floating-label" for="disabled">Disabled input</label>
