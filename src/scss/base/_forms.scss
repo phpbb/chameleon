@@ -29,6 +29,10 @@ $input-invalid-color: $default-error-light-color !default;
 //
 // #scss
 
+fieldset {
+	position: relative;
+}
+
 legend {
 	@include vertical-rhythm();
 	line-height: unitless($default-line-height);
@@ -67,26 +71,15 @@ legend {
 select,
 textarea {
 	background-color: $input-background-color;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $input-hover-color 3%);
-	background-repeat: no-repeat;
-	background-size: 0 100%;
 	border: none;
-	border-bottom: solid ($input-border-width / 2) $input-border-color;
 	border-radius: $input-border-radius;
 	color: $input-color;
 	display: inline-block;
 	width: 100%;
 	height: $input-height;
 	padding: $sp2 $sp2 0;
-	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-
-	&:hover {
-		border-bottom-color: $input-border-hover-color;
-	}
 
 	&:focus {
-		background-size: 100% 100%;
-		border-color: $input-hover-color;
 		outline: none;
 		box-shadow: none;
 	}
@@ -107,18 +100,21 @@ textarea {
 	&:disabled {
 		cursor: not-allowed;
 	}
-
-	&:focus:invalid {
-		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $input-invalid-border-color 3%);
-		border-color: $input-invalid-border-color;
-		color: $input-invalid-color;
-	}
 }
 
 textarea {
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, $input-hover-color 1%);
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	border-bottom: solid ($input-border-width / 2) $input-border-color;
 	height: auto;
 	padding-top: $sp3;
+	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+	&:focus {
+		background-size: 100% 100%;
+		border-color: $input-hover-color;
+	}
 }
 
 //
