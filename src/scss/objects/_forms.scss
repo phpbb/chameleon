@@ -194,7 +194,7 @@ $form-invalid-border-color: $default-error-color !default;
 		flex-basis: auto;
 		flex-grow: 0;
 		flex-shrink: 1;
-		margin: $form-spacing ($form-spacing * 2) 0 0;
+		margin: $form-spacing 0 0 0;
 	}
 
 	&-trail {
@@ -202,7 +202,7 @@ $form-invalid-border-color: $default-error-color !default;
 		flex-basis: $form-icon-size;
 		flex-grow: 0;
 		flex-shrink: 1;
-		margin: 0;
+		margin: 0 0 0 ($form-spacing * 2);
 
 		.is-invalid > & {
 			color: $form-invalid-color;
