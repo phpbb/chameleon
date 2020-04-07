@@ -80,14 +80,6 @@ $o-disabled-color: lighten($o-color, 8%) !default;
 			@include background-triangle($o-color);
 		}
 	}
-
-	&-floating-label {
-		color: $o-color;
-	}
-
-	&-icon {
-		color: $o-color;
-	}
 }
 
 .o-modal {
