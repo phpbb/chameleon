@@ -136,7 +136,7 @@ $form-invalid-border-color: $default-error-color !default;
 	}
 
 	&-input {
-		@include center(56px);
+		@include center($form-height - $form-spacing);
 		line-height: 1;
 		background-color: transparent;
 		border: none;
