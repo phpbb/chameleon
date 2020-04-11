@@ -44,7 +44,11 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 	&-body {
 		@include parent(column);
 		min-height: $post-body-min-height;
-		padding: ($post-spacing * 4) ($post-spacing * 6);
+		padding: ($post-spacing * 4) ($post-spacing * 3);
+
+		@media (min-width: $bp-md) {
+			padding: ($post-spacing * 4) ($post-spacing * 6);
+		}
 	}
 
 	&-meta {
@@ -88,7 +92,6 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 .c-copy {
 	@include type(subtitle1);
-
 	@include child();
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;

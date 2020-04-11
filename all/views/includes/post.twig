@@ -19,7 +19,7 @@
 			<li class="o-bar-item">
 				<a class="o-bar-action c-post-meta-number" href="#">#{{ item.id }}</a>
 			</li>
-			<li class="o-bar-item">
+			<li class="o-bar-item u-hidden-md-down">
 				<span class="o-bar-info c-post-meta">
 					<time datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
 				</span>
@@ -56,6 +56,12 @@
 									<span class="c-menu-text t-topic-text">{{ lang.post_report }}</span>
 								</a>
 							</li>
+							<li class="o-bar-item c-post-action-item">
+								<a class="o-bar-action c-post-action" href="">
+									{{ 'mdi:share-variant'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
+									<span class="c-menu-text t-topic-text">{{ lang.post_share }}</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</li>
@@ -74,7 +80,7 @@
 						{{ 'fa-regular:flag'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
 					</a>
 				</li>
-				<li class="o-bar-item c-post-action-item">
+				<li class="o-bar-item c-post-action-item u-hidden-sm-down">
 					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_share }}">
 						{{ 'mdi:share-variant'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
 					</a>

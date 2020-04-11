@@ -38,7 +38,7 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 		z-index: 10;
 		flex-wrap: nowrap;
 		width: 100%;
-		margin-bottom: ($crumbs-spacing * 5);
+		margin: 0;
 		padding: 0 ($crumbs-spacing * 4);
 	}
 

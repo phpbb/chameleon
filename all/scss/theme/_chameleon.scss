@@ -11,7 +11,8 @@
 
 // Layout Variables
 
-// Variables
+
+// Theme Variables
 $theme-primary: #009ae4;
 $theme-link: rgba($white, 0.5);
 $theme-link-hover: $white;
@@ -52,6 +53,11 @@ $theme-dark-border: rgba($black, 0.5);
 
 	&-right {
 		background-color: $default-background-alt-color;
+		padding-right: ($default-spacing * 2);
+
+		@media (min-width: $bp-md) {
+			padding-right: ($default-spacing * 3);
+		}
 	}
 
 	&-action {
