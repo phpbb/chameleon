@@ -1,0 +1,68 @@
+{# topic.twig #}
+{% extends "./layout/layout.twig" %}
+{% from './macros/online.twig' import whos_online %}
+
+{% block title %}
+{{ topics[2].name }}
+{% endblock %}
+
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main %}
+	<section class="o-container">
+		<h2 class="t-topic-page-title" role="heading" aria-level="2">
+			{{ topics[2].icon|icon('inline', 'o-icon t-topic-page-title-icon')|safe }} <a class="t-topic-page-title-link" href="" title="{{ topics[2].name }}">{{ topics[2].name }}</a>
+		</h2>
+	</section>
+	<section class="o-container">
+		{% include './includes/topic-tools.twig' %}
+	</section>
+	<section class="o-container">
+		{% for item in posts %}
+			{% if loop.index <= 25 %}
+				{% include './includes/post.twig' %}
+			{% endif %}
+		{% endfor %}
+	</section>
+{% endblock %}
+
+{% block footer %}
+	<section class="o-container">
+		{% include './includes/topic-tools.twig' %}
+	</section>
+	<div class="o-container">
+		<div class="o-bar c-toolbar t-toolbar">
+			<ul class="o-bar-left c-toolbar-left t-toolbar-left">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					<a class="o-bar-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.return }}">
+						{{ 'chevron-left'|icon('inline', 'o-icon o-bar-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					</a>
+				</li>
+			</ul>
+			<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					{% include './includes/jumpto.twig' %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="o-container">
+		<div class="c-tab-card t-tab-card">
+			<div class="c-tab-bar-frame t-tab-bar-frame">
+				<nav class="c-tab-bar t-tab-bar" data-toggle="tabs">
+					<a class="c-tab t-tab is-active" href="#whos-online" role="tab" aria-controls="whos-online" aria-selected="true">
+						{{ 'access-point'|icon('inline', 'o-icon c-tab-icon t-tab-icon')|safe }}
+						<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
+					</a>
+				</nav>
+			</div>
+			{{ whos_online('topic', topics[2].online, lang) }}
+		</div>
+	</div>
+	{% include './includes/paging-fixed.twig' %}
+{% endblock %}
