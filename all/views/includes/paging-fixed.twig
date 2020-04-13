@@ -1,66 +1,56 @@
-<ul class="c-paging-fixed">
-	<li class="c-paging-fixed-item">
-		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.top }}">
-			{{ 'mdi:chevron-double-up'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+<ul class="c-paging">
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#page-top" data-tooltip="true" title="{{ lang.top }}">
+			{{ 'mdi:chevron-double-up'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
 		</a>
 	</li>
-	<li class="c-paging-fixed-item">
-		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.next }}">
-			{{ 'mdi:chevron-left'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" title="{{ lang.next }}">
+			{{ 'mdi:chevron-left'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
 		</a>
 	</li>
-	<li class="c-paging-fixed-item">
-		<a class="c-paging-fixed-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.page_goto }} #...">
-			578
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" data-toggle="jump" title="{{ lang.post_goto }} #...">
+			7535
 		</a>
-		<div class="c-menu-container c-paging-fixed-menu" data-container="menu">
-			<ul class="c-menu t-menu">
-				<li class="c-menu-form">
-					<form class="c-paging-fixed-form" action="./search.php" method="get" id="search" role="search">
-						<input class="c-paging-fixed-form-input" name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang.page_goto }} #..." value="" placeholder="{{ lang.page_goto }} #...">
-					</form>
-				</li>
-				<li class="c-menu-divider"></li>
-				<li class="c-menu-toolbar">
-					<ul class="c-paging-fixed">
-						<li class="c-paging-fixed-item">
-							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 1">
-								1
-							</a>
-						</li>
-						<li class="c-paging-fixed-item">
-							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 2">
-								2
-							</a>
-						</li>
-						<li class="c-paging-fixed-item c-paging-fixed-spacer">
-							<span class="c-paging-fixed-action" href="#">
-								...
-							</span>
-						</li>
-						<li class="c-paging-fixed-item">
-							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 998">
-								998
-							</a>
-						</li>
-						<li class="c-paging-fixed-item">
-							<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.page_goto }} 999">
-								999
-							</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+		<div class="c-jump-container" data-container="jump">
+			<form class="o-form c-jump-form" action="">
+				<header class="c-jump-header">
+					<h4 class="c-jump-header-title">{{ lang.jump_to }}</h4>
+				</header>
+				<section class="c-jump-section">
+					<div class="o-form-group c-jump-item has-icon">
+						<span class="o-form-lead">
+							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:file-outline" data-inline="false"></span>
+						</span>
+						<input class="o-form-input o-form-input-right" type="text" id="post" placeholder="7535">
+						<label class="o-form-floating-label" for="post">{{ lang.post_goto }}</label>
+						<span class="o-form-suffix">/{{ topics[2].replies }}</span>
+					</div>
+				</section>
+				<section class="c-jump-section">
+					<div class="o-form-group c-jump-item has-icon">
+						<span class="o-form-lead">
+							<span class="iconify o-icon o-form-leading-icon" data-icon="mdi:calendar-blank" data-inline="false"></span>
+						</span>
+						<input class="o-form-input" type="date" id="post-date">
+						<label class="o-form-floating-label" for="post-date">{{ lang.post_goto_date }}</label>
+					</div>
+				</section>
+				<footer class="c-jump-footer">
+					<button type="submit" class="o-btn c-jump-btn">{{ lang.submit }}</button>
+				</footer>
+			</form>
 		</div>
 	</li>
-	<li class="c-paging-fixed-item">
-		<a class="c-paging-fixed-action" href="#" data-tooltip="true" title="{{ lang.prev }}">
-			{{ 'mdi:chevron-right'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" title="{{ lang.prev }}">
+			{{ 'mdi:chevron-right'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
 		</a>
 	</li>
-	<li class="c-paging-fixed-item">
-		<a class="c-paging-fixed-action" href="#bottom" data-tooltip="true" title="{{ lang.down }}">
-			{{ 'mdi:chevron-double-down'|icon('iconify', 'o-icon c-paging-fixed-action-icon t-paging-fixed-action-icon')|safe }}
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#page-bottom" data-tooltip="true" title="{{ lang.down }}">
+			{{ 'mdi:chevron-double-down'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
 		</a>
 	</li>
 </ul>

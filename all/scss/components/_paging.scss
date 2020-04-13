@@ -19,11 +19,6 @@ $paging-bg-hover-color: $default-action-bg-hover !default;
 $paging-color: $default-action-color !default;
 $paging-hover-color: $default-action-color-hover !default;
 
-$paging-btn-bg-color: $default-primary-color !default;
-$paging-btn-bg-hover-color: $default-primary-dark-color !default;
-$paging-btn-color: $white !default;
-$paging-btn-hover-color: $white !default;
-
 
 //
 // @scss
@@ -71,25 +66,6 @@ $paging-btn-hover-color: $white !default;
 
 		&-icon + &-text {
 			margin-right: $paging-spacing;
-		}
-	}
-
-	&-menu {
-		margin-top: $paging-height;
-	}
-
-	&-form {
-		margin: 0;
-		padding: 0 $paging-spacing;
-
-		&-btn {
-			background-color: $paging-btn-bg-color;
-			color: $paging-btn-color;
-
-			&:hover {
-				background-color: $paging-btn-bg-hover-color;
-				color: $paging-btn-hover-color;
-			}
 		}
 	}
 

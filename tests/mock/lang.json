@@ -80,6 +80,8 @@
 		"forum_rules":"Forum Rules",
 		"topic_tools":"Topic Tools",
 		"page_goto":"Go To Page",
+		"post_goto":"Go To Post",
+		"post_goto_date":"Go To Post Date",
 		"jump_to":"Jump To",
 		"filter":"Filter",
 		"sort":"Sort",
@@ -135,6 +137,7 @@
 		"post_delete": "Post Delete",
 		"post_report": "Post Report",
 		"post_more_actions": "More Post Actions",
+		"submit": "submit",
 		"post_reply": "Post Reply"
 	}
 }

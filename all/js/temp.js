@@ -24,6 +24,8 @@ const $tooltip = '[data-tooltip="true"]';
 const $tooltipContainer = '[data-tooltip-container="true"]';
 const $toolbarToggle = '[data-toggle="toolbar"]';
 const $toolbar = '[data-container="toolbar"]';
+const $jumpToggle = '[data-toggle="jump"]';
+const $jump = '[data-container="jump"]';
 const $emojis = '[data-emoji-preview="emoji" ]';
 const $emojiPreview = '[data-emoji-preview="container"]';
 const $emojiFilter = '[data-emoji-filter="input"]';
@@ -238,6 +240,20 @@ $($toolbarToggle).click(event_ => {
 //---------------------------------------------
 
 /**
+ * Toggles the state for Jump Menu
+ *
+ * @todo      Refactor to toggle function
+ * @param     {object} event_      Event
+ */
+$($jumpToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
+	$($jump).toggleClass('is-active');
+});
+
+//---------------------------------------------
+
+/**
  * Toggles the state for Search
  *
  * @todo      Refactor to toggle function
@@ -446,11 +462,13 @@ $($tooltip).each(function () {
  *
  * @constant  {object} $this
  * @constant  {object} $that
- * @event     Hide#Drawer
  * @event     Hide#Search
- * @event     Hide#NotificationMenu
+ * @event     Hide#Drawer
  * @event     Hide#Menu
  * @event     Hide#Profile
+ * @event     Hide#Toolbar
+ * @event     Hide#Jump
+ * @event     Hide#NotificationMenu
  */
 $(document).on('touchstart mouseup', event_ => {
 	clearToggle(event_, $search, $searchToggle);
@@ -458,6 +476,7 @@ $(document).on('touchstart mouseup', event_ => {
 	clearToggle(event_, $menu, $menuToggle);
 	clearToggle(event_, $profile, $profileToggle);
 	clearToggle(event_, $toolbar, $toolbarToggle);
+	clearToggle(event_, $jump, $jumpToggle);
 	clearToggle(event_, $notification, $notificationToggle);
 	$($page).removeAttr('style');
 });

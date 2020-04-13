@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------------
+// @component: Jump
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$jump-spacing: $default-spacing !default;
+$jump-height: $default-height !default;
+$jump-border-radius: $default-border-radius !default;
+$jump-border-size: $default-border-size !default;
+$jump-border-style: solid;
+
+// Theme Variables
+$jump-bg-color: $gray-900 !default;
+$jump-heaader-bg-color: $blue-gray-1000 !default;
+$jump-border-color: $default-border-color !default;
+$jump-btn-color: $white !default;
+$jump-btn-hover-color: $white !default;
+$jump-btn-bg-color: $default-primary-color !default;
+$jump-btn-bg-hover-color: $default-primary-dark-color !default;
+$jump-color: $default-action-color !default;
+$jump-hover-color: $white !default;
+
+.c-jump {
+	&-container {
+		@include shadow(2);
+		background-color: $jump-bg-color;
+		border-radius: $jump-border-radius;
+		position: absolute;
+		z-index: 99;
+		right: 0;
+		bottom: ($default-height + $jump-spacing);
+		overflow: auto;
+		transition: all 0.2s ease;
+		transform: scale(0);
+		transform-origin: 50% 100%;
+
+		&.is-active {
+			transform: scale(1);
+		}
+	}
+
+	&-form {
+		margin: 0;
+	}
+
+	&-header {
+		@include shadow(2);
+		background-color: $jump-heaader-bg-color;
+		border-bottom: $jump-border-size $jump-border-style $jump-border-color;
+		margin: 0;
+		padding: ($jump-spacing  * 3);
+
+		&-title {
+			margin: 0;
+		}
+	}
+
+	&-section {
+		border-top: $jump-border-size $jump-border-style $jump-border-color;
+		border-bottom: $jump-border-size $jump-border-style $jump-border-color;
+		margin: 0;
+		padding: ($jump-spacing * 2);
+	}
+
+	&-footer {
+		border-top: $jump-border-size $jump-border-style $jump-border-color;
+		margin: 0;
+		padding: ($jump-spacing * 2);
+	}
+
+	&-btn {
+		background-color: $jump-btn-bg-color;
+		color: $jump-btn-color;
+
+		&:hover {
+			background-color: $jump-btn-bg-hover-color;
+			color: $jump-btn-hover-color;
+		}
+	}
+
+	&-item {
+		margin: 0;
+	}
+}
