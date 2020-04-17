@@ -236,10 +236,12 @@ $default-disabled-color: $gray-500 !default;
 $default-disabled-stroke: $gray-200 !default;
 
 // color scheme Grays
-$default-gray-light:                    $black-12 !default; // 12%
-$default-gray:                          $black-38 !default; // 38%
-$default-gray-dark:                     $black-54 !default; // 54%
-$default-black:                         $black-87 !default; // 87%
+$default-white:                         $gray-50 !default;
+$default-black:                         $gray-1100 !default;
+
+$default-gray:                          $gray-500 !default;
+$default-gray-dark:                     $gray-700 !default;
+$default-gray-light:                    $gray-300 !default;
 
 // color scheme Primary
 $default-primary-color:                 $blue-500 !default;
