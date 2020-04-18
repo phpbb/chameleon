@@ -6,8 +6,7 @@ node_js:
     - "13"
 matrix:
     fast_finish: true
-    allow_failures:
-        - "10"
+    allow_failures: 10
 cache:
     directories:
     - node_modules # NPM packages
