@@ -83,7 +83,7 @@
 		"stylelint-order": "^4.0.0",
 		"stylelint-scss": "^3.16.0",
 		"webpack": "^4.42.1",
-		"xo": "^0.28.0"
+		"xo": "0.29.1"
 	},
 	"dependencies": {}
 }
