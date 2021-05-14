@@ -72,7 +72,7 @@
 		"declaration-property-unit-disallowed-list": {
 			"line-height": ["rem", "px", "em", "%"]
 		},
-		"declaration-property-unit-allow-list": {
+		"declaration-property-unit-allowed-list": {
 			"height": ["px", "%", "vh"],
 			"width": ["px", "%", "vw"],
 			"font-size": ["px", "rem", "%", "vw"],
