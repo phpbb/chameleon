@@ -94,9 +94,9 @@ dt {
 // 1. Hang the opening quote of the blockquote.
 //
 blockquote {
-	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
+	/* stylelint-disable declaration-property-unit-disallowed-list, declaration-property-unit-allow-list */
 	text-indent: -0.41em; // [1]
-	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
+	/* stylelint-enable declaration-property-unit-disallowed-list, declaration-property-unit-allow-list */
 	@include vertical-rhythm();
 }
 
@@ -123,9 +123,9 @@ q {
 	// If an element opens with an inline quote, let’s hang that.
 	//
 	&:first-child {
-		/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
+		/* stylelint-disable declaration-property-unit-disallowed-list, declaration-property-unit-allow-list */
 		text-indent: -0.22em;
-		/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
+		/* stylelint-enable declaration-property-unit-disallowed-list, declaration-property-unit-allow-list */
 		display: inline-block;
 	}
 }
