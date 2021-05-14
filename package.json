@@ -1,6 +1,6 @@
 {
 	"name": "@hanakin/base-l",
-	"version": "0.21.0",
+	"version": "0.22.0",
 	"description": "A well structured top down base css framework meant for web apps",
 	"main": "gulpfile.js",
 	"xo": {
@@ -48,7 +48,7 @@
 		"ios >= 12.4"
 	],
 	"scripts": {
-		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
+		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss' && colorguard './**/*.css'"
 	},
 	"repository": {
 		"type": "git",
@@ -61,29 +61,30 @@
 	},
 	"homepage": "https://github.com/hanakin/base-l#readme",
 	"devDependencies": {
-		"acorn": "^7.1.1",
-		"autoprefixer": "^9.7.5",
+		"@oddbird/blend": "^0.2.2",
+		"autoprefixer": "^10.2.5",
 		"chromatic-sass": "^0.1.8",
-		"cssnano": "^4.1.10",
-		"del": "^5.1.0",
+		"colorguard": "^1.2.1",
+		"cssnano": "^5.0.2",
+		"del": "^6.0.0",
 		"gulp": "^4.0.2",
 		"gulp-data": "^1.3.1",
-		"gulp-postcss": "^8.0.0",
+		"gulp-postcss": "^9.0.0",
 		"gulp-rename": "^2.0.0",
-		"gulp-sass": "^4.0.2",
-		"gulp-sourcemaps": "^2.6.5",
-		"htmlhint": "^0.11.0",
-		"node-sass": "^4.13.1",
-		"postcss-discard-comments": "^4.0.2",
-		"postcss-pxtorem": "^5.1.1",
-		"postcss-rtl": "^1.7.3",
-		"postcss-scss": "^2.0.0",
-		"postcss-sorting": "^5.0.1",
-		"stylelint": "^13.2.1",
-		"stylelint-order": "^4.0.0",
-		"stylelint-scss": "^3.16.0",
-		"webpack": "^4.42.1",
-		"xo": "0.29.1"
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"htmlhint": "^0.14.2",
+		"postcss-lab-function": "^1.1.0",
+		"postcss-pxtorem": "^6.0.0",
+		"postcss-scss": "^3.0.5",
+		"postcss-sorting": "^6.0.0",
+		"sass": "^1.32.13",
+		"stylelint": "^13.13.1",
+		"stylelint-order": "^4.1.0",
+		"stylelint-scss": "^3.19.0",
+		"webpack": "^5.37.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"stylefmt": "^6.0.3"
+	}
 }

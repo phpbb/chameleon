@@ -9,12 +9,14 @@ const chromatic = require('chromatic-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
+const lab = require('postcss-lab-function');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
+const stylefmt = require('stylefmt');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 
 // Config
 const build = {
@@ -26,7 +28,7 @@ const build = {
 	docs: './docs/_media/',
 };
 
-gulp.task('css', () => {
+gulp.task('css', gulp.series(() => {
 	const css = gulp
 		.src(build.scss + '*.scss')
 		.pipe(sourcemaps.init())
@@ -63,6 +65,7 @@ gulp.task('css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
+				stylefmt(),
 			]),
 		)
 		.pipe(rename({
@@ -73,11 +76,11 @@ gulp.task('css', () => {
 		.pipe(gulp.dest(build.css));
 
 	return css;
-});
+}));
 
-gulp.task('clean', () => {
+gulp.task('clean', gulp.series(() => {
 	del([ 'dist' ]);
-});
+}));
 
 gulp.task('minify', gulp.series('css', () => {
 	const css = gulp
@@ -98,7 +101,7 @@ gulp.task('minify', gulp.series('css', () => {
 	return css;
 }));
 
-gulp.task('docs:css', () => {
+gulp.task('docs:css', gulp.series(() => {
 	const css = gulp
 		.src(build.docs + '*.scss')
 		.pipe(sourcemaps.init())
@@ -135,6 +138,7 @@ gulp.task('docs:css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
+				stylefmt(),
 			]),
 		)
 		.pipe(rename({
@@ -145,7 +149,7 @@ gulp.task('docs:css', () => {
 		.pipe(gulp.dest(build.docs));
 
 	return css;
-});
+}));
 
 gulp.task('docs:minify', gulp.series('docs:css', () => {
 	const css = gulp
@@ -166,10 +170,10 @@ gulp.task('docs:minify', gulp.series('docs:css', () => {
 	return css;
 }));
 
-gulp.task('watch', () => {
+gulp.task('watch', gulp.series(() => {
 	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
 	gulp.watch('docs/media/**/*.scss', gulp.series('docs:css', 'docs:minify'));
-});
+}));
 
 gulp.task('serve', gulp.series('watch'));
 gulp.task('test', gulp.series('css', 'minify'));
