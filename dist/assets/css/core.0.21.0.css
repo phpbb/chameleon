@@ -57,8 +57,8 @@ a:hover {
 }
 
 abbr[title] {
-	-webkit-text-decoration: underline dotted;
 	text-decoration: underline;
+	-webkit-text-decoration: underline dotted;
 	        text-decoration: underline dotted;
 	border-bottom: none;
 }
@@ -397,8 +397,8 @@ dt {
 blockquote {
 	/* stylelint-disable unit-blacklist, declaration-property-unit-whitelist */
 	text-indent: -0.41em;
-	margin: 0 0 1.5rem;
 	/* stylelint-enable unit-blacklist, declaration-property-unit-whitelist */
+	margin: 0 0 1.5rem;
 }
 
 q {
