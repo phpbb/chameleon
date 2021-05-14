@@ -12,7 +12,7 @@ const postcss = require('gulp-postcss');
 const lab = require('postcss-lab-function');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
-const stylefmt = require('stylefmt');
+// const stylefmt = require('stylefmt');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
@@ -65,7 +65,7 @@ gulp.task('css', gulp.series(() => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-				stylefmt(),
+				// stylefmt(),
 			]),
 		)
 		.pipe(rename({
@@ -138,7 +138,7 @@ gulp.task('docs:css', gulp.series(() => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-				stylefmt(),
+				// stylefmt(),
 			]),
 		)
 		.pipe(rename({
@@ -171,7 +171,7 @@ gulp.task('docs:minify', gulp.series('docs:css', () => {
 }));
 
 gulp.task('watch', gulp.series(() => {
-	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify'));
+	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify', 'docs:css', 'docs:minify'));
 	gulp.watch('docs/media/**/*.scss', gulp.series('docs:css', 'docs:minify'));
 }));
 
