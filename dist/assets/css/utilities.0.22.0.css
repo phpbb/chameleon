@@ -113,7 +113,7 @@ a[href^="javascript:"]:after {
 
 	pre,
 blockquote {
-		border: 1px solid #868e96;
+		border: 1px solid #7f878f;
 		page-break-inside: avoid;
 	}
 
