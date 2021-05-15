@@ -167,7 +167,7 @@ $defaults: (
 	$default-border-hover-color-inverted:      mode('border', 'light', 'color-hover');
 
 	// other
-	$default-page-color:                       $gray-1000;
+	$default-page-color:                       $gray-1400;
 } @else if $mode == light {
 	// color scheme Background
 	$default-background-color:                 mode('background', 'light', 'color');
