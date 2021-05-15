@@ -16,7 +16,7 @@ const torem = require('postcss-pxtorem');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
-sass.compiler = require('sass');
+sass.compiler = require('node-sass');
 
 // Config
 const build = {
