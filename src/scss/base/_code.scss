@@ -18,14 +18,14 @@ $kbd-nested-font-weight: 700 !default;
 
 // Theme Variables
 $code-font-family: $default-code-font;
-$code-bg: $default-surface-alt-color !default;
-$code-color: $light-green-400 !default;
+$code-bg: $default-surface-color !default;
+$code-color: $green !default;
 $kbd-bg: $default-background-color-inverted !default;
 $kbd-color: $default-background-item-color-inverted !default;
 $kbd-border-color: $default-border-color-inverted !default;
-$pre-bg: $gray-700 !default;
+$pre-bg: $gray-1200 !default;
 $pre-border-color: $default-border-color-inverted !default;
-$pre-color: $gray-75 !default;
+$pre-color: $gray-300 !default;
 
 //
 // #scss
