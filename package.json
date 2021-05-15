@@ -61,7 +61,6 @@
 	},
 	"homepage": "https://github.com/hanakin/base-l#readme",
 	"devDependencies": {
-		"@oddbird/blend": "^0.2.2",
 		"autoprefixer": "^10.2.5",
 		"chromatic-sass": "^0.1.8",
 		"colorguard": "^1.2.1",
@@ -74,17 +73,15 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"htmlhint": "^0.14.2",
+		"node-sass": "^4.14.1",
 		"postcss-lab-function": "^1.1.0",
 		"postcss-pxtorem": "^6.0.0",
 		"postcss-scss": "^3.0.5",
 		"postcss-sorting": "^6.0.0",
-		"sass": "^1.32.13",
+		"stylefmt": "^6.0.3",
 		"stylelint": "^13.13.1",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.19.0",
 		"webpack": "^5.37.0"
-	},
-	"dependencies": {
-		"stylefmt": "^6.0.3"
 	}
 }
