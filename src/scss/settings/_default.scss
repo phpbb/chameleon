@@ -237,53 +237,53 @@ $default-disabled-stroke: $gray-400 !default;
 
 // color scheme Grays
 $default-white:                         $gray-50 !default;
-$default-black:                         $gray-1100 !default;
+$default-black:                         $gray-1300 !default;
 
-$default-gray:                          $gray-500 !default;
-$default-gray-dark:                     $gray-700 !default;
-$default-gray-light:                    $gray-300 !default;
+$default-gray:                          $gray-700 !default;
+$default-gray-dark:                     $gray-900 !default;
+$default-gray-light:                    $gray-500 !default;
 
 // color scheme Primary
-$default-primary-color:                 $blue-500 !default;
-$default-primary-dark-color:            $blue-700 !default;
-$default-primary-light-color:           $blue-300 !default;
+$default-primary-color:                 $blue-700 !default;
+$default-primary-dark-color:            $blue-900 !default;
+$default-primary-light-color:           $blue-500 !default;
 $default-primary-item-color:            $gray-50 !default;
-$default-primary-item-light-color:      $gray-800 !default;
+$default-primary-item-light-color:      $gray-1300 !default;
 
 // color scheme Secondary
-$default-secondary-color:               $pink-500 !default;
-$default-secondary-dark-color:          $pink-700 !default;
-$default-secondary-light-color:         $pink-300 !default;
+$default-secondary-color:               $pink-700 !default;
+$default-secondary-dark-color:          $pink-900 !default;
+$default-secondary-light-color:         $pink-500 !default;
 $default-secondary-item-color:          $gray-50 !default;
-$default-secondary-item-light-color:    $gray-800 !default;
+$default-secondary-item-light-color:    $gray-1300 !default;
 
 // color shceme Error
-$default-error-color:                   $red-500 !default;
-$default-error-dark-color:              $red-700 !default;
-$default-error-light-color:             $red-300 !default;
+$default-error-color:                   $red-700 !default;
+$default-error-dark-color:              $red-900 !default;
+$default-error-light-color:             $red-500 !default;
 $default-error-item-color:              $gray-50 !default;
-$default-error-item-light-color:        $gray-800 !default;
+$default-error-item-light-color:        $gray-1300 !default;
 
 // color scheme Success
-$default-success-color:                 $green-500 !default;
-$default-success-dark-color:            $green-700 !default;
-$default-success-light-color:           $green-300 !default;
+$default-success-color:                 $green-700 !default;
+$default-success-dark-color:            $green-900 !default;
+$default-success-light-color:           $green-500 !default;
 $default-success-item-color:            $gray-50 !default;
-$default-success-item-light-color:      $gray-800 !default;
+$default-success-item-light-color:      $gray-1300 !default;
 
 // color scheme Warning
-$default-warning-color:                 $amber-500 !default;
-$default-warning-dark-color:            $amber-700 !default;
-$default-warning-light-color:           $amber-300 !default;
+$default-warning-color:                 $amber-700 !default;
+$default-warning-dark-color:            $amber-900 !default;
+$default-warning-light-color:           $amber-500 !default;
 $default-warning-item-color:            $gray-50 !default;
-$default-warning-item-light-color:      $gray-800 !default;
+$default-warning-item-light-color:      $gray-1300 !default;
 
 // color scheme Info
-$default-info-color:                    $blue-gray-500 !default;
-$default-info-dark-color:               $blue-gray-700 !default;
-$default-info-light-color:              $blue-gray-300 !default;
+$default-info-color:                    $blue-gray-700 !default;
+$default-info-dark-color:               $blue-gray-900 !default;
+$default-info-light-color:              $blue-gray-500 !default;
 $default-info-item-color:               $gray-50 !default;
-$default-info-item-light-color:         $gray-800 !default;
+$default-info-item-light-color:         $gray-1300 !default;
 
 // color scheme
 $default-page-bg:                    	$default-page-color !default;
