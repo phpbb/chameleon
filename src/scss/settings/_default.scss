@@ -99,40 +99,40 @@ $default-border-hover-color-inverted:      null;
 $defaults: (
 	'background': (
 		'dark': (
-			'color': $gray-900,
-			'alt': $gray-800,
+			'color': $gray-1300,
+			'alt': $gray-1100,
 			'item': $gray-50
 		),
 		'light': (
 			'color': $gray-50,
-			'alt': $gray-100,
-			'item':  $gray-800
+			'alt': $gray-400,
+			'item':  $gray-1300
 		)
 	),
 	'surface': (
 		'dark': (
-			'color': $gray-800,
-			'color-hover': $gray-700,
-			'alt': $gray-700,
-			'alt-hover': $gray-800,
-			'item': $gray-500
+			'color': $gray-1200,
+			'color-hover': $gray-1100,
+			'alt': $gray-1000,
+			'alt-hover': $gray-900,
+			'item': $gray-900
 		),
 		'light': (
 			'color': $gray-100,
-			'color-hover': $gray-300,
-			'alt': $gray-200,
-			'alt-hover': $gray-400,
-			'item': $gray-700
+			'color-hover': $gray-200,
+			'alt': $gray-300,
+			'alt-hover': $gray-200,
+			'item': $gray-400
 		)
 	),
 	'border': (
 		'dark': (
-			'color': $gray-700,
-			'color-hover': $gray-700
+			'color': $gray-1000,
+			'color-hover': $gray-1000
 		),
 		'light': (
-			'color': $gray-400,
-			'color-hover': $gray-400
+			'color': $gray-500,
+			'color-hover': $gray-500
 		)
 	)
 );
