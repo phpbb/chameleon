@@ -171,8 +171,7 @@ gulp.task('docs:minify', gulp.series('docs:css', () => {
 }));
 
 gulp.task('watch', gulp.series(() => {
-	gulp.watch('src/scss/**/*.scss', gulp.series('css', 'minify', 'docs:css', 'docs:minify'));
-	gulp.watch('docs/media/**/*.scss', gulp.series('docs:css', 'docs:minify'));
+	gulp.watch('**/*.scss', gulp.series('css', 'minify', 'docs:css', 'docs:minify'));
 }));
 
 gulp.task('serve', gulp.series('watch'));
