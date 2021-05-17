@@ -20,12 +20,13 @@ sass.compiler = require('node-sass');
 // Config
 const paths = {
 	scss: {
-		src: './src/scss/*/*.scss',
+		src: './src/scss/*.scss',
+		all: './src/scss/**/*.scss',
 		css: './dist/assets/css/*.' + pkg.version + '.css',
 		dest: './dist/assets/css',
 	},
 	css: {
-		src: './dist/assets/css*.' + pkg.version + '.css',
+		src: './dist/assets/css/*.' + pkg.version + '.css',
 		dest: './dist/assets/css',
 	},
 	docs: {
@@ -166,7 +167,7 @@ function docsMinify () {
 }
 
 function watch () {
-	gulp.watch(paths.scss.src, build);
+	gulp.watch(paths.scss.all, build);
 	gulp.watch(paths.docs.src, build);
 }
 
@@ -175,7 +176,7 @@ const build = gulp.series(scss, minify, docs, docsMinify);
 exports.clean = clean;
 exports.scss = scss;
 exports.minify = minify;
-exports.dcos = docs;
+exports.docs = docs;
 exports.docsMinify = docsMinify;
 exports.watch = watch;
 exports.build = build;
