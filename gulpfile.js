@@ -5,11 +5,10 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const chromatic = require('chromatic-sass');
 const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
-const lab = require('postcss-lab-function');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
 // const stylefmt = require('stylefmt');
@@ -19,18 +18,29 @@ const pkg = require('./package.json');
 sass.compiler = require('node-sass');
 
 // Config
-const build = {
-	css: './dist/assets/css',
-	html: './dist/views/',
-	twig: './src/views/',
-	data: './src/mock/',
-	scss: './src/scss/',
-	docs: './docs/_media/',
+const paths = {
+	scss: {
+		src: './src/scss/*/*.scss',
+		css: './dist/assets/css/*.' + pkg.version + '.css',
+		dest: './dist/assets/css',
+	},
+	css: {
+		src: './dist/assets/css*.' + pkg.version + '.css',
+		dest: './dist/assets/css',
+	},
+	docs: {
+		src: './docs/_media/*.scss',
+		css: './docs/_media/*.' + pkg.version + '.css',
+		dest: './docs/_media/',
+	},
 };
 
-gulp.task('css', gulp.series(() => {
-	const css = gulp
-		.src(build.scss + '*.scss')
+function clean () {
+	return del([ 'dist' ]);
+}
+
+function scss () {
+	return gulp.src(paths.scss.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			indentType: 'tab',
@@ -73,18 +83,11 @@ gulp.task('css', gulp.series(() => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.css));
+		.pipe(gulp.dest(paths.scss.dest));
+}
 
-	return css;
-}));
-
-gulp.task('clean', gulp.series(() => {
-	del([ 'dist' ]);
-}));
-
-gulp.task('minify', gulp.series('css', () => {
-	const css = gulp
-		.src(build.css + '/*.' + pkg.version + '.css')
+function minify () {
+	return gulp.src(paths.scss.css)
 		.pipe(sourcemaps.init())
 		.pipe(
 			postcss([
@@ -96,14 +99,11 @@ gulp.task('minify', gulp.series('css', () => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.css));
+		.pipe(gulp.dest(paths.scss.dest));
+}
 
-	return css;
-}));
-
-gulp.task('docs:css', gulp.series(() => {
-	const css = gulp
-		.src(build.docs + '*.scss')
+function docs () {
+	return gulp.src(paths.docs.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			indentType: 'tab',
@@ -146,14 +146,11 @@ gulp.task('docs:css', gulp.series(() => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.docs));
+		.pipe(gulp.dest(paths.docs.dest));
+}
 
-	return css;
-}));
-
-gulp.task('docs:minify', gulp.series('docs:css', () => {
-	const css = gulp
-		.src(build.docs + '/*.' + pkg.version + '.css')
+function docsMinify () {
+	return gulp.src(paths.docs.css)
 		.pipe(sourcemaps.init())
 		.pipe(
 			postcss([
@@ -165,16 +162,22 @@ gulp.task('docs:minify', gulp.series('docs:css', () => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.docs));
+		.pipe(gulp.dest(paths.docs.dest));
+}
 
-	return css;
-}));
+function watch() {
+	gulp.watch(paths.scss.src, build);
+	gulp.watch(paths.docs.src, build);
+}
 
-gulp.task('watch', gulp.series(() => {
-	gulp.watch('**/*.scss', gulp.series('css', 'minify', 'docs:css', 'docs:minify'));
-}));
+const build = gulp.series(scss, minify, docs, docsMinify);
 
-gulp.task('serve', gulp.series('watch'));
-gulp.task('test', gulp.series('css', 'minify'));
-gulp.task('docs', gulp.series('docs:css', 'docs:minify'));
-gulp.task('default', gulp.series('css', 'minify', 'watch'));
+exports.clean = clean;
+exports.scss = scss;
+exports.minify = minify;
+exports.dcos = docs;
+exports.docsMinify = docsMinify;
+exports.watch = watch;
+exports.build = build;
+
+exports.default = gulp.series(build, watch);

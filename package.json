@@ -26,7 +26,12 @@
 				"error",
 				"always"
 			],
-			"no-lonely-if": "off"
+			"no-lonely-if": "off",
+			"unicorn/prefer-module": "off",
+			"space-before-function-paren": [
+				"error",
+				"always"
+			]
 		},
 		"env": [
 			"es6",
@@ -82,6 +87,7 @@
 		"stylelint": "^13.13.1",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.19.0",
-		"webpack": "^5.37.0"
+		"webpack": "^5.37.0",
+		"xo": "^0.40.1"
 	}
 }
