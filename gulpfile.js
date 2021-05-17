@@ -165,7 +165,7 @@ function docsMinify () {
 		.pipe(gulp.dest(paths.docs.dest));
 }
 
-function watch() {
+function watch () {
 	gulp.watch(paths.scss.src, build);
 	gulp.watch(paths.docs.src, build);
 }
