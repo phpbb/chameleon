@@ -3,7 +3,8 @@
 	"version": "0.22.0",
 	"description": "A well structured top down base css framework meant for web apps",
 	"main": "gulpfile.js",
-	"xo": {
+	"eslintConfig": {
+		"extends": "xo",
 		"rules": {
 			"quotes": [
 				"error",
@@ -33,12 +34,12 @@
 				"always"
 			]
 		},
-		"env": [
-			"es6",
-			"browser",
-			"node",
-			"jquery"
-		]
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true,
+			"jquery": true
+		}
 	},
 	"browserslist": [
 		"> 1%",
