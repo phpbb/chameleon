@@ -3,7 +3,8 @@
 	"version": "0.2.0",
 	"description": "The default theme for phpbb",
 	"main": "gulpfile.js",
-	"xo": {
+	"eslintConfig": {
+		"extends": "xo",
 		"ignores": [
 			"all/js/_*.js"
 		],
@@ -33,14 +34,19 @@
 				"error",
 				"always"
 			],
-			"no-lonely-if": "off"
+			"no-lonely-if": "off",
+			"unicorn/prefer-module": "off",
+			"space-before-function-paren": [
+				"error",
+				"always"
+			]
 		},
-		"env": [
-			"es6",
-			"browser",
-			"node",
-			"jquery"
-		]
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true,
+			"jquery": true
+		}
 	},
 	"browserslist": [
 		"> 1%",
