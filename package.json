@@ -5,8 +5,7 @@
 	"main": "gulpfile.js",
 	"eslintConfig": {
 		"extends": "xo",
-		"ignorePatterns": [
-		],
+		"ignorePatterns": [],
 		"rules": {
 			"quotes": [
 				"error",
@@ -70,11 +69,13 @@
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^5.0.0",
 		"gulp-sourcemaps": "^3.0.0",
+		"gulp-stylefmt": "^1.1.0",
 		"moment": "^2.29.1",
 		"postcss-discard-comments": "^5.0.1",
 		"postcss-pxtorem": "^6.0.0",
 		"postcss-rtl": "^1.7.3",
 		"postcss-sorting": "^6.0.0",
+		"sass": "^1.35.2",
 		"stylelint": "^13.13.1",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.19.0"
