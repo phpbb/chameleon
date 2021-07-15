@@ -3,11 +3,37 @@
 	"version": "0.1.0",
 	"description": "The default theme for phpbb",
 	"main": "gulpfile.js",
-	"xo": {
+	"eslintConfig": {
+		"extends": "xo",
+		"ignorePatterns": [
+		],
 		"rules": {
 			"quotes": [
 				"error",
 				"single"
+			],
+			"comma-dangle": [
+				"error",
+				"always-multiline"
+			],
+			"block-spacing": "error",
+			"array-bracket-spacing": [
+				"error",
+				"always"
+			],
+			"multiline-comment-style": "off",
+			"computed-property-spacing": "off",
+			"space-in-parens": "off",
+			"capitalized-comments": "off",
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"no-lonely-if": "off",
+			"unicorn/prefer-module": "off",
+			"space-before-function-paren": [
+				"error",
+				"never"
 			]
 		},
 		"env": {
@@ -18,7 +44,7 @@
 		}
 	},
 	"scripts": {
-		"test": "xo && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
+		"test": "eslint all/js/ && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
 	},
 	"repository": {
 		"type": "git",
@@ -32,6 +58,8 @@
 	"homepage": "https://github.com/phpbb/chameleon#readme",
 	"devDependencies": {
 		"del": "^6.0.0",
+		"eslint": "^7.30.0",
+		"eslint-config-xo": "^0.37.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-cssnano": "^2.1.3",
@@ -49,7 +77,6 @@
 		"postcss-sorting": "^6.0.0",
 		"stylelint": "^13.13.1",
 		"stylelint-order": "^4.1.0",
-		"stylelint-scss": "^3.19.0",
-		"xo": "^0.41.0"
+		"stylelint-scss": "^3.19.0"
 	}
 }
