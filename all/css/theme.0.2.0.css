@@ -893,7 +893,9 @@ select:focus::-ms-value {
 
 .c-copy > p, .c-copy-list, .c-copy-blockquote {
 	font-size: calc(18px + 0.25vw);
+	/* stylelint-disable declaration-property-unit-blacklist */
 	line-height: calc(34px + 0.2vw);
+	/* stylelint-enable declaration-property-unit-blacklist */
 	word-wrap: break-word;
 	word-break: break-word;
 	margin-bottom: 32px;

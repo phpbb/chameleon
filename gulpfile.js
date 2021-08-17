@@ -58,7 +58,7 @@ const manageEnvironment = function (environment) {
 	});
 
 	environment.addFilter('numFormatter', number => {
-		const SI_SYMBOL = [ '', 'k', 'M', 'G', 'T', 'P', 'E', ];
+		const SI_SYMBOL = [ '', 'k', 'M', 'G', 'T', 'P', 'E' ];
 
 		// what tier? (determines SI symbol)
 		const tier = Math.log10(number) / 3 | 0;
@@ -155,7 +155,7 @@ gulp.task('css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.' + pkg.version,
@@ -168,8 +168,8 @@ gulp.task('css', () => {
 });
 
 gulp.task('clean', () => {
-	del([ build.css, ]);
-	del([ build.html, ]);
+	del([ build.css ]);
+	del([ build.html ]);
 });
 
 gulp.task('minify', gulp.series('css', () => {
@@ -179,7 +179,7 @@ gulp.task('minify', gulp.series('css', () => {
 		.pipe(
 			postcss([
 				cssnano(),
-			])
+			]),
 		)
 		.pipe(rename({
 			suffix: '.min',
@@ -208,7 +208,7 @@ gulp.task('twig', gulp.series('data', () => {
 		.src(build.twig + '*.twig')
 		.pipe(nunjucks({
 			data: db,
-			path: [ build.twig, ],
+			path: [ build.twig ],
 			manageEnv: manageEnvironment,
 			autoescape: false,
 		}))

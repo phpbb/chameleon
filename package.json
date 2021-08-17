@@ -4,6 +4,9 @@
 	"description": "The default theme for phpbb",
 	"main": "gulpfile.js",
 	"xo": {
+		"ignores": [
+			"all/js/_*.js"
+		],
 		"rules": {
 			"quotes": [
 				"error",
@@ -11,7 +14,7 @@
 			],
 			"comma-dangle": [
 				"error",
-				"always"
+				"always-multiline"
 			],
 			"max-params": [
 				"error",
@@ -22,10 +25,7 @@
 				"error",
 				"always"
 			],
-			"multiline-comment-style": [
-				"error",
-				"starred-block"
-			],
+			"multiline-comment-style": "off",
 			"computed-property-spacing": "off",
 			"space-in-parens": "off",
 			"capitalized-comments": "off",
@@ -56,7 +56,8 @@
 	},
 	"homepage": "https://github.com/phpbb/chameleon#readme",
 	"devDependencies": {
-		"autoprefixer": "9.7.4",
+		"acorn": "7.1.1",
+		"autoprefixer": "9.7.5",
 		"compression": "1.7.4",
 		"cssnano": "4.1.10",
 		"del": "5.1.0",
@@ -80,6 +81,7 @@
 		"stylelint": "13.2.1",
 		"stylelint-order": "4.0.0",
 		"stylelint-scss": "3.16.0",
+		"webpack": "4.42.1",
 		"xo": "0.28.0"
 	}
 }

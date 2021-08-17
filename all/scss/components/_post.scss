@@ -83,7 +83,9 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 	&-list,
 	&-blockquote {
 		font-size: calc(18px + 0.25vw);
+		/* stylelint-disable declaration-property-unit-blacklist */
 		line-height: calc(34px + 0.2vw);
+		/* stylelint-enable declaration-property-unit-blacklist */
 		word-wrap: break-word;
 		word-break: break-word;
 		margin-bottom: ($post-spacing * 4);
@@ -101,8 +103,8 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		}
 
 		&-header {
-			background-color: $post-header-bg-color;
 			@include child();
+			background-color: $post-header-bg-color;
 			border-bottom: $post-border-size $post-border-style $post-border-color;
 			padding: $post-spacing ($post-spacing * 2);
 		}

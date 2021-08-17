@@ -1,4 +1,3 @@
-/* eslint-disable multiline-comment-style */
 
 const $drawerToggle = '[data-toggle="drawer"]';
 const $drawer = '[data-container="drawer"]';
@@ -32,20 +31,20 @@ const $emojiFilter = '[data-emoji-filter="input"]';
 /**
  * Clears the active state of the provided elements
  *
- * @param     {object} e       Event
+ * @param     {object} event_       Event
  * @param     {object} $el     The element with the state
  * @param     {object} $toggle The element that contorls the state
  */
-const clearToggle = function (e, $el, $toggle) {
-	const { target, } = e;
+const clearToggle = function (event_, $element, $toggle) {
+	const { target } = event_;
 
 	if (
-		!$(target).is($el) &&
-		!$(target).parents().is($el) &&
+		!$(target).is($element) &&
+		!$(target).parents().is($element) &&
 		!$(target).is($toggle) &&
 		!$(target).parents().is($toggle)
 	) {
-		$($el).each(function () {
+		$($element).each(function () {
 			$(this).toggleClass('is-active', false);
 		});
 	}
@@ -95,12 +94,12 @@ const edgeDetect = ($target, x, y) => {
  * Clears the active state of the provided tabs
  *
  * @todo      Look at refactoring into clearToggle
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @param     {object} $links The elements with the state
  * @constant  {object} $this
  * @constant  {object} $that
  */
-const clearTabs = function (e, $links) {
+const clearTabs = function (event_, $links) {
 	$($links).children().each(function () {
 		const $this = $(this);
 		const $that = $this.attr('href');
@@ -120,9 +119,9 @@ const clearTabs = function (e, $links) {
  */
 
 // const isActive = function (target) {
-// 	this.click(e => {
-// 		e.preventDefault();
-// 		e.stopPropagation();
+// 	this.click(event_ => {
+// 		event_.preventDefault();
+// 		event_.stopPropagation();
 // 		target.toggleClass('is-active');
 // 	});
 // };
@@ -131,11 +130,11 @@ const clearTabs = function (e, $links) {
  * Toggles the state for Modals
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  */
-$($modalToggle).click(e => {
-	e.preventDefault();
-	e.stopPropagation();
+$($modalToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
 	$($modal).toggleClass('is-active');
 });
 
@@ -145,13 +144,13 @@ $($modalToggle).click(e => {
  * Replaces emoji preview with selected emoji
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      	Event
+ * @param     {object} event_      	Event
  * @constant  {object} $this
  * @constant  {object} $emoji	stored emoji html
  * @constant  {object} $desc	stored updated emoji shortnames
  */
-$($emojis).hover(e => {
-	const $this = e.target;
+$($emojis).hover(event_ => {
+	const $this = event_.target;
 	const $emoji = $($this).children();
 	const emojiLastClass = $emoji.attr('class').split(' ').pop();
 	let $desc = $($this).attr('data-emoji-name');
@@ -190,16 +189,16 @@ $($emojiFilter).on('input', function () {
  * Toggles the state for Collapse
  *
  * @todo Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($collapseToggle).click(function (e) {
+$($collapseToggle).click(function (event_) {
 	const $this = $(this);
 	const $that = $this.parents($collapseToggleParent).next($collapse);
 	const tip = $this.attr('data-toggle-tooltip');
 
-	e.preventDefault();
-	e.stopPropagation();
+	event_.preventDefault();
+	event_.stopPropagation();
 
 	$that.toggleClass('is-collapsed');
 	$this.attr('data-toggle-tooltip', $this.attr('title'));
@@ -214,11 +213,11 @@ $($collapseToggle).click(function (e) {
  * Toggles the state for Toasts
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  */
-$($toastToggle).click(e => {
-	e.preventDefault();
-	e.stopPropagation();
+$($toastToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
 	$($toast).toggleClass('is-active');
 });
 
@@ -228,11 +227,11 @@ $($toastToggle).click(e => {
  * Toggles the state for Editor Toolbar
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  */
-$($toolbarToggle).click(e => {
-	e.preventDefault();
-	e.stopPropagation();
+$($toolbarToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
 	$($toolbar).toggleClass('is-active');
 });
 
@@ -242,11 +241,11 @@ $($toolbarToggle).click(e => {
  * Toggles the state for Search
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  */
-$($searchToggle).click(e => {
-	e.preventDefault();
-	e.stopPropagation();
+$($searchToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
 	$($search).toggleClass('is-active');
 });
 
@@ -256,11 +255,11 @@ $($searchToggle).click(e => {
  * Toggles the state for Profile
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  */
-$($profileToggle).click(e => {
-	e.preventDefault();
-	e.stopPropagation();
+$($profileToggle).click(event_ => {
+	event_.preventDefault();
+	event_.stopPropagation();
 	$($profile).toggleClass('is-active');
 });
 
@@ -270,13 +269,13 @@ $($profileToggle).click(e => {
  * Toggles the state for Drawer
  *
  * @todo      Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @constant  {object} $that
  */
-$($drawerToggle).click(e => {
+$($drawerToggle).click(event_ => {
 	const $that = $($drawer);
-	e.preventDefault();
-	e.stopPropagation();
+	event_.preventDefault();
+	event_.stopPropagation();
 	$that.toggleClass('is-active');
 	$($page).attr('style', 'position: relative; transition: 0.35s ease-in-out; left: -' + $that.width() + 'px');
 });
@@ -285,13 +284,13 @@ $($drawerToggle).click(e => {
  * Toggles the state for DrawerMenu
  *
  * @todo Refactor to toggle function
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($drawerMenuToggle).click(function (e) {
+$($drawerMenuToggle).click(function (event_) {
 	const $this = $(this);
-	e.preventDefault();
-	e.stopPropagation();
+	event_.preventDefault();
+	event_.stopPropagation();
 	$this.next($drawerMenu).toggleClass('is-active');
 });
 
@@ -310,10 +309,10 @@ $($tabs).children().each(function () {
 	const $that = $($this.attr('href'));
 
 	$this.on({
-		mouseup: e => {
-			e.preventDefault();
-			e.stopPropagation();
-			clearTabs(e, $tabs);
+		mouseup: event_ => {
+			event_.preventDefault();
+			event_.stopPropagation();
+			clearTabs(event_, $tabs);
 			$this.toggleClass('is-active');
 			$that.toggleClass('is-active');
 		},
@@ -329,11 +328,11 @@ $($tabs).children().each(function () {
  * @constant  {object} $that
  * @constant  {number} $targetOffset
  */
-$($notificationToggle).click(e => {
+$($notificationToggle).click(event_ => {
 	const $that = $($notification);
 
-	e.preventDefault();
-	e.stopPropagation();
+	event_.preventDefault();
+	event_.stopPropagation();
 
 	$that.toggleClass('is-active');
 });
@@ -352,10 +351,10 @@ $($menu).each(function () {
 	const targetOffset = $this.offset();
 	const $direction = $this.data('direction');
 	if ($direction) {
-		$this.css({ 'transform-origin': $direction, top: 'inherit', bottom: 0, });
+		$this.css({ 'transform-origin': $direction, top: 'inherit', bottom: 0 });
 	} else {
 		if (targetOffset.left > $(window).width() / 2) {
-			$this.css({ 'transform-origin': 'right top', right: 0, });
+			$this.css({ 'transform-origin': 'right top', right: 0 });
 		} else {
 			$this.css('transform-origin', 'left top');
 		}
@@ -366,15 +365,15 @@ $($menu).each(function () {
  * Handle state for Menus
  *
  * @todo      Refactor Menu into this
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @constant  {object} $this
  * @constant  {object} $that
  */
-$($menuToggle).click(function (e) {
+$($menuToggle).click(function (event_) {
 	const $this = $(this);
 	const $that = $($menu);
-	e.preventDefault();
-	e.stopPropagation();
+	event_.preventDefault();
+	event_.stopPropagation();
 	$that.each(() => {
 		$this.toggleClass('is-active', false);
 	});
@@ -386,7 +385,7 @@ $($menuToggle).click(function (e) {
 /**
  * Handles state and creation of Tool Tips
  *
- * @param     {object} e      Event
+ * @param     {object} event_      Event
  * @constant  {object} $this
  * @constant  {object} $that
  * @constant  {string} tip
@@ -445,13 +444,13 @@ $($tooltip).each(function () {
  * @event     Hide#Menu
  * @event     Hide#Profile
  */
-$(document).on('touchstart mouseup', e => {
-	clearToggle(e, $search, $searchToggle);
-	clearToggle(e, $drawer, $drawerToggle);
-	clearToggle(e, $menu, $menuToggle);
-	clearToggle(e, $profile, $profileToggle);
-	clearToggle(e, $toolbar, $toolbarToggle);
-	clearToggle(e, $notification, $notificationToggle);
+$(document).on('touchstart mouseup', event_ => {
+	clearToggle(event_, $search, $searchToggle);
+	clearToggle(event_, $drawer, $drawerToggle);
+	clearToggle(event_, $menu, $menuToggle);
+	clearToggle(event_, $profile, $profileToggle);
+	clearToggle(event_, $toolbar, $toolbarToggle);
+	clearToggle(event_, $notification, $notificationToggle);
 	$($page).removeAttr('style');
 });
 
