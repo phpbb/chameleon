@@ -86,6 +86,10 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 		&-button {
 			padding: ($emoji-picker-spacing * 2);
 
+			&:focus {
+				outline: none;
+			}
+
 			&-icon {
 				border-radius: $emoji-picker-border-radius;
 				width: $emoji-picker-emoji-size;

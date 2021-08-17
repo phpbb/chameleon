@@ -45,13 +45,13 @@
 				<div class="c-emoji-picker-section">
 					{% if item.slug == 'custom' %}
 						{% for emoji in item.emojis %}
-							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
+							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-preview="emoji" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
 								{{ emoji.name |icon('svg', 'o-icon c-emoji-picker-section-item-icon')|safe }}
 							</a>
 						{% endfor %}
 					{% else %}
 						{% for emoji in item.emojis %}
-							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
+							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-preview="emoji" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
 								{{ ('twemoji:' + emoji.name) | replace(' ','-') | lower | icon('iconify', 'o-icon c-emoji-picker-section-item-icon') | safe }}
 							</a>
 						{% endfor %}
@@ -60,7 +60,7 @@
 			{% endfor %}
 		</div>
 	</div>
-	<div class="c-emoji-picker-preview">
+	<div class="c-emoji-picker-preview" data-emoji-preview="container">
 		{{ 'twemoji:grinning-face'|icon('iconify', 'o-icon c-emoji-picker-preview-icon')|safe }}<span class="c-emoji-picker-preview-icon">:grinning-face:</span>
 	</div>
 	<nav class="c-emoji-picker-footer">

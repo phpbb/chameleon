@@ -26,6 +26,9 @@ const $tooltipContainer = '[data-tooltip-container="true"]';
 const $toolbarToggle = '[data-toggle="toolbar"]';
 const $toolbar = '[data-container="toolbar"]';
 
+const $emojis = '[data-emoji-preview="emoji" ]';
+const $emojiPreview = '[data-emoji-preview="container"]';
+
 /**
  * Clears the active state of the provided elements
  *
@@ -135,6 +138,32 @@ $($modalToggle).click(e => {
 	e.stopPropagation();
 	$($modal).toggleClass('is-active');
 });
+
+//---------------------------------------------
+
+/**
+ * Replaces emoji preview with selected emoji
+ *
+ * @todo      Refactor to toggle function
+ * @param     {object} e      	Event
+ * @constant  {object} $this
+ * @constant  {object} $emoji	stored emoji html
+ * @constant  {object} $desc	stored updated emoji shortnames
+ */
+$($emojis).hover(e => {
+	const $this = e.target;
+	let $emoji = $($this).children();
+	const emojiLastClass = $emoji.attr('class').split(' ').pop();
+	let $desc = $($this).attr('data-emoji-name')
+	$desc = $($emojiPreview).children().last().text($desc);
+	const newClass = $($emojiPreview).children().first().attr('class').split(' ').pop();
+
+	$($emojiPreview).children().remove();
+	$emoji.clone().removeClass(emojiLastClass).addClass(newClass).appendTo($emojiPreview);
+	$($emojiPreview).append($desc);
+});
+
+//---------------------------------------------
 
 /**
  * Toggles the state for Collapse

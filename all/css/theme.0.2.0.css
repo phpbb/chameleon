@@ -278,6 +278,10 @@ select:focus::-ms-value {
 	padding: 1rem;
 }
 
+.c-emoji-picker-tone-button:focus {
+	outline: none;
+}
+
 .c-emoji-picker-tone-button-icon {
 	border-radius: 4px;
 	width: 32px;
