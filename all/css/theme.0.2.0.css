@@ -2187,7 +2187,7 @@ select:focus::-ms-value {
 }
 
 .c-toast-action-success:hover, .c-toast-action-success:focus {
-	color: var(--green-900);
+	color: var(--gray-50);
 }
 
 .c-toast-action-important {
@@ -2195,11 +2195,11 @@ select:focus::-ms-value {
 }
 
 .c-toast-action-important:hover, .c-toast-action-important:focus {
-	color: var(--red-900);
+	color: var(--gray-50);
 }
 
 .c-toast-action:hover, .c-toast-action:focus {
-	background-color: var(--blue-gray-500);
+	background-color: var(--green-700);
 }
 
 .c-toast.is-active {

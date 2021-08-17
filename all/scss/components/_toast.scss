@@ -16,12 +16,12 @@ $toast-right: 48px !default;
 
 // Theme Variables
 $toast-bg-color: $default-info-dark-color !default;
-$toast-bg-hover-color: $default-info-light-color !default;
+$toast-bg-hover-color: $default-success-color !default;
 $toast-text-color: $default-info-item-color !default;
 $toast-success-color: $default-success-color !default;
-$toast-success-hover-color: $default-success-dark-color !default;
+$toast-success-hover-color: $default-white !default;
 $toast-important-color: $default-error-color !default;
-$toast-important-hover-color: $default-error-dark-color !default;
+$toast-important-hover-color: $default-white !default;
 
 //
 // @scss
