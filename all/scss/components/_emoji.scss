@@ -116,11 +116,11 @@ $emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
 			right: 8px;
 			overflow: auto;
 			transition: all 0.2s ease;
-			transform: scale(0);
+			transform: scaleY(0);
 			transform-origin: center top;
 
 			&.is-active {
-				transform: scale(1);
+				transform: scaleY(1);
 			}
 
 			&-item {
