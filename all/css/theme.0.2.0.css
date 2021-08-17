@@ -968,7 +968,6 @@ select:focus::-ms-value {
 	padding-left: 16px;
 }
 
-.c-copy-list,
 .c-copy-list .c-copy-list {
 	margin: 8px 24px;
 	margin-right: 0;
@@ -1055,7 +1054,7 @@ select:focus::-ms-value {
 	line-height: 1.25rem;
 	text-align: center;
 	letter-spacing: 0.0178571429em;
-	height: 32px;
+	height: 48px;
 	margin: 0.25rem -0.5rem;
 }
 
@@ -2016,6 +2015,20 @@ select:focus::-ms-value {
 	font-weight: 400;
 	line-height: 2.5rem;
 	letter-spacing: 0.0073529412em;
+}
+
+.t-topic-page-title {
+	font-size: 2.125rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	letter-spacing: 0.0073529412em;
+	margin: 3rem 1.5rem 4.5rem;
+}
+
+.t-topic-page-title-icon {
+	color: #008dff;
+	width: 34px;
+	height: 34px;
 }
 
 .t-jumpto {
