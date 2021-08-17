@@ -2,15 +2,15 @@
 	<span class="o-list-media">
 		{% if item.status == 1 %}
 			{% if item.icon %}
-				{{ item.icon|icon('inline', 'o-icon iconify o-list-media-icon c-topic-read')|safe }}
+				{{ item.icon|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
 			{% else %}
-				{{ 'forum'|icon('inline', 'o-icon iconify o-list-media-icon c-topic-read')|safe }}
+				{{ 'forum'|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
 			{% endif %}
 		{% else %}
 			{% if item.icon %}
-				{{ item.icon|icon('inline', 'o-icon iconify o-list-media-icon c-topic-read')|safe }}
+				{{ item.icon|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
 			{% else %}
-				{{ 'forum'|icon('inline', 'o-icon iconify o-list-media-icon c-topic-read')|safe }}
+				{{ 'forum'|icon('inline', 'o-icon o-list-media-icon c-topic-read')|safe }}
 			{% endif %}
 		{% endif %}
 	</span>
@@ -22,37 +22,37 @@
 			{% if item.approved %}
 				{% if item.approved == false %}
 					<a class="o-list-secondary-item c-topic-unapproved" href="#" data-tooltip="true" title="{{ lang.unapproved }}">
-						{{ 'alert-decagram-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+						{{ 'alert-decagram-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					</a>
 				{% endif %}
 				<span class="o-list-secondary-item c-topic-user">
-					{{ 'account-circle-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'account-circle-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					<a class="o-list-secondary-item-link" href="{{ item.author_profile }}" style="color: {{ item.author_color }};">{{ item.author }}</a>
 				</span>
 				<span class="o-list-secondary-item c-topic-time">
-					{{ 'clock-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'clock-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					<time datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
 				</span>
 				<span class="o-list-secondary-item c-topic-views">
-					{{ 'eye-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'eye-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					{{ item.views }}
 				</span>
 				<span class="o-list-secondary-item c-topic-replies">
-					{{ 'comment-text-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					{{ item.replies }}
 				</span>
 				{% if item.pages %}
 					<a class="o-list-secondary-item" href="#" data-tooltip="true" title="{{ lang.page_goto }}">
-						{{ 'pages'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+						{{ 'pages'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					</a>
 				{% endif %}
 			{% else %}
 				<span class="o-list-secondary-item c-topic-subforum-topics">
-					{{ 'file-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'file-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					{{ item.topics }}
 				</span>
 				<span class="o-list-secondary-item c-topic-subforum-posts">
-					{{ 'comment-text-outline'|icon('inline', 'o-icon iconify o-list-secondary-item-icon')|safe }}
+					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon')|safe }}
 					{{ item.posts }}
 				</span>
 			{% endif %}

@@ -13,7 +13,7 @@
 					<ul class="o-bar-right c-forum-cat-header-right t-forum-cat-header-right">
 						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
 							<a class="o-bar-action c-forum-cat-header-action t-forum-cat-header-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="Expand" title="Collapse">
-								{{ 'chevron-up'|icon('inline', 'o-icon iconify c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
+								{{ 'chevron-up'|icon('inline', 'o-icon c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
 							</a>
 						</li>
 					</ul>
@@ -34,7 +34,7 @@
 					<ul class="o-bar-right c-forum-cat-header-right t-forum-cat-header-right">
 						<li class="o-bar-item c-forum-cat-header-item t-forum-cat-header-item">
 							<a class="o-bar-action c-forum-cat-header-action t-forum-cat-header-action" href="#" data-tooltip="true" data-toggle="collapse" title="Collapse">
-								{{ 'chevron-up'|icon('inline', 'o-icon iconify c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
+								{{ 'chevron-up'|icon('inline', 'o-icon c-forum-cat-header-action-iocn t-forum-cat-header-action-icon')|safe }}
 							</a>
 						</li>
 					</ul>
@@ -46,15 +46,15 @@
 						<a class="c-forum-body t-forum-body" href="{{ item.url }}">
 							<span class="c-forum-media t-forum-media">
 							{% if item.status == 0 %}
-								{{ item.type|icon('inline', 'o-icon iconify c-forum-media-icon t-forum-media-icon')|safe }}
+								{{ item.type|icon('inline', 'o-icon c-forum-media-icon t-forum-media-icon')|safe }}
 							{% else %}
-								{{ item.type|icon('inline', 'o-icon iconify c-forum-media-icon-read t-forum-media-icon-read')|safe }}
+								{{ item.type|icon('inline', 'o-icon c-forum-media-icon-read t-forum-media-icon-read')|safe }}
 							{% endif %}
 							</span>
 							<div class="c-forum-info t-forum-info">
 								<h4 class="c-forum-title t-forum-title" role="heading" aria-level="3">
 									{% if item.icon %}
-										{{ item.icon|icon('inline', 'o-icon iconify c-forum-title-icon t-forum-title-icon')|safe }}
+										{{ item.icon|icon('inline', 'o-icon c-forum-title-icon t-forum-title-icon')|safe }}
 									{% endif %}
 										{{ item.name }}
 								</h4>
@@ -69,13 +69,13 @@
 							<ul class="o-bar-left">
 								<li class="o-bar-item">
 									<span class="o-bar-info">
-										{{ 'file-outline'|icon('inline', 'o-icon iconify o-bar-info-icon')|safe }}
+										{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
 										<span class="o-bar-item-text">{{ item.topics }}</span>
 									</span>
 								</li>
 								<li class="o-bar-item">
 									<span class="o-bar-info">
-										{{ 'comment-text-outline'|icon('inline', 'o-icon iconify o-bar-info-icon')|safe }}
+										{{ 'comment-text-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
 										<span class="o-bar-item-text">{{ item.posts }}</span>
 									</span>
 								</li>
@@ -85,14 +85,14 @@
 								{% if item.subs %}
 								<li class="o-bar-item">
 									<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
-										{{ 'more-vert'|icon('inline', 'o-icon iconify o-bar-action-icon')|safe }}
+										{{ 'more-vert'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
 									</a>
 									<div class="c-menu-container t-menu-container" data-container="menu">
 										<ul class="c-menu t-menu">
 											{% for sub in item.subs %}
 												<li class="c-menu-item t-menu-item">
 													<a class="c-menu-link t-menu-item" href="{{ sub.url }}">
-														{{ 'circle-small-outline'|icon('inline', 'o-icon iconify c-menu-link-icon t-menu-forum-icon')|safe }}
+														{{ 'circle-small-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
 														<span class="c-menu-text t-forum-text">{{ sub.name }}</span>
 													</a>
 												</li>
@@ -104,7 +104,7 @@
 								{% if item.last_subject %}
 								<li class="o-bar-item">
 									<a class="o-bar-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
-										{{ 'page-last'|icon('inline', 'o-icon iconify o-bar-action-icon')|safe }}
+										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
 									</a>
 								</li>
 								{% endif %}
