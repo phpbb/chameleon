@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @object: Bar
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -77,45 +79,22 @@ $bar-badge-color: $default-error-item-color !default;
 // 2. Magic alignment
 //
 .o-bar {
-	@include parent();
 	background-color: $bar-bg-color;
-	flex-wrap: nowrap;
-
-	&-left,
-	&-right,
-	&-center {
-		line-height: 0; // [1]
-		flex-shrink: 1;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	&-left {
-		align-self: flex-end;
-		margin-right: auto; // [2]
-	}
-
-	&-item {
-		position: relative;
-	}
-
-	&-left &-item {
-		float: left;
-	}
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 
 	&-right {
-		align-self: flex-start;
-		margin-left: auto; // [2]
+		display: flex;
+		flex-direction: row;
+		align-self: flex-end;
+		margin-left: auto;
 	}
 
-	&-right &-item {
-		line-height: 0;
-		float: right;
-	}
-
-	&-item-text {
-		padding-left: $bar-spacing;
+	&-title {
+		@include type(title, $lh: 1);
+		@include center($bar-height);
+		margin-bottom: 0;
+		padding: ($bar-spacing * 2);
 	}
 
 	&-info {
@@ -123,6 +102,17 @@ $bar-badge-color: $default-error-item-color !default;
 		color: $bar-user-title-color;
 		padding: ($bar-spacing * 2);
 		padding-right: 0;
+	}
+
+	&-item-text {
+		padding-left: $bar-spacing;
+	}
+
+	&-avatar {
+		display: inline-block;
+		width: $bar-avatar-size;
+		height: $bar-avatar-size;
+		padding: 0;
 	}
 
 	&-logo {
@@ -138,74 +128,58 @@ $bar-badge-color: $default-error-item-color !default;
 		}
 	}
 
-	&-action {
-		@include type(subtitle1, $lh: 1.5, $fw: 700);
-		@include center($bar-height);
-		color: $bar-color;
-		position: relative;
-		overflow: hidden;
-		padding: ($bar-spacing * 2);
-		transform: translate3d(0, 0, 0);
+	// &-action {
+	// 	@include type(subtitle1, $lh: 1.5, $fw: 700);
+	// 	@include center($bar-height);
+	// 	color: $bar-color;
+	// 	position: relative;
+	// 	overflow: hidden;
+	// 	padding: ($bar-spacing * 2);
+	// 	transform: translate3d(0, 0, 0);
 
-		&:after {
-			background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
-			background-repeat: no-repeat;
-			background-position: 50%;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			content: '';
-			transition: transform 0.5s, opacity 1s;
-			transform: scale(10, 10);
-			pointer-events: none;
-		}
+	// 	&:after {
+	// 		background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
+	// 		background-repeat: no-repeat;
+	// 		background-position: 50%;
+	// 		opacity: 0;
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		display: block;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		content: '';
+	// 		transition: transform 0.5s, opacity 1s;
+	// 		transform: scale(10, 10);
+	// 		pointer-events: none;
+	// 	}
 
-		&:active:after {
-			opacity: 0.2;
-			transition: 0s;
-			transform: scale(0, 0);
-		}
+	// 	&:active:after {
+	// 		opacity: 0.2;
+	// 		transition: 0s;
+	// 		transform: scale(0, 0);
+	// 	}
 
-		&:hover,
-		&:focus {
-			background-color: $bar-bg-hover-color;
-			outline: 0;
-			color: $bar-hover-color;
-			transition: 0.5s;
-		}
+	// 	&:hover,
+	// 	&:focus {
+	// 		background-color: $bar-bg-hover-color;
+	// 		outline: 0;
+	// 		color: $bar-hover-color;
+	// 		transition: 0.5s;
+	// 	}
 
-		&-text {
-			display: none;
-			@media (min-width: $bp-sm) {
-				display: inline-flex;
-			}
-		}
+	// 	&-text {
+	// 		display: none;
+	// 		@media (min-width: $bp-sm) {
+	// 			display: inline-flex;
+	// 		}
+	// 	}
 
-		&-icon + &-text,
-		&-text + &-icon {
-			padding-left: $bar-spacing;
-		}
-	}
-
-	&-avatar {
-		display: inline-block;
-		width: $bar-avatar-size;
-		height: $bar-avatar-size;
-		padding: 0;
-	}
-
-	&-title {
-		@include type(title, $lh: 1);
-		@include child();
-		@include center($bar-height);
-		float: left;
-		margin-bottom: 0;
-		padding: ($bar-spacing * 2);
-	}
+	// 	&-icon + &-text,
+	// 	&-text + &-icon {
+	// 		padding-left: $bar-spacing;
+	// 	}
+	// }
 
 	&-profile {
 		@include center($bar-height);
@@ -222,24 +196,6 @@ $bar-badge-color: $default-error-item-color !default;
 			color: $bar-user-title-color;
 			opacity: $bar-opacity-54;
 			display: block;
-		}
-	}
-
-	&-badge {
-		background-color: $bar-badge-bg-color;
-		border-radius: $bar-badge-radius;
-		color: $bar-badge-bg-color;
-		overflow: hidden;
-		align-self: center;
-		width: $bar-badge-width;
-		height: $bar-badge-height;
-		margin: -$bar-badge-height 0 0 -$bar-badge-height;
-
-		@media (min-width: $bp-sm) {
-			color: $bar-badge-color;
-			display: inline-flex;
-			width: auto;
-			height: auto;
 		}
 	}
 

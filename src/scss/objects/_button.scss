@@ -1,7 +1,9 @@
 //------------------------------------------------------------------------------
-// #object: Button
+// @object: Button
 //------------------------------------------------------------------------------
-// #description
+// @author: hanakin -- midaym
+// @version: 0.22.0
+// @description
 //
 //------------------------------------------------------------------------------
 
@@ -39,7 +41,6 @@ $btn-text-hover-color: $default-action-color-hover !default;
 	@include type(subtitle1, $lh: 1.5, $fw: 700);
 	@include shadow(2); // google material design
 	@include center($btn-height);  // [1]
-	-webkit-font-smoothing: antialiased; // google material design
 	text-align: center; // [4]
 	vertical-align: middle; // [2]
 	text-decoration: none; // [4]
@@ -60,7 +61,6 @@ $btn-text-hover-color: $default-action-color-hover !default;
 		box-shadow 0.2s $animation-curve-fast-out-linear-in,
 		background-color 0.2s $default-animation-curve,
 		color 0.2s $default-animation-curve;
-	-webkit-appearence: none; // google material design
 	will-change: transform, opacity; // google material design
 
 	&-icon {

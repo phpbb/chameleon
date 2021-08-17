@@ -36,11 +36,11 @@ const paths = {
 	},
 };
 
-function clean () {
+function clean() {
 	return del([ 'dist' ]);
 }
 
-function scss () {
+function scss() {
 	return gulp.src(paths.scss.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
@@ -87,7 +87,7 @@ function scss () {
 		.pipe(gulp.dest(paths.scss.dest));
 }
 
-function minify () {
+function minify() {
 	return gulp.src(paths.scss.css)
 		.pipe(sourcemaps.init())
 		.pipe(
@@ -103,7 +103,7 @@ function minify () {
 		.pipe(gulp.dest(paths.scss.dest));
 }
 
-function docs () {
+function docs() {
 	return gulp.src(paths.docs.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
@@ -150,7 +150,7 @@ function docs () {
 		.pipe(gulp.dest(paths.docs.dest));
 }
 
-function docsMinify () {
+function docsMinify() {
 	return gulp.src(paths.docs.css)
 		.pipe(sourcemaps.init())
 		.pipe(
@@ -166,7 +166,7 @@ function docsMinify () {
 		.pipe(gulp.dest(paths.docs.dest));
 }
 
-function watch () {
+function watch() {
 	gulp.watch(paths.scss.all, build);
 	gulp.watch(paths.docs.src, build);
 }
