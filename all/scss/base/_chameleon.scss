@@ -17,8 +17,7 @@ $o-search-bg-color: $default-background-color !default;
 $o-bg-hover-color: $default-surface-hover-color !default;
 $o-color: $default-surface-item-color !default;
 $o-user-title-color: $default-background-item-color !default;
-$o-alt-color: darken($o-bg-color, 8%) !default;
-$o-disabled-color: lighten($o-color, 8%) !default;
+$o-alt-color: $default-background-alt-color !default;
 
 
 //
@@ -61,7 +60,7 @@ textarea {
 
 	&:disabled,
 	&[readonly] {
-		background-color: $o-disabled-color;
+		background-color: $default-disabled-color;
 	}
 }
 
@@ -83,7 +82,7 @@ select {
 	&:indeterminate + label:before {
 		// Disabled indeterminate
 		&:disabled {
-			border-right-color: $o-disabled-color;
+			border-right-color: $default-disabled-color;
 		}
 	}
 
@@ -93,12 +92,12 @@ select {
 
 	&:disabled {
 		&:checked + label:before {
-			border-right-color: $o-disabled-color;
-			border-bottom-color: $o-disabled-color;
+			border-right-color: $default-disabled-color;
+			border-bottom-color: $default-disabled-color;
 		}
 
 		&:not(:checked) + label:before {
-			background-color: $o-disabled-color;
+			background-color: $default-disabled-color;
 		}
 	}
 }
@@ -117,16 +116,16 @@ select {
 
 	&:disabled {
 		+ label {
-			color: $o-disabled-color;
+			color: $default-disabled-color;
 		}
 
 		&:checked + label:before,
 		&:not(:checked) + label:before {
-			border-color: $o-disabled-color;
+			border-color: $default-disabled-color;
 		}
 
 		:checked + label:after {
-			background-color: $o-disabled-color;
+			background-color: $default-disabled-color;
 		}
 	}
 }
