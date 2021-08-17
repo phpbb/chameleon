@@ -29,6 +29,7 @@ const $jump = '[data-container="jump"]';
 const $emojis = '[data-emoji-preview="emoji" ]';
 const $emojiPreview = '[data-emoji-preview="container"]';
 const $emojiFilter = '[data-emoji-filter="input"]';
+const $closeToggle = '[data-close="true"]';
 
 /**
  * Clears the active state of the provided elements
@@ -37,7 +38,7 @@ const $emojiFilter = '[data-emoji-filter="input"]';
  * @param     {object} $el     The element with the state
  * @param     {object} $toggle The element that contorls the state
  */
-const clearToggle = function (event_, $element, $toggle) {
+const clearToggle = function(event_, $element, $toggle) {
 	const { target } = event_;
 
 	if (
@@ -46,7 +47,7 @@ const clearToggle = function (event_, $element, $toggle) {
 		!$(target).is($toggle) &&
 		!$(target).parents().is($toggle)
 	) {
-		$($element).each(function () {
+		$($element).each(function() {
 			$(this).toggleClass('is-active', false);
 		});
 	}
@@ -101,8 +102,8 @@ const edgeDetect = ($target, x, y) => {
  * @constant  {object} $this
  * @constant  {object} $that
  */
-const clearTabs = function (event_, $links) {
-	$($links).children().each(function () {
+const clearTabs = function(event_, $links) {
+	$($links).children().each(function() {
 		const $this = $(this);
 		const $that = $this.attr('href');
 
@@ -120,7 +121,7 @@ const clearTabs = function (event_, $links) {
  * @param     {object} target      element to apply toggle class on
  */
 
-// const isActive = function (target) {
+// const isActive = function(target) {
 // 	this.click(event_ => {
 // 		event_.preventDefault();
 // 		event_.stopPropagation();
@@ -174,7 +175,7 @@ $($emojis).hover(event_ => {
  * @todo      Refactor to toggle function
  * @constant  {object} query	value to filter
  */
-$($emojiFilter).on('input', function () {
+$($emojiFilter).on('input', function() {
 	const query = this.value;
 	if (query !== '') {
 		$('[data-emoji-preview="emoji"]:not([data-emoji-name*="' + query + '"])').hide();
@@ -194,7 +195,7 @@ $($emojiFilter).on('input', function () {
  * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($collapseToggle).click(function (event_) {
+$($collapseToggle).click(function(event_) {
 	const $this = $(this);
 	const $that = $this.parents($collapseToggleParent).next($collapse);
 	const tip = $this.attr('data-toggle-tooltip');
@@ -289,7 +290,7 @@ $($drawerToggle).click(event_ => {
  * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($drawerMenuToggle).click(function (event_) {
+$($drawerMenuToggle).click(function(event_) {
 	const $this = $(this);
 	event_.preventDefault();
 	event_.stopPropagation();
@@ -306,7 +307,7 @@ $($drawerMenuToggle).click(function (event_) {
  * @event     Toggle#Tab
  * @event     Toggle#Content
  */
-$($tabs).children().each(function () {
+$($tabs).children().each(function() {
 	const $this = $(this);
 	const $that = $($this.attr('href'));
 
@@ -347,7 +348,7 @@ $($notificationToggle).click(event_ => {
  * @constant  {object} $this
  * @constant  {object} targetOffset
  */
-$($menu).each(function () {
+$($menu).each(function() {
 	const $this = $(this);
 	const targetOffset = $this.offset();
 	const $direction = $this.data('direction');
@@ -370,7 +371,7 @@ $($menu).each(function () {
  * @constant  {object} $this
  * @constant  {object} $that
  */
-$($menuToggle).click(function (event_) {
+$($menuToggle).click(function(event_) {
 	const $this = $(this);
 	const $that = $($menu);
 	event_.preventDefault();
@@ -384,6 +385,30 @@ $($menuToggle).click(function (event_) {
 //---------------------------------------------
 
 /**
+ * Handle animation direction for Profiles
+ *
+ * @todo      Refactor into Profile toggle
+ * @constant  {object} $this
+ * @constant  {object} targetOffset
+ */
+$($profile).each(function () {
+	const $this = $(this);
+	const targetOffset = $this.offset();
+	const $direction = $this.data('direction');
+	if ($direction) {
+		$this.css({ 'transform-origin': $direction, top: 'inherit', bottom: 0 });
+	} else {
+		if (targetOffset.left > $(window).width() / 2) {
+			$this.css({ 'transform-origin': 'right top', right: 0 });
+		} else {
+			$this.css('transform-origin', 'left top');
+		}
+	}
+});
+
+//---------------------------------------------
+
+/**
  * Toggles the state for Profile
  *
  * @todo      Refactor to toggle function
@@ -391,16 +416,14 @@ $($menuToggle).click(function (event_) {
  * @constant  {object} $this
  * @constant  {object} $that
  */
-$($profileToggle).click(event_ => {
+$($profileToggle).click(function (event_) {
+	const $this = $(this);
+	const $that = $($profile);
 	event_.preventDefault();
 	event_.stopPropagation();
-	const $this = $(this);
-	console.log($this.attr('href'));
-	const $that = $($profile);
 	$that.each(() => {
 		$this.toggleClass('is-active', false);
 	});
-	console.log($this.next($profile).attr('href'));
 	$this.next($profile).toggleClass('is-active');
 });
 
@@ -418,7 +441,7 @@ $($profileToggle).click(event_ => {
  * @event     Toggle#ShowTip
  * @event     Toggle#HideTip
  */
-$($tooltip).each(function () {
+$($tooltip).each(function() {
 	const $this = $(this);
 	let $that = {};
 	$this.on({
@@ -460,10 +483,7 @@ $($tooltip).each(function () {
 /**
  * Hide all elements on document load
  *
- * @constant  {object} $this
- * @constant  {object} $that
  * @event     Hide#Search
- * @event     Hide#Drawer
  * @event     Hide#Menu
  * @event     Hide#Profile
  * @event     Hide#Toolbar
@@ -472,13 +492,51 @@ $($tooltip).each(function () {
  */
 $(document).on('touchstart mouseup', event_ => {
 	clearToggle(event_, $search, $searchToggle);
-	clearToggle(event_, $drawer, $drawerToggle);
 	clearToggle(event_, $menu, $menuToggle);
 	clearToggle(event_, $profile, $profileToggle);
 	clearToggle(event_, $toolbar, $toolbarToggle);
 	clearToggle(event_, $jump, $jumpToggle);
 	clearToggle(event_, $notification, $notificationToggle);
+});
+
+//---------------------------------------------
+
+/**
+ * Hide drawer properly
+ *
+ * @event     Hide#Drawer
+ */
+$($page).on('touchstart mouseup', event_ => {
+	const $this = $(this);
+	clearToggle(event_, $drawer, $drawerToggle);
 	$($page).removeAttr('style');
+});
+
+//---------------------------------------------
+
+/**
+ * Hide social menu properly
+ *
+ * @event     Hide#Social
+ */
+$($profile).on('touchstart mouseup', event_ => {
+	clearToggle(event_, $menu, $menuToggle);
+});
+
+//---------------------------------------------
+
+/**
+ * Handle state for Menus
+ *
+ * @todo      Refactor Menu into this
+ * @param     {object} event_      Event
+ * @constant  {object} $this
+ */
+$($closeToggle).click(function (event_) {
+	const $this = $(this);
+	event_.preventDefault();
+	event_.stopPropagation();
+	$this.parent().toggleClass('is-active', false);
 });
 
 //---------------------------------------------
