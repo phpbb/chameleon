@@ -1,8 +1,6 @@
 //------------------------------------------------------------------------------
 // @setting: Default
 //------------------------------------------------------------------------------
-// @author: hanakin -- midaym
-// @version: 0.22.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -101,40 +99,40 @@ $default-border-hover-color-inverted:      null;
 $defaults: (
 	'background': (
 		'dark': (
-			'color': $gray-1300,
-			'alt': $gray-1100,
+			'color': $gray-900,
+			'alt': $gray-800,
 			'item': $gray-50
 		),
 		'light': (
 			'color': $gray-50,
-			'alt': $gray-400,
-			'item':  $gray-1300
+			'alt': $gray-100,
+			'item':  $gray-800
 		)
 	),
 	'surface': (
 		'dark': (
-			'color': $gray-1200,
-			'color-hover': $gray-1100,
-			'alt': $gray-1000,
-			'alt-hover': $gray-900,
-			'item': $gray-900
+			'color': $gray-800,
+			'color-hover': $gray-700,
+			'alt': $gray-700,
+			'alt-hover': $gray-500,
+			'item': $gray-500
 		),
 		'light': (
 			'color': $gray-100,
-			'color-hover': $gray-200,
-			'alt': $gray-300,
-			'alt-hover': $gray-200,
-			'item': $gray-400
+			'color-hover': $gray-300,
+			'alt': $gray-200,
+			'alt-hover': $gray-400,
+			'item': $gray-700
 		)
 	),
 	'border': (
 		'dark': (
-			'color': $gray-1000,
-			'color-hover': $gray-1000
+			'color': $gray-700,
+			'color-hover': $gray-700
 		),
 		'light': (
-			'color': $gray-500,
-			'color-hover': $gray-500
+			'color': $gray-400,
+			'color-hover': $gray-400
 		)
 	)
 );
@@ -169,7 +167,7 @@ $defaults: (
 	$default-border-hover-color-inverted:      mode('border', 'light', 'color-hover');
 
 	// other
-	$default-page-color:                       $gray-1400;
+	$default-page-color:					   mode('background', 'dark', 'color');
 } @else if $mode == light {
 	// color scheme Background
 	$default-background-color:                 mode('background', 'light', 'color');
@@ -234,58 +232,56 @@ $defaults: (
 	$default-page-color:					 $white;
 }
 
-$default-disabled-color: $gray-700 !default;
-$default-disabled-stroke: $gray-400 !default;
+$default-disabled-color: $gray-500 !default;
+$default-disabled-stroke: $gray-200 !default;
 
 // color scheme Grays
-$default-white:                         $gray-50 !default;
-$default-black:                         $gray-1300 !default;
-
-$default-gray:                          $gray-700 !default;
-$default-gray-dark:                     $gray-900 !default;
-$default-gray-light:                    $gray-500 !default;
+$default-gray-light:                    $black-12 !default; // 12%
+$default-gray:                          $black-38 !default; // 38%
+$default-gray-dark:                     $black-54 !default; // 54%
+$default-black:                         $black-87 !default; // 87%
 
 // color scheme Primary
-$default-primary-color:                 $blue-700 !default;
-$default-primary-dark-color:            $blue-900 !default;
-$default-primary-light-color:           $blue-500 !default;
+$default-primary-color:                 $blue-500 !default;
+$default-primary-dark-color:            $blue-700 !default;
+$default-primary-light-color:           $blue-300 !default;
 $default-primary-item-color:            $gray-50 !default;
-$default-primary-item-light-color:      $gray-1300 !default;
+$default-primary-item-light-color:      $gray-800 !default;
 
 // color scheme Secondary
-$default-secondary-color:               $pink-700 !default;
-$default-secondary-dark-color:          $pink-900 !default;
-$default-secondary-light-color:         $pink-500 !default;
+$default-secondary-color:               $pink-500 !default;
+$default-secondary-dark-color:          $pink-700 !default;
+$default-secondary-light-color:         $pink-300 !default;
 $default-secondary-item-color:          $gray-50 !default;
-$default-secondary-item-light-color:    $gray-1300 !default;
+$default-secondary-item-light-color:    $gray-800 !default;
 
 // color shceme Error
-$default-error-color:                   $red-700 !default;
-$default-error-dark-color:              $red-900 !default;
-$default-error-light-color:             $red-500 !default;
+$default-error-color:                   $red-500 !default;
+$default-error-dark-color:              $red-700 !default;
+$default-error-light-color:             $red-300 !default;
 $default-error-item-color:              $gray-50 !default;
-$default-error-item-light-color:        $gray-1300 !default;
+$default-error-item-light-color:        $gray-800 !default;
 
 // color scheme Success
-$default-success-color:                 $green-700 !default;
-$default-success-dark-color:            $green-900 !default;
-$default-success-light-color:           $green-500 !default;
+$default-success-color:                 $green-500 !default;
+$default-success-dark-color:            $green-700 !default;
+$default-success-light-color:           $green-300 !default;
 $default-success-item-color:            $gray-50 !default;
-$default-success-item-light-color:      $gray-1300 !default;
+$default-success-item-light-color:      $gray-800 !default;
 
 // color scheme Warning
-$default-warning-color:                 $amber-700 !default;
-$default-warning-dark-color:            $amber-900 !default;
-$default-warning-light-color:           $amber-500 !default;
+$default-warning-color:                 $amber-500 !default;
+$default-warning-dark-color:            $amber-700 !default;
+$default-warning-light-color:           $amber-300 !default;
 $default-warning-item-color:            $gray-50 !default;
-$default-warning-item-light-color:      $gray-1300 !default;
+$default-warning-item-light-color:      $gray-800 !default;
 
 // color scheme Info
-$default-info-color:                    $blue-gray-700 !default;
-$default-info-dark-color:               $blue-gray-900 !default;
-$default-info-light-color:              $blue-gray-500 !default;
+$default-info-color:                    $blue-gray-500 !default;
+$default-info-dark-color:               $blue-gray-700 !default;
+$default-info-light-color:              $blue-gray-300 !default;
 $default-info-item-color:               $gray-50 !default;
-$default-info-item-light-color:         $gray-1300 !default;
+$default-info-item-light-color:         $gray-800 !default;
 
 // color scheme
 $default-page-bg:                    	$default-page-color !default;
