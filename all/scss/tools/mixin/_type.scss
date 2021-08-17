@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @tool: Type
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 // A mixin for generating type settings based on Google Material Design types
@@ -106,7 +108,7 @@ $type-styles: (
 	letter-spacing: map-get($type-props, letter-spacing);
 
 	@if not map-has-key($type-styles, $type) {
-		@error "Invalid style specified! Choose one of #{map-keys($type-styles)}";
+		@error 'Invalid style specified! Choose one of #{map-keys($type-styles)}';
 	}
 
 	@if $type == button {

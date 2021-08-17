@@ -19,7 +19,7 @@ $footer-height: $default-height-dense !default;
 
 .c-footer {
 	text-align: center;
-	margin: ($footer-spacing * 8) 0 ($footer-spacing * 6);
+	padding: ($footer-spacing * 8) 0 ($footer-spacing * 10);
 
 	&-nav {
 		&-link {
@@ -32,7 +32,8 @@ $footer-height: $default-height-dense !default;
 		}
 	}
 
-	&-copyright {
-		margin-top: ($footer-spacing * 2);
+	&-copyright,
+	&-legal {
+		margin: ($footer-spacing * 2) 0;
 	}
 }

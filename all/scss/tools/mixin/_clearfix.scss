@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @tool: Clearfix
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description:
 //
 // Clearfix: contain floats
@@ -21,6 +23,6 @@
 	&:after {
 		display: table; // [2]
 		clear: both;
-		content: " "; // [1]
+		content: ' '; // [1]
 	}
 }

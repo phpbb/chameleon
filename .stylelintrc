@@ -5,7 +5,8 @@
 	],
 	"ignoreFiles": [
 		"./src/scss/generic/_normalize.scss",
-		"./src/scss/settings/*.scss"
+		"./src/scss/settings/*.scss",
+		".test/**/*"
 	],
 	"rules": {
 		"scss/at-extend-no-missing-placeholder": true,
@@ -69,13 +70,13 @@
 
 		"declaration-empty-line-before": "never",
 
-		"declaration-property-unit-blacklist": {
+		"declaration-property-unit-disallowed-list": {
 			"line-height": ["rem", "px", "em", "%"]
 		},
-		"declaration-property-unit-whitelist": {
+		"declaration-property-unit-allowed-list": {
 			"height": ["px", "%", "vh"],
 			"width": ["px", "%", "vw"],
-			"font-size": ["px", "rem", "%"],
+			"font-size": ["px", "rem", "%", "vw"],
 			"margin-left": ["px", "rem", "%"],
 			"margin-right": ["px", "rem", "%"],
 			"margin-top": ["px", "rem", "%"],

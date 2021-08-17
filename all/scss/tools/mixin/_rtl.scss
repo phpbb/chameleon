@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @tool: RTL
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 //
@@ -15,14 +17,14 @@
 @mixin rtl($root-selector: null) {
 	@if ($root-selector) {
 		@at-root {
-			#{$root-selector}[dir="rtl"] &,
-			[dir="rtl"] #{$root-selector} & {
+			#{$root-selector}[dir='rtl'] &,
+			[dir='rtl'] #{$root-selector} & {
 				@content;
 			}
 		}
 	} @else {
-		[dir="rtl"] &,
-		&[dir="rtl"] {
+		[dir='rtl'] &,
+		&[dir='rtl'] {
 			@content;
 		}
 	}

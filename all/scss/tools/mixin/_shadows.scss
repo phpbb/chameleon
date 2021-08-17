@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @tool: Shadows
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 // Mixin for generating Google Material Design shadows
@@ -9,7 +11,7 @@
 
 //
 // @settings
-$shadow-color: $default-shadow-color;
+$shadow-color: $black;
 $shadow-umbra-opacity: 0.2 !default;
 $shadow-penumbra-opacity: 0.14 !default;
 $shadow-ambient-opacity: 0.12 !default;

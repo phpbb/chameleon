@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @component: stat
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -13,18 +15,18 @@ $drawer-spacing: $default-spacing !default;
 $drawer-bar-offset: 58px !default;
 $drawer-width: 248px !default;
 $drawer-border-height: $default-border-size;
-$drawer-opacity-87: $default-opacity-87 !default;
-$drawer-opacity-54: $default-opacity-54 !default;
 
 
 // Theme Variables
-$drawer-bg-color: $default-action-bg !default;
-$drawer-bg-hover-color: $default-action-bg-hover !default;
-$drawer-bg-sub-color: rgba($black, 0.01) !default;
-$drawer-text-color: $default-action-color !default;
+$drawer-bg-color: $default-surface-color !default;
+$drawer-bg-hover-color: $default-surface-hover-color !default;
+$drawer-bg-sub-color: $default-surface-hover-color !default;
+$drawer-bg-sub-hover-color: $default-surface-alt-color !default;
+$drawer-text-color: $default-surface-item-color !default;
+$drawer-text-hover-color: $default-action-color-hover !default;
 $drawer-icon-color: $default-action-color !default;
 $drawer-icon-hover-color: $default-action-color-hover !default;
-$drawer-border-color: rgba($black, 0.125) !default;
+$drawer-border-color: $default-border-color !default;
 
 
 //
@@ -82,12 +84,13 @@ $drawer-border-color: rgba($black, 0.125) !default;
 		&-title {
 			@include type(caption);
 			color: $drawer-text-color;
-			opacity: $drawer-opacity-54;
 			display: block;
 		}
 	}
 
 	&-menu {
+		border-top: $drawer-border-height solid $drawer-border-color;
+		border-bottom: $drawer-border-height solid $drawer-border-color;
 		display: none;
 		margin: 0;
 		padding: 0;
@@ -101,19 +104,13 @@ $drawer-border-color: rgba($black, 0.125) !default;
 		}
 	}
 
-	&-item > &-menu {
-		background-color: rgba(0, 0, 0, 0.01);
-		border-top: $drawer-border-height solid $drawer-border-color;
-		border-bottom: $drawer-border-height solid $drawer-border-color;
-	}
-
 	&-divider {
 		background-color: $drawer-border-color;
 		height: $drawer-border-height;
 	}
 
 	&-link {
-		color: rgba($drawer-text-color, $drawer-opacity-87);
+		color: $drawer-text-color;
 		position: relative;
 		display: block;
 		overflow: hidden;
@@ -125,7 +122,7 @@ $drawer-border-color: rgba($black, 0.125) !default;
 		transform: translate3d(0, 0, 0);
 
 		&-icon {
-			color: rgba($drawer-icon-color, $drawer-opacity-54);
+			color: $drawer-icon-color;
 			margin: 0;
 		}
 
@@ -145,7 +142,7 @@ $drawer-border-color: rgba($black, 0.125) !default;
 			display: block;
 			width: 100%;
 			height: 100%;
-			content: "";
+			content: '';
 			transition: transform 0.5s, opacity 1s;
 			transform: scale(10, 10);
 			pointer-events: none;
@@ -159,11 +156,23 @@ $drawer-border-color: rgba($black, 0.125) !default;
 
 		&:hover {
 			background-color: $drawer-bg-hover-color;
-			color: $drawer-text-color;
+
+			.c-drawer-link-text {
+				color: $drawer-text-hover-color;
+			}
 
 			.c-drawer-link-icon {
 				color: $drawer-icon-hover-color;
 			}
+		}
+	}
+
+	&-menu &-link {
+		background-color: $drawer-bg-sub-color;
+
+		&:hover,
+		&:focus {
+			background-color: $drawer-bg-sub-hover-color;
 		}
 	}
 }

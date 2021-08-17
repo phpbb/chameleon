@@ -1,10 +1,12 @@
 {% macro whos_online(page, online, lang, stats, groups) %}
-<div class="c-tab-pane t-tab-pane" id="whos-online" role="tabpane">
+<div class="c-tab-pane t-tab-pane{% if page == "topic" %} is-active{% endif %}" id="whos-online" role="tabpanel">
 	<div class="c-tab-pane-row t-tab-pane-row">
 		{% if page == "index" %}
 			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.registered_users }}{{ lang.colon }}</h4>
 		{% elseif page == "forum" %}
 			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.online_forum }}{{ lang.colon }}</h4>
+		{% elseif page == "topic" %}
+			<h4 class="c-tab-pane-title t-tab-pane-title">{{ lang.online_topic }}{{ lang.colon }}</h4>
 		{% endif %}
 		<span class="c-tab-pane-text t-tab-text">
 			{% for item in online %}
@@ -12,10 +14,10 @@
 					{% if item.bot %}
 						<span style="color: {{ item.group }};">{{ item.name }}</span>
 					{% else %}
-						<a class="c-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a>
+						<a class="c-tab-pane-link t-tab-pane-link" href="{{ item.profile }}" style="color: {{ item.group }};">{{ item.name }}</a>
 					{% endif %}
 				{% else %}
-					<a class="c-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a>
+					<a class="c-tab-pane-link t-tab-pane-link" href="{{ item.profile }}">{{ item.name }}</a>
 				{% endif %}
 				{% if loop.last %}{% else %}, {% endif %}
 			{% endfor %}

@@ -14,38 +14,45 @@ $post-border-radius: $default-border-radius !default;
 $post-border-style: solid !default;
 $post-border-size: $default-border-size !default;
 $post-body-min-height: 192px !default;
+$post-pre-max-height: 264px !default;
 $post-emoji-size: 1em !default;
 $post-emoji-size-min: $default-icon-sm !default;
 
 
 // Theme Variables
-$post-header-bg-color: $default-action-bg !default;
+$post-bg-color: $default-background-color !default;
+$post-header-bg-color: $default-surface-color !default;
 $post-border-color: $default-border-color !default;
-
+$post-copy-code-action-color: $white !default;
+$post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 //
 // @scss
 .c-post {
 	@include parent(column);
 	@include shadow(2);
+	background-color: $post-bg-color;
 	border-radius: $post-border-radius;
 	margin-bottom: ($post-spacing * 3);
 
 	&-header {
 		@include child();
+		@include border-radius(top, $post-border-radius);
 		border-bottom: $post-border-size $post-border-style $post-border-color;
 	}
 
 	&-body {
 		@include parent(column);
 		min-height: $post-body-min-height;
-		padding: ($post-spacing * 2);
+		padding: ($post-spacing * 4) ($post-spacing * 3);
+
+		@media (min-width: $bp-md) {
+			padding: ($post-spacing * 4) ($post-spacing * 6);
+		}
 	}
 
 	&-meta {
-		@media (min-width: $bp-lg) {
-			@include parent();
-		}
+		padding: ($post-spacing * 2);
 	}
 
 	&-title {
@@ -66,20 +73,103 @@ $post-border-color: $default-border-color !default;
 			padding-left: $post-spacing;
 		}
 	}
+
+	&-action {
+		&:hover,
+		&:focus,
+		&-container {
+			background-color: transparent;
+		}
+
+		&:active:after,
+		&:after {
+			opacity: 0;
+			transition: 0s;
+			transform: scale(0, 0);
+		}
+	}
 }
 
 .c-copy {
 	@include type(subtitle1);
-
 	@include child();
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;
 
-	> p {
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		margin-bottom: ($post-spacing * 2);
+	> p,
+	&-list,
+	&-blockquote {
+		font-size: calc(18px + 0.25vw);
+		/* stylelint-disable declaration-property-unit-blacklist */
+		line-height: calc(34px + 0.2vw);
+		/* stylelint-enable declaration-property-unit-blacklist */
+		word-wrap: break-word;
+		word-break: break-word;
+		margin-bottom: ($post-spacing * 4);
+	}
+
+	&-blockquote {
+		@include parent(column);
+		border: $post-border-size $post-border-style $post-border-color;
+
+		&-wrap {
+			text-indent: 0;
+			margin: 0;
+			padding-left: ($post-spacing * 6);
+		}
+
+		&-header {
+			@include child();
+			background-color: $post-header-bg-color;
+			border-bottom: $post-border-size $post-border-style $post-border-color;
+			padding: $post-spacing ($post-spacing * 2);
+		}
+
+		&-meta {
+			@include child();
+		}
+
+		&-date {
+			@include child();
+		}
+
+		&-author,
+		&-jumpto {
+			display: inline;
+		}
+
+		&-body {
+			@include child();
+			padding: ($post-spacing * 3) ($post-spacing * 4);
+
+			p {
+				margin-bottom: 0;
+
+				&:before,
+				&:after,
+				&:last-of-type:after {
+					content: '';
+				}
+			}
+		}
+
+		.c-copy-blockquote-wrap {
+			padding-left: ($post-spacing * 3);
+		}
+
+		.c-copy-blockquote {
+			margin-bottom: ($post-spacing * 3);
+		}
+	}
+
+	&-list {
+		margin-right: 0;
+		padding-left: ($post-spacing * 2);
+
+		& & {
+			margin: $post-spacing ($post-spacing * 3);
+			margin-right: 0;
+		}
 	}
 
 	&-links {
@@ -87,10 +177,11 @@ $post-border-color: $default-border-color !default;
 	}
 
 	&-bold {
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	&-italic {
+		font-weight: 200;
 		font-style: italic;
 	}
 
@@ -106,26 +197,14 @@ $post-border-color: $default-border-color !default;
 		//
 	}
 
-	&-code {
-		//
+	pre {
+		background-color: #282c34;
+		max-height: $post-pre-max-height;
+		padding: ($post-spacing * 3);
 	}
 
 	&-color {
 		//
-	}
-
-	&-list {
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		margin: ($post-spacing * 4);
-		margin-right: 0;
-		padding-left: ($post-spacing * 2);
-
-		& & {
-			margin: $post-spacing ($post-spacing * 3);
-			margin-right: 0;
-		}
 	}
 
 	&-smilies {
