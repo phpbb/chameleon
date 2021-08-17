@@ -4,40 +4,52 @@ const fs = require('fs');
 const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const moment = require('moment');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const nunjucks = require('gulp-nunjucks-render');
-const beautify = require('gulp-beautify').html;
-const removeLines = require('gulp-remove-empty-lines');
-const merge = require('gulp-merge-json');
+const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
 const sortOrder = require('./.postcss-sorting.json');
+const moment = require('moment');
+const nunjucks = require('gulp-nunjucks-render');
+const beautify = require('gulp-beautify').html;
+const removeLines = require('gulp-remove-empty-lines');
+const merge = require('gulp-merge-json');
 const pkg = require('./package.json');
 
-// Config
-const theme = '';
+sass.compiler = require('node-sass');
 
-const build = {
-	css: './all/css',
-	twig: './all/views/',
-	scss: './all/scss/',
-	data: './tests/mock/',
-	html: './tests/views/',
+// Config
+// Config
+const paths = {
+	scss: {
+		src: './all/scss/*.scss',
+		all: './all/scss/**/*.scss',
+		css: './all/css/*.' + pkg.version + '.css',
+		dest: './all/css',
+	},
+	data: {
+		src: './tests/mock/*.json',
+		db: './tests/mock/db/db.json',
+		dest: './tests/mock/db/',
+	},
+	twig: {
+		src: './all/views/*.twig',
+		all: './all/views/**/*.twig',
+		views: './all/views/',
+		dest: './tests/views/',
+	},
+	theme: '',
 };
 
-if (theme) {
-	build.css = './' + theme + '/css';
-	build.twig = './' + theme + '/css';
+if (paths.theme) {
+	paths.scss.dest = './' + paths.theme + '/css';
+	paths.twig.dest = './' + paths.theme + '/views';
 }
 
-const db = JSON.parse(fs.readFileSync(build.data + 'db/db.json'));
-
-const manageEnvironment = function (environment) {
+const manageEnvironment = function(environment) {
 	environment.addFilter('moment', (date, format, fromNow) => {
 		if (fromNow) {
 			date = moment(date, format).fromNow();
@@ -84,9 +96,10 @@ const manageEnvironment = function (environment) {
 		if (type === 'iconify') {
 			source = icon.split(':');
 			source = source[0];
-			html = `<span class="iconify o-icon o-icon-src-${source} ${classlist}" ${title}data-icon="${icon}" data-inline="false" aria-hidden="${hidden}"></span>`;
+			html = `<span class="iconify o-icon o-icon-src-${source} ${classlist}" ${title} data-icon="${icon}" data-inline="false" aria-hidden="${hidden}"></span>`;
 		} else if (type === 'inline') {
 			let item = {};
+			let db = JSON.parse(fs.readFileSync(paths.data.db));
 			for (item in db.icons) {
 				if (db.icons[item].name) {
 					item = db.icons[item];
@@ -106,9 +119,13 @@ const manageEnvironment = function (environment) {
 	});
 };
 
-gulp.task('css', () => {
-	const css = gulp
-		.src(build.scss + '*.scss')
+function clean() {
+	del([ paths.scss.dest ]);
+	del([ paths.twig.dest ]);
+}
+
+function scss() {
+	return gulp.src(paths.scss.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			indentType: 'tab',
@@ -145,6 +162,7 @@ gulp.task('css', () => {
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
+				// stylefmt(),
 			]),
 		)
 		.pipe(rename({
@@ -152,19 +170,11 @@ gulp.task('css', () => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.css));
+		.pipe(gulp.dest(paths.scss.dest));
+}
 
-	return css;
-});
-
-gulp.task('clean', () => {
-	del([ build.css ]);
-	del([ build.html ]);
-});
-
-gulp.task('minify', gulp.series('css', () => {
-	const css = gulp
-		.src(build.css + '/*.' + pkg.version + '.css')
+function minify() {
+	return gulp.src(paths.scss.css)
 		.pipe(sourcemaps.init())
 		.pipe(
 			postcss([
@@ -176,29 +186,31 @@ gulp.task('minify', gulp.series('css', () => {
 			extname: '.css',
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.css));
+		.pipe(gulp.dest(paths.scss.dest));
+}
 
-	return css;
-}));
-
-gulp.task('data', () => {
-	const json = gulp
-		.src(build.data + '*.json')
+function data() {
+	return gulp.src(paths.data.src)
 		.pipe(merge({
 			fileName: 'db.json',
+			edit: (parsedJson, file) => {
+				parsedJson.version = pkg.version;
+				return parsedJson;
+			},
 		}))
-		.pipe(gulp.dest(build.data + '/db/'));
+		.pipe(gulp.dest(paths.data.dest));
 
-	return json;
-});
-
-gulp.task('twig', gulp.series('data', () => {
+	let db = JSON.parse(fs.readFileSync(paths.data.db));
 	db.version = pkg.version;
-	const html = gulp
-		.src(build.twig + '*.twig')
+}
+
+function twig() {
+	let db = JSON.parse(fs.readFileSync(paths.data.db));
+
+	return gulp.src(paths.twig.src)
 		.pipe(nunjucks({
 			data: db,
-			path: [ build.twig ],
+			path: [ paths.twig.views ],
 			manageEnv: manageEnvironment,
 			autoescape: false,
 		}))
@@ -206,7 +218,7 @@ gulp.task('twig', gulp.series('data', () => {
 		.pipe(beautify({
 			indent_size: 1,
 			indent_char: '	',
-			indent_with_tabs: false,
+			indent_with_tabs: true,
 			eol: '\n',
 			end_with_newline: false,
 			preserve_newlines: true,
@@ -224,17 +236,27 @@ gulp.task('twig', gulp.series('data', () => {
 		.pipe(rename({
 			extname: '.html',
 		}))
-		.pipe(gulp.dest(build.html));
+		.pipe(gulp.dest(paths.twig.dest));
+}
 
-	return html;
-}));
+function watchAll() {
+	gulp.watch(paths.scss.all, gulp.series(scss, minify));
+	gulp.watch(paths.twig.all, gulp.series(twig));
+	gulp.watch(paths.data.src, gulp.series(data, twig));
+}
 
-gulp.task('watch', () => {
-	gulp.watch(build.scss + '**/*.scss', gulp.series('css', 'minify'));
-	gulp.watch(build.twig + '**/*.twig', gulp.series('twig'));
-	gulp.watch(build.data + '*.json', gulp.series('twig'));
-});
+function watchCss() {
+	gulp.watch(paths.scss.all, gulp.series(scss, minify));
+}
 
-gulp.task('serve', gulp.series('watch'));
-gulp.task('test', gulp.series('css', 'minify', 'data', 'twig'));
-gulp.task('default', gulp.series('css', 'minify', 'data', 'twig', 'watch'));
+exports.clean = clean;
+exports.scss = scss;
+exports.minify = minify;
+exports.data = data;
+exports.twig = twig;
+exports.serve = watchCss;
+exports.serve = watchAll;
+
+exports.test = gulp.series(scss, minify, data, twig);
+exports.css = gulp.series(scss, minify, watchCss);
+exports.default = gulp.series(scss, minify, data, twig, watchAll);

@@ -38,7 +38,7 @@
 			"unicorn/prefer-module": "off",
 			"space-before-function-paren": [
 				"error",
-				"always"
+				"never"
 			]
 		},
 		"env": {
