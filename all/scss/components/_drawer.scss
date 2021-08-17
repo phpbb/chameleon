@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @component: stat
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.22.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -13,16 +15,15 @@ $drawer-spacing: $default-spacing !default;
 $drawer-bar-offset: 58px !default;
 $drawer-width: 248px !default;
 $drawer-border-height: $default-border-size;
-$drawer-opacity-87: $default-opacity-87 !default;
-$drawer-opacity-54: $default-opacity-54 !default;
 
 
 // Theme Variables
-$drawer-bg-color: $default-background-color !default;
-$drawer-bg-hover-color: $default-background-alt-color !default;
-$drawer-bg-sub-color: $default-surface-color !default;
-$drawer-bg-sub-hover-color: $default-surface-hover-color !default;
-$drawer-text-color: $default-action-color !default;
+$drawer-bg-color: $default-surface-color !default;
+$drawer-bg-hover-color: $default-surface-hover-color !default;
+$drawer-bg-sub-color: $default-surface-hover-color !default;
+$drawer-bg-sub-hover-color: $default-surface-alt-color !default;
+$drawer-text-color: $default-surface-item-color !default;
+$drawer-text-hover-color: $default-action-color-hover !default;
 $drawer-icon-color: $default-action-color !default;
 $drawer-icon-hover-color: $default-action-color-hover !default;
 $drawer-border-color: $default-border-color !default;
@@ -83,7 +84,6 @@ $drawer-border-color: $default-border-color !default;
 		&-title {
 			@include type(caption);
 			color: $drawer-text-color;
-			opacity: $drawer-opacity-54;
 			display: block;
 		}
 	}
@@ -110,7 +110,7 @@ $drawer-border-color: $default-border-color !default;
 	}
 
 	&-link {
-		color: rgba($drawer-text-color, $drawer-opacity-87);
+		color: $drawer-text-color;
 		position: relative;
 		display: block;
 		overflow: hidden;
@@ -122,7 +122,7 @@ $drawer-border-color: $default-border-color !default;
 		transform: translate3d(0, 0, 0);
 
 		&-icon {
-			color: rgba($drawer-icon-color, $drawer-opacity-54);
+			color: $drawer-icon-color;
 			margin: 0;
 		}
 
@@ -156,7 +156,10 @@ $drawer-border-color: $default-border-color !default;
 
 		&:hover {
 			background-color: $drawer-bg-hover-color;
-			color: $drawer-text-color;
+
+			.c-drawer-link-text {
+				color: $drawer-text-hover-color;
+			}
 
 			.c-drawer-link-icon {
 				color: $drawer-icon-hover-color;
