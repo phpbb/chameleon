@@ -115,8 +115,7 @@ gulp.task('css', () => {
 			indentWidth: 1,
 			outputStyle: 'expanded',
 			precision: 10,
-			onError: console.error.bind(console, 'Sass error:'),
-		}))
+		}).on('error', sass.logError))
 		.pipe(
 			postcss([
 				autoprefixer(),
