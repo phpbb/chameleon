@@ -56,7 +56,7 @@
 		"powered_by":"Powered by",
 		"terms":"Terms",
 		"privacy":"Privacy",
-		"subforums":"SubForums",
+		"subforums":"Sub Forums",
 		"see_all":"See All",
 		"announcements":"Announcments",
 		"forum":"Forum",
@@ -79,7 +79,12 @@
 		"forum_attach":"Can Post Attachments",
 		"unapproved":"Unapproved Topic",
 		"new_topic":"New Topic",
+		"topics": "Topics",
 		"settings":"Settings",
-		"close":"Close"
+		"close":"Close",
+		"next":"Next Page",
+		"prev":"Previous Page",
+		"collapse":"Collapse",
+		"expand":"Expand"
 	}
 }

@@ -5,7 +5,7 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
 			"type": "reply",
 			"typeTitle": "Reply",
 			"participants": [
@@ -21,8 +21,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "add",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "plus",
 			"typeTitle": "New Post",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"},
@@ -38,8 +38,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "format-quote",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "format-quote-open",
 			"typeTitle": "Quote",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}
@@ -54,8 +54,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "pm-user",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "comment-account-outline",
 			"typeTitle": "Private Message",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}
@@ -70,8 +70,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "reported",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "alert",
 			"typeTitle": "Reported",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}
@@ -86,8 +86,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "unapproved",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "alert-decagram-outline",
 			"typeTitle": "Dissapproved Post",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}
@@ -102,8 +102,8 @@
 			"user":"Joe",
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
-			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=460",
-			"type": "approved",
+			"avatar":"https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "decagram-check",
 			"typeTitle": "Approved Post",
 			"participants": [
 				{ "name":"Frank", "color":"#009900", "url": "./memberlist.php?mode=viewprofile&amp;u=61815"}
