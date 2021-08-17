@@ -14,20 +14,23 @@
 //
 // grayscale based on open color specs https://yeun.github.io/open-color/gray-color.html
 $white:                        #ffffff !default;
-$gray-50:                      #f8f9fa !default; // hsl(210, 23%, 98%)
-$gray-100:                     #f1f3f5 !default; // hsl(210, 16%, 95%)
-$gray-200:                     #e9ecef !default; // hsl(210, 15%, 93%)
-$gray-300:                     #dee2e6 !default; // hsl(210, 15%, 89%)
-$gray-400:                     #ced4da !default; // hsl(210, 13%, 83%)
-$gray-500:                     #adb5bd !default; // hsl(210, 10%, 71%)
-$gray-600:                     #868e96 !default; // hsl(210, 6%, 56%)
-$gray-700:                     #495057 !default; // hsl(210, 8%, 31%)
+$gray-50:                      #f8f9fa !default; // hsl(210, 17%, 98%)
+$gray-75:                      #f1f3f5 !default; // hsl(210, 17%, 95%)
+$gray-100:                     #e9ecef !default; // hsl(210, 16%, 93%)
+$gray-200:                     #dee2e6 !default; // hsl(210, 14%, 89%)
+$gray-300:                     #ced4da !default; // hsl(210, 14%, 83%)
+$gray-400:                     #adb5bd !default; // hsl(210, 11%, 71%)
+$gray-500:                     #868e96 !default; // hsl(210, 7%, 56%)
+$gray-600:                     #5f6972 !default; // hsl(210, 9%, 41%)
+$gray-700:                     #495057 !default; // hsl(210, 9%, 31%)
 $gray-800:                     #343a40 !default; // hsl(210, 10%, 23%)
-$gray-900:                     #212529 !default; // hsl(210, 10%, 15%)
-$gray-950:                     #161a1d !default; // hsl(210, 13%, 10%)
+$gray-900:                     #212529 !default; // hsl(210, 11%, 15%)
+$gray-1000:                    #161a1d !default; // hsl(210, 14%, 10%)
+$gray-1100:                    #111418 !default; // hsl(210, 16%, 8%)
 $black:                        #000000 !default;
 
 $grey-50:                      $gray-50 !default;
+$grey-75:                      $gray-75 !default;
 $grey-100:                     $gray-100 !default;
 $grey-200:                     $gray-200 !default;
 $grey-300:                     $gray-300 !default;
@@ -37,20 +40,38 @@ $grey-600:                     $gray-600 !default;
 $grey-700:                     $gray-700 !default;
 $grey-800:                     $gray-800 !default;
 $grey-900:                     $gray-900 !default;
+$grey-1000:                    $gray-1000 !default;
+$grey-1100:                    $gray-1100 !default;
 
-$black:                        #000000 !default;    // 0
+$black:                        $gray-1100 !default;
 $black-87:                     $gray-900 !default;
 $black-54:                     $gray-600 !default;
 $black-38:                     $gray-500 !default;
 $black-12:                     $gray-300 !default;
-$white:                        #ffffff !default;    // 100
+$white:                        $grey-50 !default;
 
 //
 // Color Pallette
+$blue-gray:                    #607d8b !default; // mdl hsl(199, 18%, 46%)
+$blue-gray-50:                 lighten($blue-gray, 32%) !default;
+$blue-gray-75:                 lighten($blue-gray, 24%) !default;
+$blue-gray-100:                lighten($blue-gray, 16%) !default;
+$blue-gray-200:                lighten($blue-gray, 12%) !default;
+$blue-gray-300:                lighten($blue-gray, 8%) !default;
+$blue-gray-400:                lighten($blue-gray, 4%) !default;
+$blue-gray-500:                $blue-gray !default;
+$blue-gray-600:                darken($blue-gray, 4%) !default;
+$blue-gray-700:                darken($blue-gray, 8%) !default;
+$blue-gray-800:                darken($blue-gray, 12) !default;
+$blue-gray-900:                darken($blue-gray, 16%) !default;
+$blue-gray-1000:               darken($blue-gray, 24%) !default;
+$blue-gray-1100:               darken($blue-gray, 32%) !default;
+
 $red:                          #f44336 !default; // mdl hsl(4, 89%, 58%)
 $red-50:                       lighten($red, 32%) !default;
-$red-100:                      lighten($red, 24%) !default;
-$red-200:                      lighten($red, 16%) !default;
+$red-75:                       lighten($red, 24%) !default;
+$red-100:                      lighten($red, 16%) !default;
+$red-200:                      lighten($red, 12%) !default;
 $red-300:                      lighten($red, 8%) !default;
 $red-400:                      lighten($red, 4%) !default;
 $red-500:                      $red !default;
@@ -58,208 +79,245 @@ $red-600:                      darken($red, 4%) !default;
 $red-700:                      darken($red, 8%) !default;
 $red-800:                      darken($red, 12) !default;
 $red-900:                      darken($red, 16%) !default;
+$red-1000:                     darken($red, 24%) !default;
+$red-1100:                     darken($red, 32%) !default;
 
 $pink:                         #e91e63 !default; // mdl hsl(339, 82%, 51%)
 $pink-50:                      lighten($pink, 32%) !default;
-$pink-100:                     lighten($pink, 24%) !default;
-$pink-200:                     lighten($pink, 16%) !default;
+$pink-75:                      lighten($pink, 24%) !default;
+$pink-100:                     lighten($pink, 16%) !default;
+$pink-200:                     lighten($pink, 12%) !default;
 $pink-300:                     lighten($pink, 8%) !default;
 $pink-400:                     lighten($pink, 4%) !default;
 $pink-500:                     $pink !default;
 $pink-600:                     darken($pink, 4%) !default;
 $pink-700:                     darken($pink, 8%) !default;
-$pink-800:                     darken($pink, 12%) !default;
+$pink-800:                     darken($pink, 12) !default;
 $pink-900:                     darken($pink, 16%) !default;
+$pink-1000:                    darken($pink, 24%) !default;
+$pink-1100:                    darken($pink, 32%) !default;
 
 $purple:                       #b353c6 !default; // hsl(290, 50%, 55%)
 $purple-50:                    lighten($purple, 32%) !default;
-$purple-100:                   lighten($purple, 24%) !default;
-$purple-200:                   lighten($purple, 16%) !default;
+$purple-75:                    lighten($purple, 24%) !default;
+$purple-100:                   lighten($purple, 16%) !default;
+$purple-200:                   lighten($purple, 12%) !default;
 $purple-300:                   lighten($purple, 8%) !default;
 $purple-400:                   lighten($purple, 4%) !default;
 $purple-500:                   $purple !default;
 $purple-600:                   darken($purple, 4%) !default;
 $purple-700:                   darken($purple, 8%) !default;
-$purple-800:                   darken($purple, 12%) !default;
+$purple-800:                   darken($purple, 12) !default;
 $purple-900:                   darken($purple, 16%) !default;
+$purple-1000:                  darken($purple, 24%) !default;
+$purple-1100:                  darken($purple, 32%) !default;
 
 $deep-purple:                  #7953c6 !default; // hsl(260, 50%, 55%)
 $deep-purple-50:               lighten($deep-purple, 32%) !default;
-$deep-purple-100:              lighten($deep-purple, 24%) !default;
-$deep-purple-200:              lighten($deep-purple, 16%) !default;
+$deep-purple-75:               lighten($deep-purple, 24%) !default;
+$deep-purple-100:              lighten($deep-purple, 16%) !default;
+$deep-purple-200:              lighten($deep-purple, 12%) !default;
 $deep-purple-300:              lighten($deep-purple, 8%) !default;
 $deep-purple-400:              lighten($deep-purple, 4%) !default;
 $deep-purple-500:              $deep-purple !default;
 $deep-purple-600:              darken($deep-purple, 4%) !default;
 $deep-purple-700:              darken($deep-purple, 8%) !default;
-$deep-purple-800:              darken($deep-purple, 12%) !default;
+$deep-purple-800:              darken($deep-purple, 12) !default;
 $deep-purple-900:              darken($deep-purple, 16%) !default;
+$deep-purple-1000:             darken($deep-purple, 24%) !default;
+$deep-purple-1100:             darken($deep-purple, 32%) !default;
 
 $indigo:                       #3f51b5 !default; // mdl hsl(230, 48%, 47%)
 $indigo-50:                    lighten($indigo, 32%) !default;
-$indigo-100:                   lighten($indigo, 24%) !default;
-$indigo-200:                   lighten($indigo, 16%) !default;
+$indigo-75:                    lighten($indigo, 24%) !default;
+$indigo-100:                   lighten($indigo, 16%) !default;
+$indigo-200:                   lighten($indigo, 12%) !default;
 $indigo-300:                   lighten($indigo, 8%) !default;
 $indigo-400:                   lighten($indigo, 4%) !default;
 $indigo-500:                   $indigo !default;
 $indigo-600:                   darken($indigo, 4%) !default;
 $indigo-700:                   darken($indigo, 8%) !default;
-$indigo-800:                   darken($indigo, 12%) !default;
+$indigo-800:                   darken($indigo, 12) !default;
 $indigo-900:                   darken($indigo, 16%) !default;
+$indigo-1000:                  darken($indigo, 24%) !default;
+$indigo-1100:                  darken($indigo, 32%) !default;
 
 $blue:                         #008dff !default; // hsl(206, 100%, 50%)
 $blue-50:                      lighten($blue, 32%) !default;
-$blue-100:                     lighten($blue, 24%) !default;
-$blue-200:                     lighten($blue, 16%) !default;
+$blue-75:                      lighten($blue, 24%) !default;
+$blue-100:                     lighten($blue, 16%) !default;
+$blue-200:                     lighten($blue, 12%) !default;
 $blue-300:                     lighten($blue, 8%) !default;
 $blue-400:                     lighten($blue, 4%) !default;
 $blue-500:                     $blue !default;
 $blue-600:                     darken($blue, 4%) !default;
 $blue-700:                     darken($blue, 8%) !default;
-$blue-800:                     darken($blue, 12%) !default;
+$blue-800:                     darken($blue, 12) !default;
 $blue-900:                     darken($blue, 16%) !default;
-
+$blue-1000:                    darken($blue, 24%) !default;
+$blue-1100:                    darken($blue, 32%) !default;
 
 $light-blue:                   #12afff !default; // hsl(200, 100%, 53%)
 $light-blue-50:                lighten($light-blue, 32%) !default;
-$light-blue-100:               lighten($light-blue, 24%) !default;
-$light-blue-200:               lighten($light-blue, 16%) !default;
+$light-blue-75:                lighten($light-blue, 24%) !default;
+$light-blue-100:               lighten($light-blue, 16%) !default;
+$light-blue-200:               lighten($light-blue, 12%) !default;
 $light-blue-300:               lighten($light-blue, 8%) !default;
 $light-blue-400:               lighten($light-blue, 4%) !default;
 $light-blue-500:               $light-blue !default;
 $light-blue-600:               darken($light-blue, 4%) !default;
 $light-blue-700:               darken($light-blue, 8%) !default;
-$light-blue-800:               darken($light-blue, 12%) !default;
+$light-blue-800:               darken($light-blue, 12) !default;
 $light-blue-900:               darken($light-blue, 16%) !default;
+$light-blue-1000:              darken($light-blue, 24%) !default;
+$light-blue-1100:              darken($light-blue, 32%) !default;
 
 $cyan:                         #0ad5f3 !default; // hsl(187, 92%, 49%)
 $cyan-50:                      lighten($cyan, 32%) !default;
-$cyan-100:                     lighten($cyan, 24%) !default;
-$cyan-200:                     lighten($cyan, 16%) !default;
+$cyan-75:                      lighten($cyan, 24%) !default;
+$cyan-100:                     lighten($cyan, 16%) !default;
+$cyan-200:                     lighten($cyan, 12%) !default;
 $cyan-300:                     lighten($cyan, 8%) !default;
 $cyan-400:                     lighten($cyan, 4%) !default;
 $cyan-500:                     $cyan !default;
 $cyan-600:                     darken($cyan, 4%) !default;
 $cyan-700:                     darken($cyan, 8%) !default;
-$cyan-800:                     darken($cyan, 12%) !default;
+$cyan-800:                     darken($cyan, 12) !default;
 $cyan-900:                     darken($cyan, 16%) !default;
+$cyan-1000:                    darken($cyan, 24%) !default;
+$cyan-1100:                    darken($cyan, 32%) !default;
 
 $teal:                         #50e3c2 !default; // hsl(166, 72%, 60%)
 $teal-50:                      lighten($teal, 32%) !default;
-$teal-100:                     lighten($teal, 24%) !default;
-$teal-200:                     lighten($teal, 16%) !default;
+$teal-75:                      lighten($teal, 24%) !default;
+$teal-100:                     lighten($teal, 16%) !default;
+$teal-200:                     lighten($teal, 12%) !default;
 $teal-300:                     lighten($teal, 8%) !default;
 $teal-400:                     lighten($teal, 4%) !default;
 $teal-500:                     $teal !default;
 $teal-600:                     darken($teal, 4%) !default;
 $teal-700:                     darken($teal, 8%) !default;
-$teal-800:                     darken($teal, 12%) !default;
+$teal-800:                     darken($teal, 12) !default;
 $teal-900:                     darken($teal, 16%) !default;
+$teal-1000:                    darken($teal, 24%) !default;
+$teal-1100:                    darken($teal, 32%) !default;
 
-$green:                         #4caf50 !default; // mdl hsl(122, 39%, 49%)
-$green-50:                      lighten($green, 32%) !default;
-$green-100:                     lighten($green, 24%) !default;
-$green-200:                     lighten($green, 16%) !default;
-$green-300:                     lighten($green, 8%) !default;
-$green-400:                     lighten($green, 4%) !default;
-$green-500:                     $green !default;
-$green-600:                     darken($green, 4%) !default;
-$green-700:                     darken($green, 8%) !default;
-$green-800:                     darken($green, 12%) !default;
-$green-900:                     darken($green, 16%) !default;
+$green:                        #4caf50 !default; // mdl hsl(122, 39%, 49%)
+$green-50:                     lighten($green, 32%) !default;
+$green-75:                     lighten($green, 24%) !default;
+$green-100:                    lighten($green, 16%) !default;
+$green-200:                    lighten($green, 12%) !default;
+$green-300:                    lighten($green, 8%) !default;
+$green-400:                    lighten($green, 4%) !default;
+$green-500:                    $green !default;
+$green-600:                    darken($green, 4%) !default;
+$green-700:                    darken($green, 8%) !default;
+$green-800:                    darken($green, 12) !default;
+$green-900:                    darken($green, 16%) !default;
+$green-1000:                   darken($green, 24%) !default;
+$green-1100:                   darken($green, 32%) !default;
 
-$light-green:                   #8bc34a !default; // mdl hsl(87, 50%, 52%)
-$light-green-50:                lighten($light-green, 32%) !default;
-$light-green-100:               lighten($light-green, 24%) !default;
-$light-green-200:               lighten($light-green, 16%) !default;
-$light-green-300:               lighten($light-green, 8%) !default;
-$light-green-400:               lighten($light-green, 4%) !default;
-$light-green-500:               $light-green !default;
-$light-green-600:               darken($light-green, 4%) !default;
-$light-green-700:               darken($light-green, 8%) !default;
-$light-green-800:               darken($light-green, 12%) !default;
-$light-green-900:               darken($light-green, 16%) !default;
+$light-green:                  #8bc34a !default; // mdl hsl(87, 50%, 52%)
+$light-green-50:               lighten($light-green, 32%) !default;
+$light-green-75:               lighten($light-green, 24%) !default;
+$light-green-100:              lighten($light-green, 16%) !default;
+$light-green-200:              lighten($light-green, 12%) !default;
+$light-green-300:              lighten($light-green, 8%) !default;
+$light-green-400:              lighten($light-green, 4%) !default;
+$light-green-500:              $light-green !default;
+$light-green-600:              darken($light-green, 4%) !default;
+$light-green-700:              darken($light-green, 8%) !default;
+$light-green-800:              darken($light-green, 12) !default;
+$light-green-900:              darken($light-green, 16%) !default;
+$light-green-1000:             darken($light-green, 24%) !default;
+$light-green-1100:             darken($light-green, 32%) !default;
 
-$lime:                          #cddc39 !default; // mdl hsl(65, 70%, 54%)
-$lime-50:                       lighten($lime, 32%) !default;
-$lime-100:                      lighten($lime, 24%) !default;
-$lime-200:                      lighten($lime, 16%) !default;
-$lime-300:                      lighten($lime, 8%) !default;
-$lime-400:                      lighten($lime, 4%) !default;
-$lime-500:                      $lime !default;
-$lime-600:                      darken($lime, 4%) !default;
-$lime-700:                      darken($lime, 8%) !default;
-$lime-800:                      darken($lime, 12%) !default;
-$lime-900:                      darken($lime, 16%) !default;
+$lime:                         #cddc39 !default; // mdl hsl(65, 70%, 54%)
+$lime-50:                      lighten($lime, 32%) !default;
+$lime-75:                      lighten($lime, 24%) !default;
+$lime-100:                     lighten($lime, 16%) !default;
+$lime-200:                     lighten($lime, 12%) !default;
+$lime-300:                     lighten($lime, 8%) !default;
+$lime-400:                     lighten($lime, 4%) !default;
+$lime-500:                     $lime !default;
+$lime-600:                     darken($lime, 4%) !default;
+$lime-700:                     darken($lime, 8%) !default;
+$lime-800:                     darken($lime, 12) !default;
+$lime-900:                     darken($lime, 16%) !default;
+$lime-1000:                    darken($lime, 24%) !default;
+$lime-1100:                    darken($lime, 32%) !default;
 
-$yellow:                        #ffeb3b !default; // mdl hsl(53, 100%, 61%)
-$yellow-50:                     lighten($yellow, 32%) !default;
-$yellow-100:                    lighten($yellow, 24%) !default;
-$yellow-200:                    lighten($yellow, 16%) !default;
-$yellow-300:                    lighten($yellow, 8%) !default;
-$yellow-400:                    lighten($yellow, 4%) !default;
-$yellow-500:                    $yellow !default;
-$yellow-600:                    darken($yellow, 4%) !default;
-$yellow-700:                    darken($yellow, 8%) !default;
-$yellow-800:                    darken($yellow, 12%) !default;
-$yellow-900:                    darken($yellow, 16%) !default;
+$yellow:                       #ffeb3b !default; // mdl hsl(53, 100%, 61%)
+$yellow-50:                    lighten($yellow, 32%) !default;
+$yellow-75:                    lighten($yellow, 24%) !default;
+$yellow-100:                   lighten($yellow, 16%) !default;
+$yellow-200:                   lighten($yellow, 12%) !default;
+$yellow-300:                   lighten($yellow, 8%) !default;
+$yellow-400:                   lighten($yellow, 4%) !default;
+$yellow-500:                   $yellow !default;
+$yellow-600:                   darken($yellow, 4%) !default;
+$yellow-700:                   darken($yellow, 8%) !default;
+$yellow-800:                   darken($yellow, 12) !default;
+$yellow-900:                   darken($yellow, 16%) !default;
+$yellow-1000:                  darken($yellow, 24%) !default;
+$yellow-1100:                  darken($yellow, 32%) !default;
 
-$amber:                         #ffc107 !default; // mdl hsl(45, 100%, 51%)
-$amber-50:                      lighten($amber, 32%) !default;
-$amber-100:                     lighten($amber, 24%) !default;
-$amber-200:                     lighten($amber, 16%) !default;
-$amber-300:                     lighten($amber, 8%) !default;
-$amber-400:                     lighten($amber, 4%) !default;
-$amber-500:                     $amber !default;
-$amber-600:                     darken($amber, 4%) !default;
-$amber-700:                     darken($amber, 8%) !default;
-$amber-800:                     darken($amber, 12%) !default;
-$amber-900:                     darken($amber, 16%) !default;
+$amber:                        #ffc107 !default; // mdl hsl(45, 100%, 51%)
+$amber-50:                     lighten($amber, 32%) !default;
+$amber-75:                     lighten($amber, 24%) !default;
+$amber-100:                    lighten($amber, 16%) !default;
+$amber-200:                    lighten($amber, 12%) !default;
+$amber-300:                    lighten($amber, 8%) !default;
+$amber-400:                    lighten($amber, 4%) !default;
+$amber-500:                    $amber !default;
+$amber-600:                    darken($amber, 4%) !default;
+$amber-700:                    darken($amber, 8%) !default;
+$amber-800:                    darken($amber, 12) !default;
+$amber-900:                    darken($amber, 16%) !default;
+$amber-1000:                   darken($amber, 24%) !default;
+$amber-1100:                   darken($amber, 32%) !default;
 
-$orange:                        #ff9800 !default; // mdl hsl(35, 100%, 50%)
-$orange-50:                     lighten($orange, 32%) !default;
-$orange-100:                    lighten($orange, 24%) !default;
-$orange-200:                    lighten($orange, 16%) !default;
-$orange-300:                    lighten($orange, 8%) !default;
-$orange-400:                    lighten($orange, 4%) !default;
-$orange-500:                    $orange !default;
-$orange-600:                    darken($orange, 4%) !default;
-$orange-700:                    darken($orange, 8%) !default;
-$orange-800:                    darken($orange, 12%) !default;
-$orange-900:                    darken($orange, 16%) !default;
+$orange:                       #ff9f1a !default; // mdl hsl(35, 100%, 50%)
+$orange-50:                    lighten($orange, 32%) !default;
+$orange-75:                    lighten($orange, 24%) !default;
+$orange-100:                   lighten($orange, 16%) !default;
+$orange-200:                   lighten($orange, 12%) !default;
+$orange-300:                   lighten($orange, 8%) !default;
+$orange-400:                   lighten($orange, 4%) !default;
+$orange-500:                   $orange !default;
+$orange-600:                   darken($orange, 4%) !default;
+$orange-700:                   darken($orange, 8%) !default;
+$orange-800:                   darken($orange, 12) !default;
+$orange-900:                   darken($orange, 16%) !default;
+$orange-1000:                  darken($orange, 24%) !default;
+$orange-1100:                  darken($orange, 32%) !default;
 
-$deep-orange:                   #ff5722 !default; // mdl hsl(14, 100%, 56%)
-$deep-orange-50:                lighten($deep-orange, 32%) !default;
-$deep-orange-100:               lighten($deep-orange, 24%) !default;
-$deep-orange-200:               lighten($deep-orange, 16%) !default;
-$deep-orange-300:               lighten($deep-orange, 8%) !default;
-$deep-orange-400:               lighten($deep-orange, 4%) !default;
-$deep-orange-500:               $deep-orange !default;
-$deep-orange-600:               darken($deep-orange, 4%) !default;
-$deep-orange-700:               darken($deep-orange, 8%) !default;
-$deep-orange-800:               darken($deep-orange, 12%) !default;
-$deep-orange-900:               darken($deep-orange, 16%) !default;
+$deep-orange:                  #ff5722 !default; // mdl hsl(14, 100%, 56%)
+$deep-orange-50:               lighten($deep-orange, 32%) !default;
+$deep-orange-75:               lighten($deep-orange, 24%) !default;
+$deep-orange-100:              lighten($deep-orange, 16%) !default;
+$deep-orange-200:              lighten($deep-orange, 12%) !default;
+$deep-orange-300:              lighten($deep-orange, 8%) !default;
+$deep-orange-400:              lighten($deep-orange, 4%) !default;
+$deep-orange-500:              $deep-orange !default;
+$deep-orange-600:              darken($deep-orange, 4%) !default;
+$deep-orange-700:              darken($deep-orange, 8%) !default;
+$deep-orange-800:              darken($deep-orange, 12) !default;
+$deep-orange-900:              darken($deep-orange, 16%) !default;
+$deep-orange-1000:             darken($deep-orange, 24%) !default;
+$deep-orange-1100:             darken($deep-orange, 32%) !default;
 
-$brown:                         #8b572a !default; // hsl(27, 53%, 35%)
-$brown-50:                      lighten($brown, 32%) !default;
-$brown-100:                     lighten($brown, 24%) !default;
-$brown-200:                     lighten($brown, 16%) !default;
-$brown-300:                     lighten($brown, 8%) !default;
-$brown-400:                     lighten($brown, 4%) !default;
-$brown-500:                     $brown !default;
-$brown-600:                     darken($brown, 4%) !default;
-$brown-700:                     darken($brown, 8%) !default;
-$brown-800:                     darken($brown, 12%) !default;
-$brown-900:                     darken($brown, 16%) !default;
-
-$blue-gray:                     #607d8b !default; // mdl hsl(199, 18%, 46%)
-$blue-gray-50:                  lighten($blue-gray, 32%) !default;
-$blue-gray-100:                 lighten($blue-gray, 24%) !default;
-$blue-gray-200:                 lighten($blue-gray, 16%) !default;
-$blue-gray-300:                 lighten($blue-gray, 8%) !default;
-$blue-gray-400:                 lighten($blue-gray, 4%) !default;
-$blue-gray-500:                 $blue-gray !default;
-$blue-gray-600:                 darken($blue-gray, 4%) !default;
-$blue-gray-700:                 darken($blue-gray, 8%) !default;
-$blue-gray-800:                 darken($blue-gray, 12%) !default;
-$blue-gray-900:                 darken($blue-gray, 16%) !default;
+$brown:                        #ac6d39 !default; // hsl(27, 50%, 45%)
+$brown-50:                     lighten($brown, 32%) !default;
+$brown-75:                     lighten($brown, 24%) !default;
+$brown-100:                    lighten($brown, 16%) !default;
+$brown-200:                    lighten($brown, 12%) !default;
+$brown-300:                    lighten($brown, 8%) !default;
+$brown-400:                    lighten($brown, 4%) !default;
+$brown-500:                    $brown !default;
+$brown-600:                    darken($brown, 4%) !default;
+$brown-700:                    darken($brown, 8%) !default;
+$brown-800:                    darken($brown, 12) !default;
+$brown-900:                    darken($brown, 16%) !default;
+$brown-1000:                   darken($brown, 24%) !default;
+$brown-1100:                   darken($brown, 32%) !default;

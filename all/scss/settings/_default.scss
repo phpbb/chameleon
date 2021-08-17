@@ -8,7 +8,7 @@
 //
 // @settings
 
-$mode: light;
+$mode: dark;
 
 $default-font-size:             16px !default;
 $default-line-height:           24px !default;
@@ -167,7 +167,7 @@ $defaults: (
 	$default-border-hover-color-inverted:      	mode('border', 'light', 'color-hover');
 
 	// other
-	$default-page-color:					   	$gray-950;
+	$default-page-color:					   	$gray-1000;
 } @else if $mode == light {
 	// color scheme Background
 	$default-background-color:                 	mode('background', 'light', 'color');

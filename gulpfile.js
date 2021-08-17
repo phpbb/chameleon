@@ -31,7 +31,6 @@ const build = {
 };
 
 const AUTOPREFIXER_BROWSERS = [
-	'ie >= 11',
 	'edge >= 12',
 	'ff >= 38',
 	'chrome >= 35',
