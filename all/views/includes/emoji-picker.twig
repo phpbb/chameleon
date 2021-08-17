@@ -4,75 +4,70 @@
 			<div class="c-emoji-picker-search">
 				<input class="c-emoji-picker-search-feild" type="text" spellcheck="false" placeholder=":innocent:" value="">
 				<a class="c-emoji-picker-search-feild-button" href="#recent" tabindex="0" role="button">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tone-button-icon"><use xlink:href="#search"></use></svg>
+					{{ 'mdi:search'|icon('iconify', 'o-icon c-emoji-picker-search-button-icon')|safe }}
 				</a>
 			</div>
 		</div>
 		<a class="c-emoji-picker-tone-button" href="#recent" tabindex="0" role="button" data-toggle="menu">
-			<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c.svg" alt="skin tone">
+			{{ 'twemoji:ok-hand'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 		</a>
 		<div class="c-emoji-picker-tone-menu" data-container="menu">
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="">
+				{{ 'twemoji:ok-hand'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Neutral Skin Tone</span>
 			</a>
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c-1f3fb.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="light-skin-tone">
+				{{ 'twemoji:ok-hand-light-skin-tone'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Light Skin Tone</span>
 			</a>
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c-1f3fc.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="medium-light-skin-tone">
+				{{ 'twemoji:ok-hand-medium-light-skin-tone'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Medium Light Skin Tone</span>
 			</a>
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c-1f3fd.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="medium-skin-tone">
+				{{ 'twemoji:ok-hand-medium-skin-tone'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Medium Skin Tone</span>
 			</a>
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c-1f3fe.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="medium-dark-skin-tone">
+				{{ 'twemoji:ok-hand-medium-dark-skin-tone'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Medium Dark Skin Tone</span>
 			</a>
-			<a class="c-emoji-picker-tone-menu-item" href="#">
-				<img class="o-icon c-emoji-picker-tone-button-icon" src="https://twemoji.maxcdn.com/2/svg/1f44c-1f3ff.svg" alt="skin tone">
+			<a class="c-emoji-picker-tone-menu-item" href="#" data-emoji-append="dark-skin-tone">
+				{{ 'twemoji:ok-hand-dark-skin-tone'|icon('iconify', 'o-icon c-emoji-picker-tone-button-icon')|safe }}
 				<span class="c-emoji-picker-tone-menu-text u-sr-only">Dark Skin Tone</span>
 			</a>
 		</div>
 	</div>
 	<div class="c-emoji-picker-body">
 		<div class="c-emoji-picker-area">
-
+			{% for item in emojis %}
+				<h4 class="c-emoji-picker-area-title" id="{{ item.slug }}">{{ item.title }}</h4>
+				<div class="c-emoji-picker-section">
+					{% if item.slug == 'custom' %}
+						{% for emoji in item.emojis %}
+							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
+								{{ emoji.name |icon('svg', 'o-icon c-emoji-picker-section-item-icon')|safe }}
+							</a>
+						{% endfor %}
+					{% else %}
+						{% for emoji in item.emojis %}
+							<a class="c-emoji-picker-section-item" href="#" tabindex="0" role="button" data-emoji-name=":{{ emoji.name | replace(' ','-') | replace(' ','-') | lower }}:" data-emoji-code="{{ emoji.code | replace(' ','-') | lower }}">
+								{{ ('twemoji:' + emoji.name) | replace(' ','-') | lower | icon('iconify', 'o-icon c-emoji-picker-section-item-icon') | safe }}
+							</a>
+						{% endfor %}
+					{% endif %}
+				</div>
+			{% endfor %}
 		</div>
 	</div>
+	<div class="c-emoji-picker-preview">
+		{{ 'twemoji:grinning-face'|icon('iconify', 'o-icon c-emoji-picker-preview-icon')|safe }}<span class="c-emoji-picker-preview-icon">:grinning-face:</span>
+	</div>
 	<nav class="c-emoji-picker-footer">
-		<a class="c-emoji-picker-tab is-active" href="#recent" title="Recent" role="tab" aria-controls="recent">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#time"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#custom" title="Custom" role="tab" aria-controls="custom">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#alien"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#smileys-people" title="Smiles & People" role="tab" aria-controls="smiles-people">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#insert-emoticon"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#animals-nature" title="Animal & Nature" role="tab" aria-controls="animals-nature">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#flower"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#food-drink" title="Food & Drink" role="tab" aria-controls="food-drink">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#food"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#travel-places" title="Travel & Places" role="tab" aria-controls="travel-places">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#plane"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#activities" title="Activities" role="tab" aria-controls="activities">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#soccer"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#objects" title="Objects" role="tab" aria-controls="objects">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#light-bulb"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#symbols" title="Symbols" role="tab" aria-controls="symbols">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#heart"></use></svg>
-		</a>
-		<a class="c-emoji-picker-tab" href="#flags" title="Flags" role="tab" aria-controls="flags">
-			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="o-icon c-emoji-picker-tab-icon"><use xlink:href="#flag"></use></svg>
-		</a>
+		{% for item in emojis %}
+			<a class="c-emoji-picker-tab" href="#{{ item.slug }}" title="{{ item.title }}" role="tab" aria-controls="{{ item.slug }}">
+				{{ item.icon|icon('iconify', 'o-icon c-emoji-picker-tab-icon')|safe }}
+			</a>
+		{% endfor %}
 	</nav>
 </div>

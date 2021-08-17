@@ -1,0 +1,226 @@
+//------------------------------------------------------------------------------
+// @component: Emoji Panel
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$emoji-picker-spacing: $default-spacing !default;
+$emoji-picker-height: 236px !default;
+$emoji-picker-width: 360px !default;
+$emoji-picker-width-sm: 296px !default;
+$emoji-picker-scrollbar-width: 15px !default;
+$emoji-picker-border-radius: 4px !default;
+$emoji-picker-divider-height: 1px !default;
+$emoji-picker-border-height: 4px !default;
+$emoji-picker-emoji-size: $default-height-dense !default;
+$emoji-picker-footer-height: $default-height !default;
+
+// Theme Variables
+$emoji-picker-bg-color: $white !default;
+$emoji-picker-search-bg-color: $default-action-bg !default;
+$emoji-picker-text-color: $gray-400 !default;
+$emoji-picker-preview-bg-color: $gray-100 !default;
+$emoji-picker-icon-color: $default-action-color !default;
+$emoji-picker-icon-hover-color: $default-action-color-hover !default;
+$emoji-picker-border-hover-color: $default-action-color-hover !default;
+$emoji-picker-search-icon-color: $default-action-color !default;
+$emoji-picker-divider-color: rgba(0, 0, 0, 0.125) !default;
+
+//
+// @scss
+.c-emoji-picker {
+	@include shadow(2);
+	width: $emoji-picker-width-sm;
+
+	&-header {
+		@include parent();
+		border-bottom: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		position: relative;
+		align-items: center;
+	}
+
+	&-search {
+
+		@include parent();
+		@include child();
+		background-color: $emoji-picker-search-bg-color;
+		border-radius: $emoji-picker-border-radius;
+		flex-wrap: wrap;
+		padding: ($emoji-picker-spacing * 0.5);
+
+		&-wrap {
+			@include parent();
+			@include child();
+			align-items: center;
+			height: auto;
+			padding: ($emoji-picker-spacing * 1.5);
+			padding-right: 0;
+		}
+
+		&-feild {
+			@include child();
+			background-image: none;
+			width: auto;
+			height: $emoji-picker-emoji-size;
+			padding: ($emoji-picker-spacing * 0.5) ($emoji-picker-spacing * 2);
+
+			&:hover,
+			&:focus {
+				background-image: none;
+				border: none;
+			}
+
+			&-button {
+				color: $emoji-picker-search-icon-color;
+				padding: ($emoji-picker-spacing * 0.5) ($emoji-picker-spacing * 1.5);
+			}
+		}
+	}
+
+	&-tone {
+		&-button {
+			padding: ($emoji-picker-spacing * 2);
+
+			&-icon {
+				border-radius: $emoji-picker-border-radius;
+				width: $emoji-picker-emoji-size;
+				height: $emoji-picker-emoji-size;
+				padding: ($emoji-picker-spacing * 0.5);
+
+				&:hover,
+				&:focus {
+					background-color: $default-action-bg-hover;
+					outline: none;
+				}
+			}
+		}
+
+		&-menu {
+			@include shadow(2);
+			text-align: left;
+			background-color: $emoji-picker-bg-color;
+			border-radius: ($emoji-picker-border-radius / 2);
+			position: absolute;
+			z-index: 999;
+			top: 0;
+			top: 14px;
+			right: 8px;
+			overflow: auto;
+			transition: all 0.2s ease;
+			transform: scale(0);
+			transform-origin: center top;
+
+			&.is-active {
+				transform: scale(1);
+			}
+
+			&-item {
+				display: block;
+				padding: $emoji-picker-spacing;
+
+				&:hover,
+				&:focus {
+					background-color: $default-action-bg-hover;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	&-body {
+		@include parent();
+		@include child();
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	&-area {
+		@include child();
+		overflow-x: hidden;
+		height: $emoji-picker-height;
+
+		&-title {
+			@include type(body2);
+			text-transform: uppercase;
+			background-color: $emoji-picker-bg-color;
+			color: $emoji-picker-text-color;
+			margin: 0;
+			padding: ($emoji-picker-spacing * 1.5);
+
+			&-sticky {
+				background-color: $emoji-picker-bg-color;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				width: calc(100% - 15px);
+			}
+		}
+	}
+
+	&-section {
+		@include parent();
+		background-color: $emoji-picker-bg-color;
+		flex-wrap: wrap;
+		padding: 0 ($emoji-picker-spacing * 1.5);
+
+		&-item {
+			border-radius: $emoji-picker-border-radius;
+			width: $emoji-picker-emoji-size;
+			padding: ($emoji-picker-spacing * 0.5);
+
+			&:hover,
+			&:focus {
+				background-color: $default-action-bg-hover;
+				outline: none;
+			}
+		}
+	}
+
+	&-preview {
+		background-color: $emoji-picker-preview-bg-color;
+		border-top: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		padding: ($emoji-picker-spacing * 1.5);
+
+		&-icon {
+			width: $emoji-picker-emoji-size;
+			margin-right: ($emoji-picker-spacing * 1.5);
+		}
+	}
+
+	&-footer {
+		@include parent();
+		border-top: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		overflow-x: scroll;
+		height: $emoji-picker-footer-height;
+		padding: 0 (($emoji-picker-spacing * 1.5) + 15) 0 ($emoji-picker-spacing * 1.5);
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&-tab {
+		@include parent();
+		border-bottom: $emoji-picker-border-height solid transparent;
+		color: $emoji-picker-icon-color;
+		width: $emoji-picker-emoji-size;
+		height: $emoji-picker-footer-height;
+		padding: ($emoji-picker-spacing * 2) ($emoji-picker-spacing * 0.5) 0;
+
+		&:hover,
+		&.is-active {
+			border-color: $emoji-picker-border-hover-color;
+			color: $emoji-picker-icon-hover-color;
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		width: $emoji-picker-width;
+	}
+}
