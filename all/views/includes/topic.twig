@@ -22,23 +22,23 @@
 			{% if item.type != 'sub' %}
 				{% if item.unapproved %}
 					<a class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-unapproved t-topic-unapproved" href="#" data-tooltip="true" title="{{ lang.unapproved }}">
-						{{ 'alert-decagram-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+						{{ 'mdi:alert-decagram-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					</a>
 				{% endif %}
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-user t-topic-user">
-					{{ 'account-circle-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:account-circle-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					<a class="o-list-secondary-item-link" href="{{ item.author_profile }}" style="color: {{ item.author_color }};">{{ item.author }}</a>
 				</span>
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-time t-topic-time">
-					{{ 'clock-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:clock-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					<time datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
 				</span>
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-views t-topic-views">
-					{{ 'eye-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:file-eye-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					{{ item.views }}
 				</span>
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-replies t-topic-replies">
-					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:comment-text-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					{{ item.replies }}
 				</span>
 				{% if item.pages %}
@@ -48,11 +48,11 @@
 				{% endif %}
 			{% else %}
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-subforum-topics t-topic-subforum-topics">
-					{{ 'file-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					{{ item.topics }}
 				</span>
 				<span class="o-list-secondary-item c-topic-secondary-item t-topic-secondary-item c-topic-subforum-posts t-topic-subforum-posts">
-					{{ 'comment-text-outline'|icon('inline', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
+					{{ 'mdi:comment-text-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-topic-secondary-item-icon t-topic-secondary-item-icon')|safe }}
 					{{ item.posts }}
 				</span>
 			{% endif %}

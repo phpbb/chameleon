@@ -69,13 +69,13 @@
 							<ul class="o-bar-left c-forum-footer-left">
 								<li class="o-bar-item c-forum-footer-item">
 									<span class="o-bar-info c-forum-footer-info">
-										{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
+										{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
 										<span class="o-bar-item-text c-forum-footer-text">{{ item.topics }}</span>
 									</span>
 								</li>
 								<li class="o-bar-item c-forum-footer-item">
 									<span class="o-bar-info c-forum-footer-info">
-										{{ 'comment-text-outline'|icon('inline', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
+										{{ 'mdi:comment-text-outline'|icon('iconify', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
 										<span class="o-bar-item-text c-forum-footer-text">{{ item.posts }}</span>
 									</span>
 								</li>
@@ -85,14 +85,14 @@
 								{% if item.last_subject %}
 								<li class="o-bar-item c-forum-footer-item">
 									<a class="o-bar-action c-forum-footer-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
-										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
+										{{ 'mdi:page-last'|icon('iconify', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
 									</a>
 								</li>
 								{% endif %}
 								{% if item.subs %}
 								<li class="o-bar-item c-forum-footer-item">
 									<a class="o-bar-action c-forum-footer-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
-										{{ 'more-vert'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
+										{{ 'mdi:more-vert'|icon('iconify', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
 									</a>
 									<div class="c-menu-container t-menu-container" data-container="menu">
 										<ul class="c-menu t-menu">
