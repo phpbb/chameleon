@@ -10,56 +10,74 @@
 
 // Layout Variables
 $paging-spacing: $default-spacing !default;
-$paging-border-radius: $default-border-radius !default;
-$paging-icon-size: $default-icon-md !default;
-$paging-height: $default-height-dense;
+$paging-height: $default-height !default;
+$paging-right: 48px !default;
 
 // Theme Variables
-$paging-link-background-color: $default-surface-color !default;
-$paging-link-background-hover-color: $default-surface-alt-color !default;
+$paging-bg-color: $default-action-bg !default;
+$paging-bg-hover-color: $default-primary-color !default;
+$paging-color: $default-action-color !default;
+$paging-hover-color: $default-primary-color !default;
 
 
 //
 // @scss
 .c-paging {
-	@include parent();
-	margin: 0;
+	@include shadow(24);
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	display: inline-flex;
+	margin: 0 auto;
 	padding: 0;
-	list-style: none;
-	align-content: center;
 
 	&-item {
+		line-height: 0;
+		flex-shrink: 1;
 		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
-		&:first-of-type .c-paging-link {
-			border-top-left-radius: $paging-border-radius;
-			border-bottom-left-radius: $paging-border-radius;
+	&-spacer:hover {
+		background-color: $paging-bg-color;
+	}
+
+	&-action {
+		@include type(subtitle1, $lh: 1.5, $fw: 700);
+		@include center($paging-height);
+		background-color: $paging-bg-color;
+		color: $paging-color;
+		position: relative;
+		overflow: hidden;
+		padding: ($paging-spacing * 2);
+		transform: translate3d(0, 0, 0);
+
+		&:hover,
+		&:focus {
+			background-color: $paging-bg-hover-color;
+			color: $paging-hover-color;
 		}
 
-		&:last-of-type .c-paging-link {
-			border-top-right-radius: $paging-border-radius;
-			border-bottom-right-radius: $paging-border-radius;
+		&-text + &-icon {
+			margin-left: $paging-spacing;
+		}
+
+		&-icon + &-text {
+			margin-right: $paging-spacing;
 		}
 	}
 
-	&-link {
-		@include type(subtitle1);
-		background: $paging-link-background-color;
-		@include center($paging-height);
+	&-menu {
+		margin-top: $paging-height;
+	}
+
+	&-form {
 		margin: 0;
-		padding: $paging-spacing ($paging-spacing * 2);
+	}
 
-		&:hover {
-			text-decoration: none;
-			background: $paging-link-background-hover-color;
-			border-radius: $paging-border-radius;
-			transition: 0.5s;
-		}
-
-		&-icon {
-			width: $paging-icon-size;
-			height: $paging-icon-size;
-			margin: (-$paging-spacing / 2) -($paging-spacing * 2) 0;
-		}
+	@media (min-width: $bp-sm) {
+		right: $paging-right;
 	}
 }

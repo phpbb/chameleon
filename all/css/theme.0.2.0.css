@@ -439,53 +439,72 @@ select:focus::-ms-value {
 }
 
 .c-paging {
-	display: flex;
-	flex-direction: row;
-	margin: 0;
+	box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	display: inline-flex;
+	margin: 0 auto;
 	padding: 0;
-	list-style: none;
-	align-content: center;
+	transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+	will-change: box-shadow;
 }
 
 .c-paging-item {
+	line-height: 0;
+	flex-shrink: 1;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.c-paging-item:first-of-type .c-paging-link {
-	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px;
+.c-paging-spacer:hover {
+	background-color: #343a40;
 }
 
-.c-paging-item:last-of-type .c-paging-link {
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px;
-}
-
-.c-paging-link {
+.c-paging-action {
 	font-size: 1rem;
-	font-weight: 300;
-	line-height: 1.75rem;
+	font-weight: 700;
+	line-height: 1.5;
 	letter-spacing: 0.009375em;
-	background: #343a40;
+	background-color: #343a40;
+	color: #868e96;
+	position: relative;
 	display: inline-flex;
+	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	height: 32px;
+	height: 56px;
+	padding: 1rem;
+	transform: translate3d(0, 0, 0);
+}
+
+.c-paging-action:hover, .c-paging-action:focus {
+	background-color: #008dff;
+	color: #008dff;
+}
+
+.c-paging-action-text + .c-paging-action-icon {
+	margin-left: 0.5rem;
+}
+
+.c-paging-action-icon + .c-paging-action-text {
+	margin-right: 0.5rem;
+}
+
+.c-paging-menu {
+	margin-top: 3.5rem;
+}
+
+.c-paging-form {
 	margin: 0;
-	padding: 0.5rem 1rem;
 }
 
-.c-paging-link:hover {
-	text-decoration: none;
-	background: #495057;
-	border-radius: 2px;
-	transition: 0.5s;
-}
-
-.c-paging-link-icon {
-	width: 24px;
-	height: 24px;
-	margin: -1.25rem 0;
+@media (min-width: 576px) {
+	.c-paging {
+		right: 48px;
+	}
 }
 
 .c-paging-fixed {
@@ -532,7 +551,7 @@ select:focus::-ms-value {
 
 .c-paging-fixed-action:hover, .c-paging-fixed-action:focus {
 	background-color: #008dff;
-	color: #ffffff;
+	color: #008dff;
 }
 
 .c-paging-fixed-action-text + .c-paging-fixed-action-icon {

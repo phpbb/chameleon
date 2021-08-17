@@ -10,13 +10,121 @@
 			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.topic_tools }}">
 				{{ 'mdi:wrench-outline'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
-			<div class="c-menu-container t-menu-container" data-container="menu"></div>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:checkbox-blank-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_subscribe }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:bookmark-plus-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_bookmark }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:update'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_bump }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:send-circle-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_email }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'ic:outline-print'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_print }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</li>
 		<li class="o-bar-item c-toolbar-item t-toolbar-item">
 			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.mod_tools }}">
 				{{ 'gavel'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
-			<div class="c-menu-container t-menu-container" data-container="menu"></div>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-lock-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_lock }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_unlock }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'file-delete-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_delete }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-send-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_move }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-swap-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_split }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-replace-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_merge }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-multiple-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_copy }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:comment-arrow-right-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_move_posts }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-star-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_sticky }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'announce'|icon('inline', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_announce }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_normal }}</span>
+						</a>
+					</li>
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-item" href="">
+							{{ 'mdi:file-clock-outline'|icon('iconify', 'o-icon c-menu-link-icon t-menu-topic-icon')|safe }}
+							<span class="c-menu-text t-topic-text">{{ lang.topic_logs }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</li>
 		<li class="o-bar-item c-toolbar-item t-toolbar-item">
 			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
