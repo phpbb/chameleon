@@ -2,35 +2,24 @@
 
 const fs = require('fs');
 const del = require('del');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const moment = require('moment');
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const cssnano = require('gulp-cssnano');
-const postcss = require('gulp-postcss');
-const stylefmt = require('gulp-stylefmt');
 const nunjucks = require('gulp-nunjucks-render');
+const beautify = require('gulp-beautify').html;
+const removeLines = require('gulp-remove-empty-lines');
 const merge = require('gulp-merge-json');
+const postcss = require('gulp-postcss');
 const sorting = require('postcss-sorting');
 const torem = require('postcss-pxtorem');
-const moment = require('moment');
-const htmlBeautify = require('gulp-html-beautify');
-const removeLines = require('gulp-remove-empty-lines');
 const sortOrder = require('./.postcss-sorting.json');
 const pkg = require('./package.json');
 
 // Config
-const AUTOPREFIXER_BROWSERS = [
-	'ie >= 11',
-	'edge >= 12',
-	'ff >= 38',
-	'chrome >= 35',
-	'safari >= 8',
-	'opera >= 35',
-	'ios >= 8',
-];
-
 const theme = '';
 
 const build = {
@@ -40,6 +29,16 @@ const build = {
 	data: './tests/mock/',
 	html: './tests/views/',
 };
+
+const AUTOPREFIXER_BROWSERS = [
+	'ie >= 11',
+	'edge >= 12',
+	'ff >= 38',
+	'chrome >= 35',
+	'safari >= 8',
+	'opera >= 35',
+	'ios >= 8',
+];
 
 if (theme) {
 	build.css = './' + theme + '/css';
@@ -102,9 +101,9 @@ gulp.task('css', () => {
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:'),
 		}))
-		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 		.pipe(
 			postcss([
+				autoprefixer(AUTOPREFIXER_BROWSERS),
 				sorting(sortOrder),
 				torem({
 					rootValue: 16,
@@ -123,14 +122,16 @@ gulp.task('css', () => {
 						'padding-top',
 						'padding-bottom',
 					],
-					selectorBlackList: [],
+					selectorBlackList: [
+						'c-post-title',
+						'c-copy',
+					],
 					replace: true,
 					mediaQuery: false,
 					minPixelValue: 0,
 				}),
 			])
 		)
-		.pipe(stylefmt())
 		.pipe(rename({
 			suffix: '.' + pkg.version,
 			extname: '.css',
@@ -146,6 +147,25 @@ gulp.task('clean', () => {
 	del([ build.html, ]);
 });
 
+gulp.task('minify', gulp.series('css', () => {
+	const css = gulp
+		.src(build.css + '/*.' + pkg.version + '.css')
+		.pipe(sourcemaps.init())
+		.pipe(
+			postcss([
+				cssnano(),
+			])
+		)
+		.pipe(rename({
+			suffix: '.min',
+			extname: '.css',
+		}))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(build.css));
+
+	return css;
+}));
+
 gulp.task('data', () => {
 	const json = gulp
 		.src(build.data + '*.json')
@@ -156,21 +176,6 @@ gulp.task('data', () => {
 
 	return json;
 });
-
-gulp.task('minify', gulp.series('css', () => {
-	const css = gulp
-		.src(build.css + '/*.' + pkg.version + '.css')
-		.pipe(sourcemaps.init())
-		.pipe(cssnano())
-		.pipe(rename({
-			suffix: '.min',
-			extname: '.css',
-		}))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(build.css));
-
-	return css;
-}));
 
 gulp.task('twig', gulp.series('data', () => {
 	db.version = pkg.version;
@@ -183,27 +188,21 @@ gulp.task('twig', gulp.series('data', () => {
 			autoescape: false,
 		}))
 		/* eslint-disable camelcase */
-		.pipe(htmlBeautify({
+		.pipe(beautify({
 			indent_size: 1,
 			indent_char: '	',
-			eol: '\n',
-			indent_level: 0,
 			indent_with_tabs: false,
+			eol: '\n',
+			end_with_newline: false,
 			preserve_newlines: true,
 			max_preserve_newlines: 10,
-			jslint_happy: false,
-			space_after_anon_function: false,
+			indent_inner_html: true,
 			brace_style: 'collapse',
-			keep_array_indentation: false,
-			keep_function_indentation: false,
-			space_before_conditional: true,
-			break_chained_methods: false,
-			eval_code: false,
-			unescape_strings: false,
+			indent_scripts: 'normal',
 			wrap_line_length: 0,
 			wrap_attributes: 'auto',
-			wrap_attributes_indent_size: 4,
-			end_with_newline: false,
+			wrap_attributes_indent_size: 1,
+			templating: 'django',
 		}))
 		/* eslint-enable camelcase */
 		.pipe(removeLines())

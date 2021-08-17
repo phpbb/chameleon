@@ -734,13 +734,13 @@ select:focus::-ms-value {
 }
 
 .c-post-fluid .c-post-title {
-	font-size: calc(24PX + (36 - 24) * ( (100vw - 400PX) / ( 1100 - 400) ));
-	line-height: calc(36PX + (48 - 36) * ( (100vw - 400PX) / ( 1100 - 400) ));
+	font-size: calc(24px + 12 * ( (100vw - 400px) / 700 ));
+	line-height: calc(36px + 12 * ( (100vw - 400px) / 700 ));
 }
 
 .c-post-fluid .c-copy {
-	font-size: calc(14PX + (21 - 14) * ( (100vw - 400PX) / ( 1100 - 400) ));
-	line-height: calc(24PX + (36 - 24) * ( (100vw - 400PX) / ( 1100 - 400) ));
+	font-size: calc(14px + 7 * ( (100vw - 400px) / 700 ));
+	line-height: calc(24px + 12 * ( (100vw - 400px) / 700 ));
 }
 
 .c-profile {

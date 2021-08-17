@@ -16,6 +16,8 @@
 //
 // @scss
 @function fluid($mn, $mx, $sm, $lg) {
-	$val: calc(#{$mn}PX + (#{$mx} - #{$mn}) * ( (100vw - #{$sm}PX) / ( #{$lg} - #{$sm}) ));
+	$g1: ($mx - $mn);
+	$g2: ($lg - $sm);
+	$val: calc(#{$mn}px + #{$g1} * ( (100vw - #{$sm}px) / #{$g2} ));
 	@return $val;
 }
