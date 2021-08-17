@@ -6,8 +6,7 @@
 	"ignoreFiles": [
 		"./src/scss/generic/_normalize.scss",
 		"./src/scss/settings/*.scss",
-		"./docs/**.md",
-		"./docs/documentation/*.html"
+		".test/**/*"
 	],
 	"rules": {
 		"scss/at-extend-no-missing-placeholder": true,
