@@ -18,13 +18,14 @@ $drawer-opacity-54: $default-opacity-54 !default;
 
 
 // Theme Variables
-$drawer-bg-color: $default-action-bg !default;
-$drawer-bg-hover-color: $default-action-bg-hover !default;
-$drawer-bg-sub-color: rgba($black, 0.01) !default;
+$drawer-bg-color: $default-background-color !default;
+$drawer-bg-hover-color: $default-background-alt-color !default;
+$drawer-bg-sub-color: $default-surface-color !default;
+$drawer-bg-sub-hover-color: $default-surface-hover-color !default;
 $drawer-text-color: $default-action-color !default;
 $drawer-icon-color: $default-action-color !default;
 $drawer-icon-hover-color: $default-action-color-hover !default;
-$drawer-border-color: rgba($black, 0.125) !default;
+$drawer-border-color: $default-border-color !default;
 
 
 //
@@ -88,6 +89,8 @@ $drawer-border-color: rgba($black, 0.125) !default;
 	}
 
 	&-menu {
+		border-top: $drawer-border-height solid $drawer-border-color;
+		border-bottom: $drawer-border-height solid $drawer-border-color;
 		display: none;
 		margin: 0;
 		padding: 0;
@@ -99,12 +102,6 @@ $drawer-border-color: rgba($black, 0.125) !default;
 			display: block;
 			transform: scaleY(1);
 		}
-	}
-
-	&-item > &-menu {
-		background-color: rgba(0, 0, 0, 0.01);
-		border-top: $drawer-border-height solid $drawer-border-color;
-		border-bottom: $drawer-border-height solid $drawer-border-color;
 	}
 
 	&-divider {
@@ -145,7 +142,7 @@ $drawer-border-color: rgba($black, 0.125) !default;
 			display: block;
 			width: 100%;
 			height: 100%;
-			content: "";
+			content: '';
 			transition: transform 0.5s, opacity 1s;
 			transform: scale(10, 10);
 			pointer-events: none;
@@ -164,6 +161,15 @@ $drawer-border-color: rgba($black, 0.125) !default;
 			.c-drawer-link-icon {
 				color: $drawer-icon-hover-color;
 			}
+		}
+	}
+
+	&-menu &-link {
+		background-color: $drawer-bg-sub-color;
+
+		&:hover,
+		&:focus {
+			background-color: $drawer-bg-sub-hover-color;
 		}
 	}
 }

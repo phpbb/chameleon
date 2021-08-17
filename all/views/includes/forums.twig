@@ -66,26 +66,26 @@
 							</div>
 						</a>
 						<div class="o-bar c-forum-footer t-forum-footer">
-							<ul class="o-bar-left">
-								<li class="o-bar-item">
-									<span class="o-bar-info">
-										{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
-										<span class="o-bar-item-text">{{ item.topics }}</span>
+							<ul class="o-bar-left c-forum-footer-left">
+								<li class="o-bar-item c-forum-footer-item">
+									<span class="o-bar-info c-forum-footer-info">
+										{{ 'file-outline'|icon('inline', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
+										<span class="o-bar-item-text c-forum-footer-text">{{ item.topics }}</span>
 									</span>
 								</li>
-								<li class="o-bar-item">
-									<span class="o-bar-info">
-										{{ 'comment-text-outline'|icon('inline', 'o-icon o-bar-info-icon')|safe }}
-										<span class="o-bar-item-text">{{ item.posts }}</span>
+								<li class="o-bar-item c-forum-footer-item">
+									<span class="o-bar-info c-forum-footer-info">
+										{{ 'comment-text-outline'|icon('inline', 'o-icon o-bar-info-icon c-forum-footer-info-icon')|safe }}
+										<span class="o-bar-item-text c-forum-footer-text">{{ item.posts }}</span>
 									</span>
 								</li>
 							</ul>
 							{% if item.type !== 'link' %}
-							<ul class="o-bar-right">
+							<ul class="o-bar-right c-forum-footer-right">
 								{% if item.subs %}
-								<li class="o-bar-item">
-									<a class="o-bar-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
-										{{ 'more-vert'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
+								<li class="o-bar-item c-forum-footer-item">
+									<a class="o-bar-action c-forum-footer-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
+										{{ 'more-vert'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
 									</a>
 									<div class="c-menu-container t-menu-container" data-container="menu">
 										<ul class="c-menu t-menu">
@@ -102,9 +102,9 @@
 								</li>
 								{% endif %}
 								{% if item.last_subject %}
-								<li class="o-bar-item">
-									<a class="o-bar-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
-										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon')|safe }}
+								<li class="o-bar-item c-forum-footer-item">
+							<a class="o-bar-action c-forum-footer-action" href="" {% if item.last_color %} style="color: {{ item.last_color }}" {% endif %}data-tooltip="true" title="{{ item.last_subject }}, by {{ item.last_author }}, <br>{{ item.last_time|moment("YYYYMMDD", true) }}">
+										{{ 'page-last'|icon('inline', 'o-icon o-bar-action-icon c-forum-footer-action-icon')|safe }}
 									</a>
 								</li>
 								{% endif %}

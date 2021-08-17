@@ -40,6 +40,7 @@
 					<ul class="c-drawer-menu t-drawer-menu" data-container="drawer-menu">
 						<li class="c-drawer-item t-drawer-item">
 							<a class="c-drawer-link t-drawer-link">
+								<span class="iconify o-icon o-icon-src-mdi o-icon c-drawer-link-icon t-drawer-link-icon" data-icon="mdi:gauge" data-inline="false" aria-hidden="false"></span>
 								<span class="c-drawer-link-text t-drawer-link-text">Forum Overview</span>
 							</a>
 						</li>
@@ -61,6 +62,7 @@
 						</li>
 						<li class="c-drawer-item t-drawer-item">
 							<a class="c-drawer-link t-drawer-link">
+								<span class="iconify o-icon o-icon-src-mdi o-icon c-drawer-link-icon t-drawer-link-icon" data-icon="mdi:account-multiple-outline" data-inline="false" aria-hidden="false"></span>
 								<span class="c-drawer-link-text t-drawer-link-text">Groups</span>
 							</a>
 						</li>
@@ -117,11 +119,13 @@
 						</li>
 						<li class="c-drawer-item t-drawer-item">
 							<a class="c-drawer-link t-drawer-link">
+								<span class="iconify o-icon o-icon-src-mdi o-icon c-drawer-link-icon t-drawer-link-icon" data-icon="mdi:clipboard-text-outline" data-inline="false" aria-hidden="false"></span>
 								<span class="c-drawer-link-text t-drawer-link-text">Logs</span>
 							</a>
 						</li>
 						<li class="c-drawer-item t-drawer-item">
 							<a class="c-drawer-link t-drawer-link">
+								<span class="iconify o-icon o-icon-src-mdi o-icon c-drawer-link-icon t-drawer-link-icon" data-icon="mdi:cancel" data-inline="false" aria-hidden="false"></span>
 								<span class="c-drawer-link-text t-drawer-link-text">Bans</span>
 							</a>
 						</li>
@@ -618,7 +622,7 @@
 						<div class="c-emoji-picker-header">
 							<div class="c-emoji-picker-search-wrap">
 								<div class="c-emoji-picker-search">
-									<input class="c-emoji-picker-search-feild" type="text" spellcheck="false" placeholder=":innocent:" value="">
+									<input class="c-emoji-picker-search-feild" type="text" spellcheck="false" placeholder=":innocent:" value="" data-emoji-filter="input">
 									<a class="c-emoji-picker-search-feild-button" href="#recent" tabindex="0" role="button">
 										<span class="iconify o-icon o-icon-src-mdi o-icon c-emoji-picker-search-button-icon" data-icon="mdi:search" data-inline="false" aria-hidden="false"></span>
 									</a>
@@ -5839,8 +5843,8 @@
 						<div class="c-emoji-picker-preview" data-emoji-preview="container">
 							<span class="iconify o-icon o-icon-src-twemoji o-icon c-emoji-picker-preview-icon" data-icon="twemoji:grinning-face" data-inline="false" aria-hidden="false"></span><span class="c-emoji-picker-preview-icon">:grinning-face:</span>
 						</div>
-						<nav class="c-emoji-picker-footer">
-							<a class="c-emoji-picker-tab" href="#recent" title="Frequently Used" role="tab" aria-controls="recent">
+						<nav class="c-emoji-picker-footer" data-toggle="tabs">
+							<a class="c-emoji-picker-tab is-active" href="#recent" title="Frequently Used" role="tab" aria-controls="recent">
 								<span class="iconify o-icon o-icon-src-mdi o-icon c-emoji-picker-tab-icon" data-icon="mdi:clock-outline" data-inline="false" aria-hidden="false"></span>
 							</a>
 							<a class="c-emoji-picker-tab" href="#custom" title="Custom" role="tab" aria-controls="custom">

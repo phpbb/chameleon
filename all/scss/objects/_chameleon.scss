@@ -12,10 +12,10 @@
 // Layout Variables
 
 // Variables
-$o-bg-color: $default-action-bg !default;
+$o-bg-color: $default-surface-color !default;
 $o-search-bg-color: $default-background-color !default;
-$o-bg-hover-color: $default-action-bg-hover !default;
-$o-color: $default-action-color !default;
+$o-bg-hover-color: $default-surface-hover-color !default;
+$o-color: $default-surface-item-color !default;
 $o-user-title-color: $default-background-item-color !default;
 $o-alt-color: darken($o-bg-color, 8%) !default;
 $o-disabled-color: lighten($o-color, 8%) !default;

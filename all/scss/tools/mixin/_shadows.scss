@@ -115,24 +115,22 @@ $shadow-ambient-elevation: (
 //
 // @scss
 @mixin shadow($depth, $change: false) {
-	@if $mode == light {
-		$shadow-umbra-depth: map-get($shadow-umbra-elevation, $depth);
-		$shadow-penumbra-depth: map-get($shadow-penumbra-elevation, $depth);
-		$shadow-ambient-depth: map-get($shadow-ambient-elevation, $depth);
+	$shadow-umbra-depth: map-get($shadow-umbra-elevation, $depth);
+	$shadow-penumbra-depth: map-get($shadow-penumbra-elevation, $depth);
+	$shadow-ambient-depth: map-get($shadow-ambient-elevation, $depth);
 
-		$shadow-umbra-color: rgba($shadow-color, $shadow-umbra-opacity);
-		$shadow-penumbra-color: rgba($shadow-color, $shadow-penumbra-opacity);
-		$shadow-ambient-color: rgba($shadow-color, $shadow-ambient-opacity);
+	$shadow-umbra-color: rgba($shadow-color, $shadow-umbra-opacity);
+	$shadow-penumbra-color: rgba($shadow-color, $shadow-penumbra-opacity);
+	$shadow-ambient-color: rgba($shadow-color, $shadow-ambient-opacity);
 
-		// Focus Shadow
-		box-shadow:
-			#{'#{$shadow-umbra-depth} #{$shadow-umbra-color}'},
-			#{'#{$shadow-penumbra-depth} #{$shadow-penumbra-color}'},
-			#{'#{$shadow-ambient-depth} #{$shadow-ambient-color}'};
+	// Focus Shadow
+	box-shadow:
+		#{'#{$shadow-umbra-depth} #{$shadow-umbra-color}'},
+		#{'#{$shadow-penumbra-depth} #{$shadow-penumbra-color}'},
+		#{'#{$shadow-ambient-depth} #{$shadow-ambient-color}'};
 
-		@if not ($change) {
-			transition: #{$shadow-elevation-property} #{$shadow-duration} #{$shadow-easing};
-			will-change: $shadow-elevation-property;
-		}
+	@if not ($change) {
+		transition: #{$shadow-elevation-property} #{$shadow-duration} #{$shadow-easing};
+		will-change: $shadow-elevation-property;
 	}
 }

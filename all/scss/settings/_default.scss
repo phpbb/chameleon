@@ -8,7 +8,7 @@
 //
 // @settings
 
-$mode: dark;
+$mode: light;
 
 $default-font-size:             16px !default;
 $default-line-height:           24px !default;
@@ -114,7 +114,7 @@ $defaults: (
 			'color': $gray-800,
 			'color-hover': $gray-700,
 			'alt': $gray-700,
-			'alt-hover': $gray-500,
+			'alt-hover': $gray-800,
 			'item': $gray-500
 		),
 		'light': (
@@ -148,88 +148,88 @@ $defaults: (
 	$default-background-item-color-inverted:   mode('background', 'light', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                    mode('surface', 'dark', 'color');
-	$default-surface-hover-color:              mode('surface', 'dark', 'color-hover');
-	$default-surface-alt-color:                mode('surface', 'dark', 'alt');
-	$default-surface-alt-hover-color:          mode('surface', 'dark', 'alt-hover');
-	$default-surface-item-color:               mode('surface', 'dark', 'item');
+	$default-surface-color:                    	mode('surface', 'dark', 'color');
+	$default-surface-hover-color:              	mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color:                	mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color:          	mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color:               	mode('surface', 'dark', 'item');
 
-	$default-surface-color-inverted:           mode('surface', 'light', 'color');
-	$default-surface-hover-color-inverted:     mode('surface', 'light', 'color-hover');
-	$default-surface-alt-color-inverted:       mode('surface', 'light', 'alt');
-	$default-surface-alt-hover-color-inverted: mode('surface', 'light', 'alt-hover');
-	$default-surface-item-color-inverted:      mode('surface', 'light', 'item');
+	$default-surface-color-inverted:           	mode('surface', 'light', 'color');
+	$default-surface-hover-color-inverted:     	mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color-inverted:       	mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color-inverted: 	mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color-inverted:      	mode('surface', 'light', 'item');
 
 	// color scheme Border
-	$default-border-color:                     mode('border', 'dark', 'color');
-	$default-border-hover-color:               mode('border', 'dark', 'color-hover');
-	$default-border-color-inverted:            mode('border', 'light', 'color');
-	$default-border-hover-color-inverted:      mode('border', 'light', 'color-hover');
+	$default-border-color:                     	mode('border', 'dark', 'color');
+	$default-border-hover-color:               	mode('border', 'dark', 'color-hover');
+	$default-border-color-inverted:            	mode('border', 'light', 'color');
+	$default-border-hover-color-inverted:      	mode('border', 'light', 'color-hover');
 
 	// other
-	$default-page-color:					   mode('background', 'dark', 'color');
+	$default-page-color:					   	$gray-950;
 } @else if $mode == light {
 	// color scheme Background
-	$default-background-color:                 mode('background', 'light', 'color');
-	$default-background-alt-color:             mode('background', 'light', 'alt');
-	$default-background-item-color:            mode('background', 'light', 'item');
+	$default-background-color:                 	mode('background', 'light', 'color');
+	$default-background-alt-color:             	mode('background', 'light', 'alt');
+	$default-background-item-color:            	mode('background', 'light', 'item');
 
-	$default-background-color-inverted:        mode('background', 'dark', 'color');
-	$default-background-alt-color-inverted:    mode('background', 'dark', 'alt');
-	$default-background-item-color-inverted:   mode('background', 'dark', 'item');
+	$default-background-color-inverted:        	mode('background', 'dark', 'color');
+	$default-background-alt-color-inverted:    	mode('background', 'dark', 'alt');
+	$default-background-item-color-inverted:   	mode('background', 'dark', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                    mode('surface', 'light', 'color');
-	$default-surface-hover-color:              mode('surface', 'light', 'color-hover');
-	$default-surface-alt-color:                mode('surface', 'light', 'alt');
-	$default-surface-alt-hover-color:          mode('surface', 'light', 'alt-hover');
-	$default-surface-item-color:               mode('surface', 'light', 'item');
+	$default-surface-color:                    	mode('surface', 'light', 'color');
+	$default-surface-hover-color:              	mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color:                	mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color:          	mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color:               	mode('surface', 'light', 'item');
 
-	$default-surface-color-inverted:           mode('surface', 'dark', 'color');
-	$default-surface-hover-color-inverted:     mode('surface', 'dark', 'color-hover');
-	$default-surface-alt-color-inverted:       mode('surface', 'dark', 'alt');
-	$default-surface-alt-hover-color-inverted: mode('surface', 'dark', 'alt-hover');
-	$default-surface-item-color-inverted:      mode('surface', 'dark', 'item');
+	$default-surface-color-inverted:           	mode('surface', 'dark', 'color');
+	$default-surface-hover-color-inverted:     	mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color-inverted:       	mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color-inverted: 	mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color-inverted:      	mode('surface', 'dark', 'item');
 
 	// color scheme Border
-	$default-border-color:                     mode('border', 'light', 'color');
-	$default-border-hover-color:               mode('border', 'light', 'color-hover');
-	$default-border-color-inverted:            mode('border', 'dark', 'color');
-	$default-border-hover-color-inverted:      mode('border', 'dark', 'color-hover');
+	$default-border-color:                     	mode('border', 'light', 'color');
+	$default-border-hover-color:               	mode('border', 'light', 'color-hover');
+	$default-border-color-inverted:            	mode('border', 'dark', 'color');
+	$default-border-hover-color-inverted:      	mode('border', 'dark', 'color-hover');
 
 	// other
-	$default-page-color:					 $white;
+	$default-page-color:					 	$white;
 } @else if $mode == null {
 	// color scheme Background
-	$default-background-color:                 mode('background', 'light', 'color');
-	$default-background-alt-color:             mode('background', 'light', 'alt');
-	$default-background-item-color:            mode('background', 'light', 'item');
+	$default-background-color:                 	mode('background', 'light', 'color');
+	$default-background-alt-color:             	mode('background', 'light', 'alt');
+	$default-background-item-color:            	mode('background', 'light', 'item');
 
-	$default-background-color-inverted:        mode('background', 'dark', 'color');
-	$default-background-alt-color-inverted:    mode('background', 'dark', 'alt');
-	$default-background-item-color-inverted:   mode('background', 'dark', 'item');
+	$default-background-color-inverted:        	mode('background', 'dark', 'color');
+	$default-background-alt-color-inverted:    	mode('background', 'dark', 'alt');
+	$default-background-item-color-inverted:   	mode('background', 'dark', 'item');
 
 	// color scheme Surface
-	$default-surface-color:                    mode('surface', 'light', 'color');
-	$default-surface-hover-color:              mode('surface', 'light', 'color-hover');
-	$default-surface-alt-color:                mode('surface', 'light', 'alt');
-	$default-surface-alt-hover-color:          mode('surface', 'light', 'alt-hover');
-	$default-surface-item-color:               mode('surface', 'light', 'item');
+	$default-surface-color:                    	mode('surface', 'light', 'color');
+	$default-surface-hover-color:              	mode('surface', 'light', 'color-hover');
+	$default-surface-alt-color:                	mode('surface', 'light', 'alt');
+	$default-surface-alt-hover-color:          	mode('surface', 'light', 'alt-hover');
+	$default-surface-item-color:               	mode('surface', 'light', 'item');
 
-	$default-surface-color-inverted:           mode('surface', 'dark', 'color');
-	$default-surface-hover-color-inverted:     mode('surface', 'dark', 'color-hover');
-	$default-surface-alt-color-inverted:       mode('surface', 'dark', 'alt');
-	$default-surface-alt-hover-color-inverted: mode('surface', 'dark', 'alt-hover');
-	$default-surface-item-color-inverted:      mode('surface', 'dark', 'item');
+	$default-surface-color-inverted:           	mode('surface', 'dark', 'color');
+	$default-surface-hover-color-inverted:     	mode('surface', 'dark', 'color-hover');
+	$default-surface-alt-color-inverted:       	mode('surface', 'dark', 'alt');
+	$default-surface-alt-hover-color-inverted: 	mode('surface', 'dark', 'alt-hover');
+	$default-surface-item-color-inverted:      	mode('surface', 'dark', 'item');
 
 	// color scheme Border
-	$default-border-color:                     mode('border', 'light', 'color');
-	$default-border-hover-color:               mode('border', 'light', 'color-hover');
-	$default-border-color-inverted:            mode('border', 'dark', 'color');
-	$default-border-hover-color-inverted:      mode('border', 'dark', 'color-hover');
+	$default-border-color:                     	mode('border', 'light', 'color');
+	$default-border-hover-color:               	mode('border', 'light', 'color-hover');
+	$default-border-color-inverted:            	mode('border', 'dark', 'color');
+	$default-border-hover-color-inverted:      	mode('border', 'dark', 'color-hover');
 
 	// other
-	$default-page-color:					 $white;
+	$default-page-color:					 	$white;
 }
 
 $default-disabled-color: $gray-500 !default;

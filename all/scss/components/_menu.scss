@@ -23,9 +23,9 @@ $menu-opacity-12: $default-opacity-12 !default;
 // Theme Variables
 $menu-background-color: $default-background-color !default;
 $menu-link-color: $default-background-item-color !default;
-$menu-action-icon-color: $default-action-icon-color !default;
+$menu-action-icon-color: $default-surface-item-color !default;
 $menu-action-color-hover: $default-action-color-hover !default;
-$menu-action-bg: $default-action-bg-hover !default;
+$menu-action-bg: $default-surface-alt-color !default;
 $menu-divider-color: $default-border-color !default;
 
 
@@ -37,7 +37,7 @@ $menu-divider-color: $default-border-color !default;
 	list-style: none;
 
 	&-container {
-		@include shadow(1);
+		@include shadow(2);
 		text-align: left;
 		background-color: $menu-background-color;
 		border-radius: $menu-border-radius;

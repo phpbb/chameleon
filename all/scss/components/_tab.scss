@@ -18,11 +18,11 @@ $tab-icon-size: $default-icon-md !default;
 
 
 // Theme Variables
-$tab-bg-color: $default-action-bg !default;
+$tab-bg-color: $default-surface-color !default;
 $tab-pane-bg-color: $default-background-color !default;
-$tab-bg-hover-color: $default-action-bg-hover !default;
-$tab-text-color: $default-action-color !default;
-$tab-icon-color: $default-action-color !default;
+$tab-bg-hover-color: $default-surface-alt-color !default;
+$tab-text-color: $default-surface-item-color !default;
+$tab-icon-color: $default-surface-item-color !default;
 $tab-icon-hover-color: $default-action-color-hover !default;
 $tab-border-type: solid !default;
 $tab-border-color: $default-border-color !default;
