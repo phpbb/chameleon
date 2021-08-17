@@ -131,6 +131,13 @@ $emoji-picker-divider-color: $default-border-color !default;
 				display: block;
 				padding: $emoji-picker-spacing;
 
+				&-icon {
+					border-radius: $emoji-picker-border-radius;
+					width: $emoji-picker-emoji-size;
+					height: $emoji-picker-emoji-size;
+					padding: ($emoji-picker-spacing * 0.5);
+				}
+
 				&:hover,
 				&:focus {
 					background-color: $default-action-bg-hover;

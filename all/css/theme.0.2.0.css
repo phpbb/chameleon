@@ -323,6 +323,13 @@ select:focus::-ms-value {
 	padding: 0.5rem;
 }
 
+.c-emoji-picker-tone-menu-item-icon {
+	border-radius: 4px;
+	width: 32px;
+	height: 32px;
+	padding: 0.25rem;
+}
+
 .c-emoji-picker-tone-menu-item:hover, .c-emoji-picker-tone-menu-item:focus {
 	background-color: #e9ecef;
 	outline: none;
