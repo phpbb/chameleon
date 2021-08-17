@@ -61,7 +61,7 @@
 		"ios >= 12.4"
 	],
 	"scripts": {
-		"test": "eslint all/js/ && gulp test && stylelint --config ./.stylelintrc './**/*.scss'"
+		"test": "eslint all/js/ && gulp test && stylelint --config ./.stylelintrc './**/*.scss' && colorguard './**/*.css'"
 	},
 	"repository": {
 		"type": "git",
