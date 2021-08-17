@@ -130,7 +130,6 @@ $forum-action-color: $default-action-icon-color !default;
 	&-deck {
 		display: block;
 		transition: 0.35s ease-in-out;
-		transform: scaleY(1);
 		transform-origin: center top;
 
 		&.is-collapsed {
