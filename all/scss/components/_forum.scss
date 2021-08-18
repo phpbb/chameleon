@@ -30,7 +30,6 @@ $forum-action-color: $default-action-icon-color !default;
 //
 // @scss
 .c-forum {
-	@include parent(column);
 	@include shadow(2);
 	background-color: $forum-background-color;
 	border-radius: $forum-border-radius;
@@ -38,15 +37,13 @@ $forum-action-color: $default-action-icon-color !default;
 	margin-bottom: ($forum-spacing * 2);
 
 	&-body {
-		flex: 1 1 auto;
+		display: grid;
 		padding-bottom: ($forum-spacing * 2);
+		grid-template-columns: ($default-icon-lg + ($forum-spacing * 4)) auto;
 	}
 
 	&-media {
-		@include parent(column);
-		@include child();
-		float: left;
-		margin: ($forum-spacing * 2) ($forum-spacing * 2) 0;
+		margin: ($forum-spacing * 2);
 	}
 
 	&-media-icon {
@@ -62,7 +59,6 @@ $forum-action-color: $default-action-icon-color !default;
 	}
 
 	&-info {
-		@include parent(column);
 		margin-right: ($forum-spacing * 2);
 	}
 
@@ -141,22 +137,9 @@ $forum-action-color: $default-action-icon-color !default;
 
 	@media (min-width: $bp-lg) {
 		&-deck {
-			@include parent();
-			flex-wrap: wrap;
-		}
-
-		&-deck .c-forum {
-			@include parent(column);
-			flex: 1 0 0%;
-			min-width: calc((100% / 2) - (12px));
-			max-width: calc((100% / 2) - (12px));
-			margin-bottom: ($forum-spacing * 3);
-			margin-left: ($forum-spacing * 3);
-
-			&:first-child,
-			&:nth-child(2n+1) {
-				margin-left: 0;
-			}
+			display: grid;
+			grid-column-gap: 1rem;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 }
