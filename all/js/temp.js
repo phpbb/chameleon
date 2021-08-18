@@ -352,13 +352,25 @@ $($menu).each(function() {
 	const $this = $(this);
 	const targetOffset = $this.offset();
 	const $direction = $this.data('direction');
+	const $orientation = $this.data('orientation');
 	if ($direction) {
-		$this.css({ 'transform-origin': $direction, top: 'inherit', bottom: 0 });
+		$this.css('transform-origin', $direction);
 	} else {
 		if (targetOffset.left > $(window).width() / 2) {
-			$this.css({ 'transform-origin': 'right top', right: 0 });
+			$this.css('transform-origin', 'right top');
 		} else {
 			$this.css('transform-origin', 'left top');
+		}
+	}
+	if ($orientation) {
+		if ($orientation == 'right') {
+			$this.css('right', 0);
+		} else {
+			$this.css('left', 0);
+		}
+	} else {
+		if (targetOffset.left > $(window).width() / 2) {
+			$this.css('right', 0);
 		}
 	}
 });
