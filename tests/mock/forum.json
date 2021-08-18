@@ -109,7 +109,7 @@
 		},
 		{
 			"id":6,
-			"name":"MOD specific announcments",
+			"name":"MOD specific announcements",
 			"desc":"Here you can find announcements related to specific MODs",
 			"type":"forum-sub",
 			"status":1,

@@ -1,5 +1,5 @@
 {
-	"announcments": [
+	"announcements": [
 		{
 			"id": 1,
 			"name": "Announce Locked",
@@ -15895,7 +15895,7 @@
 		},
 		{
 			"id": 6,
-			"name": "MOD specific announcments",
+			"name": "MOD specific announcements",
 			"desc": "Here you can find announcements related to specific MODs",
 			"type": "forum-sub",
 			"status": 1,
@@ -17222,7 +17222,7 @@
 		"privacy": "Privacy",
 		"subforums": "Sub Forums",
 		"see_all": "See All",
-		"announcements": "Announcments",
+		"announcements": "Announcements",
 		"forum": "Forum",
 		"forum_rules": "Forum Rules",
 		"topic_tools": "Topic Tools",
