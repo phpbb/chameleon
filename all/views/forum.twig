@@ -68,10 +68,10 @@
 					</span>
 				</div>
 				<div class="o-bar-right">
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+					<a class="o-bar-item o-bar-action c-topic-collapse t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
 						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon')|safe }}
 					</a>
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" title="{{ lang.mark }}">
+					<a class="o-bar-item o-bar-action c-topic-mark t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
 						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon')|safe }}
 					</a>
 				</div>
@@ -94,40 +94,13 @@
 					</span>
 				</div>
 				<div class="o-bar-right">
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+					<a class="o-bar-item o-bar-action c-topic-collapse t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
 						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon')|safe }}
 					</a>
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" title="{{ lang.mark }}">
+					<a class="o-bar-item o-bar-action c-topic-mark t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
 						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon')|safe }}
 					</a>
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
-						{{ 'mdi:filter-variant'|icon('iconify', 'o-icon')|safe }}
-						<div class="c-menu-container t-menu-container" data-container="menu">
-							<ul class="c-menu t-menu">
-								{% for item in filters %}
-								<li class="c-menu-item t-menu-item">
-									<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
-								</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</a>
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
-						{{ 'mdi:sort'|icon('iconify', 'o-icon')|safe }}
-						<div class="c-menu-container t-menu-container" data-container="menu">
-							<ul class="c-menu t-menu">
-								{% for item in sorts %}
-								<li class="c-menu-item t-menu-item">
-									<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
-								</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</a>
-					<a class="o-bar-item o-bar-action" href="#" data-tooltip="true" title="{{ lang.order }}">
-						{{ 'mdi:sort-ascending'|icon('iconify', 'o-icon')|safe }}
-					</a>
-					<span class="o-bar-info">
+					<span class="o-bar-info c-topic-total t-topic-total">
 						{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-bar-info-icon')|safe }}
 						<span class="o-bar-item-text">{{ topics|length }}</span>
 					</span>
