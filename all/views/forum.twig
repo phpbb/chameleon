@@ -30,18 +30,19 @@
 	<section class="o-container">
 		<div class="c-topic-container t-topic-container">
 			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
-				<ul class="o-bar-left c-topic-header-left t-topic-header-left">
-					<li class="o-bar-item c-topic-header-item t-topic-header-item">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
 						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.subforums }}</h2>
-					</li>
-				</ul>
-				<ul class="o-bar-right c-topic-header-right t-topic-header-right">
-					<li class="o-bar-item c-topic-header-item t-topic-header-item">
-						<a class="o-bar-action" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
-							{{ 'mdi:chevron-up'|icon('iconify', 'o-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
-						</a>
-					</li>
-				</ul>
+					</span>
+				</div>
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+				</div>
 			</div>
 			<ul class="o-list c-topic t-topic" role="rowgroup" data-container="collapse">
 				{% for item in forums %}
@@ -61,18 +62,18 @@
 	{# Announcements #}
 	<section class="o-container">
 		<div class="c-topic-container t-topic-container">
-			<div class="o-bar" data-toggle-parent="collapse">
-				<div class="o-bar-left">
-					<span class="o-bar-item">
-						<h2 class="o-bar-title" role="heading" aria-level="3">{{ lang.announcements }}</h2>
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.announcements }}</h2>
 					</span>
 				</div>
-				<div class="o-bar-right">
-					<a class="o-bar-item o-bar-action c-topic-collapse t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
-						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon')|safe }}
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 					</a>
-					<a class="o-bar-item o-bar-action c-topic-mark t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
-						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon')|safe }}
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 					</a>
 				</div>
 			</div>
@@ -87,18 +88,18 @@
 	{# Main Topic List #}
 	<section class="o-container">
 		<div class="c-topic-container t-topic-container">
-			<div class="o-bar" data-toggle-parent="collapse">
-				<div class="o-bar-left">
-					<span class="o-bar-item">
-						<h2 class="o-bar-title" role="heading" aria-level="3">{{ lang.topics }}</h2>
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.topics }}</h2>
 					</span>
 				</div>
-				<div class="o-bar-right">
-					<a class="o-bar-item o-bar-action c-topic-collapse t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
-						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon')|safe }}
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 					</a>
-					<a class="o-bar-item o-bar-action c-topic-mark t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
-						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon')|safe }}
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
 					</a>
 					<span class="o-bar-info c-topic-total t-topic-total">
 						{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-bar-info-icon')|safe }}
@@ -122,11 +123,11 @@
 		<div class="o-bar c-toolbar t-toolbar">
 			<ul class="o-bar-left c-toolbar-left t-toolbar-left">
 				<li class="o-bar-item c-toolbar-item t-toolbar-item">
-					<a class="o-bar-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.return }}">
-						{{ 'mdi:chevron-left'|icon('iconify', 'o-icon o-bar-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					<a class="o-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.return }}">
+						{{ 'mdi:chevron-left'|icon('iconify', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 					</a>
-					<a class="o-bar-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.forum_watch }}">
-						{{ 'mdi:eye-plus-outline'|icon('iconify', 'o-icon o-bar-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					<a class="o-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.forum_watch }}">
+						{{ 'mdi:eye-plus-outline'|icon('iconify', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 					</a>
 				</li>
 			</ul>
