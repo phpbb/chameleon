@@ -1,0 +1,18 @@
+<div class="c-crumbs-container t-crumbs-container" role="navigation">
+	<ul class="c-crumbs t-crumbs" role="list">
+		<li class="c-crumbs-item t-crumbs-item" role="listitem">
+			<a class="c-crumbs-link t-crumbs-link" href="#" title="{{ lang.board_index }}">
+				{{ 'ic:outline-home'|icon('iconify', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
+				<span class="c-crumbs-text t-crumbs-text">{{ lang.board_index }}</span>
+			</a>
+		</li>
+		{% for crumb in crumbs %}
+			<li class="c-crumbs-item t-crumbs-item" role="listitem">
+				<a class="c-crumbs-link t-crumbs-link" href="{{ crumb.link }}">
+					{{ 'mdi:chevron-right'|icon('iconify', 'o-icon c-crumbs-icon t-crumbs-icon')|safe }}
+					<span class="c-crumbs-text t-crumbs-text">{{ crumb.title }}</span>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

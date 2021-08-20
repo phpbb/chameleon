@@ -1,0 +1,9 @@
+{
+	"sorts": [
+		"Author",
+		"Time",
+		"Subject",
+		"Relies",
+		"views"
+	]
+}

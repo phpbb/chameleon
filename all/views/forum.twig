@@ -1,0 +1,160 @@
+{# forum.twig #}
+{% extends "./layout/layout.twig" %}
+{% from './macros/online.twig' import whos_online %}
+
+{% block title %}
+{{ forums[1].name }}
+{% endblock %}
+
+{% block main %}
+	<section class="o-container is-active">
+		<h2 class="t-forum-page-title" role="heading" aria-level="2">
+			<a class="t-forum-page-title-link" href="" title="{{ forums[1].name }}">{{ forums[1].name }}</a>
+		</h2>
+		<div class="o-modal c-warning t-warning is-active" data-container="modal">
+			<a class="c-warning-close t-warning-close" href="" data-toggle="modal" data-tooltip="true" title="{{ lang.close }}">
+				{{ 'mdi:close'|icon('iconify', 'o-icon c-warning-icon t-warning-icon')|safe }}
+				</a>
+			<header class="o-modal-header c-warning-header t-warning-header">
+				<h2 class="o-modal-header-title c-warning-title t-warning-title">
+					{{ lang.forum_rules }}
+				</h2>
+			</header>
+			<div class="o-modal-body c-warning-body t-warning-body">
+				{{ rules[1].content | safe }}
+			</div>
+		</div>
+	</section>
+
+	{# Subforums #}
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.subforums }}</h2>
+					</span>
+				</div>
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+				</div>
+			</div>
+			<ul class="o-list c-topic t-topic" role="rowgroup" data-container="collapse">
+				{% for item in forums %}
+					{% if item.sub == forums[5].id %}
+						{% include './includes/topic.twig' %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	{# Toolbar #}
+	<div class="o-container">
+		{% include './includes/forum-tools.twig' %}
+	</div>
+
+	{# Announcements #}
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.announcements }}</h2>
+					</span>
+				</div>
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+				</div>
+			</div>
+			<ul class="o-list c-topic" role="rowgroup" data-container="collapse">
+				{% for item in announcements %}
+					{% include './includes/topic.twig' %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	{# Main Topic List #}
+	<section class="o-container">
+		<div class="c-topic-container t-topic-container">
+			<div class="o-bar c-topic-header t-topic-header" data-toggle-parent="collapse">
+				<div class="o-bar-left c-topic-header-left t-topic-header-left">
+					<span class="o-bar-item c-topic-header-item t-topic-header-item">
+						<h2 class="o-bar-title c-topic-header-title t-topic-header-title" role="heading" aria-level="3">{{ lang.topics }}</h2>
+					</span>
+				</div>
+				<div class="o-bar-right c-topic-header-right t-topic-header-right">
+					<a class="o-bar-item o-action c-topic-header-action c-topic-collapse t-topic-header-action t-topic-collapse" href="#" data-tooltip="true" data-toggle="collapse" data-toggle-tooltip="{{ lang.expand }}" title="{{ lang.collapse }}">
+						{{ 'mdi:chevron-up'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+					<a class="o-bar-item o-action c-topic-header-action c-topic-mark t-topic-header-action t-topic-mark" href="#" data-tooltip="true" title="{{ lang.mark }}">
+						{{ 'mdi:checkbox-marked-outline'|icon('iconify', 'o-icon o-action-icon c-topic-header-action-icon t-topic-header-action-icon')|safe }}
+					</a>
+					<span class="o-bar-info c-topic-total t-topic-total">
+						{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-bar-info-icon')|safe }}
+						<span class="o-bar-item-text">{{ topics|length }}</span>
+					</span>
+				</div>
+			</div>
+			<ul class="o-list c-topic" role="rowgroup" data-container="collapse">
+				{% for item in topics | sort(false, false, 'type') | sort(false, false, 'time') %}
+					{% if loop.index <= 25 %}
+						{% include './includes/topic.twig' %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+{% endblock %}
+
+{% block footer %}
+	<div class="o-container">
+		<div class="o-bar c-toolbar t-toolbar">
+			<ul class="o-bar-left c-toolbar-left t-toolbar-left">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					<a class="o-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.return }}">
+						{{ 'mdi:chevron-left'|icon('iconify', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					</a>
+					<a class="o-action c-toolbar-action t-toolbar-action" href="" data-tooltip="true" title="{{ lang.forum_watch }}">
+						{{ 'mdi:eye-plus-outline'|icon('iconify', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+					</a>
+				</li>
+			</ul>
+			<ul class="o-bar-right c-toolbar-right t-toolbar-right">
+				<li class="o-bar-item c-toolbar-item t-toolbar-item">
+					{% include './includes/jumpto.twig' %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="o-container">
+		<div class="c-tab-card t-tab-card">
+			<div class="c-tab-bar-frame t-tab-bar-frame">
+				<nav class="c-tab-bar t-tab-bar" data-toggle="tabs">
+					<a class="c-tab t-tab is-active" href="#forum-permissions" role="tab" aria-controls="forum-permissions" aria-selected="true">
+						{{ 'mdi:shield-check-outline'|icon('iconify', 'o-icon c-tab-icon t-tab-icon')|safe }}
+						<span class="c-tab-text t-tab-text">{{lang.permissions}}</span>
+					</a>
+					<a class="c-tab t-tab" href="#whos-online" role="tab" aria-controls="whos-online" aria-selected="false">
+						{{ 'mdi:access-point'|icon('iconify', 'o-icon c-tab-icon t-tab-icon')|safe }}
+						<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
+					</a>
+				</nav>
+			</div>
+			{% include './includes/permissions.twig' %}
+			{{ whos_online('forum', forums[1].online, lang) }}
+		</div>
+	</div>
+	{% include './includes/paging-fixed.twig' %}
+{% endblock %}

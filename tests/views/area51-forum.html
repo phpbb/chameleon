@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb" class="wf-opensans-n3-active wf-opensans-i3-active wf-opensans-n4-active wf-opensans-i4-active wf-opensans-n6-active wf-opensans-i6-active wf-opensans-n7-active wf-opensans-i7-active wf-opensans-n8-active wf-active gr__area51_phpbb_com"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>[3.0/Olympus] Discussion - Development Discussion Board</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Development Discussion Board" href="/phpBB/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/phpBB/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/phpBB/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/phpBB/feed/topics_active">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - [3.0/Olympus] Discussion" href="/phpBB/feed/forum/3">
+	<link rel="canonical" href="https://area51.phpbb.com/phpBB/viewforum.php?f=3">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async=""></script><script>
+	WebFontConfig = {
+		google: {
+			families: ['Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese']
+		}
+	};
+
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	})(document);
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://area51.phpbb.com/phpBB/styles/prosilver/theme/stylesheet.css?assets_version=1955" rel="stylesheet">
+<link href="https://area51.phpbb.com/phpBB/styles/prosilver/theme/en/stylesheet.css?assets_version=1955" rel="stylesheet">
+
+
+<link href="https://area51.phpbb.com/header.css" media="all" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/analytics.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" media="all">
+
+
+
+
+
+
+</head>
+<body id="phpbb" class="notouch section-viewforum ltr hasjs" data-gr-c-s-loaded="true" style="" cz-shortcut-listen="true">
+
+
+<div id="phpbb-header-bar" role="banner">
+	<ul class="phpbb-menu">
+		<li class="phpbb-logo"><a href="//area51.phpbb.com/"><img src="https://area51.phpbb.com/phpBB/styles/prosilver/theme/images/area51.png" alt="area51 @ phpBB" title="area51.phpbb.com"></a></li>
+		<li><a href="//area51.phpbb.com">Home</a></li>
+		<li><a href="http://tracker.phpbb.com/secure/Dashboard.jspa">Tracker</a></li>
+		<li><a href="//area51.phpbb.com/docs/dev/">Dev Docs</a></li>
+		<li><a href="//wiki.phpbb.com/">Wiki</a></li>
+		<li><a href="//bamboo.phpbb.com/">Builds</a></li>
+		<li><a href="//area51.phpbb.com/projects/">Projects</a></li>
+		<li class="active"><a href="/phpBB/">Discussion</a></li>
+	</ul>
+	<div id="exit-phpbb">
+		<a href="//www.phpbb.com/"><img src="https://area51.phpbb.com/phpBB/styles/prosilver/theme/images/back_phpbb.png" alt="phpBB" title="www.phpbb.com"></a>
+	</div>
+</div>
+<div id="phpbb-sub-header">
+<h1 style="float:left;margin-right:0px;margin-top:0px;">Development Discussion Board</h1>
+<div style="float:left;margin-left:30px;margin-top:4px;font-size:12px;">phpBB's testing ground of bleeding edge code</div>
+					        <div id="search-box" class="search-box search-header" role="search">
+				        <form action="./search.php" method="get" id="search">
+				        <fieldset>
+					        <input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…">
+							<button class="button button-search" type="submit" title="Search">
+								<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					        </button>
+							<a href="./search.php" class="button button-search-end" title="Advanced search">
+								<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					        </a>
+
+				        </fieldset>
+				        </form>
+			        </div>
+
+</div>
+<div id="wrap" style="clear:both;margin-top:20px;" class="wrap">
+	<a id="top" class="anchor" accesskey="t"></a>
+	<div id="page-header">
+<!--
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description" style="margin-left:20px;">
+				<!- - <a id="logo" class="logo" href="./index.php" title="Board index"><span class="imageset site_logo"></span></a> - ->
+				<h1><a href="./index.php" style="color:#fff;text-decoration:none;" title="Board index">Development Discussion Board</a></h1>
+
+				<p>phpBB's testing ground of bleeding edge developmental code</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="./search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="./search.php" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+
+				</fieldset>
+				</form>
+			</div>
+
+			</div>
+					</div>
+-->
+
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger dropdown-toggle">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="./search.php" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/phpBB/help/faq" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+
+			<li class="rightside" data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;redirect=viewforum.php%3Ff%3D3" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="max-width: 1125px;">
+							<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a href="https://area51.phpbb.com" itemprop="url" data-navbar-reference="home" title="Area51"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Area51</span></a></span>
+										<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a href="./index.php" itemprop="url" accesskey="h" data-navbar-reference="index" title="Board index"><span itemprop="title">Board index</span></a></span>
+
+																			<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="5"><a href="./viewforum.php?f=5" itemprop="url" title="Everything Else"><span itemprop="title">Everything Else</span></a></span>
+																							<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="2"><a href="./viewforum.php?f=2" itemprop="url" title="Archive of phpBB related forums"><span itemprop="title">Archive of phpBB related forums</span></a></span>
+																							<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="87"><a href="./viewforum.php?f=87" itemprop="url" title="Stable Branch: phpBB &quot;Olympus&quot; 3.0"><span itemprop="title">Stable Branch: phpBB "Olympus" 3.0</span></a></span>
+																							<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="3"><a href="./viewforum.php?f=3" itemprop="url" title="[3.0/Olympus] Discussion"><span itemprop="title">[3.0/Olympus] Discussion</span></a></span>
+												</li>
+
+					<li class="rightside responsive-search">
+				<a href="./search.php" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+
+		<h2 class="forum-title"><a href="./viewforum.php?f=3">[3.0/Olympus] Discussion</a></h2>
+<div>
+	<!-- NOTE: remove the style="display: none" when you want to have the forum description on the forum body -->
+	<div style="display: none !important;">Discussion of general topics related to the new version and its place in the world. Don't discuss new features, report bugs, ask for support, et cetera. Don't use this to spam for other boards or attack those boards!<br></div>	</div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br>
+			Discussion of general topics related to the new release and its place in the world. Don't discuss new features, report bugs, ask for support, et cetera. Don't use this to spam for other boards or attack those boards!
+
+		</div>
+	</div>
+
+
+	<div class="action-bar bar-top">
+
+
+		<a href="./posting.php?mode=post&amp;f=3" class="button" title="Post a new topic">
+							<span>New Topic</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+					</a>
+
+			<div class="search-box" role="search">
+			<form method="get" id="forum-search" action="./search.php">
+			<fieldset>
+				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this forum…">
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="./search.php" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="fid[0]" value="3">
+
+			</fieldset>
+			</form>
+		</div>
+
+	<div class="pagination">
+				3790 topics
+					<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger dropdown-toggle" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>190</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="20" data-base-url="./viewforum.php?f=3" data-start-name="start">
+					<input class="button1 button button-form-bold" value="Go" type="button">
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=20" role="button">2</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=40" role="button">3</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=60" role="button">4</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=80" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=3780" role="button">190</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewforum.php?f=3&amp;start=20" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+			</div>
+
+	</div>
+
+
+
+
+
+			<div class="forumbg announcement">
+		<div class="inner">
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt><div class="list-inner">Announcements</div></dt>
+					<dd class="posts">Replies</dd>
+					<dd class="views">Views</dd>
+					<dd class="lastpost"><span>Last post</span></dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist topics">
+
+				<li class="row bg1 global-announce">
+						<dl class="row-item global_read_locked">
+				<dt title="This topic is locked, you cannot edit posts or make further replies.">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=99&amp;t=30432" class="topictitle">Area51 Rules &amp; Regulations</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> « <a href="./viewtopic.php?f=99&amp;t=30432&amp;p=195429#p195429" title="Go to last post">Tue Feb 03, 2009 1:44 am</a>
+							<br>Posted in <a href="./viewforum.php?f=99">General Development Discussion</a>						</div>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> » Tue Feb 03, 2009 1:44 am							 » in <a href="./viewforum.php?f=99">General Development Discussion</a>						</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">159980 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a>													<a href="./viewtopic.php?f=99&amp;t=30432&amp;p=195429#p195429" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Feb 03, 2009 1:44 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+			</ul>
+		</div>
+	</div>
+
+			<div class="forumbg">
+		<div class="inner">
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt><div class="list-inner">Topics</div></dt>
+					<dd class="posts">Replies</dd>
+					<dd class="views">Views</dd>
+					<dd class="lastpost"><span>Last post</span></dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist topics">
+
+				<li class="row bg2 sticky">
+						<dl class="row-item sticky_read_locked">
+				<dt title="This topic is locked, you cannot edit posts or make further replies.">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=31559" class="topictitle">Need help or support?</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=14026" class="username">ToonArmy</a> « <a href="./viewtopic.php?f=3&amp;t=31559&amp;p=201288#p201288" title="Go to last post">Sun Feb 15, 2009 11:05 pm</a>
+													</div>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=14026" class="username">ToonArmy</a> » Sun Feb 15, 2009 11:05 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">25209 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=14026" class="username">ToonArmy</a>													<a href="./viewtopic.php?f=3&amp;t=31559&amp;p=201288#p201288" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Sun Feb 15, 2009 11:05 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=55606" class="topictitle">Error message when I try to delete a message</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=50115" style="color: #193CE6;" class="username-coloured">JimA</a> « <a href="./viewtopic.php?f=3&amp;t=55606&amp;p=309216#p309216" title="Go to last post">Wed Apr 11, 2018 10:29 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=124141" class="username">Kaosports</a> » Wed Apr 11, 2018 8:24 am													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">1 <dfn>Replies</dfn></dd>
+				<dd class="views">5054 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=50115" style="color: #193CE6;" class="username-coloured">JimA</a>													<a href="./viewtopic.php?f=3&amp;t=55606&amp;p=309216#p309216" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Wed Apr 11, 2018 10:29 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=45927" class="topictitle">Bug in new post</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=43082" class="username">RMcGirr83</a> « <a href="./viewtopic.php?f=3&amp;t=45927&amp;p=288106#p288106" title="Go to last post">Sun Feb 28, 2016 12:49 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>7</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=109439" class="username">John P</a> » Sun Jul 13, 2014 6:35 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">7 <dfn>Replies</dfn></dd>
+				<dd class="views">31616 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=43082" class="username">RMcGirr83</a>													<a href="./viewtopic.php?f=3&amp;t=45927&amp;p=288106#p288106" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Sun Feb 28, 2016 12:49 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=47731" class="topictitle">Releasing 3.0.14</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=111417" style="color: #00A690;" class="username-coloured">Elsensee</a> « <a href="./viewtopic.php?f=3&amp;t=47731&amp;p=278651#p278651" title="Go to last post">Tue May 05, 2015 9:13 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>5</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a> » Sun Apr 26, 2015 9:39 am													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">5 <dfn>Replies</dfn></dd>
+				<dd class="views">19038 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=111417" style="color: #00A690;" class="username-coloured">Elsensee</a>													<a href="./viewtopic.php?f=3&amp;t=47731&amp;p=278651#p278651" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue May 05, 2015 9:13 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=46405" class="topictitle">Releasing 3.0.13</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a> « <a href="./viewtopic.php?f=3&amp;t=46405&amp;p=273776#p273776" title="Go to last post">Thu Jan 29, 2015 10:49 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>21</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a> » Wed Nov 12, 2014 4:38 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=46405">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=46405&amp;start=10">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=46405&amp;start=20">3</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">21 <dfn>Replies</dfn></dd>
+				<dd class="views">44768 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a>													<a href="./viewtopic.php?f=3&amp;t=46405&amp;p=273776#p273776" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Thu Jan 29, 2015 10:49 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=46776" class="topictitle">phpBB 3.0.13 Release Candidate 1 published</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a> « <a href="./viewtopic.php?f=3&amp;t=46776&amp;p=273486#p273486" title="Go to last post">Sun Jan 25, 2015 5:49 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>8</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> » Wed Jan 21, 2015 4:40 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">8 <dfn>Replies</dfn></dd>
+				<dd class="views">18211 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a>													<a href="./viewtopic.php?f=3&amp;t=46776&amp;p=273486#p273486" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Sun Jan 25, 2015 5:49 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=29611" class="topictitle">ACP Permissions</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=51606" class="username">Pony99CA</a> « <a href="./viewtopic.php?f=3&amp;t=29611&amp;p=271989#p271989" title="Go to last post">Tue Dec 09, 2014 3:27 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>3</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=49040" class="username">tupeu</a> » Mon May 26, 2008 1:16 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">3 <dfn>Replies</dfn></dd>
+				<dd class="views">14247 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=51606" class="username">Pony99CA</a>													<a href="./viewtopic.php?f=3&amp;t=29611&amp;p=271989#p271989" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Dec 09, 2014 3:27 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=45427" class="topictitle">Why forum variable is in URL?</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=111569" style="color: #00A690;" class="username-coloured">Nicofuma</a> « <a href="./viewtopic.php?f=3&amp;t=45427&amp;p=264517#p264517" title="Go to last post">Mon May 26, 2014 11:42 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=111375" class="username">bobby124</a> » Thu Apr 03, 2014 8:07 am													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">4 <dfn>Replies</dfn></dd>
+				<dd class="views">19733 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=111569" style="color: #00A690;" class="username-coloured">Nicofuma</a>													<a href="./viewtopic.php?f=3&amp;t=45427&amp;p=264517#p264517" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Mon May 26, 2014 11:42 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=43403" class="topictitle">Use vertical resize on the textarea.</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=95955" class="username">Dragosvr92</a> « <a href="./viewtopic.php?f=3&amp;t=43403&amp;p=264247#p264247" title="Go to last post">Wed May 21, 2014 9:55 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>46</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=95955" class="username">Dragosvr92</a> » Wed Sep 12, 2012 3:49 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=43403">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43403&amp;start=10">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43403&amp;start=20">3</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43403&amp;start=30">4</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43403&amp;start=40">5</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">46 <dfn>Replies</dfn></dd>
+				<dd class="views">78368 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=95955" class="username">Dragosvr92</a>													<a href="./viewtopic.php?f=3&amp;t=43403&amp;p=264247#p264247" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Wed May 21, 2014 9:55 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=43117" class="topictitle">phpBB 3.0.x with patches for Windows Web App Gallery</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=109003" class="username">bibin</a> « <a href="./viewtopic.php?f=3&amp;t=43117&amp;p=263955#p263955" title="Go to last post">Tue May 13, 2014 6:55 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>12</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=109003" class="username">bibin</a> » Wed Jul 11, 2012 6:30 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=43117">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43117&amp;start=10">2</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">12 <dfn>Replies</dfn></dd>
+				<dd class="views">39471 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=109003" class="username">bibin</a>													<a href="./viewtopic.php?f=3&amp;t=43117&amp;p=263955#p263955" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue May 13, 2014 6:55 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=45533" class="topictitle">Mod for setting dateformat according to user agent language</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=58131" class="username">brunoais</a> « <a href="./viewtopic.php?f=3&amp;t=45533&amp;p=263425#p263425" title="Go to last post">Wed Apr 30, 2014 9:35 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=111647" class="username">Zigdra</a> » Tue Apr 29, 2014 12:46 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">1 <dfn>Replies</dfn></dd>
+				<dd class="views">16214 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=58131" class="username">brunoais</a>													<a href="./viewtopic.php?f=3&amp;t=45533&amp;p=263425#p263425" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Wed Apr 30, 2014 9:35 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=27962" class="topictitle">submit_post() question</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=111531" class="username">PeTiT</a> « <a href="./viewtopic.php?f=3&amp;t=27962&amp;p=262325#p262325" title="Go to last post">Thu Apr 03, 2014 11:29 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>14</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=42092" class="username">reboots</a> » Sun Mar 25, 2007 4:08 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=27962">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=27962&amp;start=10">2</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">14 <dfn>Replies</dfn></dd>
+				<dd class="views">42850 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=111531" class="username">PeTiT</a>													<a href="./viewtopic.php?f=3&amp;t=27962&amp;p=262325#p262325" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Thu Apr 03, 2014 11:29 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=31860" class="topictitle">link rel="canonical"</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=109257" class="username">spello</a> « <a href="./viewtopic.php?f=3&amp;t=31860&amp;p=260951#p260951" title="Go to last post">Thu Feb 20, 2014 11:44 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>6</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=49864" class="username">Paul.J.Murphy</a> » Sun Oct 25, 2009 2:00 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">6 <dfn>Replies</dfn></dd>
+				<dd class="views">30569 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=109257" class="username">spello</a>													<a href="./viewtopic.php?f=3&amp;t=31860&amp;p=260951#p260951" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Thu Feb 20, 2014 11:44 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=45191" class="topictitle">Search plugin documentation?</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=110377" class="username">Master_Cylinder</a> « <a href="./viewtopic.php?f=3&amp;t=45191&amp;p=260545#p260545" title="Go to last post">Tue Feb 11, 2014 2:54 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=110377" class="username">Master_Cylinder</a> » Sun Feb 09, 2014 6:57 am													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">2 <dfn>Replies</dfn></dd>
+				<dd class="views">17286 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=110377" class="username">Master_Cylinder</a>													<a href="./viewtopic.php?f=3&amp;t=45191&amp;p=260545#p260545" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Feb 11, 2014 2:54 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=26867" class="topictitle">Group Avatar = User Avatar?</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=56967" class="username">imkingdavid</a> « <a href="./viewtopic.php?f=3&amp;t=26867&amp;p=259833#p259833" title="Go to last post">Tue Dec 31, 2013 10:11 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>29</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=19830" class="username">Starcraftmazter</a> » Sun Feb 25, 2007 12:09 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=26867">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=26867&amp;start=10">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=26867&amp;start=20">3</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">29 <dfn>Replies</dfn></dd>
+				<dd class="views">55193 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=56967" class="username">imkingdavid</a>													<a href="./viewtopic.php?f=3&amp;t=26867&amp;p=259833#p259833" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Dec 31, 2013 10:11 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=45021" class="topictitle">Website integration with phpbb on different server</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=22172" style="color: #193CE6;" class="username-coloured">bonelifer</a> « <a href="./viewtopic.php?f=3&amp;t=45021&amp;p=259405#p259405" title="Go to last post">Tue Dec 10, 2013 10:52 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=110949" class="username">sica07</a> » Fri Dec 06, 2013 2:03 pm													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">1 <dfn>Replies</dfn></dd>
+				<dd class="views">19027 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=22172" style="color: #193CE6;" class="username-coloured">bonelifer</a>													<a href="./viewtopic.php?f=3&amp;t=45021&amp;p=259405#p259405" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Dec 10, 2013 10:52 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=44371" class="topictitle">phpBB 3.0.12 Release Candidate 1 published</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=43082" class="username">RMcGirr83</a> « <a href="./viewtopic.php?f=3&amp;t=44371&amp;p=258973#p258973" title="Go to last post">Tue Nov 19, 2013 11:07 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>22</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> » Sat Jul 13, 2013 7:39 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=44371">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=44371&amp;start=10">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=44371&amp;start=20">3</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">22 <dfn>Replies</dfn></dd>
+				<dd class="views">40136 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=43082" class="username">RMcGirr83</a>													<a href="./viewtopic.php?f=3&amp;t=44371&amp;p=258973#p258973" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Nov 19, 2013 11:07 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=43975" class="topictitle">Releasing 3.0.12</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=110377" class="username">Master_Cylinder</a> « <a href="./viewtopic.php?f=3&amp;t=43975&amp;p=256929#p256929" title="Go to last post">Tue Oct 15, 2013 11:38 pm</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>53</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+														<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							by <a href="./memberlist.php?mode=viewprofile&amp;u=40435" style="color: #00A690;" class="username-coloured">bantu</a> » Sun Feb 24, 2013 11:16 am													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975&amp;start=10">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975&amp;start=20">3</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975&amp;start=30">4</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975&amp;start=40">5</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=43975&amp;start=50">6</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">53 <dfn>Replies</dfn></dd>
+				<dd class="views">82532 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=110377" class="username">Master_Cylinder</a>													<a href="./viewtopic.php?f=3&amp;t=43975&amp;p=256929#p256929" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Oct 15, 2013 11:38 pm
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=44519" class="topictitle">phpBB 3.0.12 Release Candidate 3 published</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=60009" class="username">Meis2M</a> « <a href="./viewtopic.php?f=3&amp;t=44519&amp;p=256505#p256505" title="Go to last post">Fri Sep 27, 2013 11:40 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>18</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> » Sun Sep 08, 2013 4:37 pm													</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?f=3&amp;t=44519">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?f=3&amp;t=44519&amp;start=10">2</a></li>
+																																													</ul>
+						</div>
+
+											</div>
+				</dt>
+				<dd class="posts">18 <dfn>Replies</dfn></dd>
+				<dd class="views">30633 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=60009" class="username">Meis2M</a>													<a href="./viewtopic.php?f=3&amp;t=44519&amp;p=256505#p256505" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Fri Sep 27, 2013 11:40 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+
+
+
+
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?f=3&amp;t=44441" class="topictitle">phpBB 3.0.12 Release Candidate 2 published</a>																								<br>
+
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=58929" class="username">Danielx64</a> « <a href="./viewtopic.php?f=3&amp;t=44441&amp;p=255393#p255393" title="Go to last post">Tue Aug 06, 2013 2:52 am</a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>3</strong></span>
+
+						<div class="topic-poster responsive-hide left-box">
+																					by <a href="./memberlist.php?mode=viewprofile&amp;u=12669" class="username">naderman</a> » Fri Aug 02, 2013 11:20 am													</div>
+
+
+											</div>
+				</dt>
+				<dd class="posts">3 <dfn>Replies</dfn></dd>
+				<dd class="views">16770 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=58929" class="username">Danielx64</a>													<a href="./viewtopic.php?f=3&amp;t=44441&amp;p=255393#p255393" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br>Tue Aug 06, 2013 2:52 am
+					</span>
+				</dd>
+			</dl>
+					</li>
+
+				</ul>
+		</div>
+	</div>
+
+
+	<div class="action-bar bar-bottom">
+
+			<a href="./posting.php?mode=post&amp;f=3" class="button" title="Post a new topic">
+							<span>New Topic</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+						</a>
+
+
+					<form method="post" action="./viewforum.php?f=3">
+			<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All Topics</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="r">Replies</option><option value="s">Subject</option><option value="v">Views</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a">Ascending</option><option value="d" selected="selected">Descending</option></select></label>
+								<hr class="dashed">
+				<input type="submit" class="button1 button button-form-bold" name="sort" value="Go">
+						</fieldset>
+		</div>
+	</div>
+</div>
+			</form>
+
+		<div class="pagination">
+						3790 topics
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger dropdown-toggle" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>190</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="20" data-base-url="./viewforum.php?f=3" data-start-name="start">
+					<input class="button1 button button-form-bold" value="Go" type="button">
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=20" role="button">2</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=40" role="button">3</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=60" role="button">4</a></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=80" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="./viewforum.php?f=3&amp;start=3780" role="button">190</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewforum.php?f=3&amp;start=20" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./index.php" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to Board Index</span>
+		</a>
+	</p>
+
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=12" class="jumpbox-forum-link"> <span> www.phpbb.com/community/</span></a></li>
+																<li><a href="./viewforum.php?f=99" class="jumpbox-forum-link"> <span> General Development Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=90" class="jumpbox-cat-link"> <span> phpBB 3.x Development</span></a></li>
+																<li><a href="./viewforum.php?f=81" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.x] Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=126" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.x] Tickets Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=131" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.x] Style Development</span></a></li>
+																<li><a href="./viewforum.php?f=108" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.x][Archive] RFCs</span></a></li>
+																<li><a href="./viewforum.php?f=111" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.x] Event Requests</span></a></li>
+																<li><a href="./viewforum.php?f=84" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.1/Ascraeus] Merged RFCs</span></a></li>
+																<li><a href="./viewforum.php?f=119" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.1/Ascraeus] Merged Event Requests</span></a></li>
+																<li><a href="./viewforum.php?f=123" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.2/Rhea] Merged RFCs</span></a></li>
+																<li><a href="./viewforum.php?f=113" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; [3.x] Rejected RFCs</span></a></li>
+																<li><a href="./viewforum.php?f=121" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.x] Rejected Event Requests</span></a></li>
+																<li><a href="./viewforum.php?f=5" class="jumpbox-cat-link"> <span> Everything Else</span></a></li>
+																<li><a href="./viewforum.php?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Chit Chat</span></a></li>
+																<li><a href="./viewforum.php?f=7" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Testing subforum</span></a></li>
+																<li><a href="./viewforum.php?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Subforum</span></a></li>
+																<li><a href="./viewforum.php?f=9" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; A "category" subforum in the Testing subforum</span></a></li>
+																<li><a href="./viewforum.php?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; A sub-sub-forum</span></a></li>
+																<li><a href="./viewforum.php?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Passworded Forum</span></a></li>
+																<li><a href="./viewforum.php?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Archive of phpBB related forums</span></a></li>
+																<li><a href="./viewforum.php?f=71" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; phpBB 3.0.x Support</span></a></li>
+																<li><a href="./viewforum.php?f=72" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; phpBB 3.0.x MOD/Style Support</span></a></li>
+																<li><a href="./viewforum.php?f=15" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; EasyMOD for 2.0.x</span></a></li>
+																<li><a href="./viewforum.php?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Download EasyMOD</span></a></li>
+																<li><a href="./viewforum.php?f=17" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Announcements and News</span></a></li>
+																<li><a href="./viewforum.php?f=24" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; General EM Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=19" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Installing EasyMOD</span></a></li>
+																<li><a href="./viewforum.php?f=21" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Installing MODs with EasyMOD</span></a></li>
+																<li><a href="./viewforum.php?f=43" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; SQL Parser</span></a></li>
+																<li><a href="./viewforum.php?f=25" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; EMC Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Bug Tracker</span></a></li>
+																<li><a href="./viewforum.php?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Feature Requests</span></a></li>
+																<li><a href="./viewforum.php?f=87" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Stable Branch: phpBB "Olympus" 3.0</span></a></li>
+																<li><a href="./viewforum.php?f=3" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.0/Olympus] Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=4" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.0/Olympus] New features discussion</span></a></li>
+																<li><a href="./viewforum.php?f=26" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; [3.0/Olympus] Styling</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block permissions">
+		<h3>Forum permissions</h3>
+		<p>You <strong>cannot</strong> post new topics in this forum<br>You <strong>cannot</strong> reply to topics in this forum<br>You <strong>cannot</strong> edit your posts in this forum<br>You <strong>cannot</strong> delete your posts in this forum<br>You <strong>cannot</strong> post attachments in this forum<br></p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://area51.phpbb.com" data-navbar-reference="home" title="Area51"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Area51</span></a></span>									<span class="crumb"><a href="./index.php" data-navbar-reference="index" title="Board index"><span>Board index</span></a></span>					</li>
+
+				<li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+	<div id="loading_indicator" class="loading_indicator">
+		<div class="loader">
+			<svg class="spinner" width="48px" height="48px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-labelledby="loader-title" role="img">
+				<title id="loader-title">Loading...</title>
+				<circle class="spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+			</svg>
+		</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('\x3Cscript src="https://area51.phpbb.com/phpBB/assets/javascript/jquery.min.js?assets_version=1955">\x3C/script>');</script><script src="./assets/javascript/core.js?assets_version=1955"></script>
+	<script>
+		(function($){
+			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
+			if ($span.css('fontFamily') !== 'FontAwesome' ) {
+				$fa_cdn.after('<link href="https://area51.phpbb.com/phpBB/assets/css/font-awesome.min.css" rel="stylesheet">');
+				$fa_cdn.remove();
+			}
+			$span.remove();
+		})(jQuery);
+	</script>
+
+
+
+<script src="https://area51.phpbb.com/phpBB/styles/prosilver/template/forum_fn.js?assets_version=1949"></script>
+<script src="https://area51.phpbb.com/phpBB/styles/prosilver/template/ajax.js?assets_version=1949"></script>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,242 @@
+//------------------------------------------------------------------------------
+// @component: Emoji Panel
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$emoji-picker-spacing: $default-spacing !default;
+$emoji-picker-height: 234px !default;
+$emoji-picker-width: 360px !default;
+$emoji-picker-width-sm: 343px !default;
+$emoji-picker-scrollbar-width: 15px !default;
+$emoji-picker-border-radius: 4px !default;
+$emoji-picker-divider-height: 1px !default;
+$emoji-picker-border-height: 4px !default;
+$emoji-picker-emoji-size: $default-height-dense !default;
+$emoji-picker-footer-height: $default-height !default;
+
+// Theme Variables
+$emoji-picker-bg-color: $default-background-color !default;
+$emoji-picker-header-bg: $default-surface-color !default;
+$emoji-picker-tone-hover: $default-surface-hover-color !default;
+$emoji-picker-footer-bg: $default-surface-color !default;
+$emoji-picker-search-bg-color: $default-background-color !default;
+$emoji-picker-text-color: $gray-400 !default;
+$emoji-picker-preview-bg-color: $default-surface-alt-color !default;
+$emoji-picker-icon-color: $default-surface-item-color !default;
+$emoji-picker-icon-hover-color: $default-action-color-hover !default;
+$emoji-picker-border-hover-color: $default-action-color-hover !default;
+$emoji-picker-search-icon-color: $default-surface-item-color !default;
+$emoji-picker-divider-color: $default-border-color !default;
+
+//
+// @scss
+.c-emoji-picker {
+	@include shadow(2);
+	width: $emoji-picker-width-sm;
+
+	&-header {
+		@include parent();
+		background-color: $emoji-picker-header-bg;
+		border-bottom: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		position: relative;
+		align-items: center;
+	}
+
+	&-search {
+		@include parent();
+		@include child();
+		background-color: $emoji-picker-search-bg-color;
+		border-radius: $emoji-picker-border-radius;
+		flex-wrap: wrap;
+		padding: ($emoji-picker-spacing * 0.5);
+
+		&-wrap {
+			@include parent();
+			@include child();
+			align-items: center;
+			height: auto;
+			padding: ($emoji-picker-spacing * 1.5);
+			padding-right: 0;
+		}
+
+		&-feild {
+			@include child();
+			background-color: $emoji-picker-search-bg-color;
+			background-image: none;
+			width: auto;
+			height: $emoji-picker-emoji-size;
+			padding: ($emoji-picker-spacing * 0.5) ($emoji-picker-spacing * 2);
+
+			&:hover,
+			&:focus {
+				background-image: none;
+				border: none;
+			}
+
+			&-button {
+				color: $emoji-picker-search-icon-color;
+				padding: ($emoji-picker-spacing * 0.5) ($emoji-picker-spacing * 1.5);
+			}
+		}
+	}
+
+	&-tone {
+		&-button {
+			padding: ($emoji-picker-spacing * 2);
+
+			&:focus {
+				outline: none;
+			}
+
+			&-icon {
+				border-radius: $emoji-picker-border-radius;
+				width: $emoji-picker-emoji-size;
+				height: $emoji-picker-emoji-size;
+				padding: ($emoji-picker-spacing * 0.5);
+
+				&:hover,
+				&:focus {
+					background-color: $emoji-picker-tone-hover;
+					outline: none;
+				}
+			}
+		}
+
+		&-menu {
+			@include shadow(2);
+			text-align: left;
+			background-color: $emoji-picker-bg-color;
+			border-radius: ($emoji-picker-border-radius / 2);
+			position: absolute;
+			z-index: 999;
+			top: 0;
+			top: 14px;
+			right: 8px;
+			overflow: auto;
+			transition: all 0.2s ease;
+			transform: scaleY(0);
+			transform-origin: center top;
+
+			&.is-active {
+				transform: scaleY(1);
+			}
+
+			&-item {
+				display: block;
+				padding: $emoji-picker-spacing;
+
+				&-icon {
+					border-radius: $emoji-picker-border-radius;
+					width: $emoji-picker-emoji-size;
+					height: $emoji-picker-emoji-size;
+					padding: ($emoji-picker-spacing * 0.5);
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $default-action-bg-hover;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	&-body {
+		@include parent();
+		@include child();
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	&-area {
+		@include child();
+		overflow-x: hidden;
+		height: $emoji-picker-height;
+
+		&-title {
+			@include type(body2);
+			text-transform: uppercase;
+			background-color: $emoji-picker-bg-color;
+			color: $emoji-picker-text-color;
+			margin: 0;
+			padding: ($emoji-picker-spacing * 1.5);
+
+			&-sticky {
+				background-color: $emoji-picker-bg-color;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				width: calc(100% - 15px);
+			}
+		}
+	}
+
+	&-section {
+		@include parent();
+		background-color: $emoji-picker-bg-color;
+		flex-wrap: wrap;
+		padding: 0 ($emoji-picker-spacing * 1.5);
+
+		&-item {
+			border-radius: $emoji-picker-border-radius;
+			width: $emoji-picker-emoji-size;
+			padding: ($emoji-picker-spacing * 0.5);
+
+			&:hover,
+			&:focus {
+				background-color: $default-action-bg-hover;
+				outline: none;
+			}
+		}
+	}
+
+	&-preview {
+		background-color: $emoji-picker-preview-bg-color;
+		border-top: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		padding: ($emoji-picker-spacing * 1.5);
+
+		&-icon {
+			width: $emoji-picker-emoji-size;
+			margin-right: ($emoji-picker-spacing * 1.5);
+		}
+	}
+
+	&-footer {
+		@include parent();
+		background-color: $emoji-picker-footer-bg;
+		border-top: $emoji-picker-divider-height solid $emoji-picker-divider-color;
+		overflow-x: scroll;
+		height: $emoji-picker-footer-height;
+		padding: 0 (($emoji-picker-spacing * 1.5) + 15) 0 ($emoji-picker-spacing * 1.5);
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&-tab {
+		@include parent();
+		border-bottom: $emoji-picker-border-height solid transparent;
+		color: $emoji-picker-icon-color;
+		width: $emoji-picker-emoji-size;
+		height: $emoji-picker-footer-height;
+		padding: ($emoji-picker-spacing * 2) ($emoji-picker-spacing * 0.5) 0;
+
+		&:hover,
+		&.is-active {
+			border-color: $emoji-picker-border-hover-color;
+			color: $emoji-picker-icon-hover-color;
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		width: $emoji-picker-width;
+	}
+}

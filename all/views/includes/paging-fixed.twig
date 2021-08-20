@@ -1,0 +1,57 @@
+<ul class="c-paging">
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#page-top" data-tooltip="true" title="{{ lang.top }}">
+			{{ 'mdi:chevron-double-up'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" title="{{ lang.prev }}">
+			{{ 'mdi:chevron-left'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" data-toggle="jump" title="{{ lang.goto }} #...">
+			7535
+		</a>
+		<div class="c-jump-container" data-container="jump">
+			<form class="o-form c-jump-form" action="">
+				<header class="c-jump-header">
+					<h4 class="c-jump-header-title">{{ lang.jump_to }}</h4>
+				</header>
+				<section class="c-jump-section">
+					<div class="o-form-group c-jump-item has-icon">
+						<span class="o-form-lead">
+							{{ 'mdi:file-outline'|icon('iconify', 'o-icon o-form-leading-icon t-form-leading-icon')|safe }}
+						</span>
+						<input class="o-form-input o-form-input-right" type="text" id="post" placeholder="7535">
+						<label class="o-form-floating-label" for="post">{{ lang.goto }} #</label>
+						<span class="o-form-suffix">/{{ topics[2].replies }}</span>
+					</div>
+				</section>
+				<section class="c-jump-section">
+					<div class="o-form-group c-jump-item has-icon">
+						<span class="o-form-lead">
+							{{ 'mdi:calandar-blank'|icon('iconify', 'o-icon o-form-leading-icon t-form-leading-icon')|safe }}
+
+						</span>
+						<input class="o-form-input" type="date" id="post-date">
+						<label class="o-form-floating-label" for="post-date">{{ lang.post_goto_date }}</label>
+					</div>
+				</section>
+				<footer class="c-jump-footer">
+					<button type="submit" class="o-btn c-jump-btn">{{ lang.submit }}</button>
+				</footer>
+			</form>
+		</div>
+	</li>
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#" data-tooltip="true" title="{{ lang.next }}">
+			{{ 'mdi:chevron-right'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+	<li class="c-paging-item">
+		<a class="c-paging-action" href="#page-bottom" data-tooltip="true" title="{{ lang.down }}">
+			{{ 'mdi:chevron-double-down'|icon('iconify', 'o-icon c-paging-action-icon t-paging-fixed-action-icon')|safe }}
+		</a>
+	</li>
+</ul>
