@@ -2246,7 +2246,7 @@ select:focus::-ms-value {
 
 .c-warning.is-active {
 	opacity: 1;
-	display: inline-flex;
+	display: block;
 	transition: all 0.3s ease;
 	transform: scale(1);
 }
