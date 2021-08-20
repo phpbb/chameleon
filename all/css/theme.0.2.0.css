@@ -2273,7 +2273,7 @@ select:focus::-ms-value {
 }
 
 .t-navbar-right {
-	background-color: var(--gray-1100);
+	background-color: var(--gray-1200);
 	padding-right: 1rem;
 }
 
@@ -2283,12 +2283,8 @@ select:focus::-ms-value {
 	}
 }
 
-.t-navbar-action {
-	color: var(--gray-900);
-}
-
-.t-navbar-action:hover, .t-navbar-action:focus {
-	background-color: var(--gray-1000);
+.t-navbar-badge {
+	background-color: var(--red-700);
 }
 
 .t-bar-search {
@@ -2297,10 +2293,6 @@ select:focus::-ms-value {
 
 .t-drawer {
 	top: 0;
-}
-
-.t-crumbs-container {
-	background-color: var(--gray-1100);
 }
 
 .t-forum-page-title {
