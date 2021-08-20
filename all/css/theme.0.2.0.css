@@ -1460,10 +1460,40 @@ select:focus::-ms-value {
 	flex: 1;
 }
 
+.c-notification-container {
+	border-radius: 2px;
+	position: absolute;
+	z-index: 999;
+	right: 0;
+	width: 300px;
+	margin-top: 0.0625rem;
+	transition: all 0.2s ease;
+	transform: scale(0);
+	transform-origin: right top;
+}
+
+.c-notification-container.is-active {
+	transform: scale(1);
+}
+
+@media (min-width: 770px) {
+	.c-notification-container {
+		width: 420px;
+	}
+}
+
 .c-notification-list {
-	box-shadow: none;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: 0.009375em;
+	letter-spacing: calc((0.15 / 16) * 1em);
+	overflow-x: hidden;
 	overflow-y: scroll;
 	max-height: 420px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .c-notification-header {
@@ -1473,6 +1503,14 @@ select:focus::-ms-value {
 .c-notification-item {
 	background-color: var(--gray-1300);
 	border-top: 1px solid var(--gray-1000);
+	position: relative;
+	display: grid;
+	overflow: hidden;
+	width: 405px;
+	padding: 1rem;
+	grid-template-areas: 'media users action' 'media title action' 'media time action';
+	grid-template-columns: 56px auto 92px;
+	grid-template-rows: auto;
 }
 
 .c-notification-item:hover {
@@ -1484,15 +1522,44 @@ select:focus::-ms-value {
 	border: none;
 }
 
-.c-notification-meta {
+.c-notification-media {
+	align-self: center;
+	margin-right: 1rem;
+	grid-area: media;
+	justify-self: start;
+}
+
+.c-notification-users {
+	align-self: center;
+	grid-area: users;
+}
+
+.c-notification-user:hover {
+	text-decoration: underline;
+}
+
+.c-notification-title {
+	align-self: center;
+	grid-area: title;
+}
+
+.c-notification-time {
+	align-self: center;
+	grid-area: time;
+}
+
+.c-notification-action {
 	border-radius: 50%;
 	color: var(--gray-900);
+	align-self: center;
 	padding: 1rem;
 	transition: transform 0.5s, opacity 1s;
 	transform: translate3d(0, 0, 0);
+	grid-area: action;
+	justify-self: end;
 }
 
-.c-notification-meta:after {
+.c-notification-action:after {
 	background-image: radial-gradient(circle, #000000 10%, transparent 10.01%);
 	background-repeat: no-repeat;
 	background-position: 50%;
@@ -1509,37 +1576,20 @@ select:focus::-ms-value {
 	pointer-events: none;
 }
 
-.c-notification-meta:active:after {
+.c-notification-action:active:after {
 	opacity: 0.2;
 	transition: 0s;
 	transform: scale(0, 0);
 }
 
-.c-notification-meta:hover {
+.c-notification-action:hover {
 	background-color: var(--gray-1000);
 	color: var(--blue-700);
 }
 
-.c-notification-unread .c-notification-meta {
-	background-color: var(--blue-700);
-	color: var(--gray-50);
-	transition: transform 0.5s, opacity 1s;
-}
-
-.c-notification-unread .c-notification-meta:hover {
-	background-color: var(--gray-1000);
-	color: var(--blue-700);
-}
-
-.c-notification-footer {
-	border-top: 1px solid var(--gray-1000);
-}
-
-.c-notification-footer-action {
-	text-align: center;
-	text-transform: uppercase;
-	display: block;
-	width: 100%;
+.c-notification-action-icon {
+	width: 40px;
+	height: 40px;
 }
 
 .c-notification-approved {
@@ -1558,32 +1608,40 @@ select:focus::-ms-value {
 	color: var(--red-900);
 }
 
-.c-notification-users {
-	text-overflow: ellipsis;
-	display: block;
+.c-notification-unread .c-notification-action {
+	background-color: var(--blue-700);
+	color: var(--gray-50);
+	transition: transform 0.5s, opacity 1s;
 }
 
-.c-notification-container {
-	border-radius: 2px;
-	position: absolute;
-	z-index: 999;
-	right: 0;
-	overflow: auto;
-	width: 300px;
-	margin-top: 0.0625rem;
-	transition: all 0.2s ease;
-	transform: scale(0);
-	transform-origin: right top;
+.c-notification-unread .c-notification-action:hover {
+	background-color: var(--gray-1000);
+	color: var(--blue-700);
 }
 
-.c-notification-container.is-active {
-	transform: scale(1);
+.c-notification-unread .c-notification-unapproved {
+	background-color: var(--red-700);
 }
 
-@media (min-width: 770px) {
-	.c-notification-container {
-		width: 420px;
-	}
+.c-notification-unread .c-notification-unapproved:hover {
+	color: var(--red-700);
+}
+
+.c-notification-unread .c-notification-approved {
+	background-color: var(--green-700);
+}
+
+.c-notification-unread .c-notification-approved:hover {
+	color: var(--green-700);
+}
+
+.c-notification-footer {
+	border-top: 1px solid var(--gray-1000);
+}
+
+.c-notification-footer-action {
+	text-transform: uppercase;
+	grid-column: span 2;
 }
 
 .c-drawer {

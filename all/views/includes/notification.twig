@@ -1,53 +1,49 @@
 <div class="c-notification-container t-notification-container" data-container="notificiations">
 	<div class="o-bar c-notification-header t-notification-header">
-		<ul class="o-bar-left c-notification-bar-left t-notification-bar-left">
-			<li class="o-bar-item c-notification-bar-item t-notification-bar-item">
-				<h2 class="o-bar-title c-notification-bar-title t-notification-bar-title">{{ lang.notifications }}</h2>
-			</li>
-		</ul>
-		<ul class="o-bar-right c-notification-bar-right t-notification-bar-right">
-			<li class="o-bar-item c-notification-bar-item t-notification-bar-item">
-				<a class="o-bar-action t-notification-bar-action" href="" data-tooltip="true" title="{{ lang.settings }}">
-					{{ 'mdi:settings-outline'|icon('iconify', 'o-icon c-notification-bar-action-icon t-notification-bar-action-icon')|safe }}
-				</a>
-			</li>
-		</ul>
+		<div class="o-bar-left">
+			<h2 class="o-bar-title c-notification-bar-title t-notification-bar-title">{{ lang.notifications }}</h2>
+		</div>
+		<div class="o-bar-right">
+			<a class="o-bar-item o-action t-notification-action" href="" data-tooltip="true" title="{{ lang.settings }}">
+				{{ 'mdi:settings-outline'|icon('iconify', 'o-icon c-notification-bar-action-icon t-notification-bar-action-icon')|safe }}
+			</a>
+		</div>
 	</div>
 	<ul class="o-list c-notification-list t-notification-list">
 		{% for item in notification %}
-			<li class="o-list-item c-notification-item t-notification-item{% if item.unread %} c-notification-unread t-notification-unread{% endif %}">
-				<a class="o-list-media c-notification-media t-notification-media" href="{{ item.url }}">
-					<span class="o-avatar-wrap o-list-avatar t-notification-list-avatar">
-						<img class="o-avatar t-notification-avatar" src="{{ item.avatar }}" alt="User Avatar">
+			<li class="o-list-item c-notification-item{% if item.unread %} c-notification-unread{% endif %} t-notification-item{% if item.unread %}t-notification-unread{% endif %}">
+				<a class="c-notification-media t-notification-media" href="{{ item.url }}">
+					<span class="o-avatar-wrap c-notification-list-avatar t-notification-list-avatar">
+						<img class="o-avatar c-notification-avatar t-notification-avatar" src="{{ item.avatar }}" alt="User Avatar">
 						{% if item.online %}
-							<span class="o-avatar-online o-action-bar-avatar-online t-notification-action-bar-avatar-online"></span>
+							<span class="o-avatar-online c-notification-avatar-online t-notification-avatar-online"></span>
 						{% endif %}
 					</span>
 				</a>
-				<span class="o-list-primary c-notification-primary t-notification-primary">
-					<span class="o-list-secondary c-notification-users t-notification-users">
-						{{ 'mdi:account-circle-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
-						<a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.user }}</a>
-					{% for participant in item.participants %}, <a class="o-list-secondary-item-link t-notification-list-secondary-item-link" href="{{ participant.url }}" style="color: {{ participant.color }};">{{ participant.name }}</a>{% endfor %}
-					</span>
-					<span class="o-list-secondary c-notification-title t-notification-title">
-						{{ 'mdi:page-last'|icon('iconify', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
-						<a class="o-list-title t-notification-title" href="#"><strong>{{ item.title }}</strong></a>
-					</span>
-					<span class="o-list-secondary c-notification-time t-notification-time">
-						{{ 'mdi:clock-outline'|icon('iconify', 'o-icon o-list-secondary-item-icon c-notification-list-secondary-item-icon t-notification-list-secondary-item-icon')|safe }}
-						<time class="c-notification-time-text t-notification-time-text" datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time }}</time>
-					</span>
+				<span class="c-notification-users t-notification-users">
+					{{ 'mdi:account-circle-outline'|icon('iconify', 'o-icon c-notification-user-icon t-notification-user-icon')|safe }}
+					<a class="c-notification-user t-notification-user" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.user }}</a>
+					{% for participant in item.participants %}
+					, <a class="c-notification-user t-notification-user" href="{{ participant.url }}" style="color: {{ participant.color }};">{{ participant.name }}</a>
+					{% endfor %}
 				</span>
-				<a class="o-list-meta c-notification-meta t-notification-meta{% if item.approved == 1 %} c-notification-approved t-notification-approved{% elseif item.approved == 2 %} c-notification-unapproved t-notification-unapproved{% endif %}" href="" data-tooltip="true" title="{{ item.typeTitle|capitalize() }}">
-					{{ item.type|icon('inline', 'o-icon o-list-media-icon t-notification-list-media-icon')|safe }}
+				<span class="c-notification-title t-notification-title">
+					{{ 'mdi:page-last'|icon('iconify', 'o-icon c-notification-title-icon t-notification-title-icon')|safe }}
+					<a class="c-notification-title-text t-notification-title-text" href="#"><strong>{{ item.title }}</strong></a>
+				</span>
+				<span class="c-notification-time t-notification-time">
+					{{ 'mdi:clock-outline'|icon('iconify', 'o-icon c-notification-time-icon t-notification-time-icon')|safe }}
+					<time class="c-notification-time-text t-notification-time-text" datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time }}</time>
+				</span>
+				<a class="c-notification-action{% if item.approved == 1 %} c-notification-approved{% elseif item.approved == 2 %} c-notification-unapproved{% endif %} t-notification-action{% if item.approved == 1 %} t-notification-approved{% elseif item.approved == 2 %} t-notification-unapproved{% endif %}" href="" data-tooltip="true" title="{{ item.typeTitle }}">
+					{{ item.type|icon('iconify', 'o-icon c-notification-action-icon t-notification-action-icon')|safe }}
 				</a>
 			</li>
 		{% endfor %}
 	</ul>
 	<div class="o-bar c-notification-footer t-notification-footer">
-		<a class="o-bar-action c-notification-footer-action t-notification-footer-action" href="" title="{{ lang.see_all }}">
-			{{ lang.see_all }}
+		<a class="o-bar-item o-action c-notification-footer-action t-notification-footer-action" href="">
+			<span class="o-action-text c-notification-footer-action-text t-notification-footer-action-text">{{ lang.see_all }}</span>
 		</a>
 	</div>
 </div>
