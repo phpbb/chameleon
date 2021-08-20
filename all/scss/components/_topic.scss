@@ -1,0 +1,142 @@
+
+// @component: Topic
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$topic-spacing: $default-spacing !default;
+$topic-data-icon-size: 20px !default;
+$topic-border-size: $default-border-size !default;
+
+// Theme Variables
+$topic-icon-color: $default-secondary-color !default;
+$topic-icon-color-read: $default-primary-color !default;
+$topic-bg-color: $default-background-color !default;
+$topic-bg-hover-color: $default-background-alt-color !default;
+$topic-color: $default-background-item-color !default;
+$topic-border-color: $default-border-color !default;
+$topic-header-color: $default-surface-color !default;
+$topic-header-icon-color: $default-surface-item-color !default;
+
+
+//
+// @scss
+.c-topic {
+	box-shadow: none;
+	display: block;
+	transition: 0.35s ease-in-out;
+	transform: scaleY(1);
+	transform-origin: center top;
+
+	&.is-collapsed {
+		display: none;
+		transition: 0.35s ease-in-out;
+		transform: scaleY(0);
+	}
+
+	&-container {
+		@include shadow(2); // google material design
+	}
+
+	&-item {
+		background-color: $topic-bg-color;
+		border-top: $topic-border-size solid $topic-border-color;
+		color: $topic-color;
+
+		&:hover {
+			background-color: $topic-bg-hover-color;
+			transition: 0.5s;
+		}
+	}
+
+	&-header {
+		&-info {
+			padding-right: ($topic-spacing * 2);
+		}
+
+		&-action {
+			&:focus {
+				background-color: $topic-header-color;
+				color: $topic-header-icon-color;
+			}
+
+			&-icon {
+				transition: 0.35s ease-in-out;
+			}
+
+			&.is-collapsed .c-topic-header-action-icon {
+				transition: 0.35s ease-in-out;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-title {
+		line-height: 1;
+		margin: 0;
+
+		&-text {
+			@include type(subtitle1);
+		}
+	}
+
+	&-meta {
+		@include parent();
+		text-align: right;
+		position: relative;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&-unread {
+		color: $topic-icon-color;
+	}
+
+	&-read {
+		color: $topic-icon-color-read;
+	}
+
+	&-unapproved {
+		color: $topic-icon-color;
+		padding: 0;
+	}
+
+	&-meta-primary,
+	&-time,
+	&-date {
+		display: none;
+
+		@media (min-width: $lg) {
+			display: inline-block;
+		}
+	}
+
+	&-paging {
+		display: none;
+
+		&-link {
+			font-size: inherit;
+			height: ($topic-spacing * 3);
+			padding: ($topic-spacing / 4) ($topic-spacing / 2);
+
+			&-icon {
+				width: $topic-data-icon-size;
+				height: $topic-data-icon-size;
+			}
+		}
+
+		@media (min-width: $md) {
+			display: inline-flex;
+		}
+	}
+
+	&-checkbox-label {
+		text-indent: 9999px;
+		width: 0;
+	}
+}

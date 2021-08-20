@@ -1,0 +1,19 @@
+//------------------------------------------------------------------------------
+// @tool: Space
+//------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 1.0.2
+// @description
+//
+// Space elements by an amount based on your magic number. Pass in the property
+// to be indented as a parameter
+//
+// Based on Typeset
+//
+//------------------------------------------------------------------------------
+
+//
+// @scss
+@mixin space($property) {
+	#{$property}: 2 * $default-line-height;
+}
