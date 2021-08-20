@@ -1,0 +1,104 @@
+{
+	"online": [
+		{
+			"id":1,
+			"name":"Alexa [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":2,
+			"name":"Yahoo Slurp [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":3,
+			"name":"imanage",
+			"profile":"./memberlist.php",
+			"group":"#4F6772"
+		},
+		{
+			"id":4,
+			"name":"Bing [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":5,
+			"name":"devIsMe",
+			"profile":"./memberlist.php",
+			"group":"#00BFA5"
+		},
+		{
+			"id":6,
+			"name":"Google Feedfetcher [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":7,
+			"name":"Baidu [Spider]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":8,
+			"name":"user1",
+			"profile":"./memberlist.php"
+		},
+		{
+			"id":9,
+			"name":"communAnyOne",
+			"profile":"./memberlist.php",
+			"group":"#3F54C0"
+		},
+		{
+			"id":10,
+			"name":"Google [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":11,
+			"name":"siteMaintainer",
+			"profile":"./memberlist.php",
+			"group":"#00BCD4"
+		},
+		{
+			"id":12,
+			"name":"user2",
+			"profile":"./memberlist.php"
+		},
+		{
+			"id":13,
+			"name":"thisIsUser3",
+			"profile":"./memberlist.php"
+		},
+		{
+			"id":14,
+			"name":"Exabot [Bot]",
+			"profile":"./memberlist.php",
+			"bot":1,
+			"group":"#9E8DA7"
+		},
+		{
+			"id":15,
+			"name":"helpUiCan",
+			"profile":"./memberlist.php",
+			"group":"#FFAB40"
+		},
+		{
+			"id":16,
+			"name":"orangeCounty",
+			"profile":"./memberlist.php",
+			"group":"#B84FDB"
+		}
+	]
+}

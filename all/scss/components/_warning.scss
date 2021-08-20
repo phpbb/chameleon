@@ -1,0 +1,61 @@
+//------------------------------------------------------------------------------
+// @component: Warning
+//------------------------------------------------------------------------------
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+$warning-spacing: $default-spacing !default;
+
+// Theme Variables
+$warning-background-color: $red-50 !default;
+$warning-text-color: $default-error-color !default;
+$warning-text-dark-color: $default-error-dark-color !default;
+
+
+//
+// @scss
+.c-warning {
+	@include shadow(2);
+	background-color: $warning-background-color;
+	opacity: 0;
+	display: none;
+	width: 100%;
+	min-width: unset;
+	max-width: unset;
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+	transform: scale(1.2);
+
+	&-title,
+	&-body {
+		color: $warning-text-dark-color;
+	}
+
+	&-link:hover {
+		text-decoration: underline;
+	}
+
+	&-close {
+		color: $warning-text-color;
+		position: absolute;
+		right: 0;
+		padding: ($warning-spacing * 2);
+
+		&:hover,
+		&:focus {
+			color: $warning-text-dark-color;
+			transition: 0.5s;
+		}
+	}
+
+	&.is-active {
+		opacity: 1;
+		display: inline-flex;
+		transition: all 0.3s ease;
+		transform: scale(1);
+	}
+}

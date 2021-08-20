@@ -1,0 +1,18 @@
+{
+	"stats": {
+		"online": {
+			"current":"519",
+			"registered":"16",
+			"hidden":"1",
+			"guests":"502",
+			"most":"3056"
+		},
+		"posts":"161430",
+		"topics":"20309",
+		"members":"63056",
+		"newest": {
+			"name":"bobMarley",
+			"profile": "./memberlist.php"
+		}
+	}
+}
