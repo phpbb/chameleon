@@ -52,7 +52,7 @@ $theme-dark-border: rgba($black, 0.5);
 	margin-top: -56px;
 
 	&-right {
-		background-color: $default-background-alt-color;
+		background-color: $default-surface-color;
 		padding-right: ($default-spacing * 2);
 
 		@media (min-width: $md) {
@@ -60,13 +60,8 @@ $theme-dark-border: rgba($black, 0.5);
 		}
 	}
 
-	&-action {
-		color: $o-color;
-
-		&:hover,
-		&:focus {
-			background-color: $default-action-bg-hover;
-		}
+	&-badge {
+		background-color: $default-error-color;
 	}
 }
 
@@ -76,10 +71,6 @@ $theme-dark-border: rgba($black, 0.5);
 
 .t-drawer {
 	top: 0;
-}
-
-.t-crumbs-container {
-	background-color: $default-background-alt-color;
 }
 
 .t-forum-page-title {
