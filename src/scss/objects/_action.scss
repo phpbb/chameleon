@@ -1,0 +1,75 @@
+//------------------------------------------------------------------------------
+// @object: Action
+//------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 1.0.2
+// @description
+//
+//------------------------------------------------------------------------------
+
+//
+// #settings
+
+// Layout Variables
+$action-spacing: $sp1 !default;
+$action-height: $default-height !default;
+$action-badge-radius: 50px !default;
+$action-badge-width: 10px !default;
+$action-badge-height: 12px !default;
+
+// Theme Variables
+$action-background-hover-color: $default-action-bg-hover !default;
+$action-text-color: $default-action-color !default;
+$action-text-hover-color: $default-action-color-hover !default;
+$action-badge-color: $default-error-item-color !default;
+$action-badge-bg-color: $default-error-color !default;
+
+//
+// #scss
+
+.o-action {
+	color: $action-text-color;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: $action-height;
+	padding: 2 * $action-spacing;
+
+	&:hover,
+	&:focus {
+		background-color: $action-background-hover-color;
+		outline: 0;
+		color: $action-text-hover-color;
+		transition: 0.0125s;
+	}
+
+	&-text {
+		display: none;
+		@media (min-width: $sm) {
+			display: inline-flex;
+		}
+	}
+
+	&-icon + &-text,
+	&-text + &-icon {
+		padding-left: $action-spacing;
+	}
+
+	&-badge {
+		background-color: $action-badge-bg-color;
+		border-radius: $action-badge-radius;
+		color: $action-badge-bg-color;
+		overflow: hidden;
+		align-self: center;
+		width: $action-badge-width;
+		height: $action-badge-height;
+		margin-left: ($action-spacing / 2);
+
+		@media (min-width: $sm) {
+			color: $action-badge-color;
+			display: inline-flex;
+			width: auto;
+			height: auto;
+		}
+	}
+}
