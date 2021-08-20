@@ -98,7 +98,6 @@
 		"postcss-pxtorem": "^6.0.0",
 		"postcss-sorting": "^6.0.0",
 		"sass": "^1.35.2",
-		"server": "^1.0.33",
 		"stylelint": "^13.13.1",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.19.0",
