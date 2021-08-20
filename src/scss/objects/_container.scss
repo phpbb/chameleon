@@ -1,0 +1,97 @@
+//------------------------------------------------------------------------------
+// @object: Container
+//------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 1.0.2
+// @description
+//
+// The container sizes are based on defaults & breakpoints that were developed
+// using default viewport sizes found at https://www.ios-resolution.com/ and
+// https://mediag.com/blog/popular-screen-resolutions-designing-for-all/
+// https://bit.ly/3D13euT
+//
+// This is based on a default minimum viewport size of 360px. All smaller
+// devices are not supported. This includes iPhones 6 and up & near all Androids.
+//
+// All brekpoints are using viewport exact sizes while containers are
+// the same however there are 12px padding on mobile sizes and a 16 px padding
+// on all others
+//
+// This is a mobile first framework meaning all media queries are based on
+// min-widths. This is why we use exact size viewports
+//------------------------------------------------------------------------------
+
+//
+// #settings
+$grid-gutter: $default-grid-gutter !default;
+$grid-gutter-sm: $default-grid-gutter-sm !default;
+
+//
+// #scss
+
+//
+// Set up the default container and grid class for mobile browsers
+.o-container,
+.o-container-centered {
+	position: relative;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $grid-gutter-sm;
+	padding-left: $grid-gutter-sm;
+
+	@media (min-width: $md) {
+		padding-right: $grid-gutter;
+		padding-left: $grid-gutter;
+	}
+
+	//
+	// Establish container sizes for all devices larger than xxs
+	// ** Denotes primary testing device for that break point
+
+	//
+	// mobile devices between 411px & 540px
+	// - Pixel XL, 2 **, 2 XL
+	// - Nexus 6P
+	// - larger versions of iPhone starting with 6+
+	// - iPhone 12
+	// - Note 10, 10+
+	// - S8+, S9+
+	@media (min-width: $xs) {
+		width: $xs;
+	}
+
+	//
+	// Portable devices between 540px & 768px
+	// - Surface Duo **
+	@media (min-width: $sm) {
+		width: $sm;
+	}
+
+	//
+	// Portable devices between 768px & 960px
+	// - iPad (All versions)
+	// - iPad Mini **
+	@media (min-width: $md) {
+		width: $md;
+	}
+
+	//
+	// Devices between 960px & 1140px
+	// - iPad Pro **
+	// - Small Desktop Monitor
+	@media (min-width: $lg) {
+		width: $lg;
+	}
+
+	//
+	// Devices larger then 1140px
+	// - 1080p Desktop Monitor **
+	@media (min-width: $xl) {
+		width: $xl;
+	}
+}
+
+.o-continer-centered {
+	text-align: center;
+}

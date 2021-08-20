@@ -1,0 +1,703 @@
+//------------------------------------------------------------------------------
+// @setting: Colors
+//------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 1.0.2
+// @description
+//
+// A lbrary of colors built upon the Google Material Design base using a more
+// consistent and programtical approach.
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+
+$white:#ffffff !default;
+$black:#000000 !default;
+
+//
+// CSS Variables
+// color pallet developed using generator found here:
+// https://codepen.io/hanakin/pen/abJZmZy?editors=1100 based on MDL defaults
+
+:root {
+	--gray-50: #f9fafa;
+	--gray-100: #e9ebec;
+	--gray-200: #d8dbde;
+	--gray-300: #c8ccd0;
+	--gray-400: #b7bdc2;
+	--gray-500: #a7adb4;
+	--gray-600: #969ea6;
+	--gray-700: #868f98;
+	--gray-800: #677079;
+	--gray-900: #596169;
+	--gray-1000: #4b5258;
+	--gray-1100: #3d4248;
+	--gray-1200: #2f3337;
+	--gray-1300: #212427;
+	--gray-1400: #131416;
+
+	--blue-gray-50: #f9fafb;
+	--blue-gray-100: #e6ecef;
+	--blue-gray-200: #d3dee4;
+	--blue-gray-300: #c0d0d8;
+	--blue-gray-400: #adc2cc;
+	--blue-gray-500: #9bb4c0;
+	--blue-gray-600: #88a6b4;
+	--blue-gray-700: #7597a9;
+	--blue-gray-800: #56798a;
+	--blue-gray-900: #4b6877;
+	--blue-gray-1000: #3f5864;
+	--blue-gray-1100: #334752;
+	--blue-gray-1200: #27373f;
+	--blue-gray-1300: #1b262c;
+	--blue-gray-1400: #101619;
+
+	--red-50: #fef6f5;
+	--red-100: #fddbd8;
+	--red-200: #fbc0bc;
+	--red-300: #f9a59f;
+	--red-400: #f88a82;
+	--red-500: #f66e65;
+	--red-600: #f45348;
+	--red-700: #f3382b;
+	--red-800: #d41a0c;
+	--red-900: #b7160b;
+	--red-1000: #9a1309;
+	--red-1100: #7d0f07;
+	--red-1200: #600c06;
+	--red-1300: #430804;
+	--red-1400: #270502;
+
+	--pink-50: #fef6f9;
+	--pink-100: #fbdae6;
+	--pink-200: #f9bed3;
+	--pink-300: #f6a2bf;
+	--pink-400: #f386ac;
+	--pink-500: #f06a99;
+	--pink-600: #ee4f86;
+	--pink-700: #eb3373;
+	--pink-800: #cc1455;
+	--pink-900: #b01149;
+	--pink-1000: #950f3e;
+	--pink-1100: #790c32;
+	--pink-1200: #5d0926;
+	--pink-1300: #41061b;
+	--pink-1400: #25040f;
+
+	--purple-50: #fcf7fd;
+	--purple-100: #f4def8;
+	--purple-200: #ebc4f2;
+	--purple-300: #e3abed;
+	--purple-400: #da92e7;
+	--purple-500: #d279e2;
+	--purple-600: #ca60dc;
+	--purple-700: #c147d7;
+	--purple-800: #a228b8;
+	--purple-900: #8c239f;
+	--purple-1000: #761d86;
+	--purple-1100: #60186d;
+	--purple-1200: #4a1254;
+	--purple-1300: #340d3b;
+	--purple-1400: #1e0721;
+
+	--deep-purple-50: #f9f7fd;
+	--deep-purple-100: #e8e0f5;
+	--deep-purple-200: #d6c9ee;
+	--deep-purple-300: #c5b1e7;
+	--deep-purple-400: #b49adf;
+	--deep-purple-500: #a283d8;
+	--deep-purple-600: #916cd0;
+	--deep-purple-700: #7f54c9;
+	--deep-purple-800: #6136ab;
+	--deep-purple-900: #532f93;
+	--deep-purple-1000: #46277c;
+	--deep-purple-1100: #392065;
+	--deep-purple-1200: #2c184e;
+	--deep-purple-1300: #1f1136;
+	--deep-purple-1400: #120a1f;
+
+	--indigo-50: #f7f8fc;
+	--indigo-100: #e1e4f4;
+	--indigo-200: #cacfec;
+	--indigo-300: #b4bbe4;
+	--indigo-400: #9da6dd;
+	--indigo-500: #8692d5;
+	--indigo-600: #707ecd;
+	--indigo-700: #5969c5;
+	--indigo-800: #3a4ba6;
+	--indigo-900: #32408f;
+	--indigo-1000: #2a3679;
+	--indigo-1100: #222c62;
+	--indigo-1200: #1b224b;
+	--indigo-1300: #131835;
+	--indigo-1400: #0b0e1e;
+
+	--blue-50: #f5fafe;
+	--blue-100: #d8ecfd;
+	--blue-200: #bbdffb;
+	--blue-300: #9ed1fa;
+	--blue-400: #81c3f8;
+	--blue-500: #64b5f7;
+	--blue-600: #47a7f5;
+	--blue-700: #2a99f4;
+	--blue-800: #0b7ad5;
+	--blue-900: #0a6ab8;
+	--blue-1000: #08599b;
+	--blue-1100: #07487e;
+	--blue-1200: #053861;
+	--blue-1300: #042744;
+	--blue-1400: #021627;
+
+	--light-blue-50: #f5fcff;
+	--light-blue-100: #d7f2ff;
+	--light-blue-200: #b8e8fe;
+	--light-blue-300: #9adefe;
+	--light-blue-400: #7cd5fe;
+	--light-blue-500: #5dcbfd;
+	--light-blue-600: #3fc1fd;
+	--light-blue-700: #21b7fd;
+	--light-blue-800: #0299de;
+	--light-blue-900: #0284c0;
+	--light-blue-1000: #026fa2;
+	--light-blue-1100: #015a83;
+	--light-blue-1200: #014565;
+	--light-blue-1300: #013147;
+	--light-blue-1400: #001c28;
+
+	--cyan-50: #f6fdfd;
+	--cyan-100: #dcf6f9;
+	--cyan-200: #c2eef4;
+	--cyan-300: #a8e7f0;
+	--cyan-400: #8ee0eb;
+	--cyan-500: #74d9e7;
+	--cyan-600: #5ad2e2;
+	--cyan-700: #40cbdd;
+	--cyan-800: #22acbf;
+	--cyan-900: #1d95a5;
+	--cyan-1000: #187d8b;
+	--cyan-1100: #146671;
+	--cyan-1200: #0f4e57;
+	--cyan-1300: #0b373d;
+	--cyan-1400: #061f23;
+
+	--teal-50: #f6fdfd;
+	--teal-100: #dcf9f5;
+	--teal-200: #c2f4ee;
+	--teal-300: #a8f0e6;
+	--teal-400: #8eebdf;
+	--teal-500: #74e7d7;
+	--teal-600: #5ae2d0;
+	--teal-700: #40ddc8;
+	--teal-800: #22bfaa;
+	--teal-900: #1da593;
+	--teal-1000: #188b7b;
+	--teal-1100: #147164;
+	--teal-1200: #0f574d;
+	--teal-1300: #0b3d36;
+	--teal-1400: #06231f;
+
+	--green-50: #f8fcf8;
+	--green-100: #e3f3e3;
+	--green-200: #cde9ce;
+	--green-300: #b8e0b9;
+	--green-400: #a3d7a5;
+	--green-500: #8ecd90;
+	--green-600: #78c47b;
+	--green-700: #63bb66;
+	--green-800: #449c47;
+	--green-900: #3b873e;
+	--green-1000: #327134;
+	--green-1100: #285c2a;
+	--green-1200: #1f4720;
+	--green-1300: #163217;
+	--green-1400: #0c1c0d;
+
+	--light-green-50: #fafcf7;
+	--light-green-100: #ebf5e0;
+	--light-green-200: #dcedc9;
+	--light-green-300: #cee6b3;
+	--light-green-400: #bfde9c;
+	--light-green-500: #b0d685;
+	--light-green-600: #a1cf6e;
+	--light-green-700: #93c757;
+	--light-green-800: #74a838;
+	--light-green-900: #649130;
+	--light-green-1000: #547a29;
+	--light-green-1100: #456321;
+	--light-green-1200: #354d1a;
+	--light-green-1300: #253612;
+	--light-green-1400: #151f0a;
+
+	--lime-50: #fdfdf6;
+	--lime-100: #f6f9dc;
+	--lime-200: #eff4c2;
+	--lime-300: #e9f0a8;
+	--lime-400: #e2eb8e;
+	--lime-500: #dbe774;
+	--lime-600: #d4e25a;
+	--lime-700: #cedd40;
+	--lime-800: #afbf22;
+	--lime-900: #97a51d;
+	--lime-1000: #7f8b18;
+	--lime-1100: #677114;
+	--lime-1200: #50570f;
+	--lime-1300: #383d0b;
+	--lime-1400: #202306;
+
+	--yellow-50: #fefef5;
+	--yellow-100: #fdf9d8;
+	--yellow-200: #fbf5bb;
+	--yellow-300: #faf19e;
+	--yellow-400: #f8ec81;
+	--yellow-500: #f7e864;
+	--yellow-600: #f5e447;
+	--yellow-700: #f4e02a;
+	--yellow-800: #d5c10b;
+	--yellow-900: #b8a70a;
+	--yellow-1000: #9b8c08;
+	--yellow-1100: #7e7207;
+	--yellow-1200: #615805;
+	--yellow-1300: #443d04;
+	--yellow-1400: #272302;
+
+	--amber-50: #fffcf5;
+	--amber-100: #fff5d6;
+	--amber-200: #ffedb8;
+	--amber-300: #ffe699;
+	--amber-400: #ffde7a;
+	--amber-500: #ffd65c;
+	--amber-600: #ffcf3d;
+	--amber-700: #ffc71f;
+	--amber-800: #e0a800;
+	--amber-900: #c29100;
+	--amber-1000: #a37a00;
+	--amber-1100: #856300;
+	--amber-1200: #664d00;
+	--amber-1300: #473600;
+	--amber-1400: #291f00;
+
+	--orange-50: #fffbf5;
+	--orange-100: #ffefd6;
+	--orange-200: #ffe2b8;
+	--orange-300: #ffd699;
+	--orange-400: #ffca7a;
+	--orange-500: #ffbe5c;
+	--orange-600: #ffb13d;
+	--orange-700: #ffa51f;
+	--orange-800: #e08700;
+	--orange-900: #c27400;
+	--orange-1000: #a36200;
+	--orange-1100: #855000;
+	--orange-1200: #663d00;
+	--orange-1300: #472b00;
+	--orange-1400: #291800;
+
+	--deep-orange-50: #fff7f5;
+	--deep-orange-100: #ffe0d6;
+	--deep-orange-200: #ffc9b8;
+	--deep-orange-300: #ffb399;
+	--deep-orange-400: #ff9c7a;
+	--deep-orange-500: #ff855c;
+	--deep-orange-600: #ff6e3d;
+	--deep-orange-700: #ff571f;
+	--deep-orange-800: #e03800;
+	--deep-orange-900: #c23000;
+	--deep-orange-1000: #a32900;
+	--deep-orange-1100: #852100;
+	--deep-orange-1200: #661a00;
+	--deep-orange-1300: #471200;
+	--deep-orange-1400: #290a00;
+
+	--brown-50: #fbf9f9;
+	--brown-100: #f0e8e6;
+	--brown-200: #e4d7d2;
+	--brown-300: #d9c6bf;
+	--brown-400: #cdb5ac;
+	--brown-500: #c2a499;
+	--brown-600: #b69386;
+	--brown-700: #ab8273;
+	--brown-800: #8c6354;
+	--brown-900: #795649;
+	--brown-1000: #66483d;
+	--brown-1100: #533b32;
+	--brown-1200: #402d26;
+	--brown-1300: #2d201b;
+	--brown-1400: #1a120f;
+}
+
+
+//
+// SCSS vars
+
+$gray-50:			var(--gray-50) !default;
+$gray-100:			var(--gray-100) !default;
+$gray-200:			var(--gray-200) !default;
+$gray-300:			var(--gray-300) !default;
+$gray-400:			var(--gray-400) !default;
+$gray-500:			var(--gray-500) !default;
+$gray-600:			var(--gray-600) !default;
+$gray-700:			var(--gray-700) !default;
+$gray-800:			var(--gray-800) !default;
+$gray-900:			var(--gray-900) !default;
+$gray-1000:			var(--gray-1000) !default;
+$gray-1100:			var(--gray-1100) !default;
+$gray-1200:			var(--gray-1200) !default;
+$gray-1300:			var(--gray-1300) !default;
+$gray-1400:			var(--gray-1400) !default;
+$gray:				$gray-700 !default;
+
+$blue-gray-50:		var(--blue-gray-50) !default;
+$blue-gray-100:		var(--blue-gray-100) !default;
+$blue-gray-200:		var(--blue-gray-200) !default;
+$blue-gray-300:		var(--blue-gray-300) !default;
+$blue-gray-400:		var(--blue-gray-400) !default;
+$blue-gray-500:		var(--blue-gray-500) !default;
+$blue-gray-600:		var(--blue-gray-600) !default;
+$blue-gray-700:		var(--blue-gray-700) !default;
+$blue-gray-800:		var(--blue-gray-800) !default;
+$blue-gray-900:		var(--blue-gray-900) !default;
+$blue-gray-1000:	var(--blue-gray-1000) !default;
+$blue-gray-1100:	var(--blue-gray-1100) !default;
+$blue-gray-1200:	var(--blue-gray-1200) !default;
+$blue-gray-1300:	var(--blue-gray-1300) !default;
+$blue-gray-1400:	var(--blue-gray-1400) !default;
+$blue-gray:			$blue-gray-700 !default;
+
+$red-50:			var(--red-50) !default;
+$red-100:			var(--red-100) !default;
+$red-200:			var(--red-200) !default;
+$red-300:			var(--red-300) !default;
+$red-400:			var(--red-400) !default;
+$red-500:			var(--red-500) !default;
+$red-600:			var(--red-600) !default;
+$red-700:			var(--red-700) !default;
+$red-800:			var(--red-800) !default;
+$red-900:			var(--red-900) !default;
+$red-1000:			var(--red-1000) !default;
+$red-1100:			var(--red-1100) !default;
+$red-1200:			var(--red-1200) !default;
+$red-1300:			var(--red-1300) !default;
+$red-1400:			var(--red-1400) !default;
+$red:				$red-700 !default;
+
+$pink-50:			var(--pink-50) !default;
+$pink-100:			var(--pink-100) !default;
+$pink-200:			var(--pink-200) !default;
+$pink-300:			var(--pink-300) !default;
+$pink-400:			var(--pink-400) !default;
+$pink-500:			var(--pink-500) !default;
+$pink-600:			var(--pink-600) !default;
+$pink-700:			var(--pink-700) !default;
+$pink-800:			var(--pink-800) !default;
+$pink-900:			var(--pink-900) !default;
+$pink-1000:			var(--pink-1000) !default;
+$pink-1100:			var(--pink-1100) !default;
+$pink-1200:			var(--pink-1200) !default;
+$pink-1300:			var(--pink-1300) !default;
+$pink-1400:			var(--pink-1400) !default;
+$pink:				$pink-700 !default;
+
+$purple-50:			var(--purple-50) !default;
+$purple-100:		var(--purple-100) !default;
+$purple-200:		var(--purple-200) !default;
+$purple-300:		var(--purple-300) !default;
+$purple-400:		var(--purple-400) !default;
+$purple-500:		var(--purple-500) !default;
+$purple-600:		var(--purple-600) !default;
+$purple-700:		var(--purple-700) !default;
+$purple-800:		var(--purple-800) !default;
+$purple-900:		var(--purple-900) !default;
+$purple-1000:		var(--purple-1000) !default;
+$purple-1100:		var(--purple-1100) !default;
+$purple-1200:		var(--purple-1200) !default;
+$purple-1300:		var(--purple-1300) !default;
+$purple-1400:		var(--purple-1400) !default;
+$purple:			$purple-700 !default;
+
+$deep-purple-50:	var(--deep-purple-50) !default;
+$deep-purple-100:	var(--deep-purple-100) !default;
+$deep-purple-200:	var(--deep-purple-200) !default;
+$deep-purple-300:	var(--deep-purple-300) !default;
+$deep-purple-400:	var(--deep-purple-400) !default;
+$deep-purple-500:	var(--deep-purple-500) !default;
+$deep-purple-600:	var(--deep-purple-600) !default;
+$deep-purple-700:	var(--deep-purple-700) !default;
+$deep-purple-800:	var(--deep-purple-800) !default;
+$deep-purple-900:	var(--deep-purple-900) !default;
+$deep-purple-1000:	var(--deep-purple-1000) !default;
+$deep-purple-1100:	var(--deep-purple-1100) !default;
+$deep-purple-1200:	var(--deep-purple-1200) !default;
+$deep-purple-1300:	var(--deep-purple-1300) !default;
+$deep-purple-1400:	var(--deep-purple-1400) !default;
+$deep-purple:		$deep-purple-700 !default;
+
+$indigo-50:			var(--indigo-50) !default;
+$indigo-100:		var(--indigo-100) !default;
+$indigo-200:		var(--indigo-200) !default;
+$indigo-300:		var(--indigo-300) !default;
+$indigo-400:		var(--indigo-400) !default;
+$indigo-500:		var(--indigo-500) !default;
+$indigo-600:		var(--indigo-600) !default;
+$indigo-700:		var(--indigo-700) !default;
+$indigo-800:		var(--indigo-800) !default;
+$indigo-900:		var(--indigo-900) !default;
+$indigo-1000:		var(--indigo-1000) !default;
+$indigo-1100:		var(--indigo-1100) !default;
+$indigo-1200:		var(--indigo-1200) !default;
+$indigo-1300:		var(--indigo-1300) !default;
+$indigo-1400:		var(--indigo-1400) !default;
+$indigo:			$indigo-700 !default;
+
+$blue-50:			var(--blue-50) !default;
+$blue-100:			var(--blue-100) !default;
+$blue-200:			var(--blue-200) !default;
+$blue-300:			var(--blue-300) !default;
+$blue-400:			var(--blue-400) !default;
+$blue-500:			var(--blue-500) !default;
+$blue-600:			var(--blue-600) !default;
+$blue-700:			var(--blue-700) !default;
+$blue-800:			var(--blue-800) !default;
+$blue-900:			var(--blue-900) !default;
+$blue-1000:			var(--blue-1000) !default;
+$blue-1100:			var(--blue-1100) !default;
+$blue-1200:			var(--blue-1200) !default;
+$blue-1300:			var(--blue-1300) !default;
+$blue-1400:			var(--blue-1400) !default;
+$blue:				$blue-700 !default;
+
+$light-blue-50:		var(--light-blue-50) !default;
+$light-blue-100:	var(--light-blue-100) !default;
+$light-blue-200:	var(--light-blue-200) !default;
+$light-blue-300:	var(--light-blue-300) !default;
+$light-blue-400:	var(--light-blue-400) !default;
+$light-blue-500:	var(--light-blue-500) !default;
+$light-blue-600:	var(--light-blue-600) !default;
+$light-blue-700:	var(--light-blue-700) !default;
+$light-blue-800:	var(--light-blue-800) !default;
+$light-blue-900:	var(--light-blue-900) !default;
+$light-blue-1000:	var(--light-blue-1000) !default;
+$light-blue-1100:	var(--light-blue-1100) !default;
+$light-blue-1200:	var(--light-blue-1200) !default;
+$light-blue-1300:	var(--light-blue-1300) !default;
+$light-blue-1400:	var(--light-blue-1400) !default;
+$light-blue:		$light-blue-700 !default;
+
+$cyan-50:			var(--cyan-50) !default;
+$cyan-100:			var(--cyan-100) !default;
+$cyan-200:			var(--cyan-200) !default;
+$cyan-300:			var(--cyan-300) !default;
+$cyan-400:			var(--cyan-400) !default;
+$cyan-500:			var(--cyan-500) !default;
+$cyan-600:			var(--cyan-600) !default;
+$cyan-700:			var(--cyan-700) !default;
+$cyan-800:			var(--cyan-800) !default;
+$cyan-900:			var(--cyan-900) !default;
+$cyan-1000:			var(--cyan-1000) !default;
+$cyan-1100:			var(--cyan-1100) !default;
+$cyan-1200:			var(--cyan-1200) !default;
+$cyan-1300:			var(--cyan-1300) !default;
+$cyan-1400:			var(--cyan-1400) !default;
+$cyan:				$cyan-700 !default;
+
+$teal-50:			var(--teal-50) !default;
+$teal-100:			var(--teal-100) !default;
+$teal-200:			var(--teal-200) !default;
+$teal-300:			var(--teal-300) !default;
+$teal-400:			var(--teal-400) !default;
+$teal-500:			var(--teal-500) !default;
+$teal-600:			var(--teal-600) !default;
+$teal-700:			var(--teal-700) !default;
+$teal-800:			var(--teal-800) !default;
+$teal-900:			var(--teal-900) !default;
+$teal-1000:			var(--teal-1000) !default;
+$teal-1100:			var(--teal-1100) !default;
+$teal-1200:			var(--teal-1200) !default;
+$teal-1300:			var(--teal-1300) !default;
+$teal-1400:			var(--teal-1400) !default;
+$teal:				$teal-700 !default;
+
+$green-50:			var(--green-50) !default;
+$green-100:			var(--green-100) !default;
+$green-200:			var(--green-200) !default;
+$green-300:			var(--green-300) !default;
+$green-400:			var(--green-400) !default;
+$green-500:			var(--green-500) !default;
+$green-600:			var(--green-600) !default;
+$green-700:			var(--green-700) !default;
+$green-800:			var(--green-800) !default;
+$green-900:			var(--green-900) !default;
+$green-1000:		var(--green-1000) !default;
+$green-1100:		var(--green-1100) !default;
+$green-1200:		var(--green-1200) !default;
+$green-1300:		var(--green-1300) !default;
+$green-1400:		var(--green-1400) !default;
+$green:				$green-700 !default;
+
+$light-green-50:	var(--light-green-50) !default;
+$light-green-100:	var(--light-green-100) !default;
+$light-green-200:	var(--light-green-200) !default;
+$light-green-300:	var(--light-green-300) !default;
+$light-green-400:	var(--light-green-400) !default;
+$light-green-500:	var(--light-green-500) !default;
+$light-green-600:	var(--light-green-600) !default;
+$light-green-700:	var(--light-green-700) !default;
+$light-green-800:	var(--light-green-800) !default;
+$light-green-900:	var(--light-green-900) !default;
+$light-green-1000:	var(--light-green-1000) !default;
+$light-green-1100:	var(--light-green-1100) !default;
+$light-green-1200:	var(--light-green-1200) !default;
+$light-green-1300:	var(--light-green-1300) !default;
+$light-green-1400:	var(--light-green-1400) !default;
+$light-green:		$light-green-700 !default;
+
+$lime-50:			var(--lime-50) !default;
+$lime-100:			var(--lime-100) !default;
+$lime-200:			var(--lime-200) !default;
+$lime-300:			var(--lime-300) !default;
+$lime-400:			var(--lime-400) !default;
+$lime-500:			var(--lime-500) !default;
+$lime-600:			var(--lime-600) !default;
+$lime-700:			var(--lime-700) !default;
+$lime-800:			var(--lime-800) !default;
+$lime-900:			var(--lime-900) !default;
+$lime-1000:			var(--lime-1000) !default;
+$lime-1100:			var(--lime-1100) !default;
+$lime-1200:			var(--lime-1200) !default;
+$lime-1300:			var(--lime-1300) !default;
+$lime-1400:			var(--lime-1400) !default;
+$lime:				$lime-700 !default;
+
+$yellow-50:			var(--yellow-50) !default;
+$yellow-100:		var(--yellow-100) !default;
+$yellow-200:		var(--yellow-200) !default;
+$yellow-300:		var(--yellow-300) !default;
+$yellow-400:		var(--yellow-400) !default;
+$yellow-500:		var(--yellow-500) !default;
+$yellow-600:		var(--yellow-600) !default;
+$yellow-700:		var(--yellow-700) !default;
+$yellow-800:		var(--yellow-800) !default;
+$yellow-900:		var(--yellow-900) !default;
+$yellow-1000:		var(--yellow-1000) !default;
+$yellow-1100:		var(--yellow-1100) !default;
+$yellow-1200:		var(--yellow-1200) !default;
+$yellow-1300:		var(--yellow-1300) !default;
+$yellow-1400:		var(--yellow-1400) !default;
+$yellow:			$yellow-700 !default;
+
+$amber-50:			var(--amber-50) !default;
+$amber-100:			var(--amber-100) !default;
+$amber-200:			var(--amber-200) !default;
+$amber-300:			var(--amber-300) !default;
+$amber-400:			var(--amber-400) !default;
+$amber-500:			var(--amber-500) !default;
+$amber-600:			var(--amber-600) !default;
+$amber-700:			var(--amber-700) !default;
+$amber-800:			var(--amber-800) !default;
+$amber-900:			var(--amber-900) !default;
+$amber-1000:		var(--amber-1000) !default;
+$amber-1100:		var(--amber-1100) !default;
+$amber-1200:		var(--amber-1200) !default;
+$amber-1300:		var(--amber-1300) !default;
+$amber-1400:		var(--amber-1400) !default;
+$amber:				$amber-700 !default;
+
+$orange-50:			var(--orange-50) !default;
+$orange-100:		var(--orange-100) !default;
+$orange-200:		var(--orange-200) !default;
+$orange-300:		var(--orange-300) !default;
+$orange-400:		var(--orange-400) !default;
+$orange-500:		var(--orange-500) !default;
+$orange-600:		var(--orange-600) !default;
+$orange-700:		var(--orange-700) !default;
+$orange-800:		var(--orange-800) !default;
+$orange-900:		var(--orange-900) !default;
+$orange-1000:		var(--orange-1000) !default;
+$orange-1100:		var(--orange-1100) !default;
+$orange-1200:		var(--orange-1200) !default;
+$orange-1300:		var(--orange-1300) !default;
+$orange-1400:		var(--orange-1400) !default;
+$orange:			$orange-700 !default;
+
+$deep-orange-50:	var(--deep-orange-50) !default;
+$deep-orange-100:	var(--deep-orange-100) !default;
+$deep-orange-200:	var(--deep-orange-200) !default;
+$deep-orange-300:	var(--deep-orange-300) !default;
+$deep-orange-400:	var(--deep-orange-400) !default;
+$deep-orange-500:	var(--deep-orange-500) !default;
+$deep-orange-600:	var(--deep-orange-600) !default;
+$deep-orange-700:	var(--deep-orange-700) !default;
+$deep-orange-800:	var(--deep-orange-800) !default;
+$deep-orange-900:	var(--deep-orange-900) !default;
+$deep-orange-1000:	var(--deep-orange-1000) !default;
+$deep-orange-1100:	var(--deep-orange-1100) !default;
+$deep-orange-1200:	var(--deep-orange-1200) !default;
+$deep-orange-1300:	var(--deep-orange-1300) !default;
+$deep-orange-1400:	var(--deep-orange-1400) !default;
+$deep-orange:		$deep-orange-700 !default;
+
+$brown-50:			var(--brown-50) !default;
+$brown-100:			var(--brown-100) !default;
+$brown-200:			var(--brown-200) !default;
+$brown-300:			var(--brown-300) !default;
+$brown-400:			var(--brown-400) !default;
+$brown-500:			var(--brown-500) !default;
+$brown-600:			var(--brown-600) !default;
+$brown-700:			var(--brown-700) !default;
+$brown-800:			var(--brown-800) !default;
+$brown-900:			var(--brown-900) !default;
+$brown-1000:		var(--brown-1000) !default;
+$brown-1100:		var(--brown-1100) !default;
+$brown-1200:		var(--brown-1200) !default;
+$brown-1300:		var(--brown-1300) !default;
+$brown-1400:		var(--brown-1400) !default;
+$brown:				$brown-700 !default;
+
+//
+// Define alternate spelling of grey vars
+
+$grey-50:			$gray-50 !default;
+$grey-100:			$gray-100 !default;
+$grey-200:			$gray-200 !default;
+$grey-300:			$gray-300 !default;
+$grey-400:			$gray-400 !default;
+$grey-500:			$gray-500 !default;
+$grey-600:			$gray-600 !default;
+$grey-700:			$gray-700 !default;
+$grey-800:			$gray-800 !default;
+$grey-900:			$gray-900 !default;
+$grey-1000:			$gray-1000 !default;
+$grey-1100:			$gray-1100 !default;
+$grey-1200:			$gray-1200 !default;
+$grey-1300:			$gray-1300 !default;
+$grey-1400:			$gray-1400 !default;
+$grey:				$gray !default;
+
+$blue-grey-50:		$blue-gray-50 !default;
+$blue-grey-100:		$blue-gray-100 !default;
+$blue-grey-200:		$blue-gray-200 !default;
+$blue-grey-300:		$blue-gray-300 !default;
+$blue-grey-400:		$blue-gray-400 !default;
+$blue-grey-500:		$blue-gray-500 !default;
+$blue-grey-600:		$blue-gray-600 !default;
+$blue-grey-700:		$blue-gray-700 !default;
+$blue-grey-800:		$blue-gray-800 !default;
+$blue-grey-900:		$blue-gray-900 !default;
+$blue-grey-1000:	$blue-gray-1000 !default;
+$blue-grey-1100:	$blue-gray-1100 !default;
+$blue-grey-1200:	$blue-gray-1200 !default;
+$blue-grey-1300:	$blue-gray-1300 !default;
+$blue-grey-1400:	$blue-gray-1400 !default;
+$blue-grey:			$blue-gray !default;
+
+//
+// MDL black var names
+
+$black:				$gray-1400 !default;
+$black-87:			$gray-1300 !default;
+$black-54:			$gray-900 !default;
+$black-38:			$gray-600 !default;
+$black-12:			$gray-200 !default;
+$white:				$gray-50 !default;

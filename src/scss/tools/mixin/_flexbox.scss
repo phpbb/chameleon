@@ -1,0 +1,32 @@
+//------------------------------------------------------------------------------
+// @tool: Flexbox
+//------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 1.0.2
+// @description
+//
+// Mixin for flexbox
+//
+//------------------------------------------------------------------------------
+
+//
+// @settings
+
+// Layout Variables
+
+//
+// @scss
+
+@mixin parent($col: row) {
+	display: flex;
+	flex-direction: $col;
+}
+
+@mixin column {
+	flex-direction: column;
+}
+
+@mixin child {
+	flex: 1;
+	align-self: auto;
+}
