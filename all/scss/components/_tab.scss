@@ -122,7 +122,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		&-row {
 			@include child();
 			@include parent(column);
-			@media (min-width: $bp-lg) {
+			@media (min-width: lg) {
 				flex-direction: row;
 			}
 		}
@@ -132,7 +132,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 			flex-shrink: 1;
 			margin-bottom: 0;
 			padding: ($tab-spacing * 2) 0 0 ($tab-spacing * 2);
-			@media (min-width: $bp-lg) {
+			@media (min-width: lg) {
 				padding-bottom: ($tab-spacing * 2);
 			}
 		}

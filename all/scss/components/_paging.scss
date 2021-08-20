@@ -69,7 +69,7 @@ $paging-hover-color: $default-action-color-hover !default;
 		}
 	}
 
-	@media (min-width: $bp-sm) {
+	@media (min-width: sm) {
 		right: $paging-right;
 	}
 }

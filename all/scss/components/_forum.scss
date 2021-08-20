@@ -76,7 +76,7 @@ $forum-action-color: $default-action-icon-color !default;
 			margin-top: $forum-title-icon-alignment;
 		}
 
-		@media (min-width: $bp-lg) {
+		@media (min-width: lg) {
 			margin-bottom: 0;
 		}
 	}
@@ -135,7 +135,7 @@ $forum-action-color: $default-action-icon-color !default;
 		}
 	}
 
-	@media (min-width: $bp-lg) {
+	@media (min-width: lg) {
 		&-deck {
 			display: grid;
 			grid-column-gap: 1rem;

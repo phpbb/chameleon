@@ -92,7 +92,7 @@ $toast-important-hover-color: $default-white !default;
 		pointer-events: auto;
 	}
 
-	@media (min-width: $bp-sm) {
+	@media (min-width: sm) {
 		right: $toast-right;
 	}
 }

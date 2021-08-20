@@ -236,7 +236,7 @@ $emoji-picker-divider-color: $default-border-color !default;
 		}
 	}
 
-	@media (min-width: $bp-md) {
+	@media (min-width: $md) {
 		width: $emoji-picker-width;
 	}
 }

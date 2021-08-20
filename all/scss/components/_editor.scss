@@ -73,7 +73,7 @@ $editor-btn-background-hover: $default-primary-dark-color !default;
 			transform: scale(1);
 		}
 
-		@media (min-width: $bp-lg) {
+		@media (min-width: lg) {
 			width: $editor-toolbar-width-lg;
 		}
 	}
@@ -118,15 +118,15 @@ $editor-btn-background-hover: $default-primary-dark-color !default;
 		}
 	}
 
-	@media (min-width: $bp-md) {
+	@media (min-width: md) {
 		width: $editor-width-md;
 	}
 
-	@media (min-width: $bp-lg) {
+	@media (min-width: lg) {
 		width: $editor-width-lg;
 	}
 
-	@media (min-width: $bp-xl) {
+	@media (min-width: xl) {
 		width: $editor-width-xl;
 	}
 }
