@@ -46,7 +46,7 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		min-height: $post-body-min-height;
 		padding: ($post-spacing * 4) ($post-spacing * 3);
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			padding: ($post-spacing * 4) ($post-spacing * 6);
 		}
 	}
@@ -59,7 +59,7 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		@include type(headline5);
 		margin-bottom: 0;
 
-		@media (min-width: lg) {
+		@media (min-width: $lg) {
 			@include child();
 			padding-right: $post-spacing;
 		}

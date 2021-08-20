@@ -55,7 +55,7 @@ $theme-dark-border: rgba($black, 0.5);
 		background-color: $default-background-alt-color;
 		padding-right: ($default-spacing * 2);
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			padding-right: ($default-spacing * 3);
 		}
 	}

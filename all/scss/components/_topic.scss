@@ -111,7 +111,7 @@ $topic-header-icon-color: $default-surface-item-color !default;
 	&-date {
 		display: none;
 
-		@media (min-width: lg) {
+		@media (min-width: $lg) {
 			display: inline-block;
 		}
 	}
@@ -130,7 +130,7 @@ $topic-header-icon-color: $default-surface-item-color !default;
 			}
 		}
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			display: inline-flex;
 		}
 	}

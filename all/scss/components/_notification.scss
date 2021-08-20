@@ -155,7 +155,7 @@ $notification-unread-color: $default-primary-item-color !default;
 			transform: scale(1);
 		}
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			width: $notification-container-size-lg;
 		}
 	}

@@ -56,13 +56,13 @@ $hero-background: url('https://i.imgur.com/DnPCBsG.jpg') !default;
 		@include type(headline5, $lh: 1, $fw: 200);
 		color: $hero-color;
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			@include type(headline4, $lh: 1, $fw: 200);
 			max-width: $hero-lead-max-width;
 		}
 	}
 
-	@media (min-width: md) {
+	@media (min-width: $md) {
 		text-align: left;
 	}
 }

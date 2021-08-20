@@ -50,25 +50,25 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 			display: none;
 		}
 
-		@media (min-width: sm) {
+		@media (min-width: $sm) {
 			&:nth-last-of-type(-n+1) {
 				display: block;
 			}
 		}
 
-		@media (min-width: md) {
+		@media (min-width: $md) {
 			&:nth-last-of-type(-n+2) {
 				display: block;
 			}
 		}
 
-		@media (min-width: lg) {
+		@media (min-width: $lg) {
 			&:nth-last-of-type(-n+3) {
 				display: block;
 			}
 		}
 
-		@media (min-width: xl) {
+		@media (min-width: $xl) {
 			&:nth-last-of-type(-n+4) {
 				display: block;
 			}

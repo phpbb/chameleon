@@ -61,7 +61,7 @@ $drawer-border-color: $default-border-color !default;
 			display: inline-block;
 		}
 		//
-		// @media (min-width: lg) {
+		// @media (min-width: $lg) {
 		// 	transition: 0.5s;
 		// }
 	}
