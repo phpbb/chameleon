@@ -2010,7 +2010,6 @@ select:focus::-ms-value {
 
 .c-toolbar {
 	background-color: var(--gray-1200);
-	border-top: 1px solid var(--gray-1000);
 	border-radius: 2px;
 	margin: 0 0 1.5rem;
 }

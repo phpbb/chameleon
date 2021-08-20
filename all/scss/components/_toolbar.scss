@@ -14,8 +14,6 @@ $toolbar-border-radius: $default-border-radius !default;
 
 // Theme Variables
 $toolbar-background-color: $default-surface-color !default;
-$toolbar-border-color: $default-border-color !default;
-
 
 //
 // @scss
@@ -24,7 +22,6 @@ $toolbar-border-color: $default-border-color !default;
 .c-toolbar {
 	@include shadow(2); // google material design
 	background-color: $toolbar-background-color;
-	border-top: 1px solid $toolbar-border-color;
 	border-radius: $toolbar-border-radius;
 	margin: 0 0 ($toolbar-spacing * 3);
 
