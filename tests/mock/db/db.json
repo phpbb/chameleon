@@ -17364,8 +17364,8 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "reply",
-			"typeTitle": "Reply",
+			"type": "mdi:reply-outline",
+			"typeTitle": "Replyed",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17384,8 +17384,8 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "plus",
-			"typeTitle": "New Post",
+			"type": "mdi:plus",
+			"typeTitle": "Posted",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17409,8 +17409,8 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "format-quote-open",
-			"typeTitle": "Quote",
+			"type": "mdi:format-quote-open-outline",
+			"typeTitle": "Quoted",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17429,8 +17429,8 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "comment-account-outline",
-			"typeTitle": "Private Message",
+			"type": "mdi:comment-account-outline",
+			"typeTitle": "Messaged",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17449,7 +17449,7 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "alert",
+			"type": "fa-regular:flag",
 			"typeTitle": "Reported",
 			"participants": [
 				{
@@ -17469,8 +17469,8 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "alert-decagram-outline",
-			"typeTitle": "Dissapproved Post",
+			"type": "mdi:alert-decagram-outline",
+			"typeTitle": "Dissapproved",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17489,8 +17489,28 @@
 			"color": "#009900",
 			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
 			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
-			"type": "decagram-check",
-			"typeTitle": "Approved Post",
+			"type": "mdi:decagram-check",
+			"typeTitle": "Approved",
+			"participants": [
+				{
+					"name": "Frank",
+					"color": "#009900",
+					"url": "./memberlist.php?mode=viewprofile&amp;u=61815"
+				}
+			],
+			"title": "Your first pm msg title",
+			"time": "2016-11-11T19:18:00Z",
+			"unread": 1,
+			"approved": 1
+		},
+		{
+			"id": 8,
+			"user": "Joe",
+			"color": "#009900",
+			"url": "./memberlist.php?mode=viewprofile&amp;u=61815",
+			"avatar": "https://avatars2.githubusercontent.com/u/71081?v=4&amp;s=46",
+			"type": "mdi:shield-alert-outline",
+			"typeTitle": "Warned",
 			"participants": [
 				{
 					"name": "Frank",
@@ -17501,7 +17521,7 @@
 			"title": "Your first pm msg title",
 			"time": "2016-11-11T19:18:00Z",
 			"unread": 0,
-			"approved": 1
+			"approved": 0
 		}
 	],
 	"online": [

@@ -35,10 +35,37 @@ $notification-unread-color: $default-primary-item-color !default;
 //
 // @scss
 .c-notification {
+	&-container {
+		@include shadow(2);
+		border-radius: $notification-border-radius;
+		position: absolute;
+		z-index: 999;
+		right: 0;
+		// overflow: auto;
+		width: $notification-container-width;
+		margin-top: 1px;
+		transition: all 0.2s ease;
+		transform: scale(0);
+		transform-origin: right top;
+
+		&.is-active {
+			transform: scale(1);
+		}
+
+		@media (min-width: $md) {
+			width: $notification-container-size-lg;
+		}
+	}
+
 	&-list {
-		box-shadow: none;
+		@include type(subtitle1, $lh: 1.5);
+		letter-spacing: calc((0.15 / 16) * 1em);
+		overflow-x: hidden;
 		overflow-y: scroll;
 		max-height: $notification-container-size-lg;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 
 	&-header {
@@ -48,6 +75,17 @@ $notification-unread-color: $default-primary-item-color !default;
 	&-item {
 		background-color: $notification-bg-color;
 		border-top: $notification-border-size solid $notification-border-color;
+		position: relative;
+		display: grid;
+		overflow: hidden;
+		width: 405px;
+		padding: 1rem;
+		grid-template-areas:
+			'media users action'
+			'media title action'
+			'media time action';
+		grid-template-columns: 56px auto 92px;
+		grid-template-rows: auto;
 
 		&:hover {
 			background-color: $notification-hover-color;
@@ -59,12 +97,43 @@ $notification-unread-color: $default-primary-item-color !default;
 		}
 	}
 
-	&-meta {
+	&-media {
+		align-self: center;
+		margin-right: 1rem;
+		grid-area: media;
+		justify-self: start;
+	}
+
+	&-users {
+		align-self: center;
+		grid-area: users;
+	}
+
+	&-user {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&-title {
+		align-self: center;
+		grid-area: title;
+	}
+
+	&-time {
+		align-self: center;
+		grid-area: time;
+	}
+
+	&-action {
 		border-radius: $notification-meta-border-radius;
 		color: $notification-action-icon-color;
+		align-self: center;
 		padding: ($notification-spacing * 2);
 		transition: transform 0.5s, opacity 1s;
 		transform: translate3d(0, 0, 0);
+		grid-area: action;
+		justify-self: end;
 
 		&:after {
 			background-image: radial-gradient(circle, $black 10%, transparent 10.01%);
@@ -93,27 +162,10 @@ $notification-unread-color: $default-primary-item-color !default;
 			background-color: $notification-action-bg;
 			color: $notification-action-color-hover;
 		}
-	}
 
-	&-unread .c-notification-meta {
-		background-color: $notification-unread;
-		color: $notification-unread-color;
-		transition: transform 0.5s, opacity 1s;
-
-		&:hover {
-			background-color: $notification-action-bg;
-			color: $notification-action-color-hover;
-		}
-	}
-
-	&-footer {
-		border-top: $notification-border-size solid $notification-border-color;
-
-		&-action {
-			text-align: center;
-			text-transform: uppercase;
-			display: block;
-			width: 100%;
+		&-icon {
+			width: 40px;
+			height: 40px;
 		}
 	}
 
@@ -133,30 +185,39 @@ $notification-unread-color: $default-primary-item-color !default;
 		}
 	}
 
-	&-users {
-		text-overflow: ellipsis;
-		display: block;
+	&-unread .c-notification-action {
+		background-color: $notification-unread;
+		color: $notification-unread-color;
+		transition: transform 0.5s, opacity 1s;
+
+		&:hover {
+			background-color: $notification-action-bg;
+			color: $notification-action-color-hover;
+		}
 	}
 
-	&-container {
-		@include shadow(2);
-		border-radius: $notification-border-radius;
-		position: absolute;
-		z-index: 999;
-		right: 0;
-		overflow: auto;
-		width: $notification-container-width;
-		margin-top: 1px;
-		transition: all 0.2s ease;
-		transform: scale(0);
-		transform-origin: right top;
+	&-unread .c-notification-unapproved {
+		background-color: $notification-disapproved-color;
 
-		&.is-active {
-			transform: scale(1);
+		&:hover {
+			color: $notification-disapproved-color;
 		}
+	}
 
-		@media (min-width: $md) {
-			width: $notification-container-size-lg;
+	&-unread .c-notification-approved {
+		background-color: $notification-approved-color;
+
+		&:hover {
+			color: $notification-approved-color;
+		}
+	}
+
+	&-footer {
+		border-top: $notification-border-size solid $notification-border-color;
+
+		&-action {
+			text-transform: uppercase;
+			grid-column: span 2;
 		}
 	}
 }
