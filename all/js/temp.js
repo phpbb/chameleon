@@ -349,40 +349,6 @@ $($notificationToggle).click(event_ => {
 //---------------------------------------------
 
 /**
- * Handle animation direction for Menus
- *
- * @todo      Refactor into Menu toggle
- * @constant  {object} $this
- * @constant  {object} targetOffset
- */
-$($menu).each(function() {
-	const $this = $(this);
-	const targetOffset = $this.offset();
-	const $direction = $this.data('direction');
-	const $orientation = $this.data('orientation');
-	if ($direction) {
-		$this.css('transform-origin', $direction);
-	} else {
-		if (targetOffset.left > $(window).width() / 2) {
-			$this.css('transform-origin', 'right top');
-		} else {
-			$this.css('transform-origin', 'left top');
-		}
-	}
-	if ($orientation) {
-		if ($orientation == 'right') {
-			$this.css('right', 0);
-		} else {
-			$this.css('left', 0);
-		}
-	} else {
-		if (targetOffset.left > $(window).width() / 2) {
-			$this.css('right', 0);
-		}
-	}
-});
-
-/**
  * Handle state for Menus
  *
  * @todo      Refactor Menu into this
@@ -392,12 +358,38 @@ $($menu).each(function() {
  */
 $($menuToggle).click(function(event_) {
 	const $this = $(this);
-	const $that = $($menu);
+	const $that = $(this).next();
 	event_.preventDefault();
 	event_.stopPropagation();
+
+	const link = edgeDetect($this);
+	const menu = edgeDetect($that);
+	let vertical = 'top';
+	let horizontal = 'left';
+
+	// not enough space in default location below link set above
+	if ((link.currentTop + menu.height) > $(window).height()) {
+		menu.top = (0 - menu.height + link.height);
+		vertical = 'bottom';
+	} else {
+		menu.top = 0;
+	}
+
+	// not enough space in default location right of link set to left
+	if ((link.currentLeft + menu.width) > $(window).width()) {
+		menu.left = (0 - menu.width + link.width);
+		horizontal = 'right';
+	} else {
+		menu.left = 0;
+	}
+
+	// $that.attr('style', 'transform-origin: ' + horizontal + ' ' + vertical + ';');
+	$that.attr('style', 'left: ' + menu.left + 'px; top: ' + menu.top + 'px; transform-origin: ' + horizontal + ' ' + vertical + ';');
+
 	$that.each(() => {
 		$this.toggleClass('is-active', false);
 	});
+
 	$this.next($menu).toggleClass('is-active');
 });
 
