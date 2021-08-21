@@ -53,11 +53,16 @@ $theme-dark-border: rgba($black, 0.5);
 
 	&-right {
 		background-color: $default-surface-color;
+		border-top-left-radius: $default-border-radius;
 		padding-right: ($default-spacing * 2);
 
 		@media (min-width: $md) {
 			padding-right: ($default-spacing * 3);
 		}
+	}
+
+	&-action {
+		border-top-left-radius: $default-border-radius;
 	}
 
 	&-badge {

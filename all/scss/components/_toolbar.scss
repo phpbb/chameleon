@@ -33,5 +33,10 @@ $toolbar-background-color: $default-surface-color !default;
 		&-icon + &-text {
 			margin-right: $toolbar-spacing;
 		}
+
+		&:last-of-type {
+			border-top-right-radius: $toolbar-border-radius;
+			border-bottom-right-radius: $toolbar-border-radius;
+		}
 	}
 }

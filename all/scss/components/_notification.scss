@@ -70,6 +70,12 @@ $notification-unread-color: $default-primary-item-color !default;
 
 	&-header {
 		border-bottom: $notification-border-size solid $notification-border-color;
+		border-top-left-radius: $notification-border-radius;
+		border-top-right-radius: $notification-border-radius;
+
+		&-action {
+			border-top-right-radius: $notification-border-radius;
+		}
 	}
 
 	&-item {
@@ -214,9 +220,13 @@ $notification-unread-color: $default-primary-item-color !default;
 
 	&-footer {
 		border-top: $notification-border-size solid $notification-border-color;
+		border-bottom-right-radius: $notification-border-radius;
+		border-bottom-left-radius: $notification-border-radius;
 
 		&-action {
 			text-transform: uppercase;
+			border-bottom-right-radius: $notification-border-radius;
+			border-bottom-left-radius: $notification-border-radius;
 			grid-column: span 2;
 		}
 	}
