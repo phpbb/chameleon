@@ -327,16 +327,23 @@ $($tabs).children().each(function() {
 /**
  * Handle state for Notification Menu
  *
- * @constant  {object} $this
- * @constant  {number} $targetOffset
+ * @constant  {object} $this	Toggle Link
+ * @constant  {object} $that	Container to be displayed
+ * @constant  {number} right	Absolute right position
  */
 $($notificationToggle).click(event_ => {
-	const $this = $($notification);
+	const $this = $($notificationToggle);
+	const $that = $($notification);
+
+	let right = $this.offset().left + $this.innerWidth();
+
+	right = right - $that.innerWidth();
 
 	event_.preventDefault();
 	event_.stopPropagation();
 
-	$this.toggleClass('is-active');
+	$that.attr('style', 'left: ' + right + 'px;');
+	$that.toggleClass('is-active');
 });
 
 //---------------------------------------------
