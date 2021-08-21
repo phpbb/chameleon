@@ -1,15 +1,15 @@
 <div class="c-notification-container t-notification-container" data-container="notificiations">
 	<div class="o-bar c-notification-header t-notification-header">
-		<div class="o-bar-left">
+		<div class="o-bar-left c-notification-header-left t-notification-header-left">
 			<h2 class="o-bar-title c-notification-bar-title t-notification-bar-title">{{ lang.notifications }}</h2>
 		</div>
-		<div class="o-bar-right">
-			<a class="o-bar-item o-action t-notification-action" href="" data-tooltip="true" title="{{ lang.settings }}">
-				{{ 'mdi:settings-outline'|icon('iconify', 'o-icon c-notification-bar-action-icon t-notification-bar-action-icon')|safe }}
+		<div class="o-bar-right c-notification-header-left t-notification-header-left">
+			<a class="o-bar-item o-action c-notification-header-action t-notification-header-action" href="" data-tooltip="true" title="{{ lang.settings }}">
+				{{ 'mdi:settings-outline'|icon('iconify', 'o-icon c-notification-header-action-icon t-notification-header-action-icon')|safe }}
 			</a>
 		</div>
 	</div>
-	<ul class="o-list c-notification-list t-notification-list">
+	<ul class="c-notification-list t-notification-list">
 		{% for item in notification %}
 			<li class="o-list-item c-notification-item{% if item.unread %} c-notification-unread{% endif %} t-notification-item{% if item.unread %}t-notification-unread{% endif %}">
 				<a class="c-notification-media t-notification-media" href="{{ item.url }}">

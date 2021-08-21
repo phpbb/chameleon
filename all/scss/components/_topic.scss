@@ -12,6 +12,7 @@
 $topic-spacing: $default-spacing !default;
 $topic-data-icon-size: 20px !default;
 $topic-border-size: $default-border-size !default;
+$topic-border-radius: $default-border-radius !default;
 
 // Theme Variables
 $topic-icon-color: $default-secondary-color !default;
@@ -33,12 +34,6 @@ $topic-header-icon-color: $default-surface-item-color !default;
 	transform: scaleY(1);
 	transform-origin: center top;
 
-	&.is-collapsed {
-		display: none;
-		transition: 0.35s ease-in-out;
-		transform: scaleY(0);
-	}
-
 	&-container {
 		@include shadow(2); // google material design
 	}
@@ -55,6 +50,9 @@ $topic-header-icon-color: $default-surface-item-color !default;
 	}
 
 	&-header {
+		border-top-left-radius: $topic-border-radius;
+		border-top-right-radius: $topic-border-radius;
+
 		&-info {
 			padding-right: ($topic-spacing * 2);
 		}
@@ -69,9 +67,8 @@ $topic-header-icon-color: $default-surface-item-color !default;
 				transition: 0.35s ease-in-out;
 			}
 
-			&.is-collapsed .c-topic-header-action-icon {
-				transition: 0.35s ease-in-out;
-				transform: rotate(180deg);
+			&:last-of-type {
+				border-top-right-radius: $topic-border-radius;
 			}
 		}
 	}
@@ -138,5 +135,25 @@ $topic-header-icon-color: $default-surface-item-color !default;
 	&-checkbox-label {
 		text-indent: 9999px;
 		width: 0;
+	}
+
+	&.is-collapsed {
+		display: none;
+		transition: 0.35s ease-in-out;
+		transform: scaleY(0);
+
+		.c-topic-header {
+			border-bottom-right-radius: $topic-border-radius;
+			border-bottom-left-radius: $topic-border-radius;
+		}
+
+		.c-topic-header-action-icon {
+			transition: 0.35s ease-in-out;
+			transform: rotate(180deg);
+		}
+
+		.c-topic-header-action:last-of-type {
+			border-bottom-right-radius: $topic-border-radius;
+		}
 	}
 }

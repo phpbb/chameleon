@@ -752,6 +752,14 @@ select:focus::-ms-value {
 	margin-right: 0.5rem;
 }
 
+.c-paging-item:first-of-type .c-paging-action {
+	border-top-left-radius: 2px;
+}
+
+.c-paging-item:last-of-type .c-paging-action {
+	border-top-right-radius: 2px;
+}
+
 @media (min-width: 540px) {
 	.c-paging {
 		right: 48px;
@@ -821,10 +829,13 @@ select:focus::-ms-value {
 	background-color: var(--gray-1300);
 	border-radius: 2px;
 	position: relative;
+	display: grid;
 	margin-bottom: 1rem;
+	grid-template-rows: auto 56px;
 }
 
 .c-forum-body {
+	border-bottom: 1px solid var(--gray-1000);
 	display: grid;
 	padding-bottom: 1rem;
 	grid-template-columns: 72px auto;
@@ -884,8 +895,11 @@ select:focus::-ms-value {
 }
 
 .c-forum-footer {
-	border-top: 1px solid var(--gray-1000);
 	border-radius: 0 0 2px 2px;
+}
+
+.c-forum-footer-item {
+	position: relative;
 }
 
 .c-forum-cat-header {
@@ -944,12 +958,6 @@ select:focus::-ms-value {
 	transform-origin: center top;
 }
 
-.c-topic.is-collapsed {
-	display: none;
-	transition: 0.35s ease-in-out;
-	transform: scaleY(0);
-}
-
 .c-topic-item {
 	background-color: var(--gray-1300);
 	border-top: 1px solid var(--gray-1000);
@@ -959,6 +967,11 @@ select:focus::-ms-value {
 .c-topic-item:hover {
 	background-color: var(--gray-1100);
 	transition: 0.5s;
+}
+
+.c-topic-header {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
 }
 
 .c-topic-header-info {
@@ -974,9 +987,8 @@ select:focus::-ms-value {
 	transition: 0.35s ease-in-out;
 }
 
-.c-topic-header-action.is-collapsed .c-topic-header-action-icon {
-	transition: 0.35s ease-in-out;
-	transform: rotate(180deg);
+.c-topic-header-action:last-of-type {
+	border-top-right-radius: 2px;
 }
 
 .c-topic-title {
@@ -1047,6 +1059,26 @@ select:focus::-ms-value {
 .c-topic-checkbox-label {
 	text-indent: 9999px;
 	width: 0;
+}
+
+.c-topic.is-collapsed {
+	display: none;
+	transition: 0.35s ease-in-out;
+	transform: scaleY(0);
+}
+
+.c-topic.is-collapsed .c-topic-header {
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.c-topic.is-collapsed .c-topic-header-action-icon {
+	transition: 0.35s ease-in-out;
+	transform: rotate(180deg);
+}
+
+.c-topic.is-collapsed .c-topic-header-action:last-of-type {
+	border-bottom-right-radius: 2px;
 }
 
 .c-post {
@@ -1461,11 +1493,10 @@ select:focus::-ms-value {
 }
 
 .c-notification-container {
-	border-radius: 2px;
 	position: absolute;
 	z-index: 999;
 	right: 0;
-	width: 300px;
+	width: 350px;
 	margin-top: 0.0625rem;
 	transition: all 0.2s ease;
 	transform: scale(0);
@@ -1498,6 +1529,12 @@ select:focus::-ms-value {
 
 .c-notification-header {
 	border-bottom: 1px solid var(--gray-1000);
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.c-notification-header-action {
+	border-top-right-radius: 2px;
 }
 
 .c-notification-item {
@@ -1506,7 +1543,6 @@ select:focus::-ms-value {
 	position: relative;
 	display: grid;
 	overflow: hidden;
-	width: 405px;
 	padding: 1rem;
 	grid-template-areas: 'media users action' 'media title action' 'media time action';
 	grid-template-columns: 56px auto 92px;
@@ -1637,10 +1673,14 @@ select:focus::-ms-value {
 
 .c-notification-footer {
 	border-top: 1px solid var(--gray-1000);
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
 }
 
 .c-notification-footer-action {
 	text-transform: uppercase;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
 	grid-column: span 2;
 }
 
@@ -2072,12 +2112,21 @@ select:focus::-ms-value {
 	margin: 0 0 1.5rem;
 }
 
+.c-toolbar-item {
+	position: relative;
+}
+
 .c-toolbar-action-text + .c-toolbar-action-icon {
 	margin-left: 0.5rem;
 }
 
 .c-toolbar-action-icon + .c-toolbar-action-text {
 	margin-right: 0.5rem;
+}
+
+.c-toolbar-action:last-of-type {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 @keyframes pulse {
@@ -2110,7 +2159,6 @@ select:focus::-ms-value {
 	width: auto;
 	max-width: 192px;
 	min-height: 20px;
-	margin-top: 0.25rem;
 	padding: 0.25rem 0.5rem;
 	transition: none;
 	transform: scale(0);
@@ -2332,6 +2380,7 @@ select:focus::-ms-value {
 
 .t-navbar-right {
 	background-color: var(--gray-1200);
+	border-top-left-radius: 2px;
 	padding-right: 1rem;
 }
 
@@ -2339,6 +2388,10 @@ select:focus::-ms-value {
 	.t-navbar-right {
 		padding-right: 1.5rem;
 	}
+}
+
+.t-navbar-action {
+	border-top-left-radius: 2px;
 }
 
 .t-navbar-badge {

@@ -25,6 +25,10 @@ $toolbar-background-color: $default-surface-color !default;
 	border-radius: $toolbar-border-radius;
 	margin: 0 0 ($toolbar-spacing * 3);
 
+	&-item {
+		position: relative;
+	}
+
 	&-action {
 		&-text + &-icon {
 			margin-left: $toolbar-spacing;
@@ -32,6 +36,11 @@ $toolbar-background-color: $default-surface-color !default;
 
 		&-icon + &-text {
 			margin-right: $toolbar-spacing;
+		}
+
+		&:last-of-type {
+			border-top-right-radius: $toolbar-border-radius;
+			border-bottom-right-radius: $toolbar-border-radius;
 		}
 	}
 }

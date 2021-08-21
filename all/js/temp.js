@@ -80,15 +80,15 @@ const edgeDetect = ($target, x, y) => {
 	tgt.bottom = (tgt.top + tgt.height);
 	tgt.right = (tgt.left + tgt.width);
 
-	tgt.coordTop = (tgt.top - tgt.height);
-	tgt.coordLeft = (tgt.left - tgt.width);
-	tgt.coordRight = $win.width() - (tgt.left + tgt.width);
-	tgt.coordBottom = $win.height() - (tgt.top + tgt.height);
+	tgt.currentTop = tgt.top - $win.scrollTop();
+	tgt.currentLeft = tgt.left - $win.scrollLeft();
+	tgt.currentRight = (tgt.currentLeft + tgt.width);
+	tgt.currentBottom = (tgt.currentTop + tgt.height);
 
-	tgt.isTop = tgt.coordTop > 0;
-	tgt.isLeft = tgt.coordLeft > 0;
-	tgt.isRight = tgt.coordRight > tgt.width;
-	tgt.isBottom = tgt.coordBottom > tgt.coordLeft;
+	tgt.isTop = (tgt.top - tgt.bottom) < 0;
+	tgt.isLeft = (tgt.left - tgt.right) < 0;
+	tgt.isRight = ($win.width - tgt.right) > tgt.width;
+	tgt.isBottom = ($win.height - tgt.bottom) > tgt.height;
 
 	return tgt;
 };
@@ -327,53 +327,26 @@ $($tabs).children().each(function() {
 /**
  * Handle state for Notification Menu
  *
- * @constant  {object} $this
- * @constant  {number} $targetOffset
+ * @constant  {object} $this	Toggle Link
+ * @constant  {object} $that	Container to be displayed
+ * @constant  {number} right	Absolute right position
  */
 $($notificationToggle).click(event_ => {
-	const $this = $($notification);
+	const $this = $($notificationToggle);
+	const $that = $($notification);
+
+	let right = $this.offset().left + $this.innerWidth();
+
+	right = right - $that.innerWidth();
 
 	event_.preventDefault();
 	event_.stopPropagation();
 
-	$this.toggleClass('is-active');
+	$that.attr('style', 'left: ' + right + 'px;');
+	$that.toggleClass('is-active');
 });
 
 //---------------------------------------------
-
-/**
- * Handle animation direction for Menus
- *
- * @todo      Refactor into Menu toggle
- * @constant  {object} $this
- * @constant  {object} targetOffset
- */
-$($menu).each(function() {
-	const $this = $(this);
-	const targetOffset = $this.offset();
-	const $direction = $this.data('direction');
-	const $orientation = $this.data('orientation');
-	if ($direction) {
-		$this.css('transform-origin', $direction);
-	} else {
-		if (targetOffset.left > $(window).width() / 2) {
-			$this.css('transform-origin', 'right top');
-		} else {
-			$this.css('transform-origin', 'left top');
-		}
-	}
-	if ($orientation) {
-		if ($orientation == 'right') {
-			$this.css('right', 0);
-		} else {
-			$this.css('left', 0);
-		}
-	} else {
-		if (targetOffset.left > $(window).width() / 2) {
-			$this.css('right', 0);
-		}
-	}
-});
 
 /**
  * Handle state for Menus
@@ -385,12 +358,38 @@ $($menu).each(function() {
  */
 $($menuToggle).click(function(event_) {
 	const $this = $(this);
-	const $that = $($menu);
+	const $that = $(this).next();
 	event_.preventDefault();
 	event_.stopPropagation();
+
+	const link = edgeDetect($this);
+	const menu = edgeDetect($that);
+	let vertical = 'top';
+	let horizontal = 'left';
+
+	// not enough space in default location below link set above
+	if ((link.currentTop + menu.height) > $(window).height()) {
+		menu.top = (0 - menu.height + link.height);
+		vertical = 'bottom';
+	} else {
+		menu.top = 0;
+	}
+
+	// not enough space in default location right of link set to left
+	if ((link.currentLeft + menu.width) > $(window).width()) {
+		menu.left = (0 - menu.width + link.width);
+		horizontal = 'right';
+	} else {
+		menu.left = 0;
+	}
+
+	// $that.attr('style', 'transform-origin: ' + horizontal + ' ' + vertical + ';');
+	$that.attr('style', 'left: ' + menu.left + 'px; top: ' + menu.top + 'px; transform-origin: ' + horizontal + ' ' + vertical + ';');
+
 	$that.each(() => {
 		$this.toggleClass('is-active', false);
 	});
+
 	$this.next($menu).toggleClass('is-active');
 });
 
@@ -461,24 +460,18 @@ $($tooltip).each(function() {
 			$('body').append('<span class="c-tooltip" data-tooltip-container="true"></span>');
 			$that = $($tooltipContainer);
 			$that.append($this.attr('title'));
-
+			const gap = 8; // set equal to default spacing unit sizze
 			const link = edgeDetect($this);
 			const tip = edgeDetect($that);
 
-			tip.top = (link.bottom + 6);
-			tip.bottom = (tip.top + tip.height);
+			// set left to center of link
 			tip.left = ((link.left + (link.width / 2)) - (tip.width / 2));
 
-			if (tip.top > $(window).height()) {
-				tip.top = (link.top - tip.height - 12);
-			}
-
-			if ((tip.left + tip.width) > $(window).width()) {
-				tip.left = ($(window).width() - 8 - tip.width);
-			}
-
-			if (tip.left < 8) {
-				tip.left = 8;
+			// not enough space in default location below link set above
+			if ((link.currentBottom + gap + tip.height) > $(window).height()) {
+				tip.top = (link.top - tip.height - gap);
+			} else {
+				tip.top = (link.bottom + gap);
 			}
 
 			$that.attr('style', 'left: ' + tip.left + 'px; top: ' + tip.top + 'px;');

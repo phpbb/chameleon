@@ -11,6 +11,7 @@
 // Layout Variables
 $paging-spacing: $default-spacing !default;
 $paging-height: $default-height !default;
+$paging-border-radius: $default-border-radius !default;
 $paging-right: 48px !default;
 
 // Theme Variables
@@ -67,6 +68,14 @@ $paging-hover-color: $default-action-color-hover !default;
 		&-icon + &-text {
 			margin-right: $paging-spacing;
 		}
+	}
+
+	&-item:first-of-type .c-paging-action {
+		border-top-left-radius: $paging-border-radius;
+	}
+
+	&-item:last-of-type .c-paging-action {
+		border-top-right-radius: $paging-border-radius;
 	}
 
 	@media (min-width: $sm) {

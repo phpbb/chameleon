@@ -13,6 +13,7 @@ $forum-spacing: $default-spacing !default;
 $forum-title-icon-alignment: -5px !default;
 $forum-border-radius: $default-border-radius !default;
 $forum-media-size: $default-icon-lg !default;
+$forum-bar-height: $default-height !default;
 $forum-border-style: solid !default;
 $forum-border-size: $default-border-size !default;
 
@@ -34,9 +35,12 @@ $forum-action-color: $default-action-icon-color !default;
 	background-color: $forum-background-color;
 	border-radius: $forum-border-radius;
 	position: relative;
+	display: grid;
 	margin-bottom: ($forum-spacing * 2);
+	grid-template-rows: auto $forum-bar-height;
 
 	&-body {
+		border-bottom: $forum-border-size $forum-border-style $forum-border-color;
 		display: grid;
 		padding-bottom: ($forum-spacing * 2);
 		grid-template-columns: ($default-icon-lg + ($forum-spacing * 4)) auto;
@@ -89,8 +93,11 @@ $forum-action-color: $default-action-icon-color !default;
 	}
 
 	&-footer {
-		border-top: $forum-border-size $forum-border-style $forum-border-color;
 		border-radius: 0 0 $forum-border-radius $forum-border-radius;
+
+		&-item {
+			position: relative;
+		}
 	}
 
 	&-cat {
