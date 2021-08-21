@@ -25,6 +25,10 @@ $toolbar-background-color: $default-surface-color !default;
 	border-radius: $toolbar-border-radius;
 	margin: 0 0 ($toolbar-spacing * 3);
 
+	&-item {
+		position: relative;
+	}
+
 	&-action {
 		&-text + &-icon {
 			margin-left: $toolbar-spacing;

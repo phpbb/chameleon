@@ -52,13 +52,11 @@
 									{% if item.icon %}
 										{{ item.icon|icon('inline', 'o-icon c-forum-title-icon t-forum-title-icon')|safe }}
 									{% endif %}
-										{{ item.name }}
+									{{ item.name }}
 								</h4>
-								{% if item.desc %}
 								<p class="c-forum-text t-forum-text">
 									{{ item.desc }}
 								</p>
-								{% endif %}
 							</span>
 						</a>
 						<div class="o-bar c-forum-footer t-forum-footer">
@@ -84,21 +82,23 @@
 								</a>
 								{% endif %}
 								{% if item.subs %}
-								<a class="o-bar-item o-action c-forum-footer-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
-									{{ 'mdi:more-vert'|icon('iconify', 'o-icon o-action-icon c-forum-footer-action-icon')|safe }}
-								</a>
-								<div class="c-menu-container t-menu-container" data-container="menu">
-									<ul class="c-menu t-menu">
-										{% for sub in item.subs %}
-										<li class="c-menu-item t-menu-item">
-											<a class="c-menu-link t-menu-item" href="{{ sub.url }}">
-												{{ 'circle-small-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
-												<span class="c-menu-text t-forum-text">{{ sub.name }}</span>
-											</a>
-										</li>
-										{% endfor %}
-									</ul>
-								</div>
+								<span class="o-bar-item c-forum-footer-item">
+									<a class="o-action c-forum-footer-action" href="" data-toggle="menu" data-tooltip="true" title="{{ lang.subforums }}">
+										{{ 'mdi:more-vert'|icon('iconify', 'o-icon o-action-icon c-forum-footer-action-icon')|safe }}
+									</a>
+									<div class="c-menu-container t-menu-container" data-container="menu">
+										<ul class="c-menu t-menu">
+											{% for sub in item.subs %}
+											<li class="c-menu-item t-menu-item">
+												<a class="c-menu-link t-menu-item" href="{{ sub.url }}">
+													{{ 'circle-small-outline'|icon('inline', 'o-icon c-menu-link-icon t-menu-forum-icon')|safe }}
+													<span class="c-menu-text t-forum-text">{{ sub.name }}</span>
+												</a>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</span>
 								{% endif %}
 							</div>
 							{% endif %}

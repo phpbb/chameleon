@@ -1,30 +1,34 @@
 <div class="o-bar c-toolbar t-toolbar">
 	<div class="o-bar-left c-toolbar-left t-toolbar-left"></div>
 	<div class="o-bar-right c-toolbar-right t-toolbar-right">
-		<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
-			{{ 'mdi:filter-variant'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
-		</a>
-		<div class="c-menu-container t-menu-container" data-container="menu">
-			<ul class="c-menu t-menu">
-				{% for item in filters %}
-				<li class="c-menu-item t-menu-item">
-					<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
-		<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
-			{{ 'mdi:sort'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
-		</a>
-		<div class="c-menu-container t-menu-container" data-container="menu">
-			<ul class="c-menu t-menu">
-				{% for item in sorts %}
-				<li class="c-menu-item t-menu-item">
-					<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
+		<span class="o-bar-item c-toolbar-item c-toolbar-item">
+			<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+				{{ 'mdi:filter-variant'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					{% for item in filters %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</span>
+		<span class="o-bar-item c-toolbar-item c-toolbar-item">
+			<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'mdi:sort'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+			</a>
+			<div class="c-menu-container t-menu-container" data-container="menu">
+				<ul class="c-menu t-menu">
+					{% for item in sorts %}
+					<li class="c-menu-item t-menu-item">
+						<a class="c-menu-link t-menu-link" href="#">{{ item }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</span>
 		<a class="o-bar-item o-action c-toolbar-action t-toolbar-action u-hidden-sm-down" href="#" data-tooltip="true" title="{{ lang.order }}">
 			{{ 'mdi:sort-ascending'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 		</a>
