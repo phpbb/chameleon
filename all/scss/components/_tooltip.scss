@@ -50,7 +50,6 @@ $tooltip-text-color: $default-info-item-color !default;
 	width: auto;
 	max-width: $tooltip-max-width;
 	min-height: $tooltip-max-height;
-	margin-top: ($tooltip-spacing / 2);
 	padding: ($tooltip-spacing / 2) $tooltip-spacing;
 	transition: none;
 	transform: scale(0);

@@ -80,15 +80,15 @@ const edgeDetect = ($target, x, y) => {
 	tgt.bottom = (tgt.top + tgt.height);
 	tgt.right = (tgt.left + tgt.width);
 
-	tgt.coordTop = (tgt.top - tgt.height);
-	tgt.coordLeft = (tgt.left - tgt.width);
-	tgt.coordRight = $win.width() - (tgt.left + tgt.width);
-	tgt.coordBottom = $win.height() - (tgt.top + tgt.height);
+	tgt.currentTop = tgt.top - $win.scrollTop();
+	tgt.currentLeft = tgt.left - $win.scrollLeft();
+	tgt.currentRight = (tgt.currentLeft + tgt.width);
+	tgt.currentBottom = (tgt.currentTop + tgt.height);
 
-	tgt.isTop = tgt.coordTop > 0;
-	tgt.isLeft = tgt.coordLeft > 0;
-	tgt.isRight = tgt.coordRight > tgt.width;
-	tgt.isBottom = tgt.coordBottom > tgt.coordLeft;
+	tgt.isTop = (tgt.top - tgt.bottom) < 0;
+	tgt.isLeft = (tgt.left - tgt.right) < 0;
+	tgt.isRight = ($win.width - tgt.right) > tgt.width;
+	tgt.isBottom = ($win.height - tgt.bottom) > tgt.height;
 
 	return tgt;
 };
@@ -461,24 +461,18 @@ $($tooltip).each(function() {
 			$('body').append('<span class="c-tooltip" data-tooltip-container="true"></span>');
 			$that = $($tooltipContainer);
 			$that.append($this.attr('title'));
-
+			const gap = 8; // set equal to default spacing unit sizze
 			const link = edgeDetect($this);
 			const tip = edgeDetect($that);
 
-			tip.top = (link.bottom + 6);
-			tip.bottom = (tip.top + tip.height);
+			// set left to center of link
 			tip.left = ((link.left + (link.width / 2)) - (tip.width / 2));
 
-			if (tip.top > $(window).height()) {
-				tip.top = (link.top - tip.height - 12);
-			}
-
-			if ((tip.left + tip.width) > $(window).width()) {
-				tip.left = ($(window).width() - 8 - tip.width);
-			}
-
-			if (tip.left < 8) {
-				tip.left = 8;
+			// not enough space in default location below link set above
+			if ((link.currentBottom + gap + tip.height) > $(window).height()) {
+				tip.top = (link.top - tip.height - gap);
+			} else {
+				tip.top = (link.bottom + gap);
 			}
 
 			$that.attr('style', 'left: ' + tip.left + 'px; top: ' + tip.top + 'px;');
