@@ -14,7 +14,7 @@ $notification-border-radius: $default-border-radius !default;
 $notification-border-size: $default-border-size !default;
 $notification-icon-size: $default-icon-md !default;
 $notification-meta-border-radius: 50% !default;
-$notification-container-width: 300px !default;
+$notification-container-width: 350px !default;
 $notification-container-size-lg: 420px !default;
 
 // Theme Variables
@@ -36,8 +36,7 @@ $notification-unread-color: $default-primary-item-color !default;
 // @scss
 .c-notification {
 	&-container {
-		@include shadow(2);
-		border-radius: $notification-border-radius;
+		@include shadow(4);
 		position: absolute;
 		z-index: 999;
 		right: 0;
@@ -84,7 +83,6 @@ $notification-unread-color: $default-primary-item-color !default;
 		position: relative;
 		display: grid;
 		overflow: hidden;
-		width: 405px;
 		padding: 1rem;
 		grid-template-areas:
 			'media users action'
