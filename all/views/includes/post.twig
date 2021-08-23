@@ -1,8 +1,8 @@
 <div class="c-post">
-	<div class="o-bar c-post-header">
-		<ul class="o-bar-left">
-			<li class="o-bar-item">
-				<a class="o-bar-action o-bar-profile" href="" data-toggle="profile">
+	<div class="o-bar c-post-bar">
+		<div class="o-bar-left c-post-bar-left">
+			<span class="o-bar-item c-post-bar-item">
+				<a class="o-action o-bar-profile" href="" data-toggle="profile">
 					<span class="o-avatar-wrap o-bar-avatar">
 						<img class="o-avatar" src="{{ item.avatar }}" alt="User Avatar">
 						<span class="o-avatar-online o-bar-avatar-online"></span>
@@ -13,30 +13,29 @@
 					</span>
 				</a>
 				{% include './profile.twig' %}
-			</li>
-		</ul>
-		<ul class="o-bar-right">
-			<li class="o-bar-item">
-				<a class="o-bar-action c-post-meta-number" href="#">#{{ item.id }}</a>
-			</li>
-			<li class="o-bar-item u-hidden-md-down">
-				<span class="o-bar-info c-post-meta">
-					<time datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
-				</span>
-			</li>
-		</ul>
+			</span>
+		</div>
+		<div class="o-bar-right c-post-bar-right">
+			<span class="o-bar-item o-bar-info c-post-meta-time u-hidden-xs-down">
+				<time class="c-post-meta-time-text" datetime="{{ item.time }}" title="{{ item.time }}" data-short="{{ item.time }}">{{ item.time|moment("YYYYMMDD", true) }}</time>
+			</span>
+			<a class="o-bar-item o-action c-post-meta-number" href="#">
+				<span class="c-post-meta-number-text">#{{ item.id }}</span>
+			</a>
+		</div>
 	</div>
 	<div class="c-post-body">
 		<div class="c-copy">
 			{{ item.content|safe }}
 		</div>
-		<div class="o-bar c-post-action-container">
-			<ul class="o-bar-right c-post-action-right">
-				<li class="o-bar-item c-post-action-item c-menu-toggle u-hidden-md-up">
-					<a class="o-bar-action c-post-action c-menu-button" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="{{ lang.post_more_actions }}">
-						{{ 'mdi:more-vert'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
+		<div class="o-bar c-post-action-bar">
+			<div class="o-bar-left c-post-action-bar-right"></div>
+			<div class="o-bar-right c-post-action-bar-right">
+				<span class="o-bar-item c-post-action-bar-item u-hidden-md-up">
+					<a class="o-action c-post-action" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="{{ lang.post_more_actions }}">
+						{{ 'mdi:more-vert'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
 					</a>
-					<div class="c-menu-container t-menu-container" data-container="menu" data-direction="right top" data-orientation="right">
+					<div class="c-menu-container t-menu-container" data-container="menu">
 						<ul class="c-menu t-menu">
 							<li class="c-menu-item t-menu-item">
 								<a class="c-menu-link t-menu-item" href="">
@@ -64,48 +63,33 @@
 							</li>
 						</ul>
 					</div>
+				</span>
+				<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="{{ lang.post_info }}">
+					{{ 'mdi:info-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="{{ lang.post_warn }}">
+					{{ 'mdi:shield-alert-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class=" o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="{{ lang.post_report }}">
+					{{ 'fa-regular:flag'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="{{ lang.post_share }}">
+					{{ 'mdi:share-variant'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_quote }}">
+					{{ 'mdi:comment-quote-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_delete }}">
+					{{ 'mdi:trash-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
 				</li>
-				<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_info }}">
-						{{ 'mdi:info-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_warn }}">
-						{{ 'mdi:shield-alert-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_report }}">
-						{{ 'fa-regular:flag'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_share }}">
-						{{ 'mdi:share-variant'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_quote }}">
-						{{ 'mdi:comment-quote-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_delete }}">
-						{{ 'mdi:trash-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_edit }}">
-						{{ 'mdi:pencil-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-				<li class="o-bar-item c-post-action-item">
-					<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_like }}">
-						{{ 'mdi:heart-outline'|icon('iconify', 'o-icon o-bar-action-icon c-post-action-icon')|safe }}
-					</a>
-				</li>
-			</ul>
+				<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_edit }}">
+					{{ 'mdi:pencil-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+				<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="{{ lang.post_like }}">
+					{{ 'mdi:heart-outline'|icon('iconify', 'o-icon o-action-icon c-post-action-icon')|safe }}
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

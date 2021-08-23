@@ -9,12 +9,14 @@
 			<span class="o-tag o-bar-badge c-navbar-badge t-navbar-badge">{{ phpbb.pms }}</span>
 			<span class="o-action-text c-navbar-action-text t-navbar-action-text u-sr-only">{{ lang.private_msgs }}</span>
 		</a>
-		<a class="o-bar-item o-action c-navbar-action t-navbar-action" href="#" data-toggle="notifications" data-tooltip="true" title="{{ lang.notifications }}">
-			{{ 'mdi:bell-outline'|icon('iconify', 'o-icon c-navbar-action-icon t-navbar-action-icon')|safe }}
-			<span class="o-tag o-bar-badge c-navbar-badge t-navbar-badge">{{ phpbb.notifications }}</span>
-			<span class="o-action-text c-navbar-action-text t-navbar-action-text u-sr-only">{{ lang.notifications }}</span>
-		</a>
-		{% include './notification.twig' %}
+		<span class="o-bar-item c-navbar-item t-navbar-item">
+			<a class="o-action c-navbar-action t-navbar-action" href="#" data-toggle="notifications" data-tooltip="true" title="{{ lang.notifications }}">
+				{{ 'mdi:bell-outline'|icon('iconify', 'o-icon c-navbar-action-icon t-navbar-action-icon')|safe }}
+				<span class="o-tag o-bar-badge c-navbar-badge t-navbar-badge">{{ phpbb.notifications }}</span>
+				<span class="o-action-text c-navbar-action-text t-navbar-action-text u-sr-only">{{ lang.notifications }}</span>
+			</a>
+			{% include './notification.twig' %}
+		</span>
 		<a class="o-bar-item o-action c-navbar-action t-navbar-action" href="#" data-toggle="drawer" data-tooltip="true" title="{{ phpbb.user.name }}">
 			<span class="o-avatar-wrap o-bar-avatar c-navbar-avatar t-navbar-avatar">
 				<img class="o-avatar" src="{{ phpbb.user.avatar }}" alt="User Avatar">
