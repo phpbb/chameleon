@@ -719,6 +719,9 @@ select:focus::-ms-value {
 }
 
 .c-paging {
+	background-color: var(--gray-1200);
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
 	box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 	position: fixed;
 	right: 0;
@@ -1186,6 +1189,10 @@ select:focus::-ms-value {
 
 .c-post-action-bar {
 	grid-template-columns: 0 2fr;
+}
+
+.c-post-action-bar-right {
+	position: relative;
 }
 
 .c-post-action:active:after, .c-post-action:after {

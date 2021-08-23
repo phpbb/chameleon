@@ -88,6 +88,10 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 		&-bar {
 			grid-template-columns: 0 2fr;
+
+			&-right {
+				position: relative; // needs added to bar obj in base-l
+			}
 		}
 
 		&:active:after,
