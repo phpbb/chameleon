@@ -29,20 +29,18 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 //
 // @scss
 .c-post {
-	@include parent(column);
 	@include shadow(2);
 	background-color: $post-bg-color;
 	border-radius: $post-border-radius;
 	margin-bottom: ($post-spacing * 3);
 
-	&-header {
-		@include child();
+	&-bar {
 		@include border-radius(top, $post-border-radius);
 		border-bottom: $post-border-size $post-border-style $post-border-color;
+		grid-template-columns: auto auto;
 	}
 
 	&-body {
-		@include parent(column);
 		min-height: $post-body-min-height;
 		padding: ($post-spacing * 4) ($post-spacing * 3);
 
@@ -53,6 +51,14 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 	&-meta {
 		padding: ($post-spacing * 2);
+
+		&-number {
+			&-text {
+				text-align: center;
+				display: inline-block;
+				width: 24px;
+			}
+		}
 	}
 
 	&-title {
@@ -60,7 +66,6 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		margin-bottom: 0;
 
 		@media (min-width: $lg) {
-			@include child();
 			padding-right: $post-spacing;
 		}
 	}
@@ -77,8 +82,12 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 	&-action {
 		&:hover,
 		&:focus,
-		&-container {
+		&-bar {
 			background-color: transparent;
+		}
+
+		&-bar {
+			grid-template-columns: 0 2fr;
 		}
 
 		&:active:after,
@@ -92,7 +101,6 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 .c-copy {
 	@include type(subtitle1);
-	@include child();
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;
 
@@ -109,7 +117,6 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 	}
 
 	&-blockquote {
-		@include parent(column);
 		border: $post-border-size $post-border-style $post-border-color;
 
 		&-wrap {
@@ -119,18 +126,21 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		}
 
 		&-header {
-			@include child();
 			background-color: $post-header-bg-color;
 			border-bottom: $post-border-size $post-border-style $post-border-color;
+			display: grid;
 			padding: $post-spacing ($post-spacing * 2);
+			grid-template-areas:
+				'meta'
+				'date';
 		}
 
 		&-meta {
-			@include child();
+			grid-area: meta;
 		}
 
 		&-date {
-			@include child();
+			grid-area: date;
 		}
 
 		&-author,
@@ -139,7 +149,6 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 		}
 
 		&-body {
-			@include child();
 			padding: ($post-spacing * 3) ($post-spacing * 4);
 
 			p {
