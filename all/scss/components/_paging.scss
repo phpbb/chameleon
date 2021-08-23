@@ -25,6 +25,9 @@ $paging-hover-color: $default-action-color-hover !default;
 // @scss
 .c-paging {
 	@include shadow(24);
+	background-color: $paging-bg-color;
+	border-top-left-radius: $paging-border-radius;
+	border-top-right-radius: $paging-border-radius;
 	position: fixed;
 	right: 0;
 	bottom: 0;
