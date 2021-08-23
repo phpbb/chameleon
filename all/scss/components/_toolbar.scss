@@ -24,23 +24,26 @@ $toolbar-background-color: $default-surface-color !default;
 	background-color: $toolbar-background-color;
 	border-radius: $toolbar-border-radius;
 	margin: 0 0 ($toolbar-spacing * 3);
+	grid-template-columns: 0 2fr;
 
 	&-item {
 		position: relative;
 	}
 
 	&-action {
-		&-text + &-icon {
-			margin-left: $toolbar-spacing;
-		}
-
-		&-icon + &-text {
-			margin-right: $toolbar-spacing;
-		}
-
 		&:last-of-type {
 			border-top-right-radius: $toolbar-border-radius;
 			border-bottom-right-radius: $toolbar-border-radius;
+		}
+
+		@media (min-width: $md) {
+			&-text + &-icon {
+				margin-left: $toolbar-spacing;
+			}
+
+			&-icon + &-text {
+				margin-right: $toolbar-spacing;
+			}
 		}
 	}
 }
