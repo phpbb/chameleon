@@ -1,14 +1,9 @@
 <div class="o-bar c-toolbar t-toolbar">
-	<ul class="o-bar-right c-toolbar-right t-toolbar-right">
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.post_reply }}">
-				<span class="c-toolbar-action-text t-toolbar-action-text u-hidden-sm-down">{{ lang.post_reply }}</span>
-				{{ 'reply'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
-			</a>
-		</li>
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.topic_tools }}">
-				{{ 'mdi:wrench-outline'|icon('iconify', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+	<div class="o-bar-left c-toolbar-left t-toolbar-left"></div>
+	<div class="o-bar-right c-toolbar-right t-toolbar-right">
+		<span class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.topic_tools }}">
+				{{ 'mdi:wrench-outline'|icon('iconify', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 			<div class="c-menu-container t-menu-container" data-container="menu">
 				<ul class="c-menu t-menu">
@@ -44,10 +39,10 @@
 					</li>
 				</ul>
 			</div>
-		</li>
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.mod_tools }}">
-				{{ 'gavel'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		</span>
+		<span class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.mod_tools }}">
+				{{ 'gavel'|icon('inline', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 			<div class="c-menu-container t-menu-container" data-container="menu">
 				<ul class="c-menu t-menu">
@@ -125,10 +120,10 @@
 					</li>
 				</ul>
 			</div>
-		</li>
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
-				{{ 'filter-variant'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		</span>
+		<span class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.filter }}">
+				{{ 'filter-variant'|icon('inline', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 			<div class="c-menu-container t-menu-container" data-container="menu">
 				<ul class="c-menu t-menu">
@@ -139,10 +134,10 @@
 				{% endfor %}
 				</ul>
 			</div>
-		</li>
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
-				{{ 'sort'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		</span>
+		<span class="o-bar-item c-toolbar-item t-toolbar-item">
+			<a class="o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" data-toggle="menu" title="{{ lang.sort }}">
+				{{ 'sort'|icon('inline', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
 			</a>
 			<div class="c-menu-container t-menu-container" data-container="menu">
 				<ul class="c-menu t-menu">
@@ -153,11 +148,13 @@
 				{% endfor %}
 				</ul>
 			</div>
-		</li>
-		<li class="o-bar-item c-toolbar-item t-toolbar-item">
-			<a class="o-bar-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.order }}">
-				{{ 'sort-ascending'|icon('inline', 'o-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
-			</a>
-		</li>
+		</span>
+		<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.order }}">
+			{{ 'sort-ascending'|icon('inline', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		</a>
+		<a class="o-bar-item o-action c-toolbar-action t-toolbar-action" href="#" data-tooltip="true" title="{{ lang.post_reply }}">
+			<span class="c-toolbar-action-text t-toolbar-action-text u-hidden-sm-down">{{ lang.post_reply }}</span>
+			{{ 'reply'|icon('inline', 'o-icon o-action-icon c-toolbar-action-icon t-toolbar-action-icon')|safe }}
+		</a>
 	</ul>
 </div>
