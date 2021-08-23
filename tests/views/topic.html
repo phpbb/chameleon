@@ -716,10 +716,10 @@
 				</section>
 				<section class="o-container">
 					<div class="c-post">
-						<div class="o-bar c-post-header">
-							<ul class="o-bar-left">
-								<li class="o-bar-item">
-									<a class="o-bar-action o-bar-profile" href="" data-toggle="profile">
+						<div class="o-bar c-post-bar">
+							<div class="o-bar-left c-post-bar-left">
+								<span class="o-bar-item c-post-bar-item">
+									<a class="o-action o-bar-profile" href="" data-toggle="profile">
 										<span class="o-avatar-wrap o-bar-avatar">
 											<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/73085?v=4&amp;amp;s=460" alt="User Avatar">
 											<span class="o-avatar-online o-bar-avatar-online"></span>
@@ -879,28 +879,27 @@
 											</li>
 										</ul>
 									</div>
-								</li>
-							</ul>
-							<ul class="o-bar-right">
-								<li class="o-bar-item">
-									<a class="o-bar-action c-post-meta-number" href="#">#1</a>
-								</li>
-								<li class="o-bar-item u-hidden-md-down">
-									<span class="o-bar-info c-post-meta">
-										<time datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
-									</span>
-								</li>
-							</ul>
+								</span>
+							</div>
+							<div class="o-bar-right c-post-bar-right">
+								<span class="o-bar-item o-bar-info c-post-meta-time u-hidden-xs-down">
+									<time class="c-post-meta-time-text" datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
+								</span>
+								<a class="o-bar-item o-action c-post-meta-number" href="#">
+									<span class="c-post-meta-number-text">#1</span>
+								</a>
+							</div>
 						</div>
 						<div class="c-post-body">
 							<div class="c-copy">
 								<p>We need some text here to showcase as content for a post</p>
 							</div>
-							<div class="o-bar c-post-action-container">
-								<ul class="o-bar-right c-post-action-right">
-									<li class="o-bar-item c-post-action-item c-menu-toggle u-hidden-md-up">
-										<a class="o-bar-action c-post-action c-menu-button" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
+							<div class="o-bar c-post-action-bar">
+								<div class="o-bar-left c-post-action-bar-right"></div>
+								<div class="o-bar-right c-post-action-bar-right">
+									<span class="o-bar-item c-post-action-bar-item u-hidden-md-up">
+										<a class="o-action c-post-action" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
+											<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
 										</a>
 										<div class="c-menu-container t-menu-container" data-container="menu" data-direction="right top" data-orientation="right">
 											<ul class="c-menu t-menu">
@@ -930,56 +929,41 @@
 												</li>
 											</ul>
 										</div>
+									</span>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Info">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Warn">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class=" o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Report">
+										<span class="iconify o-icon o-icon-src-fa-regular o-icon o-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Share">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Quote">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Delete">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
 									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Info">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Warn">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Report">
-											<span class="iconify o-icon o-icon-src-fa-regular o-icon o-bar-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Share">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Quote">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Delete">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Edit">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Like Post">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-								</ul>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Edit">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Like Post">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="c-post">
-						<div class="o-bar c-post-header">
-							<ul class="o-bar-left">
-								<li class="o-bar-item">
-									<a class="o-bar-action o-bar-profile" href="" data-toggle="profile">
+						<div class="o-bar c-post-bar">
+							<div class="o-bar-left c-post-bar-left">
+								<span class="o-bar-item c-post-bar-item">
+									<a class="o-action o-bar-profile" href="" data-toggle="profile">
 										<span class="o-avatar-wrap o-bar-avatar">
 											<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/73087?v=4&amp;amp;s=460" alt="User Avatar">
 											<span class="o-avatar-online o-bar-avatar-online"></span>
@@ -1098,28 +1082,27 @@
 											</li>
 										</ul>
 									</div>
-								</li>
-							</ul>
-							<ul class="o-bar-right">
-								<li class="o-bar-item">
-									<a class="o-bar-action c-post-meta-number" href="#">#2</a>
-								</li>
-								<li class="o-bar-item u-hidden-md-down">
-									<span class="o-bar-info c-post-meta">
-										<time datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
-									</span>
-								</li>
-							</ul>
+								</span>
+							</div>
+							<div class="o-bar-right c-post-bar-right">
+								<span class="o-bar-item o-bar-info c-post-meta-time u-hidden-xs-down">
+									<time class="c-post-meta-time-text" datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
+								</span>
+								<a class="o-bar-item o-action c-post-meta-number" href="#">
+									<span class="c-post-meta-number-text">#2</span>
+								</a>
+							</div>
 						</div>
 						<div class="c-post-body">
 							<div class="c-copy">
 								<p>We will also eventually have to work out a parser for testing the content to handle html as well</p>
 							</div>
-							<div class="o-bar c-post-action-container">
-								<ul class="o-bar-right c-post-action-right">
-									<li class="o-bar-item c-post-action-item c-menu-toggle u-hidden-md-up">
-										<a class="o-bar-action c-post-action c-menu-button" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
+							<div class="o-bar c-post-action-bar">
+								<div class="o-bar-left c-post-action-bar-right"></div>
+								<div class="o-bar-right c-post-action-bar-right">
+									<span class="o-bar-item c-post-action-bar-item u-hidden-md-up">
+										<a class="o-action c-post-action" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
+											<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
 										</a>
 										<div class="c-menu-container t-menu-container" data-container="menu" data-direction="right top" data-orientation="right">
 											<ul class="c-menu t-menu">
@@ -1149,56 +1132,41 @@
 												</li>
 											</ul>
 										</div>
+									</span>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Info">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Warn">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class=" o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Report">
+										<span class="iconify o-icon o-icon-src-fa-regular o-icon o-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Share">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Quote">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Delete">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
 									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Info">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Warn">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Report">
-											<span class="iconify o-icon o-icon-src-fa-regular o-icon o-bar-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Share">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Quote">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Delete">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Edit">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Like Post">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-								</ul>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Edit">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Like Post">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="c-post">
-						<div class="o-bar c-post-header">
-							<ul class="o-bar-left">
-								<li class="o-bar-item">
-									<a class="o-bar-action o-bar-profile" href="" data-toggle="profile">
+						<div class="o-bar c-post-bar">
+							<div class="o-bar-left c-post-bar-left">
+								<span class="o-bar-item c-post-bar-item">
+									<a class="o-action o-bar-profile" href="" data-toggle="profile">
 										<span class="o-avatar-wrap o-bar-avatar">
 											<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/72581?v=4&amp;amp;s=460" alt="User Avatar">
 											<span class="o-avatar-online o-bar-avatar-online"></span>
@@ -1322,28 +1290,27 @@
 											</li>
 										</ul>
 									</div>
-								</li>
-							</ul>
-							<ul class="o-bar-right">
-								<li class="o-bar-item">
-									<a class="o-bar-action c-post-meta-number" href="#">#3</a>
-								</li>
-								<li class="o-bar-item u-hidden-md-down">
-									<span class="o-bar-info c-post-meta">
-										<time datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
-									</span>
-								</li>
-							</ul>
+								</span>
+							</div>
+							<div class="o-bar-right c-post-bar-right">
+								<span class="o-bar-item o-bar-info c-post-meta-time u-hidden-xs-down">
+									<time class="c-post-meta-time-text" datetime="2016-11-11T19:18:00Z" title="2016-11-11T19:18:00Z" data-short="2016-11-11T19:18:00Z">5 years ago</time>
+								</span>
+								<a class="o-bar-item o-action c-post-meta-number" href="#">
+									<span class="c-post-meta-number-text">#3</span>
+								</a>
+							</div>
 						</div>
 						<div class="c-post-body">
 							<div class="c-copy">
 								<p>For now though we will manually add a post to test the actually html classes for the post copy</p>
 							</div>
-							<div class="o-bar c-post-action-container">
-								<ul class="o-bar-right c-post-action-right">
-									<li class="o-bar-item c-post-action-item c-menu-toggle u-hidden-md-up">
-										<a class="o-bar-action c-post-action c-menu-button" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
+							<div class="o-bar c-post-action-bar">
+								<div class="o-bar-left c-post-action-bar-right"></div>
+								<div class="o-bar-right c-post-action-bar-right">
+									<span class="o-bar-item c-post-action-bar-item u-hidden-md-up">
+										<a class="o-action c-post-action" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
+											<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
 										</a>
 										<div class="c-menu-container t-menu-container" data-container="menu" data-direction="right top" data-orientation="right">
 											<ul class="c-menu t-menu">
@@ -1373,56 +1340,41 @@
 												</li>
 											</ul>
 										</div>
+									</span>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Info">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Warn">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class=" o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Report">
+										<span class="iconify o-icon o-icon-src-fa-regular o-icon o-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Share">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Quote">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Delete">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
 									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Info">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Warn">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Report">
-											<span class="iconify o-icon o-icon-src-fa-regular o-icon o-bar-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Share">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Quote">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Delete">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Edit">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Like Post">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-								</ul>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Edit">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Like Post">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="c-post">
-						<div class="o-bar c-post-header">
-							<ul class="o-bar-left">
-								<li class="o-bar-item">
-									<a class="o-bar-action o-bar-profile" href="" data-toggle="profile">
+						<div class="o-bar c-post-bar">
+							<div class="o-bar-left c-post-bar-left">
+								<span class="o-bar-item c-post-bar-item">
+									<a class="o-action o-bar-profile" href="" data-toggle="profile">
 										<span class="o-avatar-wrap o-bar-avatar">
 											<img class="o-avatar" src="https://avatars2.githubusercontent.com/u/10946388?v=4&amp;s=460" alt="User Avatar">
 											<span class="o-avatar-online o-bar-avatar-online"></span>
@@ -1582,18 +1534,16 @@
 											</li>
 										</ul>
 									</div>
-								</li>
-							</ul>
-							<ul class="o-bar-right">
-								<li class="o-bar-item">
-									<a class="o-bar-action c-post-meta-number" href="#">#4</a>
-								</li>
-								<li class="o-bar-item u-hidden-md-down">
-									<span class="o-bar-info c-post-meta">
-										<time datetime="2019-04-11T19:18:00Z" title="2019-04-11T19:18:00Z" data-short="2019-04-11T19:18:00Z">2 years ago</time>
-									</span>
-								</li>
-							</ul>
+								</span>
+							</div>
+							<div class="o-bar-right c-post-bar-right">
+								<span class="o-bar-item o-bar-info c-post-meta-time u-hidden-xs-down">
+									<time class="c-post-meta-time-text" datetime="2019-04-11T19:18:00Z" title="2019-04-11T19:18:00Z" data-short="2019-04-11T19:18:00Z">2 years ago</time>
+								</span>
+								<a class="o-bar-item o-action c-post-meta-number" href="#">
+									<span class="c-post-meta-number-text">#4</span>
+								</a>
+							</div>
 						</div>
 						<div class="c-post-body">
 							<div class="c-copy">
@@ -1631,9 +1581,9 @@
 								</ol>
 								<p>If you open <code class="inline">styles/prosilver/template/viewtopic_body.html</code> you'll find this at the top.</p>
 								<div class="c-copy-code">
-									<div class="o-bar c-copy-code-header">
-										<div class="o-bar-left"><span class="o-bar-title c-copy-code-header-title">HTML</span></div>
-										<div class="c-bar-right"><a class="o-bar-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-bar-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
+									<div class="o-bar c-copy-code-bar">
+										<div class="o-bar-left c-copy-code-bar-left"><span class="o-bar-title c-copy-code-bar-title">HTML</span></div>
+										<div class="o-bar-right c-copy-code-bar-right"><a class="o-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
 													<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2v2z" fill="currentColor"></path>
 												</svg></a></div>
 									</div>
@@ -1641,18 +1591,18 @@
 								</div>
 								<p>You can either remove it or comment it out, leaving comment is preferable. To comment out something in template you would do it like this:</p>
 								<div class="c-copy-code">
-									<div class="o-bar c-copy-code-header">
-										<div class="o-bar-left"><span class="o-bar-title c-copy-code-header-title">Javascript</span></div>
-										<div class="c-bar-right"><a class="o-bar-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-bar-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
+									<div class="o-bar c-copy-code-bar">
+										<div class="o-bar-left c-copy-code-bar-left"><span class="o-bar-title c-copy-code-bar-title">Javascript</span></div>
+										<div class="o-bar-right c-copy-code-bar-right"><a class="o-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
 													<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2v2z" fill="currentColor"></path>
 												</svg></a></div>
 									</div>
 									<pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- IF 0 --&gt;</span>Removed this because of blah, blah, blah....// Template code to remove<span class="hljs-comment">&lt;!-- ENDIF --&gt;</span></code></pre>
 								</div>
 								<div class="c-copy-code">
-									<div class="o-bar c-copy-code-header">
-										<div class="o-bar-left"></div>
-										<div class="c-bar-right"><a class="o-bar-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-bar-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
+									<div class="o-bar c-copy-code-bar">
+										<div class="o-bar-left c-copy-code-bar-left"></div>
+										<div class="o-bar-right c-copy-code-bar-right"><a class="o-action c-copy-code-bar-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-action-icon c-copy-code-bar-action-icon" data-icon="mdi:clipboard-outline" data-inline="false">
 													<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2v2z" fill="currentColor"></path>
 												</svg></a></div>
 									</div>
@@ -1660,9 +1610,9 @@
 								</div>
 								<p>Example for your case:</p>
 								<div class="c-copy-code">
-									<div class="o-bar c-copy-code-header">
-										<div class="o-bar-left"><span class="o-bar-title c-copy-code-header-title">PHP</span></div>
-										<div class="c-bar-right"><a class="o-bar-action c-copy-code-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-bar-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
+									<div class="o-bar c-copy-code-bar">
+										<div class="o-bar-left c-copy-code-bar-left"><span class="o-bar-title c-copy-code-bar-title">PHP</span></div>
+										<div class="o-bar-right c-copy-code-bar-right"><a class="o-action c-copy-code-bar-action" href="#" onclick="selectCode(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify o-icon o-action-icon c-copy-code-icon" data-icon="mdi:clipboard-outline" data-inline="false">
 													<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2v2z" fill="currentColor"></path>
 												</svg></a></div>
 									</div>
@@ -1690,11 +1640,12 @@
 									</div>
 								</blockquote>
 							</div>
-							<div class="o-bar c-post-action-container">
-								<ul class="o-bar-right c-post-action-right">
-									<li class="o-bar-item c-post-action-item c-menu-toggle u-hidden-md-up">
-										<a class="o-bar-action c-post-action c-menu-button" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
+							<div class="o-bar c-post-action-bar">
+								<div class="o-bar-left c-post-action-bar-right"></div>
+								<div class="o-bar-right c-post-action-bar-right">
+									<span class="o-bar-item c-post-action-bar-item u-hidden-md-up">
+										<a class="o-action c-post-action" href="#" data-tooltip="true" data-toggle="menu" data-placement="top" title="More Post Actions">
+											<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:more-vert" data-inline="false" aria-hidden="false"></span>
 										</a>
 										<div class="c-menu-container t-menu-container" data-container="menu" data-direction="right top" data-orientation="right">
 											<ul class="c-menu t-menu">
@@ -1724,48 +1675,33 @@
 												</li>
 											</ul>
 										</div>
+									</span>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Info">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Warn">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class=" o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Report">
+										<span class="iconify o-icon o-icon-src-fa-regular o-icon o-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action u-hidden-sm-down" href="" data-tooltip="true" title="Post Share">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Quote">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Delete">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
 									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Info">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:info-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Warn">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:shield-alert-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Report">
-											<span class="iconify o-icon o-icon-src-fa-regular o-icon o-bar-action-icon c-post-action-icon" data-icon="fa-regular:flag" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item u-hidden-sm-down">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Share">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:share-variant" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Quote">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:comment-quote-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Delete">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:trash-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Post Edit">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-									<li class="o-bar-item c-post-action-item">
-										<a class="o-bar-action c-post-action" href="" data-tooltip="true" title="Like Post">
-											<span class="iconify o-icon o-icon-src-mdi o-icon o-bar-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
-										</a>
-									</li>
-								</ul>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Post Edit">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:pencil-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+									<a class="o-bar-item o-action c-post-action" href="" data-tooltip="true" title="Like Post">
+										<span class="iconify o-icon o-icon-src-mdi o-icon o-action-icon c-post-action-icon" data-icon="mdi:heart-outline" data-inline="false" aria-hidden="false"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
