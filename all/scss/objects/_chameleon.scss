@@ -56,6 +56,10 @@ $o-alt-color: $default-background-alt-color !default;
 			color: $o-color;
 		}
 	}
+
+	&-left {
+		position: relative;
+	}
 }
 
 .o-btn {
