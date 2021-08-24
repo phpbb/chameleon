@@ -1886,6 +1886,10 @@ footer {
 	padding: 1rem;
 }
 
+.c-tab-pane-link {
+	display: inline-block;
+}
+
 .c-tab-pane-link:hover {
 	text-decoration: underline;
 	transition: 0.5s;

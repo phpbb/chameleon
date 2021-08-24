@@ -144,9 +144,13 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 			padding: ($tab-spacing * 2);
 		}
 
-		&-link:hover {
-			text-decoration: underline;
-			transition: 0.5s;
+		&-link {
+			display: inline-block;
+
+			&:hover {
+				text-decoration: underline;
+				transition: 0.5s;
+			}
 		}
 
 		&-row + &-row &-stats {
