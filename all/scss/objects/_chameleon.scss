@@ -1,9 +1,10 @@
 //------------------------------------------------------------------------------
-// @theme: Chameleon
+// @object: Chameleon
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.2.0
 // @description
 //
-// @author: hanakin
 //------------------------------------------------------------------------------
 
 //
@@ -50,7 +51,7 @@ $o-alt-color: $default-background-alt-color !default;
 			color: $o-color;
 		}
 
-		&-feild {
+		&-field {
 			background: transparent;
 			color: $o-color;
 		}

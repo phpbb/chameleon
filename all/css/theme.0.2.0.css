@@ -457,7 +457,7 @@ select:focus::-ms-value {
 	color: var(--gray-900);
 }
 
-.o-bar-search-feild {
+.o-bar-search-field {
 	background: transparent;
 	color: var(--gray-900);
 }
@@ -537,7 +537,7 @@ select:focus::-ms-value {
 	padding-right: 0;
 }
 
-.c-emoji-picker-search-feild {
+.c-emoji-picker-search-field {
 	background-color: var(--gray-1300);
 	background-image: none;
 	flex: 1;
@@ -547,12 +547,12 @@ select:focus::-ms-value {
 	padding: 0.25rem 1rem;
 }
 
-.c-emoji-picker-search-feild:hover, .c-emoji-picker-search-feild:focus {
+.c-emoji-picker-search-field:hover, .c-emoji-picker-search-field:focus {
 	background-image: none;
 	border: none;
 }
 
-.c-emoji-picker-search-feild-button {
+.c-emoji-picker-search-field-button {
 	color: var(--gray-900);
 	padding: 0.25rem 0.75rem;
 }
@@ -958,7 +958,7 @@ select:focus::-ms-value {
 	transition: 0.35s ease-in-out;
 }
 
-.c-forum-cat-header-action.is-collapsed .c-forum-cat-header-action-iocn {
+.c-forum-cat-header-action.is-collapsed .c-forum-cat-header-action-icon {
 	transition: 0.35s ease-in-out;
 	transform: rotate(180deg);
 }
@@ -1299,7 +1299,7 @@ select:focus::-ms-value {
 	padding: 24px;
 }
 
-.c-copy-smilies {
+.c-copy-smiles {
 	vertical-align: text-bottom;
 }
 
@@ -2131,7 +2131,7 @@ select:focus::-ms-value {
 	}
 }
 
-.c-crumbs-seperator {
+.c-crumbs-separator {
 	width: 32px;
 	height: 32px;
 	margin-left: -0.25rem;

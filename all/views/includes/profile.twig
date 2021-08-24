@@ -46,13 +46,13 @@
 		</a>
 		<a class="o-avatar-rate-bad" href="" data-tooltip="true" title="{{ lang.profile_rating_down }}">{{ 'mdi:thumbs-down-outline'|icon('iconify', 'o-icon c-profile-menu-icon')|safe }}</a>
 		{% if item.online %}
-		<span class="o-avatar-online" data-tooltip="true" title="{{ lang.profile_online }}"></span>
+			<span class="o-avatar-online" data-tooltip="true" title="{{ lang.profile_online }}"></span>
 		{% endif %}
 	</div>
 	<h4 class="c-profile-meta">
 		<a class="c-profile-user" href="{{ item.url }}" style="color: {{ item.color }};">{{ item.name }}</a>
 		{% if item.rank %}
-		<small class="c-profile-user-title">{{ item.rank }}</small>
+			<small class="c-profile-user-title">{{ item.rank }}</small>
 		{% endif %}
 		{% if item.badge %}
 		<a class="c-group-link" href="{{ item.group_url }}">
@@ -78,7 +78,7 @@
 		<li class="c-profile-stat">
 			<h5 class="c-profile-stat-wrap">
 				{{ 'mdi:thumb-up-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.rating }}</span>
-			<small class="c-profile-stat-value"><span class="{% if item.rating|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.rating }}</span></small>
+				<small class="c-profile-stat-value"><span class="{% if item.rating|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.rating }}</span></small>
 			</h5>
 		</li>
 		<li class="c-profile-stat">
@@ -90,7 +90,7 @@
 		<li class="c-profile-stat">
 			<h5 class="c-profile-stat-wrap">
 				{{ 'mdi:heart-outline'|icon('iconify', 'o-icon')|safe }}<span class="c-profile-stat-title">{{ lang.profile_likes }}</span>
-			<small class="c-profile-stat-value"><span class="{% if item.likes|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.likes }}</span></small>
+				<small class="c-profile-stat-value"><span class="{% if item.likes|int < 0 %}c-profile-rating-bad{% else %}c-profile-rating-good{% endif %}">{{ item.likes }}</span></small>
 			</h5>
 		</li>
 	</ul>

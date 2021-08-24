@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @component: Emoji Panel
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.2.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -65,7 +67,7 @@ $emoji-picker-divider-color: $default-border-color !default;
 			padding-right: 0;
 		}
 
-		&-feild {
+		&-field {
 			@include child();
 			background-color: $emoji-picker-search-bg-color;
 			background-image: none;

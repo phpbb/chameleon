@@ -1,4 +1,4 @@
-<div class="c-notification-container t-notification-container" data-container="notificiations">
+<div class="c-notification-container t-notification-container" data-container="notifications">
 	<div class="o-bar c-notification-header t-notification-header">
 		<div class="o-bar-left c-notification-header-left t-notification-header-left">
 			<h2 class="o-bar-title c-notification-bar-title t-notification-bar-title">{{ lang.notifications }}</h2>
@@ -11,7 +11,7 @@
 	</div>
 	<ul class="c-notification-list t-notification-list">
 		{% for item in notification %}
-			<li class="o-list-item c-notification-item{% if item.unread %} c-notification-unread{% endif %} t-notification-item{% if item.unread %}t-notification-unread{% endif %}">
+			<li class="c-notification-item{% if item.unread %} c-notification-unread{% endif %} t-notification-item{% if item.unread %}t-notification-unread{% endif %}">
 				<a class="c-notification-media t-notification-media" href="{{ item.url }}">
 					<span class="o-avatar-wrap c-notification-list-avatar t-notification-list-avatar">
 						<img class="o-avatar c-notification-avatar t-notification-avatar" src="{{ item.avatar }}" alt="User Avatar">

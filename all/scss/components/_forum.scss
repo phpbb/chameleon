@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------
 // @component: Forum
 //------------------------------------------------------------------------------
+// @author: hanakin -- midaym
+// @version: 0.2.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -122,7 +124,7 @@ $forum-action-color: $default-action-icon-color !default;
 					transition: 0.35s ease-in-out;
 				}
 
-				&.is-collapsed .c-forum-cat-header-action-iocn {
+				&.is-collapsed .c-forum-cat-header-action-icon {
 					transition: 0.35s ease-in-out;
 					transform: rotate(180deg);
 				}
