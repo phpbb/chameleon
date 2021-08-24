@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-// scaps data from http://unicode.org/emoji/charts/full-emoji-list.html
+// scraps data from http://unicode.org/emoji/charts/full-emoji-list.html
 
 var _emojis = [];
 $('td.code').each(function() {
@@ -23,12 +23,12 @@ for (var index = _emojis.length - 1; index >= 0; index--) {
   var types = emoji.code.match(/U[+]+[0-9A-F]*/gi)
   if (Array.isArray(types) && types.length === 2) {
     var parentEmojiCode = types[0];
-    var parentEmoji = _emojis.filter(function(_emoji) {
+    var parentEmoji = _emojis.filter(function (_emoji) {
       return _emoji.code === parentEmojiCode;
     })[0];
 
     if (emoji.no < 1535) {
-      // Initialise the parent emoji types and append child emoji types
+      // Initialize the parent emoji types and append child emoji types
       if (!parentEmoji.hasOwnProperty('types'))
         parentEmoji['types'] = [];
 

@@ -1,6 +1,6 @@
 {# forum.twig #}
 {% extends "./layout/layout.twig" %}
-{% from './macros/online.twig' import whos_online %}
+{% from './macros/online.twig' import who_is_online %}
 
 {% block title %}
 {{ forums[1].name }}
@@ -142,14 +142,14 @@
 						{{ 'mdi:shield-check-outline'|icon('iconify', 'o-icon c-tab-icon t-tab-icon')|safe }}
 						<span class="c-tab-text t-tab-text">{{lang.permissions}}</span>
 					</a>
-					<a class="c-tab t-tab" href="#whos-online" role="tab" aria-controls="whos-online" aria-selected="false">
+					<a class="c-tab t-tab" href="#who-is-online" role="tab" aria-controls="who-is-online" aria-selected="false">
 						{{ 'mdi:access-point'|icon('iconify', 'o-icon c-tab-icon t-tab-icon')|safe }}
-						<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
+						<span class="c-tab-text t-tab-text">{{lang.who_is_online}}</span>
 					</a>
 				</nav>
 			</div>
 			{% include './includes/permissions.twig' %}
-			{{ whos_online('forum', forums[1].online, lang) }}
+			{{ who_is_online('forum', forums[1].online, lang) }}
 		</div>
 	</div>
 	{% include './includes/paging-fixed.twig' %}

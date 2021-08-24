@@ -1,6 +1,6 @@
 {# index.twig #}
 {% extends "./layout/layout.twig" %}
-{% from './macros/online.twig' import whos_online %}
+{% from './macros/online.twig' import who_is_online %}
 
 {% block title %}
 Chameleon
@@ -32,7 +32,7 @@ Chameleon
 			</nav>
 		</div>
 		{% include './includes/stats.twig' %}
-		{{ whos_online('index', online, lang, stats, groups) }}
+		{{ who_is_online('index', online, lang, stats, groups) }}
 		{% include './includes/birthdays.twig' %}
 	</div>
 </div>

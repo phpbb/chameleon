@@ -5,7 +5,7 @@ const $drawerMenuToggle = '[data-toggle="drawer-menu"]';
 const $drawerMenu = '[data-container="drawer-menu"]';
 const $page = '[data-container="page"]';
 const $notificationToggle = '[data-toggle="notifications"]';
-const $notification = '[data-container="notificiations"]';
+const $notification = '[data-container="notifications"]';
 const $menuToggle = '[data-toggle="menu"]';
 const $menu = '[data-container="menu"]';
 const $searchToggle = '[data-toggle="search"]';
@@ -54,7 +54,7 @@ const clearToggle = function(event_, $element, $toggle) {
 };
 
 /**
- * Returns clearence object for displaying content to avoid edges
+ * Returns clearance object for displaying content to avoid edges
  *
  * @param     {object} $target Element to test
  * @param     {number} x custom top offset
@@ -150,7 +150,7 @@ $($modalToggle).click(event_ => {
  * @param     {object} event_      	Event
  * @constant  {object} $this
  * @constant  {object} $emoji	stored emoji html
- * @constant  {object} $desc	stored updated emoji shortnames
+ * @constant  {object} $desc	stored updated emoji shortname
  */
 $($emojis).hover(event_ => {
 	const $this = event_.target;
@@ -460,7 +460,7 @@ $($tooltip).each(function() {
 			$('body').append('<span class="c-tooltip" data-tooltip-container="true"></span>');
 			$that = $($tooltipContainer);
 			$that.append($this.attr('title'));
-			const gap = 8; // set equal to default spacing unit sizze
+			const gap = 8; // set equal to default spacing unit size
 			const link = edgeDetect($this);
 			const tip = edgeDetect($that);
 

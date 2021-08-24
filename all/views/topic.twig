@@ -1,9 +1,9 @@
 {# topic.twig #}
 {% extends "./layout/layout.twig" %}
-{% from './macros/online.twig' import whos_online %}
+{% from './macros/online.twig' import who_is_online %}
 
 {% block title %}
-{{ topics[2].name }}
+	{{ topics[2].name }}
 {% endblock %}
 
 {% block css %}
@@ -51,13 +51,13 @@
 		<div class="c-tab-card t-tab-card">
 			<div class="c-tab-bar-frame t-tab-bar-frame">
 				<nav class="c-tab-bar t-tab-bar" data-toggle="tabs">
-					<a class="c-tab t-tab is-active" href="#whos-online" role="tab" aria-controls="whos-online" aria-selected="true">
+					<a class="c-tab t-tab is-active" href="#who-is-online" role="tab" aria-controls="who-is-online" aria-selected="true">
 						{{ 'mdi:access-point'|icon('iconify', 'o-icon c-tab-icon t-tab-icon')|safe }}
-						<span class="c-tab-text t-tab-text">{{lang.whos_online}}</span>
+						<span class="c-tab-text t-tab-text">{{lang.who_is_online}}</span>
 					</a>
 				</nav>
 			</div>
-			{{ whos_online('topic', topics[2].online, lang) }}
+			{{ who_is_online('topic', topics[2].online, lang) }}
 		</div>
 	</div>
 	{% include './includes/paging-fixed.twig' %}

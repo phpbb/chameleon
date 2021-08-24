@@ -2,7 +2,7 @@
 // @component: Crumbs
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.22.0
+// @version: 0.2.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -13,7 +13,7 @@
 // Layout Variables
 $crumbs-spacing: $default-spacing !default;
 $crumbs-height: $default-height !default;
-$crumbs-seperator-height: $default-height-dense !default;
+$crumbs-separator-height: $default-height-dense !default;
 
 
 // Theme Variables
@@ -75,9 +75,9 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 		}
 	}
 
-	&-seperator {
-		width: $crumbs-seperator-height;
-		height: $crumbs-seperator-height;
+	&-separator {
+		width: $crumbs-separator-height;
+		height: $crumbs-separator-height;
 		margin-left: -($crumbs-spacing / 2);
 	}
 
