@@ -1,9 +1,10 @@
 {# layout.twig #}
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="phpbb forum software">
 		{% block meta %}{% endblock %}
@@ -14,6 +15,7 @@
 		<link href="https://cdn.jsdelivr.net/gh/hanakin/base-l@master/dist/assets/css/utilities.1.0.2.min.css" rel="stylesheet">
 		{% block css %}{% endblock %}
 	</head>
+
 	<body>
 		{# {% include '../includes/defs.twig' %} #}
 		{% block sidemenu %}
@@ -42,12 +44,13 @@
 				{% block footer %}{% endblock %}
 				{% include '../includes/footer.twig' %}
 			</footer>
-		{% block bottom %}{% endblock %}
+			{% block bottom %}{% endblock %}
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.iconify.design/1/1.0.0-rc7/iconify.min.js"></script>
-		<script src="../../all/js/temp.js" ></script>
+		<script src="../../all/js/temp.js"></script>
 		{% block scripts %}{% endblock %}
 	</body>
+
 </html>
