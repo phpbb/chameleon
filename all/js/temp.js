@@ -1,4 +1,3 @@
-
 const $drawerToggle = '[data-toggle="drawer"]';
 const $drawer = '[data-container="drawer"]';
 const $drawerMenuToggle = '[data-toggle="drawer-menu"]';
@@ -35,10 +34,10 @@ const $closeToggle = '[data-close="true"]';
  * Clears the active state of the provided elements
  *
  * @param     {object} event_       Event
- * @param     {object} $el     The element with the state
- * @param     {object} $toggle The element that controls the state
+ * @param     {object} $el     		The element with the state
+ * @param     {object} $toggle 		The element that controls the state
  */
-const clearToggle = function(event_, $element, $toggle) {
+const clearToggle = function (event_, $element, $toggle) {
 	const { target } = event_;
 
 	if (
@@ -47,7 +46,7 @@ const clearToggle = function(event_, $element, $toggle) {
 		!$(target).is($toggle) &&
 		!$(target).parents().is($toggle)
 	) {
-		$($element).each(function() {
+		$($element).each(function () {
 			$(this).toggleClass('is-active', false);
 		});
 	}
@@ -56,10 +55,10 @@ const clearToggle = function(event_, $element, $toggle) {
 /**
  * Returns clearance object for displaying content to avoid edges
  *
- * @param     {object} $target Element to test
- * @param     {number} x custom top offset
- * @param     {number} y custom left offset
- * @returns   {object} boolean for each edge of window and all dimensions and positions
+ * @param     {object} $target 	Element to test
+ * @param     {number} x 		custom top offset
+ * @param     {number} y 		custom left offset
+ * @returns   {object} 			boolean for each edge of window and all dimensions and positions
  */
 const edgeDetect = ($target, x, y) => {
 	const $win = $(window);
@@ -97,13 +96,13 @@ const edgeDetect = ($target, x, y) => {
  * Clears the active state of the provided tabs
  *
  * @todo      Look at refactoring into clearToggle
- * @param     {object} event_      Event
- * @param     {object} $links The elements with the state
+ * @param     {object} event_      	Event
+ * @param     {object} $links 		The elements with the state
  * @constant  {object} $this
  * @constant  {object} $that
  */
-const clearTabs = function(event_, $links) {
-	$($links).children().each(function() {
+const clearTabs = function (event_, $links) {
+	$($links).children().each(function () {
 		const $this = $(this);
 		const $that = $this.attr('href');
 
@@ -149,8 +148,8 @@ $($modalToggle).click(event_ => {
  * @todo      Refactor to toggle function
  * @param     {object} event_      	Event
  * @constant  {object} $this
- * @constant  {object} $emoji	stored emoji html
- * @constant  {object} $desc	stored updated emoji shortname
+ * @constant  {object} $emoji		stored emoji html
+ * @constant  {object} $desc		stored updated emoji shortname
  */
 $($emojis).hover(event_ => {
 	const $this = event_.target;
@@ -173,9 +172,9 @@ $($emojis).hover(event_ => {
  * Replaces emoji preview with selected emoji
  *
  * @todo      Refactor to toggle function
- * @constant  {object} query	value to filter
+ * @constant  {object} query		value to filter
  */
-$($emojiFilter).on('input', function() {
+$($emojiFilter).on('input', function () {
 	const query = this.value;
 	if (query !== '') {
 		$('[data-emoji-preview="emoji"]:not([data-emoji-name*="' + query + '"])').hide();
@@ -195,7 +194,7 @@ $($emojiFilter).on('input', function() {
  * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($collapseToggle).click(function(event_) {
+$($collapseToggle).click(function (event_) {
 	const $this = $(this);
 	const $that = $this.parents($collapseToggleParent).next($collapse);
 	const tip = $this.attr('data-toggle-tooltip');
@@ -290,7 +289,7 @@ $($drawerToggle).click(event_ => {
  * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($drawerMenuToggle).click(function(event_) {
+$($drawerMenuToggle).click(function (event_) {
 	const $this = $(this);
 	event_.preventDefault();
 	event_.stopPropagation();
@@ -307,7 +306,7 @@ $($drawerMenuToggle).click(function(event_) {
  * @event     Toggle#Tab
  * @event     Toggle#Content
  */
-$($tabs).children().each(function() {
+$($tabs).children().each(function () {
 	const $this = $(this);
 	const $that = $($this.attr('href'));
 
@@ -327,22 +326,15 @@ $($tabs).children().each(function() {
 /**
  * Handle state for Notification Menu
  *
- * @constant  {object} $this	Toggle Link
+ * @param     {object} event_	Event
  * @constant  {object} $that	Container to be displayed
- * @constant  {number} right	Absolute right position
  */
 $($notificationToggle).click(event_ => {
-	const $this = $($notificationToggle);
 	const $that = $($notification);
-
-	let right = $this.offset().left + $this.innerWidth();
-
-	right = right - $that.innerWidth();
 
 	event_.preventDefault();
 	event_.stopPropagation();
 
-	$that.attr('style', 'left: ' + right + 'px;');
 	$that.toggleClass('is-active');
 });
 
@@ -352,11 +344,11 @@ $($notificationToggle).click(event_ => {
  * Handle state for Menus
  *
  * @todo      Refactor Menu into this
- * @param     {object} event_      Event
+ * @param     {object} event_	Event
  * @constant  {object} $this
  * @constant  {object} $that
  */
-$($menuToggle).click(function(event_) {
+$($menuToggle).click(function (event_) {
 	const $this = $(this);
 	const $that = $(this).next();
 	event_.preventDefault();
@@ -452,7 +444,7 @@ $($profileToggle).click(function (event_) {
  * @event     Toggle#ShowTip
  * @event     Toggle#HideTip
  */
-$($tooltip).each(function() {
+$($tooltip).each(function () {
 	const $this = $(this);
 	let $that = {};
 	$this.on({
