@@ -93,7 +93,7 @@
 		"gulp-sass": "^5.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"moment": "^2.29.1",
-		"node-sass": "^6.0.1",
+		"node-sass": "^7.0.0",
 		"postcss": "^8.2.15",
 		"postcss-pxtorem": "^6.0.0",
 		"postcss-sorting": "^6.0.0",
