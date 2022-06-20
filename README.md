@@ -1,5 +1,7 @@
 ## CODENAME: Chameleon
 
+@version 0.2.1
+
 ## WHAT IS IT
 A new theme being developed to replace prosilver going forward for the phpBB platform. It is meant to be forward thinking, easily maintainable and endlessly scaleable yet still be very customizable. Checkout the [Development Topic](https://area51.phpbb.com/docs/dev/development/index.html) on phpBB.com or open a discussion on area51 in the [Style Development](https://area51.phpbb.com/phpBB/viewforum.php?f=131&sid=719d3d0bbf257d54cbe43d1dfb4fb8c2) forum for more detailed information. You can check out the current core [Blockers/Todos](https://area51.phpbb.com/phpBB/viewtopic.php?f=141&t=61766) as well.
 
