@@ -2,10 +2,12 @@
 // @Component: Tab
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
+
+@use 'sass:math';
 
 //
 // @settings
@@ -20,9 +22,8 @@ $tab-icon-size: $default-icon-md !default;
 
 
 // Theme Variables
-$tab-bg-color: $default-surface-color !default;
+$tab-footer-bg-color: $default-surface-color !default;
 $tab-pane-bg-color: $default-background-color !default;
-$tab-bg-hover-color: $default-surface-alt-color !default;
 $tab-text-color: $default-surface-item-color !default;
 $tab-icon-color: $default-surface-item-color !default;
 $tab-icon-hover-color: $default-action-color-hover !default;
@@ -56,7 +57,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		bottom: -$tab-border-height;
 		left: 0;
 		width: 0;
-		height: ($tab-spacing / 2);
+		height: math.div($tab-spacing, 2);
 		content: '';
 		transition:
 			background-color 0s ease-in 0.5s,
@@ -80,7 +81,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		width: $tab-icon-size;
 		height: $tab-icon-size;
 		margin: 0 auto;
-		margin-top: ($tab-spacing / 2);
+		margin-top: math.div($tab-spacing, 2);
 	}
 
 	&-icon + &-text {
@@ -130,7 +131,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		}
 
 		&-title {
-			@include type(title, $lh: 1);
+			@include type(headline6, $lh: 1);
 			flex-shrink: 1;
 			margin-bottom: 0;
 			padding: ($tab-spacing * 2) 0 0 ($tab-spacing * 2);
@@ -160,7 +161,7 @@ $tab-border: $tab-border-height $tab-border-type $tab-border-color !default;
 		&-footer {
 			@include parent();
 			@include border-radius(bottom, $tab-border-radius);
-			background-color: $tab-bg-color;
+			background-color: $tab-footer-bg-color;
 			border-top: $tab-border;
 		}
 	}
