@@ -2,7 +2,7 @@
 // @component: Notification
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ $notification-unread-color: $default-primary-item-color !default;
 	}
 
 	&-list {
-		@include type(subtitle1, $lh: 1.5);
+		@include type(subhead1, $lh: 1.5);
 		letter-spacing: calc((0.15 / 16) * 1em);
 		overflow-x: hidden;
 		overflow-y: scroll;
