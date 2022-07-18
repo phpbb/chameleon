@@ -2,10 +2,12 @@
 // @component: Topic
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
+
+@use 'sass:math';
 
 //
 // @settings
@@ -80,7 +82,7 @@ $topic-header-icon-color: $default-surface-item-color !default;
 		margin: 0;
 
 		&-text {
-			@include type(subtitle1);
+			@include type(subhead1);
 		}
 	}
 
@@ -121,7 +123,7 @@ $topic-header-icon-color: $default-surface-item-color !default;
 		&-link {
 			font-size: inherit;
 			height: ($topic-spacing * 3);
-			padding: ($topic-spacing / 4) ($topic-spacing / 2);
+			padding: math.div($topic-spacing, 4) math.div($topic-spacing, 2);
 
 			&-icon {
 				width: $topic-data-icon-size;
