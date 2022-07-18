@@ -2,10 +2,12 @@
 // @component: Tooltip
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
+
+@use 'sass:math';
 
 //
 // @settings
@@ -52,7 +54,7 @@ $tooltip-text-color: $default-info-item-color !default;
 	width: auto;
 	max-width: $tooltip-max-width;
 	min-height: $tooltip-max-height;
-	padding: ($tooltip-spacing / 2) $tooltip-spacing;
+	padding: math.div($tooltip-spacing, 2) $tooltip-spacing;
 	transition: none;
 	transform: scale(0);
 	transform-origin: center center;
