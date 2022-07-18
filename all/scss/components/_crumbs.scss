@@ -2,7 +2,7 @@
 // @component: Crumbs
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -21,6 +21,8 @@ $crumbs-bg-color: $default-surface-color !default;
 $crumbs-bg-hover-color: $default-surface-hover-color !default;
 $crumbs-border-color: $default-border-color !default;
 $crumbs-icon-hover-color: $default-action-color-hover !default;
+
+@use 'sass:math';
 
 //
 // @scss
@@ -78,7 +80,7 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 	&-separator {
 		width: $crumbs-separator-height;
 		height: $crumbs-separator-height;
-		margin-left: -($crumbs-spacing / 2);
+		margin-left: -(math.div($crumbs-spacing, 2));
 	}
 
 	&-link {
@@ -99,10 +101,10 @@ $crumbs-icon-hover-color: $default-action-color-hover !default;
 
 	&-text {
 		align-self: center;
-		padding-left: ($crumbs-spacing / 2);
+		padding-left: math.div($crumbs-spacing, 2);
 	}
 
 	&-icon {
-		margin-right: ($crumbs-spacing / 2);
+		margin-right: math.div($crumbs-spacing, 2);
 	}
 }
