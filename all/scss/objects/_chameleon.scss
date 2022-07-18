@@ -2,7 +2,7 @@
 // @object: Chameleon
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -13,84 +13,7 @@
 // Layout Variables
 
 // Variables
-$o-bg-color: $default-surface-color !default;
-$o-search-bg-color: $default-background-color !default;
-$o-bg-hover-color: $default-surface-hover-color !default;
-$o-color: $default-surface-item-color !default;
-$o-user-title-color: $default-background-item-color !default;
-$o-alt-color: $default-background-alt-color !default;
+
 
 //
 // @scss
-.o-bar {
-	background-color: $o-bg-color;
-
-	&-info {
-		color: $o-user-title-color;
-	}
-
-	&-action {
-		color: $o-color;
-
-		&:hover,
-		&:focus {
-			background-color: $o-bg-hover-color;
-		}
-	}
-
-	&-user {
-		&-title {
-			color: $o-user-title-color;
-		}
-	}
-
-	&-search {
-		background-color: $o-search-bg-color;
-
-		&-action {
-			color: $o-color;
-		}
-
-		&-field {
-			background: transparent;
-			color: $o-color;
-		}
-	}
-
-	&-left {
-		position: relative;
-	}
-}
-
-.o-btn {
-	@include shadow(2);
-	background-color: $o-bg-color;
-	color: $o-color;
-
-	&:hover {
-		background-color: $o-bg-hover-color;
-	}
-
-	&:focus {
-		@include shadow(4);
-	}
-}
-
-.o-form {
-	&-select {
-		position: relative;
-
-		&:before {
-			@include background-triangle($o-color);
-		}
-	}
-}
-
-.o-modal {
-	@include shadow(4);
-	background-color: $o-bg-color;
-
-	&-body {
-		color: $o-color;
-	}
-}

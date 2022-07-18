@@ -2,7 +2,7 @@
 // @base: Chameleon
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -13,21 +13,12 @@
 // Layout Variables
 
 // Variables
-$o-bg-color: $default-surface-color !default;
-$o-search-bg-color: $default-background-color !default;
-$o-bg-hover-color: $default-surface-hover-color !default;
-$o-color: $default-surface-item-color !default;
-$o-user-title-color: $default-background-item-color !default;
-$o-alt-color: $default-background-alt-color !default;
+
 
 
 //
 // @scss
-html,
-body {
-	background-color: $default-page-bg;
-	color: $default-background-item-color;
-}
+
 
 header,
 section,
