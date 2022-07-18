@@ -2,7 +2,7 @@
 // @tool: Type
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 1.0.2
+// @version: 1.2.0
 // @description
 //
 // A mixin for generating type settings based on Google Material Design types
@@ -11,92 +11,113 @@
 
 //@settings
 $type-font-weight: (
-	thin: 100,
-	light: 300,
+	light: 200,
 	regular: 400,
-	medium: 500,
-	bold: 700,
-	black: 900
+	bold: 600
 );
 
 $type-styles: (
+	display1: (
+		font-size: 4rem, // 64px
+		line-height: unit-less(76, 64), // 76px
+		letter-spacing: letterspacing(-0.5, 4),
+		font-weight: map-get($type-font-weight, regular)
+	),
+	display2: (
+		font-size: 3.5625rem, // 57px
+		line-height: unit-less(64, 57), // 76px
+		letter-spacing: letterspacing(-0.25, 3.5625),
+		font-weight: map-get($type-font-weight, regular)
+	),
+	display3: (
+		font-size: 2.8125rem, // 45px
+		line-height: unit-less(52, 45), // 52px
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular)
+	),
 	headline1: (
-		font-size: 6rem, // 96px
-		letter-spacing: letterspacing(-1.5, 6),
-		font-weight: map-get($type-font-weight, light),
-		line-height: 6rem
+		font-size: 2.25rem, // 36px
+		line-height: unit-less(44, 36), // 44px
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular)
 	),
 	headline2: (
-		font-size: 3.75rem, // 60px
-		letter-spacing: letterspacing(-0.5, 3.75),
-		font-weight: map-get($type-font-weight, light),
-		line-height: 3.75rem
+		font-size: 2rem, // 32px
+		line-height: unit-less(40, 32), // 40px
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular)
 	),
 	headline3: (
-		font-size: 3rem, // 48px
+		font-size: 1.75rem, // 28px
+		line-height: unit-less(36, 28),  // 36px
 		letter-spacing: normal,
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 3.125rem
+		font-weight: map-get($type-font-weight, regular)
 	),
 	headline4: (
-		font-size: 2.125rem, // 34px
-		letter-spacing: letterspacing(0.25, 2.125),
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 2.5rem
+		font-size: 1.5rem, // 24px
+		line-height: unit-less(32, 24), // 32px
+		letter-spacing: normal,
+		font-weight: map-get($type-font-weight, regular)
 	),
 	headline5: (
-		font-size: 1.5rem, // 24px
+		font-size: 1.375rem, // 22px
+		line-height: unit-less(28, 22), // 28px
 		letter-spacing: normal,
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 2rem
+		font-weight: map-get($type-font-weight, regular)
 	),
-	title: (
+	headline6: (
 		font-size: 1.25rem, // 20px
-		letter-spacing: letterspacing(0.25, 1.25),
-		font-weight: map-get($type-font-weight, medium),
-		line-height: 2rem
+		line-height: unit-less(24, 20), // 24px
+		letter-spacing: letterspacing(0.15, 1.25),
+		font-weight: map-get($type-font-weight, regular)
 	),
-	subtitle1: (
+	subhead1: (
 		font-size: 1rem, // 16px
-		letter-spacing: letterspacing(0.15, 1),
-		font-weight: map-get($type-font-weight, light),
-		line-height: 1.75rem
+		line-height: unit-less(20, 16), // 20px
+		letter-spacing: letterspacing(0.1, 1),
+		font-weight: map-get($type-font-weight, bold)
 	),
-	subtitle2: (
+	subhead2: (
 		font-size: 0.875rem, // 14px
+		line-height: unit-less(20, 14), // 20px
 		letter-spacing: letterspacing(0.1, 0.875),
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.375rem
+		font-weight: map-get($type-font-weight, bold)
 	),
 	body1: (
 		font-size: 1rem, // 16px
+		line-height: unit-less(24, 16), // 24px
 		letter-spacing: letterspacing(0.5, 1),
-		font-weight: map-get($type-font-weight, medium),
-		line-height: 1.5rem
+		font-weight: map-get($type-font-weight, regular)
 	),
 	body2: (
 		font-size: 0.875rem, // 14px
+		line-height: unit-less(20, 14), // 20px
 		letter-spacing: letterspacing(0.25, 0.875),
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.25rem
+		font-weight: map-get($type-font-weight, regular)
 	),
 	button: (
 		font-size: 0.875rem, // 14px
-		letter-spacing: letterspacing(01.25, 0.875),
-		font-weight: map-get($type-font-weight, medium),
-		line-height: 2.25rem
+		line-height: unit-less(20, 14), // 20px
+		letter-spacing: letterspacing(0.1, 0.875),
+		font-weight: map-get($type-font-weight, bold)
 	),
 	caption: (
 		font-size: 0.75rem, // 12px
+		line-height: unit-less(16, 12), // 16px
 		letter-spacing: letterspacing(0.4, 0.75),
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 1.25rem
+		font-weight: map-get($type-font-weight, regular)
 	),
 	overline: (
 		font-size: 0.75rem, // 12px
-		letter-spacing: letterspacing(2, 0.75),
-		font-weight: map-get($type-font-weight, regular),
-		line-height: 2rem
+		line-height: unit-less(16, 12), // 16px
+		letter-spacing: letterspacing(0.5, 0.75),
+		font-weight: map-get($type-font-weight, bold)
+	),
+	labelsmall: (
+		font-size: 0.6875rem, // 12px
+		line-height: unit-less(16, 11), // 16px
+		letter-spacing: letterspacing(0.5, 0.6875),
+		font-weight: map-get($type-font-weight, bold)
 	)
 );
 

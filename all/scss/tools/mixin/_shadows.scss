@@ -2,7 +2,7 @@
 // @tool: Shadows
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 1.0.2
+// @version: 1.1.0
 // @description
 //
 // Mixin for generating Google Material Design shadows
@@ -17,7 +17,7 @@ $shadow-penumbra-opacity: 0.14 !default;
 $shadow-ambient-opacity: 0.12 !default;
 
 // The css property used for elevation. In most cases this should not be changed. It is exposed
-// as a variable for abstraction / easy use when needing to reference the property directly, for
+// as a variable for abstraction for easy use when needing to reference the property directly, for
 // example in a `will-change` rule.
 $shadow-elevation-property: box-shadow !default;
 
