@@ -351,6 +351,11 @@ $($notificationToggle).click(event_ => {
 $($menuToggle).click(function (event_) {
 	const $this = $(this);
 	const $that = $(this).next();
+
+	$($menu).each(function () {
+		$(this).toggleClass('is-active', false);
+	});
+
 	event_.preventDefault();
 	event_.stopPropagation();
 
@@ -529,8 +534,9 @@ $($profile).on('touchstart mouseup', event_ => {
  * @param     {object} event_      Event
  * @constant  {object} $this
  */
-$($closeToggle).click(function (event_) {
+$($closeToggle).on('touchstart mouseup', event_ => {
 	const $this = $(this);
+	clearToggle(event_, $menu, $menuToggle);
 	event_.preventDefault();
 	event_.stopPropagation();
 	$this.parent().toggleClass('is-active', false);
