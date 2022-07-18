@@ -2,7 +2,7 @@
 // @component: Post
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -25,8 +25,6 @@ $post-emoji-size-min: $default-icon-sm !default;
 $post-bg-color: $default-background-color !default;
 $post-header-bg-color: $default-surface-color !default;
 $post-border-color: $default-border-color !default;
-$post-copy-code-action-color: $white !default;
-$post-copy-code-action-bg-color: $default-action-color-hover !default;
 
 //
 // @scss
@@ -106,7 +104,7 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 }
 
 .c-copy {
-	@include type(subtitle1);
+	@include type(subhead1);
 	font-weight: 300;
 	margin: ($post-spacing * 2) 0 0;
 
@@ -114,9 +112,9 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 	&-list,
 	&-blockquote {
 		font-size: calc(18px + 0.25vw);
-		/* stylelint-disable declaration-property-unit-blacklist */
+		/* stylelint-disable */
 		line-height: calc(34px + 0.2vw);
-		/* stylelint-enable declaration-property-unit-blacklist */
+		/* stylelint-enable */
 		word-wrap: break-word;
 		word-break: break-word;
 		margin-bottom: ($post-spacing * 4);
@@ -135,10 +133,10 @@ $post-copy-code-action-bg-color: $default-action-color-hover !default;
 			background-color: $post-header-bg-color;
 			border-bottom: $post-border-size $post-border-style $post-border-color;
 			display: grid;
-			padding: $post-spacing ($post-spacing * 2);
 			grid-template-areas:
 				'meta'
 				'date';
+			padding: $post-spacing ($post-spacing * 2);
 		}
 
 		&-meta {

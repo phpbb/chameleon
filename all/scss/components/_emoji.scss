@@ -2,10 +2,12 @@
 // @component: Emoji Panel
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
+
+@use 'sass:math';
 
 //
 // @settings
@@ -114,7 +116,7 @@ $emoji-picker-divider-color: $default-border-color !default;
 			@include shadow(2);
 			text-align: left;
 			background-color: $emoji-picker-bg-color;
-			border-radius: ($emoji-picker-border-radius / 2);
+			border-radius: math.div($emoji-picker-border-radius, 2);
 			position: absolute;
 			z-index: 999;
 			top: 0;

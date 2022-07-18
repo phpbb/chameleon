@@ -2,7 +2,7 @@
 // @component: Forum
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -38,14 +38,14 @@ $forum-action-color: $default-action-icon-color !default;
 	border-radius: $forum-border-radius;
 	position: relative;
 	display: grid;
-	margin-bottom: ($forum-spacing * 2);
 	grid-template-rows: auto $forum-bar-height;
+	margin-bottom: ($forum-spacing * 2);
 
 	&-body {
 		border-bottom: $forum-border-size $forum-border-style $forum-border-color;
 		display: grid;
-		padding-bottom: ($forum-spacing * 2);
 		grid-template-columns: ($default-icon-lg + ($forum-spacing * 4)) auto;
+		padding-bottom: ($forum-spacing * 2);
 	}
 
 	&-media {
@@ -91,7 +91,6 @@ $forum-action-color: $default-action-icon-color !default;
 		@include type(body2);
 		color: $forum-text-color;
 		margin: $forum-spacing 0 0;
-
 	}
 
 	&-footer {
@@ -111,7 +110,6 @@ $forum-action-color: $default-action-icon-color !default;
 
 			&-title {
 				@include type(headline5);
-				// margin: 0;
 			}
 
 			&-action {

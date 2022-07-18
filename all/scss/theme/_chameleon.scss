@@ -1,6 +1,7 @@
 //------------------------------------------------------------------------------
 // @theme: Chameleon
 //------------------------------------------------------------------------------
+// @version: 0.3.0
 // @description
 //
 // @author: hanakin
@@ -30,23 +31,6 @@ $theme-dark-border: rgba($black, 0.5);
 
 //
 // @scss
-.c-overlay {
-	display: none;
-	float: right;
-
-	&.is-active {
-		// background: rgba(0, 0, 0, 0.5);
-		position: absolute;
-		z-index: 9;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		display: block;
-		width: 100%;
-		height: 10000vh;
-	}
-}
-
 .t-navbar {
 	background-color: transparent;
 	margin-top: -56px;
@@ -79,11 +63,11 @@ $theme-dark-border: rgba($black, 0.5);
 }
 
 .t-forum-page-title {
-	@include type(headline4);
+	@include type(headline2);
 }
 
 .t-topic-page-title {
-	@include type(headline4);
+	@include type(headline2);
 	margin: 48px 24px 72px;
 }
 

@@ -2,15 +2,17 @@
 // @tool: Unitless
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 1.0.2
+// @version: 1.1.0
 // @description
 //
 // A function for returning a unitless number based on root font-size
 //
 //------------------------------------------------------------------------------
 
+@use 'sass:math';
+
 //
 // @scss
-@function unitless($line-height, $font-size: $default-font-size) {
-	@return strip-units($line-height / $font-size);
+@function unit-less($line-height, $font-size: $default-font-size) {
+	@return strip-units(math.div($line-height, $font-size));
 }

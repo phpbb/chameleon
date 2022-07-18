@@ -1,25 +1,32 @@
 {
-	"alt-require": true,
+	"doctype-first": true,
+	"doctype-html5": true,
+	"head-script-disabled": false,
+	"style-disabled": true,
+	"title-require": true,
+
 	"attr-lowercase": ["viewBox", "preserveAspectRatio"],
 	"attr-no-duplication": true,
+	"attr-no-unnecessary-whitespace": true,
 	"attr-unsafe-chars": true,
 	"attr-value-double-quotes": true,
 	"attr-value-not-empty": false,
-	"doctype-first": true,
-	"doctype-html5": true,
+	"alt-require": true,
+	"input-requires-label": true,
+
+	"tag-pair": true,
+	"tagname-lowercase": true,
 	"empty-tag-not-self-closed": true,
-	"head-script-disabled": false,
+	"src-not-empty": true,
 	"href-abs-or-rel": false,
+
 	"id-class-ad-disabled": false,
 	"id-class-value": "dash",
 	"id-unique": true,
+
 	"inline-script-disabled": true,
 	"inline-style-disabled": false,
+
 	"space-tab-mixed-disabled": "tab",
-	"spec-char-escape": true,
-	"src-not-empty": true,
-	"style-disabled": true,
-	"tag-pair": true,
-	"tagname-lowercase": true,
-	"title-require": true
+	"spec-char-escape": true
 }
