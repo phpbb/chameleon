@@ -2,7 +2,7 @@
 // @component: Paging
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ $paging-hover-color: $default-action-color-hover !default;
 	}
 
 	&-action {
-		@include type(subtitle1, $lh: 1.5, $fw: 700);
+		@include type(subhead1, $lh: 1.5, $fw: 700);
 		@include center($paging-height);
 		background-color: $paging-bg-color;
 		color: $paging-color;
