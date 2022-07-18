@@ -2,7 +2,7 @@
 // @component: Drawers
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -18,11 +18,11 @@ $drawer-border-height: $default-border-size;
 
 
 // Theme Variables
-$drawer-bg-color: $default-surface-color !default;
-$drawer-bg-hover-color: $default-surface-hover-color !default;
-$drawer-bg-sub-color: $default-surface-hover-color !default;
-$drawer-bg-sub-hover-color: $default-surface-alt-color !default;
-$drawer-text-color: $default-surface-item-color !default;
+$drawer-bg-color: $default-background-color !default;
+$drawer-bg-hover-color: $default-surface-color !default;
+$drawer-bg-sub-color: $default-surface-color !default;
+$drawer-bg-sub-hover-color: $default-surface-hover-color !default;
+$drawer-text-color: $default-action-color !default;
 $drawer-text-hover-color: $default-action-color-hover !default;
 $drawer-icon-color: $default-action-color !default;
 $drawer-icon-hover-color: $default-action-color-hover !default;
@@ -60,10 +60,6 @@ $drawer-border-color: $default-border-color !default;
 		.c-drawer-user-name {
 			display: inline-block;
 		}
-		//
-		// @media (min-width: $lg) {
-		// 	transition: 0.5s;
-		// }
 	}
 
 	&-user {
