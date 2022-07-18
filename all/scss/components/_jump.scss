@@ -2,7 +2,7 @@
 // @component: Jump
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -20,13 +20,12 @@ $jump-border-style: solid;
 // Theme Variables
 $jump-bg-color: $default-background-color !default;
 $jump-header-bg-color: $default-surface-color !default;
+$jump-header-title-color: $default-surface-item-color !default;
 $jump-border-color: $default-border-color !default;
 $jump-btn-color: $white !default;
 $jump-btn-hover-color: $white !default;
-$jump-btn-bg-color: $default-action-color !default;
-$jump-btn-bg-hover-color: $default-action-color-hover !default;
-$jump-color: $default-action-color !default;
-$jump-hover-color: $white !default;
+$jump-btn-bg-color: $default-primary-color !default;
+$jump-btn-bg-hover-color: $default-primary-dark-color !default;
 
 .c-jump {
 	&-container {
@@ -59,6 +58,7 @@ $jump-hover-color: $white !default;
 		padding: ($jump-spacing  * 3);
 
 		&-title {
+			color: $jump-header-title-color;
 			margin: 0;
 		}
 	}
