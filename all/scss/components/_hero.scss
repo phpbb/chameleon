@@ -2,7 +2,7 @@
 // @component: Hero
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ $hero-background: url('https://i.imgur.com/DnPCBsG.jpg') !default;
 		color: $hero-color;
 
 		@media (min-width: $md) {
-			@include type(headline4, $lh: 1, $fw: 200);
+			@include type(headline1, $lh: 1, $fw: 200);
 			max-width: $hero-lead-max-width;
 		}
 	}
