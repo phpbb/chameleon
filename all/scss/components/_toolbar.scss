@@ -2,7 +2,7 @@
 // @component: Toolbar
 //------------------------------------------------------------------------------
 // @author: hanakin -- midaym
-// @version: 0.2.0
+// @version: 0.3.0
 // @description
 //
 //------------------------------------------------------------------------------
@@ -15,7 +15,6 @@ $toolbar-spacing: $default-spacing !default;
 $toolbar-border-radius: $default-border-radius !default;
 
 // Theme Variables
-$toolbar-background-color: $default-surface-color !default;
 
 //
 // @scss
@@ -23,7 +22,6 @@ $toolbar-background-color: $default-surface-color !default;
 //
 .c-toolbar {
 	@include shadow(2); // google material design
-	background-color: $toolbar-background-color;
 	border-radius: $toolbar-border-radius;
 	margin: 0 0 ($toolbar-spacing * 3);
 	grid-template-columns: auto auto;
