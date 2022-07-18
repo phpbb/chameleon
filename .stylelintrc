@@ -1,25 +1,58 @@
 {
+	"extends": "stylelint-config-standard-scss",
 	"plugins": [
 		"stylelint-scss",
 		"stylelint-order"
 	],
 	"ignoreFiles": [
-		"./src/scss/generic/_normalize.scss",
-		"./src/scss/settings/*.scss",
-		".test/**/*"
+		"./all/scss/settings/*.scss",
+		".test/**/*",
+		"./all/css/*.css"
 	],
 	"rules": {
+		"scss/comment-no-empty": null,
+		"scss/double-slash-comment-whitespace-inside": null,
+		"scss/dollar-variable-empty-line-before": null,
+		"scss/no-global-function-names": null,
+		"scss/at-rule-conditional-no-parentheses": null,
+		"scss/dollar-variable-colon-space-after": null,
+
+		"no-empty-first-line": null,
+		"no-descending-specificity": null,
+		"property-no-vendor-prefix": null,
+		"selector-no-vendor-prefix": null,
+		"alpha-value-notation": null,
+		"declaration-block-no-redundant-longhand-properties": null,
+
+
 		"scss/at-extend-no-missing-placeholder": true,
 		"scss/at-else-empty-line-before": "never",
 		"scss/at-if-closing-brace-newline-after": "always-last-in-chain",
 		"scss/dollar-variable-colon-space-before": "never",
 		"scss/selector-no-redundant-nesting-selector": true,
+		"scss/at-mixin-argumentless-call-parentheses": "always",
+
 
 		"at-rule-name-case": "lower",
 		"at-rule-name-newline-after": "always-multi-line",
 		"at-rule-name-space-after": "always-single-line",
 		"at-rule-no-vendor-prefix": true,
 		"at-rule-semicolon-newline-after": "always",
+		"at-rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"blockless-after-blockless",
+					"first-nested"
+				],
+				"ignore": ["after-comment"],
+				"ignoreAtRules": [
+					"if",
+					"else",
+					"include"
+				]
+			}
+		],
 
 		"block-closing-brace-newline-after": [
 			"always", {
@@ -39,6 +72,7 @@
 		"color-hex-length": "long",
 		"color-named": "never",
 		"color-no-invalid-hex": true,
+		"color-function-notation": "legacy",
 
 		"comment-empty-line-before": [
 			"always", {
@@ -90,6 +124,11 @@
 		},
 
 		"font-family-name-quotes": "always-where-recommended",
+		"font-family-no-missing-generic-family-keyword": [
+			true, {
+				"ignoreFontFamilies": ["Mono"]
+			}
+		],
 		"function-calc-no-unspaced-operator": true,
 
 		"function-comma-newline-after": "never-multi-line",
@@ -185,6 +224,12 @@
 		"unit-case": "lower",
 		"unit-no-unknown": true,
 
+		"value-keyword-case": [
+			"lower", {
+				"ignoreKeywords": ["Roboto", "Helvetica", "Arial", "Monaco", "Andale", "Mono", "Courier", "New"],
+				"ignoreProperties": ["font", "font-family"]
+			}
+		],
 		"value-list-comma-newline-after": "always-multi-line",
 		"value-list-comma-newline-before": "never-multi-line",
 		"value-list-comma-space-after": "always-single-line",
@@ -228,8 +273,6 @@
 				"line-height",
 				"text-align",
 				"text-align-last",
-				"vertical-align",
-				"white-space",
 				"text-decoration",
 				"text-emphasis",
 				"text-emphasis-color",
@@ -237,9 +280,6 @@
 				"text-emphasis-position",
 				"text-indent",
 				"text-justify",
-				"letter-spacing",
-				"word-spacing",
-				"writing-mode",
 				"text-outline",
 				"text-transform",
 				"text-size-adjust",
@@ -247,8 +287,13 @@
 				"text-overflow",
 				"text-overflow-ellipsis",
 				"text-overflow-mode",
+				"vertical-align",
+				"white-space",
+				"letter-spacing",
+				"word-spacing",
 				"word-wrap",
 				"word-break",
+				"writing-mode",
 				"tab-size",
 				"hyphens",
 
@@ -265,7 +310,6 @@
 				"background-size",
 				"interpolation-mode",
 				"filter",
-
 				"border",
 				"border-width",
 				"border-style",
@@ -337,6 +381,24 @@
 				"flex-grow",
 				"flex-shrink",
 				"flex-wrap",
+				"grid",
+				"grid-area",
+				"grid-auto-columns",
+				"grid-auto-flow",
+				"grid-auto-rows",
+				"grid-column",
+				"grid-column-start",
+				"grid-column-gap",
+				"grid-column-end",
+				"grid-gap",
+				"grid-row",
+				"grid-row-start",
+				"grid-row-gap",
+				"grid-row-end",
+				"grid-template",
+				"grid-template-areas",
+				"grid-template-columns",
+				"grid-template-rows",
 				"justify-content",
 				"align-items",
 				"align-self",
